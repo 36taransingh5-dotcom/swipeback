@@ -93,6 +93,7 @@ export function scoreCase(c: PipelineCase, run: CaseRun): CaseVerdict {
   const expenses: ExpenseVerdict[] = [];
   const problems: string[] = [];
   if (run.error) problems.push(`run error: ${run.error}`);
+  problems.push(...run.skippedSteps);
   for (let i = 0; i < n; i++) {
     const expected = c.expect.expenses[i] ?? null;
     const measured = run.expenses[i] ?? null;

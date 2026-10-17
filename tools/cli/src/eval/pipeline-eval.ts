@@ -185,6 +185,8 @@ export interface CaseRun {
   llm: { calls: number; costMicros: number; unknownCost: number; latencyMs: number };
   auditOk: boolean;
   wallMs: number;
+  /** Steps that could not happen because the engine did not do what they respond to. */
+  skippedSteps: string[];
   error: string | null;
 }
 
@@ -195,7 +197,7 @@ export async function runCase(db: EvalDatabase, docs: DocumentStore, c: Pipeline
   const { pool, drop } = await cloneDatabase(db);
   const run: CaseRun = {
     id: c.id, split: c.split, scenario: c.scenario, title: c.title, expenses: [], quarantined: 0, followUps: 0, reminders: 0, payouts: [],
-    extractions: [], llm: { calls: 0, costMicros: 0, unknownCost: 0, latencyMs: 0 }, auditOk: false, wallMs: 0, error: null,
+    extractions: [], llm: { calls: 0, costMicros: 0, unknownCost: 0, latencyMs: 0 }, auditOk: false, wallMs: 0, skippedSteps: [], error: null,
   };
   try {
     const org = await seedDemoOrg(pool);
@@ -277,7 +279,11 @@ export async function runCase(db: EvalDatabase, docs: DocumentStore, c: Pipeline
         case 'reply': {
           const to = ADDRESS[step.from ?? 'sam'];
           const asked = sink.to(to).filter((s) => FOLLOW_UP_TEMPLATES.some((t) => s.envelope.idempotencyKey.startsWith(`${t}:`))).at(-1);
-          if (!asked) throw new Error('reply step: no question or receipt request was sent to reply to');
+          if (!asked) {
+            // The engine never asked, so the employee has nothing to answer: the case is scored as it stands.
+            run.skippedSteps.push(`reply skipped: nothing was asked of ${step.from ?? 'sam'}`);
+            break;
+          }
           let text = step.body ?? '';
           if (step.pick) text = pickOption(asked, swipes.get(step.pick)?.descriptor ?? step.pick);
           const doc = step.doc ? attachmentFor(step.doc) : null;
