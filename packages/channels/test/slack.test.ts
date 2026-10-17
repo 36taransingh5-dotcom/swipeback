@@ -220,6 +220,21 @@ describe('slack normalisation', () => {
     expect(event.attachments[0]!.mime).toBe('image/png');
   });
 
+  it('falls back to the declared mimetype when the response type is a generic download type', async () => {
+    const { slack, adapter } = setup();
+    const txt = Buffer.from('Trainline\nTotal  £42.10');
+    const event = await normalise(adapter, messageEvent({ files: [{ id: 'F1', name: 'r.txt', mimetype: 'text/plain', url_private_download: slack.addFile(txt, 'application/force-download') }] }));
+    expect(event.attachments[0]).toMatchObject({ mime: 'text/plain', scan: 'UNSCANNED' });
+  });
+
+  it('keeps a supported response type over a different declared type, and still rejects unsupported ones', async () => {
+    const { slack, adapter } = setup();
+    const pdf = await normalise(adapter, messageEvent({ files: [{ id: 'F1', name: 'r.bin', mimetype: 'image/png', url_private_download: slack.addFile(PDF, 'application/pdf') }] }));
+    expect(pdf.attachments[0]).toMatchObject({ mime: 'application/pdf', scan: 'UNSCANNED' });
+    const exe = await normalise(adapter, messageEvent({ files: [{ id: 'F2', name: 'r.exe', mimetype: 'application/x-msdownload', url_private_download: slack.addFile(Buffer.from('MZ\x90\x00'), 'application/force-download') }] }));
+    expect(exe.attachments[0]).toMatchObject({ mime: 'application/force-download', scan: 'REJECTED' });
+  });
+
   it('quarantines content that does not match its declared type', async () => {
     const { slack, adapter } = setup();
     const event = await normalise(adapter, messageEvent({ files: [{ id: 'F1', name: 'r.pdf', mimetype: 'application/pdf', url_private_download: slack.addFile(Buffer.from('MZ\x90\x00 not a pdf'), 'application/pdf') }] }));

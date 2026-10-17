@@ -34,6 +34,7 @@ export const SLACK_SIGNATURE_HEADER = 'x-slack-signature';
 export const SLACK_TIMESTAMP_HEADER = 'x-slack-request-timestamp';
 const MAX_SKEW_SECONDS = 300;
 const MAX_FILES_PER_MESSAGE = 5;
+const SUPPORTED_MIME = new Set(['application/pdf', 'image/png', 'image/jpeg', 'image/heic', 'image/webp', 'text/plain']);
 
 export function signSlackRequest(signingSecret: string, body: string, unixSeconds: number): string {
   return `v0=${createHmac('sha256', signingSecret).update(`v0:${unixSeconds}:${body}`).digest('hex')}`;
@@ -134,8 +135,12 @@ export class SlackAdapter implements ChannelAdapter<SlackInboundPayload> {
     for (const f of files) {
       // A failed download throws: no expense is created without its evidence, and the event is retried.
       const dl = await this.client.downloadFile(f.url_private_download!, MAX_ATTACHMENT_BYTES);
+      // Slack sometimes serves files with a generic type (octet-stream, force-download): prefer
+      // whichever of the response type and the declared type is one we accept. screenAttachment
+      // still checks the bytes against it.
       const headerMime = dl.contentType ? normaliseMime(dl.contentType) : '';
-      const mime = headerMime && headerMime !== 'application/octet-stream' ? headerMime : normaliseMime(f.mimetype ?? 'application/octet-stream');
+      const declaredMime = f.mimetype ? normaliseMime(f.mimetype) : '';
+      const mime = [headerMime, declaredMime].find((m) => SUPPORTED_MIME.has(m)) ?? (headerMime || declaredMime || 'application/octet-stream');
       const screen = screenAttachment(mime, dl.bytes);
       const stored = await this.evidence.put(connection.tenantId, dl.bytes);
       attachments.push({
