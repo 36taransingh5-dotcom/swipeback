@@ -8,3 +8,5 @@ export * from './email/fixture-adapter.ts';
 export * from './synthetic/adapter.ts';
 export * from './email/gmail-api.ts';
 export * from './email/gmail-adapter.ts';
+export * from './whatsapp/adapter.ts';
+export * from './whatsapp/graph-api.ts';
