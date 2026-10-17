@@ -87,4 +87,9 @@ describe('baseline extractor', () => {
   it('recognises plural taxi firms as travel', () => {
     expect(suggestCategory('Watford Station Taxis', 'Station to Croxley Business Park 18.00').category).toBe('TRAVEL');
   });
+
+  it('recognises bakeries as meals and plumbing merchants as tools', () => {
+    expect(suggestCategory("Gail's Bakery St Albans", 'Sausage roll 4.10 Americano 3.20').category).toBe('MEALS');
+    expect(suggestCategory('City Plumbing Supplies', 'Combi boiler flue kit 96.00').category).toBe('TOOLS_EQUIPMENT');
+  });
 });

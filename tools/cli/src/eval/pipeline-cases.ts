@@ -269,6 +269,8 @@ const taxiDay = txt({ merchant: 'Addison Lee', receiptNo: 'AL-55190', date: '16/
 const noPayment = txt({ merchant: 'Watford Hardware Centre', receiptNo: 'WHC-1182', date: '16/10/2026', items: [['Pipe insulation x6', '14.70']], total: '14.70' }, { date: '2026-10-16', category: 'TOOLS_EQUIPMENT' });
 const outage = txt({ merchant: 'Trainline', receiptNo: 'TL-50550', date: '15/10/2026', items: [['Off-peak return Watford - Euston', '19.80']], total: '19.80', paidWith: personal() }, { date: '2026-10-15', category: 'TRAVEL' }, { outage: true });
 const firstClass = txt({ merchant: 'Avanti West Coast', receiptNo: 'AVN-4410', date: '15/10/2026', items: [['Anytime return Euston - Manchester', '165.00']], subtotal: '165.00', total: '165.00', vatNumber: 'GB 000 0000 14', paidWith: personal() }, { date: '2026-10-15', category: 'TRAVEL' });
+const cafe = txt({ merchant: 'Costa Coffee Hatfield', receiptNo: 'CC-40917', date: '16/10/2026', items: [['Bacon roll', '4.95'], ['Latte', '3.45']], total: '8.40', paidWith: personal() }, { date: '2026-10-16', category: 'MEALS' });
+const bakery = txt({ merchant: 'Gail\'s Bakery St Albans', receiptNo: 'GB-77203', date: '16/10/2026', items: [['Sausage roll', '4.10'], ['Americano', '3.20']], total: '7.30', paidWith: personal() }, { date: '2026-10-16', category: 'MEALS' });
 const alexFuel = txt({ merchant: 'BP Hemel Hempstead', receiptNo: 'BP-22018', date: '15/10/2026', items: [['Diesel 38.2L', '57.30']], total: '57.30', paidWith: personal('1881') }, { date: '2026-10-15', category: 'FUEL' });
 
 export const TUNE_CASES: readonly PipelineCase[] = [
@@ -333,6 +335,14 @@ export const TUNE_CASES: readonly PipelineCase[] = [
     { do: 'swipe', id: 's1', last4: '1881', amount: '57.30', descriptor: 'BP HEMEL HEMPSTEAD', at: at('2026-10-15', '17:45') },
     { do: 'email', from: 'alex', doc: alexFuel },
   ], { expenses: [card('s1')], followUps: 0 }),
+  T('pt24', 'ambiguous_purpose', 'Café breakfast, no purpose; the reply is only an acknowledgement, so finance decides', [
+    { do: 'email', doc: cafe },
+    { do: 'reply', body: 'Will do, cheers!' },
+  ], { expenses: [is('REVIEW')], followUps: 1 }),
+  T('pt25', 'missing_purpose', 'Bakery breakfast, no purpose; a short real purpose in reply clears it', [
+    { do: 'email', doc: bakery },
+    { do: 'reply', body: 'Breakfast before the St Albans survey' },
+  ], { expenses: [paid(bakery)], followUps: 1 }),
 ];
 
 export const ALL_CASES: readonly PipelineCase[] = [...TUNE_CASES, ...HELDOUT_CASES];

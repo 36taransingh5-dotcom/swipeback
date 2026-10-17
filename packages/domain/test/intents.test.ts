@@ -55,7 +55,18 @@ describe('intent resolution', () => {
     });
   });
 
-  it.each(['ok', '??', '12345', 'x'.repeat(501)])('rejects a non-purpose %j', (text) => {
+  it.each(['Client lunch', 'Taxi to the Leeds site', 'team breakfast', 'Fixings for job 4417', 'Train to client'])(
+    'accepts a short real purpose %j',
+    (text) => {
+      expect(resolveIntent(msg({ text, openQuestion: { kind: 'BUSINESS_PURPOSE' } })).answer).toEqual({ kind: 'BUSINESS_PURPOSE', value: text });
+    },
+  );
+
+  it.each([
+    'ok', '??', '12345', 'x'.repeat(501),
+    'ok thanks', 'Thanks!', 'yes', 'will do', 'see attached', 'as per the receipt', "don't know", 'Not sure, sorry',
+    'it was for work', 'business expense', 'n/a', 'Cheers, done', 'I don’t remember',
+  ])('rejects a non-purpose %j', (text) => {
     expect(resolveIntent(msg({ text, openQuestion: { kind: 'BUSINESS_PURPOSE' } })).answer).toBeNull();
   });
 
