@@ -27,12 +27,17 @@ tunnel is needed.
        home_tab_enabled: false
        messages_tab_enabled: true
        messages_tab_read_only_enabled: false
+     slash_commands:
+       - command: /swipeback
+         description: Your expenses, pending cases and help
+         usage_hint: "[status [@person] | pending | help]"
+         should_escape: false
    oauth_config:
      scopes:
-       bot: [chat:write, im:history, im:read, im:write, files:read, users:read, users:read.email]
+       bot: [chat:write, commands, im:history, im:read, im:write, channels:history, groups:history, files:read, users:read, users:read.email]
    settings:
      event_subscriptions:
-       bot_events: [message.im]
+       bot_events: [message.im, message.channels, message.groups]
      interactivity:
        is_enabled: false
      org_deploy_enabled: false
@@ -84,6 +89,25 @@ corepack pnpm sb slack:listen     # Socket Mode listener; Ctrl+C to stop
 In Slack open the **Swipeback (DEMO)** app → **Messages** tab and send a receipt photo or PDF.
 `corepack pnpm sb slack:status` shows the connection, linked users and the latest messages in and out.
 
+## Groups and the `/swipeback` command
+
+Add the bot to a channel (`/invite @swipeback`). Then:
+
+- **Receipts in a channel:** post the photo or PDF and mention the bot (`@Swipeback here is my receipt`).
+  The bot replies in the thread with a short acknowledgement that contains no receipt details; the
+  merchant, amount and decision go to you in a **direct message**, and any follow-up question is asked
+  there (answer in that DM's thread). Channel messages that do not mention the bot are never read.
+- **`/swipeback help`:** how to send receipts and what the commands do.
+- **`/swipeback status`:** your latest expenses and totals, visible only to you.
+- **`/swipeback status @person`:** the same for someone else; finance roles (reviewer, payment
+  approver, admin) only, and each lookup is audited.
+- **`/swipeback pending`:** finance roles only; cases waiting on finance with sign-in review links.
+  Nothing is approved from Slack.
+
+All command replies are ephemeral (only the person who ran the command sees them). If you set the app
+up before this section existed, open **App Manifest** in the app settings, paste the manifest above and
+**reinstall the app** so the new scopes (`commands`, `channels:history`, `groups:history`) apply.
+
 ## How it behaves
 
 - **Reply location:** every reply goes in a thread under the message that started the case.
@@ -93,8 +117,8 @@ In Slack open the **Swipeback (DEMO)** app → **Messages** tab and send a recei
   existing reminder and expiry flow hands the case to finance.
 - **New receipt:** a new top-level receipt while a question is open is a new expense.
 - **Unknown Slack user:** quarantined; at most one enrolment reply per day.
-- **Ignored:** bot messages (including our own replies), edits, deletions, channel messages,
-  reactions and empty messages. Only direct messages are handled.
+- **Ignored:** bot messages (including our own replies), edits, deletions, reactions, empty messages
+  and any channel message that does not mention the bot.
 - **Fail closed:** a failed or HTML file download creates no expense; the listener retries the
   event. A failed send is recorded on the outbound message and the case stays visible to finance.
 - **Wording:** the shared question templates say "reply to this email". In Slack the "Reply in this
@@ -110,6 +134,8 @@ In Slack open the **Swipeback (DEMO)** app → **Messages** tab and send a recei
 | Listener logs `file_download_returned_html` | Missing `files:read` scope or wrong bot token; reinstall the app after changing scopes. |
 | Message sent, no reply | Worker not running, or the Slack user is not linked (check `slack:status`; unknown users get one enrolment reply). |
 | Nothing arrives | The app's `message.im` event and Messages tab must be enabled (re-check the manifest). |
+| `/swipeback` says it failed | The `commands` scope and the slash command must be in the manifest, the app reinstalled, and `slack:listen` running. |
+| Channel receipt ignored | The bot must be invited to the channel and mentioned in the message; `channels:history` / `groups:history` must be granted. |
 
 ## Live test results
 

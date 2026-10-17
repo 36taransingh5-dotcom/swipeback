@@ -131,6 +131,27 @@ function str(v: unknown): string {
   return v;
 }
 
+/**
+ * Answer a slash command via its `response_url` (valid for 30 minutes). `ephemeral` means only the
+ * person who ran the command sees it. The URL comes from Slack but is still checked: it must be
+ * https on hooks.slack.com, so a forged payload can never make us call an arbitrary address.
+ */
+export async function postSlackResponse(responseUrl: string, text: string, fetchImpl: typeof fetch = fetch): Promise<void> {
+  let url: URL;
+  try {
+    url = new URL(responseUrl);
+  } catch {
+    throw new SlackApiError('invalid_response_url', 'response_url');
+  }
+  if (url.protocol !== 'https:' || url.hostname !== 'hooks.slack.com') throw new SlackApiError('untrusted_response_url', 'response_url');
+  const res = await fetchImpl(url, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json; charset=utf-8' },
+    body: JSON.stringify({ response_type: 'ephemeral', text }),
+  });
+  if (!res.ok) throw new SlackApiError(`http_${res.status}`, 'response_url');
+}
+
 /** Socket Mode: exchange the app-level token (xapp-…) for a one-time WebSocket URL. */
 export async function openSocketModeUrl(appToken: string, fetchImpl: typeof fetch = fetch): Promise<string> {
   const res = await fetchImpl(`${API}apps.connections.open`, { method: 'POST', headers: { authorization: `Bearer ${appToken}`, 'content-type': 'application/x-www-form-urlencoded' } });

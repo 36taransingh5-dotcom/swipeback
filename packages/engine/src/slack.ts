@@ -1,13 +1,17 @@
 import {
   InboundRejectedError,
+  isSharedChannel,
   openSocketModeUrl,
+  postSlackResponse,
   SlackAdapter,
+  slackSlashCommandSchema,
   SlackWebClient,
   type EvidenceStore,
 } from '@swipeback/channels';
 import { appendAudit } from '@swipeback/db';
 import type { EngineDeps } from './deps.ts';
 import { ingestInbound, loadConnection, type ReceiveOutcome } from './inbound.ts';
+import { handleSlackCommand } from './slack-commands.ts';
 
 /**
  * Slack glue. The adapter turns Slack payloads into InboundMessage v1; everything after that is the
@@ -27,10 +31,16 @@ export async function receiveSlackEvent(deps: EngineDeps, connectionId: string, 
   const adapter = deps.channels.adapterFor(conn.provider);
   if (conn.channel !== 'slack' || !(adapter instanceof SlackAdapter)) throw new Error(`connection ${connectionId} is not a Slack connection`);
   try {
-    const verified = adapter.fromSocketEnvelope(conn, envelope);
+    // Channel messages are only handled when they mention the bot, so we need its own user id.
+    const verified = adapter.fromSocketEnvelope(conn, envelope, await adapter.botUserId());
     if (!verified) return { status: 'IGNORED', reason: 'event not handled' };
     const event = await adapter.normaliseInbound(verified);
     const r = await ingestInbound(deps, event);
+    const { channel, ts } = verified.payload.event;
+    if (!r.duplicate && isSharedChannel(channel)) {
+      // Receipts posted in a channel get a non-sensitive acknowledgement there; details go by DM.
+      await adapter.acknowledgeInChannel(channel, ts).catch(() => undefined);
+    }
     return { status: 'ACCEPTED', ...r };
   } catch (err) {
     if (!(err instanceof InboundRejectedError)) throw err;
@@ -41,6 +51,28 @@ export async function receiveSlackEvent(deps: EngineDeps, connectionId: string, 
     });
     return { status: 'REJECTED', reason: err.reason };
   }
+}
+
+/** Answer a `slash_commands` envelope: compute the reply and post it to the command's response_url (ephemeral). */
+export async function receiveSlackCommand(
+  deps: EngineDeps,
+  connectionId: string,
+  envelope: unknown,
+  respond: (responseUrl: string, text: string) => Promise<void> = postSlackResponse,
+): Promise<'RESPONDED' | 'IGNORED'> {
+  const payload = (envelope as { payload?: unknown } | null)?.payload;
+  const parsed = slackSlashCommandSchema.safeParse(payload);
+  if (!parsed.success || parsed.data.command !== '/swipeback') return 'IGNORED';
+  const conn = await loadConnection(deps, connectionId);
+  if (parsed.data.team_id.toLowerCase() !== conn.address.toLowerCase()) return 'IGNORED';
+  let text: string;
+  try {
+    text = await handleSlackCommand(deps, connectionId, parsed.data.team_id, parsed.data);
+  } catch {
+    text = 'Something went wrong on our side. Nothing was changed. Please try again.';
+  }
+  await respond(parsed.data.response_url, text);
+  return 'RESPONDED';
 }
 
 /** The part of a WebSocket the loop uses; the global WebSocket satisfies it. */
@@ -59,6 +91,8 @@ export interface SlackSocketOptions {
   /** Delay before reconnecting; doubles per consecutive failure up to retryMaxMs. */
   retryBaseMs?: number;
   retryMaxMs?: number;
+  /** Post a slash-command answer (injectable for tests). */
+  respond?: (responseUrl: string, text: string) => Promise<void>;
   /** Attempts to process one event before giving up (Slack will not redeliver an acknowledged envelope). */
   eventAttempts?: number;
   eventRetryMs?: number;
@@ -80,8 +114,13 @@ export async function runSlackSocket(deps: EngineDeps, connectionId: string, app
   const eventRetryMs = opts.eventRetryMs ?? 500;
 
   const handle = async (frame: unknown): Promise<void> => {
+    const isCommand = (frame as { type?: unknown }).type === 'slash_commands';
     for (let i = 1; i <= attempts && !signal.aborted; i++) {
       try {
+        if (isCommand) {
+          await receiveSlackCommand(deps, connectionId, frame, opts.respond);
+          return;
+        }
         const outcome = await receiveSlackEvent(deps, connectionId, frame);
         if (outcome.status === 'REJECTED') log(`event rejected: ${outcome.reason}`);
         return;
@@ -157,7 +196,7 @@ function runConnection(
       if (typeof f.envelope_id === 'string') ws.send(JSON.stringify({ envelope_id: f.envelope_id })); // ack first
       if (f.type === 'hello') hello = true;
       else if (f.type === 'disconnect') ws.close();
-      else if (f.type === 'events_api') chain = chain.then(() => handle(frame));
+      else if (f.type === 'events_api' || f.type === 'slash_commands') chain = chain.then(() => handle(frame));
     });
     ws.addEventListener('close', finish);
     ws.addEventListener('error', () => log('socket error'));

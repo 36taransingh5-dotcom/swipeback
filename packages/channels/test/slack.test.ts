@@ -11,6 +11,7 @@ import {
   SlackAdapter,
   SlackApiError,
   SlackWebClient,
+  postSlackResponse,
   type ChannelAdapter,
   type ConnectionContext,
   type SlackClient,
@@ -392,5 +393,105 @@ describe('slack web client', () => {
     await expect(limited.postMessage({ channel: DM, text: 'x' })).rejects.toMatchObject({ code: 'ratelimited', retryAfterSeconds: 7 });
     const none = new SlackWebClient(TOKEN, (async () => res({ ok: false, error: 'users_not_found' })) as typeof fetch);
     expect(await none.lookupUserByEmail('nobody@example.com')).toBeNull();
+  });
+});
+
+describe('slack shared channels', () => {
+  const BOT = 'U0BOT0001';
+  const CHANNEL = 'C0TEAM0001';
+  const setup = () => {
+    const slack = new FakeSlack();
+    return { slack, adapter: new SlackAdapter(new MemoryEvidenceStore(), slack, '') };
+  };
+  const channelEvent = (over: Record<string, unknown> = {}) =>
+    messageEvent({ channel: CHANNEL, channel_type: 'channel', text: `<@${BOT}> receipt for the Watford trip`, ...over });
+
+  it('handles a channel message only when it mentions the bot', () => {
+    const { adapter } = setup();
+    expect(adapter.fromSocketEnvelope(connection, socketEnvelope(channelEvent()), BOT)).toMatchObject({ senderAuth: 'platform_signed' });
+    expect(adapter.fromSocketEnvelope(connection, socketEnvelope(channelEvent({ text: 'receipt for the Watford trip' })), BOT)).toBeNull();
+    expect(adapter.fromSocketEnvelope(connection, socketEnvelope(channelEvent({ text: '<@U0SOMEONE1> hi' })), BOT)).toBeNull();
+  });
+
+  it('ignores every channel message when the bot id is not known', () => {
+    const { adapter } = setup();
+    expect(adapter.fromSocketEnvelope(connection, socketEnvelope(channelEvent()))).toBeNull();
+  });
+
+  it('handles private channels too, and still ignores bot posts and edits there', () => {
+    const { adapter } = setup();
+    const group = { channel: 'G0PRIVATE1', channel_type: 'group' };
+    expect(adapter.fromSocketEnvelope(connection, socketEnvelope(channelEvent(group)), BOT)).not.toBeNull();
+    expect(adapter.fromSocketEnvelope(connection, socketEnvelope(channelEvent({ ...group, bot_id: 'B0001' })), BOT)).toBeNull();
+    expect(adapter.fromSocketEnvelope(connection, socketEnvelope(channelEvent({ ...group, subtype: 'message_changed' })), BOT)).toBeNull();
+  });
+
+  it('normalises a channel receipt: sender from the user id, thread in the channel, mention stripped', async () => {
+    const { slack, adapter } = setup();
+    const ts = nextTs();
+    const v = adapter.fromSocketEnvelope(
+      connection,
+      socketEnvelope(channelEvent({ ts, files: [{ id: 'F1', name: 'r.png', mimetype: 'image/png', url_private_download: slack.addFile(PNG, 'image/png') }] })),
+      BOT,
+    )!;
+    const event = await adapter.normaliseInbound(v);
+    expect(event.sender.channelAddress).toBe(SENDER);
+    expect(event.conversation.threadId).toBe(`slack:${CHANNEL}:${ts}`);
+    expect(event.text.sanitised).toBe('receipt for the Watford trip');
+    expect(event.attachments).toHaveLength(1);
+  });
+
+  it('answers a channel receipt privately: the DM is top-level, never in the channel thread', async () => {
+    const { slack, adapter } = setup();
+    const r = await adapter.sendMessage({
+      tenantId, connectionId: connection.connectionId, from: TEAM, to: SENDER, subject: 'SB-1001 cleared', text: 'Trainline, GBP 42.10', threadId: `slack:${CHANNEL}:1760700000.000555`,
+      inReplyTo: null, references: [], replyToken: null, idempotencyKey: 'k1',
+    });
+    expect(slack.posts).toEqual([{ channel: DM, text: 'SB-1001 cleared\n\nTrainline, GBP 42.10', threadTs: undefined }]);
+    expect(r.threadId).toBe(`slack:${DM}:${r.providerMessageId}`);
+  });
+
+  it('acknowledges in the channel thread with a message that carries no receipt details', async () => {
+    const { slack, adapter } = setup();
+    await adapter.acknowledgeInChannel(CHANNEL, '1760700000.000555');
+    expect(slack.posts).toHaveLength(1);
+    expect(slack.posts[0]).toMatchObject({ channel: CHANNEL, threadTs: '1760700000.000555' });
+    expect(slack.posts[0]!.text).toContain('privately');
+    expect(slack.posts[0]!.text).toContain('SYNTHETIC DEMO');
+  });
+
+  it('looks up the bot user id once and caches it, and retries after a failure', async () => {
+    const { slack, adapter } = setup();
+    let calls = 0;
+    let fail = true;
+    slack.authTest = async () => {
+      calls++;
+      if (fail) throw new SlackApiError('invalid_auth', 'auth.test');
+      return { teamId: TEAM, team: 'Demo', userId: BOT, user: 'swipeback' };
+    };
+    await expect(adapter.botUserId()).rejects.toThrow('invalid_auth');
+    fail = false;
+    expect(await adapter.botUserId()).toBe(BOT);
+    expect(await adapter.botUserId()).toBe(BOT);
+    expect(calls).toBe(2);
+  });
+});
+
+describe('slash command responses', () => {
+  it('posts an ephemeral reply to hooks.slack.com only', async () => {
+    const calls: { url: string; body: unknown }[] = [];
+    const ok = (async (url: URL, init?: RequestInit) => {
+      calls.push({ url: String(url), body: JSON.parse(String(init?.body)) });
+      return new Response('ok');
+    }) as unknown as typeof fetch;
+    await postSlackResponse('https://hooks.slack.com/commands/T0TEAM01/1/abc', 'hello', ok);
+    expect(calls).toEqual([{ url: 'https://hooks.slack.com/commands/T0TEAM01/1/abc', body: { response_type: 'ephemeral', text: 'hello' } }]);
+  });
+
+  it.each(['https://evil.example/hooks', 'http://hooks.slack.com/commands/x', 'https://hooks.slack.com.evil.example/x', 'not a url'])('refuses %s', async (url) => {
+    let called = false;
+    const spy = (async () => ((called = true), new Response('ok'))) as unknown as typeof fetch;
+    await expect(postSlackResponse(url, 'hello', spy)).rejects.toBeInstanceOf(SlackApiError);
+    expect(called).toBe(false);
   });
 });

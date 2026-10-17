@@ -12,6 +12,7 @@ export * from './challenges.ts';
 export * from './review.ts';
 export * from './case-view.ts';
 export * from './slack.ts';
+export * from './slack-commands.ts';
 export * from './secrets.ts';
 export * from './gmail.ts';
 export * from './receipt-chase.ts';

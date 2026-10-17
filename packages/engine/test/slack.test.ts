@@ -20,6 +20,7 @@ import {
   engineHandlers,
   questionTimeout,
   receiveInbound,
+  receiveSlackCommand,
   receiveSlackEvent,
   runSlackSocket,
   slackAdapterFromEnv,
@@ -496,6 +497,280 @@ describe('Socket Mode loop', () => {
     h.slack.failDownloads = 0;
     sockets[0]!.receive(eventFrame(train(), 'env-after'));
     await waitFor(async () => (await inbound()) === 1, 'the next event to be ingested');
+    abort.abort();
+    await done;
+  });
+});
+
+// ---------------------------------------------------------------------------------------------
+// Shared channels and the /swipeback slash command
+// ---------------------------------------------------------------------------------------------
+
+const BOT = 'U0BOT0001';
+const CHANNEL = 'C0TEAM0001';
+const FIN = 'U0FIN00001';
+const ALEX_SLACK = 'U0ALEX0001';
+const hotel = () =>
+  textReceipt({ merchant: 'Premier Stay Hotel Watford', receiptNo: `H-${Math.floor(Math.random() * 1e6)}`, date: ukDate(2), items: [['Room, 1 night', '210.00']], total: '210.00', vat: '35.00', vatNumber: 'GB000000000', paidWith: { card: '9911' } });
+
+/** Link the finance controller and a second employee to Slack accounts. */
+async function linkOthers(): Promise<void> {
+  for (const [member, user] of [[h.org.members.controller, FIN], [h.org.members.unenrolledEmployee, ALEX_SLACK]] as const) {
+    await h.db.pool.query(
+      `INSERT INTO channel_identities (organisation_id, member_id, channel, channel_address, verification_method) VALUES ($1, $2, 'slack', $3, 'demo_enrolment')`,
+      [h.org.organisationId, member, `slack:t0team01:${user.toLowerCase()}`],
+    );
+  }
+}
+
+/** A message posted in a shared channel, as Slack delivers it. */
+async function channelPost(opts: { text?: string; receipt?: string; ts?: string; user?: string; channelType?: 'channel' | 'group'; channel?: string }) {
+  const ts = opts.ts ?? nextTs();
+  const event = {
+    type: 'message', ...(opts.receipt ? { subtype: 'file_share' } : {}), user: opts.user ?? SAM, channel: opts.channel ?? CHANNEL, channel_type: opts.channelType ?? 'channel', ts,
+    text: opts.text ?? `<@${BOT}> here is my receipt`,
+    files: opts.receipt ? [{ id: 'F0001', name: 'receipt.txt', mimetype: 'text/plain', url_private_download: h.slack.addFile(opts.receipt) }] : [],
+  };
+  const envelope = socketEnvelope(event);
+  return { ts, envelope, outcome: await receiveSlackEvent(h.deps, h.slackConnectionId, envelope) };
+}
+
+describe('receipts posted in a shared channel', () => {
+  it('a mentioned receipt is processed; the channel thread gets a non-sensitive ack and the details arrive by DM', async () => {
+    const { ts, outcome } = await channelPost({ receipt: train() });
+    expect(outcome).toMatchObject({ status: 'ACCEPTED', duplicate: false });
+    await h.drain();
+    expect((await h.expenses())[0]).toMatchObject({ state: 'EXPORTED', merchant: 'Trainline' });
+    const inChannel = h.slack.posts.filter((p) => p.channel === CHANNEL);
+    const inDm = h.slack.posts.filter((p) => p.channel === SAM_DM);
+    expect(inChannel).toHaveLength(1);
+    expect(inChannel[0]).toMatchObject({ threadTs: ts });
+    expect(inChannel[0]!.text).toContain('privately');
+    expect(inChannel[0]!.text).not.toMatch(/Trainline|42\.10|SB-\d+|SIMULATED/);
+    expect(inDm).toHaveLength(1);
+    expect(inDm[0]!.threadTs).toBeUndefined(); // top-level DM: the channel thread is not reused
+    expect(inDm[0]!.text).toContain('Trainline');
+    // The DM thread is linked to the expense, so replies in it correlate; the original channel thread stays on the message.
+    const links = (await h.db.pool.query<{ thread_id: string }>(`SELECT thread_id FROM conversation_links WHERE channel = 'slack'`)).rows.map((r) => r.thread_id);
+    expect(links).toEqual(expect.arrayContaining([`slack:${CHANNEL}:${ts}`, `slack:${SAM_DM}:${inDm[0]!.ts}`]));
+  });
+
+  it('a question about a channel receipt is asked by DM, and the answer in that DM thread attaches to the expense', async () => {
+    await channelPost({ receipt: costa() });
+    await h.drain();
+    const question = h.slack.posts.find((p) => p.channel === SAM_DM)!;
+    expect(question.text).toContain('What was the business purpose?');
+    expect(question.text).toContain('Reply in this thread.');
+    await h.dm({ text: PURPOSE, threadTs: question.ts });
+    await h.drain();
+    const expenses = await h.expenses();
+    expect(expenses).toHaveLength(1);
+    expect(expenses[0]).toMatchObject({ state: 'EXPORTED', business_purpose: PURPOSE });
+    expect(h.slack.posts.filter((p) => p.channel === CHANNEL)).toHaveLength(1); // still only the one ack
+  });
+
+  it('private channels (groups) work the same way', async () => {
+    const r = await channelPost({ receipt: train(), channelType: 'group', channel: 'G0PRIVATE1' });
+    expect(r.outcome.status).toBe('ACCEPTED');
+    await h.drain();
+    expect(h.slack.posts.filter((p) => p.channel === 'G0PRIVATE1')).toHaveLength(1);
+  });
+
+  it('channel messages that do not mention the bot are never read', async () => {
+    const r = await channelPost({ receipt: train(), text: 'lunch receipt for the team' });
+    expect(r.outcome).toMatchObject({ status: 'IGNORED' });
+    expect(await count(`SELECT count(*)::int AS n FROM inbound_messages`)).toBe(0);
+    expect(h.slack.order).toEqual([]); // the file was not even downloaded
+    expect(h.slack.posts).toHaveLength(0);
+  });
+
+  it('redelivery of the same channel event creates one expense and one ack', async () => {
+    const first = await channelPost({ receipt: train() });
+    await receiveSlackEvent(h.deps, h.slackConnectionId, first.envelope);
+    await receiveSlackEvent(h.deps, h.slackConnectionId, first.envelope);
+    await h.drain();
+    expect(await h.expenses()).toHaveLength(1);
+    expect(h.slack.posts.filter((p) => p.channel === CHANNEL)).toHaveLength(1);
+  });
+
+  it('an unknown Slack user in a channel is quarantined and told about enrolment by DM, not in the channel', async () => {
+    await channelPost({ receipt: train(), user: STRANGER });
+    await h.drain();
+    expect(await h.expenses()).toHaveLength(0);
+    expect(h.slack.posts.filter((p) => p.channel === CHANNEL).map((p) => p.text.includes('privately'))).toEqual([true]);
+    expect(h.slack.posts.filter((p) => p.channel === `D${STRANGER.slice(1)}`)).toHaveLength(1);
+  });
+
+  it('a failing channel ack does not lose the receipt', async () => {
+    const original = h.slack.postMessage.bind(h.slack);
+    h.slack.postMessage = async (input) => {
+      if (input.channel === CHANNEL) throw new SlackApiError('not_in_channel', 'chat.postMessage');
+      return original(input);
+    };
+    const r = await channelPost({ receipt: train() });
+    expect(r.outcome.status).toBe('ACCEPTED');
+    await h.drain();
+    expect((await h.expenses())[0]!.state).toBe('EXPORTED');
+  });
+});
+
+describe('/swipeback slash command', () => {
+  const run = async (text: string, user = SAM, over: Record<string, unknown> = {}) => {
+    const replies: { url: string; text: string }[] = [];
+    const envelope = {
+      type: 'slash_commands', envelope_id: randomUUID(),
+      payload: { team_id: TEAM, user_id: user, channel_id: CHANNEL, command: '/swipeback', text, response_url: 'https://hooks.slack.com/commands/T0TEAM01/1/abc', ...over },
+    };
+    const result = await receiveSlackCommand(h.deps, h.slackConnectionId, envelope, async (url, t) => void replies.push({ url, text: t }));
+    return { result, text: replies[0]?.text ?? '', replies };
+  };
+
+  it('help and tips explain both ways to send a receipt and list the commands', async () => {
+    const { text } = await run('help');
+    expect(text).toContain('Direct message');
+    expect(text).toContain('@Swipeback');
+    expect(text).toContain('/swipeback pending');
+    expect((await run('')).text).toBe(text);
+    expect((await run('bogus')).text).toContain("don't know");
+  });
+
+  it('answers only via the response_url, only for /swipeback in this workspace', async () => {
+    expect((await run('help', SAM, { command: '/other' })).result).toBe('IGNORED');
+    expect((await run('help', SAM, { team_id: 'T0OTHER99' })).result).toBe('IGNORED');
+    const ok = await run('help');
+    expect(ok.result).toBe('RESPONDED');
+    expect(ok.replies[0]!.url).toBe('https://hooks.slack.com/commands/T0TEAM01/1/abc');
+  });
+
+  it('an unlinked Slack user is told how to get linked and sees no data', async () => {
+    const { text } = await run('status', STRANGER);
+    expect(text).toContain("isn't linked");
+    expect(text).not.toMatch(/SB-\d+/);
+  });
+
+  it('status shows your own expenses', async () => {
+    expect((await run('status')).text).toContain("haven't submitted");
+    await h.dm({ receipt: train() });
+    await h.dm({ receipt: costa() });
+    await h.drain();
+    const { text } = await run('status');
+    expect(text).toMatch(/\*Your expenses\*: 2 submitted, 1 filed, 1 waiting on you, 0 with finance, GBP 42\.10 reimbursed \(simulated\)/);
+    expect(text).toContain('SB-1001 Trainline');
+    expect(text).toContain('SB-1002 Costa Coffee');
+    expect(text).toContain('SYNTHETIC DEMO');
+  });
+
+  it('an employee cannot look at someone else; finance can, and that lookup is audited', async () => {
+    await linkOthers();
+    await h.dm({ receipt: train() });
+    await h.drain();
+    const denied = await run(`status <@${SAM}|sam>`, ALEX_SLACK);
+    expect(denied.text).toBe('You can only see your own expenses.');
+    expect(denied.text).not.toMatch(/Trainline|SB-\d+/);
+    expect(await count(`SELECT count(*)::int AS n FROM audit_events WHERE action = 'slack.status_viewed'`)).toBe(0);
+
+    const allowed = await run(`status <@${SAM}|sam>`, FIN);
+    expect(allowed.text).toContain('Trainline');
+    expect(allowed.text).toContain('Sam Taylor');
+    const audit = (await h.db.pool.query(`SELECT actor_id, entity_id FROM audit_events WHERE action = 'slack.status_viewed'`)).rows;
+    expect(audit).toEqual([{ actor_id: h.org.members.controller, entity_id: h.org.members.employee }]);
+    // Looking at yourself by mention is not a cross-member lookup.
+    expect((await run(`status <@${ALEX_SLACK}>`, ALEX_SLACK)).text).toContain("haven't submitted");
+    expect(await count(`SELECT count(*)::int AS n FROM audit_events WHERE action = 'slack.status_viewed'`)).toBe(1);
+  });
+
+  it('asking about a plain name or an unlinked person shows nothing', async () => {
+    await linkOthers();
+    expect((await run('status sam', FIN)).text).toContain('mention them');
+    expect((await run(`status <@${STRANGER}>`, FIN)).text).toContain("isn't linked");
+  });
+
+  it('pending is for finance only, lists sign-in review links, and never offers to approve', async () => {
+    await linkOthers();
+    await h.dm({ receipt: hotel() });
+    await h.drain();
+    const [e] = await h.expenses();
+    expect(e!.state).toBe('REVIEW_REQUIRED');
+    expect((await run('pending')).text).toBe('Only finance reviewers can see the pending queue.');
+    const { text } = await run('pending', FIN);
+    expect(text).toContain('*1 waiting on finance*');
+    expect(text).toContain(`<http://localhost:3000/review/${e!.id}|${e!.ref}>`);
+    expect(text).toContain('Premier Stay Hotel Watford');
+    expect(text).toContain('Nothing is approved from Slack');
+  });
+
+  it('pending says so when the queue is empty', async () => {
+    await linkOthers();
+    expect((await run('pending', FIN)).text).toContain('Nothing is waiting on finance');
+  });
+
+  it('merchant names from receipts cannot forge mentions or links in a reply', async () => {
+    await linkOthers();
+    const evil = textReceipt({ merchant: 'Cafe <!channel> <@U0FIN00001> & <https://evil.example|click>', receiptNo: 'E-1', date: ukDate(1), items: [['Coffee', '210.00']], total: '210.00', vat: '35.00', vatNumber: 'GB000000000', paidWith: { card: '9911' } });
+    await h.dm({ receipt: evil });
+    await h.drain();
+    for (const text of [(await run('status')).text, (await run('pending', FIN)).text]) {
+      expect(text).not.toContain('<!channel>');
+      expect(text).not.toContain('<https://evil.example');
+      expect(text).not.toContain('<@U0FIN00001>');
+    }
+  });
+
+  it('a failure inside the command is reported without leaking details', async () => {
+    // The connection lookup uses the real pool; the identity lookup inside the command is made to fail.
+    const query = h.deps.pool.query.bind(h.deps.pool) as (sql: string, ...rest: unknown[]) => Promise<unknown>;
+    const failing = new Proxy(h.deps.pool, {
+      get: (target, key) =>
+        key === 'query'
+          ? async (sql: string, ...rest: unknown[]) => {
+              if (/channel_identities/.test(sql)) throw new Error('select * from secrets exploded');
+              return query(sql, ...rest);
+            }
+          : Reflect.get(target, key),
+    });
+    const replies: string[] = [];
+    await receiveSlackCommand(
+      { ...h.deps, pool: failing },
+      h.slackConnectionId,
+      { payload: { team_id: TEAM, user_id: SAM, command: '/swipeback', text: 'status', response_url: 'https://hooks.slack.com/commands/x' } },
+      async (_url, t) => void replies.push(t),
+    );
+    expect(replies[0]).toContain('Something went wrong');
+    expect(replies[0]).not.toContain('secrets');
+  });
+});
+
+describe('slash commands over the socket', () => {
+  it('acknowledges the envelope immediately, then answers via response_url', async () => {
+    const sockets: FakeSocket[] = [];
+    const replies: { url: string; text: string }[] = [];
+    const abort = new AbortController();
+    const done = runSlackSocket(h.deps, h.slackConnectionId, 'xapp-test', {
+      signal: abort.signal,
+      openUrl: async () => 'wss://fake.slack.test/link',
+      connect: () => {
+        const s = new FakeSocket((data) => h.slack.order.push(`ack:${(JSON.parse(data) as { envelope_id: string }).envelope_id}`));
+        sockets.push(s);
+        return s;
+      },
+      respond: async (url, text) => {
+        h.slack.order.push('respond');
+        replies.push({ url, text });
+      },
+      log: () => undefined,
+      retryBaseMs: 1,
+      retryMaxMs: 5,
+      eventRetryMs: 1,
+    });
+    await waitFor(() => sockets.length === 1, 'the connection');
+    sockets[0]!.receive({ type: 'hello' });
+    sockets[0]!.receive({
+      type: 'slash_commands', envelope_id: 'cmd-1',
+      payload: { team_id: TEAM, user_id: SAM, command: '/swipeback', text: 'help', response_url: 'https://hooks.slack.com/commands/T0TEAM01/9/xyz' },
+    });
+    await waitFor(() => replies.length === 1, 'the command reply');
+    expect(h.slack.order).toEqual(['ack:cmd-1', 'respond']);
+    expect(replies[0]!.text).toContain('Commands');
     abort.abort();
     await done;
   });
