@@ -1,0 +1,36 @@
+{
+  "name": "swipeback",
+  "private": true,
+  "description": "Swipeback — email-first expense operations agent. Finance only deals with exceptions.",
+  "packageManager": "pnpm@10.34.7",
+  "engines": {
+    "node": ">=24"
+  },
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint --max-warnings 0 .",
+    "test": "vitest run",
+    "verify": "corepack pnpm typecheck && corepack pnpm lint && corepack pnpm test",
+    "sb": "tsx tools/cli/src/main.ts",
+    "db:start": "tsx tools/cli/src/main.ts db:start",
+    "db:migrate": "tsx tools/cli/src/main.ts db:migrate",
+    "db:reset": "tsx tools/cli/src/main.ts db:reset",
+    "seed": "tsx tools/cli/src/main.ts seed"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@swipeback/cli": "workspace:*",
+    "@swipeback/db": "workspace:*",
+    "@swipeback/domain": "workspace:*",
+    "@types/node": "24.19.2",
+    "@types/pg": "8.23.1",
+    "eslint": "10.13.0",
+    "fast-check": "4.10.2",
+    "pg": "8.23.1",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2",
+    "vitest": "5.0.5"
+  }
+}

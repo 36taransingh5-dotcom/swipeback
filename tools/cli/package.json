@@ -1,0 +1,14 @@
+{
+  "name": "@swipeback/cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Developer console: database, seed, replay, simulators, evaluation.",
+  "exports": {
+    "./seed": "./src/seed.ts"
+  },
+  "dependencies": {
+    "@swipeback/db": "workspace:*",
+    "@swipeback/domain": "workspace:*"
+  }
+}

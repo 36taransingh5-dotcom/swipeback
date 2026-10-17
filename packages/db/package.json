@@ -1,0 +1,16 @@
+{
+  "name": "@swipeback/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Postgres schema, migrations, job queue and audit log.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./embedded": "./src/embedded.ts"
+  },
+  "dependencies": {
+    "@swipeback/domain": "workspace:*",
+    "embedded-postgres": "18.4.0-beta.17",
+    "pg": "8.23.1"
+  }
+}

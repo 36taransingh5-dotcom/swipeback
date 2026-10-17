@@ -1,0 +1,10 @@
+{
+  "name": "@swipeback/domain",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pure expense domain: money, state machines, policy, matching, eligibility. No IO.",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
