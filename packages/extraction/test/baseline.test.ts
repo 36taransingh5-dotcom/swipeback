@@ -41,6 +41,12 @@ describe('baseline extractor', () => {
     expect((await facts(tampered)).flags).toContain('ARITHMETIC_MISMATCH');
   });
 
+  it('does not count a subtotal line as a line item', async () => {
+    const invoice = ['City Plumbing Supplies', 'Date: 15/10/2026', 'Flue kit  £80.00', 'System filter  £20.00', 'Subtotal  £100.00', 'VAT @ 20%  £20.00', 'Total  £120.00', 'Paid by Visa ending 9911', 'VAT No: GB000000011'].join('\n');
+    expect(extractFromText(invoice).lineItems.map((li) => li.amountMinor)).toEqual([8000, 2000]);
+    expect((await facts(invoice)).flags).toEqual([]);
+  });
+
   it('marks a total with no currency, or no total at all, as uncertain', async () => {
     const noTotal = textReceipt({ merchant: 'Corner Shop', date: '16/10/2026', items: [['Milk', '1.20']], total: '1.20' }).replace(/Total.*\n/, '');
     expect((await facts(noTotal)).uncertainFields).toEqual(expect.arrayContaining(['amount', 'currency']));
@@ -76,5 +82,9 @@ describe('baseline extractor', () => {
 
   it('ties or no signal give no category', () => {
     expect(suggestCategory('Unknown Ltd', 'item 1.00').category).toBeNull();
+  });
+
+  it('recognises plural taxi firms as travel', () => {
+    expect(suggestCategory('Watford Station Taxis', 'Station to Croxley Business Park 18.00').category).toBe('TRAVEL');
   });
 });

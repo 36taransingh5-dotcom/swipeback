@@ -2,7 +2,7 @@ import type { Category } from '@swipeback/domain';
 
 /** Keyword category suggestion (rule-only). Ties or no signal -> null, which routes to review. */
 const KEYWORDS: Readonly<Record<Exclude<Category, 'OTHER' | 'CLIENT_ENTERTAINMENT'>, readonly string[]>> = {
-  TRAVEL: ['trainline', 'rail', 'railway', 'train', 'tfl', 'uber', 'taxi', 'cab', 'cabs', 'bolt', 'parking', 'ncp', 'toll', 'coach', 'avanti', 'lner', 'gwr', 'flight', 'easyjet', 'ryanair', 'airways', 'oyster', 'ticket', 'return', 'single'],
+  TRAVEL: ['trainline', 'rail', 'railway', 'train', 'tfl', 'uber', 'taxi', 'taxis', 'cab', 'cabs', 'bolt', 'parking', 'ncp', 'toll', 'coach', 'avanti', 'lner', 'gwr', 'flight', 'easyjet', 'ryanair', 'airways', 'oyster', 'ticket', 'return', 'single'],
   ACCOMMODATION: ['hotel', 'inn', 'travelodge', 'hilton', 'marriott', 'airbnb', 'lodge', 'night', 'nights', 'room'],
   FUEL: ['shell', 'bp', 'esso', 'texaco', 'fuel', 'petrol', 'diesel', 'unleaded', 'gulf', 'litres', 'pump'],
   MEALS: ['pret', 'costa', 'starbucks', 'cafe', 'coffee', 'restaurant', 'greggs', 'subway', 'mcdonald', 'nando', 'pizza', 'kitchen', 'bistro', 'deli', 'lunch', 'dinner', 'breakfast', 'sandwich', 'latte', 'meal'],
