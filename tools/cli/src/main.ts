@@ -18,6 +18,7 @@ import {
 } from '@swipeback/db';
 import { loadLocalEnv } from '@swipeback/engine';
 import { evalCommands } from './eval/benchmark.ts';
+import { pipelineEvalCommands } from './eval/pipeline-report.ts';
 import { extractionCommands } from './extraction-commands.ts';
 import { gmailCommands } from './gmail-commands.ts';
 import { pipelineCommands } from './pipeline-commands.ts';
@@ -100,6 +101,7 @@ const commands: Record<string, { describe: string; run: Command }> = {
   ...pipelineCommands,
   ...extractionCommands,
   ...evalCommands,
+  ...pipelineEvalCommands,
   ...gmailCommands,
 };
 

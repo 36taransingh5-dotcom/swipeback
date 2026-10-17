@@ -1,0 +1,7 @@
+{
+  "split": "heldout",
+  "frozenAt": "2026-10-17T13:10:57.052Z",
+  "cases": 29,
+  "casesSha256": "68d8a5c27ab43746fb3b55227ca5963e11027ce6de533a0e2d8035798748d29a",
+  "heldoutImagesManifestSha256": "62f0b808f763554117acd99338915b17c8118ed02d85f2c0de4af1b4a546fb73"
+}
