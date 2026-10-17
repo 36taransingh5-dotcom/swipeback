@@ -251,6 +251,8 @@ export interface PipelineReport {
   heldoutManifest: { casesSha256: string; frozenAt: string } | null;
   runs: { label: string; extractor: string; mode: string; summary: Summary; cases: ReportCase[] }[];
   manualBaseline: { timedBy: string; timedAt: string; method: string; cases: number; meanSeconds: number } | null;
+  /** Context a reader needs, e.g. that this is a re-run after fixes and no longer blind. */
+  note?: string;
 }
 
 export function markdown(r: PipelineReport): string {
@@ -261,6 +263,7 @@ export function markdown(r: PipelineReport): string {
     '',
     `Run ${r.runAt}, evaluated as of ${r.evaluatedAsOf}. ${r.heldoutManifest ? `Held-out cases frozen ${r.heldoutManifest.frozenAt} (\`${r.heldoutManifest.casesSha256.slice(0, 16)}\`). ` : ''}Every case runs through the real engine (intake → extraction → matching → deterministic policy → follow-ups → simulated payout) on a fresh database. Expected outcomes come from the written policy, not from the code.`,
     '',
+    ...(r.note ? [`> **Note:** ${r.note}`, ''] : []),
     `| Metric | ${r.runs.map((x) => `${x.label}`).join(' | ')} |`,
     `|---|${r.runs.map(() => '---').join('|')}|`,
     row('Cases fully correct', (x) => pct(x.cases)),
@@ -357,12 +360,12 @@ export const pipelineEvalCommands: Record<string, Command> = {
     },
   },
   'eval:pipeline': {
-    describe: 'End-to-end evaluation: --split heldout|tune|all --extractors llm,baseline [--replay|--record] [--model gpt-5.5]',
+    describe: 'End-to-end evaluation: --split heldout|tune|all --extractors llm,baseline [--replay|--record] [--model gpt-5.5] [--note "..."]',
     run: async (args) => {
       loadLocalEnv();
       const { values } = parseArgs({
         args,
-        options: { split: { type: 'string' }, extractors: { type: 'string' }, replay: { type: 'boolean' }, record: { type: 'boolean' }, model: { type: 'string' } },
+        options: { split: { type: 'string' }, extractors: { type: 'string' }, replay: { type: 'boolean' }, record: { type: 'boolean' }, model: { type: 'string' }, note: { type: 'string' } },
       });
       const split = values.split ?? 'heldout';
       if (!['heldout', 'tune', 'all'].includes(split)) throw new Error('--split must be heldout, tune or all');
@@ -394,6 +397,7 @@ export const pipelineEvalCommands: Record<string, Command> = {
         manualBaseline: manual && manual.cases.length
           ? { timedBy: manual.timedBy, timedAt: manual.timedAt, method: manual.method, cases: manual.cases.length, meanSeconds: manual.cases.reduce((a, x) => a + x.seconds, 0) / manual.cases.length }
           : null,
+        ...(values.note ? { note: values.note } : {}),
       };
       await mkdir(REPORT_DIR, { recursive: true });
       const base = path.join(REPORT_DIR, `pipeline-${split}-${runAt.replace(/[:.]/g, '-')}`);
