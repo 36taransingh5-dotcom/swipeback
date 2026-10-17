@@ -17,6 +17,7 @@
     "db:migrate": "tsx tools/cli/src/main.ts db:migrate",
     "db:reset": "tsx tools/cli/src/main.ts db:reset",
     "seed": "tsx tools/cli/src/main.ts seed",
+    "demo:reset": "tsx tools/cli/src/main.ts demo:reset",
     "worker": "tsx apps/worker/src/main.ts",
     "smoke:extract": "tsx tools/cli/src/main.ts smoke:extract",
     "web": "tsx apps/web/src/server.ts",

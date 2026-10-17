@@ -17,6 +17,7 @@ import {
   verifyAuditChain,
 } from '@swipeback/db';
 import { loadLocalEnv } from '@swipeback/engine';
+import { resetDemo } from './demo.ts';
 import { evalCommands } from './eval/benchmark.ts';
 import { pipelineEvalCommands } from './eval/pipeline-report.ts';
 import { extractionCommands } from './extraction-commands.ts';
@@ -64,6 +65,20 @@ const commands: Record<string, { describe: string; run: Command }> = {
         await resetSchema(pool);
         const r = await migrate(pool);
         console.log(`Schema reset. Applied: ${r.applied.join(', ')}`);
+      });
+    },
+  },
+  'demo:reset': {
+    describe: 'Wipe demo data, re-migrate and re-seed, keeping a connected Gmail mailbox (local databases only)',
+    run: async () => {
+      const url = databaseUrl();
+      if (!isLocalDatabaseUrl(url)) throw new Error('Refusing to reset a non-local database.');
+      await withPool(async (pool) => {
+        const r = await resetDemo(pool, { ...seedOptionsFromEnv(), dataDir: path.resolve(process.env.SB_DATA_DIR ?? '.data') });
+        console.log(`Demo reset in ${(r.ms / 1000).toFixed(1)} s. Organisation ${r.organisationId} (SYNTHETIC).`);
+        console.log(r.keptMailboxes.length
+          ? `Kept Gmail connection: ${r.keptMailboxes.join(', ')} (no new consent needed).`
+          : 'No Gmail connection kept: sign in as the reviewer and connect at /connect, or run `sb connect:fixture` for the offline transport.');
       });
     },
   },
