@@ -1,10 +1,18 @@
+import { pdfText } from './pdf.ts';
 import type { ReceiptSource } from './types.ts';
 
-/** Plain text from a receipt source when one is available without a model (text/plain, HTML). */
-export function textFromSource(source: ReceiptSource): string | null {
+/**
+ * Text available without a model: text/plain, HTML, or a PDF's text layer. Null for images and
+ * for scanned (image-only) PDFs. Throws MalformedDocumentError for unreadable PDFs.
+ */
+export async function textFromSource(source: ReceiptSource): Promise<string | null> {
   const mime = source.mime;
   if (mime === 'text/plain') return source.bytes.toString('utf8');
   if (mime === 'text/html') return htmlToText(source.bytes.toString('utf8'));
+  if (mime === 'application/pdf') {
+    const text = await pdfText(source.bytes);
+    return text.length >= 10 ? text : null;
+  }
   return null;
 }
 

@@ -1,7 +1,7 @@
 import path from 'node:path';
 import { DirectorySink, FixtureEmailAdapter, LocalEvidenceStore, SyntheticChatAdapter } from '@swipeback/channels';
 import { createPool, databaseUrl, isLocalDatabaseUrl, type Pool } from '@swipeback/db';
-import { BaselineExtractor } from '@swipeback/extraction';
+import { anthropicClient, BaselineExtractor, cassetteClient, LlmExtractor, type Extractor } from '@swipeback/extraction';
 import { MockPayProvider } from '@swipeback/payouts';
 import { channelRegistry, systemClock, type EngineDeps } from './deps.ts';
 
@@ -23,6 +23,38 @@ function secret(env: NodeJS.ProcessEnv, name: string, devDefault: string): strin
   throw new Error(`${name} must be set (>= 16 chars) outside local development`);
 }
 
+export const CASSETTE_DIR = path.resolve('eval/cassettes');
+
+/**
+ * SB_EXTRACTOR: llm (default when SB_ANTHROPIC_API_KEY is set) | baseline (rule-only, default otherwise)
+ * | record (live calls, saved as cassettes) | replay (recorded responses only, no network).
+ */
+export function createExtractor(env: NodeJS.ProcessEnv = process.env): Extractor {
+  const apiKey = env.SB_ANTHROPIC_API_KEY;
+  const mode = env.SB_EXTRACTOR ?? (apiKey ? 'llm' : 'baseline');
+  const llmOpts = {
+    ...(env.SB_EXTRACTION_MODEL ? { model: env.SB_EXTRACTION_MODEL } : {}),
+    ...(env.SB_EXTRACTION_EFFORT ? { effort: env.SB_EXTRACTION_EFFORT as 'low' | 'medium' | 'high' } : {}),
+    ...(env.SB_ANTHROPIC_BASE_URL ? { baseURL: env.SB_ANTHROPIC_BASE_URL } : {}),
+  };
+  const requireKey = () => {
+    if (!apiKey) throw new Error(`SB_EXTRACTOR=${mode} needs SB_ANTHROPIC_API_KEY`);
+    return apiKey;
+  };
+  switch (mode) {
+    case 'baseline':
+      return new BaselineExtractor();
+    case 'llm':
+      return new LlmExtractor({ ...llmOpts, apiKey: requireKey() });
+    case 'record':
+      return new LlmExtractor({ ...llmOpts, client: cassetteClient({ dir: CASSETTE_DIR, mode: 'record', live: anthropicClient({ ...llmOpts, apiKey: requireKey() }) }) });
+    case 'replay':
+      return new LlmExtractor({ ...llmOpts, client: cassetteClient({ dir: CASSETTE_DIR, mode: 'replay' }) });
+    default:
+      throw new Error(`unknown SB_EXTRACTOR "${mode}"`);
+  }
+}
+
 export interface Runtime {
   pool: Pool;
   deps: EngineDeps;
@@ -39,7 +71,7 @@ export function createRuntime(env: NodeJS.ProcessEnv = process.env): Runtime {
   const deps: EngineDeps = {
     pool,
     clock: systemClock,
-    extractor: new BaselineExtractor(),
+    extractor: createExtractor(env),
     payouts: new MockPayProvider(pool),
     channels: channelRegistry([
       new FixtureEmailAdapter(evidence, sink),

@@ -6,12 +6,14 @@
   "description": "Developer console: database, seed, replay, simulators, evaluation.",
   "exports": {
     "./seed": "./src/seed.ts",
-    "./demo-policy": "./src/demo-policy.ts"
+    "./demo-policy": "./src/demo-policy.ts",
+    "./receipts": "./src/receipts.ts"
   },
   "dependencies": {
     "@swipeback/db": "workspace:*",
     "@swipeback/domain": "workspace:*",
     "@swipeback/channels": "workspace:*",
-    "@swipeback/engine": "workspace:*"
+    "@swipeback/engine": "workspace:*",
+    "playwright-core": "1.64.0"
   }
 }

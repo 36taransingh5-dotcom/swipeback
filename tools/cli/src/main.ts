@@ -16,6 +16,7 @@ import {
   resetSchema,
   verifyAuditChain,
 } from '@swipeback/db';
+import { extractionCommands } from './extraction-commands.ts';
 import { pipelineCommands } from './pipeline-commands.ts';
 import { seedDemoOrg, seedOptionsFromEnv } from './seed.ts';
 
@@ -94,6 +95,7 @@ const commands: Record<string, { describe: string; run: Command }> = {
     },
   },
   ...pipelineCommands,
+  ...extractionCommands,
 };
 
 async function withPool(fn: (pool: ReturnType<typeof createPool>) => Promise<void>): Promise<void> {

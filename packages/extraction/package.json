@@ -8,7 +8,9 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "0.135.0",
     "@swipeback/domain": "workspace:*",
+    "pdfjs-dist": "6.4.299",
     "zod": "4.6.7"
   }
 }

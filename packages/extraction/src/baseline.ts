@@ -140,7 +140,12 @@ export class BaselineExtractor implements Extractor {
   readonly name = 'baseline' as const;
 
   async extract(source: ReceiptSource, _ctx: ExtractionContext): Promise<ExtractionResult> {
-    const text = textFromSource(source);
+    let text: string | null;
+    try {
+      text = await textFromSource(source);
+    } catch (err) {
+      return { status: 'FAILED', extractor: 'baseline', model: null, receipt: null, sourceText: null, flags: ['MALFORMED_ATTACHMENT'], error: (err as Error).message, usage: null };
+    }
     if (text === null) {
       return {
         status: 'FAILED',

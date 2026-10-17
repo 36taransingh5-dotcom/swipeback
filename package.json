@@ -17,7 +17,8 @@
     "db:migrate": "tsx tools/cli/src/main.ts db:migrate",
     "db:reset": "tsx tools/cli/src/main.ts db:reset",
     "seed": "tsx tools/cli/src/main.ts seed",
-    "worker": "tsx apps/worker/src/main.ts"
+    "worker": "tsx apps/worker/src/main.ts",
+    "smoke:extract": "tsx tools/cli/src/main.ts smoke:extract"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -33,6 +34,7 @@
     "eslint": "10.13.0",
     "fast-check": "4.10.2",
     "pg": "8.23.1",
+    "playwright-core": "1.64.0",
     "tsx": "4.23.15",
     "typescript": "6.0.3",
     "typescript-eslint": "8.71.2",
