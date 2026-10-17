@@ -19,6 +19,7 @@ import {
 import { loadLocalEnv } from '@swipeback/engine';
 import { resetDemo } from './demo.ts';
 import { evalCommands } from './eval/benchmark.ts';
+import { slackCommands } from './slack-commands.ts';
 import { pipelineEvalCommands } from './eval/pipeline-report.ts';
 import { extractionCommands } from './extraction-commands.ts';
 import { gmailCommands } from './gmail-commands.ts';
@@ -114,6 +115,7 @@ const commands: Record<string, { describe: string; run: Command }> = {
     },
   },
   ...pipelineCommands,
+  ...slackCommands,
   ...extractionCommands,
   ...evalCommands,
   ...pipelineEvalCommands,
