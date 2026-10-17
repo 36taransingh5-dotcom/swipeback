@@ -73,6 +73,7 @@ describe('reviewer web app', () => {
     const cookie = (await context.cookies()).find((c) => c.name === 'sb_session')!;
     expect(cookie).toMatchObject({ httpOnly: true, sameSite: 'Lax' });
     await expect(page.textContent('[data-testid=why]')).resolves.toContain('NW-5');
+    expect(await page.textContent('.demo-banner')).toMatch(/^SYNTHETIC DEMO — .*payouts are simulated, no money moves\.$/); // AC-11 on the case page
     // Regression: the Connect form redirects to Google, so only /connect may allow that form target.
     const connectCsp = (await context.request.get(`${base}/connect`)).headers()['content-security-policy'];
     expect(connectCsp).toContain("form-action 'self' https://accounts.google.com");
