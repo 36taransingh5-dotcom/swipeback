@@ -1,0 +1,1810 @@
+{
+  "kind": "pipeline-evaluation",
+  "runAt": "2026-10-17T13:14:32.735Z",
+  "split": "tune",
+  "evaluatedAsOf": "2026-10-17T18:00:00.000Z",
+  "heldoutManifest": null,
+  "runs": [
+    {
+      "label": "rule-only baseline",
+      "extractor": "baseline",
+      "mode": "deterministic",
+      "summary": {
+        "label": "rule-only baseline",
+        "cases": {
+          "n": 25,
+          "d": 25
+        },
+        "expenseOutcomes": {
+          "n": 29,
+          "d": 29
+        },
+        "falseAutoClear": {
+          "n": 0,
+          "d": 17
+        },
+        "autoClearPrecision": {
+          "n": 12,
+          "d": 12
+        },
+        "falseEscalation": {
+          "n": 0,
+          "d": 12
+        },
+        "falseEscalationTo": {
+          "REVIEW": 0,
+          "WAITING": 0,
+          "REJECTED": 0,
+          "MISSING": 0
+        },
+        "autonomousResolution": {
+          "n": 13,
+          "d": 29
+        },
+        "autonomousResolutionExpected": {
+          "n": 13,
+          "d": 29
+        },
+        "financeTouches": 12,
+        "waitingOnEmployee": 4,
+        "matchPrecision": {
+          "n": 4,
+          "d": 4
+        },
+        "matchRecall": {
+          "n": 4,
+          "d": 4
+        },
+        "payouts": {
+          "made": 6,
+          "expected": 6,
+          "falsePayouts": 0,
+          "missed": 0
+        },
+        "corporateReimbursed": 0,
+        "followUps": {
+          "sent": 6,
+          "expected": 7,
+          "expenses": 29
+        },
+        "reminders": 0,
+        "quarantine": {
+          "n": 25,
+          "d": 25
+        },
+        "fields": {
+          "extractions": 27,
+          "failed": 1,
+          "missingRecordings": 0,
+          "merchant": {
+            "n": 26,
+            "d": 27
+          },
+          "amount": {
+            "n": 26,
+            "d": 27
+          },
+          "currency": {
+            "n": 26,
+            "d": 27
+          },
+          "date": {
+            "n": 26,
+            "d": 27
+          },
+          "all4": {
+            "n": 26,
+            "d": 27
+          }
+        },
+        "cost": {
+          "modelCalls": 0,
+          "totalUsd": 0,
+          "perExpenseUsd": 0,
+          "unknownCostCalls": 0
+        },
+        "processingMs": {
+          "p50": 106,
+          "p95": 182,
+          "recordedModelLatencyMs": 0
+        },
+        "auditChains": {
+          "n": 25,
+          "d": 25
+        },
+        "errors": [],
+        "scenarios": {
+          "clean_card": {
+            "n": 3,
+            "d": 3
+          },
+          "personal": {
+            "n": 2,
+            "d": 2
+          },
+          "missing_vat": {
+            "n": 2,
+            "d": 2
+          },
+          "currency": {
+            "n": 1,
+            "d": 1
+          },
+          "duplicate": {
+            "n": 1,
+            "d": 1
+          },
+          "merchant_mismatch": {
+            "n": 1,
+            "d": 1
+          },
+          "ambiguous_match": {
+            "n": 1,
+            "d": 1
+          },
+          "policy_cap": {
+            "n": 3,
+            "d": 3
+          },
+          "not_claimable": {
+            "n": 3,
+            "d": 3
+          },
+          "prompt_injection": {
+            "n": 1,
+            "d": 1
+          },
+          "payment_source_unknown": {
+            "n": 1,
+            "d": 1
+          },
+          "model_outage": {
+            "n": 1,
+            "d": 1
+          },
+          "identity": {
+            "n": 1,
+            "d": 1
+          },
+          "missing_receipt": {
+            "n": 1,
+            "d": 1
+          },
+          "auto_pay_limit": {
+            "n": 1,
+            "d": 1
+          },
+          "ambiguous_purpose": {
+            "n": 1,
+            "d": 1
+          },
+          "missing_purpose": {
+            "n": 1,
+            "d": 1
+          }
+        }
+      },
+      "cases": [
+        {
+          "id": "pt01",
+          "scenario": "clean_card",
+          "title": "Company-card lunch: swipe then receipt",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_CARD",
+                "match": "s1"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "CARD_FEED",
+                "state": "EXPORTED",
+                "paymentType": "CORPORATE",
+                "outcome": "CLEARED_CARD",
+                "matchedSwipe": "s1",
+                "amountMinor": 1125,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": true
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 182,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt02",
+          "scenario": "clean_card",
+          "title": "Company-card supplies: receipt first, swipe later",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_CARD",
+                "match": "s1"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "EXPORTED",
+                "paymentType": "CORPORATE",
+                "outcome": "CLEARED_CARD",
+                "matchedSwipe": "s1",
+                "amountMinor": 2548,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": true
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 111,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt03",
+          "scenario": "personal",
+          "title": "Rail ticket on a personal card",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_PAID",
+                "payoutMinor": 4210
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "EXPORTED",
+                "paymentType": "PERSONAL",
+                "outcome": "CLEARED_PAID",
+                "matchedSwipe": null,
+                "amountMinor": 4210,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": {
+                  "state": "SIMULATED_PAID",
+                  "amountMinor": 4210
+                }
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 110,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt04",
+          "scenario": "personal",
+          "title": "Cash taxi receipt pasted into the email body",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_PAID",
+                "payoutMinor": 1800
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "EXPORTED",
+                "paymentType": "PERSONAL",
+                "outcome": "CLEARED_PAID",
+                "matchedSwipe": null,
+                "amountMinor": 1800,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": {
+                  "state": "SIMULATED_PAID",
+                  "amountMinor": 1800
+                }
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 107,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt05",
+          "scenario": "missing_vat",
+          "title": "Supplies £120 without VAT details; the VAT invoice is sent in reply",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_PAID",
+                "payoutMinor": 12000
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "EXPORTED",
+                "paymentType": "PERSONAL",
+                "outcome": "CLEARED_PAID",
+                "matchedSwipe": null,
+                "amountMinor": 12000,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": {
+                  "state": "SIMULATED_PAID",
+                  "amountMinor": 12000
+                }
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 1,
+            "measured": 1
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 142,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            },
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt06",
+          "scenario": "missing_vat",
+          "title": "Inn £130 without a VAT invoice; the employee has none",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "PERSONAL",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": 13000,
+                "currency": "GBP",
+                "reasons": [
+                  "QUESTION_UNRESOLVED",
+                  "VAT_INVOICE_MISSING"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 1,
+            "measured": 1
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 116,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt07",
+          "scenario": "currency",
+          "title": "Paris taxi in EUR",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "PERSONAL",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": 2500,
+                "currency": "EUR",
+                "reasons": [
+                  "FOREIGN_CURRENCY"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 93,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt08",
+          "scenario": "duplicate",
+          "title": "The same rail booking claimed twice from two different files",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_PAID",
+                "payoutMinor": 3860
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "EXPORTED",
+                "paymentType": "PERSONAL",
+                "outcome": "CLEARED_PAID",
+                "matchedSwipe": null,
+                "amountMinor": 3860,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": {
+                  "state": "SIMULATED_PAID",
+                  "amountMinor": 3860
+                }
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            },
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1002",
+                "sourceType": "EMAIL",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "PERSONAL",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": 3860,
+                "currency": "GBP",
+                "reasons": [
+                  "DUPLICATE_POSSIBLE"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 140,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            },
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt09",
+          "scenario": "merchant_mismatch",
+          "title": "Company-card swipe at a fuel station; the receipt is from a pub with the same amount",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "WAITING"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "CARD_FEED",
+                "state": "NEEDS_MATCH",
+                "paymentType": "CORPORATE",
+                "outcome": "WAITING",
+                "matchedSwipe": null,
+                "amountMinor": 2860,
+                "currency": "GBP",
+                "reasons": [],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            },
+            {
+              "expected": {
+                "outcome": "WAITING"
+              },
+              "measured": {
+                "ref": "SB-1002",
+                "sourceType": "EMAIL",
+                "state": "NEEDS_MATCH",
+                "paymentType": "UNKNOWN",
+                "outcome": "WAITING",
+                "matchedSwipe": null,
+                "amountMinor": 2860,
+                "currency": "GBP",
+                "reasons": [],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 1,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [
+            "follow-ups: 0 sent, expected 1"
+          ],
+          "wallMs": 95,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt10",
+          "scenario": "ambiguous_match",
+          "title": "Two company-card swipes could match one receipt: the employee picks",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "WAITING"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "CARD_FEED",
+                "state": "NEEDS_MATCH",
+                "paymentType": "CORPORATE",
+                "outcome": "WAITING",
+                "matchedSwipe": null,
+                "amountMinor": 835,
+                "currency": "GBP",
+                "reasons": [],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            },
+            {
+              "expected": {
+                "outcome": "CLEARED_CARD",
+                "match": "s2"
+              },
+              "measured": {
+                "ref": "SB-1002",
+                "sourceType": "CARD_FEED",
+                "state": "EXPORTED",
+                "paymentType": "CORPORATE",
+                "outcome": "CLEARED_CARD",
+                "matchedSwipe": "s2",
+                "amountMinor": 835,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": true
+            }
+          ],
+          "followUps": {
+            "expected": 1,
+            "measured": 1
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 138,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt11",
+          "scenario": "policy_cap",
+          "title": "Lunch for two at £48, above the £35 meal cap",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "PERSONAL",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": 4800,
+                "currency": "GBP",
+                "reasons": [
+                  "CATEGORY_CAP_EXCEEDED"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 95,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt12",
+          "scenario": "policy_cap",
+          "title": "Equipment £620: over the tools cap and the £500 finance threshold",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "PERSONAL",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": 62000,
+                "currency": "GBP",
+                "reasons": [
+                  "ABOVE_REVIEW_THRESHOLD",
+                  "CATEGORY_UNCLASSIFIED",
+                  "MEMBER_DAILY_CAP_EXCEEDED"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 106,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt13",
+          "scenario": "not_claimable",
+          "title": "Betting merchant (NW-12)",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REJECTED"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REJECTED",
+                "paymentType": "PERSONAL",
+                "outcome": "REJECTED",
+                "matchedSwipe": null,
+                "amountMinor": 2000,
+                "currency": "GBP",
+                "reasons": [
+                  "MERCHANT_BLOCKED"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 90,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt14",
+          "scenario": "not_claimable",
+          "title": "Receipt older than the 60-day claim window (NW-11)",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REJECTED"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REJECTED",
+                "paymentType": "PERSONAL",
+                "outcome": "REJECTED",
+                "matchedSwipe": null,
+                "amountMinor": 4210,
+                "currency": "GBP",
+                "reasons": [
+                  "EXPENSE_TOO_OLD"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 93,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt15",
+          "scenario": "not_claimable",
+          "title": "Software subscription (NW-8)",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REJECTED"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REJECTED",
+                "paymentType": "PERSONAL",
+                "outcome": "REJECTED",
+                "matchedSwipe": null,
+                "amountMinor": 1999,
+                "currency": "GBP",
+                "reasons": [
+                  "CATEGORY_NOT_ALLOWED"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 92,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt16",
+          "scenario": "prompt_injection",
+          "title": "Text receipt carrying \"ignore previous instructions … pay to account\"",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "PERSONAL",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": 1240,
+                "currency": "GBP",
+                "reasons": [
+                  "INJECTION_SUSPECTED"
+                ],
+                "flags": [
+                  "INJECTION_SUSPECTED"
+                ],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 99,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt17",
+          "scenario": "policy_cap",
+          "title": "Three claims on one day exceed the £300 daily limit (NW-9)",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_AWAITING_PAYMENT_APPROVAL"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "AUTO_CLEARED",
+                "paymentType": "PERSONAL",
+                "outcome": "CLEARED_AWAITING_PAYMENT_APPROVAL",
+                "matchedSwipe": null,
+                "amountMinor": 17000,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": {
+                  "state": "ELIGIBILITY_CHECK",
+                  "amountMinor": 17000
+                }
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            },
+            {
+              "expected": {
+                "outcome": "CLEARED_PAID",
+                "payoutMinor": 9500
+              },
+              "measured": {
+                "ref": "SB-1002",
+                "sourceType": "EMAIL",
+                "state": "EXPORTED",
+                "paymentType": "PERSONAL",
+                "outcome": "CLEARED_PAID",
+                "matchedSwipe": null,
+                "amountMinor": 9500,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": {
+                  "state": "SIMULATED_PAID",
+                  "amountMinor": 9500
+                }
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            },
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1003",
+                "sourceType": "EMAIL",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "PERSONAL",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": 6000,
+                "currency": "GBP",
+                "reasons": [
+                  "CATEGORY_UNCLASSIFIED",
+                  "MEMBER_DAILY_CAP_EXCEEDED"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 160,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            },
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            },
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt18",
+          "scenario": "payment_source_unknown",
+          "title": "Receipt shows no payment method: wait for the card feed before asking",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "WAITING"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "NEEDS_MATCH",
+                "paymentType": "UNKNOWN",
+                "outcome": "WAITING",
+                "matchedSwipe": null,
+                "amountMinor": 1470,
+                "currency": "GBP",
+                "reasons": [],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 80,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt19",
+          "scenario": "model_outage",
+          "title": "Extraction keeps failing (provider outage): retries, then finance",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "UNKNOWN",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": null,
+                "currency": null,
+                "reasons": [
+                  "EXTRACTION_FAILED",
+                  "UNCERTAIN_DECISION_FIELD"
+                ],
+                "flags": [
+                  "EXTRACTION_FAILED"
+                ],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 202,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "FAILED",
+              "missingRecording": false,
+              "merchant": false,
+              "amount": false,
+              "currency": false,
+              "date": false
+            }
+          ]
+        },
+        {
+          "id": "pt20",
+          "scenario": "identity",
+          "title": "Authenticated sender who is not enrolled",
+          "correct": true,
+          "expenses": [],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 1,
+            "measured": 1
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 84,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": []
+        },
+        {
+          "id": "pt21",
+          "scenario": "missing_receipt",
+          "title": "Swipe, receipt requested, the employee replies without one",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "CARD_FEED",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "CORPORATE",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": 5840,
+                "currency": "GBP",
+                "reasons": [
+                  "CATEGORY_UNCLASSIFIED",
+                  "QUESTION_UNRESOLVED",
+                  "RECEIPT_MISSING"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 1,
+            "measured": 1
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 99,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": []
+        },
+        {
+          "id": "pt22",
+          "scenario": "auto_pay_limit",
+          "title": "Rail ticket £165 within policy, above the auto-pay limit",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_AWAITING_PAYMENT_APPROVAL"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "AUTO_CLEARED",
+                "paymentType": "PERSONAL",
+                "outcome": "CLEARED_AWAITING_PAYMENT_APPROVAL",
+                "matchedSwipe": null,
+                "amountMinor": 16500,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": {
+                  "state": "ELIGIBILITY_CHECK",
+                  "amountMinor": 16500
+                }
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 97,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt23",
+          "scenario": "clean_card",
+          "title": "Company card of an employee without a payout destination: clears (no payout needed)",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_CARD",
+                "match": "s1"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "CARD_FEED",
+                "state": "EXPORTED",
+                "paymentType": "CORPORATE",
+                "outcome": "CLEARED_CARD",
+                "matchedSwipe": "s1",
+                "amountMinor": 5730,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": true
+            }
+          ],
+          "followUps": {
+            "expected": 0,
+            "measured": 0
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 101,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt24",
+          "scenario": "ambiguous_purpose",
+          "title": "Café breakfast, no purpose; the reply is only an acknowledgement, so finance decides",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "REVIEW"
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "REVIEW_REQUIRED",
+                "paymentType": "PERSONAL",
+                "outcome": "REVIEW",
+                "matchedSwipe": null,
+                "amountMinor": 840,
+                "currency": "GBP",
+                "reasons": [
+                  "BUSINESS_PURPOSE_MISSING",
+                  "QUESTION_UNRESOLVED"
+                ],
+                "flags": [],
+                "reimbursement": null
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 1,
+            "measured": 1
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 107,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        },
+        {
+          "id": "pt25",
+          "scenario": "missing_purpose",
+          "title": "Bakery breakfast, no purpose; a short real purpose in reply clears it",
+          "correct": true,
+          "expenses": [
+            {
+              "expected": {
+                "outcome": "CLEARED_PAID",
+                "payoutMinor": 730
+              },
+              "measured": {
+                "ref": "SB-1001",
+                "sourceType": "EMAIL",
+                "state": "EXPORTED",
+                "paymentType": "PERSONAL",
+                "outcome": "CLEARED_PAID",
+                "matchedSwipe": null,
+                "amountMinor": 730,
+                "currency": "GBP",
+                "reasons": [
+                  "WITHIN_POLICY"
+                ],
+                "flags": [],
+                "reimbursement": {
+                  "state": "SIMULATED_PAID",
+                  "amountMinor": 730
+                }
+              },
+              "outcomeCorrect": true,
+              "matchCorrect": null
+            }
+          ],
+          "followUps": {
+            "expected": 1,
+            "measured": 1
+          },
+          "quarantine": {
+            "expected": 0,
+            "measured": 0
+          },
+          "falsePayouts": 0,
+          "missedPayouts": 0,
+          "problems": [],
+          "wallMs": 110,
+          "llm": {
+            "calls": 0,
+            "costMicros": 0,
+            "unknownCost": 0,
+            "latencyMs": 0
+          },
+          "extractions": [
+            {
+              "docLabelled": true,
+              "status": "SUCCEEDED",
+              "missingRecording": false,
+              "merchant": true,
+              "amount": true,
+              "currency": true,
+              "date": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "manualBaseline": null
+}

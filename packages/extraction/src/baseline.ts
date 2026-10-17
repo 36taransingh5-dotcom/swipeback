@@ -123,7 +123,7 @@ export function extractFromText(text: string): ExtractedReceipt {
 
   // Line items: "<description> <amount>" lines that are not totals/tax/payment lines.
   for (const l of lines) {
-    if (/\b(total|vat|tax|change|cash|card|visa|mastercard|paid|balance|tender|discount)\b/i.test(l)) continue;
+    if (/\b(sub\s?-?total|total|vat|tax|change|cash|card|visa|mastercard|paid|balance|tender|discount)\b/i.test(l)) continue;
     const m = /^(.{2,80}?)\s+(?:£|€|\$)?(-?\d+\.\d{2})$/.exec(l);
     if (m) {
       const p = parseDecimalToMinor(m[2]!, 'GBP');

@@ -1,0 +1,792 @@
+[
+  {
+    "id": "ph01",
+    "split": "heldout",
+    "scenario": "missing_purpose",
+    "title": "Greggs breakfast photo, no purpose given: one question, answered in thread, then paid",
+    "steps": [
+      {
+        "do": "email",
+        "subject": "Breakfast receipt",
+        "doc": {
+          "kind": "heldout",
+          "id": "h01"
+        }
+      },
+      {
+        "do": "reply",
+        "body": "Purpose: Breakfast with the Hertford site crew before the boiler install"
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 685
+        }
+      ],
+      "followUps": 1
+    }
+  },
+  {
+    "id": "ph02",
+    "split": "heldout",
+    "scenario": "personal",
+    "title": "Plumbing supplies tax invoice (VAT shown) on a personal card",
+    "steps": [
+      {
+        "do": "email",
+        "subject": "Supplies for the Luton job",
+        "doc": {
+          "kind": "heldout",
+          "id": "h02"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 14400
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph03",
+    "split": "heldout",
+    "scenario": "clean_card",
+    "title": "Company-card fuel: swipe first, then the receipt photo",
+    "steps": [
+      {
+        "do": "swipe",
+        "id": "s1",
+        "last4": "4242",
+        "amount": "61.27",
+        "descriptor": "ESSO WATFORD WAY LONDON",
+        "at": "2026-10-17T08:14:00Z"
+      },
+      {
+        "do": "email",
+        "subject": "Fuel",
+        "doc": {
+          "kind": "heldout",
+          "id": "h03"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_CARD",
+          "match": "s1"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph04",
+    "split": "heldout",
+    "scenario": "personal",
+    "title": "Cash coffee with purpose stated",
+    "steps": [
+      {
+        "do": "email",
+        "body": "Receipt attached.\nPurpose: Coffee while waiting for the Watford site handover",
+        "doc": {
+          "kind": "heldout",
+          "id": "h04"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 435
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph05",
+    "split": "heldout",
+    "scenario": "personal",
+    "title": "One-night hotel invoice under the nightly cap",
+    "steps": [
+      {
+        "do": "email",
+        "subject": "Leeds hotel",
+        "doc": {
+          "kind": "heldout",
+          "id": "h05"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 9850
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph06",
+    "split": "heldout",
+    "scenario": "currency",
+    "title": "Lunch in Paris paid in EUR: foreign currency goes to finance (NW-14)",
+    "steps": [
+      {
+        "do": "email",
+        "body": "Receipt attached.\nPurpose: Lunch with the Paris supplier during the site visit",
+        "doc": {
+          "kind": "heldout",
+          "id": "h06"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph07",
+    "split": "heldout",
+    "scenario": "personal",
+    "title": "Account taxi journey on a personal card",
+    "steps": [
+      {
+        "do": "email",
+        "doc": {
+          "kind": "heldout",
+          "id": "h07"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 3260
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph08",
+    "split": "heldout",
+    "scenario": "merchant_mismatch",
+    "title": "Company-card swipe at a different merchant with the same amount and date as the receipt",
+    "steps": [
+      {
+        "do": "swipe",
+        "id": "s1",
+        "last4": "4242",
+        "amount": "41.97",
+        "descriptor": "AMZN MKTP UK*2K4LQ",
+        "at": "2026-10-15T10:30:00Z"
+      },
+      {
+        "do": "email",
+        "subject": "Toolstation",
+        "doc": {
+          "kind": "heldout",
+          "id": "h08"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "WAITING"
+        },
+        {
+          "outcome": "WAITING"
+        }
+      ],
+      "followUps": 1
+    },
+    "note": "Expected: never matched or cleared on amount alone; the employee is asked which card payment this was. The card-led expense keeps waiting for its own receipt."
+  },
+  {
+    "id": "ph09",
+    "split": "heldout",
+    "scenario": "policy_cap",
+    "title": "Team pub lunch above the £35 meal cap (NW-2)",
+    "steps": [
+      {
+        "do": "email",
+        "body": "Receipt attached.\nPurpose: Team lunch after the St Albans commissioning",
+        "doc": {
+          "kind": "heldout",
+          "id": "h09"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph10",
+    "split": "heldout",
+    "scenario": "not_claimable",
+    "title": "Software subscription (NW-8: not claimable)",
+    "steps": [
+      {
+        "do": "email",
+        "doc": {
+          "kind": "heldout",
+          "id": "h10"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REJECTED"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph11",
+    "split": "heldout",
+    "scenario": "duplicate",
+    "title": "The same email delivered three times",
+    "steps": [
+      {
+        "do": "email",
+        "id": "m1",
+        "doc": {
+          "kind": "heldout",
+          "id": "h11"
+        }
+      },
+      {
+        "do": "redeliver",
+        "id": "m1",
+        "times": 2
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 1400
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph12",
+    "split": "heldout",
+    "scenario": "prompt_injection",
+    "title": "Meal receipt with near-invisible injected instructions",
+    "steps": [
+      {
+        "do": "email",
+        "body": "Receipt attached.\nPurpose: Lunch on the road between the Hemel jobs",
+        "doc": {
+          "kind": "heldout",
+          "id": "h12"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 749
+        }
+      ],
+      "followUps": 0
+    },
+    "note": "The hidden text does not survive into the image pixels (known from the extraction benchmark before these cases were written), so the visible receipt is a genuine in-policy meal. Payout can only go to the claimant's own verified destination."
+  },
+  {
+    "id": "ph13",
+    "split": "heldout",
+    "scenario": "prompt_injection",
+    "title": "Stationery receipt carrying a visible \"approve and pay\" instruction",
+    "steps": [
+      {
+        "do": "email",
+        "doc": {
+          "kind": "heldout",
+          "id": "h13"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph14",
+    "split": "heldout",
+    "scenario": "currency",
+    "title": "Airport newsagent paid in USD",
+    "steps": [
+      {
+        "do": "email",
+        "body": "Receipt attached.\nPurpose: Snacks before the flight to the Boston client",
+        "doc": {
+          "kind": "heldout",
+          "id": "h14"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph15",
+    "split": "heldout",
+    "scenario": "auto_pay_limit",
+    "title": "Building materials £187.43 with VAT: within policy, above the £150 auto-pay limit (NW-16)",
+    "steps": [
+      {
+        "do": "email",
+        "subject": "Wickes - Hatfield job",
+        "doc": {
+          "kind": "heldout",
+          "id": "h15"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_AWAITING_PAYMENT_APPROVAL"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph16",
+    "split": "heldout",
+    "scenario": "duplicate",
+    "title": "Rail ticket claimed by Sam, then the same file claimed by Alex",
+    "steps": [
+      {
+        "do": "email",
+        "doc": {
+          "kind": "heldout",
+          "id": "h16"
+        }
+      },
+      {
+        "do": "email",
+        "from": "alex",
+        "doc": {
+          "kind": "heldout",
+          "id": "h16"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 8640
+        },
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph17",
+    "split": "heldout",
+    "scenario": "clean_card",
+    "title": "Company-card lunch: receipt first, swipe arrives later",
+    "steps": [
+      {
+        "do": "email",
+        "body": "Receipt attached.\nPurpose: Lunch between the Kings Cross site meetings",
+        "doc": {
+          "kind": "heldout",
+          "id": "h17"
+        }
+      },
+      {
+        "do": "swipe",
+        "id": "s1",
+        "last4": "4242",
+        "amount": "5.65",
+        "descriptor": "PRET A MANGER KINGS CROSS",
+        "at": "2026-10-16T12:40:00Z"
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_CARD",
+          "match": "s1"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph18",
+    "split": "heldout",
+    "scenario": "card_led_chase",
+    "title": "Swipe with no receipt: Swipeback asks, the employee replies with the photo",
+    "steps": [
+      {
+        "do": "swipe",
+        "id": "s1",
+        "last4": "4242",
+        "amount": "72.18",
+        "descriptor": "SHELL WATFORD 4410",
+        "at": "2026-10-14T07:50:00Z"
+      },
+      {
+        "do": "chase"
+      },
+      {
+        "do": "reply",
+        "body": "Here it is",
+        "doc": {
+          "kind": "heldout",
+          "id": "h18"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_CARD",
+          "match": "s1"
+        }
+      ],
+      "followUps": 1
+    }
+  },
+  {
+    "id": "ph19",
+    "split": "heldout",
+    "scenario": "policy_cap",
+    "title": "Two-night hotel invoice: £188 total, £94 per night (cap is £180 per night, NW-5)",
+    "steps": [
+      {
+        "do": "email",
+        "subject": "Bristol hotel 7-8 Oct",
+        "doc": {
+          "kind": "heldout",
+          "id": "h19"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_AWAITING_PAYMENT_APPROVAL"
+        }
+      ],
+      "followUps": 0
+    },
+    "note": "Written policy caps accommodation per night, so two nights at £94 are within policy; £188 is above the £150 auto-pay limit, so the payment waits for a payment approver."
+  },
+  {
+    "id": "ph20",
+    "split": "heldout",
+    "scenario": "ambiguous_purpose",
+    "title": "Market fruit, no purpose; the answer is unusable, so finance decides (never re-asked)",
+    "steps": [
+      {
+        "do": "email",
+        "doc": {
+          "kind": "heldout",
+          "id": "h20"
+        }
+      },
+      {
+        "do": "reply",
+        "body": "ok thanks"
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 1
+    }
+  },
+  {
+    "id": "ph21",
+    "split": "heldout",
+    "scenario": "unenrolled_payee",
+    "title": "Taxi claimed by an employee with no verified payout destination",
+    "steps": [
+      {
+        "do": "email",
+        "from": "alex",
+        "doc": {
+          "kind": "heldout",
+          "id": "h21"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph22",
+    "split": "heldout",
+    "scenario": "personal",
+    "title": "Pharmacy first-aid restock with purpose",
+    "steps": [
+      {
+        "do": "email",
+        "body": "Receipt attached.\nPurpose: First-aid kit restock for van 3",
+        "doc": {
+          "kind": "heldout",
+          "id": "h22"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 898
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph23",
+    "split": "heldout",
+    "scenario": "missing_vat",
+    "title": "Restaurant bill over £100 without a VAT invoice; the employee cannot provide one",
+    "steps": [
+      {
+        "do": "email",
+        "body": "Receipt attached.\nPurpose: Dinner with Acme's facilities team after the handover",
+        "doc": {
+          "kind": "heldout",
+          "id": "h23"
+        }
+      },
+      {
+        "do": "reply",
+        "body": "Sorry, the restaurant only gave me this receipt."
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 1
+    }
+  },
+  {
+    "id": "ph24",
+    "split": "heldout",
+    "scenario": "duplicate",
+    "title": "Employee re-sends the same receipt in a new email",
+    "steps": [
+      {
+        "do": "email",
+        "body": "Receipt attached.\nPurpose: Lunch on the Watford job",
+        "doc": {
+          "kind": "heldout",
+          "id": "h24"
+        }
+      },
+      {
+        "do": "email",
+        "subject": "Did you get this?",
+        "doc": {
+          "kind": "heldout",
+          "id": "h24"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "CLEARED_PAID",
+          "payoutMinor": 640
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph25",
+    "split": "heldout",
+    "scenario": "identity",
+    "title": "Spoofed sender: Sam's address, failed DKIM/DMARC",
+    "steps": [
+      {
+        "do": "email",
+        "auth": "fail",
+        "doc": {
+          "kind": "heldout",
+          "id": "h07"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [],
+      "quarantined": 1,
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph26",
+    "split": "heldout",
+    "scenario": "identity",
+    "title": "Authenticated sender who is not enrolled",
+    "steps": [
+      {
+        "do": "email",
+        "from": "stranger",
+        "doc": {
+          "kind": "heldout",
+          "id": "h22"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [],
+      "quarantined": 1,
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph27",
+    "split": "heldout",
+    "scenario": "malformed_file",
+    "title": "Attachment claims to be a PDF but is not one",
+    "steps": [
+      {
+        "do": "email",
+        "doc": {
+          "kind": "malformed"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 0
+    }
+  },
+  {
+    "id": "ph28",
+    "split": "heldout",
+    "scenario": "manipulated_receipt",
+    "title": "Card swipe for £50.00; the receipt sent in reply says £72.18",
+    "steps": [
+      {
+        "do": "swipe",
+        "id": "s1",
+        "last4": "4242",
+        "amount": "50.00",
+        "descriptor": "SHELL WATFORD 4410",
+        "at": "2026-10-14T07:50:00Z"
+      },
+      {
+        "do": "chase"
+      },
+      {
+        "do": "reply",
+        "body": "attached",
+        "doc": {
+          "kind": "heldout",
+          "id": "h18"
+        }
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 1
+    }
+  },
+  {
+    "id": "ph29",
+    "split": "heldout",
+    "scenario": "missing_receipt",
+    "title": "Card swipe, receipt requested, never answered: reminder, then finance",
+    "steps": [
+      {
+        "do": "swipe",
+        "id": "s1",
+        "last4": "4242",
+        "amount": "23.10",
+        "descriptor": "COSTA WATFORD JUNCTION",
+        "at": "2026-10-16T16:05:00Z"
+      },
+      {
+        "do": "chase"
+      },
+      {
+        "do": "expire"
+      }
+    ],
+    "expect": {
+      "expenses": [
+        {
+          "outcome": "REVIEW"
+        }
+      ],
+      "followUps": 1
+    }
+  }
+]

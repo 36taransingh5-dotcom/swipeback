@@ -109,13 +109,30 @@ export function parsePaymentSource(text: string): 'CORPORATE' | 'PERSONAL' | nul
 }
 
 /**
- * The employee's stated purpose, kept verbatim (never paraphrased or invented). Too short or
- * too long to be a purpose -> null, and the case goes to finance rather than re-asking.
+ * Words that carry no purpose on their own: acknowledgements, pleasantries, pointers back at the
+ * email ("see attached") and non-answers ("don't know"). A reply made only of these is not a purpose.
+ */
+const NON_PURPOSE_WORDS = new Set([
+  'a', 'an', 'the', 'and', 'or', 'it', 'its', 'it\'s', 'this', 'that', 'is', 'was', 'be', 'for', 'of', 'to', 'in', 'on', 'at',
+  'i', 'im', 'i\'m', 'me', 'my', 'we', 'you', 'your', 'u', 'just', 'so', 'all', 'here', 'there', 'as', 'per', 'please', 'pls', 'plz',
+  'ok', 'okay', 'k', 'kk', 'yes', 'yeah', 'yep', 'yup', 'no', 'nope', 'sure', 'fine', 'right', 'alright', 'cool', 'great', 'good',
+  'thanks', 'thank', 'thx', 'ty', 'ta', 'cheers', 'hi', 'hello', 'hey', 'sorry', 'will', 'do', 'done', 'sorted', 'noted',
+  'got', 'see', 'above', 'below', 'attached', 'sent', 'receipt', 'email', 'reply', 'same', 'n/a', 'na', 'nil', 'none', 'nothing',
+  'idk', 'dunno', 'don\'t', 'dont', 'know', 'not', 'unsure', 'remember', 'whatever', 'etc', 'stuff', 'things', 'thing',
+  'business', 'work', 'expense', 'expenses', 'purpose', 'reason',
+]);
+
+/**
+ * The employee's stated purpose, kept verbatim (never paraphrased or invented). Too short, too
+ * long, or made only of acknowledgements and non-answers -> null, and the case goes to finance
+ * rather than re-asking.
  */
 export function parseBusinessPurpose(text: string): string | null {
   const s = text.replace(/\s+/g, ' ').trim();
   if (s.length < 4 || s.length > 500) return null;
-  if (!/[a-z]{3,}/i.test(s)) return null;
+  const words = s.toLowerCase().replace(/[’‘]/g, '\'').match(/[a-z][a-z'/]*/g) ?? [];
+  const substantive = words.filter((w) => w.replace(/'/g, '').length >= 3 && !NON_PURPOSE_WORDS.has(w));
+  if (substantive.length === 0) return null;
   return s;
 }
 

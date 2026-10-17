@@ -317,10 +317,11 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
   app.get('/api/evaluations/report', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
-    const dir = opts.reportsDir ?? path.resolve('eval/reports');
-    const latest = (await readdir(dir).catch(() => [] as string[])).filter((f) => f.endsWith('.json')).sort().at(-1);
-    if (!latest) return c.json({ error: 'no evaluation report yet' }, 404);
-    return c.json(JSON.parse(await readFile(path.join(dir, latest), 'utf8')));
+    const split = c.req.query('split') ?? 'heldout';
+    if (!['heldout', 'tune', 'all'].includes(split)) return c.json({ error: 'split must be heldout, tune or all' }, 400);
+    const latest = await latestEvaluationReport(opts.reportsDir ?? path.resolve('eval/reports'), split);
+    if (!latest) return c.json({ error: `no ${split} evaluation report yet` }, 404);
+    return c.json(JSON.parse(await readFile(latest, 'utf8')));
   });
 
   app.notFound((c) => c.html(errorPage(404, 'There is nothing at this address.', c.get('actor')), 404));
@@ -329,4 +330,11 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
     return c.html(errorPage(500, 'Something went wrong. Nothing was changed.', c.get('actor') ?? null), 500);
   });
   return app;
+}
+
+/** Newest end-to-end report for a split; file names embed the ISO run time, so they sort by time. */
+export async function latestEvaluationReport(dir: string, split: string): Promise<string | null> {
+  const prefix = `pipeline-${split}-`;
+  const name = (await readdir(dir).catch(() => [] as string[])).filter((f) => f.startsWith(prefix) && f.endsWith('.json')).sort().at(-1);
+  return name ? path.join(dir, name) : null;
 }
