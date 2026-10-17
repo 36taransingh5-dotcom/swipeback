@@ -105,6 +105,6 @@ export class FixtureEmailAdapter implements ChannelAdapter<ParsedEmail> {
       references: message.references,
     });
     await this.sink.deliver({ envelope: message, providerMessageId, raw, kind });
-    return { providerMessageId, threadId: message.threadId };
+    return { providerMessageId, threadId: message.threadId ?? providerMessageId, rfcMessageId: providerMessageId };
   }
 }

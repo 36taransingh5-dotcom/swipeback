@@ -196,6 +196,8 @@ export async function processInbound(deps: EngineDeps, inboundId: string): Promi
         await c.query('UPDATE expenses SET receipt_id = $2 WHERE id = $1', [question.expenseId, newReceiptId]);
       }
       await c.query(`UPDATE open_questions SET status = 'ANSWERED', answered_at = clock_timestamp(), answer_inbound_id = $2 WHERE id = $1`, [question.id, inboundId]);
+      // A card-led expense starts with no inbound message; the employee's reply becomes its thread.
+      await c.query('UPDATE expenses SET inbound_message_id = coalesce(inbound_message_id, $2) WHERE id = $1', [question.expenseId, inboundId]);
       await c.query('INSERT INTO conversation_links (organisation_id, channel, thread_id, expense_id) VALUES ($1,$2,$3,$4) ON CONFLICT DO NOTHING', [
         org, ev.channel, ev.conversation.threadId ?? inboundId, question.expenseId,
       ]);
@@ -279,6 +281,7 @@ function threadFor(ev: InboundMessageV1) {
     threadId: ev.conversation.threadId,
     inReplyTo: ev.conversation.messageId,
     references: [...ev.conversation.references, ...(ev.conversation.messageId ? [ev.conversation.messageId] : [])].slice(-20),
+    subject: ev.subject,
   };
 }
 

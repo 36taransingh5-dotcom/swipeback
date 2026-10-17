@@ -22,11 +22,16 @@ import {
   SESSION_TTL_HOURS,
   authorisePayment,
   type Corrections,
+  disconnectGmail,
+  finishGmailConnect,
+  mailboxStatus,
+  startGmailConnect,
   type EngineDeps,
+  type GmailRuntime,
   type ReviewAction,
   type SessionMember,
 } from '@swipeback/engine';
-import { casePage, checkEmailPage, errorPage, loginPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
+import { casePage, checkEmailPage, connectPage, errorPage, loginPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
 
 /**
  * The minimal authenticated reviewer surface plus the PRD §7.4 API. It holds no business logic:
@@ -34,11 +39,14 @@ import { casePage, checkEmailPage, errorPage, loginPage, queuePage, STATIC_CSS, 
  */
 
 export const SESSION_COOKIE = 'sb_session';
+const BASE_CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'none'";
 type Env = { Variables: { actor: SessionMember | null } };
 
 export interface WebOptions {
   secureCookies: boolean;
   reportsDir?: string;
+  /** Google OAuth + token cipher; when absent the connect page explains what to configure. */
+  gmail?: GmailRuntime | null;
 }
 
 const isReviewer = (a: SessionMember) => a.roles.some((r) => r === 'reviewer' || r === 'admin');
@@ -54,7 +62,7 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
     c.header('Referrer-Policy', 'no-referrer'); // one-time links must never leak via Referer
     c.header('X-Frame-Options', 'DENY');
     if (!c.res.headers.get('Content-Security-Policy')) {
-      c.header('Content-Security-Policy', "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'none'");
+      c.header('Content-Security-Policy', BASE_CSP);
     }
     if (!c.res.headers.get('Cache-Control')) c.header('Cache-Control', 'no-store');
   });
@@ -100,7 +108,41 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
   app.get('/review', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
-    return c.html(queuePage(actor, await reviewQueue(deps, actor)));
+    return c.html(queuePage(actor, await reviewQueue(deps, actor), await mailboxStatus(deps, actor.organisationId)));
+  });
+
+  // ---- connected finance mailbox --------------------------------------------------------------
+  app.get('/connect', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    // The Connect form posts here and is redirected to Google's consent screen; CSP form-action
+    // applies to that redirect, so this page alone may target accounts.google.com.
+    c.header('Content-Security-Policy', `${BASE_CSP.replace("form-action 'self'", "form-action 'self' https://accounts.google.com")}`);
+    return c.html(connectPage(actor, await mailboxStatus(deps, actor.organisationId), { configured: !!opts.gmail, notice: c.req.query('connected') ? 'Mailbox connected. New receipts sent to it are processed automatically.' : null, error: c.req.query('error') ?? null }));
+  });
+  app.post('/connect/gmail', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    if (!opts.gmail) return c.redirect('/connect', 303);
+    return withErrors(c, actor, async () => c.redirect(await startGmailConnect(deps, opts.gmail!, actor), 303));
+  });
+  app.post('/connect/gmail/disconnect', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    if (!opts.gmail) return c.redirect('/connect', 303);
+    return withErrors(c, actor, async () => {
+      await disconnectGmail(deps, opts.gmail!, actor);
+      return c.redirect('/connect', 303);
+    });
+  });
+  app.get('/api/oauth/google/callback', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    if (!opts.gmail) return c.redirect('/connect', 303);
+    const denied = c.req.query('error');
+    if (denied) return c.redirect(`/connect?error=${encodeURIComponent(`Google consent was not given (${denied}). Nothing was connected.`)}`, 303);
+    const r = await finishGmailConnect(deps, opts.gmail, actor, { code: c.req.query('code') ?? '', state: c.req.query('state') ?? '' });
+    return c.redirect(r.ok ? '/connect?connected=1' : `/connect?error=${encodeURIComponent(r.reason)}`, 303);
   });
 
   async function renderCase(c: Context<Env>, actor: SessionMember, expenseId: string, extra: Partial<CasePageOptions> = {}, status: 200 | 400 | 403 | 404 | 409 | 410 = 200) {

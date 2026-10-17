@@ -6,3 +6,5 @@ export * from './email/mime.ts';
 export * from './email/normalise.ts';
 export * from './email/fixture-adapter.ts';
 export * from './synthetic/adapter.ts';
+export * from './email/gmail-api.ts';
+export * from './email/gmail-adapter.ts';

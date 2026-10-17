@@ -27,6 +27,8 @@ export const INTEGRITY_FLAGS = [
   'EVIDENCE_INCONSISTENCY',
   'INJECTION_SUSPECTED',
   'MALFORMED_ATTACHMENT',
+  /** The receipt sent for a card transaction does not match it (amount, date, merchant or card). */
+  'RECEIPT_TRANSACTION_MISMATCH',
 ] as const;
 export type IntegrityFlag = (typeof INTEGRITY_FLAGS)[number];
 

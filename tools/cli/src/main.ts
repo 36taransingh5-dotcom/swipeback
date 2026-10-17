@@ -16,8 +16,10 @@ import {
   resetSchema,
   verifyAuditChain,
 } from '@swipeback/db';
+import { loadLocalEnv } from '@swipeback/engine';
 import { evalCommands } from './eval/benchmark.ts';
 import { extractionCommands } from './extraction-commands.ts';
+import { gmailCommands } from './gmail-commands.ts';
 import { pipelineCommands } from './pipeline-commands.ts';
 import { seedDemoOrg, seedOptionsFromEnv } from './seed.ts';
 
@@ -98,6 +100,7 @@ const commands: Record<string, { describe: string; run: Command }> = {
   ...pipelineCommands,
   ...extractionCommands,
   ...evalCommands,
+  ...gmailCommands,
 };
 
 async function withPool(fn: (pool: ReturnType<typeof createPool>) => Promise<void>): Promise<void> {
@@ -110,6 +113,7 @@ async function withPool(fn: (pool: ReturnType<typeof createPool>) => Promise<voi
 }
 
 async function main(): Promise<void> {
+  loadLocalEnv(); // .env.local / .env (never printed)
   const [name, ...rest] = process.argv.slice(2);
   const cmd = name ? commands[name] : undefined;
   if (!cmd) {

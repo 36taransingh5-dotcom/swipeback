@@ -27,6 +27,7 @@ const REASON_TEXT: Partial<Record<ReasonCode, string>> = {
   EVIDENCE_INCONSISTENCY: 'the evidence is inconsistent',
   INJECTION_SUSPECTED: 'the message contains instructions that Swipeback does not act on',
   MALFORMED_ATTACHMENT: 'an attachment could not be opened safely',
+  RECEIPT_TRANSACTION_MISMATCH: 'the receipt does not match the card transaction',
   SENDER_UNVERIFIED: 'the sender could not be verified',
   MEMBER_INACTIVE: 'the employee account is not active',
   DUPLICATE_EXACT: 'this receipt was already submitted',
@@ -127,6 +128,18 @@ export function questionMessage(
   return {
     subject: subjectFor(e, 'One question'),
     text: `${describe(e)}\n\n${ask[kind]}\n\nWhy we ask: ${clause}\n\nThis is the only question we'll ask about this expense.\n\n${FOOTER}`,
+  };
+}
+
+export function receiptRequestMessage(
+  e: ExpenseSummary,
+  t: { descriptor: string; amountMinor: number; currency: string; date: string; last4: string },
+  clause: string,
+): Rendered {
+  const amount = formatMoney(money(t.amountMinor, t.currency));
+  return {
+    subject: `Receipt needed: ${amount} at ${t.descriptor} on ${t.date} [${e.ref}]`,
+    text: `Your company card ending ${t.last4} was used for ${amount} at ${t.descriptor} on ${t.date}.\n\nPlease reply to this email with the receipt attached (a photo or PDF is fine). That's all we need — Swipeback matches it to the card payment and files it. Company-card spend is never reimbursed to you.\n\nWhy we ask: ${clause}\n\n${FOOTER}`,
   };
 }
 

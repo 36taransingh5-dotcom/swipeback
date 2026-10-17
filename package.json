@@ -19,7 +19,9 @@
     "seed": "tsx tools/cli/src/main.ts seed",
     "worker": "tsx apps/worker/src/main.ts",
     "smoke:extract": "tsx tools/cli/src/main.ts smoke:extract",
-    "web": "tsx apps/web/src/server.ts"
+    "web": "tsx apps/web/src/server.ts",
+    "verify:gmail": "tsx tools/cli/src/main.ts verify:gmail",
+    "verify:card-receipt": "tsx tools/cli/src/main.ts verify:card-receipt"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

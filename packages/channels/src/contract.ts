@@ -120,6 +120,8 @@ export interface ApprovalRequest extends OutboundEnvelope {
 export interface SendResult {
   providerMessageId: string;
   threadId: string | null;
+  /** RFC 5322 Message-ID we stamped on the message (email), so later messages can reply to it. */
+  rfcMessageId?: string;
 }
 
 export type DeliveryState = 'ACCEPTED' | 'DELIVERED' | 'READ' | 'FAILED' | 'UNKNOWN';

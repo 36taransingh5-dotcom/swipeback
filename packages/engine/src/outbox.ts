@@ -20,7 +20,7 @@ export interface QueueMessageInput {
   template: string;
   idempotencyKey: string;
   rendered: Rendered;
-  thread?: { threadId: string | null; inReplyTo: string | null; references: readonly string[] };
+  thread?: { threadId: string | null; inReplyTo: string | null; references: readonly string[]; subject?: string | null };
   replyToken?: string | null;
   kind?: 'message' | 'approval_request';
   reviewUrl?: string | null;
@@ -34,6 +34,15 @@ export async function queueMessage(c: PoolClient, m: QueueMessageInput): Promise
     [m.organisationId, m.recipientAddress],
   );
   const suppressed = recent.rows[0]!.n >= MAX_PER_RECIPIENT_PER_HOUR;
+  // Email replies keep the employee's subject (Gmail only threads replies whose Subject matches);
+  // the status line moves to the top of the body.
+  let subject = m.rendered.subject;
+  let body = m.rendered.text;
+  if (m.channel === 'email' && m.thread?.inReplyTo) {
+    const original = (m.thread.subject ?? '').trim() || 'Your receipt';
+    subject = /^re:/i.test(original) ? original : `Re: ${original}`;
+    body = `${m.rendered.subject}\n\n${m.rendered.text}`;
+  }
   const r = await c.query<{ id: string }>(
     `INSERT INTO outbound_messages (organisation_id, channel, connection_id, expense_id, recipient_member_id,
         recipient_address, template, idempotency_key, subject, body_text, thread_id, in_reply_to, references_ids,
@@ -42,7 +51,7 @@ export async function queueMessage(c: PoolClient, m: QueueMessageInput): Promise
      ON CONFLICT (idempotency_key) DO NOTHING RETURNING id`,
     [
       m.organisationId, m.channel, m.connectionId, m.expenseId, m.recipientMemberId, m.recipientAddress, m.template,
-      m.idempotencyKey, m.rendered.subject, m.rendered.text, m.thread?.threadId ?? null, m.thread?.inReplyTo ?? null,
+      m.idempotencyKey, subject, body, m.thread?.threadId ?? null, m.thread?.inReplyTo ?? null,
       [...(m.thread?.references ?? [])], suppressed ? 'SUPPRESSED' : 'QUEUED', m.kind ?? 'message', m.replyToken ?? null,
       m.reviewUrl ?? null,
     ],
@@ -116,8 +125,8 @@ export async function deliverOutbound(deps: EngineDeps, outboundId: string): Pro
     await withTransaction(deps.pool, async (c) => {
       await c.query(
         `UPDATE outbound_messages SET delivery_state = 'SENT', provider_message_id = $2, sent_at = clock_timestamp(),
-                thread_id = coalesce(thread_id, $3), last_error = NULL WHERE id = $1`,
-        [outboundId, result.providerMessageId, result.threadId],
+                thread_id = coalesce(thread_id, $3), rfc_message_id = $4, last_error = NULL WHERE id = $1`,
+        [outboundId, result.providerMessageId, result.threadId, result.rfcMessageId ?? null],
       );
       // Replies to this message must correlate back to the expense.
       if (claimed.expense_id && result.threadId) {

@@ -42,6 +42,7 @@ export interface ExpenseRow {
   organisation_id: string;
   ref: string;
   member_id: string;
+  source_type: 'EMAIL' | 'CARD_FEED' | 'CHAT' | 'SYNTHETIC';
   source_channel: string | null;
   payment_type: 'UNKNOWN' | 'CORPORATE' | 'PERSONAL';
   category: string | null;
@@ -51,6 +52,7 @@ export interface ExpenseRow {
   expense_date: string | null;
   business_purpose: string | null;
   receipt_id: string | null;
+  current_extraction_id: string | null;
   matched_transaction_id: string | null;
   policy_version_id: string | null;
   state: ExpenseState;
@@ -182,6 +184,13 @@ export async function evaluateExpense(deps: EngineDeps, expenseId: string): Prom
     await lockKey(c, `member-limits:${pre.rows[0].member_id}`);
     const e = await lockExpense(c, expenseId);
     if (!EVALUABLE.includes(e.state)) return `no-op in ${e.state}`;
+    const cardLed = e.source_type === 'CARD_FEED';
+    if (cardLed && !e.receipt_id) {
+      // Waiting for the receipt (grace period, or the request is still open): nothing to decide yet.
+      // Once the request was answered without a receipt or expired, evaluation escalates.
+      const resolved = await c.query(`SELECT 1 FROM open_questions WHERE expense_id = $1 AND kind = 'RECEIPT' AND status IN ('ANSWERED','EXPIRED')`, [e.id]);
+      if (!resolved.rowCount) return 'card-led: awaiting receipt';
+    }
 
     const policy = await loadPolicy(c, e.organisation_id, e.policy_version_id);
     if (!e.policy_version_id) await c.query('UPDATE expenses SET policy_version_id = $2 WHERE id = $1', [e.id, policy.id]);
@@ -190,20 +199,40 @@ export async function evaluateExpense(deps: EngineDeps, expenseId: string): Prom
     const amount = e.amount_minor !== null && e.currency ? money(e.amount_minor, e.currency) : null;
 
     // --- card matching -------------------------------------------------------------------
-    const candidates = await cardCandidates(c, e, policy);
-    const match = amount && e.expense_date
+    // A card-led expense is only ever checked against its own transaction.
+    const candidates = await cardCandidates(c, cardLed ? { ...e, match_choice: e.matched_transaction_id } : e, policy);
+    let match = amount && e.expense_date
       ? matchReceipt({ memberId: e.member_id, total: amount, date: e.expense_date, merchant: e.merchant, cardLast4: e.card_last4 }, candidates, policy.doc.matching)
       : null;
-    const cards = await c.query<{ last4: string }>(`SELECT last4 FROM cards WHERE organisation_id = $1 AND status = 'ACTIVE'`, [e.organisation_id]);
-    const payment = resolvePaymentType({
-      receiptCardLast4: e.card_last4,
-      receiptTender: e.tender,
-      companyCardLast4s: cards.rows.map((r) => r.last4),
-      match,
-      statedByEmployee: e.stated_payment_source,
-      minutesSinceReceived: Math.floor((now.getTime() - e.created_at.getTime()) / 60_000),
-      awaitCardFeedMinutes: policy.doc.matching.awaitCardFeedMinutes,
-    });
+    let flags = e.flags;
+    let payment: ReturnType<typeof resolvePaymentType>;
+    if (cardLed) {
+      // The card feed already proves company money paid. The receipt must agree with that payment
+      // (same amount, date window and card); merchant wording may differ between descriptor and receipt.
+      const agrees = match?.status === 'MATCHED' || (match?.status === 'AMBIGUOUS' && match.candidates.length === 1);
+      if (e.receipt_id && amount && e.expense_date && !agrees && !flags.includes('RECEIPT_TRANSACTION_MISMATCH')) {
+        flags = [...flags, 'RECEIPT_TRANSACTION_MISMATCH'];
+        await c.query('UPDATE expenses SET flags = $2 WHERE id = $1', [e.id, flags]);
+      }
+      if (agrees && match?.status === 'AMBIGUOUS') match = { status: 'MATCHED', transactionId: match.candidates[0]!.transactionId, assessment: match.candidates[0]! };
+      if (!agrees) match = null;
+      payment = { paymentType: 'CORPORATE', basis: 'CARD_MATCH', action: 'RESOLVED', conflict: false };
+    } else {
+      if (match?.status === 'CONFLICT') {
+        const merged = await mergeIntoCardLedExpense(c, e, match.otherExpenseId);
+        if (merged) return merged;
+      }
+      const cards = await c.query<{ last4: string }>(`SELECT last4 FROM cards WHERE organisation_id = $1 AND status = 'ACTIVE'`, [e.organisation_id]);
+      payment = resolvePaymentType({
+        receiptCardLast4: e.card_last4,
+        receiptTender: e.tender,
+        companyCardLast4s: cards.rows.map((r) => r.last4),
+        match,
+        statedByEmployee: e.stated_payment_source,
+        minutesSinceReceived: Math.floor((now.getTime() - e.created_at.getTime()) / 60_000),
+        awaitCardFeedMinutes: policy.doc.matching.awaitCardFeedMinutes,
+      });
+    }
 
     const duplicates = await findDuplicates(c, e, amount);
 
@@ -225,7 +254,7 @@ export async function evaluateExpense(deps: EngineDeps, expenseId: string): Prom
         hasReceipt: e.receipt_id !== null,
         hasVatInvoice: e.has_vat_invoice,
         uncertainFields: e.uncertain_fields,
-        flags: e.flags,
+        flags,
       },
       senderVerified: e.sender_auth === 'dkim_aligned' || e.sender_auth === 'platform_signed',
       memberActive: member.rows[0]?.status === 'ACTIVE',
@@ -263,7 +292,7 @@ export async function evaluateExpense(deps: EngineDeps, expenseId: string): Prom
         d.inputsHash, ENGINE_VERSION,
       ],
     );
-    const matchedTxn = match?.status === 'MATCHED' ? match.transactionId : null;
+    const matchedTxn = cardLed ? e.matched_transaction_id : match?.status === 'MATCHED' ? match.transactionId : null;
     await c.query(
       `UPDATE expenses SET payment_type = $2, matched_transaction_id = $3, last_decision_id = $4 WHERE id = $1`,
       [e.id, payment.paymentType, matchedTxn, decision.rows[0]!.id],
@@ -283,13 +312,44 @@ export async function evaluateExpense(deps: EngineDeps, expenseId: string): Prom
   });
 }
 
+/**
+ * A receipt emailed on its own whose transaction already has a card-led expense waiting for a receipt
+ * is the same expense: merge it in (no duplicate record, no conflict review) and re-evaluate.
+ */
+async function mergeIntoCardLedExpense(c: PoolClient, e: ExpenseRow, otherId: string): Promise<string | null> {
+  const other = (await c.query<ExpenseRow>('SELECT * FROM expenses WHERE id = $1 FOR UPDATE', [otherId])).rows[0];
+  if (!other || other.source_type !== 'CARD_FEED' || other.receipt_id || other.member_id !== e.member_id || !['NEEDS_MATCH', 'NEEDS_INFO'].includes(other.state)) return null;
+  await c.query(
+    `UPDATE expenses SET receipt_id = $2, current_extraction_id = $3, merchant = $4, amount_minor = $5, currency = $6, expense_date = $7, category = $8,
+            card_last4 = $9, tender = $10, has_vat_invoice = $11, receipt_number = $12, uncertain_fields = $13, flags = $14,
+            business_purpose = coalesce(business_purpose, $15), inbound_message_id = coalesce(inbound_message_id, $16), sender_auth = $17
+      WHERE id = $1`,
+    [other.id, e.receipt_id, e.current_extraction_id, e.merchant, e.amount_minor, e.currency, e.expense_date, e.category, e.card_last4, e.tender,
+      e.has_vat_invoice, e.receipt_number, e.uncertain_fields, e.flags, e.business_purpose, e.inbound_message_id, e.sender_auth],
+  );
+  await c.query(`UPDATE open_questions SET status = 'CANCELED' WHERE expense_id = $1 AND status = 'OPEN'`, [other.id]);
+  await c.query(
+    `INSERT INTO conversation_links (organisation_id, channel, thread_id, expense_id)
+     SELECT organisation_id, channel, thread_id, $2 FROM conversation_links WHERE expense_id = $1 ON CONFLICT DO NOTHING`,
+    [e.id, other.id],
+  );
+  await moveExpense(c, e.id, e.state, 'MERGED');
+  await c.query('UPDATE expenses SET merged_into_expense_id = $2 WHERE id = $1', [e.id, other.id]);
+  await appendAudit(c, { organisationId: e.organisation_id, actorType: 'system', action: 'expense.merged', entityType: 'expense', entityId: e.id, after: { into: other.id, reason: 'receipt for a card transaction already awaiting its receipt' } });
+  await appendAudit(c, { organisationId: e.organisation_id, actorType: 'system', action: 'expense.receipt_attached', entityType: 'expense', entityId: other.id, after: { from: e.id, receiptId: e.receipt_id } });
+  await enqueue(c, 'evaluate-expense', { expenseId: other.id }, { organisationId: e.organisation_id, dedupeKey: `evaluate:${other.id}:merged:${e.id}` });
+  return `merged into ${other.ref}`;
+}
+
 /** Exact (same file) and possible (same merchant/date/total) duplicates across all members and channels. */
 export async function findDuplicates(c: PoolClient, e: ExpenseRow, amount: ReturnType<typeof money> | null) {
   const fileHash = e.receipt_id ? (await c.query<{ file_hash: string }>('SELECT file_hash FROM receipts WHERE id = $1', [e.receipt_id])).rows[0]?.file_hash ?? null : null;
   const others = await c.query<{ id: string; file_hash: string | null; merchant: string | null; expense_date: string | null; amount_minor: number | null; currency: string | null; receipt_number: string | null }>(
     `SELECT e.id, r.file_hash, e.merchant, e.expense_date, e.amount_minor, e.currency, e.receipt_number
        FROM expenses e LEFT JOIN receipts r ON r.id = e.receipt_id
-      WHERE e.organisation_id = $1 AND e.id <> $2 AND e.state <> 'REJECTED'
+      WHERE e.organisation_id = $1 AND e.id <> $2 AND e.state NOT IN ('REJECTED', 'MERGED')
+        -- a card-led expense still waiting for its receipt is the transaction side, not a competing claim
+        AND NOT (e.source_type = 'CARD_FEED' AND e.receipt_id IS NULL)
         AND (r.file_hash = $3 OR (e.expense_date = $4 AND e.amount_minor = $5))`,
     [e.organisation_id, e.id, fileHash, e.expense_date, e.amount_minor],
   );
@@ -493,11 +553,26 @@ export async function questionTimeout(deps: EngineDeps, token: string, stage: 'R
   });
 }
 
-/** Where to reply to the employee: the channel and thread the expense arrived on. */
-export async function originOf(c: PoolClient, e: Pick<ExpenseRow, 'inbound_message_id'>) {
-  if (!e.inbound_message_id) return null;
-  const r = await c.query<{ connection_id: string; channel: string; sender_address: string; thread_id: string | null; message_id: string | null; envelope: { conversation: { references: string[] } } }>(
-    'SELECT connection_id, channel, sender_address, thread_id, message_id, envelope FROM inbound_messages WHERE id = $1',
+/**
+ * Where to reply to the employee: the channel and thread the expense arrived on. A card-led expense
+ * has no inbound message until the employee answers, so it threads onto our own first email.
+ */
+export async function originOf(c: PoolClient, e: Pick<ExpenseRow, 'inbound_message_id'> & Partial<Pick<ExpenseRow, 'id' | 'member_id'>>) {
+  if (!e.inbound_message_id) {
+    if (!e.id) return null;
+    const o = (await c.query<{ connection_id: string; channel: string; recipient_address: string; thread_id: string | null; rfc_message_id: string | null; subject: string | null }>(
+      `SELECT connection_id, channel, recipient_address, thread_id, rfc_message_id, subject FROM outbound_messages
+        WHERE expense_id = $1 AND recipient_member_id = $2 AND delivery_state = 'SENT' AND rfc_message_id IS NOT NULL ORDER BY sent_at LIMIT 1`,
+      [e.id, e.member_id],
+    )).rows[0];
+    if (!o) return null;
+    return {
+      connectionId: o.connection_id, channel: o.channel, address: o.recipient_address,
+      thread: { threadId: o.thread_id, inReplyTo: o.rfc_message_id, references: [o.rfc_message_id!], subject: o.subject },
+    };
+  }
+  const r = await c.query<{ connection_id: string; channel: string; sender_address: string; thread_id: string | null; message_id: string | null; subject: string | null; envelope: { conversation: { references: string[] } } }>(
+    'SELECT connection_id, channel, sender_address, thread_id, message_id, subject, envelope FROM inbound_messages WHERE id = $1',
     [e.inbound_message_id],
   );
   const i = r.rows[0];
@@ -510,6 +585,7 @@ export async function originOf(c: PoolClient, e: Pick<ExpenseRow, 'inbound_messa
       threadId: i.thread_id,
       inReplyTo: i.message_id,
       references: [...(i.envelope.conversation.references ?? []), ...(i.message_id ? [i.message_id] : [])].slice(-20),
+      subject: i.subject,
     },
   };
 }

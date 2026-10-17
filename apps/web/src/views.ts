@@ -57,7 +57,40 @@ export function errorPage(status: number, message: string, actor: SessionMember 
   <p>${message}</p><p><a href="/review">Back to your queue</a></p></section>`, actor);
 }
 
-export function queuePage(actor: SessionMember, q: { items: QueueItem[]; handledAutomatically: number; waitingOnEmployees: number }): H {
+export interface MailboxStatus {
+  designatedAddress: string | null;
+  connections: { id: string; provider: string; address: string; status: string; scopes: string[]; last_sync_at: Date | null; last_error: string | null; consented_at: Date | null }[];
+}
+
+function mailboxBanner(m: MailboxStatus): H | '' {
+  const gmail = m.connections.find((c) => c.provider === 'gmail');
+  if (gmail?.status === 'RECONNECT_REQUIRED') return html`<p class="alert bad" data-testid="mailbox-banner">The finance mailbox ${gmail.address} needs reconnecting — new receipts are not being read. <a href="/connect">Reconnect</a></p>`;
+  if (!gmail || gmail.status !== 'ACTIVE') return html`<p class="alert info" data-testid="mailbox-banner">No live mailbox connected${m.connections.some((c) => c.status === 'ACTIVE') ? ' (offline replay transport in use)' : ''}. <a href="/connect">Connect the finance mailbox</a></p>`;
+  return '';
+}
+
+export function connectPage(actor: SessionMember, m: MailboxStatus, o: { configured: boolean; notice: string | null; error: string | null }): H {
+  const gmail = m.connections.find((c) => c.provider === 'gmail');
+  const admin = actor.roles.includes('admin');
+  return layout('Finance mailbox', html`<section class="card" data-testid="connect" data-status="${gmail?.status ?? 'NONE'}">
+  <h1>Finance mailbox</h1>
+  ${o.notice ? html`<p class="alert ok">${o.notice}</p>` : ''}${o.error ? html`<p class="alert bad" data-testid="connect-error">${o.error}</p>` : ''}
+  <p>Designated address: <strong>${m.designatedAddress ?? 'not set'}</strong></p>
+  ${gmail ? html`<p>Status: <span class="pill ${gmail.status === 'ACTIVE' ? 'ok' : 'warn'}" data-testid="mailbox-status">${words(gmail.status)}</span> · last checked ${gmail.last_sync_at ? when(gmail.last_sync_at) : 'never'}${gmail.last_error ? html` · <span class="muted">${gmail.last_error}</span>` : ''}</p>
+    <p class="muted small">Granted: ${gmail.scopes.join(', ') || '—'}</p>` : html`<p class="muted">Not connected.</p>`}
+  <h2>What connecting allows</h2>
+  <ul>
+    <li><strong>Read</strong> messages delivered to <em>this mailbox only</em>, to find receipts sent by enrolled employees. Mail from unknown or unauthenticated senders is quarantined, not processed.</li>
+    <li><strong>Send</strong> replies from this mailbox: one targeted question when something is missing, and the outcome, in the same thread.</li>
+    <li>Swipeback cannot delete, label or forward mail, and never reads any other mailbox. Disconnecting revokes access immediately.</li>
+  </ul>
+  ${!o.configured ? html`<p class="alert info">Google OAuth is not configured on this server (GOOGLE_OAUTH_CLIENT_ID / SECRET / REDIRECT_URI, SB_TOKEN_ENCRYPTION_KEY).</p>` : admin ? html`
+    <form method="post" action="/connect/gmail"><button class="primary" type="submit">${gmail?.status === 'ACTIVE' ? 'Reconnect' : 'Connect'} ${m.designatedAddress ?? 'mailbox'} with Google</button></form>
+    ${gmail && gmail.status !== 'DISCONNECTED' ? html`<form method="post" action="/connect/gmail/disconnect" style="margin-top:10px"><button class="link" type="submit">Disconnect and revoke access</button></form>` : ''}` : html`<p class="muted">Only an admin can connect or disconnect the mailbox.</p>`}
+  </section>`, actor);
+}
+
+export function queuePage(actor: SessionMember, q: { items: QueueItem[]; handledAutomatically: number; waitingOnEmployees: number }, mailbox?: MailboxStatus): H {
   const rows = q.items.map(
     (i) => html`<a class="row" href="/review/${i.expenseId}" data-testid="queue-item" data-ref="${i.ref}">
       <div><strong>${i.ref}</strong> <span class="muted">${i.employee}</span>${i.ownExpense ? html` <span class="pill info">your own — another reviewer decides</span>` : ''}</div>
@@ -66,6 +99,7 @@ export function queuePage(actor: SessionMember, q: { items: QueueItem[]; handled
     </a>`,
   );
   return layout('Exceptions', html`<section>
+  ${mailbox ? mailboxBanner(mailbox) : ''}
   <h1>Exceptions for you <span class="count" data-testid="queue-count">${q.items.length}</span></h1>
   <p class="muted">Handled automatically, no finance action: <strong>${q.handledAutomatically}</strong> · Waiting on an employee's answer: <strong>${q.waitingOnEmployees}</strong></p>
   ${q.items.length ? html`<div class="list">${rows}</div>` : html`<div class="card empty">Nothing needs you right now.</div>`}

@@ -1,6 +1,8 @@
 import { randomUUID } from 'node:crypto';
+import { randomBytes } from 'node:crypto';
 import {
   FixtureEmailAdapter,
+  GmailAdapter,
   MemoryEvidenceStore,
   MemorySink,
   SIGNATURE_HEADER,
@@ -15,6 +17,9 @@ import { seedDemoOrg, type SeededOrg } from '@swipeback/cli/seed';
 import {
   CARD_SIGNATURE_HEADER,
   channelRegistry,
+  GmailTokens,
+  TokenCipher,
+  type GmailRuntime,
   engineHandlers,
   receiveCardEvent,
   receiveInbound,
@@ -50,6 +55,7 @@ export interface Harness {
   sentTo(address: string, template?: string): ReturnType<MemorySink['to']>;
   outbound(template?: string): Promise<{ template: string; recipient_address: string; delivery_state: string }[]>;
   close(): Promise<void>;
+  gmail: (GmailRuntime & { tokens: GmailTokens }) | null;
 }
 
 export interface ExpenseView {
@@ -86,19 +92,27 @@ export function isoAt(daysAgo: number, hourUtc = 12): string {
   return d.toISOString();
 }
 
-export async function createHarness(opts: { extractor?: Extractor } = {}): Promise<Harness> {
+export async function createHarness(opts: { extractor?: Extractor; gmailFetch?: typeof fetch } = {}): Promise<Harness> {
   const db = await createTestDatabase(30);
   const org = await seedDemoOrg(db.pool);
   const evidence = new MemoryEvidenceStore();
   const sink = new MemorySink();
   const payouts = new MockPayProvider(db.pool);
   const clock = { offsetMs: 0, now: () => new Date(Date.now() + clock.offsetMs) };
+  const gmailRuntime: GmailRuntime | null = opts.gmailFetch
+    ? { oauth: { clientId: 'test-client.apps.googleusercontent.com', clientSecret: 'test-secret', redirectUri: 'http://localhost:3000/api/oauth/google/callback' }, cipher: new TokenCipher(randomBytes(32).toString('base64')), fetch: opts.gmailFetch }
+    : null;
+  const gmail = gmailRuntime ? { ...gmailRuntime, tokens: new GmailTokens(db.pool, gmailRuntime) } : null;
   const deps: EngineDeps = {
     pool: db.pool,
     clock,
     extractor: opts.extractor ?? new BaselineExtractor(),
     payouts,
-    channels: channelRegistry([new FixtureEmailAdapter(evidence, sink), new SyntheticChatAdapter(evidence, sink, CHAT_SECRET)]),
+    channels: channelRegistry([
+      new FixtureEmailAdapter(evidence, sink),
+      new SyntheticChatAdapter(evidence, sink, CHAT_SECRET),
+      ...(gmail ? [new GmailAdapter(evidence, async (id) => gmail.tokens.api(id))] : []),
+    ]),
     evidence,
     config: { appUrl: 'http://localhost:3000', cardFeedSecret: CARD_SECRET },
   };
@@ -127,7 +141,7 @@ export async function createHarness(opts: { extractor?: Extractor } = {}): Promi
   };
 
   return {
-    db, deps, org, sink, payouts, emailConnectionId, chatConnectionId, clock, runner, drain,
+    db, deps, org, sink, payouts, emailConnectionId, chatConnectionId, clock, runner, drain, gmail,
     email: (spec) => receiveInbound(deps, emailConnectionId, { body: buildEml({ from: SAM, to: FINANCE, ...spec }), headers: {} }),
     emailRaw: (raw) => receiveInbound(deps, emailConnectionId, { body: raw, headers: {} }),
     reply: (to, spec) => receiveInbound(deps, emailConnectionId, { body: buildReplyEml(to, { from: SAM, ...spec }), headers: {} }),

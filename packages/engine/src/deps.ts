@@ -32,6 +32,8 @@ export interface EngineConfig {
   /** Minutes before an unanswered question gets its one reminder, and then before it expires (defaults 24h each). */
   questionReminderMinutes?: number;
   questionExpiryMinutes?: number;
+  /** Minutes after a card swipe before Swipeback asks the cardholder for the receipt (default 60). */
+  receiptGraceMinutes?: number;
 }
 
 export interface EngineDeps {

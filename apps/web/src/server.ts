@@ -8,9 +8,9 @@ import { createRuntime, loadLocalEnv } from '@swipeback/engine';
 import { createApp } from './app.ts';
 
 loadLocalEnv();
-const { deps } = createRuntime();
+const { deps, gmail } = createRuntime();
 const port = Number(process.env.PORT ?? 3000);
-const app = createApp(deps, { secureCookies: (process.env.SB_APP_URL ?? '').startsWith('https://') });
+const app = createApp(deps, { secureCookies: (process.env.SB_APP_URL ?? '').startsWith('https://'), gmail });
 serve({ fetch: app.fetch, port, hostname: process.env.HOST ?? '127.0.0.1' }, (info) => {
   console.log(`[web] listening on http://${info.address}:${info.port} (app url ${deps.config.appUrl})`);
 });

@@ -73,6 +73,10 @@ describe('reviewer web app', () => {
     const cookie = (await context.cookies()).find((c) => c.name === 'sb_session')!;
     expect(cookie).toMatchObject({ httpOnly: true, sameSite: 'Lax' });
     await expect(page.textContent('[data-testid=why]')).resolves.toContain('NW-5');
+    // Regression: the Connect form redirects to Google, so only /connect may allow that form target.
+    const connectCsp = (await context.request.get(`${base}/connect`)).headers()['content-security-policy'];
+    expect(connectCsp).toContain("form-action 'self' https://accounts.google.com");
+    expect((await context.request.get(`${base}/review`)).headers()['content-security-policy']).toContain("form-action 'self';");
     expect(await page.getAttribute('[data-testid=case]', 'data-state')).toBe('REVIEW_REQUIRED');
 
     await page.check('input[name=action][value=APPROVE]');

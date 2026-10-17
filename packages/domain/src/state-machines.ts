@@ -15,6 +15,8 @@ export const EXPENSE_STATES = [
   'APPROVED',
   'REJECTED',
   'EXPORTED',
+  /** A receipt-led record absorbed into the card-led expense for the same transaction (no duplicate). */
+  'MERGED',
 ] as const;
 export type ExpenseState = (typeof EXPENSE_STATES)[number];
 
@@ -41,9 +43,11 @@ export const EXPENSE_MACHINE: StateMachine<ExpenseState> = {
   name: 'expense',
   states: EXPENSE_STATES,
   initial: 'RECEIVED',
-  terminal: ['EXPORTED'],
+  terminal: ['EXPORTED', 'MERGED'],
   transitions: [
     ['RECEIVED', 'EXTRACTING'],
+    // Card-led expense: created from a card transaction, waiting for its receipt.
+    ['RECEIVED', 'NEEDS_MATCH'],
     // Extraction outcomes. Every failure goes to review; there is no failure edge into AUTO_CLEARED.
     ['EXTRACTING', 'NEEDS_MATCH'],
     ['EXTRACTING', 'NEEDS_INFO'],
@@ -76,6 +80,11 @@ export const EXPENSE_MACHINE: StateMachine<ExpenseState> = {
     // Correction (new receipt) or appeal.
     ['REJECTED', 'EXTRACTING'],
     ['REJECTED', 'REVIEW_REQUIRED'],
+    // A separately emailed receipt that belongs to a waiting card-led expense is merged into it.
+    ['EXTRACTING', 'MERGED'],
+    ['POLICY_CHECK', 'MERGED'],
+    ['NEEDS_MATCH', 'MERGED'],
+    ['NEEDS_INFO', 'MERGED'],
   ],
 };
 

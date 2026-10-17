@@ -65,7 +65,8 @@ describe('Workflow A — company-card expense (AC-04)', () => {
     const msg = h.sentTo(SAM).at(-1)!;
     expect(msg.envelope.text).toContain('Matched to your company-card transaction');
     expect(msg.envelope.inReplyTo).toBe('<lunch-1@mail.northwind.example>');
-    expect(msg.envelope.subject).toContain(e!.ref);
+    expect(msg.envelope.subject).toBe('Re: Lunch receipt'); // matches the employee's thread
+    expect(msg.envelope.text.split('\n')[0]).toContain(e!.ref);
     expect(await count(`SELECT count(*)::int AS n FROM export_items`)).toBe(1);
   });
 
@@ -80,18 +81,27 @@ describe('Workflow A — company-card expense (AC-04)', () => {
     expect(await reimbursements()).toBe(0);
   });
 
-  it('two equally plausible card transactions: asks the employee to pick, never guesses', async () => {
+  it('two equally plausible card transactions: asks the employee to pick, never guesses, then completes the chosen one', async () => {
     await h.card({ amountMinor: 1125, transactedAt: isoAt(1, 9) });
     await h.card({ amountMinor: 1125, transactedAt: isoAt(1, 13) });
+    await h.drain();
+    const cardLed = (await h.db.pool.query<{ id: string; matched_transaction_id: string }>(`SELECT id, matched_transaction_id FROM expenses WHERE source_type = 'CARD_FEED' ORDER BY created_at`)).rows;
+    expect(cardLed).toHaveLength(2); // one card-led expense per swipe, both awaiting a receipt
     await h.email({ text: 'Purpose: Lunch on site during the Acme install', attachments: attach(pret()) });
     await h.drain();
-    const [e] = await h.expenses();
-    expect(e).toMatchObject({ state: 'NEEDS_MATCH', matched_transaction_id: null });
+    const receiptLed = (await h.db.pool.query(`SELECT state, matched_transaction_id FROM expenses WHERE source_type = 'EMAIL'`)).rows[0];
+    expect(receiptLed).toMatchObject({ state: 'NEEDS_MATCH', matched_transaction_id: null });
     const q = h.sentTo(SAM).at(-1)!;
     expect(q.envelope.text).toMatch(/Reply 1 — £?GBP 11\.25 at PRET/);
     await h.reply({ raw: q.raw, to: SAM }, { text: '2' });
     await h.drain();
-    expect((await h.expenses())[0]).toMatchObject({ state: 'EXPORTED', payment_type: 'CORPORATE' });
+    const states = (await h.db.pool.query<{ id: string; state: string; source_type: string }>('SELECT id, state, source_type FROM expenses ORDER BY created_at')).rows;
+    const options = (await h.db.pool.query<{ options: { transactionIds: string[] } }>(`SELECT options FROM open_questions WHERE kind = 'MATCH_CONFIRMATION'`)).rows[0]!.options.transactionIds;
+    const chosen = cardLed.find((x) => x.matched_transaction_id === options[1])!.id;
+    expect(states.find((x) => x.id === chosen)!.state).toBe('EXPORTED');
+    expect(states.find((x) => x.source_type === 'EMAIL')!.state).toBe('MERGED');
+    expect(states.filter((x) => x.state === 'NEEDS_MATCH')).toHaveLength(1); // the other swipe still awaits its own receipt
+    expect(await reimbursements()).toBe(0);
   });
 });
 
