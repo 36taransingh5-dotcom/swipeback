@@ -1,0 +1,177 @@
+{
+  "key": "9b9d17ef8fdc4bc1ff6416464aacebaa60d70a7f592c3385f5f065cd070608d2",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:23:48.400Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1749,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 399,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2148
+    },
+    "output": [
+      {
+        "id": "msg_08d156d25f3d9e05016ad32281728487d293ff0a3ddbca99dd",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Café Lumière\\n14 Rue de Rivoli, Paris\\nReceipt No: CL-2291 · Date: 09/10/2026\\n--------------------------------------------------------\\nCroque monsieur €9.50\\nSalade verte €6.40\\nCafé crème €2.50\\n--------------------------------------------------------\\n--------------------------------------------------------\\nTOTAL €18.40\\nVisa ending 9911 €18.40\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Café Lumière\",\"confidence\":0.99,\"quote\":\"Café Lumière\"},\"total\":{\"amount\":\"18.40\",\"currency\":\"EUR\",\"confidence\":0.99,\"quote\":\"TOTAL €18.40\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-09\",\"confidence\":0.98,\"quote\":\"Receipt No: CL-2291 · Date: 09/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"CL-2291\",\"confidence\":0.99,\"quote\":\"Receipt No: CL-2291 · Date: 09/10/2026\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Visa ending 9911 €18.40\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Visa ending 9911 €18.40\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.99},\"line_items\":[{\"description\":\"Croque monsieur\",\"amount\":\"9.50\"},{\"description\":\"Salade verte\",\"amount\":\"6.40\"},{\"description\":\"Café crème\",\"amount\":\"2.50\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Café Lumière\n14 Rue de Rivoli, Paris\nReceipt No: CL-2291 · Date: 09/10/2026\n--------------------------------------------------------\nCroque monsieur €9.50\nSalade verte €6.40\nCafé crème €2.50\n--------------------------------------------------------\n--------------------------------------------------------\nTOTAL €18.40\nVisa ending 9911 €18.40\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Café Lumière",
+                "confidence": 0.99,
+                "quote": "Café Lumière"
+              },
+              "total": {
+                "amount": "18.40",
+                "currency": "EUR",
+                "confidence": 0.99,
+                "quote": "TOTAL €18.40"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-09",
+                "confidence": 0.98,
+                "quote": "Receipt No: CL-2291 · Date: 09/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "CL-2291",
+                "confidence": 0.99,
+                "quote": "Receipt No: CL-2291 · Date: 09/10/2026"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911 €18.40"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911 €18.40"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "Croque monsieur",
+                  "amount": "9.50"
+                },
+                {
+                  "description": "Salade verte",
+                  "amount": "6.40"
+                },
+                {
+                  "description": "Café crème",
+                  "amount": "2.50"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Café Lumière\n14 Rue de Rivoli, Paris\nReceipt No: CL-2291 · Date: 09/10/2026\n--------------------------------------------------------\nCroque monsieur €9.50\nSalade verte €6.40\nCafé crème €2.50\n--------------------------------------------------------\n--------------------------------------------------------\nTOTAL €18.40\nVisa ending 9911 €18.40\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Café Lumière",
+        "confidence": 0.99,
+        "quote": "Café Lumière"
+      },
+      "total": {
+        "amount": "18.40",
+        "currency": "EUR",
+        "confidence": 0.99,
+        "quote": "TOTAL €18.40"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-09",
+        "confidence": 0.98,
+        "quote": "Receipt No: CL-2291 · Date: 09/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "CL-2291",
+        "confidence": 0.99,
+        "quote": "Receipt No: CL-2291 · Date: 09/10/2026"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911 €18.40"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911 €18.40"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "Croque monsieur",
+          "amount": "9.50"
+        },
+        {
+          "description": "Salade verte",
+          "amount": "6.40"
+        },
+        {
+          "description": "Café crème",
+          "amount": "2.50"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

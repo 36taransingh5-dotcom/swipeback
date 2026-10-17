@@ -1,0 +1,192 @@
+{
+  "key": "87a5d212e5ea1380481fa3a2870fe590c9afff63258e62838363471444729ead",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:26.925Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1964,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 771,
+      "output_tokens_details": {
+        "reasoning_tokens": 363
+      },
+      "total_tokens": 2735
+    },
+    "output": [
+      {
+        "id": "rs_0d906b65bd690d28016ad322a3a62887d2b8a7720838f3818d",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKqQ7cLyivloOj9_TsDxoPv4lHr3BxmYWzVmRBCiODj8W1hvyT5oXjYtkCHiwMPLxC4F3OCyj66wgUE1fLqMj4mzEaIzRrgnGf_AibQ0qgjSMyF13GV9FBF2hmZBKKnKqcFqVRIyKxixc6QlVmfRNEug7_olKvUhdnccwVF0TAMATkHVKbfF7S7Wbk6guHq8duyM7K-ikrf06xbtsPLdVJplDdfikjcU2t5aXMyo6fvqf7-e9lQ_fNeWXy62RsmJxRAfesIr4nZRN27E2NIpKVvavsecHY2MC5zS37w2FtPYXlnibzXAI96dt-w_dETaq8cpTEPMCigSNMdATeUh779hLGHQg5_CkNJhxG-6hRupWA-NG7zFP_z_4f8HeTMwHTsf28aMQUHZKZTuaDnV3Okz9NGfvYm78kzlpnjXu-f-JYMiduioXwhXLqBPwKoAkgyELv8ZSIzZA1a_e2UXG19Hpqzl9pXR9quRTokgqLSPzv-KmT0BEeYcdiGHD42ECOGEYVt4vbvsQnD4_0zsmrXjjudCQLuokeXJxW7m1Karf5N1csFY8f0JXvWpYb_dHQbubRRAQKybdig7fw0yL01TtKvYEjVN5o0GGdAArenWuHYcAVYcVS99MSTwMdvNUxdwo-Zysnfk6tQ1N6HcnT6KbgaDBjnKxqxVf6sDuDnxQTn0Z15sbKvrb7hCP6PkN2nJF56RMf-eHRlrstFTI96DFQt5ItnUS3O-vggJeH9X_zBd8_paKQH6kauDypjTMFhTtkM21K-VnrH3kjhIzr_l3XJ42j2k-Zt__2vTmtUbOfGkitcqDgvPoHjBz09aKxS3jDs8iB-VUvrz4WiH7V9xXGQxHQ2Fq2UfGdP2Ny5Y0CV2PJMVCRdGH537CO6G9tT0IhtnpOGKRbwViRf3MD1aKCBsXxskB5LKzSuCeo6cZLD7YY0AdCATp_Y9mmU-YIqjpvM4UTpx2EwY7hbV1Ismbru0dmG38S6pTR23iKo8BdFZ1CDc-RrVeAhcKp75gebHNnSOUa7E_y3NqhzJQuJS2qxlcMxBD2uzhB7xyQJxs_phrc4_CZ-40csi3_eEJ1Fou0FoYDYy32ydz5gPGpeIZS8Yiol3zInqutwirIdY-cmYPQ0kVcTpX6hYJUBgIwH8bCXmsOPiD02IXEkojC42NPx66gS9eoNKirNQ4fq1jyCKRmzlPGMrvFQlKywkY28QXedBbLggKzjy2TKkudUpmideBd3owWVpA3MHTaPkDjFDXb32E_7mAfjnD3GfrLkGcFT6a9T77xYOrZKHXGBVYO1hyHX0G0-Y2cP0zLRgGauXWwiuIHnDyz2YJhPf5LLpYi7JVwtbTG4j4V2mlxot4266FntxA-QqB_aP10xV7LSkvfZTSJEQ8wtPz7Fe8Wa21iRWVRXtar-xlTlXBjds3x-hIQqfAIlSnk65kd2mepu1o5Q1p1R9kGvWWzpVLc2qYsARhyW2e3p_4Xofeijve5HQ1HKLjt58FW-yyfrvfxc_0QlWeqOcKZiBrbKuxl8mMpfO9qUvvP5Iddp3kzTZuuegNQ4st27gkK7zbBX2soGug4KF6shuOuxKjGK_Sh5xyPsfhciC9_B76hX59ebemBJdMF726WeS_aYeb4xN-_wIUd__aeX1gECPFbCOnKP_FjjLgKnVVziV4vLKVqSjvxTIlLqClUKAp_CwvB1A8GuW97ElSxAjqu5IHnqYDfW_6hGLjvNJfJ9AQFP0vN8fUYjVWZKxEfsahQZrv9aBVX03gg4Y9tb9o9RMRhPAI7ld-P4cYMxiWO1IuoQ9CjuR9XFbaCuprSzcrfGhtcBXEqxKNg4GKvhpHrSZMc15RNcYUtxqfRd6q_ZdLeqd_1_MYq8kGJxOF8PTq0HEIyqzZHOlGIZP6RFH8btnXrWwbxhow6dhwgL1bMxFexPiN453wQLeIDtCeOcuqotEq7ykepiSCRlnop2I6gpsHkG96LyrfNBY_Wy1TRvN7R-IcTGPW5KP8l812UdeQ2cbNWq08X0g4-zJYr29z_zYCvzl8czpfDKic2cvjxJ1Wy6Y43rBw4BVPFl5wS_qwom_JD3FY12fvIU3t1tDY2esaFUJXrAZZ3J4zMm3g3XCbnGIlWHaRCNVsozVfeCP7-sFDlg76mk7UDdPrOO5eC-2oMolcVLysJNjOMoG1Fin1zZ4UmBJ1yVq879DzoT4DA3Nw2GPZlEeO_7CpzIaVhnzktqfxmqGz2MDnJHbR4L3O75fcdb6f8IDUgzfhS0wMqD2Kc15sm4er2mTPvBy4rKUPO8OjPniUWE83hHV8xFnQIcH65wqAFZDzTNYwPamtjIO2BAxcMBF73kqg1hSjjcJpVebm_D-4lsUdl_3Yz8TSJ5qxXn-vOONZaP2A94IEFlXDLDu0ZJ4r3OUlLGfk4NqfR8fI9OMCIdMmPlMQQea4-BNmzpuceOIc5Bl1tmDNLr3Woj-kiGBFFv1DfvHmLqSAXJ4-SD_m0jStbI9otsPOnBhsbT0LsktlrG6l6kBI2rU-jas2R9apJRx6djLLXqPZTRHbc85vlfRmQUCb8Oh4gq5mBvucSgMX42Y2ovKza6GCgphNJcroYEyVK8vUh0aO6DlRaT8FJ_YTA-jZNgdaSp0FF6QciHPyHqcdQzP_Q6z7Af_69hjbj9EMC_mluS6CLPDwuZWSSivC95ichhUZy8CztdacWXNhO2sc0ZbZA5fJ-fU-BDwnk541LjhIKmmBm8XgXmKB5-E5bSapRqkuRmR9NieUCke8-mBwPGA3y1I0Dd9Oc2DXSHEiJLeo-GHw-WI22B8GCPCoNhOWeZs33AE-Deex7ExT_iReyNuDhE4aQgw4NrDXkYrldluqRmAPLTma-rVzwO7pjOt1aBKa4ssHhqvKxV9Gqt_GjZD3EDR1yJDXArzhMAJ6gZMBtIUSifActg3vh1YjrpE0aByLXgkMF75JFklJ1iDC8AzyhaZGoWTnHCRigGgS-PN3Oas828RvmgdSr9KhIEwUdQ_kRLnOb3dF9Qh78TMR59WmD44tc8NOcsw27uZgvURRKX61qL1nAgLfm2MKwHhEV7cD6a4KAEcOsxFIoIa3xGpaBd7ixrBYDsWuI78-frBY88E7dtxW8D3z00ZQNrZn9p-6zClQoayGxM9WHqDNnUlp9ua1WpNSeLgepgsLsjRCYcxrE2kl8cW3th9Pxjlj4rfd88VBmUdZEb-1gWlPCiJaBhigg9w90VtnnrpqH8gQI1ZeuJsIPx8WXlqL_y_vL0TJsnpVlZU0XVa2kPWoA_eZq_TakOCTXWvzheKYOjubR1MxyaicTjwvezkxJ64d2c213ROfIjtnCTFWV5amWZndNFYSgYLreWhBKbyRok1JlqDjG7vunboN3Z_lym6qfItywVtuT2qxjmDXJWYKRRrDPHar0h4JaN7u01e7vqFxINcYAFlHRSILRO5P8OGmj9u8HimFntS4LJ3P2Mw5JBTuB3Gz7DKvOXXJikClBCrdpfX9HQdO-pSa55COmldBupEd2SJYXgddATGPvm89lLzy56gWQlCQmao4KmLPa3ds36PtNqHerOO9DO9fZ0fgkIRf-Xp9q3Rp7LD6xv2Qxh5vDR24Uz3zMKJn5RvEKqtK2gpwrIGnkTf8tJeDyehEnSiZJ2w3cWdENu9W1yiLSLppv4wANV0-PdYm4PIPuZmsuA1q0G1U9Su8quXunMuH_FIoCqG-TS6xrkLXDvHxqYtmVntprruDzkgVP-peB1KM9otxQHbuS19-29MgkEU-jQWlOueVwt2eTFnn0lHYp8Qu2h77ChB1m8BO9Gajol9rTHjXWCkNcHTpn6pnKGEJaXITc-ujfCrPNGkNSJB-Mp3mJqEkOo4CxhmK9e9ciTk8qRecfj8HChEQcS9xcJspm8Px4pTSzqy0WJrB-ZNdwphcXxWPMOIvuGVFV21oIr-nxUeFyIcToMVz0P22vsglP-dSWY-wgRvAbe-QmwPE2CJ9mBySNKkhgkbTUQpfRBEoCM9Zg43DqgZ8oKwrBtqa8pHwwnFNl510efQvtC39-YoZTEQg6gGcMdtpmlRBX6cCQHu0tXs0hA7NKdp6gN642CqVQBxqcMVFPY_yMIpXP3Nohk-6tWXOYYIZga2F2Hb0E3v9JOgPM7zLsXl8Ak2HwGw6fiNTeIdg8ronHMNeayebCtQTf57p0DhFSW9fzSdL3ShIpmEQ6zPVoHBAtX8lWc39JMZ25pUKWB4IzczpWMnKvifTAPPdnWtkumCsT30Ae0a9s4U-nXXSSm4ohrhZCYVomrQOOGXgXabozIqlf7NgNuS03YGnClJL9zYFTlCklyaExOtBqTKL2Y_PDVOBFK2CBn0aXNX_KYj0_raZ3YclHHeQFUloZOVejg8mNmWYF9TO10I4EXH0J34KWWevIzPuAtWpheuxYMoA9XAgrqL88jF0sGfJdvvW0bgtmiwHFsdFiTvuDZijnlg7kPLBnLUQWbj0-_c66HYokVFoCkAsdmOXa63zrSXkpEaWf8FxB5VoXHnQGQuJm0emtTw9oVmq-QufGm8FbZ9DP-gp_fjCaIQ8cpuvRMNrP6RkBlwG5ZOpPRAcpBiUJ9wUkvSwRzx1gtyive0Q0BpgopR_AnlZImxfPTCxC6J6sgun6meldLSJYkS55EF0ZpS4iLfpzLGbFgjWCAsF7thXSgBfvfzceDs3XeGzOsEMQtZ2sp-OVfmOAhQC95nGpJ8r598sCFQbRQSSUJOPVeMIYznYoVrCTqotr33JS3DEmeG_pEUmUBrEueLKAQhu4FT1NRq-EPgv6nXWU8wW3njzwfY2zQOCcKvO8QhV9aIJCtvi6yE3JJJUHARijUrcQUUEeVXF6ASU-S6KFKw71vw3O5i-DKN1y00kUHQj7JIixBxXSO1gZFoO0kwfWWaXHKkW1lgptC6T-fb1FfAeDPXzvdSqzwenpIbQM57RMFXpu0UaZkFk6We9XhQ6EKd83Xmg54uJVCCtqsXxQkTcQfvAaD9ijbQhmG-fzcburCUuAIuLeZj8rx-uecsHousAAYuQa6IAToDkvpXFJBjVoaVKr7GU7LkAwbewXMNBBgj_3HqAbNLw1mPVoxSsz0ugR_4hi6BdEBjL7EnJ4jWbdc4kmUwpJCwuF1VcPXAnemYQCjv0dMSF_Eor54on7exdONjnp2BflbXEXn_zfKhQnZ1XazIQW5pUxhNiGKN1NJs7Gx9BkA38b7lbRB8hchunDr2NVdVtFhZtyUTP-Utp4v4ln0JIFZ0i0BFpHuxOP_C9wYX2dQKUX4t2Imw7IVrx3zC5KtAxEv0eiIK1m-x9p_yieO1AAAZfg5ANYtpA3VM9W20BZdPO3bObsiVeUWkgjqORwhI9R3EAQwxi6PM0088TVaWSW_XrRvrvpzUdgT9ZOmqW1-_R8LnJJWACNmajuyr2EXiCwtkQZ5GGGg2eGpkye8WAVo8v3Hban77_TgtC06_o65DyUrEeNMvT9xZV_aT4H8Ib_y5kE3KrRByibwNRyq8ysJM7CJ5YIqbEKx6Elpk2OiAD5Dld63hFsugvXTomwit_imEOOiUGUAfLjK8fiOaO8-ZB0UVTRpzRCLv07LNcPHI2pv8lG-flca6En-4sHxAwkUs76yZZK2XxShUJywisMVb1NSh5QYy9tc22WB4XrmSC3ybG-POuWcwhLzfw-pfwepn8ExwTlIZTpegzknppMbDUpIwdjcsb7RTQaNYtbVmFUxK-WfGVkB",
+        "summary": []
+      },
+      {
+        "id": "msg_0d906b65bd690d28016ad322a7e5c487d2a4bffb6253fa9ea9",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Hawksmoor Manchester\\n184-186 Deansgate, Manchester\\nTAX INVOICE\\nInvoice No: HM-T14-2210\\nInvoice date: 10 October 2026\\nDescription\\nAmount\\nRump steak x2\\n£62.00\\nSides\\n£18.00\\nSoft drinks\\n£20.00\\nService charge\\n£12.50\\nTotal paid\\n£112.50\\nPaid by Visa card ending 9911\\nSYNTHETIC DEMO DOCUMENT — not a real invoice\",\"merchant\":{\"value\":\"Hawksmoor Manchester\",\"confidence\":0.99,\"quote\":\"Hawksmoor Manchester\"},\"total\":{\"amount\":\"112.50\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"Total paid £112.50\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-10\",\"confidence\":0.99,\"quote\":\"Invoice date: 10 October 2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"HM-T14-2210\",\"confidence\":0.99,\"quote\":\"Invoice No: HM-T14-2210\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Paid by Visa card ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Paid by Visa card ending 9911\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.99},\"line_items\":[{\"description\":\"Rump steak x2\",\"amount\":\"62.00\"},{\"description\":\"Sides\",\"amount\":\"18.00\"},{\"description\":\"Soft drinks\",\"amount\":\"20.00\"},{\"description\":\"Service charge\",\"amount\":\"12.50\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Hawksmoor Manchester\n184-186 Deansgate, Manchester\nTAX INVOICE\nInvoice No: HM-T14-2210\nInvoice date: 10 October 2026\nDescription\nAmount\nRump steak x2\n£62.00\nSides\n£18.00\nSoft drinks\n£20.00\nService charge\n£12.50\nTotal paid\n£112.50\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+              "merchant": {
+                "value": "Hawksmoor Manchester",
+                "confidence": 0.99,
+                "quote": "Hawksmoor Manchester"
+              },
+              "total": {
+                "amount": "112.50",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "Total paid £112.50"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-10",
+                "confidence": 0.99,
+                "quote": "Invoice date: 10 October 2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "HM-T14-2210",
+                "confidence": 0.99,
+                "quote": "Invoice No: HM-T14-2210"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "Rump steak x2",
+                  "amount": "62.00"
+                },
+                {
+                  "description": "Sides",
+                  "amount": "18.00"
+                },
+                {
+                  "description": "Soft drinks",
+                  "amount": "20.00"
+                },
+                {
+                  "description": "Service charge",
+                  "amount": "12.50"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Hawksmoor Manchester\n184-186 Deansgate, Manchester\nTAX INVOICE\nInvoice No: HM-T14-2210\nInvoice date: 10 October 2026\nDescription\nAmount\nRump steak x2\n£62.00\nSides\n£18.00\nSoft drinks\n£20.00\nService charge\n£12.50\nTotal paid\n£112.50\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+      "merchant": {
+        "value": "Hawksmoor Manchester",
+        "confidence": 0.99,
+        "quote": "Hawksmoor Manchester"
+      },
+      "total": {
+        "amount": "112.50",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "Total paid £112.50"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-10",
+        "confidence": 0.99,
+        "quote": "Invoice date: 10 October 2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "HM-T14-2210",
+        "confidence": 0.99,
+        "quote": "Invoice No: HM-T14-2210"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "Rump steak x2",
+          "amount": "62.00"
+        },
+        {
+          "description": "Sides",
+          "amount": "18.00"
+        },
+        {
+          "description": "Soft drinks",
+          "amount": "20.00"
+        },
+        {
+          "description": "Service charge",
+          "amount": "12.50"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

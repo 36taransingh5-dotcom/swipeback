@@ -1,0 +1,192 @@
+{
+  "key": "e4a822b26ad40311c5c4af10410275f326668fb03270bd874770e4d3b9e54840",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:25:08.506Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1964,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1425,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 3389
+    },
+    "output": [
+      {
+        "id": "rs_0f6878e15ea104ce016ad322cf761887d2a262cb697dd1b3cf",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yLUPSkDqqRmwSjp2AuvTJXyMzVOquPqV--oTTeRKDzg2hSmm6l0Bjd8iiDtx9g3bd34mg5mMt4rQq0oxEw1pwhT-RrDF-9nSetqP1AVR5Ht2ya7m34Eylx_iXCvF2WplKCWc1SR99tIIP65ZNapd_zkzGXB0pNdfGUDFFZmK7tYspvRn1bwFmRX9LHjr79byc_FyNYoirBwC5KUPCUrywySs7qdG40wBEJRT7GeDus2jmjPyHEeOZ7Y0Hi1_l3ebbRVbEnkZMjAH-5tCvKOApw4CauTroWKmjLLLYr9Sm_2_i7YgOfQlPWela1wyiYJd7-67mzDzyfQ7FOkDNTCxiYaHtbpy5wLV3ViG-Hj72RDu-1uyNlCyeud891rn5liCKFsoPs-ZwIOCKkGATQaw1HIe1xFXbKCu8UvT8jP-4oOVGNt1J6ZirNSzS3s7mvvYaZzrx3pfPGnJcz3RmVmt7-8CyPUfFgBnasAW5JSRGqcwfKGgLNvbDUuWom1tOZS20CqPxnwI8KD3IXHiLvlAMQhB1NGgEooz8B0ISpbn7gQg0BBrgJLJYcHelu5bH-qGyvIxYhTiCy8rGlMMtI32K2TdegyAF88VkFh18CgSfQwlb7h5wS7vFQcTjU0yaIqLqZqrfXIVr1jOrgqxuS6zhaR4cH-6VgahXK4W5Ba7DHJOFZWk_GNPP24Sdro6DQZvZ-c71XgOZb9RJ1TUtA-qjak8ALKMKvulwTt2BxJ0VSP-qk6cWzGFtEL44ENO-zxpxkMwcVguuiByd8bzKVgKmgbABSJdLUWuZ_PnfBYgg2jd9KuDUnfEPFYDX9chUxy7OdpviqsbLMP0c-KIaeHycGy_ndiMsOTlc2dqTZzJVozXG_M97utL0BqDJxMwjsJqkV_60yE3ZFxdQZNQ6iIWLKroMhu5c9s4D3SX9Rso6DL0FWwLd9CJu6xQ5gvh1dvmr8H0eakncjLfrn7Bz4ybpxngBqNC3jcNNnzNy-3pz_bZGkz_KeHRLUcUiPk5WgXEsJtPcJKt7zU6H6GkhIstRb5sdSsErRi8qQpRb08YehABEPj_XVOEtWwroE64WBqXJusJZ2_zU5vfjdU9wwhaUfdxl7MYSOc5Bj67SdwClss6ZANfVR2kbxGDrbKjHflEXSkdGJenrNxMARHdlUxrXa8EPatpNb484r3ISZv5GClYs1GFafSwlvmJRM4toIvGm372zhrjdjWsokuUO7SqsQaR5yQwIXw_mHgm4xEVwNBETx6Y3vGsSy7AxoCTpR3fFW3AuFvQUg21ewVoRNzM5Il009pYPgyVc3lwfi9KA-2k3x_0EyKAaXsVwBCNayIu8g6FlepaStfUVKUhXo7kZYpGzeFc_3WfiKDZYm1EH-gAWBZFzlKqVnx773_orhwTsphsWYiSUUecEVWg7FzhCauPzBXQlwMBYSP3vvSol0m8p0ffAW3I36KMpY4-pI8mXbxpjJ3gJk7Teb6BzV9J3U6vH0DLjbXSOn28sPPxmQSriewwFsAdrHz--mZA0Col7Z8Q7cUg-Hw9-yBHN7d6OhkBr6tbCId6mfQEvUAYz76Vt_oDzTJTFzWDdCynCfMi9WbmxvLe6rL8ZT96q4D4hjWxZqdrETxxH5GNmrQ5DVDq6uADuQKAljxk2iP6QXGGbzEoh5HdOngpUOFcg1Be5A0zPFtNjMogcQgt1G1bPb-KM0SjbmdJIEC7xdHpmeHm4EOKljGFzPvDzO903evWGkppEufooFbYDb1YRNwHRSNuTGY7HWwohnur2Dp9JhvSD09UOIc4Aaa0eo3eaq97nxhun1RVK9lox3fF9KXvw0Xs7xo1mIkkbKR7dz89H3YJWmSjG7lJ2mxhlKYH7HYlnKWKXzkdyMvHAvtyR5EpInrC-j-eXwaPUIQxdNlWnFCk82zAJ5HkD3u_uvZ3ILrhLV-8cvv-hqbP5BOADTKknI_0sjJy4rYjnqDqF62OlG5Qx2JE1I-uCo6WjsL3dUD-C6FZW4-brHpjKO9UO6r9IyY8tNrZC3_VAIESOs0fkxQl0X25ACezwPGGYJPWO_jTGaL0SVeszy7hlQJztNkroEUYC_zsEtSxxx_Nl6v-qsa_ePrwSF8LF5WDczeIBn5Xyn7ypaQe-yKIU0HTBLQbicvhN-7_j4vULym8vcbQcQ4cq3N_oB9FD24W6whCw55gRvAD3o4czN73Va7YMN6ycgRqHFZGmPpN-sBVv66mQNyr9mwXgya0ep34fy_se796vSXa6Zo70I9i17qHwH53PzQfj7B2nzddHYL_MiZV4bH6gXX-xTy-_KgdiZ3H4VfWLc7nQ_EdRZrnO4ZRCruXkNd5lVD8hdqEUWx6ztVO2Pgs1yAa30pQdEf5LGHGjftmbhVJwIJFi_8vetHMVWPBBmrDQR_9OCqoxW9JNGt30HHp06_U7FfSzJ48TkjPDHCZyvutqgz0MH_XSPWndRw2sq2r2UoT0O3pVL7pwbvLJLef_dt7T3iRnfAPXEOW--cgqZ4fq00KRbowZsnVYJunkA5kbeKYlbJiE00FdsjsZL36Ix6jw7s8MhKYktpg-S9mLb6u-LCCunZFwjrmR_WQ4F_EUvV1TFFc5wD1HRFpgVJhPwUSLd3bQYHBCz4wxfSq8VXJk4wK_BlYzY_q_OsrBW2JJ9KuuAX0WajECt5szGwm9_b68RlQgBaqKzJYrce7kpzqynQFKMA9xJeWh0Ow_BVbOitcYL4TzlM9jDpTpsKwwzYFjOYFS9qg1PFWZRP998Jra_wJrnHLeSdXiey_dNPVy7X54onib7ntPlXZKIXWwIPak-eyabn5oY1jcmo6a8zXQY9WeOZ6NVHkpn8-2PPJSLLwkqxYr0q1Iy7lSiB8xzAc89pgPz0FQWTyv_e9e8EbALT-3k-vGKBsC-yusRmgyA3yo_KFNGLQ2I2-iyedVm6rFZBiGkIg2SNvld6sktJnSKNNMGJ-59VkKNZ2YOxWUaMRpCogC0LZvjQDCZNyZgfF4uRrbgNOz9DOoLNQpC2iWe2PmDiYRsIO61V3b4OIHAuP6JEJN3JS69UaNo9uBFseVHquusOXOvu0CoSql-YWYmNeqD-PcfbAQRkGQPaMPoRMM6lYvt96TwcDZ0pgUpcmg9QpWo3uk1KVQr7xqOwT6nhm50HfZsN5FZRlC2CvOqM2QDhUZDCVYSOELHSo_DH3eLsjRy_1BB_InwAfCWdTIPLDJowFIXESU0zief8sp8hE_dg2P_Kyjqs8k42Jy4HC4n7aq4pP4zKsPKd32rzMm0k2rc85fF1A9QAtL9rSIww_AwG5BGVADGlfLOKP18QLwlG8y9wP7L06u_JEEWR42z1CFJ8YPDyqzlicmopsiORR-_SAyiT55bszc6GmFwphuFh1eRVN7CJpMMPLuTzDBjsT2cyL7WOr1jREIf76oeFNK9_CbBpLlW809OVScNPZ1GOuM2RwmbsmpYENnFLu8_baXoYepC5j4_rO6MaUnCttSQ5hyi7VeEkct8kcEzjcovr-fNURm6qVwLFZh6QKQNBifj7-WxGqnzw5U84l6iYfTjVIRWplYjn5tLNxay7iBGC7Am1gmxMawR2Dgcizyp2H3Gd6ud2QwB2vv_WkLKc2bDUtFUYenWAE-RaxJyaYG-271yHKm4svDKGGame4JCUvkaFQS_btRu4OqJNB1ZSRXQZt3LC2FKONZ3LNaEy0OEGTAShp8aZCcSIUNRFAHcSRQEERz9mNFy56OjotSLx-DDJcm9m_ZvwGz91nr55ekC8KgHojx-KA4O7zLwSo2tIdgDCK_-ME9kCwc-rK1lprPNxpkIVS2Qh2a1noT3dpifU5rSdHvhG3dBuCVF_gCZ12JEU3eNqHDyW2J9HYllppEFrYAes_T6FPgIu55l3uRL6H4nSSpAJUf5k8ogqSHO0q6TTFWHxqr4kn5hRUtGoZOTGTSsmku9JoRUuxBDn_gGV7gtvPMEfev8ERMA52TQFapsHlxOcmOIshTN-HBh_gBzBQ35YTbbok5qm1WIoP5cll8_NGg5lfLO_iTBgIE207geciUFyAmdjOZo6VN14C-aOA_4mKYz27g0d82DbpuAGhRZNBKkYS0vlZ5g3dDo_w0EK2T4otbe3E0RCbsjEXWILChsWkhzJg0HRmxpYuwGrEnY3eGzF6M8Q8wd47To82M1Zhz0mAoVbGoOtDvbvFyY6kY_Izo7bb6_4biQ88c27epBL1kKvit1x6q-dVvC9AxJvesgGxqiLeQ5DzD7SdOC_2iXIfWEvRBWoLxdkbY6l7EipDHNUkGDbtKfWxr4zN_RvRCXg69bgd7tyrug9WJ_CIdoiGpLDR5sUaMlf8LRmLherAFZ6toYqmuIq-NbUi8uQjxdO8xylubx5gOJ6zh3d02ZvJBmTTYwv7o_hrSNL9GdzzbeUsnl64y_LWld4to399zccE0eLbcWpiT51RgIySeiw1chpyGONMhJ3_wTLt43-bYhU9Ysl--u2txastQY4futXj8WN-4BVaDkAOLQm7kPm_3ZsLQeIfa1s_yjpz3iJ-S_6f7TPNuXpd1RGVsm-kQE8Fqf2SwqhLngWphaoz4sv79JHbird5ObQ4h3Hrgii2PvVRtVwTG7-VIXCoHBRXdMA2zZlPny40sB1-CQPRti6-rJPZVT-RfuscezAQjhtMdpQ0talFcH7Zo4F7QUwQSCiCYywyMQ0dTXkASO9w59RVAMrpaetfWuVPrbMPRwj8dTejtTUS8rlx0rY_Jc5jzxLeQJK_rfiwLQxaiT0XPZeUyfgqR9fQ0NKOeJrlhFX69q9xrcs6vf4N7q02PY9mFhsVBPtOJU2321IdF2IcvXeIHtqmAP8NH2E8WNX8O9W7qcuTFcXKSjQBrgIhuCMenu_qijnLVDYHBFOMnoqBytAl0ipEAI8HYTLuI4S7Mta_i8qDgpFG70O8NE0UYxBv5mZQLQQa_5GoMabDp9pC83-sr8UeTWH_LLXb4F4fQD9Xc51HO7Lx3aK-YBcv6wcDVhuSBfGY1H_G8E7evpdbcEu1Y0Esc6-2VxEeDlIgor1uCyVrYqP8wn9FeXu2a0WtzShHRNRXEhYuWDrmxvddsnmIDHzLm_5qa3gvxmKAY4lQOliN2vVWBl41xFmoDH43KDlozpN82MyFM4Iw3bJMU8wzFnzh1bXsipryDkaMdutAZd_D2AAcJZIiI2UWuoF9nBZvb_1USORmOw0txUaf-Y9nD6Huqht78gqgO55uwwzI6Ge1hODJoE-SlZ5UDUsPeVJziVVqSVidPKooO0JE6QtfqhXgwEqRwNCBu9ikWXrnExgMjdoKt97PSpt026HLoT5CU5C6O3YL8cfiGQkF3FQoKYGVbmPWr3RqVfhX08oTWa_4aNEaVqlakqpFQbTbBmW8H0xjpmq6C9QGJFPqZVQsC2f3tBl4X2OoSVmg2xezCdEIQATM0I4GGYCj_3HdjIxJUa0stGooBkIt3EizLy58QSXDgBsT6fkoAFr1_o_k34D7Gx1K4VN25Bd_prnAcchknUBsakA0Jff2miZB7vNyC2d5-rx-EiEnrYvLBeBch6O_2YVw3rWs3cLwR99Q-sdWqbsdTMC-njmIo5-gHO39T03PLyhSnuv4F2HFZVq4YoyzNH8sTFzdKgbx5h8re0mxGZ76w0QT6kZmQZSyWUogW2lZhOvYuAUNfIbT2u1L3YA_SM4DQIX6RWHMOHWX9vw4u6PHJPtbLN-3L-zBWjukvPCIXZqk4z2FWEiyqvsr_yU7YSndWGEUeZ4zS5Y5WyMhnyjY6mDtYAh6LlYYv-dB-ziUfFVQ1UVMLTBrPKbkNgd9czPzfV1QTEkM3_3eAQorxvlyEL0w9WiAawu78yhZH-9Kymxb_fqIxN0BJwZt9boY5ujaTMKSHL-pIb0IagPF22jZdmxz5BesEhz-j0xG4WgNnlMFOIAef7uvOcf9qKpwbLYYSHklnM5GxY2c0dGafkl2C8RfYpPpdGCSSWBjWNbcdlgbUS9X14AK8BLGa55miKA0hZSgRWJxxuh8FjH6_sqC9brH-AiTmAAZf1BgicvZzySrE_QbyNS-VrjjRNULxF5siOzu8pXWSYIUqYqUAfDLfQZrrNtBG6yutJi2w9eUIwB4QfkVNPN9xGq5qT7RbNYMklX4ancjp_k8VoKj0NHhhr8jhi1D_xU9asufZVubN9puVp2arCWJZs9PNLMFMXAKVNzkPDzBeY1Cx_EeLx_UfeBFrzmlWzXqN-juj9rWLe0C4F9VQq0vEC3PPZlDngYzrUdHDxGPcR48cmkQA6MfsgL3CWGCdXhTuIzpDBt_IOizgfMNBwx3N-lrMEIOlEnJmJNtE8grOIxsgl1a1y8Lun1MVsjrEmxdz3QwRXwW6NH9gpuMjRZoJ0E1AILJvJZA2uEwhd9_PBCA10WQyJ7w9n71YxwYu_L3gny1a5sPck_89_R_CMSnFN6YlyNL-M5VzWaiXL3hD77BSJLWQMZAUeFlAXu-DmJ-V0leLpIuDXT05wg05P8jEfJVdgz-NkI9ebK64eEhfr2EzxQDrgQw1kOwV71I4hF95Jbl2-C4gFJ8QurRW8xcacAfM9YyIrDzkco-aXG8yojZ0_WKGSFkOAA4IwsXqXeQ1FyMkXejE9BQFQVm9RnHvH6GPsYwk2XU5SjTIO31jVCWQkjIBYBvPTAIXfHBnpo5cnpXT2-6gN0wjyQ_wBRSRSxU-fOfUzl1cE2HN-nhPYneA-MSU7soDqClcWtGipx4FKgPUJm0KhHdnth1cK4BGVi2bX0oC0Ie5LyfQG8bIT4CaS7PJAOz_5CwQTlgrvdovtFAIeU9Wb4twA9Qo3nyRWFa1H1cVqfsrJ6eqRTidHkLh82GxMk7M2oB4dS3e6Q73JhGCyuue5YAxkj8lcnjrUKhAXgH36EizvS9s2lrtOdRCOoyq9rW1owNhGuiOrITmCCVDTWfxe2kHTAG2M5Do-JkDJx4x4rHZPMlcUtIKMyr-JHJ25LuJYehTFzmlLB7Ne25I5aDm3Hi5yvr8wwBVSy4AuzAyGd-Hpv-qDUElk-cd1bxYmIJLv8RpNzN33yB6A7ULBO2iqf2GdATJ8zX7a8OH5GGsRCIZBTNU3hUx81biTVW37UU9rOvTLKWNxhgk1WG6MYqXvKIqrI01EXHNhDNxtLcN13ZXpO-QOs9DFjNX2LQcyhWS-KfZfoNP7vmR2HgVQIR5l7UW0TQrL7SyXrR13k9-acUCsBE5cWA6Hj9AXtCzzw2p_q5wIIB8Cij0RwNuzq335viH98jq_aYkC_cLs_vuwkFXlRnEm5HFDy7nHf4E_XNOlrzRLX2WYxpHyR8YkmLoUPyVrSyye_sd0Y1Ty18s1denbwARkfgT-vusJSRNH-RbIBSKsyLVTf99r1jBSy6A5SkaK4_Nz3MypIxeMTZGoJp6IYqo1KLBkhm5bH5QoHI-2kP3KYfN0rEYNbXPD2-RKC1uPsDfdjSdzVu9_JBHNEVDA7lSlf-qH2qgFjFX9v54axAPwQzX_f4l-6Z84iIiX_Qxty9mEBnUF0_hoQ59Upj4bjOrB_kMN6vOLuKEQkYpxoJQFiYVS4rU5mDnpLPGoKs1OkF1fawEQ_13VsVpJaKrza1ZrppezNWP0EjtvHPvub2wZ3M6wlGpvYKpv2U_ws1wrZ7YfNNx5HT4waMP2-P4X50FKhTovip4jBwBsczDDyDWT-B2ropWA2msOyk6hS4FwJD9IlnPzDGbwi-MDohc3UQ4TiQLWuPJo9zjXpog18UW28zK0w9wQBx93PmdnqNECfluurXZiTlfybCfhzHHh0iyIQiBVASkWUXpD4fE9yK_nMC2E__2CQn2GRaaGicSUaPlxuFRSSD3_M5VN-dYIc2uXuBnTJkkN42pWkj4c9tQAwk3bpKxCyeg1VudEa4tADzRpjyQMixB4SZluaJtzPT_ppLjK8GzAae_cgkHvTiNjO0ca4YR-xj7rZfEJRtVWHwfbH3l8xzjnHlMAMjMoj_h_kqXCdK86XY9BoOv4kBeWuxql1Ebv9iluCUP7-L8ZSqixXMQoJDLFkEglkS-EN1ctyzdXi0a3n2Zyuqq_iw4K-jHfJowluG9Bu24nd7n0HXgwMSc8scQV1nOqDo9fuwZEWpoC2V1l1XHIjFcypadqrEnKNLL-jytzNseIQkvSql9OUtrmhBnd-RBkZmjGxfV8IG2JBE2adgsAbjDVLp5VQOJiGw9osSsyuptjHcyINFcAuzTZxEEoPaE60eVikxv9JV6NH_B3BybQzialYdEf0wa_EKnqluSWW7jlHuAYhzfz4YLJNujzLcQ8-4GaeGqgNzpvdWPsG9_MPgAf08wbiKx5vNJMhXeN7OfzGQAQA9KCTufShLdEiLS3uAQg8SjLPw5wyoAUFBdfcSSjWTAtQL-7xCyUxWVPlNNhl4J50H8Z1cJBxqlRuv8EgTJCJG5WIrgT44iZVCaURqLGhuaNfAp-5QuyAUcxF043VZ3BeOqzWWg4-N9aUSsfsI5UDnhWh6Kw0rxZgLv5F9R-UpkycXoMFdkGLQ71eEOzYEMIs67cmisdwA5gBjRr9YRU_O9EEPN_ofcqRjQT5mRrNdQtXSb2VozxUV1SuRdn6VWvo--w3AEkU06eMu8iZ5rprTV-MOqvabZ131I5zimCW_Mn6Nwc-ZhDHtCsumJT3LvMJZcelpt0sYEtiQWZQYGmSsMnUl1gO-IqFYeDS_QhCnNEqHK02noxfRdppUXMxV4mfZSqtiOX8DjygfChNKillWx5c4Ekhds3DqPS-_3T5w2jZpofaKgyv2auw_znAzRIxJ5D9o7FUAjvq4S_n6FFOsG9sLixtdzykyzkE3aJeqBuk5bhmo7vvpTTti9Crqcz_nzDIL_89uHy1jGYKBUrI54d8lRYPmzMgtkAEbBYhukEj-3KYddofWDIZ0jUJttWoXTn6pOWt_x8Y9aylZRSLziVLnN6ugQQ3d8Oqs87jDRc4JFuIS4gQPjpuu1m3mIaB2ZVnBkTN-AsuOSm7ikNJyPqDOlmvCmdcyK5LlUigIB5hxnRku0oLTP6FkhO1lWz1Fdtr3HVMsSNv-x8ep0sg19b4BjzsUAGhlVJzHruUiWSOqzMG06KjpxbZ81OZFSd4Apqzys9qwbv573A6oHWbftE4CJV6E5cjCev_oOyxnWNURf9tgo2obyHrr3V4JougpKkEvCtl1GypF7QFXKF8MZzOFGW9mfx9ypNTr297jS-LUsdwN_ynyuYzmpGKmlEI-qCZdNmyAv8wsF5iyDjpHvmkHkrm6SgB22H0WFhT2nE4oySVxCDJLTlOMafhukG8te0FoTZNWO9V81YNMLcfCPczLmzNMvob6AeRYzfyHZw1TgvfB-I74c6Wos9EIyeEDndfx9XYE5lAHH5kj5FByK7cvOytgHqRpTbSoYxQ7AJrJa4HR7aRarv2W01PopNMlHg45hkQ8G1qTQrVxPDaoRr2g5coDTNhRU7Ro350k-nBuQuEXbcjdcpKvuYQ6xdvhgWMuBSKIkXkEhkPad3NBkfCxyjWyhlJR_aumE2-0sP_uACZxNCtG9k_1eaaHrHrRyeCz5fzSW2IGXzsbdChnyUxdrgi4pNJkHt1Cbdbsi9yL0zg_mDK-qYeC8Q33W0H6qtSYcrXqFPmRghoKrwkubNs33-yQXok27WXkPUz2tMgT9YrOLpQgLZVOyd1X3RB0zIb8urzPLJKk3m_sXGELTAt8S1oWEIDxtLJLtOD-Tno3KXrXEBXcVYfZWuuVCtEX1wrikP0rJcPHK0hvOoqSE91-F6JGxSy23f4Eskq34ysTKaIZVvEu5EFsaZEis8XEzGsSoJEWIvviD7mPRO2UPNCqpHiybzyZdsyqwuCDGWQh4UHQuWSog6Ye_8H995QMR6UeU2Edn8vt8ObJK5zsz1wwhvbrn6dSn0DzMn1H_OUpwHtxTv4qnlYez_OsiaDQr-ZNeAK2WSwpSLXULo996ZBjNQDAg954Zq4yShHBzllF_GXIrVo_7JnWUJBLbq5S9BEH8SOP-rwDs-a3U6-Y-_wywUrPCurzKA3RZm2MrwjrfHdiMQrnWKxm9hvcvT3weOXgWplyZX9HnTkXGfaIdj305SNCd2_HRYHW5Pp0RBSc-wwhc8gq3Y-DBtSB84VHQn8VdihtaHry0ZVuo67auCN6qeiuxXSNronYjmXHjoC7NHe9e5dpn2Lth5nkh7yvg-ma_fIJMoW2_oa4eKaer5IZuRLpS6HiumsiDavDqsLDziWtmtk3NaA01d7o8K109Fc6ggAMR6cUruRqV0g2i1hj_2B7ua7xxLno2j_O5LJk4PQrreFfpFU0esFvPxeDcCMq39Egml4E4Bxax6iIlICoJvsrxkt5ZzCLWe5k7RTMe5XgjxuuNz1q5piml9FgGiSxhxRUFVMBFXY6BKrDLWHluZB77F9Z7KLxsKNvYwMEkwVVj6Xx3VSOqiB2Pfieqmo2tbSTNoHTwCfJyBnR3_3PN1oeJ7di08Fra-b1D3swo4aDUx9-8bRyLX61DEqlWCBv7NU0WVJvqrEnPbxSVKiUmU6I3CZkHcYiTGkrkmMspQXuwcIh1DuuVIF3qJdW3f6UElnXVrwkJ5-5CyTt7rVR6vAxcWvLatN6fZu_Mgqb7KCrX1qS3TszD3hxtFdddxPgtpBioRIGIcmR64dEXFigjB0nBJYhtfB-1qSzWWXeH9xja_GFHTm8mvK0kBgAgzOU2NJ1xDN_3qdohIOUBYZvMa5AwaecFn-mWWq4-aDn4NsqU_0bDu43axPOPQ6w8e1VMtZWXJR7_mAV2O0V3s5Nw9KHgJ213n9uOtNhPB5vRfGQaBAZS7hc0F5bAlCOEACEg0EqZ7HIpZipZX9I0raZ4cnt-mq1ggKaBH1N3lyvTGg6LMhAR_ONZ0s33tf5J3BVaUArZnD-250rjhwiyaMsQ6XndLBe9BAYJfTjOsA3mUECQsHee45rs-dW_b2wcfUSWPz__S2djfMW0det2h27WvP4pYqHfqdXpBZKyAfdM3FXVWrVqSWhtONSyHFb0-rfAlbByUoOohp3JRKj58NLn5o2u2z9zjBNo-CcGqng09A2uC_tmIngQK40CALY5TpgsBb-mpFygo2aC8wwU0RIJah_aoEbGrnwDXD6BsYm-VB8A5Vgwz_7FtFWo6lMB82I_yjYJa7mqu9_1GjTHiFAyK4UJjg11kbzns9Avjz_4EElrTp7vUNSnQQxSQ55wWE3fnPnf70N5btQw9ZsuufRn-Hoo_A1BruvnkNkIUoHi-rI9ZtywzQKKaRqsFX8iAWokHHP8iv6Uivr69gwAckGEv5XRFT-nuK3bCQd3VuVq_MCXaK95K2EjVU0tRdI3u4gCiyY-3OiX9ezRznFgyaHpn9e0lrzKeQdP4jHrwXT07D5oapetvFcu4b8pVnn4dKER2qhRxcsHU8_YzLvTB9u3Tb9-H-5Ow-pkg17vPr4goAV8POev14OjUZSsmQN-hHObjaavTlYTiQt3klKnKOBifquEkbxNUVgURPAEkdC7baWpNxgXRiMCuCjfzhqQcJvU-IiLDMxkvvBccSm3r8eCsPhLnKKVfr5cl9rll4n1Vp_64-labCeFa2M7AjV_xt0_HLmphPoPBIeIAEi1sPqhqL8W0p1PleZaif8jqstiajMQkP9ZE1P4tP4V2gyLFbX8rnQsCmQYiYLVRz3eM-mSOVUnAow82HVFcIL40f2ZAEWN_IHfbWb6zAWvlmY0f5vq08vm4vJ_LPxGauNsIyCCwkEKuvbUmd52XjSZTMAm18ZAiia4jxzPYIcj4zlqAD-PDEBUMdxzlpD3dHhNbekiVkgxK38MmZ8NP15eI_Wgaqp7Bo4o5PhR4z5slDS_zre5jldkkCChX7ZjNtxNMGjvy6oOvE9A4A8iOh8R3H17njVZpLT5D1kR0FJkDbnWdqBDAvbr2hLkTmdgm7olRezF-_YDHZ3Cgw_Py7Nv3jcktjEBnpyUruRRivtrcw5si6SYjUVXlteddE62KsxBGKEm7fL3DBmxhGcts8kmoZiBtwTp039zbVL1jWvrwevfg5JjNE-NJSSY215ku4KetQznW8LVjGcAbNvLDkZOrqolKXSRG9Cixfejj7s5RaW8B9ink_xElVHe2OZsMjdPconn0s1Bs2vp73NiqI36SYQ8IGwvbLE4nX74iwbRg5x9Lf9uQnJYnXon0De5Yux36lBEiKrEnf8eJWY9SCJhmx2eyGeCUf7cR2Ybj1Lub78-s6YpSPiAFVLrIkWcy_iG9A9n54AvbQf4T3lUPV1umwZDrMBUDSKdW-RVxJ4mU8fS3QygDwqyYxj636AUeN81Cv2pTEYKZm4pntflBLxHWBlvC1md1AedI0n-vAsw6TBcevPdgZjzr8cDe4MdcNTqh7kw4ISPYwcywoQlUvQ0fOJriV6gzydVKtPZKyC69QPsctdvEsc2aRb_R3W4kYS3423T0RhQheTrhY97y-3c5RHMlvrEYs6EwKDBZY7P_eWIGycqK_Aj33ziP_WamGF0hXivdb7-lpsy6ABPx-_PNAmwAwa-uaXzPucSBf6VYSSjsSNrSqoL4xq9ruRzA7RBbldzVaOQIjQJU8-CFJj5mEDsPp_qFrdMofTufXw1O9X7JoxYa-7-FNqb5sYTMyjhEgcirfV_UMyrXtDql3DCV-l_mcDv1njbmcnAJ65pcpe2RQz894oF5WERke8QrdlsQCyzq_B4jZTokigZ-o_FQnE_oSErkaAOT18q6A_3gjCLwnhFmVv9ZIoSY3A7uMPL5ZxAhvwZkWU-hjRBud1CS30PphAuysoJ6SwSxaw1fjNpnbIhD3nVMPryrCB__fFL_O9sh-jxU2jsea3ha_-fbgE4_glGFdsVXZRCFZtHVt6q-2ilN32rGuggHDp5ZJyKGvv0LmQZcL5xvSoV0kw4AsXhul86p-aNwN5HkMspp3bIdw1I3gIT6jtc4HNdw6fZgAb-m8wjji8mnXirN1WMiBRfxp3aVrUpy3DkCUTTqGlBizNBPNcpXqXJm4qf57QEwYJa62SaXE3r3atlFIw57SNvRPVLgH1z0IPgNJv2hcdAmbKN8Je6yajpojsE7-I7NO-oOZ167jibKzY_ey8aMNu347zaIJ25EELz_H3cLF1Subh1AHKSRuWyU830AYY9-PLHOiP7sUY3H_mhmhbyqN4Kv_CmK3pgu7KEJOx2rK9f4bcVgNDUo-G0JEMP9A7oSC7f1qkSMqBowWTto9kZY9vFtgcAcxGybhValqRMdQK1vWzrL-GVW3uJVOJ6fJ8nec-OTr-Fxy69-oVjXoz_D4aR4kSuhXXHvLdL-Y_82xt1UeVUcrchDsFXFDrzcDdAMwy9aYFrec8yqpPgJLqvfkwLqf7WhAP191dkXcxa7ucsTHwnFFTn2E7wjsxt7-DbOrs8RRQtAZVL1DQmfURPiNWeB1opCnSax1UBAFSNpF5ef2a9ulESkwpFw33WdnplSHVrIuA5_Y5tNgzAZMjFSKfpx5RBF0zDUQL_MdujouaIQkJFFEt4b7WzNgA4r_Kf2UKdZfVqtwLTakmHf32orel-Zf2fO3EtJDDtzIaAe8LBNEWx0h4J9-WNlkZNWrwS3-h8_kRGPtkQ10AzgKDD2JbyAowEcRo1AwxZTocFsr8sSBjGRD9IXZORyg97exOseKAZnjvcA6IEf69WNYO0wRtaDsqKgYg5sMMF-Nh1bYtZt_7P8p-9SqNubw2nY03oH7xHVfbE-uEoj3QzWk-Y9absFSldCB_PyeUeHDyvcYJuCCBbV-E5buWE39xzTQ648yb_zgeUblghJf43zfDxBgGZQLDlGoOEjbOMcJXQKgaSKWdgBEMkRU2glczkbp-D0TV5Eq49u9qfNJG3ak4jnSPeZe_vYfW6HirHVzFsAy-TqLpJzlePbj3vzv0iDPFfH3xWXMUBtFLBa6LQmngxUxDz2YrKrMZNkW5qxX4l2p-TWmtr8Du-riKL-FGgSxw71mFABZJALPkfCUYIQKyPEsnMjkld04vP--on20esz8njP8qdEkZ_QMbdImq85gg3QyTh_i1vZj0YRJBa3Hp6WPDs51me4aoVliuBDk_2F0_wBz2eZt5KPd_Ih_L67rEvHMN6ORR0NkJKZM6r9RjTbRbiiVj2XRy5iENVMuYxItHrsOSNAsbUfyytRXOcLYr8VdkQrOzCCpTaK-IGB90kMbGx_c1buxcp5A1pC44eZrGdvaV_5Cuzw-Mov-cUkFEABJ0gATQjr4pLNeZPPyCXYqE_Vj6YnAGIDqtXomyIvPZKm-PDTEWSJA4iQAYjYI4dqcMXsRAgxfIKh9qSGMMBFOH9fARN3OdILWih02eCGEICTBsgUIybPKsgUYtJok5XOoy_CAOhkeMjf9q9XGnDQotn6Of-7V3RGdA3OLztkg7u0dlYBTUfBSwivgUf8b1Xix2bWdMB0uff4Jj3AssZyQPr1ODqPbzC5J752nBonGT_th_EtlRwd3PMtQdLzwdWele-zJ0onhOAj4kd83sFcRJ2kGhC4e6x7WTYPk7xBtqxmJi3jaV6lIy_ldP81MMQ==",
+        "summary": []
+      },
+      {
+        "id": "msg_0f6878e15ea104ce016ad322d35be887d287258d7bd8e89e83",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Hawksmoor Manchester\\n184-186 Deansgate, Manchester\\nTAX INVOICE\\nInvoice No: HM-T14-2210\\nInvoice date: 10 October 2026\\nDescription\\nAmount\\nRump steak x2 £62.00\\nSides £18.00\\nSoft drinks £20.00\\nService charge £12.50\\nTotal paid £112.50\\nPaid by Visa card ending 9911\\nSYNTHETIC DEMO DOCUMENT — not a real invoice\",\"merchant\":{\"value\":\"Hawksmoor Manchester\",\"confidence\":1,\"quote\":\"Hawksmoor Manchester\"},\"total\":{\"amount\":\"112.50\",\"currency\":\"GBP\",\"confidence\":1,\"quote\":\"£112.50\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-10\",\"confidence\":1,\"quote\":\"Invoice date: 10 October 2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"HM-T14-2210\",\"confidence\":1,\"quote\":\"Invoice No: HM-T14-2210\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":1,\"quote\":\"Paid by Visa card ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Paid by Visa card ending 9911\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.98},\"line_items\":[{\"description\":\"Rump steak x2\",\"amount\":\"62.00\"},{\"description\":\"Sides\",\"amount\":\"18.00\"},{\"description\":\"Soft drinks\",\"amount\":\"20.00\"},{\"description\":\"Service charge\",\"amount\":\"12.50\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Hawksmoor Manchester\n184-186 Deansgate, Manchester\nTAX INVOICE\nInvoice No: HM-T14-2210\nInvoice date: 10 October 2026\nDescription\nAmount\nRump steak x2 £62.00\nSides £18.00\nSoft drinks £20.00\nService charge £12.50\nTotal paid £112.50\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+              "merchant": {
+                "value": "Hawksmoor Manchester",
+                "confidence": 1,
+                "quote": "Hawksmoor Manchester"
+              },
+              "total": {
+                "amount": "112.50",
+                "currency": "GBP",
+                "confidence": 1,
+                "quote": "£112.50"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-10",
+                "confidence": 1,
+                "quote": "Invoice date: 10 October 2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "HM-T14-2210",
+                "confidence": 1,
+                "quote": "Invoice No: HM-T14-2210"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 1,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.98
+              },
+              "line_items": [
+                {
+                  "description": "Rump steak x2",
+                  "amount": "62.00"
+                },
+                {
+                  "description": "Sides",
+                  "amount": "18.00"
+                },
+                {
+                  "description": "Soft drinks",
+                  "amount": "20.00"
+                },
+                {
+                  "description": "Service charge",
+                  "amount": "12.50"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Hawksmoor Manchester\n184-186 Deansgate, Manchester\nTAX INVOICE\nInvoice No: HM-T14-2210\nInvoice date: 10 October 2026\nDescription\nAmount\nRump steak x2 £62.00\nSides £18.00\nSoft drinks £20.00\nService charge £12.50\nTotal paid £112.50\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+      "merchant": {
+        "value": "Hawksmoor Manchester",
+        "confidence": 1,
+        "quote": "Hawksmoor Manchester"
+      },
+      "total": {
+        "amount": "112.50",
+        "currency": "GBP",
+        "confidence": 1,
+        "quote": "£112.50"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-10",
+        "confidence": 1,
+        "quote": "Invoice date: 10 October 2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "HM-T14-2210",
+        "confidence": 1,
+        "quote": "Invoice No: HM-T14-2210"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 1,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.98
+      },
+      "line_items": [
+        {
+          "description": "Rump steak x2",
+          "amount": "62.00"
+        },
+        {
+          "description": "Sides",
+          "amount": "18.00"
+        },
+        {
+          "description": "Soft drinks",
+          "amount": "20.00"
+        },
+        {
+          "description": "Service charge",
+          "amount": "12.50"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

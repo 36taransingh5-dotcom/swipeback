@@ -1,0 +1,176 @@
+{
+  "key": "120cbb63733e5b67a6c3c67cac9fdd1adaafabbb09b5e2706a13fa543c68850a",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:18.807Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1640,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 783,
+      "output_tokens_details": {
+        "reasoning_tokens": 456
+      },
+      "total_tokens": 2423
+    },
+    "output": [
+      {
+        "id": "rs_006f279195618917016ad3229c171887d2b21cd32bf356a23d",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKiOdV0K3nCJeKj2e2r3mejUTJVMW1L5gbti2rskNSf92jagXulyrb9NWQwguvpobcT7slxbnFJUEtGS5nXsD5-fTYtLcEbVC8I-i9HdsPEwIq9Qy4e1VOKhnj7J_864v8JntnBzPyChQvDSTV6F5MX5wOpnOGe-7ykK_fRFZH6PhEkB0zpuEh5D8a_QtWhONlT9AkVct1UF3cCugDtkndSoU3SqjqCn1oJ8vxINepVbUaWx0eaZWj7wm0f0diOqCSBZibmhq7tnoNOCH7PTpXmEqUPgl5AlbxYjYs3hERF7XR7_TJrUZk3y_EMsJAxu2x0ymWcSAj4iH8xPsW6y8CPpJbzjSYRZSRpYSwjPe9GWcVChxHBC7bcEkR1kZKDO03IFT6i7HtXx16MXLKzyAUG60Z0NB4amXBTwrQYdxKZ4rxqH9n-xzHuKX57uxupGiy1hF6r9jdbw3IWUNBzdcvUmtIUPvNxqfMKw_MaqzzwCwHUXXidZEBYNRyoVbeSCcz5bee1X5NVGnAn_4SP7zvuZZ2_lqBXde4ilWsZR_r6e2NKVgB6AKD-6uB5F5r9oKwbAZKiqrR5n4sNMWY_52MBB9wDmA_9AMaa7jgdoKD56-drBSIvGhyTEI6GA_6p6QrJJ9D3B_e5saMLu-czL-sgFmhUv6yv6wWsWjZDPZ2YH66KmXVoZFTkHqun0tEfpb7qPGUQq3Y2-blUhec2oXskhsCQi6VXAhoGU5qTZdZnTA106MzPvXa4jU93jCP2em9VLeRC0MQ1ByMiV0rrreq1tO43jKKCuRrGaco_Tz450IsMlbjHEeNEcfqaUnXar8_6pUra_cbiKZ6K1vn4bqOMfw-e83FStESReCuhuikmiQQQ_ki4_QpYAchPxW9CpLcdEQpSuxWoEJQ8qZQffzZNDLSN3GjVLD47RdmbzCZxJAwoiN3qT9TZqFjN6A5vwbb51efTfAIyJia6xmWBfPYHwPybuoOlYmFbs77jXawCYpCTDnYqpBnaL6xAE8tZOfbyaGCvxBJo6kQyIXGjBhC8h2_fVluuj3D1cw-ET8cj5H3cgmOdT2fur_yvfQcucIOcdFoZ-B1C9bTcFV9gm0tZfrt7LiK6uhloRP7fsuqB2hy0Zncoi2ZPAfsMoMzaeXGLFATIhJItvakatyUVHOoO2r5jLDEDpS06eNpKd4nKeBR9C0_LOnfcSaHF1skYKwUoT_PQA-6ZiSRUj-GUa6WyNas7783CmFmpzHVHQio483uLjhCK1H1N3BGs64uzcRV3wwXSV2QuDb3eXyKo13wX4liIvVv-5iUtwuw-es4q4jVjO9eQ5G0pGPfBsyJo0JK5x7qfjg1e-7B-HsV2w7sgJEX_6GUD77C6dcIcN1IMUxx2Fmoj6BUivQv_e8rGrcuQ9DaK-E-KiPuVI_oXjQbC_GEQI9cYa-vWDnp6H7QzxbyBlu9yFl45yWbGwIZaoatUKc4VHBzur1Frb4s_5sA8FAMqy87lUoS5XRZV579cwOWFUu7UxonkaDh2_4tyH2ObMXE7rxAfd03fErYKDuSGShitNjsFZcscvLNaa0lqfEqYX-jZpNrMh9p4InvWxfNbe3wwDxmaCNdinODy2_8aiCzEt8MtKxG-wlK7CLiFjx1ZSqhALKmSCD_BicQMDKEzbGxXFFKSoviWww3SNcAElonvtNE8qe35-kxmkygpw9BCBNehFUeM-QunpNv4uYbX5szkob5EK2ZL67veJFEkoCmSHVmbvAqYmH3YXZ2-8Ev95Wvq84bKvRxxLwolRaYy1RJbtKJSW7hLcu9FPEaoWzEBvqjrJxKJCetbfiuadqHYoq9wnyqNls5CuAvFWiSPUJz9_yQLeaZ0aRXV3frwcMJCyzz3fSdiKpX6hGlMyP1SCfw1mgU4PswnB7aRX2JVGLurRocmuHJFq3TQ47oGYM1jg-X9yC5-il88o-AsMg0151TqK1G1Wxk_hB_oelmnH8gdGhSC6No7LuDhuE-nSFepSRwyek6JPQz8YhUiNcsPVpKbhHk7Fgm3xcUPq0icvIWbNVpTHRvFjJOlYTD_FIED_tqQXsx8Rn3iYGltDHpTTKxj-4LprtTWE5gzMAt6oIOah9wc26hwW4f-P1z9uiOLL84UGpzEJ10xY0W7pJF6yh-FxyGSA6sAwgb14y-A7rqrmYTRisdhRd3HogX4mV7nAIXRy4iSvosN-2X6e8Zp2FuNz7xDI-nafrawrbLQr7e_l38lkRU5uOaC06wRdnvHuUkcCYQvMeSL1ZbMC6uLOK65nCvVgzLF4ZHmH8zl6nGCobviTU1lJlNuDYwXPH-Y5jGVUqqRnJDuSlCqLwrg89p3Z0Vq_lRCjQYvh9d6hL1e75xvxc2esme-rjzneRNrkPQbMiaPRqcXgiFeYfEf_GNGozEJ63Zbsdo8TA2yP9Bytrln4LC56rXOeKC6iaKA_Ri09zkvuLMRApBpGkXbfhmu6hd7iW8IHSJPtsFWqGssH2eEvgwkcySBc2cfKUcWyUilePnnzdfJFaqo5b_KlXyqKfG1dtRmAmKgvLBlZSylM7kbd4BL6aVn1ZxlFKQ3LQ039oTZv6LOOssX6xUt76rI2eX_cu7hILTsDfOgGEvuv94FdCAqh_1AP_EyrXqEi2E2oTWz00lpao8v-HlmDSkagDrhu9G8yLCnDMznNE1CQIdKQLcjWDLARICpcqPR0tsN-kMqh7bfjhJthU0ZY0jC5gax8nilZ2JdKAJafvCLfzjVxetP9zl3y2AUMFEPvQdSqQ7wm3_3_AM83b0g4mMuK3Ck6W95Sf_Rz7hwbaQMQExo59nP8OSjly5eSY3kRJg3rJSYj_Nln_45VNRSJWG8YjitO79repiPrkEqkdfByLGEc8enJd59eJ-yT0FVTi_m7ubgAcRDvKaZ2elz3cjlkvTRSaYzMNIsy4h-6N8IxrsUpyrBYok_xiCmNsFYY6qznoMe2tuwCd2yi5yrSQrw-1s_m6xf-wccWQbcjsxB_tZEFdFktYxAL4TSWWV7i8H-Q8qZlkdmR3y_IhdFJOhcwtTiQVU_OJdN59-0PJLJ7MfpqMZbIjWLh_xfeuPPU59pfP-_VqsR5eLkaNUkwMh5AILqlNFVIaCTXc6fytHNj6AS2azVwTIE-GL1PjEMAKVdVAPe22ya05PIRQjl7n2TlxceArZ-XHU5SHd4wiNmTlikgYM36KWE8ohEyhwIVqaA27iwBUUbPygeKRNKG5cNGfYcZFdUCMS35Skx2O0wQEYXMAcYO9598dllZ9JuiFPj5BD4lGe1d4YpcMFWErQ7mPRepMusdtWuLayUBptDC4uedkJlWuvx4fh6zPuMT94B1x_vKRA7lG8fD3AgFycvVM5kNaRqLpQki3cqgtBTI4vO7sL3EE3VO6jNjYoGawahmMM_jfdh2jSLhIW9K7uAwxf8qDwEr5Tmol-vCYnJGQ-I7XgOikw3qqlsVPK-RcSvj0AwQCzFJvu_oq0PRn6pIxpwvxZakXhTLMLMzB-lTLgOVH3_sXuPiNimnkR-qs_OLzthAy36Imf6eUG7FzTFKmRiVAdZsiEb4q572t0JOsSAImUO45vevZctX7VLTRylbV0jzUYBA-IOI3H5Tr7cjxOtn-mBQc0DvLjtTsW3zjviZ36TpxfGFxopVOlO_dRbOQiyHU4R-xI4z3EKL59PyU1ya2aJ8N5_msZvWEebqdZ-YK3vt8XKjuZLzqqrKfPkgGZgazDJRtVLDoMHt01FL9AHabWhdH2C6PJLUzTxvFT9JOItrhVy0K0I-CLVfMdya9bOOlwKPAdIFh8iZPUONbIaFRX9Cpu2XpLak_zyHIqnRmtRi7cRWSqSXugxg1CjvGW9yuY9DoxwgFUjK9btywYTJ-ycSdeKAxTI1tSch-WuCDgmCqUlHv5LwrnI-I29ZoMGHzgkwowYJsG83EicVKKyEW4cdaom3K6rMZX5aHok_gert6AxegYT8ljrz0XQweygHNB7xSiMJOTdfTUUYkQQoFKqift7KSzmvc11wXJHNjFedCILIgK7uM4hRV8zXRk4Jhykz8JUuDCHM0HNlq7HZ9kSz-vP7K8HIAgA6VQmsKshTK30MsRSCYavp0tR7rdtZ8go2szd-tsCD8nSyqh3wy6D6Ax_JJNfj74AsNRysuJjBX9_U0GKURJRY1DO9_VyzY0Fv-sK4NM0VPhgGXoBKYpyzVVgfim0-mhwd8ZtrcJ4wMncRp-Gkq_bkmvNuEP9OQ4a2tlN9DMyf7AzvLunRS0Q6mwDwpGaRHAhpOZLVtoMVg-XtzFESWquI0GMfc1elOlkTsimcBpph7ytFc2R58iBISPBujEWIb3bWOghuw45M4mWpoNDWH38T57VWqjLjEvBeyZwq_NdLRzlsxR4TrcmIr2LPr5D7W85X-CwKTEuqQ0U6GYKiPYWTfp9N9f7GFGtHdIdHq3B_gDCu3Ryn-kbNIsVyX_GxDC9NHMD_T1Y_RUKzGGw42iN7LFijHnKnuPZWRcLSgMgCPHmYrgB0Au4zwd9mAx0ZPTJUVl99KAlkc2rTL9GlZvm_3N4mYYjpzt8Y00wMk-K646f5DZYwKFH_G_8g-ngK62MGlsjSELj6NRDvgXcz41kI0Ry9-X1BPSIJCvtwwU8AxqtuK51SfccVD8UrGuquN-R5cL4q5eQL8KRfzN-mxEz2pjZAWi9azj3m7VL4CInpdWOzpY7aH0eGleMDJSnLtHuGXffYncpLNCsxev0eVBkaP3VnHkG4S4YVCCgR0-VMra7ZBgW_vQ6nGBWkS362looB9Ocfi80QbJUujBMJdIQjOlFhLqR5UmIwk51QezgKbsWaXZn0F2sgQRMH7cMYKo3AOAZLEWT3jnGcOTp_Fh2nvWzLHz1Ux_O2tRxUuiQQEDwkMs4vvwkjUeXLN-8TK1WqzjFndMVjPkg7i2lJmSlXlAgPdMNVab0xfYcn5mvfsUtpFVAVuw1ZqDb-ZP2PLL_MP6sDYgb_RoDtGbc-7SbuFd9016_CWk7E1Lhys1U-N9Q_k3AdxA5AiiUimklzOaxCBdG5dfpDWNEBKNn1cT_bObZuHJ31o0mW9vHG0Pe5o4BbD7UZ-oqoaOj-cgFj364mmeTKwx_Oe-c0lDBOB5vj2euWPyLZo6q8Z0tHGISwGoRUuZ1fevhPXQOHLEe-0VXxEdc0Z-b2qiEDj9eLdwHVRHAI6hiKqqZ6OFYV7n6h0rILH0v8OmBzftvkaB85mnVh_zvg5VQSNR8ikF3AMEyP-ppi6_tMKncC--gn4nJamLK3dNVoCEiviyUD9thvNJ8J8zm4IIon9Wg-NwDxZv9Dk0txL8DJ1c75M1V8gyngJPN9fIblPPkgd3f3E0CyLrX1vK5l0nKoFwGLpq0GANYPnzqXFBY2F6m_vPPgeRJSUojls2pYmS22g-lZnEBNQ7L-RgQUc1fubKjUPC0YaWKuiHEfRsZg3i-meFXEbIbIca0gnX9kMN9SNlOZJEWLp4AyCmu1C5dIO62pYZK25MA3WbhgjTEvZqiI62DCnqEksUk7C07xS8VtVgxleGV_jvLtYI4-JF97ByonIOWzYdW37l4cnXuR-GGS6IEQAIbh96pV6vyf8uILa9EwO2teyhC6DJqIHSDi8StARU9C-Xb1q1NBYlAfpI93m0efAUkoUy2XH07b8lvab4rR20I8cMIUVZIt80IZs_4xlE0lodsIFuNz9TWfi6iQiwomiqC6maV9dXYvPmDIR9OMc8pqjXLtR45dcc-OMcO2c2AVXY-KSrSME-CHjeJl_1OIUtjCGFk492R4IBDcVNjyj0f1rgn6AdmGoW4JCd9QnutyqUFZyE4Kdj_PTxBrYL4Hqd-EOxVC_cHYuUVBRJ9IGIGdAU2Xgj4wt4S-FlZ6rRkwWyZMtMJzPtx-dOY265Yot6GoKZ5ppmKI4UrwCZiPsw2pfasql1zcp4DPe-yYRyuAQKqHqR6bkuNl7khZRGufsHZdxrp_T3GI96hYuWB7HV02fUy_3-Iq2wuY1AcEnHLj-FTEdU-vjHtc98fxQX5DAmcIgcOXwj6AecA-D4luK6Cq8NvAE5PS9s-GaYCxPdGCmspqne6T3uKQOrnQz46xbYC3cZ2FECi63r-oONQj3N3pNWaWxxiQxic0fasEMNwW55MbLIV1xx5JIKpinW96qHD09IDQhoiwN7lWN8MxJtd0araq4UPB0eNokiOiX-sBem0J5KU6sY8RCNb13eJ6EzdMOAVMEbX4VqdTUwsMCFRli2aLHwJzHOnNZxsv2MsWB_IdyF3UarxvhVgiOd-lBqPV7nxsiL4Om99dPEuawtKMHr7gryU8Fy6fq1QycagnXPEFWN3t17Wycj55Tk7q5IVEwmJoADM5ZYsi6WpJXK9hbShkLRUGQON433Oaj1bDh6simnK5D5k0UGp_c7g_S5v6zfAM-th448wGIftJjfIXYFn89y7Hstrc2bjWjz2YN60VcQTwM9tMePzAnPL-hREP-oySiNsFvzkvyCc0j5xtPZ9oia8oXf2jd_VxxXaqM65DmGcsL24XGKAGijMOIhlRSJP5II_wMHkW0FGDVdHCJLV1n0qz3bIcw-xYqvknPq2ckoYPgRchPj5vsiREdzfMQF5bs40UMu92zoO8tr5",
+        "summary": []
+      },
+      {
+        "id": "msg_006f279195618917016ad322a086e087d2a4ff82604eedd098",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Watford Market Fruit &\\nVeg\\nDate: 13/10/2026\\n------------------------------------------------\\nApples 1kg £1.80\\nBananas £1.40\\n------------------------------------------------\\nSYNTHETIC\\n------------------------------------------------\\nTOTAL £3.20\\nPaid: Cash\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Watford Market Fruit & Veg\",\"confidence\":0.97,\"quote\":\"Watford Market Fruit &\\nVeg\"},\"total\":{\"amount\":\"3.20\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL £3.20\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-13\",\"confidence\":0.99,\"quote\":\"Date: 13/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"card_last4\":{\"value\":null,\"confidence\":0,\"quote\":null},\"tender\":{\"value\":\"CASH\",\"confidence\":0.99,\"quote\":\"Paid: Cash\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.9},\"line_items\":[{\"description\":\"Apples 1kg\",\"amount\":\"1.80\"},{\"description\":\"Bananas\",\"amount\":\"1.40\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Watford Market Fruit &\nVeg\nDate: 13/10/2026\n------------------------------------------------\nApples 1kg £1.80\nBananas £1.40\n------------------------------------------------\nSYNTHETIC\n------------------------------------------------\nTOTAL £3.20\nPaid: Cash\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Watford Market Fruit & Veg",
+                "confidence": 0.97,
+                "quote": "Watford Market Fruit &\nVeg"
+              },
+              "total": {
+                "amount": "3.20",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL £3.20"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-13",
+                "confidence": 0.99,
+                "quote": "Date: 13/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "card_last4": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tender": {
+                "value": "CASH",
+                "confidence": 0.99,
+                "quote": "Paid: Cash"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.9
+              },
+              "line_items": [
+                {
+                  "description": "Apples 1kg",
+                  "amount": "1.80"
+                },
+                {
+                  "description": "Bananas",
+                  "amount": "1.40"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Watford Market Fruit &\nVeg\nDate: 13/10/2026\n------------------------------------------------\nApples 1kg £1.80\nBananas £1.40\n------------------------------------------------\nSYNTHETIC\n------------------------------------------------\nTOTAL £3.20\nPaid: Cash\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Watford Market Fruit & Veg",
+        "confidence": 0.97,
+        "quote": "Watford Market Fruit &\nVeg"
+      },
+      "total": {
+        "amount": "3.20",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL £3.20"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-13",
+        "confidence": 0.99,
+        "quote": "Date: 13/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "card_last4": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tender": {
+        "value": "CASH",
+        "confidence": 0.99,
+        "quote": "Paid: Cash"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.9
+      },
+      "line_items": [
+        {
+          "description": "Apples 1kg",
+          "amount": "1.80"
+        },
+        {
+          "description": "Bananas",
+          "amount": "1.40"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

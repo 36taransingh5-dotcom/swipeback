@@ -1,7 +1,18 @@
 import path from 'node:path';
 import { DirectorySink, FixtureEmailAdapter, LocalEvidenceStore, SyntheticChatAdapter } from '@swipeback/channels';
 import { createPool, databaseUrl, isLocalDatabaseUrl, type Pool } from '@swipeback/db';
-import { anthropicClient, BaselineExtractor, cassetteClient, LlmExtractor, type Extractor } from '@swipeback/extraction';
+import {
+  anthropicClient,
+  BaselineExtractor,
+  cassetteClient,
+  DEFAULT_OPENAI_MODEL,
+  LlmExtractor,
+  openAICassetteClient,
+  openAIClient,
+  OpenAIExtractor,
+  type Extractor,
+  type ReasoningEffort,
+} from '@swipeback/extraction';
 import { MockPayProvider } from '@swipeback/payouts';
 import { channelRegistry, systemClock, type EngineDeps } from './deps.ts';
 
@@ -25,34 +36,53 @@ function secret(env: NodeJS.ProcessEnv, name: string, devDefault: string): strin
 
 export const CASSETTE_DIR = path.resolve('eval/cassettes');
 
+export type ExtractorProvider = 'openai' | 'anthropic' | 'baseline';
+
 /**
- * SB_EXTRACTOR: llm (default when SB_ANTHROPIC_API_KEY is set) | baseline (rule-only, default otherwise)
- * | record (live calls, saved as cassettes) | replay (recorded responses only, no network).
+ * Extraction provider selection:
+ *   SB_EXTRACTOR = openai | anthropic | baseline  (or `llm` + SB_LLM_PROVIDER=openai|anthropic)
+ *   default: openai if SB_OPENAI_API_KEY is set, else anthropic if SB_ANTHROPIC_API_KEY, else baseline.
+ *   SB_CASSETTES = off (default) | record (live calls saved) | replay (recorded responses only, no network).
+ *   OpenAI: SB_OPENAI_MODEL (default gpt-5.5), SB_OPENAI_REASONING_EFFORT (default medium).
+ *   Anthropic: SB_EXTRACTION_MODEL (default claude-opus-5-5), SB_EXTRACTION_EFFORT (default medium).
  */
-export function createExtractor(env: NodeJS.ProcessEnv = process.env): Extractor {
-  const apiKey = env.SB_ANTHROPIC_API_KEY;
-  const mode = env.SB_EXTRACTOR ?? (apiKey ? 'llm' : 'baseline');
-  const llmOpts = {
-    ...(env.SB_EXTRACTION_MODEL ? { model: env.SB_EXTRACTION_MODEL } : {}),
-    ...(env.SB_EXTRACTION_EFFORT ? { effort: env.SB_EXTRACTION_EFFORT as 'low' | 'medium' | 'high' } : {}),
-    ...(env.SB_ANTHROPIC_BASE_URL ? { baseURL: env.SB_ANTHROPIC_BASE_URL } : {}),
+export function resolveProvider(env: NodeJS.ProcessEnv = process.env): ExtractorProvider {
+  const raw = (env.SB_EXTRACTOR ?? '').toLowerCase();
+  const chosen = raw === 'llm' ? (env.SB_LLM_PROVIDER ?? 'openai').toLowerCase() : raw;
+  if (chosen === 'openai' || chosen === 'anthropic' || chosen === 'baseline') return chosen;
+  if (chosen) throw new Error(`unknown extraction provider "${chosen}" (use openai, anthropic or baseline)`);
+  return env.SB_OPENAI_API_KEY ? 'openai' : env.SB_ANTHROPIC_API_KEY ? 'anthropic' : 'baseline';
+}
+
+export function createExtractor(env: NodeJS.ProcessEnv = process.env, overrides: { model?: string } = {}): Extractor {
+  const provider = resolveProvider(env);
+  const cassettes = (env.SB_CASSETTES ?? 'off') as 'off' | 'record' | 'replay';
+  if (!['off', 'record', 'replay'].includes(cassettes)) throw new Error(`SB_CASSETTES must be off, record or replay`);
+  const key = (name: string) => {
+    const v = env[name];
+    if (!v && cassettes !== 'replay') throw new Error(`${provider} extraction needs ${name}`);
+    return v ?? '';
   };
-  const requireKey = () => {
-    if (!apiKey) throw new Error(`SB_EXTRACTOR=${mode} needs SB_ANTHROPIC_API_KEY`);
-    return apiKey;
-  };
-  switch (mode) {
-    case 'baseline':
-      return new BaselineExtractor();
-    case 'llm':
-      return new LlmExtractor({ ...llmOpts, apiKey: requireKey() });
-    case 'record':
-      return new LlmExtractor({ ...llmOpts, client: cassetteClient({ dir: CASSETTE_DIR, mode: 'record', live: anthropicClient({ ...llmOpts, apiKey: requireKey() }) }) });
-    case 'replay':
-      return new LlmExtractor({ ...llmOpts, client: cassetteClient({ dir: CASSETTE_DIR, mode: 'replay' }) });
-    default:
-      throw new Error(`unknown SB_EXTRACTOR "${mode}"`);
+  if (provider === 'baseline') return new BaselineExtractor();
+
+  if (provider === 'openai') {
+    const opts = {
+      model: overrides.model ?? env.SB_OPENAI_MODEL ?? DEFAULT_OPENAI_MODEL,
+      ...(env.SB_OPENAI_REASONING_EFFORT ? { reasoningEffort: env.SB_OPENAI_REASONING_EFFORT as ReasoningEffort } : {}),
+    };
+    const live = () => openAIClient({ apiKey: key('SB_OPENAI_API_KEY'), ...(env.SB_OPENAI_BASE_URL ? { baseURL: env.SB_OPENAI_BASE_URL } : {}) });
+    if (cassettes === 'off') return new OpenAIExtractor({ ...opts, client: live() });
+    return new OpenAIExtractor({ ...opts, client: openAICassetteClient({ dir: CASSETTE_DIR, mode: cassettes, ...(cassettes === 'record' ? { live: live() } : {}) }) });
   }
+
+  const anthropicModel = overrides.model ?? env.SB_EXTRACTION_MODEL;
+  const opts = {
+    ...(anthropicModel ? { model: anthropicModel } : {}),
+    ...(env.SB_EXTRACTION_EFFORT ? { effort: env.SB_EXTRACTION_EFFORT as 'low' | 'medium' | 'high' } : {}),
+  };
+  const live = () => anthropicClient({ apiKey: key('SB_ANTHROPIC_API_KEY'), ...(env.SB_ANTHROPIC_BASE_URL ? { baseURL: env.SB_ANTHROPIC_BASE_URL } : {}) });
+  if (cassettes === 'off') return new LlmExtractor({ ...opts, client: live() });
+  return new LlmExtractor({ ...opts, client: cassetteClient({ dir: CASSETTE_DIR, mode: cassettes, ...(cassettes === 'record' ? { live: live() } : {}) }) });
 }
 
 export interface Runtime {

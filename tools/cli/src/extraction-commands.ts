@@ -19,16 +19,17 @@ export const SMOKE_RECEIPTS: { name: string; format: RenderFormat; spec: Receipt
 
 export const extractionCommands: Record<string, Command> = {
   'smoke:extract': {
-    describe: 'Render 5 synthetic receipts and extract them with the configured model (live; --record saves cassettes)',
+    describe: 'Render 5 synthetic receipts and extract them live with the configured provider [--model id] [--record] [--out dir]',
     run: async (args) => {
       loadLocalEnv();
-      const { values } = parseArgs({ args, options: { record: { type: 'boolean' }, out: { type: 'string' } } });
-      if (!process.env.SB_ANTHROPIC_API_KEY) throw new Error('SB_ANTHROPIC_API_KEY is not set (add it to .env.local)');
-      const extractor = createExtractor({ ...process.env, SB_EXTRACTOR: values.record ? 'record' : 'llm' });
+      const { values } = parseArgs({ args, options: { record: { type: 'boolean' }, out: { type: 'string' }, model: { type: 'string' } } });
+      const extractor = createExtractor({ ...process.env, SB_CASSETTES: values.record ? 'record' : 'off' }, values.model ? { model: values.model } : {});
+      if (extractor.name !== 'llm') throw new Error('No model provider configured: set SB_OPENAI_API_KEY (or SB_ANTHROPIC_API_KEY) in .env.local');
       const renderer = new ReceiptRenderer();
       const outDir = values.out ? path.resolve(values.out) : null;
       const rows: Record<string, unknown>[] = [];
       let totalCost = 0;
+      let unknownCost = false;
       try {
         for (const r of SMOKE_RECEIPTS) {
           const file = await renderer.render(r.spec, r.format);
@@ -40,6 +41,7 @@ export const extractionCommands: Record<string, Command> = {
           const ctx = { senderText: '', subject: null };
           const result = await extractor.extract(source, ctx);
           const facts = finaliseExtraction(result, ctx);
+          if (result.usage?.costMicros === null) unknownCost = true;
           totalCost += result.usage?.costMicros ?? 0;
           rows.push({
             receipt: r.name,
@@ -53,7 +55,7 @@ export const extractionCommands: Record<string, Command> = {
             uncertain: facts.uncertainFields.join(','),
             flags: facts.flags.join(','),
             ms: result.usage?.latencyMs,
-            costUsd: result.usage ? (result.usage.costMicros / 1e6).toFixed(4) : null,
+            costUsd: result.usage?.costMicros != null ? (result.usage.costMicros / 1e6).toFixed(4) : 'unknown',
             error: result.error,
           });
         }
@@ -61,7 +63,7 @@ export const extractionCommands: Record<string, Command> = {
         await renderer.close();
       }
       console.table(rows);
-      console.log(`Total model cost: $${(totalCost / 1e6).toFixed(4)} for ${rows.length} receipts (synthetic data).`);
+      console.log(`Total model cost: $${(totalCost / 1e6).toFixed(4)}${unknownCost ? ' (+ calls with unknown price)' : ''} for ${rows.length} receipts (synthetic data).`);
     },
   },
 };

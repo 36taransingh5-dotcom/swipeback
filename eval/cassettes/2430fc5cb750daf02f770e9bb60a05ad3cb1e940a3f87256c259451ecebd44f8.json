@@ -1,0 +1,176 @@
+{
+  "key": "2430fc5cb750daf02f770e9bb60a05ad3cb1e940a3f87256c259451ecebd44f8",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:23:44.434Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1640,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 763,
+      "output_tokens_details": {
+        "reasoning_tokens": 436
+      },
+      "total_tokens": 2403
+    },
+    "output": [
+      {
+        "id": "rs_0a639ff073a2758a016ad32279790487d2b7c37f5c24db51e6",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKAoWw2blI42DuvarEtWS4bFMTdt-YA5dK_UyOfh_ZzAnLuylMQzvc7_2_q7MdbJZ7HLP8z8IRqXiHCOI0Wxrv7deqYgHpYX4D3Os6Wa7vq5Fr4kNtMC8NoMJotw5qTuiwelD7TwnGxc4IYBJG7bFqIjKdmyjSB54ctv0dI9TTfWAR1cP5jmabWFmSWtRDREVUaN1DqEHgM2ssPZYrjDbdj1fmQJ3Otb9NeCKQJj0Qkkl120TF1t_BHGDdxdRYXL0ETW16GVmhaOEjfzTJfPJgD80rGkXWA0JrYrkbp4Pct-k51fSjOSvxitnSbNz1QWh4m33qIwfjYO_iH86g2JxLBgndCp352mlPdW3_PmzKQREBOM460j78XyAQcrhWcoMTPFpTyrIkWAxnNQ-MiLGPuAMvsHySi993unawUx9iKltV4nt02c2Fcj6jzZNAH3f2K0wSkGJWI9KRMAx43UB4jxq0ewlx83fkhEMAn9BK11WfLg5YohdEc1xD82B9iGsVK52vCmq4Sr9iYe9daUPtyYo9BIgM8V3uM4nFQ9ywMLwAZfwDwXW-ezbAR7UroCVxvYS4dwQcOnS3s-BLQELybpNAvuFi2qwQYK64t4F2MUSkggX0wm38vBFQ3yc9zWkG9jPzp_3S7SzN5Mv3sKIMjSeSlj1ol2jIr3-Ggt8T1xm6gLbEZANymyAOnSqLzKbcsB88oUkoW7oT3MWG0VM8ZIM6x-8NAWKTVujyTW1dfNeqbz7L_uEyIrtnpCHuJDCRWnYp0Ujs5Qx4_1x0MaJcNTHJJC7E-2YCtJrRh7Ly3Rwmwl-X9jIzFTW1UXqForNCnZWiWrUTBJLGI_s8BwClunxTjdAzLsKTkQe0QSwD-GpVPZD592jYuI3lhrzSm-w90-X4bNqAQMC_ibuT_-1TNJ2kd_efiWMFAfTENVrTbBsrnvxcQ6z4Bu2MJnOqxvafKkLKeKLgR62dIDvogq6Ll2SWtnpfnU7_ZpPwqNTUnUEpt67GWMB1lFbAfc19kgY-sWqJO2cDXv-7e4epwqxU0bH5wmrg5m0WbXlHPjFvbzCrd7MiHJf8U57IeN3xcAe5AvV4J-dSECXqrw0WVkSQWe8W-9S1rClHnPds7lToxpkmo1ViU5t7z4yKOHu0o2m0NPKY10gyhbFtHH3FQmExsLl2zSdCYfB2yE4Xgvn_AjZvxvXrtWjI-4zTNzgweTl7L9UXFFI2Kig3sWguimctpwc-Hhj0RFzhVN9YFJZZTRFgzoepuQBejkY-uHliPGgpm3vpKReP5mZxV7asgSvqrX8SPFyr8W2qRV4tvaErZ9BOzwtuQTHXMr68D24hAJ5iA8YZvq0W8AZxILSa4HJ3Kry0wwkm-ENMNYRqs4lIJWdEgooy52o9ut-Ge1fcBgYZLeuqGHGybFOBuev8gldZZXEZdAXh5TszBJf3Jaw1bIvPQIQB0oq8nVx2CbWemHmRyGFm9MFNNHlIyfJV9gr91VIe4fEUDBYK4rguC_TJ02tch1mX8Z4efDWrU88dUYts0BVuvMDv70iNQc-qsucLGA6NeQ9SoxGF5WT8E4nFT574yM0wadObUbqpvxQwpuk9AcX6PyfbkKgCgb_pVa5Z-BUSnV1UrdFF_St6yNkaxB-7yrl3_r_eD2eMhDcTJEDyRSR8nuWojD_JjZeVDuUOYyi899YvKBvrOgei1_ZXqLCXxz1JIzpzYyiBt54PEoS9Y5sFZcKiJu6w9h1QtLRboAXSTecjzZpff02VMk3aPrYu4etGiDNtuXo8-YqrAe_DRAAZAcY9fjTdYR5zi4oOFk5nTh9dWmY68RWD-s-y1O9crzjQBYd9VQ8ryBP2GbyQdAqO-PWNk-S_G4KCRDRqtsu9ZvoiOOtCZlxzZSINiM0tLLuiJc0Z0ZBpIiKS5KcA1BcF4Vsnl_zDWmRXtRNJ64U9NOPfUrYxXO2hmTRx8o5lobE5QOLTDTPKfcrJVwObXKZTG6O9ElkYKvQD9baEIKGu2ijw_dX1pkz1WwW4Fk_sJMeSjkTi2qVFwJoz9qodFYNNTiI_vZn8Kvvq-8Jm61nxot_-xcIPrcOEqB5kjRs9quN0wGJpaQtDkN5G2ZWUet8rgFUS5PILCIALaCca0Jk0UTUFPAdDW9ZPE7QKW-RB5J8BVO3keBfefgz1lFSykC0KzMCE-FEMoc7YhI4qfHuAQ6UasZ6U9VnvsHWYu6-98aQVQoiGApeggnC_MLMXVpYKlnCgyGdHJarKgtneOFbtY5smgzCGZP-wm-i5e9rR7RZUSKsOdZREHNb01qn22j1Kw0RAxEi6i1z1KyZy3TDS_igGi6vdOXKOR-NLfAGLsRWSAmLXdkfmW4bKV6B1QI_QWST2n6I5YI7XXHTCHiNYrCOe1AjJxqs_ANaJlmgJS6tTnMZYE1pwGp_4y7N1639T1DoCzx2ezowev6EGPABvsoC-O0yF9DBYnygVivlIxNZVhm7Ozq3LEjoQDvyjuSd2cj8ztLoCL-0UDscxqR3LNzF3nSuqrsbGXPw86gYeWi0YegbjJ-6HDsLmt5KZ4XRcrsHaxIZJ8McT3KCQREHMfAkkOxJQPA3JynKJZf9JQpzyl721xuAsE8iZFLxR8M0diu9s1mQSgzMu079bIcD_zjYwi0I5le1G4Qsct1DvPcwvz-F7rZjl50FEaXtw2M6iQryq1_YCSbGbIGuNciiuOfKaIeiaZnvN7_aYt4spAKNoBLyDqEL-tq0ldxtX0PFw6DbzHa8Nz7TjcfFi9CKxpXypFhy7XT7kdsmFvUpakgWX3hhjzzFEIW7OXg2RnfN9MFUZdWQpHT04CGclY-Ghhh8hbCpRuPSQ-3AV65-tE-43Z61AS2KToc7TgZv9BT2EfSvOuP3cKTkklLnc2fvbOP_V2TFoeVL8dwkY9_U263nGECDkYX7YWQYfBlFqtKis4rAByG-ma7BXdHoBnz_i45ij7eYlo8ieh4fCaTZqnSZF4dFPiqHEwsetITSTbv0GDmjDnGEnLPLFqpdRAcUYNBWZMeh8cdbPoBzdwYkUmRfYn_kpXjpmkIwTnRGvWDV3r3xbQf5fm7leNgOQ0r7QYRT0roSvUSYBPNz2CuNjsBj-G3iclNdWHk5R6nwo5rYEw6OtQqfPQ4h9DUCEVuf5_oyX-8pAlYIC8E1Bm0pQVQtlNlo1htxvpp6LNbd6AWjp0EGTQ_mPOmSSMS03WHEfu46V8hWXRyDS_vTbPkhU2zNrwX42I0XYVJu2Vduz1YEWFoZvJyC7VpdjJM8zs0xuWY7IkDWrJ9fxMGHScnYY-3TOa_C7S6kdIMzDeNY06dill2FMp_07bDHGd8I3ihQz4J4z3RwRaxfQ1khKS8LGyNy49m-R-n1v3_yE2NKZrHcnnRIBDVaO3A9d5YJ8k01S-RDs3B_yih9eWz4bz7_HLgD0u5YkA0OHNXkkJ4TUlDV_6q9PuovhgJR3y5GOXViOwbcqgqKDG_MVQjs_5AiSYtoHOJ_cLBEHqTLi7RB-MmLkJsmYbtk-5p16n2HX61lC2wIfJUz5UB7IduPdmkGJc7Qy36uVde36C7tkcEaiT8JxM4QD10KejqGmannEsuz4bGNdrmKNAnu-GWq6wAwUFRPiwum2mAh_lb5dwZZg7kaGP6Jsu8e0xPL1fite3hIFj_p98QKaa8cpTxMFyyE49IPAaIegkSD3rsAIz8npfos90TXS9K1cX9wvwmsPhE6Zn6YpT00yxiMwFz8RSd6eI735kO2XSs9wJMtUar90iyEqBnUUi2y_KM-VJp3H-dtDanMFTW7OV2KJAkWY6BvwweRrZBNbAWEa6ruJOt79CyS5G9yMHbSNoePNy1VERwQod1WBwWz5wAsxflNmY_J7mkGa8BoXgq0ntHu1VlXhbiqyarBiKs-k7uDPTSWw7wpCROnPQ-TLxp4me6pLsn9Mkt-IO87ql3-NYAHuj8slh884onOuV3_WodMheOXoxs1CQKP6xrQk9guKzL2JwmmwvityzeRCRCIJv4UnWNRBxHi7LJMHu_dqJoS5eeUFNqh_HHHETXnEMW-JEGxKM1LuVHUI4viLEe07AHkFTHB17JXMm8aypPjxDrm0SsDIrcaY2PnBiqpct311FpmKyUpUkmiHmTEYPn8EeF5cLMRENrdgsuQYZtrsb3J2PWldNcJfD6udLx0JewZkvS_1cUBxtV5E9Kp0ZQx84LR-ngvjTitLk9lILl2x-mxv3GP9fU-nSU7o4eFHScmYii3Mu2trHAvxQtEwuUHnJS0pqK_VSSHwwXhKrsrLmUVZbZViMbWFizVpG4e0OB_wHZY7CUnXtJMTEPyPWGj5ISX8ww58ErO-zQAI7mkF3GNc-knaQnXz7_h5X4I24uNvy0S1J0AdEu7zCVOt6mVTDRCUkiS_aTXyrBqngaurbAOU0rA4lteiG3jn6zKdoQCQOuWJzlCp8sxTgCBOWAnU0sLXBGU-b47KmgI19nw0ty5qREBnnYhEuULAArRWN1nan8VzFNPY2Bmnhl6k9hkb3z7s_XYzIdWuE66lfZiK20srQKCarMlnAhF5Swguifn0x7MN-JBfgdxpAQewYOLOnjUg-w83JFNyY0LkhLjVncK0VcMjX1Wf058Af0xyWGUbNswdSSccneYv3gD4PWFDIGKuncTLh5iLQvmTJEvkcP5okKKhd3wzOE53gy3hoeKRQoQGiS62XozW3MUhID92PYyfcOzCZGTIkLuSXN4ykm-aoO0KYSQcn1U0DKHo_CkUE36Fmt8ucBc6zj08lpQarasCHrxyIfPia7ZCv_yiqS2ViI0V_Iyij73RDTPL7nlxJIkcle_c6IKgSbebA5hCa9mPaKqF1l9m9W-C_EW5j386UZ6JDpa65PqhwuiQwwjiJoi5GEey6I9wW3yzizmqOO6rigSReTTRwizVYdln27qybb8fIRXtx8PoysZ0soZU7cZYstu2Som4kSd_rYgeqbgi6auOVXdajXHRNHUGXGfl6d-t104VZ6FEHj48l3WVPAJYQF8idH8pOhXrF33K66HyEj-3gGiIYN7nDCrPXaX_7Kq5_a_-w4Mm3CUHQuqlqZHkDVeo5Lm2vZU-EHI4U9yQrLkhCn1NZCdYr3UEino-wDq6voiDPo5jVdPQfMcQSVk_npO6_e2AcptQBzDr2N5XKJRiVil2XYeL0sIisFVv6Iv7JIHb4F7DDV4pb79_9P4OPdI4F9vQdTgekPSJaMdhvAn_-cBySS0OStLB8UbzYRUJ3OxDD4x-zYxloFLoEild0IFYehtGm-t6lDrOG4vzc-hhqaYXZoqLUxrTI8qrQWxEtPItSig2fsEbRFlfEZ8U-StUnCwwdDJ2UxNZMJtvzcx5iVcY9pAU7pNCrRQsgNNn9gyxcayPGiPPJ9mqgGamtlpaas0ijvcGF2QKVAJ4IMG55TkTs642Shd6gZSfW5MYZLAqTIq8dbDvvj7d8iZtsxEyKSgPfBvDXhH834H_9-Fy3LQ02Idd4S6UdJT2fwPzM64CjMkRH7LvOWXHq8oDQuOD0VOq6dPVJS-_MrFvzCCktYpteeL3pyZZlcmnPhc5lmdguzRyoaPkFt8R8hj86MW_Bgcq5boeVGd9YrZLQ_4TuS1eZMDIu7R8HcPaikl5ZVNV-dMLsucsVGP_t2UggE3qCDgmQEaFy_55uv4Erj-U1OiV8PW9oiqW9B0wAmCzLwNiPs5s83xNuaLGjqO1nFh7xTE0JQFt22VakrEKyQTDkP8Zcw6IDFo4fWaDvchhlJUUDo3haEd2nbmZlWIhHI_ePShyF5p1YfqDT11u7PeoV6pJcNXtf8Dk4Hm-OXbhJM-IRA49o7gDuEkMWY35GxYSMfQsQcC_u9vGnhBsJseLNSu_DZlPsUq_A93MXkcigtWFVsnHL5fQWU9L8bmOCab7CjNR2RNBfnRYQq89z6vupPQBwAYNTYc_hCo6BQbgqJu80McQgAf1HfLzVGS3-0i1AAsS1Ije3-t-7-_3j2eSQIqSC71Av_BN-Zuc0HQNflcnFplwVzf5jx4V-pt3L7vHP8Ja9_YiGAmee3mkObVsxJ9v_SkWjQKFOkPNq3nJExaBZoeiTQ375dSVozgbq4t6fgLqMtc0MF5xjZsv_ioKz3AOpBdJ9Sm75LoCc7Tk2SKRDh_RgnxtLx6RNsmBtTR6yz_4Wz7tDGJ39CYhWRBhg-Wwldd4R5nQPvlO8m7Eek1Zb-tPVow-L_AtMQ2CcJwr8E449KNdTfAW-4JHTjBcxHyos7NXxvua-4UKKxrS1fOUQv_iarCnAmmjGqLIZ41scdlQqmZgbZ6ZZD7OzFSm7I5vZXsv0qCsJbUktBLEJl5JHbZM2iP74c7IxAM5ydmtNMuf4fMkaLm0GPJ-zdLUJ79SWgBnd6_lm-qf70_ZUei-TI7UPYk0VfbGj5Sf3PRMp2vnK5hVKDLYr5hqNnFxHfosJhGYVA2FGgLp32z7CfkbiEkgc96Q0chK7ugrs5je-pHMu-l3tpmFyJtd6SK0VVbuctFQGVIR9ZA4WUScnW0mk4gXqfLlwJEBhiPtmgy0xirvtGBB8AAzkuN7usAtJLVg5lmGK6ySnO2_HlWVyAozuvZ1Wp3Sx0cgvpZwFDZs=",
+        "summary": []
+      },
+      {
+        "id": "msg_0a639ff073a2758a016ad3227e0f3487d2bcb0df08b7c72f1e",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Costa Coffee\\nHarlequin Centre\\nDate: 13/10/2026\\n------------------------------------------------\\nFlat white (M)                         £3.45\\nShortbread                             £0.90\\n------------------------------------------------\\nSYNTHETIC\\nTOTAL                                  £4.35\\nPaid: Cash\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Costa Coffee\",\"confidence\":0.99,\"quote\":\"Costa Coffee\"},\"total\":{\"amount\":\"4.35\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL                                  £4.35\"},\"subtotal\":{\"amount\":null,\"confidence\":0.99,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0.99,\"quote\":null},\"date\":{\"value\":\"2026-10-13\",\"confidence\":0.99,\"quote\":\"Date: 13/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0.99,\"quote\":null},\"receipt_number\":{\"value\":null,\"confidence\":0.99,\"quote\":null},\"card_last4\":{\"value\":null,\"confidence\":0.99,\"quote\":null},\"tender\":{\"value\":\"CASH\",\"confidence\":0.99,\"quote\":\"Paid: Cash\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.99},\"line_items\":[{\"description\":\"Flat white (M)\",\"amount\":\"3.45\"},{\"description\":\"Shortbread\",\"amount\":\"0.90\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Costa Coffee\nHarlequin Centre\nDate: 13/10/2026\n------------------------------------------------\nFlat white (M)                         £3.45\nShortbread                             £0.90\n------------------------------------------------\nSYNTHETIC\nTOTAL                                  £4.35\nPaid: Cash\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Costa Coffee",
+                "confidence": 0.99,
+                "quote": "Costa Coffee"
+              },
+              "total": {
+                "amount": "4.35",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL                                  £4.35"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0.99,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0.99,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-13",
+                "confidence": 0.99,
+                "quote": "Date: 13/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0.99,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": null,
+                "confidence": 0.99,
+                "quote": null
+              },
+              "card_last4": {
+                "value": null,
+                "confidence": 0.99,
+                "quote": null
+              },
+              "tender": {
+                "value": "CASH",
+                "confidence": 0.99,
+                "quote": "Paid: Cash"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "Flat white (M)",
+                  "amount": "3.45"
+                },
+                {
+                  "description": "Shortbread",
+                  "amount": "0.90"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Costa Coffee\nHarlequin Centre\nDate: 13/10/2026\n------------------------------------------------\nFlat white (M)                         £3.45\nShortbread                             £0.90\n------------------------------------------------\nSYNTHETIC\nTOTAL                                  £4.35\nPaid: Cash\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Costa Coffee",
+        "confidence": 0.99,
+        "quote": "Costa Coffee"
+      },
+      "total": {
+        "amount": "4.35",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL                                  £4.35"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0.99,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0.99,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-13",
+        "confidence": 0.99,
+        "quote": "Date: 13/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0.99,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": null,
+        "confidence": 0.99,
+        "quote": null
+      },
+      "card_last4": {
+        "value": null,
+        "confidence": 0.99,
+        "quote": null
+      },
+      "tender": {
+        "value": "CASH",
+        "confidence": 0.99,
+        "quote": "Paid: Cash"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "Flat white (M)",
+          "amount": "3.45"
+        },
+        {
+          "description": "Shortbread",
+          "amount": "0.90"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

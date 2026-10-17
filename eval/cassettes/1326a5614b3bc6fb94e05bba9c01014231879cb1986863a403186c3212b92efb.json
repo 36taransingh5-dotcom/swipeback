@@ -1,0 +1,158 @@
+{
+  "key": "1326a5614b3bc6fb94e05bba9c01014231879cb1986863a403186c3212b92efb",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:23:54.827Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1667,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 848,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 2515
+    },
+    "output": [
+      {
+        "id": "rs_0eb67816e926988a016ad322824ea487d2a30326d66acee244",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKKSpRHn4g2G6fcVUFQZG3m07Amo-h0eP21PEnqsMHL-nP4CvSBjO7zJrdS9wsHb_9TgBpEg223YTYL7eVaqJSSpabsx2Taal5NjsrVvr4YV7ynXmgcwaqY9yGdg8cInRdgTmzJTmJj3PX_KIVKRPzgO1OmXfT3Bb7Lxj7c_h6pA3-AYeaGtSDC-lUUmPJqDJ8kETJUZ86YkmzTe-0PeBvGtpe38zhKXTEUbg_DsbBSs_KIe718UjJxILTlf66d4SX9enIvPjBG4WHAHY332kwmnwzfMN-LO0P8VZnOAZVVGXVv9R0uyu9F3-4mGa09HjAnE064Ft7hB300WqgHwA2n61RapGUAOMHXFb5KMvt5ahJr-sgASDlltg-wMk3icOffJaj70Rm07dxLQ4CAcdNZVOel69MzfY4BEjE24ZsejfJ17LmOI6TIlwZUboEzjoscJmJeWoAHA5QsFm5_x1JkRyx5j7ZoElNNXTEKzuFR0SYIoh_IrdRSFZ2bon9I-f5d-TsnidLWPXN84oQ_o2gnkYNVpOWXUbvKdkazbVeuisF_VSUpQEMbTM0tsxNZ6PAUDBjqPf35xZscZy7oRDJlgN_eGOeiVBd3ICbJNanx5QsgP_ExNcTj-3XjXkLDjD5lFyZDsKSAaP1BIugYtO56BigdWtCxHbD3EN_XDJGlVf8zVTmqsaO3G8wEKFc_LQgYn8LaRQfusV9FTOOuVFSayG8RyRG5SHv_e6hvpefbrmL69pzmr61NexXYgs6szkMHsf81M_PtSy4JVXydN_EYpLQtYUCsgFtrWlg_4TdEU0dNAZZyInpeZN7hPoNA9GJAuK6X3qv2ftP9V4wU0O7Wsp0uZB36ly9J17qEUkneXfm4VfDZEba61nvMdtVz48srsSbHmG7VafCkxzRxC9okpZy--qeGqzHf4AyDxJibHxn9oGznEDRVlRSINQY1V3R75-gQF99Bv9y1ccx7xu6aT6VDQOFKteSyZlTzwgVsMU-aKKzCYMB-Q_sdQtq58wdOnw6PlcRrTP10YRHVlwseT5qa_-RnMlw__Urc-z2ECRbL28mEisFuAfyWNs41eX-IjDx4iTAqqpcnStKdnRIJH7TyOKieCEgkRs9ATwHcMlhNuAX2gJ46dLlkC2Jjagnq3owBCvwWoM0Yz2AZDp5bcr4-uzw1CMIK0LHl8AuoKnkM2CefXmDz8ya1xvbu4D4Jx47TNW0k-5R4gLzVeuoR_jF9kusgwJm3PqQzwPYJ5d7YL1cQ6LXt7H8OhsLVGmnN_prU22JCzZKem9ybYUmJLEGb_W9Ap_B8GlFLaoPWJ0eirdv1IU2ddl82b_DEOUOXrwyEECPt-y8VkkyCo6cuguBo4TW4oA4Ib-5tuUqCYcx_PVZPQKBkR3Kb95OLD4KJ4lUuhjh3CMQiPD-cMTpxoBHpyDGCuwgYt28sJ5Cj4pmxBYAOilQkGtWyFEfRzfAdT2scIQ5vMEbP5nE_4T-_2_-zW5m-VmIrR5dah9PpxxLiHnUxwYAE73uZZplR8hZSTIpHqPn9lLn3Z42eTXIo7IbUVasbNhfXS9Yc-0doIknJMppqvM5k68XS5vcrNvy7425ipJ4VMBbXskmmzDCivfre96Q0CitQluZEcworXNrdRQC9IBM_MkIkXVVmHx9dqgnShmwiQ7HrOEzfOaIUYxowN9AbqmexKVMvdspeVcQslEMg7yLkX7f8R3no3i0JHYDWjIkAeGOM-LAFWKfcnBDtRQWo2okVcXg12sSRWW3sSsmR3_vODoNoe67P3K653_rMJBVku9ueoqm7y1ImTDIxS84rPWjIT-Gp7inI9g9tEA0JVYuh5gU6uUxqfN76Q9ibXY13yRAkyrsl1QU5retzKOJXUjWa7saniitJWr7j4RtUH5l2F_b9l64OUhzg1jSmso7Dk2v4-EIBsmDCIcP6UKod44JqO8w7g9RVA3sFanKZFeI8jHoBMCM8C4-9FXE4x0wcBDI6b4sibS4PTWaFzSaVTK_8sZVWmpZul08OGQr3xryRR1nXwLk-Xl5jb83pxO8t1uG8RrhIMvV1SWjsbTYmgRDVRNjGHeEAowyAFHswF2JtOvG-9huP19oqOt81-A6QJp46EGxDCfFeptPV_zL5PPqRRbnkVNGrBapgmyySi2xXG3f72zhfDUehtkNfhztj-95vbla3rJrFunvIn4LTj8GhaGNzQhv4SEBpnXYmrndac0t7odeMtlvfD51I0WrCdLqtmZT8rmk-riwT8m_JaM0aoNVO-n38VSr-giC5alBqg-A0K9irDJvT0Z8bKKoeiU1mX3JdIcY0v43Fno7w9M-g4_tPiHHZJfCdkJxk2LLSnevRtOMxhIMeSQ4Rdd_KrPSZSFZyeesTk5LcvOO8KkpX7uYXOQK15e6L31it6j2TTi2J8lzEPNggN5t30XndfZRC9tF_1_YwMuhfkq7dPmhMiOk4ZwpGil3-iz3fm7uZN0BLQ6AT1ZBTtppJryYh8vdBBQyQp1kvohJv79sA0FR4pcRckjhVQPurX824fesUPil87etqiouMnsPoSh3aM99idVT2rRzU36ytVhya6cMGw71L4AYyJVR6rfuZfMkg6YDMI2JrVYUm9NnaBrzrwhXtzWPhl13ZeXydyWOp9SyQzkek3gyVp7nLdpDbfo1dWIrBVVBbtm1agyXS28CcCHIPAqRIcTr_wDHugXf6DhC3RMCjMud6RXo9rc3JbhpsLF7z1wzL8Jqnxeg852i8vxzrWFYBVMwNhaxfECQE0vogM7er0qPSWt86jWOuHmRbhVrJMkOfye_R6EBNl_h2xGM4DPzY55I6hEC_5l6Ln6dF3bkjjRRn3yMe3p42xZflfs0kh_pnl8tMTZoTeDgfM_DCOQr3rg0AtBkk0pQjSpifvysVYo_A1haWG_NMhjyeIcbOjq8Z0vevLG7FvUDkZgR2X8es08Am-XYC6vc9lgQ6ky12Rh1xP_uc3LkWtAGDo2GX7BM1vL4W2ThpFrqooWxvn04D1T0UAV9SU9x8gDkPJN5IipUUY-C7W00ERFRKBzUIoQtQuaXxG1Esj0ZgBPbtZiZ04ia-EfPgLwa_LF-zPnVmbCy-dSEKRUWH-D6Pr6jqBdEIsd6cq1ZDlyiZ2opmdGDyjBoJ-vCTrNgBurYDa_iLlPDJytiCgXUGu5hzeEghClbaJtCL3x8y9vCjlkyzYpyh1N9KsFFCChjCMGhY7bcs0yVG5gHSOUAC8j1WfMM3uLBbq-KyAuk00V_gjZjfAZMA1JaSAK3UqiKe1XaybdNDA-AxTaA865D5idXF0FtaVEA0qkEItKvs5GFS3gyeZ4cG6zxLLFMKUxonIIn4muNA3Dq3KlDKSrPOkwUsHgcQl8wYF9ZaH9eIQnGniiNgcILLmZTdlAs2GsCe9DAcyBp5REABQWwQ9LsWm8XEJWoue-__IVZuPhLjNBFhV1y3eCuho2X46lNXwY52Zb5IInwYikCDBy3e4laelaH_ylArkx0gnBKQE6yi7VGKgH7ln-Oo2XBGebWgkfCcP5bmvgELXfAU8oY81_9TAMUG1HFM8Q9wQhNl1A3LI6jm81DiLoZF_0xRgWHGBdtzX8_zR-ds-9iCrhawxkFCDHyTlwFzyi2pRRE9e-In5ahwFJ0SaRgUJmutErzb5ki54qK6RlrvDIPsqQrDz9xtWfmJnlCTyt0xDcwCUE0Y9aZibmtsiyHZNdl0TsmfRBcNvnl5JyiRhahFKTaBl6ALYL5QyGRCjEuXJvIQxWuxGxYHcMkp02jmPPR274gvJOCStnvjf8L8SZJRH60_qMAMaLkUkKrs-tiv0gT1rwhZPuvp-4CmwkDUFKg6e_HkhtJRia9ur84RXYQ_1mmVQlI-BUBRK1lN_l52M1VLnykxTq6oyQv_IT_escPg1LLVZxeVBc-wtqtV9X_Y-fiN8HaQH60r6LEEksGY9hOpqMQASxSpHl5axLYwZX3h97d-fGoi9ZhZ5hjBBqOFA2Qq8ID5X_MX2RNnM0ggrZpHY62f4gyW1AtcF0phIBKx5VM6uCncnbK4BhBhFip5pTr725rFUUEmdR3Zde2yHYVNPUZEdK-N_8Tc7JZP2oov9q0tfZyKHMO5GIkOQE1C9y77uHUaofeYJLPhMIBwtiv7PL9ZyjEdR5eLMoNeDnWapIvhWUziSjuVplN-AyzMDqZ3MsLdFrOITkEJbN5XO3nIn1BH7mF7SNro5Pa2zT_a1z_sEbF7puEhlHPCTIlflqfFk-35f8CRNYXePBkJUeq66Yyoil7-BBNISHUAnImuEWNd16JDiXBG_-93quiulzsrua_esEl3GU1xx3Dsyxv8F5s-iz2oU5mjq108ldy6gSytXr-IMQrP9ei-sM4or5V9qWWYqXlG9S1Diyo4ZKFZiouaOI76hRbO6Qg3RGE_qnFRW-1CXKjr86PExX1_XXPeEkseBFfGG3j_ngS4sQ2vfC7badKaIkCMJXtHzz2MswDbtFVWL10rbQGyYom99n9rUDohi7t-VCy22zo2g1DUEdg4adjnHz9ShPC7eWG6YH4-k1k5nBm6Yg1pJXS_BolBdt3bqJs6j8hHoleKGHHPQJr2XOoPidrOgBLMcd5n4-YyXiBtc6gFTFp5Mni49LTJIVUJfmecto-8MNsFvul4UcHLgcaC6YA1r9NgDeGnGzQW6i_8OAVSnAAFz-AwBowNw62q2Wuge6LHE819qXkItwxxgKMYrc3Gu1_WDe1wcT9YBPOpbZYo66XdclMB5EKFjxS-OAQBI0MS9oV5sIZDEBPJb8SYPrlnypx1SYwQdzUbs4p9CES5n_4CD763oWY3UOEfLRMVZoJwYO-sbAaNuTMLv38_ZOU0r62QbWkD-SAviPmH3cN28YdgEGT8Cb2bzW9Ao0ppn6VfgXG_UkZV0cklEOAcYdg77JTZaNZxFpbxWBQvCYG-7VwQ45yst7Of5Cx_sY06td84z4X9aiKHmAYsnKgB-tfdbCxoVSlv9ciOM4sjHqpb_ZgmjaJ8C45L4_VwXjTCEZJqPq0SAulj3OIVAhJZ_GKKxcLoVFdgWyesa31fWfQwJiUgbuLu974ABr23aIcoXGsbVvElz_9lakxDT7SkBNrhwUmQpCiOp5mjHuhLz_kBYUIyiZso9EijT0wKaG_BPF6Dxx4y45LCUMYaMDPnGrYz0YhqndKiZiL-PFhKk6zmfxzA3wg-4vRUEFJB77hd60vYmBEasgiBtJERksrx_ybz0oFfkQisqrGL0fwnoMFEOjhViFZnF6fpe38bACADHokY7drskCtTUCd-31_IQNlmnOP2QK05_yYYzYxVhQKtn6JFi2gcTCHMLmxfKmLI9RqcAmS27l_ZKXtGFpDVXA8dJDb4ZrhrpAL45CYAc_n2e-10E-jQ9Du5FTFNdLnbeRY5oCneH4k1ROcGP9nOB-NSO0TjISqM7xCaXJhVzT_rx6hpeCAf8dONR-nMvAMEwFb9wEheCdaZ5I8v9H_9kd2QblLGdj1-m-a4zB002vC3o6El2S4YCEW5_MM_p22vV6wpgl5gOWRoMpu0FfmFReEYuhqsOt2BFS2PY2HJzzWLMRA2t9DcNwNP-wq9KoAopwE1efz1dKEKqJld1jzmg7EDdBZIoQL2Aho4Uh7XHvwVOdNkuCpB4bCvAw8SO-7wNF3zL5R9LdgwemcG0-N-KU4PPOISFHnfeiT5CSRpQVO6n__G3tqceCXzJU6g8YADDPxyZI3qwP73eojRlcWG0aAP566VRBYhszWLZVAgmXBEd74r65RGz0PxdUFmoZNGDfDw1WM5e8pcvT5Xuh-dIYfVvUxtJiso2Lp-fTEMe0wrsOFTB7Dnde5kNFt_9NPfksXXtfD2rrIdqE5LlboM16mI3QF1bPnBbsqdI4i-Xj3ItgrXCW8azXocAtl9hF9mkwQtKeXoEjEkao4ZBi_jVWA0dWNrbj_XS5raLxSz5Snlm5WmrAi74e5Sf_ZLaEtYi1xY-fnc-huhVMPi1z661pbMGHdGrRiQUwYV-eggZT5XthwunJ8l_61FFixWKTlO17wfo3_Z-Pj4xeBisVSqplWyterjSswcCFxylXc1PL6FSiuedVn5gehpS-4oXzqaYpxzSPRlnfrBXjkGRIiDbl_0L3pUy5NPkicgYKOsC2lHPaOfQnCvY6bnJnufuqP5XKUG2aQ4pYSBzKGjSCGLVN3vF9mhy-yq7r8CtBLJCWhrMXx0nYN9-HWOWr6h-xG_DlKVdaAwV7cNp9kZJaZmmODvknJJ-VKAPEsGAXjMd4y_vRTENpdKAAv-5zfZJPzdmhBZ2TZcKELEJO_MzFY__t-jFZg9ND0Ai-kyZ0Q8mRhH1PN_5zVbUyXGk4DiuKIdJAI37wSRvwxEzJSDezhvCj5oaC_9QoziA8coRayajcpvj_sB5WQA4hW7ZgpxLgdvK1lIgGYIQ-ajLZkspPf-pJJu8erp5ChuLy02hrag3BRvoQkDC9p-UgTZTG6FClFhRSI2igbS3niw2BnOdjO-xMcT1g2R-jJJFdenXmWZXppBzrtM8wKmBbj8MQNyVZH-z9hbOcu0hsYFumfe9KPwNw_enWdyaka9Ep161QXa1YP2lMIC4q95MMfCONjGVu9E3j2eytkNfSY3FNswLHmWWGL3aJ9FhIB9g8yYBufcdF9QrDwOeDJh5jnf0BdAdhcuIbHeAykuNk9XsrkF4SmKQEkkSvVaKtev7Syuvc9PKzuRt1wKcvnVaNiXgH1vhChKyIowH3Bij-jg-JBtvBvrPf6vSRTtlKx4IRUDqE8TD0uX36d9JQENka2OcraU9RUNVuPYvlYHtkODhYjabMqIgTh8Cx92RHhkrcmw6x9Iwt8ssfzaHANfa1Q42FDIp37Rc1dkftoMHja_-c8VnEGX3nf2HVk5fQNiRlUva6Uw4Baj8Mzlbxlm4D56d-G1vRh4HgnpddSCF6Al3q6hwYvAnietuIfahZQYSQiY-OIEZLuEnGgeV3zi86-AEMNE9g58RZhzcRCfDdcMRtfvQgPGB3Y1qPJwCbY00t9t5CV_7Rq1zrLE4HbhGKLumxaAN7bfGDYGyL2oG7AGrHJLz1ygcTVOFBn41dcF1251tYg73oUpA7u986LEnGBevEO5sbGY7QR2mBO1ro4vYodc2AcGqL3jI2wMcPLWeZRUEc2PbqetOVR9UN4vZwVLkBzUE3QBTp78SN1j8kYJAglisV2sxoTdfT9XSqu-hWb_IHz4EGUv5d-pM0hd8zh886Sf5HE0OYOasJL53g0Uj1wqAwRbShtNRfLn0h1FwSo_o3jeXEoowBpu526BMiwREFSQ9Mt95IpVPbu3kHE5wNDhTnqrIKIkoWSsrD0M18JjIdZnwah4U0HV_k-3JA4jeoSE9szwdhhTA2TZY9KYK2gv6ZrCICsfDHM0_7ULiBOca6zkOCAwZMHvNaLv_7tqhD81s5cBTSNPuwmsdVS7Rd43SBV1alo2azSziPEEWQ==",
+        "summary": []
+      },
+      {
+        "id": "msg_0eb67816e926988a016ad32288657c87d2afd65d470e1a2d3e",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"SYNTHETIC\\nADDISON LEE\\nAccount journey\\nCUSTOMER COPY\\nSALE\\nVISA CONTACTLESS\\n************9911\\nDATE 16-10-26                       19:47\\nREF AL7731942\\nAUTH CODE 099112\\nSYNTHETIC\\nAMOUNT                    GBP 32.60\\nVERIFIED BY DEVICE\\nPLEASE RETAIN THIS RECEIPT\\nSYNTHETIC DEMO SLIP\",\"merchant\":{\"value\":\"ADDISON LEE\",\"confidence\":0.99,\"quote\":\"ADDISON LEE\"},\"total\":{\"amount\":\"32.60\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"AMOUNT                    GBP 32.60\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-16\",\"confidence\":0.99,\"quote\":\"DATE 16-10-26\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"AL7731942\",\"confidence\":0.99,\"quote\":\"REF AL7731942\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"************9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"VISA CONTACTLESS\"},\"category\":{\"value\":\"TRAVEL\",\"confidence\":0.9},\"line_items\":[],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "SYNTHETIC\nADDISON LEE\nAccount journey\nCUSTOMER COPY\nSALE\nVISA CONTACTLESS\n************9911\nDATE 16-10-26                       19:47\nREF AL7731942\nAUTH CODE 099112\nSYNTHETIC\nAMOUNT                    GBP 32.60\nVERIFIED BY DEVICE\nPLEASE RETAIN THIS RECEIPT\nSYNTHETIC DEMO SLIP",
+              "merchant": {
+                "value": "ADDISON LEE",
+                "confidence": 0.99,
+                "quote": "ADDISON LEE"
+              },
+              "total": {
+                "amount": "32.60",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "AMOUNT                    GBP 32.60"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-16",
+                "confidence": 0.99,
+                "quote": "DATE 16-10-26"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "AL7731942",
+                "confidence": 0.99,
+                "quote": "REF AL7731942"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "************9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "VISA CONTACTLESS"
+              },
+              "category": {
+                "value": "TRAVEL",
+                "confidence": 0.9
+              },
+              "line_items": [],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "SYNTHETIC\nADDISON LEE\nAccount journey\nCUSTOMER COPY\nSALE\nVISA CONTACTLESS\n************9911\nDATE 16-10-26                       19:47\nREF AL7731942\nAUTH CODE 099112\nSYNTHETIC\nAMOUNT                    GBP 32.60\nVERIFIED BY DEVICE\nPLEASE RETAIN THIS RECEIPT\nSYNTHETIC DEMO SLIP",
+      "merchant": {
+        "value": "ADDISON LEE",
+        "confidence": 0.99,
+        "quote": "ADDISON LEE"
+      },
+      "total": {
+        "amount": "32.60",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "AMOUNT                    GBP 32.60"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-16",
+        "confidence": 0.99,
+        "quote": "DATE 16-10-26"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "AL7731942",
+        "confidence": 0.99,
+        "quote": "REF AL7731942"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "************9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "VISA CONTACTLESS"
+      },
+      "category": {
+        "value": "TRAVEL",
+        "confidence": 0.9
+      },
+      "line_items": [],
+      "instructions_detected": false
+    }
+  }
+}

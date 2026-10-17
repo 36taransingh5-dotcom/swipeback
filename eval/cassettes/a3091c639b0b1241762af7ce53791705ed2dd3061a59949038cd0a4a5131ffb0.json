@@ -1,0 +1,176 @@
+{
+  "key": "a3091c639b0b1241762af7ce53791705ed2dd3061a59949038cd0a4a5131ffb0",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:57.379Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 2212,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1327,
+      "output_tokens_details": {
+        "reasoning_tokens": 892
+      },
+      "total_tokens": 3539
+    },
+    "output": [
+      {
+        "id": "rs_00150bdec46bf21d016ad322c4991487d2bb27c8aabbfcf7a5",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yLJMJm1zfS-JvK8tcQgX6KYNC-KmzOOqy0V9j4ZCMh4D_YCTWXhWAiGKvTLv8UwHWzzgGYETed3LYanQULSRMUAVmEmEX6Npp5Y2aeGu3mg3kR-6GyYuk2_22C-1GjEGyQ1YXQDRh9UCNHYDU4VL622n0gsa4fyt_BTSCc4zOLeQxleYX2ishynQ9Ad8tuX20FLGqM8uV1epYG6YJSwfVcA4CBIf02gRdV1zPW1xYWKKuganB9k1gsH-jmThvbmILe2YAVxnuKaYNZdHOw8ZAvKa3lefjOhaKflKnhBdGTAe3E1ItxIr4p1zIZT7zTBdKFHkWb9G-1j7YHONyW4JO24VDme1ruQQewnmmLb804qAHma2n1Ijc1pwYHys8iO3XPE9ZUE3Yw9GpsulR9bouOwIFWWbAlpDPjhXisLvPAZKyXZ__WdVdYME4xYa6ikRMxw8GA9FwFrMCtvTPNP_NqfLAG-ZcWST78lPV9r2-3r3UO2nvCYFfPEvyNrsE0msjnSOk75tj2S1AkLbJ_ER7XfsV7Vp5D7leVxTLK_z1g7ZRgweWmKGLpOFr9l5tNTBDmtIjrETg9UFcB1qg2cIdxpWGR7EpgJgf41kZq2fbhdu0b76xVlNLVz3A-8mC-QSRlbpgT97JFry3vjDkpA7W5CbKH-BVRyB3ZTh_J-wrUs7QmrLRi1xv3ba-Q542Y-TSDPZraKUi4MSAPXWXsDS0aFYrYy1VK-4VzP-at7h4FZNMWbsnuymSv6_Py6RGXrALk7QHfqFm7Uk3v_cc2LM_Z3UzT0R7C361GqX7Iz_BRnqHGMI-jrLAJItWEJWmsifIaGjiWkI6oxzLM-XMrgr_-wJxT4G3t_YVl19xhGR_CjhUinjKvYoPJ_xzk6CBAnW_XuVbqbmK9GN2h99qsR0N47QIYkboupI7mq5RUNnnUEt74yt679gljmu0pDtix65u5s7-T4s_vfJEQB2QF7azd_3TYeOUZB1_TIsHeukxrohofv1Bv7HP-m1j6NUhnrUTeWcSFtoG1o_ilv0n1nUzIrneQXU55QKpG-9LNm-f07tDx9LJw1Dj9zWWp5wY8nxaTrpvbY_t7cwfeYNkH6gAG7B4TwD7Be3eyv8ekF-ZPuvZDtp2yhENjoYOyYqzorZMrIQzg14cCI5ffbrOccRUuNBw4uFUxMF5_qVEbN0qwxa8GWqnvpRKOfc-EDR_NNv3dZbe7ynSgI7N4T1nFsXWGoJvQtMnB0CGygv5iGVlsXeYyzOJhsKRjDK5SeRP9jnLjiCWIxSeKSK1fAxdflmt8ftkXXjAydy5_kUgkREifrdeny89uN93nSN3irkRUGFwsNnsOBeEB-T6p5A93zmwwwbaGwqF3k84DnZPYVyC4_OLE4sFL5JObjVPxjHgM-NYhHRmqa5PsuvrOEyRLBahc3N0Hesl1a4LWLQ0mbzjZaf1B8Ywt3cSncXcRj-x2ZF7Ix56owkzY94aAx2nRUScEozFGAzdONIcnlK5GRMNRKLjiQslByxGpEIdJKW9uLDsXrqDFPRegblmOuN2vW2dp1TEFdlRzISJDr9fHJl8UFu5zZ514KRPAknKNzhBl0quvpkByUI9yQ4sr3SUKofXHtLvfkwriNpdJ6pMrkYrVb-TIHCx5QYlCZlUY9rvHMAJ9JPpmSSmhKjMvM4JJAxD80O6lX0oJgfhLWTPe-d-i1J1D6Z7krunumpRAaPUYbessFiUIWENBLNd0MlELvjsC4ysHPgYw05TUv5O5I_QrBeokD-9qFzUn9h99due8lpLJ22yg4DS2fVNq_9dI05llxupaxNiPG_2lmxCAPFyUpBMLCsn63e3pPYix08jcPgn4J2Efk51KRVlfn9m9T3_cypVJsuoq2WMlxiCrgGkG2wbJNAX0Fa669jIT_kWALIHwpBauU0DstiVJbb5uxNBV8fK6rvwbVi2ZCY9wPL2DaTZICeUe0C8QkFcuTq5rn_jcZzxJPqM68aJfQaary1r-h5zajlWsAwh14ktvf3eLT1Dv98Lte1QbfBKqKuuANKv3kSvoIAViJkeB3f9AOkgCPrgrSt_M1ddDM9HgiZhtfz-misd_cJ9sxnI5Rj8qGZ_U-Hfm05QtK3XagJJhpBKoHLY6mmR0scopCyjZJJTOk4Bs2jJgIZPWtwZ-amJI3qfdgfXB--LfBbRTaWta6lezKcsjEfmt5wos8TtvFaXAkW8eWLy75m2KXJbJjS_rpcccOuLJPh0sOmfVQCgYpzhjM0oxeQeytKJefoftNqmj9ZdqSIMRvg_COO_p_VxAPL7hm5Yv4evwI05SRc0hgdXi9AE6vV7cwKSkmveKahDG8uZmPeO-3G1ukzTUQtLWfDEFUrG6YIe0uVVn-mDYLQP0Qx3CF2GiLOjtCA0mmDaKXlnGWegaR1tGyCfLxadHuQv-ON9fpT1-a2U8Wve1Mvh2104kd5jIU-fUvR0fBbIkmQlXoi-MYHNqiz2Jz_y_YuBD51ZWhcKj0X5TGW8_PLLgOpRQGwKCtmDQBC0nnJ3GZdD35POl9K_YDsep2OKzyS4fpqZiFEQOI8n5QzOJoHgXpgGDblS9B480WU34Awj1iBR6sAXGb_4AmRLrSt1f85dD9B2Zdg3bki0N8cg3XXErI6FXDZzfldcH0McsG8NUASU7p_NvP3r8ni6zI3nyWhpJwxKmumqT9-Epd_1UUKwHxhIm5xCJ15xhfRLbSPXI2PZ5DVSbb81V7JFbJP4k325DhCntZVQTJ6Moy5stxcrZ-zfmYh7kKoQojEvFILrqdwTibU2NC7uanxzJp6jz9aUFU4231oXLWH-ZuiqiVo9SfnHAalya9SKcn1raZTZRL-zYCQzZOsxGjmU8fu6gxWz28jjSR3dsQ2Xf3ASOU3kONUpflBVWtXCoLKTzGYs7O5_gW8Yby1kVvz_WDRk2boLBAdDcGrgT1itjW9ZVDIm4uv9bKyoK1ifCOwgUqTxgwsd1YMQIQSHeArK1AssBCprshc4BLUkPwxaMclFExLp8EseS92nHedjYPGC9z6CJ57hSosyGIltM5bcIjBZ2zVZS7e8hAGK0WNAWdUxayC95HpYe8Slko649ZYGFA60ieNJotaFCXOBKjPbBt1Ma_nRqme-fZvrQZEwzyEsOHVXzG089HbI8sgoLaYdq_YsyhOQ-ZHH_quIcyZSnAdiY1YA7zzR0AYvzFLPgZsynjkK7k2_3g-88t8NyyuIC0lQgV6Xx3E3-zkRN3OXd7NnxfzywU-jVOtC68vZoQ2Tiw7z8RsmfQvW36JIMqpehpnnnV0DgtwVzsbRgOKDqsxbYw_Xq9PfUBNWYT4wL1Mm9CJSdgrkPi6MyQQGoKqvHOKVVcIQdIY66RUgG8G76fjCH-JT7R0HZiJDF6I78D-MYCQli1n7nIw4juilGkBQa0I20mUW5Dp9OIYshIIt42iTESD-uyx35E5Xm0EhuN3x_11IjvwvBx062Vt2f_BwdG_Whcp6cm80soPPuPNxdP0xXc2Mrtsw8lmHoyW7hUobpNVojBRismwEAwQ82AwP0TiMS5_1f37fNwp_FJ6mvlwsxB7t1s6o-AO06rIDRxAPwqn_NFKQLwmpntb0Uuw2PQZuyvoLSUfdtCp7_zktWQ4pkJn8aN_B22kr8BXC0KoFaaB3Ko_YTm9VZn1zPEDOcQ-L3Cz78zCDlG1dqqRDS02x4EdoYpucR7VMqXzsWu_Hjicb3om3ZZxp-swMC7YbNDYh_sgXdocDdAw6_VBVNbyjAhI-qxR-ZZ7VqNPIjl7sONJFcQQFLLemc9ZejGe_ai4QAPCDv9N_JV5zx5YNbKpBk2MfeVjvd7X0q-7FUgse79WQZYBayA4p8opRNIYLzBcVcFYbChlpLEJDBKooo6gAgZSjDw01aWKzhqx6zoAehlzfCofYxH3C9wqEzmZ5uAF2LCu40dsCDx8fyzg9ewSkA3m46yrP1lOppQA5ieqB4C_c0lzTO4tFewAoQ2cvbzmDSPWPESHX8u3wuwRDrk6Tli6bWr0tPl6eMVEVUMMOj17hxpPDSr1Hi3JAXWMWThVKe1u4CEhJHjyzlo2cllzAXTpUj1DBBq3DWBR8Iyf7V3YNGKCsnU28BcqVMvbivgvVSZ6K3pU9T7HEmRYsSaCk3z367hF9nIWJBv45RvN1_F47_kJtkghzTkNwCvIvmtcmKwP3LBrPEuKmokwdui_bEjHGU9UyDShYHIVW-v8EY-Jx2yDrlJYJS5f_nCxpU6S9gmovvZ6ergM7Qw4VXFnS2BxUL2erAT5JTt3a28NcJJ81VKTiIM6ewJhV8SQ86aLwSKdQd7kNMssG44gcE5lgqGEot3Grlmitp7RetuFVqVJx-4QFdcSmMbXQQW2pZqLaYKqnA0AXRE9jOe-VTWBJhfcw8LNUpB_gf_Nxu3XWIE0cxklc1kwejT_K6ibgObrTPL7h9pOUelm_abgtl2eGQOPMpNDG8LCkc7A7OqHMSocqKfkvxasnS6QvQH9lDdnQ3mpoNWVseW41ctxQXtgkl76phPmGAk_sirCQl_quCBm3sHcTHMjyCzWfUQyscMcl43b62Ja_TexEepsFpVrogM1kYCBjWujrGBS3cGhK56Oy0kM3q4OIUNZE5bscrME_QwX2uhcw4TCFURLggNVn3EiyS1Qf9XrH1Dt_-3kDO5tzYMboRt4-fXnMHgISyvJ_uGIzk48L9BVbUqDT_PrFdmBzWeqFjBAmECOkGzCN-M_uxq8CBIvp5whR6ikIRA5lIVuddSgu7f7Rv7cLjcUb12uUDHTdlGzU0eCsVUIVn7KlsfhctHb_SouuEH8Rp7aRdZGHQOvALpqayjlgG4oKyAf6n_fwZmTJgnOamxvK9rIicyM1YFb2l77iiPEApxEoAiIlvO6sYUBlw4r52rhza4XjeWRFzl0GaOymG8UQQO9YnZMU8sOyjaXIAWRToTAlcZ_Il1cvvUwcIyxc41rI74RnHxuxI6dutUkOH8VqRWmIBGl3ff9-7oCm5yFk4PAYZ3pZERXzpHW6r9dn7m_NLJl1pHXnmHtJYkKwJL67LteBCfsP7sBPSzk1qgHrbYcqBbJctWztjXNJ04N1uWo0qzz1By7Hj-RZsdICWWEky8nKZltuZDG1W0jl7QzG7Zqi0RFU0vIpeG6MSJa66colRrXvAFqGyQ2TRya5nlZKOdsSfgQ4xWKC7UHtMZj4SGt9OauQKfHTFIWijPn3eFRhcuqRPuVZ30lcz31HXKy69oT4HiQEmY0t6QEpCbYJLksMvM1h9xecfaGyWmx7e_p9LF_XzThWlEQwN3GVrZ8DVqVH3DZ19Qe-bJZoqGRrfcSk_9eL57HKJWppL2doLlRH6t2t5q5douc6o3AVJg3xLukrs07FG-QQTlBIqsMKhz8XqqluKPpBmc5hy69UY95sDXyl5bnzkge-UTGdb6MdGMtSoWaEYpFPHWaLKLcuhFw14seu1nV6Eth6P7CCzeVaNqP2wJHqVJtoGiGMZLmW_q3Oxy3tS5Sr7srGFZxR2tywTe0AidiOEyirt5gJbweMWpIz_xH2T4GMDsogUUb9lmPi4FeMaBVgIy76JUeJ7_YXzcuJ6ma5fX8HELHYicB3YdDbOEmN7j6D0ddFKQDkVTjq4Tzv_P75iNUbzKjlmjJbqz3GlTyqLxfCo17fhqYE0ODBmMWgM03_JYpEUWxu0t_T3UK-lAlq0otYL0pKSHvD115GTJbYFquT4EB2Unw7O1agoAWdAQnepBdQF6fmJEK7PTyJONk44PIOfiW2Tqkd5oO5W9AT8LR5O3oi40eihF70U_drqxQVkCj2KXuGpRZX2S5Sb1nbJGU_OBY1R6XKT2mTO8BVgS-T7hCk7-nqLoaC229ZbSmm_d1pY61JuLVqK7gYJiHQYZqerkLAAtIpSKtyPwXlI-EGpkSh72RuBHBbBNMcD4HtjquEIbcBv_SrOCii8sxiTtIQBv7aQUlpJlXU90HeTKz5rUf99KEWSi5NemvZCoZn-qf3fdzyr1Z4DWWks5Rlovc4LizCcmkZ0iE1C_WRgzMspF4jvexznfANbATWAnWl0oY_Znfz8EhkTjEDj-HQUJTIcvs3CwVFrG7gmTDZRhIpEsiy03QNo5o9Zh-2j5tPYu-0WH3AKjXKT7Bp8JEy7qcvEXtnm8tOHQWWfGAPJT5nPvjt-yizkoNqTY2mHSaIccHjARK93Dn43-D7-X-A2sq3ogrExLKsc-pdXjFcil8siwinhVzSAze8U_XbieOwANAS7NBu_DNQ-pAhguNbA9X8yo4bUaHJeoPgvZ6_6hbMtMXV7oG_YHL7IqKXBCuN8MQXOm5AUa6-ugsm5w42d017OdVPaZVDBGk3cgB9GEjR8ZzNNrPLiJDZB8IWxynWQqlvqnUZ7lT2134OtAebG8UEFK4Ez7tri5eucxpuU4tWTPFuJ5myC7O_83iA0GYhPawXzjxSv0xxa45Q2mwnv9-WfT-rkCs-NybQU3gZWC8lwjb8Rr2edJvG8T5zTLrLzjNgeiUGr0iKdmz_E44K0Z79gRxzEl3SRaaIh1ClJ1P9HTUxY1bgtMJX6tB6ykKOfvqdKYIoSPrQO430gbAJ54Z5nOdmbnE41DG-Sk8xRKECtRcR_U0Qikb1qCItc1WZ76bfOt26W1UEN6CUOCmIgte90G8prVeAJ1sh2DpSw7EEoVFsxFkhK4BR_QYQWjqZqZq1rB_-026qB1-ZgBzeKFAsM17ir_Q35Ub_t0lDPDlnFCl40X-rUkh-ACatUHYOaSoGod07BCFy7NgssSqpGlBygevWlHu-PJ_NGD8EXHMw5o5DzPaLG7ohGbCkZgrlGmqJZMOpcB72XpC9mcMrBxwf5g7Yf8ljHlyocvJypPxsHjD1Bvudy0mjDRQYTNpl8AHCgDJVZij4WJkxvtq4gmAF5XNPq5bzmdv0i9geqllzQNm0kV_NjVoYh60WMk96DPCt3ITjAdESQQqcS3Xu-pip-rMP1NSkiAyJK8Qicr4NUhyRWg_e2GgJjJ1l9FX1vNXnYdiRTBH3HFAQTAjeDZZXcxLyIvn4GX-7DFHDok2sT3sUBgA9MgGVaHSPN4UhgGvd2EMrXkivyvModEjlReqP4cuV1iihjNVFSrlDx3XLV_OaKMCuiDIoQ7ZDhAFFNIhA5TA9NQSjwAPqp6dIvgfWBUcOn61SoPV_N1mXxnYcbiuaCe-eShENjcqWNZHd4T0ibiag1uE1clelTjafIFVW4wAUG5iJMKW2Hg_tllbOH-BcdiQTFqhlptpQY7LJqI6MnEiaHLlPNxiHUL7G_XQQJg53woszi14UJ8RhK-6mya46GRCdyrxM3k-Rqo1IuoGSCcchb3ZC9IQ3ZlBHFKKOGhxMxIKQCzbJAUnSE18KnizdHK6MWYCzzpMl2__YHCHYrwPfToadqVVYa_Ukc7gyPdXGUr3l8H3kBnOyYLCAM8L29hwqkbGt7FYv275_ZC01H9mNW1CdAc2Yicj1K7KJpddBKAl27HNAAvAP3RdUorVeTKQFSaBeBxPuYCfRXFDj486fj4vn1jKjKsbNyX6kqM1uBFyW7COh9Hfog5TMBpClIIKbn-U3q0AlJrmnSVzK5Sz6iF6bWGeh5l_AouCOd_tTXajV-9gFKFjBe8SiXmg3-hj_AQhf9Kj8aJPeW2kxUlOhC7gPnFZOqIn1-WhVvJ3mDKMYXCJMPb6F_TnFm5XOhGBBzgwNFKE5nJQqHEk4VuLNo2O8CK4_zEDsL6wh2lrhMfbMwM-PnyNAQQCZ-2-_lcjeKUWqpm7LGYpd1nOYFle9NTZDXYxRkuq7Rn4g0BP7zr0GcK4UhKp6WlLHc4AWqFHrAy3rU6DVF6DRWzZfGUPP2_wm1oZAMRR2mA5yk7lHQr1XulPAEaUmvMOhCaEtStCSzFaOr8dHcEuy9AcwA3ZEXwouktmNb0VuB95uiPeU1fZfOSoF2FRb2tfC5149e00Gg0jHxXcnW7h_0Zy8qddl_uuGDbMzi43JwVU5bMjX-5nv1hd1_IFKAZyBF1hOENT0U9WXIe7Rt6imi-Oyrmsj_oBy2Uue4AJJ1xOoRnSwTB8AeZqAva5EOfa7YSCPaEpfwm6THxK-q9PgwmHBW949n7N6pXR46_2W_U9clahWBhbd2l0mv3aJ82kSg8GH8EPZhL6AvlMN0KLMCJS-A2WVrNlC18zcIoJw2SnD3l4T0_AuLOe3Dff3xu7hRd0Wt3htR15pHefvz9k-lydDCDAlFfMfnaYN14gMItAw3OdEC9AHcl-koFnrnZhHxDxcjDwRpfEdOGs7l9MqEIuM_XMDN1fTqiB9tYgymX1SuHhl0jERyad95rEMDTd0VZe_neXQy7iwROiQax5aGil7KiaFP27nZUJ0d-HhP9CHlUIafeb4MAlt47sv1PTMQhg_0XKSGfVfCbrMjb0TKT3Fcu3G1hSGvykNIe-rx2EvGZEqAW6dDXBEI97zaFOKRVeBGUCKl3CISfxHLtxLOh0CCPVS7lSQ0P3VGE6QZ4Zt26UK9poswakfgHLaEHidgW6AbQgDFNonPVUrQ2jwyu8Sd5-zwCGcxUkOGYmiD1UVLIe_NAxEY4f4rLyYzzYnsQNoQQmXF52YPi66mV76FAtgDHZZuSWIUR5pL8cJwJSaJ8LUfOYOuqIzI7cWRBSr4rQp8yOqfJAM_8S1m8JS4s0oJHEzRnDvf6vzhDd50FRTYHkxQ2oQvQitdw2uC3EI3tmoRlLVG06HAnuW9-k1K-7p8aiRv_23SUHnaXJTsA4usiV_pd6QsPIFRe-eu0eqPUavy1Wu_eECd78x0Y0dDWeHHPlvRNtQgV0D39M8zdw85lZ0cBYybwu2tQG7aQMdNb4YBvMQNKevWZitNVDRDhthK3t1G5Kev3xVL2b46Hx8tbIDpreNCW9IVgI9c2SEnyD23oIjnSJdDsgdvbM5uihfsaMDh9vpOQrIL9M4g5Vfe9NWnYROFziDbPGlzn0IBp_HM43TF6ZnehmJ2uKNkt3KSbfG4yKAfAKCdqufuBcxbWzEyTxhffDHnOHVvDIMPsoKJe1bI44rIIWZYj2t0PlW3Cy2CmjIIBGgwhR6Ve72hVrvpk816MaQaeonemNWQBfHXTJ3HOpf3U_t7kJZvnToXuGMl9ADOpMRopnk-RaikG0pzpWNkmoIZuxGy3ksBBdv87RVIJL5p3BzslzWGh_5Ey4RSGpvmBPO-R19-9Jvm89G4dM9TOcK-Z0ziSJg1uVPhXM_pPaPoyBHT-bGQaYv14h1w831e59dN-yqKL7EfLupbaupPFp2fn-AgzV5ws1i7O9GG5EIyZrjGfRBVW9uBQMJwJFUXkRQxHZa1rgf3HEos0qnbskHoBp2v5TLBqgp33e_KRdA8S0fyC18GGaiLmohWgh7shXva4dID7NPPnJfr6BKtb711zMeeutgCWl-IYpZ-Q0gRjIs3GE3T00zKmgios1s5grDmJ08j1O3phh1_Uo7Q01syl5IiAtQ9Q-TLuVC2ucbS5cjIhMwrGoCpuRNeWhO6KcFD-uavcfYMAykFtueijC_i3ccz1ZC-wVwnSE_FfscF88MxmwbasNsSa9onbJ-4HL4fXO9ab6i458c2EQAutlLVlz8NZfwwdJ8wep2iZKHv_2-AuMLgiV0QsZaX8zy4RlLBCHZjhDw0z_owNkZ7euykQ8TFL7qnsX5Px7aK9MPjbH7AlgWFb6JtzIY4c9Y69TRbbAXswGwiKV_ti0fmk6vdC3fiCl-AnDpxTXZacSoB76r8r3iFp7uFHKcmzxd-uFNKgeFNxnH9BX982n9lTCHLAIbf1-BskARX1UQNB8-yfYoRBDBIQISA2RelBy8Llt9SQAi72Ob25JhobUfxcs8g4dp0uVHG2YvlhKy9Ijoys9GKNyLBSkM16RZCTr1rrJFx6QSmtAvY1yaHqG0hgWtX6jmPB35Vj9dkRfCO84dLGa-Yofst695LI1PhAUMsqn0-L_BcvdtxYpckDFyhHwAomEaCrWMNuCIw_IHMyUnfvZ65wYj2yw7-k7RCaCVJx7pDeqcCA50RVBlP7E-E7ikB68ctmM8iigdT_CdjR12DxX_bW0-jZTbahhzsE4UsfEJ8zwtEnJCgIheUji3a3NaNwU7S7K5iXp10imTV1t6R2NgSLsvWzToqwbPV9ShVX3JkKZYfCpSHO8E05jmpUZgNY4tTf54QegvkHMHzfBvqXR-PK2VhwkFp_yZMyHyJLBQq2oEKodcWLgEdCwHxzUXQn3MYVwZE-FOFmHFLs7uSbBrPeimv9Eccfe8fbROrRLDEZvwh3dwNNwNYQ71gWTxWPxSrXOS3VQzPJ15aFXgXcM8foIg1J_26Pu5IGgZeYZr61lb-hBJeX8imHPaO8HOItOlxK6LMvpWfgxLLwwKaqLnN9qUjpcWI122BlTRCC94nuUbIZIa9A-DGwGCvMbi4vRTj2pX24dvVnaEuM5g6CiCUm_50hXMKR6gPamoxaGwln7WX2BeJzXUgWzUSOieXNo9FdJs3DARMtB5KCLqoc_m--MLw43RkWHiH4n1UqR0WAJii8ug39JTP83HplZzcFvavG-JUBUQ_oT0QMET1XozziXz821YhpQ48q79-g9Gx2L94EjK_zKxQs3NsIstwZ7t7SATqpz5AVj7CygVKZn84zJLHnaWtnMd9WdzO7CO1hTjq2iWnt8S3hNdx3wS8OvzkvEQilScL5t3mnimsa79X_hriuC7bEaTT6gCgAgwFz_w-zXTSyYo41bGOl7xkImuzDb0BOim_gCBDgAEyyN9LR2YtI8Vs0v1W4DCqziv4yFvWJWzFEul6-qyefeW6GHnnERCRw8p_ldhOnXi7L-oFJ5LkVOF4cooMRl7tqmN4PiCc563HErW2pGETx5OSrgJuuVEmUR_khqHIWEfJ1iRSwldnyKK3fBbjZ2s97e2jvolY2qsWFbtsf2glBgi323vbbxryVOha22Iuvu1V8netiBuC7OVW-1XoY1ZaT_UIRq8hXC2M3TkVLWMwD1JzXo9UDy3nLbYiUVQMQ5CrpN1Fkwjd-fhirlTzSGXsLv71yWSrDncmf95o3NvHNO9qhkHQx56YHLBYK3T2-tlArUK8g5QzxeMCocQce3E7p9FRo87xYDTn_niK1_0njG4p0CCeUBpDLdSG4DvFmlPU_yiJ25L1S0CsEHnTVpL9RrlBQdJ-AS-7U0dGd0e2-gzCWtyHHaZ42K7ZlHIMR-0nZ9kqr_WD5HsYCnBBzANwlxwCBBWh-ZtiNaQjawff1doyNQwYUQ7OBAlWvaDtzw22_ONmG-Ndo24sdKy81qS6douMtVoVSTI0MVmeV8C5ZakNJ4pxWIQfTsgzQnzWjP_ZHyE-bpDZvwiedEp9G8OI_uGkfBMXY9rh7oqQJz1rKPDwCrmXHO-bzJSEVScgIm2KgFlvZaL3G3eK_u2lkuiC7xHVaZwiv2VoYGreugrf8QdvuHhpygd-tjzE7uIX7rKzxXVFk8ZRAcgykrnZL8ydAmQ3fBvoTZJ__G1VRwsTrzp5L1FW-oXnkpACsI8N8azYjuRP7f8n7R3V9SLXy9jJzsK2KO80I_jD-aKOZYMlSZLvYcGXLnHYOIF6DijfYa7PGMuZUP6ARWKkVlRefVjWI0MaqxRgokcBJSWIqq3K1rRpd6cW-QZ4uvaHUYKIar4joFQ7W8SFBXgjtGQwlAY9mNazlmY8CKMlhmLGGZ2EUiWg8Oopkwim7oShMFXVulp53G4yzATaQLtYv6B8D6V266NI39KpvzzIrRRbcdvSD28uZerjGRjkHf5DHGvT2cl4AkFqD4VEwTMQlcwVzP2byZ3sDlh6ax_9hpTa51R28o21AO9iZhKEIGFN1M1cgVF6K05umZQ6qLK6I1k02D0ciBVuuLSbdTwhtJSlZoy7bnQ8dVcA6sygrtmbTxMWiOKrGb6pwxlJMHbobUvOnZlo25U_RhwLMeuEtBiP1_LIhiGghXv7QSICD5AsKJ53dKFEq70mazFfsw_JAsmXbaKQgEqgwL20ojxXm_CJW3Ahzod4P-Dz2Q5M3jxyPYq16hUn-KU3f0msiHm5OxM7-53yyFrNPp35A_2UkauHzRsrvKMw6l1qcBb4LbXZGITbvRyTS2GpmSLvr7_W3Tdg-9TnNkqRswcFxJmPvbYKZ-qIjFaaacQqDXZmYqpajApHATNaM21spfbW1VWVr2PlHrXSey8tOVgTl3cntrn9Veokonotl7KQyUhdZSfTEIb2qfKzrygkay4pBq_8zKCGEQLV1Te5VRM-JrToA4GGoySgNhSbhFBLcYdzES61VJkU6BaId_B1Pf3O4pX0bJt4vpcPg2h-116u1_IpNDdsW70lrQiX494Io7SFsOijQZ3vJAlXupo5lBFAeMECgvJRNwd5gI8iTAiGpgQOVijU-UsooswyF2tdQBEhkKXSNUF12cx4R",
+        "summary": []
+      },
+      {
+        "id": "msg_00150bdec46bf21d016ad322c8011087d2b592f962d0d3e1b1",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Premier Stay Hotel Bristol\\nTemple Gate, Bristol BS1 6PL\\nVAT Reg No: GB 000 0000 05\\nTAX INVOICE\\nInvoice No: PSB-55190\\nInvoice date: 9 October 2026\\nDescription\\nAmount\\nRoom, 7 Oct\\n£94.00\\nRoom, 8 Oct\\n£94.00\\nNet\\n£156.67\\nVAT 20%\\n£31.33\\nTotal paid\\n£188.00\\nPaid by Visa card ending 9911\\nSYNTHETIC DEMO DOCUMENT — not a real invoice\",\"merchant\":{\"value\":\"Premier Stay Hotel Bristol\",\"confidence\":0.99,\"quote\":\"Premier Stay Hotel Bristol\"},\"total\":{\"amount\":\"188.00\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"£188.00\"},\"subtotal\":{\"amount\":\"156.67\",\"confidence\":0.97,\"quote\":\"£156.67\"},\"tax\":{\"amount\":\"31.33\",\"confidence\":0.97,\"quote\":\"£31.33\"},\"date\":{\"value\":\"2026-10-09\",\"confidence\":0.99,\"quote\":\"9 October 2026\"},\"vat_number\":{\"value\":\"GB 000 0000 05\",\"confidence\":0.99,\"quote\":\"VAT Reg No: GB 000 0000 05\"},\"receipt_number\":{\"value\":\"PSB-55190\",\"confidence\":0.99,\"quote\":\"Invoice No: PSB-55190\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.98,\"quote\":\"Paid by Visa card ending 9911\"},\"category\":{\"value\":\"ACCOMMODATION\",\"confidence\":0.99},\"line_items\":[{\"description\":\"Room, 7 Oct\",\"amount\":\"94.00\"},{\"description\":\"Room, 8 Oct\",\"amount\":\"94.00\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Premier Stay Hotel Bristol\nTemple Gate, Bristol BS1 6PL\nVAT Reg No: GB 000 0000 05\nTAX INVOICE\nInvoice No: PSB-55190\nInvoice date: 9 October 2026\nDescription\nAmount\nRoom, 7 Oct\n£94.00\nRoom, 8 Oct\n£94.00\nNet\n£156.67\nVAT 20%\n£31.33\nTotal paid\n£188.00\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+              "merchant": {
+                "value": "Premier Stay Hotel Bristol",
+                "confidence": 0.99,
+                "quote": "Premier Stay Hotel Bristol"
+              },
+              "total": {
+                "amount": "188.00",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "£188.00"
+              },
+              "subtotal": {
+                "amount": "156.67",
+                "confidence": 0.97,
+                "quote": "£156.67"
+              },
+              "tax": {
+                "amount": "31.33",
+                "confidence": 0.97,
+                "quote": "£31.33"
+              },
+              "date": {
+                "value": "2026-10-09",
+                "confidence": 0.99,
+                "quote": "9 October 2026"
+              },
+              "vat_number": {
+                "value": "GB 000 0000 05",
+                "confidence": 0.99,
+                "quote": "VAT Reg No: GB 000 0000 05"
+              },
+              "receipt_number": {
+                "value": "PSB-55190",
+                "confidence": 0.99,
+                "quote": "Invoice No: PSB-55190"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.98,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "category": {
+                "value": "ACCOMMODATION",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "Room, 7 Oct",
+                  "amount": "94.00"
+                },
+                {
+                  "description": "Room, 8 Oct",
+                  "amount": "94.00"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Premier Stay Hotel Bristol\nTemple Gate, Bristol BS1 6PL\nVAT Reg No: GB 000 0000 05\nTAX INVOICE\nInvoice No: PSB-55190\nInvoice date: 9 October 2026\nDescription\nAmount\nRoom, 7 Oct\n£94.00\nRoom, 8 Oct\n£94.00\nNet\n£156.67\nVAT 20%\n£31.33\nTotal paid\n£188.00\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+      "merchant": {
+        "value": "Premier Stay Hotel Bristol",
+        "confidence": 0.99,
+        "quote": "Premier Stay Hotel Bristol"
+      },
+      "total": {
+        "amount": "188.00",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "£188.00"
+      },
+      "subtotal": {
+        "amount": "156.67",
+        "confidence": 0.97,
+        "quote": "£156.67"
+      },
+      "tax": {
+        "amount": "31.33",
+        "confidence": 0.97,
+        "quote": "£31.33"
+      },
+      "date": {
+        "value": "2026-10-09",
+        "confidence": 0.99,
+        "quote": "9 October 2026"
+      },
+      "vat_number": {
+        "value": "GB 000 0000 05",
+        "confidence": 0.99,
+        "quote": "VAT Reg No: GB 000 0000 05"
+      },
+      "receipt_number": {
+        "value": "PSB-55190",
+        "confidence": 0.99,
+        "quote": "Invoice No: PSB-55190"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.98,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "category": {
+        "value": "ACCOMMODATION",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "Room, 7 Oct",
+          "amount": "94.00"
+        },
+        {
+          "description": "Room, 8 Oct",
+          "amount": "94.00"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

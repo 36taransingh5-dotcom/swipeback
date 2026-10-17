@@ -56,7 +56,8 @@ export interface ExtractionResult {
   sourceText: string | null;
   flags: IntegrityFlag[];
   error: string | null;
-  usage: { inputTokens: number; outputTokens: number; latencyMs: number; costMicros: number } | null;
+  /** costMicros is null when the model's price is unknown (never guessed). */
+  usage: { inputTokens: number; outputTokens: number; latencyMs: number; costMicros: number | null } | null;
 }
 
 export interface Extractor {

@@ -1,0 +1,184 @@
+{
+  "key": "3119d15baafcfeca1a52d2785fbe6401280197abe3a034687234201518f38831",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:23:45.467Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1664,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 881,
+      "output_tokens_details": {
+        "reasoning_tokens": 499
+      },
+      "total_tokens": 2545
+    },
+    "output": [
+      {
+        "id": "rs_0fa72bf9e0fb6b79016ad32279741487d299a25a2978c4194f",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKBj0IwfwfMkej4nFhFuSQOkJSCIFW-kcLtsLhqMeF1IHWQppInKS67n4E5-oIF9uB1gyLAuAr6LBVP74ifJLaGc2oFDZZkFb5GT1OIBYtlItIQv_0gonZpsqqjhhxdGXDcdrNtZH_dqNG0-yKdxvK7AbSXN6aHIwDzv3YbQ51ULjdaZq-0lgU4NlXjsP6_MCA1bhQOUW42RUtLhs4CQGIFCdbIa-I7GSEikMq5ATg3KnIRcov7oIZhAjwjVEzGVVkI2k733G0O0M66bZxTVwdseL0us7bLaWeiHEyLKar1ITX45U9bLBFxyoswGXdrSDT6rywI4g03TXgYvij9b3VUvPvv8g-rUPRdZHQwAD2B9-UkGn3CUFtiVGq9LrBATLZpH09KRWqRO_7b3AHdZey1nTv5BftxzjKyy2HTPqtWKS-Q2RFuJYEi9-2ymHNZ8dwXJsbKxrAv6m5EOzeMn8iM9zfu-qZd7uoKr2igWkNO326tBrn29Vr6JgVE4B0zInpzHOsXdz9ozPWc-ruR_6gGQAdJFaJrjpWK96WY2Gh1EpiidXEflyDkyn3KIfJOjs8U1_BNejIAMhDJxiKkNwA7yVtdw25nuSQ210tigDW2TwRMRrQ5mjJhXCJSGKpNXEZ7chrjH087lFG5eIQHvP73OBByYyKihIPFDzlVs1i4viA-u5Gma5MDNQjsil9RdeU-tZYdVBtTMaqeS77_P1-QC1Jymn0X1VBc21tqs_vUSYO3n94HZXCPXO_3H1TAlsj3cIa4sMGrHgUXOHa0WMAR66oTbzcZ0cM13YYqiM06MuYPBWfRV_k3rGzFqxDLO68QIe-Lw2NQofndKv7SAHOR3nSv9zJ443OYpeLJewNRcQ0GI0v9W2MYexrPjn9KoGW76UoArZ8VlDc-IQLCyLHOdRJaYoC-ks4LObG71UFyU8F1PK9YEt2Yesgv_dSzNQzGkp8Bfhi5DVlmPzD7KZ6oobZhBytHFnDehIYFSuTRgFiQaBeTOOIjFnHn_XPxosLmHozh1FOqXf1EyxaAUhGP815JBvtHLjP97PYj-LWFuZfm5Hn7AykFjCenfghmBKVtm4rF85qa_8UCH_9EoSqn4Hgat5qs6tugtt5_3viSS9qZdB9q7pEwt2LcWrHZdhHnDeb1oSnscspXdJ7WZFchQOdknRn-dUa0arwfGa4CcBS-U47ZCC3IZ9L8XRxynX4DVBFXaLvNd-k-0KyVcL8Pp7UTt1Tl8xpa1S9nCYPvTL4AqMRdG316XAhc13ilxbTk2yTFo6j1po1Vhn26L6gALrznePtVOzVhJsXnxkNEl5WXqBf3U_92fE-HvPE6DXssu_r5KU0mYJ3v8mfoN-6tRPz_rJRZHyqyOpnAMqP8S2OYYycNDUZKA9Ucg-dh_sqfVYAmecPvYdGD_cQ1TqkQc5VJ-LHzvP7kZEhjb5rj9KH4U1qIOL38zB4lvefFVCXeEJA2dFG2CLc8cwyfBhYqW5lslsIbhz9FeDIGPxr6QB1jNy6ZTr-ldeAX7dyuWjlr2voOmj6qYC67q98kdBwME_sVXh70ELOisPV5kb_jrYQtdrF2RzTuapyPmgMdQfCovNoEFrEYyKaN0xT7JExDKtTbMGIxD3QfjsaDz1wPtVuU9Shr_KPtZoF5L5Sk-h_l4tXt3yLui_KkDrQYRLUXJGZ3sQB9zLNR-zrxmepTTyxy0Hiah9LhHSSlYBvSPrLnid7jDHcGpcjYlKS32PFHOuCdgGA5D-Avpm3HhmBL88UQR6pyxxP5L8BZo45n9uEimATRHW6vIpbVd7qvVQTHNYC_NFJiBiwn4rRIt2OG07mTa19afzRjMrhZpGgR4NkcysP3mVdpHLCoebZJq34YJnposFudMMvX7LjDmFH8jj0byZeQ8dZG3suoDLvLpQRgkaCDDW-kabymgCU9FVGVMj_WI0pTCMOxIJj8oJ0yhUQmxJjobcHcPR6W36i7F92i8N92NuSOsAxB2Md8KX1CtdTsIgPc44SavFCiS2zy4iWBHABHf4eztmP1PLoa4H7mn8ZGiMyn3aRsxBiRjcN6l05K9WrklOyM5d6jjGS4h6NuKSHF_vLVxMbM3jG3xcw7MMA3R8PISMyRSq8IWg-AiN7yA8SO-ZLlBYvY5uijZNG7TmGKs9LODkYuwbQj8H8JYIx4EiVRmK7W_munb4f8Dmmz96PzebqqQ-T2iGpaOPItEIg46T_AqQ3t4zlrx4eV0j0NfTMsHRONIr2dsx8ACxMy_lHA6Hadtt5jm85-4zS4jy6jKHSkGYk2LC_rCkxsHFZINKdkNQTscKfqGvoHGUhtNeiNJEH33s2qfAHmuzxiURvikd3DjObpVKk89MYJYOrnL7_gEhpGPuQpjg9JmTj5kJ4A2-_J2pnFqmUVH0DYP7bO7uRcOCMpKE_BXUtQD4dCJtRG3Hzuc1tQEmfkoEcgC7ymWEROhuEeI2H7eFj_e6gG9KHUUfdWU4wuVoYs4-HaAUBUYAz1x9ganZnKCc9kQ4_eUjIbAQnhJUTJ0PiMuf0b60kZXemLp7upsGlOQs5UCWjx5td3LMKYBM_rV1VfD5rmTeXmg4PDK-uER7N82Vvp_cr6gwhkk2poQ9qvzo0kMzcIrL9QFEYw2voOOHrS6NrbHAuQ9HVP8d31t6lX8bYvm5fFsgHRYDxShTQipX1wYqqmT6E7Sn3m6PBdZ95EEb4k4p82Pcd-_MtCVqqH_fCCEBK6MMdxzEV5f_2sSFKpBQ_1tuAr6N2g3PxswoIIyAh7WL1zXaiaQAU7uoCEnz7a3ADEVUaRmbQ48GYSDSFyM7A5jC8nQPJKI96FTHkDGkVJjlbrLWVJlp6W5iSVBbL67V0Ulsg6O1ZV_BBKS8n7nfbGjtpMNzSGpMSYzfAANMBFkxwNIyH71NPhCxVeJCtMWsP6pbxjrmry3yY8lE0d9GzW_16kmz0xZK871y8uhqZYgWPz1cRpf2HwBSQzspKHsqWd7gV8lcJ0o0-2mekyFKuHrEkwdjpnX9W_pHudU5M1p2Hhxws6sVoQ_Nfho7SF1WyF4PXPl6Xpzs-VzeCoq-wRr4dxWIQO_IoJBCLCpHDnQk8F7fJLOUnoV4XNRr48RP_ft2S989zBmiH7mDKEzBy8jyJEdEMa5gZPFfdkE9HHBAovXnQ4uWh9FGnW8jbaPU4cS3DbZqQG24XjlL5Ydm5EI61DwKgeLcdj8Y45wGRtNHv_vPFUN-nXeKgG_rsVjC3mv7QYY8V7-Zs-2ME_XRrmgSMFjyQgLitlJUD_NuALS1p7hkaF2XDr0KH7HJywcDym-0j8wnpF1jTlU4lE4399u56wGrKmed9Xj5wXyvJxPEX4nCddHdeYup4ZggfAbeZC-Xrc81fIiAQAvy4I0XDzOgDwR0oiZV69TDtDSvbMYyMrKBcjDP3opHeRUWDodLof1J5dHyWjGadjzUveRJgPzRUwKCEumMIgxDqFW75kJKtil9UqWXeL34-Zqtc-US9tCNUSvw5WP9K_gQQ3evTIcrl_238awbm1K1YtWnpz1pudqWVskqSqDvcwAaQ7FsvqWOE9RP2wrrqFsp57aPQfMnpwAA0UsKfsz6IzA4cvn1FwfqeBNLqA2xfDIprr3Otv-cLM0gX8jWPWIPD9Jz7nhskLOxBQbZDCnH5W1M4xKkHCFmJPvhoVS9qyU6PlXiqMlh2wD7fR8Vu-C8xmyrhringBH8ID0wKhHRBtjOF5wgYe2zRlmQjds0kpA09dQx8elYhf8f8v7K4I0Ik31HKOVg1vaRYnfJecdpwcpjgyRlx8pl5JG5g26ua8vkXk3EMZdmdGHar8q_UB79LsnUzB8gC8HzLAWDurfehsbKudAB86nk4GiX413IyPN83qRe2MOCrx-q1aaizKxoPKXunfZSr4nhGadYQwItHdX7WYzngqxB_GOnXrhPMFoVEXJnghjnYq02V7ObG0xh7X-sSVZJ0RbCvqiKuiZkDpCABocuSFEjLTGPB1TNTEOqqjfv6LWavvv6_ouUZvU_5gVxeBkgdm4CW9qsJ-gym1XyRIZUgdI1YVzX4x8n00S7J0oOOkyNKaCwjBdwo-C7-yhTl0RF19kRGuTFRQp3q0TlsVpc4RunwpVNB_wtzHp_hgsfJ66KNyuLVnhqhaJzimolktdWEUcqj_9dZsQtl-FsodxBLF9gDKdtZEwDmSaYY9PAgBTEEc6dPKANWtZW1Jgy0BdBUNqxdxkUJzea6TCAOZWoheXDpWAqEY8xOTjRdnp_tfa8A1SyALcuvsMZyiuBzIEdxHGzfIfEoDk16vMtlrrw7EzlSUxXHpmUfwLvZK465hO2ZeacNoQfUWrgbftT-Ai4qHnCzYwlOj0trcA7sMJg6PoK3ky5V4Nz7VscQVmhHRCXnHf5XrKdAEoERCwDT391LxoBXMKINjDLCg4a0g6m1MODhJtvbGwqSlC3F8ty_Qw2mUC5nD-X0Slb5gfI1uRohRadivPahWEOGGTFZtVpQJU5D6SzIxBDvIV6p-yuqN_oZrl6MOPUQ-hl0gUZ3kzdgWwNvaVeDLek3UXs05_ESmOvZdI9GucpNP9ISkL_Q_yhvuI1s43q-qBrnGvlfwqiKGBt5AcBpt4IFYWZ9eA-tY4ZuZqq-L0MRmoRnY_4FoyZ-RLeUUVls2aCnEOzQCmQ3LH2JYr5I72-OEfBYuB22NauLyqIqvsksEAX61JGQdCcpzdu7KGAN1grdzr4xUkB88SFkN3BCGTCd_qVmuZVoosipQd8UJ6mQ8HMgnNAjMieXOswlL3j0k8zrnRo2eY9ntxaUa06cy7plk7IM2ZxK7dSOn4MCIGY0jbf53dhEdjI7G9Ys96dl-oYo54L-Edk2w35VlTLy5Zbu5Paqzkhhqs9CcnTZK3tGzo8DGxRULykGCui-p7_nG3iq7nvs_TGIVlt7dH52bOIzjDq6Ueks20AVURLBoRXKDO7uHvgrX2CgKOf8PY_GF1Q-KSVsytKKOUirybBEbm2gLdtdT8-ngwTTgDrmrAXMDE8TM2bOtSTiIafoOeexn354QbWboRrY_AxlXn8la8s5VN0ZqsYiirAZDS6mB0LouSHYtbj-ecKjoaeXJNq3g07CmPKZ3szCfmwoGl42NLnhZZOcWC309ZpNsqSRXFyg0BskOv9pFWNk4Xw143QpGzNcbtP_DooSCjX-PhDCTx2zQTQoBV9cHPGn3r1IVj7WSMAZED8yVb5ERb5QOjkfUonNwIjcWIszuS_sRrzxsqn6X1sfuo50f2uQIXx69-qhjXxQWLU01Dg2lwb9LPm-vWDaGP_EXFqvDbIdEMXCr4KrIE4W-zzgZeD_VuvkyFmzlrcEAIUdp041kIZ77HNMRuisJXnGRCZI8hZKgK7ydwbIoKiH0MAG5-MZb-f-1L3MPeMDDrLqCsLudyWhQuv_QLqiIqWS40crF6lYwpeaX_AETG7QI-gWYW4gBMc3dmslrM3L382m8eUpMGnjL0-bBfttgOpVyS5-mYWO7ErpfSVJucSmMEjjtid0jhuc1T3g_l8m0zaZSBRb_ljH9UCRJCmCb8XCCEy9kBZvFVlqhKgIdlc0KpAnl072oBRQyCkwU3jQEW_IiQtmlTbAt1k-Vrr9J6ZgcPwaDUdtAECIRsxXIXm6-6uq6k8K1eNhqMcM4E4SmzUGt861Fm7dWbHPARzvcPpGGuQ35XoPt3XJVzMYMFiJI0UiyZ6yfWUUw0t9BCDcn7B5rq1tqaPwgRZzFOqzZHeit2LlEqvgawYzLuKGwH_C2oXrKlh2HmVol86VBjwcS6VblfQEUsLxo5LZCZvUxbANr3XA9uaRcIVMpNaHjeLNe8HpRTg4G-sEsJryDsTkcHBZyGMaw-CG8UhXRmk89BioqyzbmAWTkrtYp0Ksf3GNunPPkcFmIn88qNnrsDbfjrBOn01uluCg23UtWw6y4easpquWgk2WTjYUP_nJd05mZOFd0tYlzqERsX_S5Et1rg_fjO1pu3B_SbdDhJUvc3tkse45OEEDMVykuMlHPc8Il-GgrAvhEmxamDk-BfF33j3S0O1ts9ke_Yn4DXpEcl7rqY-A_USE3Fl18KHHcHjf32_Hl2FvS1uJF_lvdheHF-yU8P4mD_BqDebe8gV7M-C9nG79p3KSlK4423xYElIfW7A12tHauvifI8lLRe2JxDPbZ_lnyNSsOWEQwTLyCSOZMDBTongX65aiHkmaDW2RqnG1qGZZonYJjccPNFn55ZWwuF1XWaZ1OSZNFWv8Gvh3dJo5K2KTB9s4eId0h4-YP9XsQBfa9OpBnvDWWeBlmI6-ug_EJxduN6xpIK0sTaWlct6LYZF7A_t0s7h7540R-y_R3H6CJQ3jH3N4fawIWI1GcD9gpxYwjwAJ4bxVJEqsk7xUD2DkQ2NucZCKSjLcqVIu-LTVqe-jgUxl6VjH-azyt4mibKIfly_uj3jCu-0O5VMIYYh8kSflEgAzyOIOtXsf38K_2SOY0WidcvF1UKlbjO1sYCTdzoKmoNBvTq5qcSxRbGSuDOCrHzxphJddH8b88ZIMZmDfuIgsa431-bznhcmaOO8BnxR-wb5zLACi23c2lyJM1HS9BwVXc_hSt4lUlTN7RO-mM0YwA8ktM3NhY3DdxQJq-1Mw0rFP1k1clyNcfhGlkVXa86b5LztWEWhnfDYwNYLoK_6FYczbctVZATdTyiirY5XHVcYIq18gGjLIjv8-hysAYb3XhkSACd2Wtm4h88_zi7NodOxEQNZv1Ynu3hIi6iq_AeSz89SkWjWxTGspIa_AAmC0hkmncmCiej9-ffU6BxoBSH77NRBLhgWADtjCUz1ZVvUTy8nAvpRjWKJ1z8cGsIyWUmrKhe8MXfQGdVF4FH1PjkcB5RY-81URKq6k2mHyURfENP-ikwVtejhVJPMLs_O9DCVnv6POxXM9Bcnl_6v__SqculBi_sZ5hDlIkYZQCQhkn-A2C8a8RjsHTrfsjmzbNvjzlWNqkNe91OZGPxNsLQmlm9f1BXsgAyoX3CUFP_h0cwk4XunVJ-Ooch_F-V3jB3dVNTH1oO_n13y4A7pHlzt-pG_md6VmpUob9iNs1Jql682GzLiL7G7DsasZUPkKt9fjZ-VhVoCm4lWo8XNVckooKjEgEH4-MsDnRdJzypObL_jWcCkNPXrujBEiuxKmicnfzmDKjTr-MLo06fx3vQIstILYRXxPpOof2L7_qIxw_56vvZE4ZTPrKiOkuVbymEPqRuCJ62_IhSAH_PYdOOM_14dwfd1nMcztgfFVESkWnFrI5PMYmmUgx_tALSBvNS-A0XcU5-TgaAkPlA8zkdvGHDeUY0BS4HK1Rw28-KEoBSIiSK5_idIiKQzx7vw2HdX1RuPrwS6l37CbRUnzzZtg6xr0-l6BhyyfnwClr",
+        "summary": []
+      },
+      {
+        "id": "msg_0fa72bf9e0fb6b79016ad3227eb31887d2a6880f10ac59250f",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Greggs\\nClarendon Rd, Watford\\nReceipt No: G-118204     Date: 13/10/2026\\n08:02\\n------------------------------------------------\\nSausage roll                         £1.35\\nBacon baguette                       £3.10\\nAmericano                            £2.40\\n------------------------------------------------\\n------------------------------------------------\\nTOTAL                                £6.85\\nVisa ending 9911                     £6.85\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Greggs\",\"confidence\":0.99,\"quote\":\"Greggs\"},\"total\":{\"amount\":\"6.85\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL                                £6.85\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-13\",\"confidence\":0.99,\"quote\":\"Date: 13/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"G-118204\",\"confidence\":0.99,\"quote\":\"Receipt No: G-118204\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.98,\"quote\":\"Visa ending 9911                     £6.85\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.99},\"line_items\":[{\"description\":\"Sausage roll\",\"amount\":\"1.35\"},{\"description\":\"Bacon baguette\",\"amount\":\"3.10\"},{\"description\":\"Americano\",\"amount\":\"2.40\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Greggs\nClarendon Rd, Watford\nReceipt No: G-118204     Date: 13/10/2026\n08:02\n------------------------------------------------\nSausage roll                         £1.35\nBacon baguette                       £3.10\nAmericano                            £2.40\n------------------------------------------------\n------------------------------------------------\nTOTAL                                £6.85\nVisa ending 9911                     £6.85\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Greggs",
+                "confidence": 0.99,
+                "quote": "Greggs"
+              },
+              "total": {
+                "amount": "6.85",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL                                £6.85"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-13",
+                "confidence": 0.99,
+                "quote": "Date: 13/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "G-118204",
+                "confidence": 0.99,
+                "quote": "Receipt No: G-118204"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.98,
+                "quote": "Visa ending 9911                     £6.85"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "Sausage roll",
+                  "amount": "1.35"
+                },
+                {
+                  "description": "Bacon baguette",
+                  "amount": "3.10"
+                },
+                {
+                  "description": "Americano",
+                  "amount": "2.40"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Greggs\nClarendon Rd, Watford\nReceipt No: G-118204     Date: 13/10/2026\n08:02\n------------------------------------------------\nSausage roll                         £1.35\nBacon baguette                       £3.10\nAmericano                            £2.40\n------------------------------------------------\n------------------------------------------------\nTOTAL                                £6.85\nVisa ending 9911                     £6.85\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Greggs",
+        "confidence": 0.99,
+        "quote": "Greggs"
+      },
+      "total": {
+        "amount": "6.85",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL                                £6.85"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-13",
+        "confidence": 0.99,
+        "quote": "Date: 13/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "G-118204",
+        "confidence": 0.99,
+        "quote": "Receipt No: G-118204"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.98,
+        "quote": "Visa ending 9911                     £6.85"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "Sausage roll",
+          "amount": "1.35"
+        },
+        {
+          "description": "Bacon baguette",
+          "amount": "3.10"
+        },
+        {
+          "description": "Americano",
+          "amount": "2.40"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

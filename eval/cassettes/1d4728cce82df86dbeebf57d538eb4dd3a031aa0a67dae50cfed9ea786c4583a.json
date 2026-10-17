@@ -1,0 +1,192 @@
+{
+  "key": "1d4728cce82df86dbeebf57d538eb4dd3a031aa0a67dae50cfed9ea786c4583a",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:28.902Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1664,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 913,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 2577
+    },
+    "output": [
+      {
+        "id": "rs_047dfa21f09d35d1016ad322a560b887d288f5cb83b04f788b",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKsp201vr1Yn1o96_lib8Jj8AwroxlG2cDDxc7itWMRT68uTM4_MfoQSZtWe3qGfqBZtiVrF4yvoj9JsasVtXRVtCMuTXTkg3JeYZWXgyFTKKQsWlRNl6FsASZxB2Lj7wC9VZ9QeJYjpWo2N1u4fEFi-M05C2qg_NQHHLmpv-EvxthNR1CY-b5ToDr6x6ZLG8docdUxdTItVe7FL0INl5cgpPcPYKg98l_gH-vUfOo6i4UrgjWOn-I2ENQTDhvuiFw2qwjDy9jxcvTNHcAC6w1NcCh21sPnva1MolUXgr87aK1tc4ZKCNxpj0x4_YNU57olcncbLHDP9RBiVVSlV4VUTxE2vdbqVC32V9WjAPHQrrIqzCCse1JpYEBFqwWWaVQUIMGUZUUAL1KJzM9ryJEGzYm6FZnFXeqcJH94i2YsYB6qnPxYTgj1LoJLDrvZycDQC1B4O7WNfe3ec3QyNOxLkpMGlqfGuwXiE-bFTAuz9riXqK56F0QDPG-y2zdWqJdETJxMm7Yxkob4LsjsTVMMT-rmm5DNoUJXiiEId0RWp8mvLpM-cJtBQk5ClnWV9Nwt8_5Ajdsz5WbLAZYkvErsTh6rbp2_QUrbj5rt7U7R6Oe3Fq72EY7EMfGHyzXsFHdbCuib3D5BFFqiVewsi4DHnw1SuXf4QZ74j7_hNIjr28o1Vmj-rOsDa8SueAWVpn1gsJ_Fb58LwvrRDCld5tCKVzfE4v4bvE9UeZCnSv0jFQha6P1b9xBAW1y0iF11_sR35k9nUKETSvLXnBsNRxxj5PTmwFxvNMUBZaX6dXCA-bRkKwF-lG4JBt7dkp2lm_ZiDpH5JgMEa6k4q8YUb1Wo3LbNgrKVDXT1U8uG5pvaeY5X2IJEj8debEC7aG9Jg0beOHzoLtpm05NbiDvJtlNir7xykqSKtM5EBxUqtf9g65xPgwqcsvVLkA6t-XBo9Wq4gXCzw8SJa5U3ENZ_gXg6K7akth0luOWJOzgRugfGlIA-i-G2LsyIVQPWdrr3fiH2NuBHVamPq8A-n7VAGQmbdAwS--FNQxi-9oujnTimw1fcA2bf8ckoGGn_bs2gJMPoKvQTU9ehJJYGvM5XQSvdu21_mSLGbxBofd6snwR8-jTJEOMAldT2LDUD4l3b8Yq337u2Ns8bE651TpEKl_LzwtSzMZfJyxh-AtSC5SZBBD-A9si0zqCnfZrGt__y517BkdEESwyKQ1LqAT5uOGoQ06XIRerN6m84bZfWeWsHK8NCCZaen_msGog8BCsU9ADv-PfWQX2HxG6TtbUVrw1cWUD59jlMB7j9oywjeFjMQFKQvlbqV68W32panXR1pJ4r0kDSNCk6qz1pLbd-OJYU1iIuselLI3O1hI_CbDO8bJ5VtqtOtuUCfSIw8htQ6gW_KYXOQfo1XQW5rVhA5gWp4qrXIORKZ9dvgffCjY3QHbYyq4I9f2s4nfAi3_OrlYQkn4uhj4DbkwR3Mmc-iWx0IBD0x3t5iRSzakNtzlofNKF2WZV_rSnoHt7k0ExsgUWD_xZ9OYjZ0Nc4QESFsXgrtiwDAhjh7wWXiHi6eNGlt374cPI7wmG5AJavi2R5tJLxWbPpK6xmLuHR4GkcmU69cBfpAT47YQyEu_cmdypuLX2F22UKqhGvvlLBoH7Q2LCVSnmYB8p2B9MjIYuxxlbGR179RFC1TvDhxjT-6HbfdNCgdAZDkQ9OrWLV3r-dI4RzwyNMVMwFnOLm1_r4seb7Rs3irWjVTZ_qTuOXgZX_gNVFeW66QeGT9UWDjtZmAV0jwyYmcd8DaQa8iD93kpzCQar7thmVaBArroJAqDISTUpmfzGA4eLnG0VdvR3-O9BJPCxzvADv3ialLqMDtXrXEknrGbVvP4AC-r0_QEJi7iz01k-Wt0LAEdAc7meOnpdiZwLsyRoPXCaIvKPUsQ76jB8oFR7pHzSZtXcbSNSxTmhDQK-a0aONCz483Aj6tPKsE7pC266DpFzhoMFoa3-lYrrhIne8Wxh_CoVoRzhy2sNRz8AGvVzf4279J-0wzAPent3qNXJpZb8ywSJ_ddnIsTXyvgPATMrNDQVEs55FsyJkPH0j3BJTKSWnnHzwrRsahKxKTHLnel407lN8pKMzmqpXwvKw_rsMW3WOQlHaisrxIbq-WRff1Dkyiqkx-quK1kCunzmBr3dFKZCkqGArAY774yZxMVkTr4pW7hNrRQv-zcIpCVJVPWhZr8oA7aa8klDnnez1EiDxcKD9_o3vw_pqPyMwKWi6dJJo1TubZGKJjS0ASFYGWilNHgiDHckaobLVp84jy_G-wcPZTv1UxbI7zQAy5z9TaPU8DRWHjlUxO515p6U32iG9_1HygrWwMtQUskAftZOR1LuvMh4Rhn_-d15S2C6zK52cyq9P9QwKs5ts5sY_CgmyOob6LWVEWboXdWE6QgL7rXut9y8tzE3mqoAcd4o444u62vFZWMWsB20bNl2VsdE6IOG_29p26Iyf4LMIQQPsjNah690rL5fbIOFkKRz_AgHOE1LTz2cymGa99rf-jvc7XezbJIdmr7pgjrGDlRjFJwyogVCjNzWBWwq0nCmFK1BEKNHJ0LUgO3FYmzRffwB_1sRePWdcJdZtneDfkzfJinVxB_HQ99k5BumRcyb5xBYh9PcFkMzPTvFb4FzYlpQX-aPl_PxhRn5YuB6MQhYgj17HFgTOpQICfgDVsTA1XghnvAQT4_IDX9RRDjkTz5cJkQAyiLue46VB8AJBNVx-X9Eq9t3LFYZt8pTqp8kTjWCHU7zWbovhYaGAVhO4U2yodno1xhpeR7sOqEH5faYu6NhTj0tuyqgYztRDw4z9CeI3YBBz8PdZal0hmnlbAEH5Vb6n6vFTxj5Al_hKwZDGzbUeSp563WmDWigsrDIwrvIM-__BjVi_Ds2cncPuU7aRVQtL-LJlSB3U3xxkNCfO_NpLA1UFkY53Xt4vm6NhRUKoR062tEI-yxsRdxvToosQ79jBiYBeD1230_NALNB2EWLU4pvGrnYLoPuXKq7mlV-ZGWksL1AYWjJ01DuLj8oqkWXq7RuQuWKlK3CAnJp3PjpRYgd1QW7ehPvd_vwRHvz0P87jOYKhJiOHomMRS0uqAH0Mximf9cGL1MLXlJT9GtSHBvfToezVQRaAa_sPVKbCxNMpfhnYbjKU8IBOliGSz0e0KO1B4dUJrYvMRL_yeF40DYUKos2NLVifVzSRIrKrk3pdc83B1fe4dnQN-M9V4rZ3Z9Ftymyj9a-p7ggC2XftltYrHEgj0X7vJQeeHMbCZhK9xuOI3nirM7P7MEqpdZjJrBnt2ffoptAfGdeWj_yt7uSAOG1cxogwV-BiEBH4ZvyUVOQbJv9llIdRMfLlrafubVfN-xr0hS7SyEEk46eBEwJFfgvaRQHzS0h3UmJ6HmOd_aeYxYCD05ecLOk2FDoch5MJE4192WFjyoJ6_ODKWh0jEWgaz7e9FwbDYOIO7Scbtypa-k2HSwhNdD5STGSCVrlgeGzeDrZRtujleWZJZJOhYYnB_MmFfaRwq7Fhwb0PntXlftYk6ydeRNcoNyHDDDghXT0Lm8n3SiC1Ok3cLhEgb89_1ibIB0h2rRttrn-gQpxo09qEZJysi1JlvAoz60UoDFX6oUEFNB29U3rYnKx9aBDgzUG_OPJb2LVdkWjwn_lZqYGCXh_6wwubzoq2i_Lwo8hi3_9SnYkFatz6X-5h6oSF2xDxlBSdmy-RgGxtRnCOO05kXZbpHhmBqls4NdFR1f5gpRpxW18rXO_NugLpUu-Z9pl5UJw8Tqa8bgdHSoe_FGJ3e7p-a5vMcwq803-3yUr5SqdGYqys4UOyRuelUYDExoE8QNqCRfD6S1tFBXleltxDyILQJ9W9S8whsgCJHpWmxHdNEbmeMXDgXcqVtT7Uo_q9LmXwB7VH-YfNTQBnheNJ-aJY1Ymn5_U5N3T20HEVn53EEV-wS1NvLN6262VBTbkgwtMlw9FyxIl8VyeieD-y8C1ysdCtJoIGB4R2ag4lQnR8dtCJPf_dl4LQW0qLzKJbIfiqWpwhhBKrRvFWKFr8N_PN41t_zXXLDqDBR2iufujuplrEQcuV-lAFFZj0b44frRP1dkVahWa1dKxtyVrPIOM5ao8i-whkiaSsE6IW5AmuUSYFCOIK559nslC1Tjc-qlRkC8CpjIE0ONfM_Jcr--UgUzbXsRrW5CuuuUQym-Y1v_lQpi_wFj3O0pgQeUZmIjXJqxoMoCeyUv7sLriShKBUMS1F_1YMgRuMm3JNbb5oeSPMvvFnBPQraXmCLUapz4nea-B_6HOTqHPz-OIjmBz_9pGVrnLWlAaBIOzsbDkchxBD-avJO7DSXy5X-3-QymJssfs2IR45PgIwJm7zOz0WFyYq9-X2juHVaCdjDraIhaL0xiSaO-3hD-BGj87MGOhQ4tpMEKALIxYGzoDHCNbbAYhyV6VovG5od82JFqp_X1N8Enfi9aXF6bK17DjGNbJVwJrgbzr6wYXqKDdA6P6dlrhG0j14HFeO8jZPFXHItdreZDZZ-Hv72gXfAY4tx4qBJg9sXRYYOdATIktWQlJLOvUoVBvKrrLeK1yVettnUMZmRsYn-u32hA6ctx_Vn6dxmu80QwA0VVX_NyhJf68XZ5gSU2y4uVcM8WLOVYP5mSCewNQPqqVyDC1YJxrn4knKRvBJlvfF7oCfcia_qYnnkC8aFVcSuUBnhuFmWlUGtLWJYdKsbprUzXxgn4206h9Wn4FO79tdDbtFmG4RE2Np0g8rqlSL2MA0FvEOeE5cY4MTQnD8XjoZGqzMShamYvnIQK9aie7Yy1pG_31Bf_UZyNl9SVYL-1YSTTvRGq4NjxwymR1PU9j2HPJSu73cP3T4mw7vZ0RVHMYR8djw3NnHfEPS_0Y8-7sE1I5Gqc3Mrtv1xPwvmdk-kY-pQhZ4FQFROKG5MX1_yfNidCSWannZ43SSF7ppy0zlJlRTpZuMYKbwJPLSpDUrqoOsHcOaMYLGVCKs4qn7pn8uMraWRgrci_AziBb57U1-fjLsxeBESqHTPLuI2t9y46LtLhSlsB_Qby-yHOW5QOKJVaOqM4x-UcqTZ6qSUmEmVf6IdEzt5s27efWEAKj15PDwhMEmsjlUiaiqNrG-RkLvPbFfyhrzanlvmba57Xt-cI4q3DN1HwAM2uG3PevXqIZN-m7R_4wRO4q3IsyhSw3ZDbg_4bcpHnzvqYnfx_UxxH_Eq2Vm89a-o3G_Xz0V_iY6ScNqT6n7D5zEO_p40D0KIdJDlYFWs2DhLKdJfZ9OMFmSGcc0Wgn--EioqgExEhPkQI0uVotZTeBV8-SzOISLj9VzIpymynSbD-vGisGN2Ok8R5azyBISm1NfJjvYQ5N70GRDGT5sCAjGznDvveh1QGyZUVy54xGKtDmDSngiX-FQ73Zkjnm9JmAE1r7qMskLMquIU7grNvUpjBz9nRYelHwujyHneIXcrNQobmTe0DM90L-A1ddH_GgPvdRWGKYb5n5moyFZ7lPqM2q5XjYHlpg6XYyc9agaCEYdr1Svv5vWXVpegmqjIRyL8xgScz49ZGCp8JPSuz-Ww0yn67Nh67HV4KPCvSUoq6P4Bfb4DZ5-8t_JbLCfM4ZKRztxu03HW1hOhhK7QXyzHjV2vBOrtXb0IbDI7QRNgKcCfXeyIlhsmzFxATPka1SkSHx1YVknG4KrRSS6jOZQjAC7Iw2y8S2t7wJj5RLlIGOg1QCK_kGR-NXAm2QOauc9KjAOdaVjNiROdTuwZ7YfNVCsPpGW3IzsM6MYAC5Akc13CkmYbeaobIIDBxsL7MlpeLjoUR3YAKhIPoMmoIgAtvF6IUy7Fz0bcvCDvoTI6tyxXlwJBvQn5AVLfGmJpDHRKaipDjyyTADfgMFbenFRHdcY-wrIvZVpqCnd_Pj18uEuYLhfq29kf6uddEfgTCjv-i7uuykRcKv8CGBmenS_fzbViNYuFhUjDe5NmdbfjCeT0CMiCg8PenbGEFVp_y1gXK88a2UXYRsLsQjC9cavSDvFWKxC5rRdcKDWHVSU9XgBasV4DsWHqxZrIjG-djVHuyTbUnJkMQOPu2DZfHF3MeMhwS6Y6KJ8PhIvoyzGbr1ZQq1QMLqs77MBr2vklSgzNVr94rZWLET-nn870u__kEqMYu_Twh3DdQVtcq9E1COmH3I0uBqq8sK0FdBm9G3UugR2pJT-ckqscMmN8IGf_RUldY7UtacZWUzCnEuLhpMC3hPlRqaJqnJ6_UyItBGEaMr4iW_coJp8XxtBTKeR9URn4v7fNmTpvq2GXQU6SwysF7jb9SPTfrFiCZS__d-fdmejuXuxmc4asm_NOtpt8I36p7maOQ2s5pYQ39C8QVfyAbe0Iv9lyV80wyK4i73CmzmV3vsOHx16jZ-GQNxXOoz02SXmalPdoibn-eCz4u6vAwDP59sIwdm3Mh-L-tJP__JQfNolo89vX63b8oBsgjeHkvlUwywj58U4aCbbuADW7idrf2zoDggHPN-kCgVYRCwKh3TzHsgwLWqd1yXdgNyYKPn9fgP6px_vAZY7DVxmnSyesHb1dAREOCiMHNLuMvAigW6Jb_BIi5xzEJPz9-6xIWEncHloOmXRKoIYmlGSpJTwC6kT5G3i8CnmhUL6Duuvia-sVw9Bubz7dtRWTqkWtqxt3rNlAy9svWijZpoES1WkhyaK6fdyj0kYv_iJUTOKPMGwZJTBnujcKoUiwZ6CI6lBDqhfUzUviBBJuaSV2_1rPCQy4gQnEU3ffly7oAwk_lt5o5I1etg0_lwtWNAwdw6S8JR6V0xWV2po21zRnjsxiQe_PWiwEQCXha38SH3fwPphzdN5AXLtJ4aKhgwLFg-RGFTwYEy9o6XR0gXfAIXEUYPWvPxERtDjGjKyiDoWjyaGO5psRP942uR03UM9iHh3Zr7BzcSHXkZW_1xaSuQKM1d5ixU09uh0_SV-cpFT8ys5eDN7B3gAQpZI2Fv9hlPyYRRo1l69LsY02uuGTVT4c6RmHUwHxdgoTYgDDcHx0UHB4tXmN8jdNY-TosavXJ9SEDL2PGIc4PHZiUmXfAojwmXg1Mp-rwsY1kb7fakbwsKfd_-Y17ZlL3icj6KFZmJ5GAs1A1NrJC89cvNR5NDjhOf69JHBD4ya55gHgc8zKHfDQdwY7V1_GjCBhTsZvaCYniSBx-fPltSxRTwqviOsSOwMzBtB3BUp5cEzdcFaAnLksQBbC6HL9f7P6f_-wyAxq-Wp8jGI6GFV33a7voQ8laGKtW2HqM-J6AUu0uT0IReZTxeZ0YQBDl9Y7U27LB7E1RxuPMH-eAo5KxZ-72Wyz5aKmuNahVaeymB9oWJGOw==",
+        "summary": []
+      },
+      {
+        "id": "msg_047dfa21f09d35d1016ad322aa45fc87d2ba1b9edca6118a60",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Sainsbury's Local\\nQueens Rd, Watford\\nReceipt No: SL-2210-04 · Date: 05/10/2026\\n------------------------------------------------\\nMeal deal £3.85\\nBottled water £1.05\\nBanana £0.25\\nCrisps £1.25\\n------------------------------------------------\\n------------------------------------------------\\nTOTAL £6.40\\nVisa ending 9911 £6.40\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Sainsbury's Local\",\"confidence\":0.99,\"quote\":\"Sainsbury's Local\"},\"total\":{\"amount\":\"6.40\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL £6.40\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-05\",\"confidence\":0.99,\"quote\":\"Date: 05/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"SL-2210-04\",\"confidence\":0.99,\"quote\":\"Receipt No: SL-2210-04\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.98},\"line_items\":[{\"description\":\"Meal deal\",\"amount\":\"3.85\"},{\"description\":\"Bottled water\",\"amount\":\"1.05\"},{\"description\":\"Banana\",\"amount\":\"0.25\"},{\"description\":\"Crisps\",\"amount\":\"1.25\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Sainsbury's Local\nQueens Rd, Watford\nReceipt No: SL-2210-04 · Date: 05/10/2026\n------------------------------------------------\nMeal deal £3.85\nBottled water £1.05\nBanana £0.25\nCrisps £1.25\n------------------------------------------------\n------------------------------------------------\nTOTAL £6.40\nVisa ending 9911 £6.40\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Sainsbury's Local",
+                "confidence": 0.99,
+                "quote": "Sainsbury's Local"
+              },
+              "total": {
+                "amount": "6.40",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL £6.40"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-05",
+                "confidence": 0.99,
+                "quote": "Date: 05/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "SL-2210-04",
+                "confidence": 0.99,
+                "quote": "Receipt No: SL-2210-04"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.98
+              },
+              "line_items": [
+                {
+                  "description": "Meal deal",
+                  "amount": "3.85"
+                },
+                {
+                  "description": "Bottled water",
+                  "amount": "1.05"
+                },
+                {
+                  "description": "Banana",
+                  "amount": "0.25"
+                },
+                {
+                  "description": "Crisps",
+                  "amount": "1.25"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Sainsbury's Local\nQueens Rd, Watford\nReceipt No: SL-2210-04 · Date: 05/10/2026\n------------------------------------------------\nMeal deal £3.85\nBottled water £1.05\nBanana £0.25\nCrisps £1.25\n------------------------------------------------\n------------------------------------------------\nTOTAL £6.40\nVisa ending 9911 £6.40\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Sainsbury's Local",
+        "confidence": 0.99,
+        "quote": "Sainsbury's Local"
+      },
+      "total": {
+        "amount": "6.40",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL £6.40"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-05",
+        "confidence": 0.99,
+        "quote": "Date: 05/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "SL-2210-04",
+        "confidence": 0.99,
+        "quote": "Receipt No: SL-2210-04"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.98
+      },
+      "line_items": [
+        {
+          "description": "Meal deal",
+          "amount": "3.85"
+        },
+        {
+          "description": "Bottled water",
+          "amount": "1.05"
+        },
+        {
+          "description": "Banana",
+          "amount": "0.25"
+        },
+        {
+          "description": "Crisps",
+          "amount": "1.25"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

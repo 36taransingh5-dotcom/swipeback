@@ -1,0 +1,158 @@
+{
+  "key": "4f021ef2cca8903f9c84ace74f76c29c75b744f4bc007ddb5a8b3b1626d1ab48",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:20.508Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1606,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 676,
+      "output_tokens_details": {
+        "reasoning_tokens": 348
+      },
+      "total_tokens": 2282
+    },
+    "output": [
+      {
+        "id": "rs_0d1133d1022f6b30016ad3229d7cb887d2b68ceeb4cc17e012",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKk0FCYtxGjiinbFaI9bGZPcL9LNGnubI3Cz6JRaqQGW0sJHtMRVkK8uup9hXqTwnwlAd8o1bl56I91r9mVOMoe9zJ51lTc4yFQfFYzwTthc5T4Cu_HonmXHuQo5PaOATkRhnKg9rBGhFs7xzbcHXidgLKXFDVTsOkVl3ftFuC70sbYK8wghDwJDSzRNqlFK55atLMYksXWeGv_8OQEN153ncU0V-Vw9CMdPZivEADX6nUOu0pVg8yVc1EMyv2XKbA0lhXrS7bcB2g0q-vu1xF16Usabj-q3UqsEacYVzibJsBnjNsMrBYmN3moljaaV64aacNzR9kheeSarD7GijDi6FvtSlBe9CXMsYw1gNBP8W5VW6__r-rn3YBe0w50ArE-OkHhsps-gsxYD0cD_AqtWYlixluBgeBiDyMVjoY-IdPMR-Ky8Qj5c4pp2weq0iO05R5adnb3LlKEzv1w5hpB__f-MDdkSD0grgsaebbl9twAR5e8UYpNC3FxbqB4R1u2DZq0SGAMOGF1WSpElcp80tBLYMcOIuercMY-ABzupROTqKEGNV5iJ1Fof0NrAmpLQYT6C4xvJecntX85lAUJmTO3sAbAw2f2qNBJQ1abHRGIuNSkd_5-MhVEljffjE4VdOnpEbyVN1qxIF2Zw9hNYR6CojnAlztLxraGZXpZKyYuw5IhIoBQfFSxmcbrDKXIUhlGCKlmzh1jRnRDf76mXlDj0lyyuDRUM9PdIBNkmBhd3R5CKHVO6r5rnb-o6kMDBYlqaIV91daDS6Y2fJQUuGNQqmA5XWwaKlU0722AbV4MLwv59hAi9ezTtEr9VfjmOv1E8NAe29oUNWJd6AuxzrAmQ2ge_tiC041rCoQFCB61aZkTceE5Sq6ozTxeRKcE4f2nAVeqmSnguw8jl17hQR251wMppBVMyEbFKPl99ZT1xHO_b4MWUPkkpl0mSdf6qVXTeMcfx8Ss1U_KK9wND0q3Phl4fBRQilEojtC3Xk32FDk6jMqHdOdeIeoWI3cvjjS3cgH5lgw5d9-VxYo2eZKgfAdWvejzHTr6mUKgfIVMbFSE_mHr8IC5SACaEVq0DZ4w3n5J9Gyg1i0XGIz8W11WOs8_GqFOYV0G2PzZV86WLwPgKAPIksCR7Z58MznL8EILCzdQ7otLsBNXxQuPfV11XEebccdlTkngqczW8bqKAaVM98lW85S6EEaOc8R4SH9qIeLCGP7-cv2-W4KwPak6WAqlR7Q2PiWHzhhm-HXFvr7kAb8mKSguz-4OkD3SJ6EZtbCxQZ6sfLlignmRI4bqiKZ62hnZiYR94IXssHJ0MX1JmvpgmFENMsrhZEp_uySetfFOH9CcciSUuflCUvcLftp3bxv3rsrfm02Bnyo8yuFwOP0XClSP2csf4Q2DlFOZfDlV-rnioN62z2AuL8wtPOsu6vkdwInnIs-m2xejjiiJyZLJYEzLsPpXKa-p5MDZggrc4i06fWj9yjBTBXMwb04_hoyMcs5oL767q7Kjp8zGQePHlmx_Meq92aQdAtRDgbfH66XsuyswMg7k6I0nRLNEbQCzQXNWLTUczeRG9m6UmfrAZfl4bp-AVLfII-OUJXrv1EqISfAN4fRdIABudafY7ygLxhriKfUjpyUuVDOOZ_fAA1g73Emm2DWSTOfintv2ObU_iKPWG-k0e8EocyjkWEAwVUkFK_q7EmQ2d3HlFI5x6fKQz3kkb4E27gKNFKFcFimsgs2pJ86C9WkFLVIMEOfJ72ESqXT9L0qJ-Q4L9mtAPhdgGGaXfS_vodl36hhMpZFckfJMMxeX37OFceBlQbrrdhSl0uCgDD1p498UEtMHfyWOGuyD771Td8BlHjia7fiB2IhszeHmGMDLec-NUV0liMMmnnCP5QpMNjqnkEugcebBPrhhvdIjaNKqh5I30zPBbxyPi6qSAZe9kZsMgc-zUYG2_uKlH9j2i3QE0BkSu7eu2bqKK7N_N3oBGDOcC1iQaEBXQXtDubh1RyIgVVmt-U_jULD-7EhQNU9t6xAQJxGEMoArBQI7VlHpbuLAvYilypwIQgx2hd6YiB63LjdxVNAi9QITHpA6dyLJrRAO8JfH5EvoSojAEnhalKHzzCzLIrmho_Fmgbjc02WedE-KlVFICXqlm23yrodCY5wKGW70kRIjHs8fr5QY1VZ8ZNkZSQa9x6yLRTtjg5bq3UlfzI0IOJLb2AZNWDoVhEsD7rAkaloXIm7tPnMJ4jJ0vynA9MRY8Fy5ypjuyBdYm7R5cP-uU1kJhQgIZpaMKppq7ZWYDxhvymzTwOzFxkaYSPqD-RGXt6yzrnJVxBokrItzqiCgSP89aLugNzeaCfblZ_z9eUXmUPHkQTP_T3VqBHwL8L5oZvP8TPIifjnvpTetkP3N7jm8sPmNpHcMZx3KeWK0sqqz7K2CmSvDLyR9dOWc7u3AnReaqPD9b-cULu0P6_Kfxzqi1moXNINPlrJazatlbvixwR6nXk1FRlmYHkmcypiNswv8MhgIcBsjqk7_tFNHhQMCrKcQA06IHK69onsNKQ5-J0xnWmMsLbbtIuOp5zaz38pppEDWizxdw7Io2zVQ8-h2I1P71p9Zeiygr6eDavAGISS08t5xwKK5wqG2KDbx5TcPVWrHez8ltRUkiRsD2Qtsdk7IkYSySS9zFbuMS0bTBCzPnjzkVU4qdWw1rfGk1ozPRNzanmJG6gKPvGlpZlCE0stnhWfLUPye7ec_zH9MPAG_BebGEetHvKP_jyJFX8ov3CLf7x2TyQhElLe0TvIds-4AwkLFwPAL0KgWTA6qLAsmm95I6kSRpaJS5xgUTl3O9mUy2FXuZaff34OTuXskfZHk6iIvApig1BRXvgZzLm0IorY6gYTvB-hqpsJUnfG-9_fuVUkQXHjpzJoLnTHYfVag7cPiScuMXTYb_C_MBQgbyp2guIKNmUbujwaxu4TsxLCZDOBAAHuAPCbMiOYVWG-JpIFrVAhI1-SToCVJH52JuGf5G9lSNcYOOe5lkyBzaOLTkTckcZAGg-48P0MmD-DvwBhGgfMgyEsUrwnCCVDO_GQXgL461k10B_xS4c3UmN9O5xHfpnNyEPbxk9ZfIZv23VbIldt13OiAsLDMPki504nJfmvvSkZpEXjd8ZS8Ch3gO3SsLKVnNMC9iCrIejWDaXTYr6dyuOXwkQtRfs_J2nJt0HcZjBTJH207js2hrRY1cJN8vBdIuKbcgtYlA5kxDDsmGtqCs18VkygIfjZHglW0Bj4gTpqSO2wqDmiBXp63L7f-PfTEpYB0xcsIcrKe3BfXZ55Q8K8e7CbofdGNgyFMOiHCE7Oy_UUXD7oDlrboetpKCNsPzIyWIuVGoKzKEIVxjGJRLo3-EMx-52Kmrizot4SKISBYARmfH87bJefE-q6ZoHkSAMf-bubftu_p3FYJOFiIVFP_rfP80g4awDL7ApuFXxO2fJIrxgXXghLVsfh2ReytUu0-loXyk74U-xiV--WmUoXa2dyJF4BjqT_YKGPVB74lY9v81JjSdQKBGDSqo-2YUmrbglvnwt8mBtZFaKtQOND4pWkayXCqEIOem7gg0OqSYW4n5y1ydko4CO3z0i-jCOwvUtMmAcL89hHrHihi_1VeIDUUx_YgaVW8PP6Veamhlg29z4E4vfJQ5CQwbqM_5t4yNl_E-puWhRKNfNwGfjVbvBaK0LJ0bNaWqz1tGdCHAZ1dzlDawt1uWbSOH26y72UpRUXs19Owg5o4MJgZfDQwkF5ev7_FhHSbmQu4S-X9GUSs1uYD0s34IoFJHmprOJOSMgpscoVN3GxE-BF84AsSHgNesPmgUXexmQ9yAnD__yyNiluLoRMYy-vWFq9P5-K0MaOj39ijSSvJxbFqU4QSOxI6K7tp8ejKzvAwu-xV9YWHrRZl_P4uOgcXtLB0X8g0_irWpKvTb6MX-EQaD9HwSdKAa2WNgS5l2n3ksribxV86QPab_UZnoHKnF4KsrTQBfZn8S2H9yy39wI-v2u0Q1vYMlJ5itfWNibQgWghGwCGL9yjp8JZQf_fYrdmMr31KqcWB3jAgQqNDmUD7Vc3EWDkps_6F36Nimo-GUrzNIOQdlX8bg7esAeVwpN_HosA6rDByTVFqYY57gvQVZMg6k_7EO6Y12Qg-51mbiS_lApg3qefMq9w6DKlMvyd5JxoOXGNeu89021fi8KCFiu2XbUCUk3Fd8d4u--31PCKBLCb6JhAhkFeIiay4e9PHdwyksV5jmyRrtJqyX8M1vw6SNt3FG_Nx9txeBNsRUnjEu7qrqrTimcl_pD5oZvAB_nBoEr-KCP4yV1HPi_oMQ8O2a3f0BVxsYtIIToay-wCcxdyCu8LRl88rq9K-gQzVN8hF8dijrZfwRcg0nonZO9EhetusAilnqyz2-hHVMYvSUfN4urs9NzE6ydS-NvxgXuuot2RUglGCSiQKxhFzAat_CJyRON4RrawQYs3YfJQLvKoYTUf9tadRPPyG38gkixFm9D8h1lyW2HV30mci212WG6_miaXfjbVnvbz04Pdpi-JbmGTy10gq8L2emBYzJ-rXtjkLTGWvEuHV0fHa6Ax0ntI7Dakjiiy1Z1TrChnmDkV5DS9P3u1iC8-25rWn9oMRvVWvjZ8Oh4KQH_H2a31_-Ox1-7FD4RA-3DDPZHVQsoo0liMY-A8I-Fc6ZkwleRHj3UmyBqLV5d8z-oF1c_0uMR_dVxBzv87Q8iz5AsG2nTgenenqTQQ_sSuXj1W3cRPZ_He9KjE-ZW3cy7TuUnQyah7mJzNAIFuCZ5t4XFotMIG9Ylsd3LO-BL869hcyR_iXgFi_rtV3dm4w9GLV8sWMLZjT7aOD2I_5ra__M3aZ-W5cV4ZCEZ47dWxpVJsg6LxBDyBdZ4dpRyg0Tgjx7ebro14-iEPePLQ3r1lXJXsAmM099Q_bMgBxQxRBWIzGlBR3IEOBH-9bDHo2J9DJtpTZWr295902xu4_fMXQMlns49dO_GemxfQcRQu9uqFvFxvzoozDmB1L0JQTvXph_brV9orV2Ovpj9TyrUgU3CGJ-uc8sZvhIXHttIICHQCfIP7iXYTuLM_0RzNnJKH2K9vfabMeTp6Vd4bBkRmEGBFa1a2On6YNUdhPc3rChFnPlcEHWF-sUP0dbGHec3lmN4LvYelEGWXKC0xQJ31Xqr50I9cFdExevJOb7P7-rofY8k5ZV5xCJGGg6P7pOe6XOeiyWjyCc_8HDuPoie7lBVhF3JnC0D8JArngWVYCIQV71y2G_feeI2Ygxne3BIOHD13y--nem-68C0UymLIInempK8crQhQmfED2tjaI0BXR5MQbJ1g2_vBNYSTiMbVmtCb4nZ2wVLwuJ1gmB4pNU0RG2HUApZNyJdAhZDTZ_uK2PqJqRnR4NGZLn8ztaoukJL2h9G6A1mdiwtvYV3T6DLO8RVfWqwxUS7P8coEFEqUT3Wg6KrqD9h8b-U4O72WwkBUOdjpR4QYKLFKsiD5fl6k_faBE0QPiyC9VuDRhiZwgwDu25NEl-yT2ZIaa7fd7Y9p23_GbhgWRvdDywC3kLFP_rPElCh6vqQ==",
+        "summary": []
+      },
+      {
+        "id": "msg_0d1133d1022f6b30016ad322a1f96087d2b86b64dd208ea60f",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"LONDON BLACK CABS\\nLicensed hackney carriage 41022\\nCUSTOMER COPY\\nSALE\\nVISA CONTACTLESS\\n************9911\\nDATE 15-10-26\\nREF BC-90217                         22:40\\nAUTH CODE 099112\\nAMOUNT                         GBP 27.00\\nVERIFIED BY DEVICE\\nPLEASE RETAIN THIS RECEIPT\\nSYNTHETIC DEMO SLIP\",\"merchant\":{\"value\":\"LONDON BLACK CABS\",\"confidence\":0.95,\"quote\":\"LONDON BLACK CABS\"},\"total\":{\"amount\":\"27.00\",\"currency\":\"GBP\",\"confidence\":0.98,\"quote\":\"AMOUNT                         GBP 27.00\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-15\",\"confidence\":0.95,\"quote\":\"DATE 15-10-26\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"BC-90217\",\"confidence\":0.9,\"quote\":\"REF BC-90217\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.98,\"quote\":\"************9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.98,\"quote\":\"VISA CONTACTLESS\"},\"category\":{\"value\":\"TRAVEL\",\"confidence\":0.95},\"line_items\":[],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "LONDON BLACK CABS\nLicensed hackney carriage 41022\nCUSTOMER COPY\nSALE\nVISA CONTACTLESS\n************9911\nDATE 15-10-26\nREF BC-90217                         22:40\nAUTH CODE 099112\nAMOUNT                         GBP 27.00\nVERIFIED BY DEVICE\nPLEASE RETAIN THIS RECEIPT\nSYNTHETIC DEMO SLIP",
+              "merchant": {
+                "value": "LONDON BLACK CABS",
+                "confidence": 0.95,
+                "quote": "LONDON BLACK CABS"
+              },
+              "total": {
+                "amount": "27.00",
+                "currency": "GBP",
+                "confidence": 0.98,
+                "quote": "AMOUNT                         GBP 27.00"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-15",
+                "confidence": 0.95,
+                "quote": "DATE 15-10-26"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "BC-90217",
+                "confidence": 0.9,
+                "quote": "REF BC-90217"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.98,
+                "quote": "************9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.98,
+                "quote": "VISA CONTACTLESS"
+              },
+              "category": {
+                "value": "TRAVEL",
+                "confidence": 0.95
+              },
+              "line_items": [],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "LONDON BLACK CABS\nLicensed hackney carriage 41022\nCUSTOMER COPY\nSALE\nVISA CONTACTLESS\n************9911\nDATE 15-10-26\nREF BC-90217                         22:40\nAUTH CODE 099112\nAMOUNT                         GBP 27.00\nVERIFIED BY DEVICE\nPLEASE RETAIN THIS RECEIPT\nSYNTHETIC DEMO SLIP",
+      "merchant": {
+        "value": "LONDON BLACK CABS",
+        "confidence": 0.95,
+        "quote": "LONDON BLACK CABS"
+      },
+      "total": {
+        "amount": "27.00",
+        "currency": "GBP",
+        "confidence": 0.98,
+        "quote": "AMOUNT                         GBP 27.00"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-15",
+        "confidence": 0.95,
+        "quote": "DATE 15-10-26"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "BC-90217",
+        "confidence": 0.9,
+        "quote": "REF BC-90217"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.98,
+        "quote": "************9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.98,
+        "quote": "VISA CONTACTLESS"
+      },
+      "category": {
+        "value": "TRAVEL",
+        "confidence": 0.95
+      },
+      "line_items": [],
+      "instructions_detected": false
+    }
+  }
+}

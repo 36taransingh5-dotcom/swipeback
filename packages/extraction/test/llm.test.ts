@@ -191,6 +191,6 @@ describe('record / replay cassettes', () => {
 
     const other = await replayer.extract(jpeg, ctx);
     expect(other.status).toBe('FAILED');
-    expect(other.error).toMatch(/no recorded response/);
+    expect(other.error).toMatch(/no recorded anthropic response/);
   });
 });

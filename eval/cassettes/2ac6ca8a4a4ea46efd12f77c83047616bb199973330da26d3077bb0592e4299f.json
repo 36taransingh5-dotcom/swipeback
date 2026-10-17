@@ -1,0 +1,176 @@
+{
+  "key": "2ac6ca8a4a4ea46efd12f77c83047616bb199973330da26d3077bb0592e4299f",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:22.824Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1721,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 901,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 2622
+    },
+    "output": [
+      {
+        "id": "rs_0bfdf98476e7e81f016ad3229dd7a887d299478941d11e4756",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKmurSNDTr6GX1ziUrLfW3PHJIEsvUYxZptjPv79Ikh0zJjRxBmKANj7TFFCItpkP2m5ojRA8Ppid-NHUFCKp7dFZqf1HwfEInwkQKFApt1nA7uyzbgO9ThtxeAkFtzT9MMDrfrZMeUjQ-Pr1C7nQ_gxv9z5XSOtiyb7B6XvwA34ehkx3JOEyRJ3bPnZWhRY4rGQbxkHFe9UpGWA-GBHDl8HFTDV1-sXo-knP8zw8otWJJHQfv75c8LyV8-VwVvRiQxp1Ch9-d5vDmihfmhsx9SAOOaDc1uKMyoTWHDzwUWIo0YFWyEbh0fqa3kkHOlsUObfIis2eZVltFUW2nUdOxYNvdLt6aZe1umMDWi44HAdTVhWIoM7Lk3CzcaI2ct05x-CF8roY9O5w03nGKxobJ66QT349nRxtDs0d99SihvuhjDjIS4GhifqGRjuFURcOLsDzZcC-fDjYylXG8RF9U3zFjC71jwuGk5S_V3dzfkkW8Fobhx3SXWu2aFl65VFyw4sCyjt4_rvUrctUV0_x2vZhnoKy2MJi339775ssi681T73AfZd7mPwqp9T4VmveM-vxJk2ZdSYiUDc7hfFC1TWj3Hg1ELFV9H6JtA5SnEFgqqaslouhk-8cokCT_h_0869jRhTSwyFXPKsFHwPOmwf3QGgL6WbcDFqGsTEH0tZBhuo9hH13XW3HMAxn9IuBlDVhMp35T1DVMYpFLPF4s2-3R6dMYx1kziJcOMMAM4vvCaVHoTl2FKAQXCAbqqqovyfP4uyXQp04ypa5XEOzvgxM_3dl9GCksaDSMNDqc6SYkha4m9yDvFpYn8Bsiixb-orFStVHKAdw_R8fVc9qWiFC7aggRdDGbUesFP6qD3CuWZIGyR1MpJpIkQTwACnR6fFEMQto45raDqBS9vlGT2LtLSu1uCYhPjH4KpFUBRD6H90Xe3KNWZ_6qHRPoWni3tr1jrkqVsbFr3oGggvjbolOOJiSnllcdXfTaLQT81Y3af9_Xoi7E8Yf3nOA2UOdnuzjzehyFD7x2phMJSH5Qjpb2sNfBmVdXpNoblSZkamOAxvLf3j_ShrmkoJGACzfpD1dZV3rcW8Vd1oX0k7xdd7sjNvp_IZzC-KYMLPZIxHx3zagl8Bg9KmuF6vYpbPWHphUEhdfJFffz4sJ1cVVtpYIlQYsZc4vHIExIsBli7UKds9XHpLDhuuArTcmuUt7oz__t4GX1YGA_SCmZ7pYD2xo5yxsxlibXXjhQJhNekirMNJikisIFpKS4MIbZLdRLNOEEzLdC-6GMQqSV1gcMDmLIP_pBvRAzMHmUXE5b66UazF1f4ko5EbOkzA7tA6pVPoalSqMNRaBEdZPHDzVOpHc060OhDnfO57yv5wWgYdbuS55p2dwDiInvW0XJ_5DTZosL2Xc7Vi2ys2yb2VTSWX52LEhKb0vxBUUVGTQd1JDEa2PGkF8SmuglZ7kfKH2PdKfZeAgtJXIDHCR-S6a2pqt-aZtIYieoSWWBHrjsE9o9xPc5EM4rck11-dCnL-qhXotWHx0GFH5n2R2D2_-vWH4GivqhYfcQcY9n2_IHCvHcriH3SaDM5BCE4R9NnWsWPj__2dLeVPqpJf9NZaUZ_v9XEiLYbNR6FVywtPMad5Wq1qts7QK52ICmxQLdBGtK48izeVaHd7iUgSy1WFH1IJPubeiqjJ32RkfYAQ14f4r7RmZR2kuxSxnWvhHG-ON59DV2JITlKqNIJS8scrWAS7KF5tglAAywqjVPQjxOpkVsItR4nHGbRl0jKoAoO58kvs_F9Dcveq5DVo0520Lkzwkb6SOaUH1HsNRzKUtbq1w3t3fefilXi3BmA0oIfWubFP2qb4Gpr9-6geVFebZ8m12p4h7VXVFO8MJ-SIXo_Pq0wizYyvcKn0GNSDJkgmUONmugKlL9yxo5VKghXn8fhZEyp4NuwSUDacLOrleWIT66A7OnYJW8_zvNtwAwprPDK4UjIYpw3V8By7u4JPLRliPEC5oytoMZF_Ojh68wc8wXjWENkG3vIuH6PF4d0te9CnaOsAHupEWvCrfHgZJ-Mv0CCKI_Qwn5TjXt7K6QEPCcM6HDkCF5g_iq3yI4M00s12iRaow50rXnNAPWofpm0_gvG-W9mN0j2kZ7S2t0ektIl4nmGIurRByNe0_2pqUaPu_G3y5573F-pjjRyYmqy_BVoe5QE3MsOM3pvyydy2LV-W1PLrIVmaNJAci2hKuiiZgFuKiM8_L1ttFSJLnzMEDiekGhlzqCJKcPjL12Vi9UYWAz8vRaswolaCfHkJCwbSfqeU1EBIyX2BVD-ESWdRtlq_5T7DtB4XI_xxH096MdM27e_CiqU1HmqXeTexfM56Uhk9Vh8Tg2QM9l-SsjVcyVY0PPLnKZPJtEJ5scLoL-uZe_jCPPmzVWoQ2F08aklcCrEe6oE5yE7UvGiVNkf-vI0MkHWiLD2XLo4RVmT6CKKjNtTn7PToGAqxLW8mwZFQCO714WBGLDG4VRE7Y5iOf1qCkcv6tSYQ_eYmd8t7DR4hC300zASs_-ZO9YsrGO1dG7PbAqXmjze6RjLE1iQb0-8cZXAkJXQPHtpwk1H7tM5Qj57K2tP0jodUSvJqKkjYeGDuBCGaVIPfFkk5tetLAA5FikElMJdQgOme78Zhed-kBMcj3YQl1fsdJrMstpE9HxRCZvFrbyfLblV_wbASS4yMbYIxAEMW03cjIODEdd6CowrZ_U8eDHjYcxnEnfULR7fR6IaRJBwprFGogVqZjCBdNmGOs9lBRHbinRUM4F-U78ZxUwT0AyfQnpaKhpJr4HYc6c1B2uxOz4WcOjC8gf5r2FhdNkpBMgGLdKGyNw3eLHf51Rdk77QO4cWMviz2pU6RiaZp3FJ2JMP-y8bkTvgQcRpStFL2QYV2EnwhL6yjgqXKXugsh94fIWir22TWMJoCk9LJbSQoyAyP7fmVV9jFWMQqbzHbb6B4jm1rpr7I3T8EMqLZnQ_b1MJD4x2p-fDBIcqI3c1GnQ7nzGFxW99I5QjgXO3opeIY4dQnTqDGhfLYVe5RIG1QHYbmuVwercsfpQDkU2nwEncW62uAwdG-9TGW17HuzVedvsWt-ytSFJnEjl3Oul_zitRJAPwdcq1lQvqi4Ot8Xs7mTTIRloE2RIWxjhCXKRNLPNdKlR1xtgD52To7vX6uPXn0GYvk0mYfVfNGDJRCvr7NNUkKatdwe4BsnsG7kMs4fEWRJuwgIoYmpMO0T-9mPtP4t3yesVJKKk7bYyWIqKDG236tuwJiqCMk1U_AX4YZWGlYzpqyWRGDBPBS61JZ_erI_U0e_mI3xlYGx3mjcyrLlyFGMdQX4rNXlg5BaXvE9b4Yggeeu9-icGNwvKAIHrxSPC6zdwXi8ap86CIloVnXa8d7LX4RTXJp6rsquKaT9Ugv4z2NA86UJdkes-plgNgqBHuYlZjW31jzcujwuu_qEgga4BOX-ovPqSDIWgFCuPoGrDnSyY8MBgYvJz7KcKwopBA6quaGK-3Mfam6aJpxcTPmOFZAaIjghy40pYcxXkpZoa_x4R9hnoqvuf6XbgnoFPiIlwiYz8lX_Z-4oemKZrl9oP4-M5IF5plT-vswLpC-N8RxixWAlyYGowwfL4R8eACxqtlrT_AEo8IO5oWpkjYBp38k8A_0JGJMTYQD03D3yZ2Jak23D_1oZM21kh3D7bZG22uydrWeZSPvEp5FbUTTtZDY7-2QNyJXL39E5tNd4gN_ivUyTrtWq7dIHUyVpkOBnkItWwmOnsD1aVKx6Ue8AVRKPk00ZJza-Nh40wBc6DP_PO-Ubtz9ygOJSZAFpvmoeM0lNBDKuin27zDqq3QNXQLXQ-r83iOg8AYN9R2EmDuJv_rdQOvIzAi7xx_2XJvpPeVE_qBFXOAxomHKkNJacQ7S3nVkCfuDbp-lKRX8BIj8Ike5PpEwgYwrUNVw7A--LP8K16ZulwNkqcffm9WS-qJzPjkrPAC0kW-8pIF1hdFfsQuAM3brJikVQ9SSWDLS6G21kN8Jmg0dwx8DYTPCI8ThqTvyXO1-B4nACZ-RyJs7C39cAxJCvwD4KBmVchH-Juxx24Vk7vQLgHmD43Fn77LQA79D4vfN3CnISxn0uhbVykJ_37T-sUjmvrD_nx9hpILlCeWW-FbtcVS7nRQ6LutCJrl1DWR-ugvqePOQOLqh-7wML1ffnGQIke5f6NcsCVdQCejDoziDitbWQUumjiXPKB82MlPvCxyN-pVO2aidilGeW4ToA8O-qRDh60Y5fiumr5idw3yojM9dJ7Ln-SI34743yGCAcyr0E_P2ri9TCncId94dLLcTvogQ2gZ2stgMvND0x41zSkzxRdAVH4M9KsFQLJyaXb0skefp6QNCXBeHomXNTZwMFZIab7dV8x3JNprWH4t_wYVEjaDKNBgV4kX8DRtLWNW636lI8uar249BXuvFb8MjBxrZYmByj_42UMt07lvQEHujsWSOgJGqg2m2CVQwX7swZmvFXY_LRbPEtUmJ3iISNWISgq6A7qrmNu66aPNGDNH7FkUdaTYnSPYG1NEI65YNiqp9-3186Zgnsx0XSQWa81up8c6b0UHCWihIpsZ7gLY-1_R9OhaMnuWXkTDBGgscgfkBlrx1Jk23jqapVdWu--fCYeVG-uRZZG-zz86TjWQjimSHXTSG4F35OPWOZVLG54fJ_W0xQFnnVPmFhxOC9rpRdNOPpTZOTgkJBaP-vJ1-4v8Hf84yi2hypZ9wKCb4m3BSb61qPH-d7jAsdJYomhdLL7Iiv4I79l4PDGuBOo4zIv5QWiG05FYp0c0evjFrCjOnBgiEzXTbYiw7R5B83MNu20ex7MfstmzQkksNfdoM3cHOHIgtAO3Pl2B3OJ-MYzADzkABBjg3DxHdRu1hhAFCwu3Op8uJ2qIPFqfcKaafZ22fMDh-R1R3xe7dATqqKzs-L0fc0pGlOV6wdJ5u7QEm-XLo0UQsIlFimwM5in340UH1v_LqcHabwroz0fxpCJbFSC4_MNA5GNfx6u-C-ggE3m-fYnLlqP2nbY8omqWiWPYLDHUE2R33W-bL0qWPsiOSP5tNhsbWmq6CLFSPEptDQKpwxkMoZb-q-Boeot92kHirn7TRyZ_tfjFpYQ5iPEAdSr_Q-s6qZQh24i9DRoJLO8zkju7Txv_q8LfVbgrY2fIGsIzfSX_fjFQyq4zhm4X2B7ZGqizsRJllLUdkwoYGVFO0OVxPyoIn1uN-HBKmRStXdFEnfwpRo9UZX6v1IYnnxBeb8r_r_OkY3kmMsfFnBgjL_VVUmYyVIuhCDwIZu-GwqgXqoNbB7CpV-pJ3bKlEus6CIAQFb8OGDi2blqFxlqXqI7O-LVrRCox5qRkrEWFh5Iseo2bAfENoXFEpYTji6KmjxcEotvuMwcp4v6BKVxD2PZrntiMfvSkkdJaLVckcnRVZ2Q_nf2QLj0MGLu7xHvFoEFysYPp8gp74qBMZfTdqyqY_YKu9EslOFIVMv7v8lAXux7dZ_kVxlVlymXrfeSvRFvAeeW76oDmkkbbYvaDxGjExBCHsV4TvPGkpj-9_s81u7rnKCftjfgBUCrMxBuMVjLTZv-TH02B2qBkXqmoiV8DF7QQfGhNz2RyzP6o2CtvN3LJid5i_VZMJNTASAjpMPRnISrsHxSHW6gdjk01MX3hHHtb_yHKPqgAUV6jx2r583fCKIZOMB3UMKiUM1R7o_27WU9FQuMrV-gyKqno70PxrFsriBL8WDjr-L76vJtnrolwmOGk9v3qnAtdh4Riv7-R_2lh22mbm8we_iCH2R-5ShRW22b31ZyNgb6D43EVBpFoLQwrLCmCqr0hxmrQ9itWX46ZEgBJRqavZMunufH6UpHUXYKiE7q64i0mu0KE1uyMP7iWYVzzCOi1h2YLuAABrk8QyfAcCu86dD6pdjofhYfHxal6bSHfGPqizEbRoQUVBdeMKibptQJg56iUL0gz8QHqXVy6LhYSH6b6gjD8o5A41jbZegomDqrvSRPJoeVROt0iFkZHwz0nXValo7Fkg8WakmxWCyTZoEIWsEY9wx231MQkiVEUbOrJbjU74ZtjcChGn0h40kw9asnEP-Uj5Z8T-rXv3bCgXs_FE-d8Hic501Kf198o0wLjHYU_3G6f8n4g_Zz8ovvFT-ZjD1d74zlHk0vwkTAMNFVjJKiTx8HvlqmZhG2bebPLvJ7NESsjENx6V-rX3oQGhSDJPxaHlBJXO8xdVC0OwXwAsp5--W26M7Pg5cPSVSDvVH6rYyJZQ8t9HiwvucJUqBVhTOAQljTKwAR6DsWAXJUBtgHluO1VwB3vUvn-Zs0bySNXOTbfJjZtFMXw2Gc9xoKf09e3v2OZ5lsYVl4rDVtIfWhYiIHJjXnwwFgGTnxIdqoFjA8zRqChmPciEmjSyn-SISVfnvzhBElbRLGd0V8SPp2eGRao97rVQ2d8bXtpQFRDYaOiQmtQykqs82AlB7qSSHluVaGqwhTDHdv1JjR_7LEQdPtC4W-jqgioJFqCYFPk1jlopjQ3WH-Ha6fOu07OIGPQDW-H0T0933EPTtaCvnIYqX4RNnDRucHjHSGEsLwS1DB03aEM3p3F11CtK9kWyfaRVEJmSQ6zfEQs1YacYnIKZ8Y1JpK_uHyqafkU43LCNoZqbHtrL3_Ue4qPloMfQmeGBqKjcTdqS8xbOsJAQWRYu6Eas_BCUDYezk5lfLFE0Uo0lv7HvivoHM4gD0k2XXHqACmSEnp7kOoTFh6MVdvYjufIbElhI9fC4TbOecVteETC7PiKcv-p8B0AwSKyzDHJQOkMg4fXkVSf4QoKay7FEYfdITngLmOdggIqOlp-Hs-M5nrqx2LsLSAPlLVAeK6qrqtCeORz-hD-TPsVX-xeyjTytJ7JLxw3DV084wG3X704gIfZ670wj7neQ_xpYjVe2R4DE6kDpXJQgxMuCOFwZs2BqpmwetElUI-AiXVPF9PntlNRrHDVtDNt0J2cfUA4dFd-Z145Hxq5th1ri6r7w_sbvhXR84XVGZWvsX69X1Klh1oJtKFBbGLRXNFpxSSs1BcEh-RhDkaph72-Xq3tooGNoHeUgo91pnv7AWA7u4PbxaOKCEZ1aTZPHHCOTHpiew6adK5jL91oWMM3-H2etx557uidPTuk_iNbVbXTKlpnRtfpjwPqVbXegqIUnlEZ6fj6EWJ_bE7HMQcNhaIlOZBMYS2yuSfL6wpopQAz-SzwfZZ4iFTuJaOMHJUwn-I4a61-UYm-mDIe6w7AX_mmdu3ZClgOmU8W3hmAE3GQDe1YaftmjI-lSjvZR7xsrdgtQI3PUba-68wwbif_EcfcdOxeLhtVeaMUIU0uOdj20KZxicENBO7xCVsTs2k2I60BfiyG-TId4SadRGUWTYHvEh0aNR3CWDB67kb9JH1MJD5gt3kwaXfS5KhXUndWVa9QJ5pkalxBLT5ozPAUQyf2-Y8WI7lTsWFTBpZkll96TFZv2VUIovT6Gg0m8EJnaguo-hmoasuOdYmUR0IYICKBfQd5XynIeY9e8_ZW8ZvFcutcJpUHYw-eURnAZZ_FqP0vG-XqEZlo6i2je-z8iVFmczpm7Tg_otGOLcHAH3Z61Yf9ajUYewessLzrwgFhaiq3Pe2a7f_9uI2ImFTYV-zSIxkwgCF8FrH0RZPMdmARCRBJREOY15ZrEZ2EhPc=",
+        "summary": []
+      },
+      {
+        "id": "msg_0bfdf98476e7e81f016ad322a4225487d2b4194772ada08d3b",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Boots\\nIntu, Watford\\nReceipt No: B-30091 · Date: 12/10/2026\\n----------------------------------------------------------\\nParacetamol 16                              £0.99\\nHand sanitiser 500ml                        £7.99\\n----------------------------------------------------------\\n----------------------------------------------------------\\nTOTAL                                       £8.98\\nVisa ending 9911                            £8.98\\nThank you · SYNTHETIC DEMO RECEIPT\\nSYNTHETIC\",\"merchant\":{\"value\":\"Boots\",\"confidence\":0.99,\"quote\":\"Boots\"},\"total\":{\"amount\":\"8.98\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL                                       £8.98\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-12\",\"confidence\":0.99,\"quote\":\"Receipt No: B-30091 · Date: 12/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"B-30091\",\"confidence\":0.99,\"quote\":\"Receipt No: B-30091 · Date: 12/10/2026\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"category\":{\"value\":\"OTHER\",\"confidence\":0.9},\"line_items\":[{\"description\":\"Paracetamol 16\",\"amount\":\"0.99\"},{\"description\":\"Hand sanitiser 500ml\",\"amount\":\"7.99\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Boots\nIntu, Watford\nReceipt No: B-30091 · Date: 12/10/2026\n----------------------------------------------------------\nParacetamol 16                              £0.99\nHand sanitiser 500ml                        £7.99\n----------------------------------------------------------\n----------------------------------------------------------\nTOTAL                                       £8.98\nVisa ending 9911                            £8.98\nThank you · SYNTHETIC DEMO RECEIPT\nSYNTHETIC",
+              "merchant": {
+                "value": "Boots",
+                "confidence": 0.99,
+                "quote": "Boots"
+              },
+              "total": {
+                "amount": "8.98",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL                                       £8.98"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-12",
+                "confidence": 0.99,
+                "quote": "Receipt No: B-30091 · Date: 12/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "B-30091",
+                "confidence": 0.99,
+                "quote": "Receipt No: B-30091 · Date: 12/10/2026"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "category": {
+                "value": "OTHER",
+                "confidence": 0.9
+              },
+              "line_items": [
+                {
+                  "description": "Paracetamol 16",
+                  "amount": "0.99"
+                },
+                {
+                  "description": "Hand sanitiser 500ml",
+                  "amount": "7.99"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Boots\nIntu, Watford\nReceipt No: B-30091 · Date: 12/10/2026\n----------------------------------------------------------\nParacetamol 16                              £0.99\nHand sanitiser 500ml                        £7.99\n----------------------------------------------------------\n----------------------------------------------------------\nTOTAL                                       £8.98\nVisa ending 9911                            £8.98\nThank you · SYNTHETIC DEMO RECEIPT\nSYNTHETIC",
+      "merchant": {
+        "value": "Boots",
+        "confidence": 0.99,
+        "quote": "Boots"
+      },
+      "total": {
+        "amount": "8.98",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL                                       £8.98"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-12",
+        "confidence": 0.99,
+        "quote": "Receipt No: B-30091 · Date: 12/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "B-30091",
+        "confidence": 0.99,
+        "quote": "Receipt No: B-30091 · Date: 12/10/2026"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "category": {
+        "value": "OTHER",
+        "confidence": 0.9
+      },
+      "line_items": [
+        {
+          "description": "Paracetamol 16",
+          "amount": "0.99"
+        },
+        {
+          "description": "Hand sanitiser 500ml",
+          "amount": "7.99"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

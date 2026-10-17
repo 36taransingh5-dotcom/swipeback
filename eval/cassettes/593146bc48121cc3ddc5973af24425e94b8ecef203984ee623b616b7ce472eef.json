@@ -1,0 +1,168 @@
+{
+  "key": "593146bc48121cc3ddc5973af24425e94b8ecef203984ee623b616b7ce472eef",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:51.637Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1820,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1121,
+      "output_tokens_details": {
+        "reasoning_tokens": 774
+      },
+      "total_tokens": 2941
+    },
+    "output": [
+      {
+        "id": "rs_0c1f9d05c034b1ee016ad322bf83a487d28f76cb3ac3c48e08",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yLD6xXcwYlLeqtkj9BXHn0xURZ6cbbiR5oadkX5rvOLdfy2OJlr0R-6iXrZrByfGgFHMwpherqxjknnoRxSP1iM8bpCnWRzGiz-UEogUenPvGUEZIUrLiFkaeon3mk6Q5piDg_FeM0BdCL2kmABLhtsWo3_I5eEJNNzS3i76_UjY0QYTVNokBICKGpYOjOOFcyg_U3thunT0s6MNuIrj8AHhiVEB_mtwwI_sEF2cjxWB5AesUyxzhjKNaILadRVrObFziLJLSN9SZnrxqMjS6Mz6l4jriqRtMmBjVTyHDuMRU2mKVYZ4i-fxkpiY0I5qh_nCi8q612F7aOxZimKLjFQp1J_a0xv0-FQplWZA0c1rVsVGv8m3I_iTjdba5vqn0UrX_NVQ9li3YOO39_ovE22GDVvu5dNGcGkwK6XrFDhUyx_RV2bVRN0HPBLr7rE6It8S7tBExxj4pfsEH-GPMIkfrq22129eJkKvh_lxybLijhNR-iWtkwUz7lp-xchDJZu-sJCKwO_borJ_1zKMOr6r562Hzjjwhm5b9-lSAn_MFpX3ryhJsqZcx1evTY6mtBA-6qAVveYDr7HbfE-bnXERcxO0e11TJZayg7MwgOcKIRCp7GYP2eivQJB72BEiRrZ3Hz2abbej7ggvWkdb7t2P6PnRxiRnhMGFjXESW-s8kwhcnAYmg__RN85pKEp5UwvjJJjrw_CC0EuL5MfEHz-FOxG5i65V3O_IKEUFjKBsuppMrwUJGsWru40gnVnwzdHRWPlb7RFz5M3syUudSIJeMsbwyzu_Ljq8H8VDS2thdrn5Lf-OwrYfDN068dcuLycua1Pj5DBpogAQi-skCdWIxtXVz9GcyHTyuyhwzlOhwZ0oUwleyxFHZH_CkQU8gjpVeyHho9ENRRmhysLYNx_n5csFXT2oov8Q6PQNQwXGdXDmQaZuxyMphjCspUW_Ywx3mt_Nvneu587CfNx0FcnZ4vDV2CojtjODDTjqLhEzlDLSnkgjS4pXA-gCLAIRuoSp2vOvoHv1uh380rrKQjvYRo9OY2P22-SqVXE0jB6kqakSufQJOnSKfPmWe9mxCAbWEwr0Zn0x0QgwvyNXU_ZhLZmI-7cn4D--0Ucd_BGqnpxZY_h9efZHozHDPthA11RJDRCBawgCealJaDxrzwudj0BifeTWNjNlkg-nfcWIEd7ZlA3Kiv4tjWUJKtvQCfPNtfNO8WAAqTWkcJ2YPTvcxQwwWDBvLgKahT03Kw6TJ4zehfsWbgRqnwKH1EANHlH5if4mLr_Px_2rkbSShVeD1HsucVx1vXhygOgXhEut-NkANLOIzKwANZion3HCrFpmkJJ7T6N0O21YMG74eZJT7CwJurFvmwlf6O181LnbPO6m2voQQxz5pFmU9IDxgZhO9T0f0g7ugfAxnD9BDpKydg37rVAOCkTz8JiZ2yjbcgDERxf4xaHCtoYjIgbeyIeqyL8-hv6JV0kLyX7b75U1ikY3ZYeoo9NEu8AMfO9Y1Z3QGgnthrAf4FUeydtzuR4JSgEeCaorFuSyArKLJHIVZ4OtqQRjiews6J8KOdoqMTfcEX6ZzOfT8cbsYnRJr5-LN1igSKXx3haPt9QSb0zIJXE7Ya1mPJRR8kOWiyc4uZS3iV14vuZfCTCWAi0oIvJYhB6VHKXOpnbs-kScR5wAzJETxPCRXLGSwCj9K_aI1hk6qfu5pG-Ml-D5eEk53s2FypYmGBP4aVTT-pIwwy-7wqyN5w4AmGpovOX-lkhl3zcD4FLsCSX5h20c5R3lWj0exkR5aYyPUW616CY9QeAogc7WRsxl1RCDV7LsuObd9pPppks5IH0nObduYQw4i03FXIWO_lNSWTlEz1muiElA7mqQiK7JR2Aok5pn4v04Qv3iZGFCJ01qUXYUDdU13l1ohnBqD3LxBnWTufsolmn6Qoz6YGCd3FblYnafwfCQWJ0gmwjMNBFxFm0qBMXbm9UYb4dtZngk79k42ANDFCPlytkcYYbkhhFTnhuCocFKzFCj2ljjIcNGUygl7H0qa4UgDGk9AU5zTBH0XXC1FrV86XNXgVOsowMOcZL9ZfKJFIzlAIoslzuF9I0hVxI6k4zFBSkBgNgJJcnr6WKdCedOCFmO9A_jbimQfhtBntoAEEAe6ZAKqgwbxIyLEgOX61r504BJmLIMPzABlWyq1D0edJq5gSaE2w5wP9Ibe1-_NGfgeIBXXVXQ0qp0EMVgFZBHSOC9AX_oaCNw0Uscb1tRDXoOE7aCvuk_JUFEf-4jGgqBc4nZHxQjcg_8v0DjHsHRNNbshbgcWM62D40fGipec87oe_xortqlYMe-Klas_dEnDtQoi2cjcSHUFwlJsmO0iY1wsh9qGU0yL4N5sTa7t9Ge3GdE4eF0evKuPcEO1Xj2PH6VhZphbeKjFFf37JjVcSb1X9DLNFpF-Xe7S44C8dJ4JGmGgTvdM6GDOeLa6hCaoqu5fYX4T8h7A7k8TaWl3PwnejqUONDL_QjKyjOwOjICRnvQqp3E393UpALy0MB5cR6aGdfkh6LioKpaoVs76rfmyEeUwvgfJe1jOd1Twgq-rVrqh8DxfsI0g6_2IYPtPjAbPHPDF9UVxnOwiJWNTqDjJpSMYwLXSmg8F88A4oXpURaTDQRwDSG2eGws-fejIQkGwL1vgtXtJtaQhYmPxPSDljuUrjNVYbWzhrYd1kYMiHQt5rU5bn2nqCdUyBk_4LcYkzIBNwO1jVgdfEFb_5Qt4oWQ5ZeJX9ogDnejsjHvUUsdoOgp-SPbvRP31YJUn0XcnUPjAjaOuclZZuFpqShbUwrAAtfdLzIZmae2qnfKNg2moAsHhhd4wU2P7IZtuQwpD_QlmuQ2HCPhVfJLMMrWRFcnQgWVZlaDXr0gRp5Ogw3hh3S3xnVPk0L76MbCv4cXWeAfCO-eHRdINUygLBv_Aqs94jQFCJOkCbk5oxFf9ZzIFTkc_H8IMy70sHm6P8td99Ognu0DuQ_6p45t6Zf6isfAHRD84N-PxvL2aj05Gj76gZnz8K9QrS7g5t7624oYtbNvgyZOcYxZOCNzIkbRxoXfvLevngu1C36bXbl-L5zQHE0A-Ch-2hvjjGlfo5es0dWUUiw6noFT4SjWU36H4NTR02wTDcZm1Mr_BOtnAdr4tQ4_fM03e5Q3X5m5eiva-43UaGPiqxPhqGAk7tfYU8fgfe5b-a75mxtZ-HlE9qcSl-0JUDocTFYGQfftVi60UsYycmrYHz-EPHv-TboMDojm6qFu1ccN7nRM-Ba4KONdjyCNB69aHh-MoPTlkAjj-P3qu4TIU0fhAJV28vMnrrsmm8GyjXtOY-aW7c_7h83dVHON5xDLNy8ftXxhe8DqYhjsg8vqgHxcfKRWGjAfwzclG3EC7rOzrATV6YU8vyUfEvUVCtuTcPHmFp4UDY24AV4JYiaaYk2P0hRW5JQXb9JJNe9xurETuLTc_SlbK46twt67MkLU68DK7eTSebh4-kDqOszUup3zdwb5wUTwdpVf0JnTkI5qdX5-pnkpvJpRM728JEVXlxi4uhskVAfTL5C7xISqMzxuhM3CNgKjnDgY8jONW2Vrvjdv9dmz1JmhGdBymJKWmwoqINdvxlAfQaHKeT5NNTDUIg7D3dw7Oj3DiVDu6UGK7WpXwJXtOw3wFsNebx3JL5kbqKGVKaQv-R1cwzlrsOAlgSpQFFEjlV0FUaNDv4s_qs9UNxqa9yMAr7HNJEyRPJmILKKp1yYfOf2gdyweaWnJlkRnqaUGlkBeBFGuKRkCFGRTs1eEsBJjMOOIE32JPvY4nIR3zKcEgfCi7W-VFIASkqmy-j5pZBERTo5VqWjM60vA71bowrO27LDRDEn65RtH49LUK9iVaJ3YHg9OBuPmKtI49JtwYu0YqLkVvg-x5aLuBW9JaENi4jA4dVALOX4tw42z610VojEgfygVs4DAt8B7RbYT7mpDOn0f34xCkWwrhkfoiLhAzppKsxs6wNLGBg3B0ppljQsc4FFM6aEsRtFLYEdXkxQYvU6nMVGf4GiJdD03PqmepuEreQG5VOpTu2nTnxho3sApVsYk6VKSbJ_ICe9zwoux5xVV4psBt0vJExNJnhzDhUzBBRNNIPyk-ZV34O2_R1ut3UE13Z7KlnovisuJYGYO8PO8jLkRplLljbw0-y3Jf_kyStYXPD_unOl-wnhRfbMdGeItqc-X_I1qI0BqyzmjpI2jtIQ7v6-eyDWqwLMVPVXukCa0JeQ3CQDNL91zx9HEbgaG-0LjBCTBWfet3VoppSYqzzs1sfAF9WC0K6fgDRUcfb5dEmUXXzX6UMPiXB_BGIlE8fOSblz_sShkPnX7wdkXrXrnkeumnzBiZS3zYoNvTtzwdzVtfuo8gC7nXn67ZYjrEhOMcyd42cwHsP0k8D7hGNV2kze04Tf9r45aGjE5Ed8pWejqrJI8WHgFN0nEL6TXVZaSjxV4A2tZiCm2QeSDc9rWvJ76luKRXaUaEA2HQSAUbED5d2YrsND5scwq1Z1Q2pGG9VzAj6HoIRM6QYHIZyGHo4hEgVf0Mn5Djl-hnUs8u-sGR41sVDaSV3luq4FBUhc31Hi7JsHrEXEoqpq_LozZFnNHDKwKnPIMvB3KsyMg0j2gmgJ0_R55DbmS_uqCbNIPyvJpuusPNPFeGzhXQ7AJyCvcnJfAhXO3AxryhO434_s4YMN7bLF8uiB6C5dX8yoEYAhN0VjWELEwXQYtOd-x2_tjjVpmMyfAS0NGW2C_-lBS8ZXEfpWSB0XzJk0WWd32oV_kgcbrM4s-x4z2LPlVa2X3Ie8zHbY94iGjb9hOa2as8vqr_DnGX_UURLL5vow0e6ir5t3oQIbNdb8n__p4iu7OlF7kVuvpdGCyhTTTPKt4fcq9i6dhOa6Znq4A2i905Me8rcypiNRQNsttRLupa_DTieA3pv-6yc3oDYuZddjD71pw10zQZcYlI3-i1O--zTvj3-FK9FA850lBJ1H3i3IiiZxB5psEvMvr6J2YfbZWDfwlVSTZoWa37F8dhic3BO3caZoBlP-VktlPtrOWc-RBxWP0P1JvpZLLJse-dC0Qq49lhAfdFaisWL9WzGuQg13OJBaliVst0GxeF_Z8xI-EXncIXou-ZZWGdTSIrkyw5DToXh0oDn_lwmo288qZM629pmsj_mFzKIK9P7HZI-SwX8rTBLeS-ktUVYiARoiZIYDkQ1cjqv1zMXAjLEoKQs-DdXl7omykt1EkG6rs1zaRNXgndWcovxVOHHP7sh2SxRaQr6mqk3EFx_aAn9nvjA3vcXIN0S_F_abqv-7CGfE-bvLS_tmtoW5cFkFcJ9sAauCOZvNZ8UqEC-MrrjoF-zUYBicaYWHQ03Rjc75TFRU9HNOTOJrDv263MSFRq5N1VmneCXqZ4aLCi8a-bj2svUBdXZOfvjWgg9iJKeU8iGbv-JGF8DEIUeaW27qh-R1kYsTR1nkrptbJHsj5QoMUBWxFPjprPa-bG-wIy0YJ8LhVTP9uT7elvXRFtd5M93pI56T8Gr-HwTnmjLvqKFMVc3Jt0x4DTiXeZ8020i6UZAMI6aYbYf8Mgwh2Ru9zhPaB414dyy2yEVT3fkJX38QLRng0C1iFZeGaC5W1ALQ4WYnGRucpKHjxeD3c2O2gCoaKMMlAqRYqh9bF1VzKVo2Flcg1lKwuihFeHPJcyVSjB5_yMHCgPKNKswl8NsqxCBp5fPhNNF7dpNLCuXP1I1WwwGAKaOlJUe55GZwn3hQv5CM31pjgx8jo_2k9eHI1xhS1UFlWGP_rVh_VszxCvlfq7TrLCv8uQG2FG3_4BoW9-apT2lPZ239Hb167_1RHSez23loCmQ9ztcY80ceF2SmzigarOf0uWRrRKH1QfYgqU1FK8sa-7N-7fAk7V8bwq7ErZbml6yJY9GokAZ9-5TZAYPN0q6fFTfVDpBGFI18yoLSAbciqUmr6NzRQ03-rty6jMlqdYNJXs-kBkyboi5R_ltqsMXUC8ftp2lbFVZ_PP28TmAIop1ec3eQoh_6rXz4BFX-hCzdxZpI0rJekWYbIFoQQ-7DK2kVZXoNRamBuDgHBYqH76rKYrJ0S1VcTuEXDHk0zRKV1sc1cpZ0Jpnidk26u5aAMo06iNA37uGPv-N5hWm-khOINvu_PzkxABYOfxeJE4qsxDMoDOrw0R6789BeSUj5ul6B2r2EAAWFEA50l-fLf6_5rKcSml8CwVVdDdnFdzgckLh75jKmUIEMejj7RbfVKRNnvkENQaXxOoBnpH7eTr0f2cXGEaMexky3o2I_nw9sr8QNlsZSHkk-H2_8bfk8NnHns_KuSOOP7izHUvNTutHcRRmiC1NNhgdggVXl76XbrEj7sMTKurqLU2rO-tECMGCqsZ5nHy6yBr9mzv9fVezIcxuG4kpkxNBfsdhMzf92YGOtTXqnU4WHR6XFy7RMGQ4NHE2AsbeBUgyOHklQoZ-1wRrvLNOKUaw8uO0MhdtekVOn_OpJyxkNR8TyyXkY7_tVqQ1i-zAOA7C-xKXjocPAmiJLmsrd6Iu4bnPCyKJMjb0p6pt9bqsr7e4t4ZEKDTvHjCZUGZLPfDb9vbRsq8i6rcri7T5jcruYAbudVHnXzUKgcpOrtRbVivZhgCEI_wYJPqLfrbOP42LmpSGtm_hN_HiBnBm43D2PCuvzVrMfn8fivNEXjH5wDiy4ROTX4sZDnyEFBA5a1kFVxIrYe5POUwLImD2A4ZxO1Y2YJhvDQ6PYMKtBakEotJPQtbRRPDYKAul3_h4vSmCMRMzVT__5pvLsBIFqn4bwqtEViFMQ9le27bMTpc8ArvVYnrf9R8cK91tTMaWR_Vrb2QQ3lOPCTtZeiQzHej8qM8AhEj5I09orD0pImpxQzmANiFk9ZyqyUaMDts-L9_vyAroG9wbk5ganQk_WgDcwkMpX5zojkLyJdemaaFns-oTi3Xqa4qBE2iMXpH2esqYoIdSJILdZoFC6wtpyZ2gcHswIgnh-tS9rdY62dAjJnrq7_U8UPwGgOXn3laDVhYvUTJx0NPRJnuOA8M8ufstS1qAbi7O2cUAZGo8qecUnxEzeorGAGvffUsQ5EAQpLlYPTrla8zhg7cEO1Ur-KbUaUJKOROgOGBxTDxBDVx9_UpQTX3AJV9e0JOo_6bXWSwkBuf5CEuPHZu1P7C_d8Mcxia40E0IWQ_r478Nty3klXyq9eB7LR74MASEcU6YKQ3-cidzJj980xwcvYi6Q0I0by-xSVM1yUEp9voAhYFmre_RawBZBEUAQKJrRYl1_g9iXYPP0tNyUYs6VBog-zSe6QtOcWtr7OttuSkPWD29Tru6pxrS1-xw5KlMmZZEP2OIDfI9MR9bvRHHIabX5KWnN-z7POimqixY2Cf94K9VicJC0edUnO8sH1EQnddL6eLH1vkL5En4cNqNBxkZilbK1g9jM18vHzok84eIXv3-QZw6YQ3tZmPt4ja7NRFNUr9SQnniJNQZQj3P-fkG9b_HCKsDfDmYxj0yZlrrLenZl2pB-yNFcPVHuph8zvEEGax9384wLQyJfU9dFSXnwJmDgjVNIy88Aj_f9j2sGvrQ1JguNc_MjKtfRqhOt8TrWpuxKBq27QdaiVmxzwpNu33cEiE5CIUnpaX2r2vju8FJ3AJaJ9BarBkAgSFmkr9OE_VopRLgCx4Z4lIEmpBP3cG2HDZxpKahJvXo9zD1nrWmagnx9ajjfYBRQIJf3v3qpSxJiU2Bx9viAQXV3A9SD102t7SmLQBtyESBka6NYsttZgi6nu0JPxnc7upP7RGT7_jlrzveq-gs9OdUFwcyYYYnCVxhvEJki9bCD6qPHHnoPZjbQccygNwYobwoF3q_jLxnLy5tsLXwYYBXXODr95kJc_kZmroX_0p7sDSVJ3cb2q7d53Qc19mj7J8gyyXBQcANcgmmIKHb3Hly6H5o-AeMx5SFspnwEdIzAfGgjcg8HtZEEf0GLtTFldwSN9aaCi2n0LUp63Rfmzq8BwhvGMgYXfoj9m1zJGn6SfL9UYUOwPyrTQNTKxeVkXtE4CeNgm7IKjMKrFgG0JjnHneq-GDMV7eRgAhbOsxFInEHjmSh-Wqk7ydc08aBtSRKz19RQN7-2USbCmMwoCMXlCjOll59FqV85PdGjySOXmELUr2XT4mzsrBnc4r0rHueQliGpaCvllXLvZCt3QZUy9VXvZexCJ9HsJUyPqzneyj2Fk--BQpkWrPULRNmWXZAEAJ5KP4eiHPT7CdhqUDqvNhYGhh0n2Bstd5WWCBV6JxfDr5nrctLe2mKyVbYGx2nDtE2zjN0a2un3wwXBqSrRldmT85JZcVQEU5bJwabq7F4W32UtqSxhUPCVuHcNafPygJ62afHwbGfJoh8Hmkdup64VEtAbACfnif4J07RovVneL1P4F9dahBBX8GZaPCuZ0k3TC9bn8DoL-PR3OUzRv-frtBpTqxieOmGzcu7Oi8QaasKTGipiT-TPo1DU9NziRWmm_-3DTGBYMBEV0xe6ng7QCMzLcvgmMorBx-DM4AYwa0Wr_WV6L0dhxCNs_Ye4z-8zCfVF5v9dYM0ThnXwV8Cymi1pf-UmSdZNKJNYCYYQBVNYkTvYdoBbZcxtToSiN0UgvKx0qgt5QB6_7zyd7_ivQLaCzl2_i4w4NTTLJuWbfo2HmuAMCJh_oTesFAMkoi4BW6bSu8dxsGbQfUECsJg-ySCoW2n6fe6EWvmCVYoq8sDnWObqv10PMfWYBWO79X8PXcTOXNCa_91nT44vDSA7KZfDIoYwgSqzgpCOE1WD7bvLUiAURtXOy_ddj9enebp8QYHFgLYKrusFFB3OfmecJHGUibihoJsTNcO_ywllckHI0YI2quS0qou8UiVTaMfb6c-x1QoUsr1xKI40G2KXqEt5X6iLlzwSj-Xy6_TqIWh2HpjdzSEwEly8ABPmBPeD9EpV4tKqVKqRbp3ogkt3GaNbpCbO_-oBDhe9MiC02FD9_her94NrUaWXTYvx8UooPis1oY3jQSYIavlgOJ7uua9enzto3c7eMlUsTP61P296JikfqeP2xB7eubcF_cmkiQ57UTXS8hHZvcZ9XUbX0qFU6qh2Q0y2sWmPeyu5-m3YXjNmehBId-7vcQn_AnptfF-FfWmYn6Bb24J5FeHKFQ6TMIK9tGKAQhHBivAeLs64gv9Yd4xLq9AZrsnt3cvfsUI4y5WrQpCZ5_qICeNJZnObVoch69tqbHZaz6uO7qbOrEL9CPjRyLzDXKk5bQyjlyO41Tcb97QFBZLAIIpf2YkrJm_1V1mLAspGRO9K9TvJT0NhhBccWlqdLC9tNIdSnLIaOimYT-ENsGLhrgnuR0QsJhEdn_2TNzeTReGv9JpELb48kghdLGNBH-VzzcxIPqfeD4L_MG1GF1HkG5npTQqPOcFQO8V4dkxEnV2G03iQndaWJPPqChHMkimb6bxWJmVT6Hfx-X8FTwUkSk9B5js4vAeIgxJXrf2fUUuermOOwNKHMNCerhmVPSbNwo-FLG3TMfoq089ByCwF48RaLZ_KMnD1p7i73foHjqnCS_ZekmWNH-TYktEhnksLIqeydSs2DxIFjRdIQoisSBXlBzXXk3OcILb-5gTOKp-25Wix47y7aqMALgPMy7uWa7Wr_UujedIBKp2rIc20LjJYWGNPL9GOXwyjFAFqZui34ynYWbp2shGJKhStUHoXyJi0n0FtWFukZPCaKzDGsS-YhoQUONywu0im5OA5ONOfhtyYTDGyGVKQFnHYeghib2nefk9nST8BhhwDOrpUESUbtfQFkpHAW0mrPlVeir_UCTMpXt0xNV9hSnpqpttD8qBSXevKLJZbYBrjsQzj6TQ9AwO3fltBVm8RPK9vX9uFm6IvR40VzdX9l8Nq_pgxSIg6Y9t4eBcwBTfjDZB_pqVVHc3L8Qv6RFKoakSzIg31qaz7mYiieNOTsXJsiD6MC7TLY2taYiMbP3Okama5mDQ0jQKeHNk-qp9gyaohBXmVioshVeO5k-QDYCNAaKo4cTlLz_KijRlfapHWQLsQSb15OIvZu36LIQS2Hfx_bvBRv0uIoKDN-DsRdg4TkESpxkUsa1k8BQRhMnjHiPJqQhNjcbMQZdGeHZ3zSYRFKb_rwrhCCo6IjElvWIWuh9E9cYvMg0Ic0HfeAVwqzAUuiWrLqtJ3AkxFTtGwGUKY-wBhGgesjOC6cWpk1JrcQBz7vwnWhngIFcdwJJl52kxPlzQA8zDpbuQMgWWpeoSgeXk397QkRILh-VFfufI9i6eJX8Hh7QwhSAsCuv41T1oju6-DxK_2ucHNf4ZToCz9RPVr_8FA-KFs2Tnpdp78RA-IDx0J96HIffZCaWCIcGykb5zlGkrrY7MjWDL5uRvzUVFLWYNAs7LoqQKSHe00jlEA2pmz2XOYlB9FEAEpjPBtT_Cw8iPEiuQThJP1JiVDsRuaEiE45qVEHC1VS4YybW8kGXcGlaEBPIv25zc8R_G9os0OCit6TkYOFJI70rCh7dHvcHotazrlMCLtmQknn2idUhbpOdx2s6CDzKglYdrcUJ8LruL3CDuOwnyiSmr8kAyHZWNVtrxMMhqNxdpRY1BBqhjDeLzhXZYrenZwslq6DVtyW6Wez8fthb1izSv5FXOJCJwbFx3zUPkrDDjHhOfewMwaWaLiukLBC7K3hfxgRkl2nqURGBA9QrWd26duZzKEtf6uoeWRGYO9UQ_6pS0LUPWjM2EWg8xzf40upC5BSjjQOwE89j8EMKt_BlNk0t9Ua0ooxvHvCsNiF5XC25DvyFxud_VUVT6ZfLIi1YgpKxztmGSsHtVo8Zk97xIntXPHs-xF4gKun1I76v-94dfBn6OMsNbUH6fNGSm8QNRjUpYmnaLolPKq9Dta1Oj9ITALn-yCmQjn6QpRNBKuN1TH8_57CD7ofMAWO4_lH7WxsIsdjI2CaKh7MjEe3JdEd4SJt6tXH6v3ugYyg9OLZ_wMjjr_9js9vnMlISXXWfLDXDIUK3ym7wq9fIMuhP4AA-Rd9but00XgNaSwkO_Q1zikoFg44NOo3KoMH0CG5DAnMrlvyQx70yLx8JLUW5QwkNMMlDzQhD8976k2WqaZVyGj0QNhWITlO1SjTaq6_OnJpdGXZmxi-nDGDvoL886mHkvZSvmg6goouHBZeyBrgyWJ55z775OMbA==",
+        "summary": []
+      },
+      {
+        "id": "msg_0c1f9d05c034b1ee016ad322c2705487d2973f4f35587f55db",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Avanti West Coast\\nTicket invoice — online booking\\nTAX INVOICE\\nInvoice No: AVN7K2QX\\nInvoice date: 11 October 2026\\nDescription\\nAmount\\nStandard return London Euston - Manchester Piccadilly\\n£86.40\\nTotal paid\\n£86.40\\nPaid by Visa card ending 9911\\nSYNTHETIC DEMO DOCUMENT — not a real invoice\",\"merchant\":{\"value\":\"Avanti West Coast\",\"confidence\":1,\"quote\":\"Avanti West Coast\"},\"total\":{\"amount\":\"86.40\",\"currency\":\"GBP\",\"confidence\":1,\"quote\":\"£86.40\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-11\",\"confidence\":1,\"quote\":\"11 October 2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"AVN7K2QX\",\"confidence\":1,\"quote\":\"Invoice No: AVN7K2QX\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":1,\"quote\":\"Paid by Visa card ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":1,\"quote\":\"Paid by Visa card ending 9911\"},\"category\":{\"value\":\"TRAVEL\",\"confidence\":0.98},\"line_items\":[{\"description\":\"Standard return London Euston - Manchester Piccadilly\",\"amount\":\"86.40\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Avanti West Coast\nTicket invoice — online booking\nTAX INVOICE\nInvoice No: AVN7K2QX\nInvoice date: 11 October 2026\nDescription\nAmount\nStandard return London Euston - Manchester Piccadilly\n£86.40\nTotal paid\n£86.40\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+              "merchant": {
+                "value": "Avanti West Coast",
+                "confidence": 1,
+                "quote": "Avanti West Coast"
+              },
+              "total": {
+                "amount": "86.40",
+                "currency": "GBP",
+                "confidence": 1,
+                "quote": "£86.40"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-11",
+                "confidence": 1,
+                "quote": "11 October 2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "AVN7K2QX",
+                "confidence": 1,
+                "quote": "Invoice No: AVN7K2QX"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 1,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 1,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "category": {
+                "value": "TRAVEL",
+                "confidence": 0.98
+              },
+              "line_items": [
+                {
+                  "description": "Standard return London Euston - Manchester Piccadilly",
+                  "amount": "86.40"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Avanti West Coast\nTicket invoice — online booking\nTAX INVOICE\nInvoice No: AVN7K2QX\nInvoice date: 11 October 2026\nDescription\nAmount\nStandard return London Euston - Manchester Piccadilly\n£86.40\nTotal paid\n£86.40\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+      "merchant": {
+        "value": "Avanti West Coast",
+        "confidence": 1,
+        "quote": "Avanti West Coast"
+      },
+      "total": {
+        "amount": "86.40",
+        "currency": "GBP",
+        "confidence": 1,
+        "quote": "£86.40"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-11",
+        "confidence": 1,
+        "quote": "11 October 2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "AVN7K2QX",
+        "confidence": 1,
+        "quote": "Invoice No: AVN7K2QX"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 1,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 1,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "category": {
+        "value": "TRAVEL",
+        "confidence": 0.98
+      },
+      "line_items": [
+        {
+          "description": "Standard return London Euston - Manchester Piccadilly",
+          "amount": "86.40"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

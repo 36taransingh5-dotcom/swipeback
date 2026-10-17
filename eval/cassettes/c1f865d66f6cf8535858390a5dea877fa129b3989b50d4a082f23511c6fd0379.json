@@ -1,0 +1,168 @@
+{
+  "key": "c1f865d66f6cf8535858390a5dea877fa129b3989b50d4a082f23511c6fd0379",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:53.425Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1616,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 821,
+      "output_tokens_details": {
+        "reasoning_tokens": 487
+      },
+      "total_tokens": 2437
+    },
+    "output": [
+      {
+        "id": "rs_03878e46435d4283016ad322c25fe887d29c7db50560e25867",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yLFJuXD47qmoF0zniM4bOlePzot6XOs6Nt-fUMZA732CwXa6qD2SSQEoGsvbZbQhfTnNgR_QPaNWoXmDUWlI5akO8njLc5jM756dLCrtKbERmakjLQ7KLpIrSjovxuj8DXX2HMuf4VdJnUU7wiZMZ7mqgrtHm857iGz6YoEqkFkHkCbHdDEUPC6EiwLmSqlLDMJmTBRuYPzU8_fMf8tL9Mu3OeeQoeB3tPgBFYKOA2oKkBdoPeAY62P6wn0od2aEQHLtjS-9I2xED6hAOevPigN5WT_W9JWTYoDchbBCcMD2vDhfSbxIt9aGSWrlj0GcX5XWYw8kC8SYNZpY7iexxHBiS50PIw_-tDshv77iTwZkCrtq8v05ZU61EA7O61DP8gOS1Q37_Vetl8VvZsx9AAg1eKTjKRL1P3DWLGaHvejGflQcmn7n4LMMJfUUtXxxw4HOaATKJY-06z6-9v1e1K-LDDpCHsgQDdFrvXs-XowizSz6JhX6seBzzlgmu1ID3_VpybR_SvCjDmdS5KDWfghT2o7ql8lYm4JNvTNDvX0wL6Ahs6TiH4OKH0Zs8vwUelJkjrSW-gGZ8AW-czf8mE6siXfvkgzJuMelN0bNbgzDWTkJH8-Jaq1uMG_2gJnoQdUKRNOhn5eAO0VyCAYUG8OftPQR-hwlADD8uT40Wevgrm2HfWv3yYJMsZ1ly2c5k6WfH91jPIYII0rlhN_XCV-hPa55U2ngXLogwmL71kTg8nN1QdpA-r0N-F6tAmjcgkJZoebYQNkSNZJoFdxaw_oZtVwCIoqpBd01A0i7OanlLSKlP4HW8HID782DCLEa0h1UuWwvCgeZur4mMFNzr0JV451RVSKF45cRkWQuT4O4bP_fI7yDB81nmFuayQ6-Ebv12-JYC7p4sEBjw_bm6JfYC5VcqCRqADNATIyZUol2eVAd5GKFQiPmdmvmEhur63TdsihxqoWyouiD5quqDqkZMwCW6wwL8yGq_SMXIWIyavoe92XGCbVrEKA5tZCIXvZfHWhe4FSqxlwF9P8FIlQ06BIVY8sPWlZGKs4xtaquSooAY1LZn_EXrG0DPqRPmd0NswCGG-bdZ9UkLfuuz5-37n0uPLIQ54of6q1XDqBcw27azZHWs3K_3q6WLvTAf7vO_kNOCevwfxn5tLHE1sUrKW4c1c56VYwNGT-W1HnbkSc6VO5xGLTNRBL_R4nWfM_pKhW8PWsFj4viPtJSqBkdAQW2SnDAfbF1_1ChpLmxuwm3HBlBQCUnTsA-WXYPMebOxoMalMdZK0QFYHHzSxltuLRxgsaNwl7HGj9fqs8Kxv0p8vE5iqi_7zk4XHhbpfyoI2o1OdunN_i29Hy_KXwnl_hLGRLLSg_O7nB6bnrGigL9QubYADdEhiH-xnPPVim8lATjVjpT-f2DOM5p7LhTKYSq2gB6XOVD3b6aiWwDtA84ZPCNQtyiu0iyPrIYMMoDMhWyU1K10mYG0ebPGK0BjL8lD28cFEKRmoysv3JbSF7J9GRdvo2MGvmGVPX_n3DF68P2G8iFwASz1HIdA6GmE53CsU3BNY_DliXlIg1uEKSSW6w1EMvM3tG4kaT2GcfeC8e60-SNano3yQB_KbE66tBpCLYy7edOaVxGCDoo1CcORxq3kQCxT2Y8WtyKGcTrFGwPte5QHrRfiVGs8X87NAQ0kUp9JYS0xwtIzvUps9p7yen7Rq_Kn06SX3JdlQhFaS933wsLKF2T3ZEWRNVCqGKyf5tHTbG4LQaWwWxQomzpILPeE8n2ZPeVAklXpWTPNnQsJE6o15QEtiD4WwzownfxrT4TOY_aP2ueY9lZHC8wTxCL47f3w4YJW35Jer8bjQepBi3gHwHdy3Z-3e6Zd192XsDIv3twYI-JCB5Wjvpyaxy08VXhwZHHM6AugfoZUOiBa4nI6G1bp-NF2Iu1v3UAIUYz4ugpBG5XSLqt7jKrpJwcggqodRRdo_ndi_TLsJvCeO9HEyJktZZicVIwoh4_eVZRPcmkIAsxEdoVJAVxP7U8dufb2Z1mMT4Ln3H2LXgH5he4MVsscxSDErqo7GvlVwVQssqvoeyLsTnXLhXTKWqyzrB0Zpqbx4GP9Bu1z7UQ1OmuDkRds9W-f7R-klFIV1gS1zUgZ-eRyYxJilkM4Bce6vR1e_5R-11SFPM6nxowvgv1eCBDT0Y9PDOxpx5hwkzt6pxXGHf9Bs35eOKKnzQv3NZGisU-0YR6PqOtSG8Ds0F0GpGyeBVAWuPhaVRmpf_wQFwqKTgJGc01O5aQ7X8C68nIhcqX0URqj6KwXZJhS83UVFvu44ZTdcAgDEIjdv8_-uvcvQfSuH1wibWxdfIIZcvYd_gtXPaK2e9vcI_NMsmnqpKzyNakP6an-Ly1Q-aZhQvYrSwwbOgUZqDFNdEw6uStR7CR8TkILeFG1ZhQKneczbKUV6G-ExGWZSER8yZ_ntNL1U-y6ukVfHjOI1SY_QxJbzxsOu97GgRYQYpM1VURygtIPpzUwRShO6tJ44j8LpohTdaKIAFuWx4iLziYJJ_OD4SNxDCIqBn2lGXRusiHnyfwK4POkn7JLVokP8a7NAt2JE7rWaaSpG73MJctSb6bMPid7vvJ6T_3iaa4_TelDFqsW2dC3C74ROwOJgkG4YqhPJOwRMJYel1ChLv0wcd3t2F_svZI_j2gEh0OXXfsmEmV-7KAJHzre9Rs8Ms6WOTHQgQ3e0AW7Phlz9QCO1gtmgVwj6k2uD2hGnthwWCMdmp82eOleyA_UZNEmdL3EHzf8jLjZEga48t4TdwCvXFF6qzp0vjOwfYFqh05kYelm2qoZT16vG7wkVgdrG535l-wra2ietQ0-7OG0wUFKVlufDdqQgxx-g-zsIbgeZecQiSmfBsc4jKX3lPWgwOIZ1f6jMF-BQgxypbfDYW7zDg6DV-6KJ6UkFtUNTPlkLErRtarOSAyBUQ9KRV39HdoKGNSuvCLizVrZGsy_c1a2uXbtgqmQY-CqyJkgkQ3UQX1jnljVU24IkKG-4hg5P5GdKl53nrPvRzIzMTzZIlc0xCs0uMYkXVyiO30B9Qb_lwzUScfzSvWiyXakv6fkFVpY1-ixMxc5t-9uHXg6Yc359exwCr-8kL85pLmXTfQDedH4TtLm_L0KZaNDt7rjZePOhwCSdhE9Dj8_xTBYw-6WnxfTx6tLlw5PyNlDt4eUh6_G25AE3nbqLjQQA6T90pkj8AQTfrJGE_QZIM4wMpcS-hYr560dVzct2kbiKCD5ZZcNzQKYxMsaqenb7sXXPdvV2CPwksI_iPCwUgZajBnntKotz5MBRvu9J--P9cnDr_CFqQh4fmn5b0LkjG-BN2oKkh8y6BPTd8sWPyhsKQOU5iLl5PnaMK4RZ74HxgF5WrZ2SgFBMtaGUy9vz_mHyX6afnGf1N1m7V_XTZL3ogqJbmm3J0YaShoidVfKQDwZ_GCdAhUa12HLdotW7uMvebI4NkxakD-IIlJ_-80RcOOXMcz9F9z7cE04hO38oJGGgv-1cHAdI2WzD9DWMsByzUbr-yAsmotbpROinbXReH5IxB7rBztplbj6lz_iyeWoS1_1pUcE7yyoJrEr6M5xQAnzA7JK7o06A5zyHHpllCW_M24M8eWXYl6qAHqjEYpTnkcthUBi7-5I44vyxxgP4bOrhjHScQlL07FUrA2zuxiUvcsC-cRzLK50dHHMvhlQXRKPpZRpaMw-DaNbpa-E1kB3rlvkbUTztAhuA7vwx_p5gkJcwVdNIkslAd_fd6QsIEYT2-qCvyFGoaWkYy7R1KTl9WvHgSrnosQV9k7Kn9B4s0zSn42Yo5xXlRTRHWk6ZiNA2T407d3VJmWfRyw0k-PaZFYSaDDYoBj_t9nlI1SxYh3PhBBp_CiPP161LJXVnlBVt8xJU7nXC4ZVfLyWwa1K26T7Lb8HSOuBSErpHiFZJLGO8CG1fLlsWzoTO9GTOmM76XFGCJBD4MIog2Ui4Cxy3-dspto6jIMALTeWa7p8KQSbrx5hTj_tInj8_Cq_74t-tRNduVY0fUV-KkM6AjdNjNnevfwG30akirrApTY4JI_c1Nemv_mpyzopREv4GBQ6fiQjzMhwHjCYaMnDo0g57daOj9o7jg6UM0pW-GlI8o-91CR-u1_8Tzvm9nMSPqJUfml0wkvtHxSQ1dQV0Zbz2g7W_TS3gJ6kpy3YHjMn1yU2J5lBTU65GzkPL7-cJsMVbwT5awORzJVVDBE9v-Joq83wEfg7ob_XocNTyItJfhLwsWdHopTAtyQEx1p0dkUz-mZYlIrXSlCEPuA4oXu9XOlVOubWkrpaWNURXIHHM5uJWn2beyn65ABLNo7CtaAAobJfilCnE5AWmu-Oft8lP4EUC9e9-8b2TnW8abNPF4r1wpL9FZie5dHxSDclw8KRODNNifDUd-Y4LPC25_oVhlSaRmO55IF-CuloHDG9QMaIFnm1km9T6oYEfzrbwtLmfCDmYVLjzy0xGBeyh9z5uQEQH5RRqbDfbV_vAjbn9OpRa_6b1Y6lW1fd7ZgAXQKApAuDvDPui5gyc8UD1j7ZFqzqKyyxSkmCE7ELmgTchAAWGvafHy8hdhhUBMqpRGhynJEWH6-AGIsPoFT79KTQKtTIvCgEhE0_Z-Y_KY5ML1D3G1liVwgrqDicEdJ9vqaN9qxLOVO5dLlHlq5y33xq8tcnBCXrdLSgVyZfCvu9NYV5qLqqTQnDYSIZ99LJnbOMwZyUPIplfor_0WnH8yEPZeyxkzbkcm9cBhfQ7uFzHowyJzTfIzPl2BkiaaeQk-9otSNZsmuHDyfR0leLjx10xc8IgbVIV1az8HlatHRhRgfHb0nIkJi4UZrNwMRzvf2-ErHBxhGi8__sn7-ssB8EnbfZ4fGy0WaAlS3sUgXKfddn2doj4dQFTtvRe3xs3o-KqJMH8gcx3tgenSEXlRu1SKmcPWOBrXBUhysJWCP5SPWuqHnJaeou8i4KRxGK093ALzeyb_W1nsj45-OwY-yTL9fpNT2CgGshWagEOWyk723BIA4CBHOYt1MqtxtZmjRIlw1-QQbmzVOGpa1Hi_ROnMOlNK10ZqUU7ZfJIUvbjU0Qq7MtMHbarepdS4MIA65pYysc-D062lnwgONGTrbO-paI68WBoh75U6ILqcTrhZMmOsFbUAeEsgS0qcaccH0RpKJyQew20NSXCUgaQW0psW0BEHwBTXU13Ghvt1723Q-x2cgSbl0atjO_C5PNBRRD17UWCojyvhltdQ3uxc7azWSv0ptpn2YtFa3IK39Rpy8rdiErvZWr-dG0011loBW5X_0his2SetYjSI0bYEwQIBfsAv8xlj5AtGyzM7m3Jve1IPmDGdfSO0Lha3QjImP-kEy2DNQGLtSSwbBwkFIbZw7NCit-mYWAaDvZd5jXpgcnphnWSPxFiGj5ZM4Uy42J23DzNJUr4w_f2nE3Sk4CT2z2KN_x8f1F-yCntFKw-y9nFXNhysFsyWm0KzXfhSxgA8vBqOnDVn0EmE-ubjfhwbfMoj16hkMfghIFS9y5x-cUAvxrh9tcvywm062G-xq8fuV2KOUAtNhsvFW_txfr7C_KD7AKJLJq6Snu67jIrveuHYh0ncAoByPr2DjX6piXKJ7DWpOsN60dn-mnQ67J9MDFm059tAVMFq0Mj6kTaK7etTxkYNRxtdc-d5LhKGDqzMh2Ldf4jSxdZPnPV0IypH-jFoO5Cx112phGKJq_d529WgsXgYfEJoOKTW2Z_uqeTiLNQZAs5slBiCmWCv5ZF0hzmYqRwfRexXT72ry4hR2iJOU-wvMxFB8IKEyZTHJIwC7LXk-JYQUn-AXU9orX1gHl2HRsg8td7LaBstGZH7ycbglSFr7_3GkDWFj-8RvPOcYxub11voPBRMvB3ITVkQYcBO4aZQf_zOWkE-xZVai-kDRz6MMc24PqYwsAYNKiFz1cUh8R58s2JqUOkwkm6j-pd6NauE2q9rDavCJEnCie-T1ZNmVYKgwCk_m_OnXeuYoOj6Cov4cLRzXvtu0fCVNjDjhqw33eiIPUL52yNNhAodV8GkrzV5lF86YcGCM_NrB94q8C0uHOnHjqoUiZKadfUZIFGUj6TGEh_H5UZoPR9lFAAoXXVvkRowmINiILL8ajuwqLMv77PEJWK_7QyOHDpm3sckibXaC5M1GKvINUr5w8l7CqrtIpiYJOn8o68RxlRNG6-VdeQnmKPm01Sq4tDflS2vqIsevrhQFK1BUMcs2chZ0Uq8XmW-iR8rjsu1uzylw3r3e5SUxcZ_cKLARP7vL3ghnbib8NhoITXbHyn98NctnQMMoiiPutl6MWjQ_MKTlIo4-3viJEwHdQbXebgSwupO8J6yKKVd6ttOUcKMqbagE9Cae__vHm0Z7m00t-Opjknpi41f6y0q1Fb0i2mPvYv-BZ28-5UKaG1GcXz7j2v2d38c-hzJeDr0ACK-3qzJYAKeci6_x38w_1rwNSNfwG2HCyiVEwWonRE4FDiTuNb6naii3_sY_ch3wa76Xl-Anz1KRpWaNFHFiu057LXa6JfJ_Cz6yBaOxNecHEw8wtwwm4lIOyqIT3I3xCzNv-l15scyC5TvVjXOdDAH5jys27BExG02X1quxuSFmiGNQJP2vgcCpelpa1eBnnGC_EukatX1hF8RcFSfYAZcvLzY6ier7fE8Mad44A9b1qqmPOLCqKfpCIjqXGGImx7VZZw096FOkVxPiTx8uD0XW4GcFZcSPALOeI17-AEudVbOeP-P7znUd4ErJKE7eZP7ySfQ6L-ab2kJhKyMB0Y_aYdYAWtGjVfGCKQgEj0WXf3svh5HFcQQxOeUCZxM9udZ7-cBMkMqX2VYzum4XchKEpo3y9JVCi-9gUc-fYWyjJtfwNJu696AZVFaq4Lh1diQLAWbqsEZHyiAdvyhY4doSZUtKqSxn69e5eks-7HUIE_XgSr6Jdz8PjLzRUsv6PVS9FLkKjl0DiuYl05_jpemotJIPwsJGWErN_PZ-dOaDtoA4hLgE0OjCOLnSDi3igpNiG3obADiC2ukd_52yq__8ITY6IuYmkOUUXswNYCjHY9QQbh_I1aLI8iuuwhmaQSQJH2_oaSPDTGjXw5l1YEJFhbIcZ6UCJTpHLm1q5xXke55ojCi3Nw-ExcMk00bkfBoTzFVi_0vnHtnhjCg5fGKHQ5kCAmjk0R6agty6jgYOIq-GMKQbVaJxlXc7s_ibIU9w1bpfhJdjWKqGokKYIg_ntCQPh2lF0eycR8v_3dTIDrhtKisAewrZ_2BVkTHmfxH299AJC3vpyvqfv-PFVp6cA0zVAFT91r37Jz2cjGmPlQyf8KDugaCZayBfqmth8M_NYru1e2rFFAv2dmoS6HSJvxs5Jlmh-M=",
+        "summary": []
+      },
+      {
+        "id": "msg_03878e46435d4283016ad322c45e8887d294beb701de185201",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Shell Watford\\nSt Albans Rd, Watford\\nReceipt No: SH-4410-77 Date: 14/10/2026\\nV-Power unleaded 41.25L £72.18\\nTOTAL £72.18\\nMastercard ending 4242 £72.18\\nThank you SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Shell Watford\",\"confidence\":0.99,\"quote\":\"Shell Watford\"},\"total\":{\"amount\":\"72.18\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"£72.18\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-14\",\"confidence\":0.99,\"quote\":\"14/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"SH-4410-77\",\"confidence\":0.99,\"quote\":\"SH-4410-77\"},\"card_last4\":{\"value\":\"4242\",\"confidence\":0.99,\"quote\":\"Mastercard ending 4242\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Mastercard ending 4242\"},\"category\":{\"value\":\"FUEL\",\"confidence\":0.99},\"line_items\":[{\"description\":\"V-Power unleaded 41.25L\",\"amount\":\"72.18\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Shell Watford\nSt Albans Rd, Watford\nReceipt No: SH-4410-77 Date: 14/10/2026\nV-Power unleaded 41.25L £72.18\nTOTAL £72.18\nMastercard ending 4242 £72.18\nThank you SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Shell Watford",
+                "confidence": 0.99,
+                "quote": "Shell Watford"
+              },
+              "total": {
+                "amount": "72.18",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "£72.18"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-14",
+                "confidence": 0.99,
+                "quote": "14/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "SH-4410-77",
+                "confidence": 0.99,
+                "quote": "SH-4410-77"
+              },
+              "card_last4": {
+                "value": "4242",
+                "confidence": 0.99,
+                "quote": "Mastercard ending 4242"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Mastercard ending 4242"
+              },
+              "category": {
+                "value": "FUEL",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "V-Power unleaded 41.25L",
+                  "amount": "72.18"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Shell Watford\nSt Albans Rd, Watford\nReceipt No: SH-4410-77 Date: 14/10/2026\nV-Power unleaded 41.25L £72.18\nTOTAL £72.18\nMastercard ending 4242 £72.18\nThank you SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Shell Watford",
+        "confidence": 0.99,
+        "quote": "Shell Watford"
+      },
+      "total": {
+        "amount": "72.18",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "£72.18"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-14",
+        "confidence": 0.99,
+        "quote": "14/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "SH-4410-77",
+        "confidence": 0.99,
+        "quote": "SH-4410-77"
+      },
+      "card_last4": {
+        "value": "4242",
+        "confidence": 0.99,
+        "quote": "Mastercard ending 4242"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Mastercard ending 4242"
+      },
+      "category": {
+        "value": "FUEL",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "V-Power unleaded 41.25L",
+          "amount": "72.18"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

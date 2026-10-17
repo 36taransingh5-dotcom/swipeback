@@ -1,0 +1,176 @@
+{
+  "key": "4ac689085b177aa2770c32f80c46ebbd008d832cffe66cb3107c2be8dca8f036",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:33.299Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 2256,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 980,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 3236
+    },
+    "output": [
+      {
+        "id": "rs_0168e97785e667c5016ad322ae0a7087d2bbedc8882ddc6371",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKxvkLPMPt6fY7treEX5LcaVKPExXqt4PlRWRVApbKH_3uh4HFQrDEt9hpF28lKqUcTrdId5APQGkBE2hgTc9P-9rQ7NCJo_uRu-_LEXiDP7CzphiOtDcWo6RJgewAQ4kMTNKrduv8MkQfIuX9Uz4VDDczum5wJk-RpyNxKBzonRg0WdwD8_4JbRCZSUE-OttBOzV5RH-0gKQ5_ic1Dcppz7-Lak5oqri0W-GSwtINdbnQxMOhpAI_wJ_lZE63bMV5IqLx711KAJaIzWh_pHTMy3t1564nBZbZnklcubRM_sYYx1kDO4mBtl0fZ703C9u4Kr2nTqJyejN_5GHt4Y8e53WNLNsqIjetxGBAWlP1Z5EsOTmg2IqrxYRXyDDT6dBq8JWyqjLvY0KqX6pdaa30oRDyWpq-24hcjiAUU1hDIN7KAvAzDeiJ5fgbxg-TxsvEq_bwuj3dvZTu-R9-tS-MhA25r2JhdwC_-MC6-7vRcl3Xt6wc0SGuQ3bNAE9VZZlBQiJxWmfprYX2o0OR6q_08-csV4RlT7F3UdlkqyX6VLYiOxfsUzfMd2bsbM5YP5QW7XIwDfF_LasvElWrjcQJYK6Fut6yQP2l_zab1ai2KEaTOKIGCZjZoc5qVsZgslRbN15yBtCv3asw0rxUATM-eAOHIxzj1I94DJ89m4TpiToItz7En5A4OqZK70S5jefT1miU5CxvCp86yf9GljrG2EPui5Ev1ty7kBOc16IeFvs1hoZEuvElZ7DWHJ8rM39N7EiRsv8kBeioGGD1T7mUYwRvfiRpKr6GMvn6uS8Jg-HOOR-LPaTV5bmEKGjbL0SCKnhHsjSlxM6GZSwdqYiopuMKRqhLYA3jZGZYWWr9_sMJk0iYcGnT2WX31WbpXzzutRGcc4MP-wCReoVaTEMdowa5GPHh1sqESV5f55S4zd0HkbMmut3qUuH4A0KEdhw4jwKaPKZaZt9hldaJ3oe9AvJhUbqjFbP_cOPLhe_1pp1W7f2WhimUniZPwNItDX-5RhB3DKR7hZ33gYZasVqXQ5OVder6svtDtg8t-qjar_gV6jecfMHI3mtrQ1JZUN3KvMjaaRVCmwPRLUckLnBKB651_TpiAaMowk4aRbFLV-912Sg1R_ZX1gfjGsma1KUlg7LrfiEPOpF0EyccT-mYvj_Xt-dp2R2yir8IqbYIrm2J1HN8fqtrgvoeqj3eMqk8kKw5XqoQ0iBPJk064rNxuxdKwYax1f4wc8rwFcKQAzKHPmzQJJOqTBs8IU-ZHrC0VWPNzLWGliMSTUBh2NLRSb084wybLUId4dQuchiNEnLEJOvB9kFxXd-5JULkjIbCJ2DKJmWTY6nA3EOXgPf2at_nB08om8Jp3fmWWetZqsS-bFAWsZLQdFwVhohCRnyZoINDvuDNQ8xL74uI0wLf9ahqvBQAKlDz0tjDKxAfWmwIlqDf3EgfxQeSB3L-KElgFenHPHNVQ1tcOw2cwBmQR3NkTd9jNz1s2ECnUaOHm_ULOJEJbLe2AYr2eNT2__U2yWylv_-Xk7SR3YdRlnMXESHtIfxn5HkFu2MabIuzuqozDumHPPTj8p2LzWjZKv6RqwmSX3gWFhCraXjfhnDAsjutMiKbLMmSSUMFZ73HMa7egJURT3gR52-dNTrWV525MbqNWR-XaoOqJChYGa23fHFUXUYf5sJdG0ZTp_eyuxgDM8ZSkOkC-6Wwv62jhZkHvwTfGhTAuq6gTiJq5eGbs3hR798oZQnaVJGey2JcIytXEwdkpUDLIrmmBpSEufd-PNF1wfgh8bOaJMRm4hKiZNL3iBuI2A5aqCCT2ggEQ3tJPzO-CU7h87Fy2EhefWiLj9oxmqJ9Y0bsG1ZtnuqVwKxS_Wm-FPLYuADQZx-5Sy7g5Jk-f3QsdqdFVNTm5xdquQabT7O48PI3pUH8-JADpCnp-ZgmYXTe87ytKX9VRajQyoflhdCB2IMkHIMqwNiw9Q_1rcQN_TEZzU38RB8H9pR7j-BXKcAmaQwxkckzKaTxJqo49__VMv2bzG1DbANkyg0mR5Y7CecRjWCgsIz0PDU1s_hrpBbz4Zu3qLWT3BHSYgpq6niKnf7fhihapxhL4Fml3ENZmGV6iu15Rz0bTv6JCrrTuO_JEJtydicEEu-yHN5ic5toIRBim8b30cCYGNG47q-EkmJFfmr6cA4pJ-GxeO8izFYqAHjwGjVMaIZjXBwz3PrdzvXBSEGQSr4m-6vYK4fMoWcIAguBmLwOF5CUDEiMLYlayRSyq7eK2G_3hs8fupWs_z-IV8QYr-nKhDUeJIbECHiBThcYGCUzyOtrsKQrqyj441tha8vp5szkWWdq5-_Ln8uqVWn5yYbXdP5pZWvhfjK_A6xq1PxwdY2FPxwhSucF_fzncon4r0VWHTzsW9canzHO1tB1Xd2Aw1rYxTmX6RNpuhvo8HPgsRwzEXdStFsyOHgx3bt2cVY12AaUIM0X2yTWIoOsHc6gW3Rrug3ohIE0XGRX8fkrOjo2aIIlUuaYxUwPdoGYCTwvdpmVvnlT_chJBMP6qpVEcDE4q1-rpx3BNO0pkestpn3P5ZjarOE3xBbyOtmNc7UBn35AFaTYR9e21QCBmrq5DdE8sAm529p9DxGUK4f7WaFNrlMoGZ9pzM4vnLHF6nMfk4oFtLSB_xW71dA4MC2EyPPqiCCYalUcNbe4kMubENmNz62A6R5uM-7lm6RQZ-9I2GVtZhwbHMlHLZPPamrpBF-kJrqUDebzbeQFyuHpMjgMq3PqK8-OnMw0UJIXGlpGORU_e4DzdGeQto-OlAmOIWlo01He9HKEc2-ct1bu2gKOGagB7MjiyFNWNJk0lux8We6v2u9tme2BULhUi9MG6XJAzJLGSjTrATKCqYSa0rY23G7HhS4BX3ZhjnI-TtT7-ph0Frji1Xm8Fh1JALhaJGYSqt14sxtuJ6Zcr9KfBkWUqs2QWbpuoYZ_eMBa-6hKQZaqGvaXwWvOZzwSj7395r3yf8ERx0XeD3wMb1Wumi2i-NxwZOTr0MXjMWsFqO-3f5ApybgcBewcf9z1FNsxzmAHV3QdC75OdAaMswlAl5-yo6h2QsQkIDQSa1YkXmuC4Gno8yn_ZFIB7pNbd_CC3WvI84nsyVMvMA5b5pTcKNCJCox2dmoU-GP2CWUJmwm2FOAhy3QbjKjYkpddBl0W2OwUu9mGyIbyfFmiS7lKTgYChGgoEFwPSPpcp0U_bkm74sPW5c0iKEV9D8YkUZvPgrVeQZytrkgg8tf_F-B6aPvt6v69babV2SZIwMIgr2tpWXZhGpa0uUuz7GM3XAx8S9VYXiK0aDCLH4gvQ-j5ig1j6BNYnpN5SqYYIybbql_3p05mgYR9jKax0-kt_YtsuN6P9EDU5HyWTjp56985ka73MhoEepvJDwdvSdH549pa7fspMk4IXMGcMzg1mTvmbrAGMz14ItgRGFE3creCj0p1FFoSRrtELUuqOG8r-9_PaxHF-4CQM31IsxsxRTUMMqEFR7pgIcLVAohVxy6DmjynFzSSZE1jUA-1-T-HW3JRIXh-ORRhdeYfFo7rVcH3xYagbx3D1hSlJxn_GgxKSV3G904AAmsdV_DUDT3lYDedgn9g4Hj5Lb6UWJR0KrtOw5itTWsjSDrZjQtRUUCO3JsE5TXmJQAQrW5bnltvXnb0dxp7FjMWinZPYIwYtoJ7DtpBq8wdiKPraxGvLo4P_wp4t770iunTlVEOVEb2AAFI6oPbMJT-e5oMCcYsKL9PzJE15SChoR-MLWR576fKU0xXr4IPOqGFfMlEVnUkSD4PCHV5A5UmHbEhe42v_pr_52Sp1iGy-d9zgrTKrpiz1pFgtT80effDBrbpaerUyy9H2li96YOoPtNSHgsAIgYKf2M7TUXEu2InM0h9qLN-oDf10i_43T-_6qx3JH2fpZRKVeT4tL6NoUeRXMU0wSPc8qE6FMErK_8Ln9NBpXww1eeg6jKQ7gIgCkzGwViUsGIl5JtOS-DuLIGcUwJJSXWnow9ZQqVp_1M3933OOP8kZG9L34AYHAzaeU4yU3DWPtOZdKk4EnTRxiVW31iD5QcWHtAKW9dnv-xPp3XVZ87VMDmCYde1bgmeSsOJAl7sHcvjqNsPxz2keQNfwtGaaIrAEZMUCumoK_Bd7B8N5Mes4x3b5VINIOlPkaK72ndhrgL3hn6vA4zS5g8x1_XTCFnfjIkfIawc-ABQBd5DlLjOV22G8qOAm-nlWUdUJmJ7OUwwoWsB0P3k6MiTxlL_TfshwctRWXmKxcaNyweKzmHMEwjNnnbUd0FJUERmAeCiLSSiTlgvVxqfJNtPMeKSH-oqB3BgEduNKvzul-cjmnRufsZb1VUi3EK9ujxKuKJgKTKef7vVRJbJfz4rpE3nSZjRnQY2RO4bmNbfjI8I3PXZ48EusrzKcbQE0cNEquQx3W6j-8tRMNH9RZPrGUHhYGQhm3_v9MxFWZOm5wB4gwkkK16UnO59DSSzt3zFz3fvUk9ht6Ntc3ouS9bGiQPTjdvl63W6I-s6tD7AqjG9MOseQZBXYQok9TKsbDbeTwQCUgzW9Zbgl1-kZ74SR8bB_5IYEhw9I_1wXYjY5b3HPtvvXVcSQ-5FXP6aTNbCtAYaPyNDSoIcjQgO3O5eZBAWdi6kIzM4HyV_8oT_mcm8v0V304JikgJwTZ3G5DzAQPyqn4-jE56LUpQk2qnvspzlJULYObzUCterjB8sDFuq92h6wSUVi-snC0VnRzIfosq9OQm-ilQmdDZ8W1tJo1U8qYTLdNP-an32FbI8IEa2UUSSzbPwsS1vvlARMhDxKSDDVyLYTQhV0pUG3e7YSiGoKXO-qxt9k5H4iMt8wy2ZOJX9fYSaASv_mux904zcyyPpjCF3js8f9k3TvBRvrrg3v4RB-Ta3bkPDH5zFM3gbeyWg40qBf-YHwqcq-oYedYHF1aoL_0gfWmCAQm6kojymBxr7Lp3jI1VJDnWMgsEQDCPFC6-TlwMxJkS8QBZYNGi4I5rGLNF3wFj4zHL1aah_Xv2FEZaLhrROxw_z8hIB2Et907ropmur0_uaYL9k3ebnAOVw7GwcRdQNXKGRNEu8piRu2hSe0dM9AR6zz_8IK0fOz9EPkcuaZz7v5QIleF9-gSaFBfkWrwzvQPA3dYU4ePnGtK1dD4BYVNu-OH8oLXcPakiGl7XFjSYAahAn-rS3QdQQVPxC_tkHShBrVOVSPZTbothuOhO9XZbFXbhmYKRtZoGoFn2Z27c5dU4QxRZf8wXB_FjYIZj8sfgWvrKWJ7biHbC8D2mRUz8XA2gWaGf8gtvok7bgZp4pcx_eaQTVhtamd6XBTcLP4bmjdMchiWDHuoZJzukYKIPhkeGJs_ShGdZGs4oflQ0x36jcPFjcKyDqDv240KSbKD3TNrCiidqX3cGXt-vKnRl4qkQNmun9w0v0tUEiYnTUK1QhD4x_uE0pgXCfowCXmQT_BJwN9sLoPcEmE69FupAF5DjHqVtGp5PfDDStIlzwUoC0Ilnnw0ySQSfu7lOM_eCn8c3Ut5fJEya1m0SO951Z0lxedlYFN9vX0G5i_B1LrDUm39rsIC9uZMYmXCzIY56-a41FVL1hicUyvvFXfLVBJQ31J-i65fpccnLP5SMuUnKp2mrUk0bl0FyzlJDQT8woym2akMUL_m1bNq4yQkmFm2ASSN_ZK8UTcCOr2UmI9IqkNx-8jELn1Q0v0AWsvMGuji_rCqMWjOaV-KfgrmQ9z-ZPjVSViI9Ko6m_oeGivWVt8UKodBbYFYJe4aoOS-CzV-72bObu0GaYgeNs8Z4vGdNxVN6syLOB0LIln-dNPmxGqGxwRbLn1CIOJUUerGRQGgriqYFAez_9d8_panXO7LcfiA3beI3rmQdgeyp87NrCSDRjBPCxy3nOnNdpyEz4BljIukdmc3AyAvsbUJUeKuh8LLNYyQ9L0mtdxXUenbr4sEu59Su_CWI3K2if1Y44PJtFS3JwtRj8Q356iim4d7_CC9lc88aHCsbzyZIkQT5gV1SGRiEO4gg2ZrKsiYaz1curhR4zyLrxNvxWo7lEDoOa8vm5ZhKMMEaIqKK-tYXiVfVbfXKbpkJAEjnadZihB6VT7wIG8EdkXgzgE9udRj9X0YxNSLrmEit9d7NFNLGnbiuh0tiZmhDBK-0KSAvf1JWtW_xZbEM3G-WEao9_EiijFG--C8U_mQJA3iw9PYbjtSrfJY8HICBNpGUR5HSUTHcZpP-V7qykZB0vFBCqOex_pqCYrtaFD-kYc8uraCGhDl-I4MlX2ACu5Rzeliz46xn5eWy7Y54h1OsYaRqJAf7SsMGwDkrTEVWG7w0rBgnbv0tfO-vIhamsUlp4bcyfGXTxS0gJBLiEA-cRhTIv1krdmPLjlRFdiipxZ0quuo9_S4FM4mZiOa4uswGaY7IfdOZjJM3cqRDezY3L8SKyyQTiSCglq3Ve8tbgYILGpxPzTnSSi4uFzTsH6QT2IICcgfFJZZQhUnZFBMNRW07pSPp6m-1EnIPTQzmZINjf7VXNGkwbyDhNodfz42rkL62vdFx0mnLXi8aRrNMsTGtSOAPirFv7FGajkpoRjCxhCEXEBcl9G14kpS7WAy8XqQAQDOlNSTEWXLntq9MtBZwStKTClrRrS1woSP-X3IfjttfJ8Ph-94KaKiqgzxyiDGCb7mchkZqaq6KnuwtjIF6YXFNAuO9kyx7EaT9NsXzSBmmhAbpZySf26192-97ho0tuOciCj_qC8Nkh31R1BfLZvqK_B7VnW0y8Z9J55ExEqs5ZP_uVwZogtrNd_acBWmAeDJI_-hmMs4uhHmQWUTojX-aXrJIl1an2gK881Uebl_AiHzym1qfn4iUe9uXyGJ0obH3s6lc_F2mkk9KRMCBNdnOn0qtTIWgtnZiV2dV7AMMiMflQyiNp1N7WBB2-NmN8-bkX-Q2F6Kqte_0d0Z12uqHJg3SKi3yiqY6c6Dkc8QEDQUCWWOKqc7jsp5Hlei5XkrWkGMM9HEM8VelBlXGHkwyRnGx7ZhORRoWJpQKcLpBSAsNoZhg_dzRNs4bQGcuns1YIgCWj2_tv6r_WXlqNk923zX7GWO5gXpuiQz55iGMViDG2vmFMwAPxP7bRAtM9hCC5h9yV_wtX0l_jSqhZtuxz6DMgvg7Ez0uRgvCStnSWfNNhmj2tCFP6-xB6G4NfOtHRkZVKbK5OkzzcJgeAVY5oojDXJA1M4j0IeC7blt-kyZeQzJ7yy2p5P6jYyLtNfLVjfDTqcKkKjjPwJR6_rCOtOGzHr1fRvx6rR2PFB-gN1ET1Mao0EKKWdrshJQRVaKEdPlhR0234cHC7bmJI-88rJzaPqFbXukiDzHrw8_CqsgKJ5mD0cEC91VWMONDnKPOZiMuCc",
+        "summary": []
+      },
+      {
+        "id": "msg_0168e97785e667c5016ad322afe44c87d2a5d05fc6184a99b3",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Northgate Plumbing Supplies\\nLtd\\nUnit 4, Northgate Trading Estate, Luton LU1 3HT\\nVAT Reg No: GB 000 0000 01\\nTAX INVOICE\\nInvoice No: INV-30412\\nInvoice date: 14 October\\n2026\\nDescription\\nAmount\\n22mm copper pipe 3m x 4\\n£72.00\\nThermostatic radiator valves x 4\\n£48.00\\nNet\\n£120.00\\nVAT 20%\\n£24.00\\nTotal paid\\n£144.00\\nPaid by Visa card ending 9911\\nSYNTHETIC DEMO DOCUMENT — not a real invoice\",\"merchant\":{\"value\":\"Northgate Plumbing Supplies Ltd\",\"confidence\":0.98,\"quote\":\"Northgate Plumbing Supplies\\nLtd\"},\"total\":{\"amount\":\"144.00\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"£144.00\"},\"subtotal\":{\"amount\":\"120.00\",\"confidence\":0.99,\"quote\":\"£120.00\"},\"tax\":{\"amount\":\"24.00\",\"confidence\":0.99,\"quote\":\"£24.00\"},\"date\":{\"value\":\"2026-10-14\",\"confidence\":0.99,\"quote\":\"14 October\\n2026\"},\"vat_number\":{\"value\":\"GB 000 0000 01\",\"confidence\":0.99,\"quote\":\"VAT Reg No: GB 000 0000 01\"},\"receipt_number\":{\"value\":\"INV-30412\",\"confidence\":0.99,\"quote\":\"Invoice No: INV-30412\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Paid by Visa card ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.93,\"quote\":\"Paid by Visa card ending 9911\"},\"category\":{\"value\":\"TOOLS_EQUIPMENT\",\"confidence\":0.71},\"line_items\":[{\"description\":\"22mm copper pipe 3m x 4\",\"amount\":\"72.00\"},{\"description\":\"Thermostatic radiator valves x 4\",\"amount\":\"48.00\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Northgate Plumbing Supplies\nLtd\nUnit 4, Northgate Trading Estate, Luton LU1 3HT\nVAT Reg No: GB 000 0000 01\nTAX INVOICE\nInvoice No: INV-30412\nInvoice date: 14 October\n2026\nDescription\nAmount\n22mm copper pipe 3m x 4\n£72.00\nThermostatic radiator valves x 4\n£48.00\nNet\n£120.00\nVAT 20%\n£24.00\nTotal paid\n£144.00\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+              "merchant": {
+                "value": "Northgate Plumbing Supplies Ltd",
+                "confidence": 0.98,
+                "quote": "Northgate Plumbing Supplies\nLtd"
+              },
+              "total": {
+                "amount": "144.00",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "£144.00"
+              },
+              "subtotal": {
+                "amount": "120.00",
+                "confidence": 0.99,
+                "quote": "£120.00"
+              },
+              "tax": {
+                "amount": "24.00",
+                "confidence": 0.99,
+                "quote": "£24.00"
+              },
+              "date": {
+                "value": "2026-10-14",
+                "confidence": 0.99,
+                "quote": "14 October\n2026"
+              },
+              "vat_number": {
+                "value": "GB 000 0000 01",
+                "confidence": 0.99,
+                "quote": "VAT Reg No: GB 000 0000 01"
+              },
+              "receipt_number": {
+                "value": "INV-30412",
+                "confidence": 0.99,
+                "quote": "Invoice No: INV-30412"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.93,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "category": {
+                "value": "TOOLS_EQUIPMENT",
+                "confidence": 0.71
+              },
+              "line_items": [
+                {
+                  "description": "22mm copper pipe 3m x 4",
+                  "amount": "72.00"
+                },
+                {
+                  "description": "Thermostatic radiator valves x 4",
+                  "amount": "48.00"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Northgate Plumbing Supplies\nLtd\nUnit 4, Northgate Trading Estate, Luton LU1 3HT\nVAT Reg No: GB 000 0000 01\nTAX INVOICE\nInvoice No: INV-30412\nInvoice date: 14 October\n2026\nDescription\nAmount\n22mm copper pipe 3m x 4\n£72.00\nThermostatic radiator valves x 4\n£48.00\nNet\n£120.00\nVAT 20%\n£24.00\nTotal paid\n£144.00\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+      "merchant": {
+        "value": "Northgate Plumbing Supplies Ltd",
+        "confidence": 0.98,
+        "quote": "Northgate Plumbing Supplies\nLtd"
+      },
+      "total": {
+        "amount": "144.00",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "£144.00"
+      },
+      "subtotal": {
+        "amount": "120.00",
+        "confidence": 0.99,
+        "quote": "£120.00"
+      },
+      "tax": {
+        "amount": "24.00",
+        "confidence": 0.99,
+        "quote": "£24.00"
+      },
+      "date": {
+        "value": "2026-10-14",
+        "confidence": 0.99,
+        "quote": "14 October\n2026"
+      },
+      "vat_number": {
+        "value": "GB 000 0000 01",
+        "confidence": 0.99,
+        "quote": "VAT Reg No: GB 000 0000 01"
+      },
+      "receipt_number": {
+        "value": "INV-30412",
+        "confidence": 0.99,
+        "quote": "Invoice No: INV-30412"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.93,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "category": {
+        "value": "TOOLS_EQUIPMENT",
+        "confidence": 0.71
+      },
+      "line_items": [
+        {
+          "description": "22mm copper pipe 3m x 4",
+          "amount": "72.00"
+        },
+        {
+          "description": "Thermostatic radiator valves x 4",
+          "amount": "48.00"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

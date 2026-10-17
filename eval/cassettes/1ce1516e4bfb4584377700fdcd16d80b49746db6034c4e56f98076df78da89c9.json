@@ -1,0 +1,208 @@
+{
+  "key": "1ce1516e4bfb4584377700fdcd16d80b49746db6034c4e56f98076df78da89c9",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:12.652Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1942,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1116,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 3058
+    },
+    "output": [
+      {
+        "id": "rs_0c6c795698fc3e4b016ad32293685487d2b8b478a72f35c1e9",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKc1tS_BxDPBvaRwlFmyRiPg_u2DCU7KaJSz3od4P3fpL1guUAz3f8ksj1FP0RZYwOu4dNuC2-zOXqmNfgg6UIWqnsHgGoXWtp8iXz_DtzP8YX3N9imconJCHF0X4zA-BtqO6XHoiIkOKvStAglrTHIEM_C8gSeltTu-t2aL1I1HP0AwgIF1g9wlUmgCSN7Cu35vtoKojlDT3Xuyi3SBZxPJi1ZlDgQYaT-QU7ExKKqLPtVxDPTg_tDYZHyrqE4kVw1Ugs-_STa7dAJuWIbduKRX4pkMMF8KVrn-ALWVeCxPIkhnzhTA2Zpu4BUIp7D67qJw29O8VTjHcE_g7xqROd7M-UYpU08nRACUu0pcF_yOKGG6uibaM8QhdTzc7EeoLW-C2k44a1oTfJx4UzYtr0FHN5OZW1240zXyh4jbFpT3BJ8DIDSSvbLHe9btc6-lTPztX3XRbR6mmOeu_s5v9AhBjbNUCJC6NRtCK4L6AQYuL119P4eaZ8s298Yx-__dA4-FOiGt6x_hCT0Kck2EIgzc_4sLEtyp0WrDdfrbVGB-euVPjyiBvvmzQr4t5_ZAey602jSOKH-TxABy2FoJHINJetCNXZUx-2j7aKkIFPfP0I9ygXbk6K0OYst78o8ixR8p52JMcVXULImDOYy30BQ3qV4pYltk9MD-wkBAdcADRwWFyN-P_nkCV9glQE47SufSI0kz8UuiVvgNRMFRrCJO_FQ3TZefg5uPgDlacl2W9q47Ve5J78WcaFDWEY8Ubc9qct8sKFPKB873XxaIS7VeJEii4tyXSzMXRIEedFe9076ISfoBn1nfiZAeT3ePUuE8SLLkSnGc6wHur4rpI9aD2lJI6eQzRppKseMpjDY_9vKR2vJx5rpAytvjzHu4_robySd4kzUMYjuPsNj3blb96U5qUW_9g5CTWsu-_0cjhpf7V_0OoTyCvFzp_PFC6JrxzlxBiVQHmggZkEhKCAEbz8V-rWt4BfgVqY3sqo1DkrP8W4MTgxDjlrUXedPii1CDmIDXTCjzoF3Hxa_ufzJ-ZIZOujQf5T7neYO2Mh0N58g4XxyTeNLyYH30bcOgaf3OAWHAqZwVscnWkSwo0K2450iSWrBklsGmmwEQ7EOhf9wl5ADCWWX_uoJMymdqLvuHdVUSvfzLOZ-Bl_k8UaGB5D_TsZDsH2trryNDgSwAinpFprvYXV-CE7Q0XaMtB3d4pHjlGody_acoctF6N1hyTLKio8hEYIcDiZQtaFKLLUNT8u7fDrVn0ZvlFfSD0PVm9CnaV0LG7Dkma9eVbX_1u1ECy1GiNuysICjxpvENXCQ83PAVPa_Kc1RQSaFCK9zMNrSmXXyFugX_Sk7wqbH0bHJ54vnPb2kwDrKQuDHAHV3srxhG7ZvEg3OAazRQjDwCsur4xjZ8aeeN9WM7EHY9XjiZlGRuLGzW0SnOzLVnzLwqL3LKaYiRWAxYjvB47gZfwL3LA0zvrtkzzaAWbm19NM56xt8-Zt40_Tqed8bGee0A5UBMe68vrUBj-X4gEma2QhBFqIjo6PVUeMyaUKea0MZwAaPny88nMyDmd4cBdrmjrNgZISGA2Ylf8iwaMVWn6X-oV-K0AtCVOnvqlq9hwNiwiwqMyOaGU8Czq7MVyYDHuBeOXB_myrq5BkDL-66sEOMnUM0_NQMEh2_s5Kuzpe47hkhuFdp0J9S_Al19pxtX8l6ouwiqLRSjM0vO30UG8DNiu4QKNHxs8xs_Egvf-j_vMfgbij1ZlbN9l46t8nfmUm4IXlYN_ORIyQr1Lplz28ZLDHsjDt4_MgIMsxq6AMfaomFi20mYAy0xAX-1-ORraLQ4xU_e3Wjru7sOedNCkSEr3RGVLfGkWVh9vDPGDiqWNLsRoVCu90zK23_FgO-BhI6RGhzbst7dTj7jsBgzKYzL7d1vniUQ8-CP32NiuhRbEwZYjRIvMQhCAQ28xBlvATvWEJ8Y4sbQvD-uW4u7Xo7V4e0tKnrh4sjwAcL3iX16ai_z7uzVIVid-SINjSdHnMEcRO40e_cqUEb_8XAIXFs6KMop8tkV_T8UOss81nocH8BcMUPp6UjW-bDP3OauzTNnup6iMGOsj2P0Ou2LLW4-GK8IK4JQflGPI42nWp_7c1O9e0M17XeVz-HRPdGLP_JMmKenEW49JAOHDOJGH3ja-g1cmXR6FN7qxh9AwEIP8QmcNvCOzdqD_LSDVifp41AO64wq4bLWFMzHYOYLU1Czw00ML4RJ4OlM7ahZzbgA2Skq_4tibDosuplkbLuJsFcGu8qd3bqOLw3w2cQuO7jP2D8LWDH9CC4CN1D_E1_bKSTIvWx0R0QHhJj9G9mmK9UeSFzzwawhKYsLCNO1uPSYQ0QquBIGMutp9zA60hJUlaXtEct1cVpCEes4Wcma_rcIZFjfe_P_DSc16TyBIXmiYZtm2JjmwRR95dcL6gxame9nhIcmhriHEC7KB-cprcldG0Ri-_eeRFksZ0XLqcIZctSvH4IDfbKjp50IgRPVfwHGYJTxN8s2VVm8-trgHELvq_IakuhgtscPqpMRryRwqMQ0eZuwU0ArIvZRFg3NEzGKt1xxyWHwtUROTV8pvURweBU2EgsmHDgpOISTSqmX3BurjrJN5rgGdPSFjyJIofRZr9cL3cAeM3s7_nvOi3E0IrRZfHLt9QXt0qT-wcJS3DE1_0zxeb0gTbDfJTFhUFgVShJqqmx3w0mpZYeN9Fto3oY0NpwBC9UVNesn6wKbkMYK5IL27a2WSwI3u3wAc8NNeuGysnJWivI7Y1OaM-eHDO42k4gug_avOWxGRNOP-ejJG2F5FSQQgjQ9eQh1SxhZuSaH_5dM3csnuR3lyWAMRkhC09fBCtPt9glNIfYTWTEzWBsfxE8JGyvjOnQwFikyV50ALMh_YELrnGP9-zA9Of-qMzFfps13901kavyRpDVvXNB-HrwSW72MubenPrw3TIcdtlFc-9y5QGQgUu4302RjWaBh9Ip_tWTgIFRolrrOju4iFPnckEg3kYBJiLGEx6kLJ-C4O25unjPJckYJaBXPdn3KPihlknkaSwx00B0fNfo8awFbX88tfoXak0uo6vLuykPtUVDqL5nK9cZwIJ8fGxxAoSHTwvfK54mG7EumDy4LgXUwuH1Hh8yfeHg4HjX9zSIKlGBrRaNDGNV9fDlQ7ay2xLAjf5KQyboGrt9tmv-sFaSceDhRUQW0OtI9PC1WCAyPpgT4WUnLtX_vbI5lC4KvMOUieOoHeiWgVwidejVfvlR1DuqF_CwV6j-eEqPQIRsFFHsf-EYFoDlOxXVUh-lrwWht-qZs7NyB8VCZ7b5UWygGwNK-TTEu-5VQaz4g288M8w160HAGSPnwgHFd6nv5s9JD9_YlwlS3QN-reD8iFDpaCwknZXwv0nGciIl-vwTIcWCuu35JS9G5_WyVDvf9tX4TxqW09B4Vf2DiyNzZ31a2zTLlIKvtjkNdqOh8GXodxv-0L8qf0gTH4DyelJOS8pc90Ty-DYvXBC27Un-mOi4HfYJbpBGEcwmi7uEOC9bueoxEoYG15VUhkvldwHXpUP_VFg14hxGZfZsyC-SwZ61VsMFeJUnJpkVF3yu8CVuiPqtgtv4HqnQ3R1m1iT8YMqvYQlRvBzXFw-QmIC1yUevUijnO-EKGxOHtdjVD9OisFbcxBLxv480QyGdsoGfpzSxXSHBf2eI4zhSybXqh3TxRpCXz2tKIN358wlI9cjLlM-orPm-6JMCWSR4y9Wb0X1joE-xW0dw-pNIaGdL4rf8u6gbzxXd23aYDbw_AKdcaVwHa0A5JFsJJ-aE7KGeo56AEL_rlKRkLFgljr7WoIKHd4d2HimqSAUzFD2OnnHLyJKxgOkTN87HC2HzfgRhV7DKl4j_VJf_vWxrsKmrPpPYJSLegQbAN8rt_84AE1nRo3pqAz0HVGiYjUK30haIHViea3wrCf2Abz-UvJZ4QVswcs5N1dfghSbGwyMis70Kxh90VYwzJLcwJrlhMuVVcekoxEBAiZXsLUzlykbCP9Uz8Sj347UyysYdur091rCjGjCh4rhQsnr-wzMDYDlrGyFswGeALde0laT8fr9-lBsta0FZOelsBwgRXn33xsetiaTlbddztIJJDGUlCXOppZkv882Az6kYOC1uf6SKbYKuIoReDwvqUvzPC4Tcm6gAZBAckF0_t1tc7kRvRzO3-a6FN9VNcLv0O2NYyW8hqbCv54fzIfQMVu8y6p0eVL8zwy8B5MITvO57AEEFlI_Sx4nG8YMtWfNMYvf8E0yGS2gXeMIDBL4r2Ixlx43HRdWmFkkLEMB_2CXXlkeUf3t1_6sfRT5vGMXptwTw0mzrlLJ05SV1gDW4B2sInfb0gFQeqE63lm1OfZlMHAyxLerMKc7FbwmjyAf8TEC2yM4-KvYTpxhiwCnFvlECgvJgpDbqVW-M7GYoH2r9psSeW8ToIF0f7G24LievfguHb9tqcj02eNbS6SvSA-0Ezu0lOjyzpG73cHlHeI7Dcz-meIwNH9VzHC4CeFO7c-T-TK-vOOqHIL86FkJNok64-4INqfT0Du4CH-o-FUv9VRMYgb1u6xWKP-rIrOtDCzS5plcIC9Rtxa-fhv6fR8fT_yCqDZKR8PFvdrOY0ZhLEUE5MQhRWFOMG-GOFe9kKIAEpwCpHgyVDQuBZI8VPNhGYGfvx9URvh6MxnUU-hz8Vsgfi-kqrArGSB8rRcOvo6q-YHkoN_2wWeu3n6cxaJJJoQIaFeEmfCqMjFPD4HtYplCiVDwKD2F9hIaBPkbO5z_eKhe-79NXX4jOX8hvUWzbtN_5VYbzGdfmISLC8L6ty_jKF3MapOZWqcawevcmqKnSHVkVY5F9Qnbt7JQMpeOOtlWkZjWwcfdEz9rOgHzsMb8XcudTYljw8G3tx3CnUyAMky-FbxStk0imEidQdIRqxuDDVPTUoSLhva4frTf9OjI059h0iBjbQNmw9hIV_5xkUQudH3-ynP3NnDlPfuUKqp1XIRwhILly_knTlCf1dH83y7FYHyUG5hzVhDSx1UmKtaHAwhlddGB8bQu8ZMb5a_a2pnqfOZ3DgGrAA3zcvRSr4_FQi6eAhtrvSdjlG3FnGVsImRtqS8D2GWLAXPG_QhUWq6y0PfiPE6cDtAX5HOzUc8V8syRXYfOVlSrQpXKZsUOz5d1qJpGAzDnPV9WgIf8vvdeM0hnP7GV9_k2o9pGon_0dle54c_coy3vDJCLGXG2jpu2g5kfLT2maJAp1Ffr7Q8fKJR7NybsYWkxdAnPS7Gky4nrTHfJqtpBh3a422IUOm4jHr_eq4hWf9zYy0tq14QnaqKpOpLQT6XzpEwH4RUP0YpvI8cx-VH8YyeNYrIgp0qzjMhaeENB37F_QKFfF1GOE9n54dNVyJx8V6J9gTrkj-zhnjGzwT_Xq98mMGUcxWyF2_MA89IPb77fCLKcdEtfWwOSPHJWCNjsjkcObW0oIItvRmgud5ffWrxmOXcRr3o9Dv4B_sFrX-MTvlgwgQ8g5mZCmGRQpz4lW9eONQNwLntsTCGECFE12Qa8GviByj3W9yvkgvKjzwAPYbfIlbeBHxseCdW0wUOSg2MxYhIFPuzQ91crIQH3IPliwtVY5RJPYs-VRcDrSOTOZEVioR-Oo8i9QpOVgT5a5qkFaQdlT3X6yPSvE0PQ8Muh6FOjlGpnf21CPt9063gdiOcUnzEgoLA5GxQkB_GiHz5vxPuQPwhbj282kyQIAw69wxomvcfNAqUR5RFc3YQLYXgwTnH4prfwdkgd2eGO3w_7Vlh-UmD0ocGpSRyGbqENybPwtjh3bJDlgAv11UHaJuODNCNiX_zNFjflWHXw2k2OdbkpzwAJgXLQI3k5UbGXZNBi_q_on9nYkuChzh9F4edHnbNoYCeTYRW6Bl2MatcgEoUEifd78MMVcvYqKdT33KsxONWKcDkQQIiTJFmsbQ5cPAOg_U8GLlDGUVbZPzIEoLgG4sO2cSi0KHp-Qnme9vjyj7bpsSJi9WCD-gI_pY142v_-jlWiqz_XJt1FE-4wvOofFK15r_tsYmECzD8rNW0SkdBWO09YSsml9zf1VQHIewdAhWX8dQNTVJh-G3vgi5fJAbWH8NHL89YfH6YhPvsfuYNb5-6y3a6xlCjUqLxuFFx8u_JAasjgWYnWUvfR0SUViTyAi8epkJkRa01d58Saj3t4V2Cem_PYl3xiMYlN6vT3e7X1pEkVcfIMYRxzXD-A5wb532YWuuGOvkZ160dwKer2vR3i0u7gQyG2n4YozGeHMbV1wHf7wmAwlSQfwlSbIg-mCWemQV9NBWbjAqf9lWQdgn6FCDMmwUkpBShgbtUCanpu0gpHW16JuH7n0UGmvdq9liLDVpl_C1Zsi94NnoUn6Yvh2BxqkmAFrqica8DnUlqlDqyM2JpWM9_vNUHyCiRgZJbmT0jdXgZuE6MC3M_b4NfwgHzBjLCOXXzX2i4GB8H6E8sl9jMEjkeu8LzcuTjeZkesXlIZNj5mjyfmrbpNihAyJbXkz_PL_-Dt8p_4zQqW047e0s7EvLF2gfYvIMpeoCuS6K6NjGP9KjxHSH2YCckmRASbO9XUaRvctMY6HXZA1ef3gpSzxlh7JDuHodpi1jt2sUAwfOWRWIZp9NzSNgbnehva_slAe_t294uH1habFQ7o9zq2UBLoKcqepjrtCXnIPTP0gHosYpb4NJG5u8d1kYjKC6Fajf5zZnYQdJvTaPVYPqOA2nBo-wk8i7QLZViS6DsQ-A4mUIQ_5aDkt-yqUxTvwpfZAOe4ABfk6KFMwP0iumKiH8ebbivgBYMWbgDTKuxFvglja2v81218PHrmsIcKHoU_f0mTqiukgb1s_87LxyD_lUdDgp8jZ2HSFR0oZse_zNuC_UpsELnkhOMK0FgA3nREUkdWSuJcJSCC625j1AaxT2nW9EIArfAme1KvqareOYrMzFZo25EG0YykJIGLDVyrWaJaw4dj2rsY-lrAYTZCeiCBHzIdLV0TWQH-xraPI0BD_utJzZwB0o5mqFg==",
+        "summary": []
+      },
+      {
+        "id": "msg_0c6c795698fc3e4b016ad322986f8887d2b571501c98e3d99f",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"SYNTHETIC\\nWickes\\nHatfield\\nReceipt No: WK-0410-2231 · Date: 11/10/2026\\n------------------------------------------------------------\\nPlasterboard 2.4m x 6                  £59.94\\nMulti-finish plaster 25kg              £11.50\\nJointing tape 90m                       £6.25\\nDrywall screws (1000)                  £18.00\\nCorner bead x5                         £22.50\\nDust sheets x2                         £69.24\\n------------------------------------------------------------\\nSubtotal                              £156.19\\nVAT @ 20%                              £31.24\\n------------------------------------------------------------\\nTOTAL                                 £187.43\\nVisa ending 9911                      £187.43\\nVAT No: GB 000 0000 02\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Wickes\",\"confidence\":0.99,\"quote\":\"Wickes\"},\"total\":{\"amount\":\"187.43\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL                                 £187.43\"},\"subtotal\":{\"amount\":\"156.19\",\"confidence\":0.99,\"quote\":\"Subtotal                              £156.19\"},\"tax\":{\"amount\":\"31.24\",\"confidence\":0.99,\"quote\":\"VAT @ 20%                              £31.24\"},\"date\":{\"value\":\"2026-10-11\",\"confidence\":0.99,\"quote\":\"Receipt No: WK-0410-2231 · Date: 11/10/2026\"},\"vat_number\":{\"value\":\"GB 000 0000 02\",\"confidence\":0.99,\"quote\":\"VAT No: GB 000 0000 02\"},\"receipt_number\":{\"value\":\"WK-0410-2231\",\"confidence\":0.99,\"quote\":\"Receipt No: WK-0410-2231 · Date: 11/10/2026\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Visa ending 9911                      £187.43\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Visa ending 9911                      £187.43\"},\"category\":{\"value\":\"TOOLS_EQUIPMENT\",\"confidence\":0.95},\"line_items\":[{\"description\":\"Plasterboard 2.4m x 6\",\"amount\":\"59.94\"},{\"description\":\"Multi-finish plaster 25kg\",\"amount\":\"11.50\"},{\"description\":\"Jointing tape 90m\",\"amount\":\"6.25\"},{\"description\":\"Drywall screws (1000)\",\"amount\":\"18.00\"},{\"description\":\"Corner bead x5\",\"amount\":\"22.50\"},{\"description\":\"Dust sheets x2\",\"amount\":\"69.24\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "SYNTHETIC\nWickes\nHatfield\nReceipt No: WK-0410-2231 · Date: 11/10/2026\n------------------------------------------------------------\nPlasterboard 2.4m x 6                  £59.94\nMulti-finish plaster 25kg              £11.50\nJointing tape 90m                       £6.25\nDrywall screws (1000)                  £18.00\nCorner bead x5                         £22.50\nDust sheets x2                         £69.24\n------------------------------------------------------------\nSubtotal                              £156.19\nVAT @ 20%                              £31.24\n------------------------------------------------------------\nTOTAL                                 £187.43\nVisa ending 9911                      £187.43\nVAT No: GB 000 0000 02\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Wickes",
+                "confidence": 0.99,
+                "quote": "Wickes"
+              },
+              "total": {
+                "amount": "187.43",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL                                 £187.43"
+              },
+              "subtotal": {
+                "amount": "156.19",
+                "confidence": 0.99,
+                "quote": "Subtotal                              £156.19"
+              },
+              "tax": {
+                "amount": "31.24",
+                "confidence": 0.99,
+                "quote": "VAT @ 20%                              £31.24"
+              },
+              "date": {
+                "value": "2026-10-11",
+                "confidence": 0.99,
+                "quote": "Receipt No: WK-0410-2231 · Date: 11/10/2026"
+              },
+              "vat_number": {
+                "value": "GB 000 0000 02",
+                "confidence": 0.99,
+                "quote": "VAT No: GB 000 0000 02"
+              },
+              "receipt_number": {
+                "value": "WK-0410-2231",
+                "confidence": 0.99,
+                "quote": "Receipt No: WK-0410-2231 · Date: 11/10/2026"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911                      £187.43"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911                      £187.43"
+              },
+              "category": {
+                "value": "TOOLS_EQUIPMENT",
+                "confidence": 0.95
+              },
+              "line_items": [
+                {
+                  "description": "Plasterboard 2.4m x 6",
+                  "amount": "59.94"
+                },
+                {
+                  "description": "Multi-finish plaster 25kg",
+                  "amount": "11.50"
+                },
+                {
+                  "description": "Jointing tape 90m",
+                  "amount": "6.25"
+                },
+                {
+                  "description": "Drywall screws (1000)",
+                  "amount": "18.00"
+                },
+                {
+                  "description": "Corner bead x5",
+                  "amount": "22.50"
+                },
+                {
+                  "description": "Dust sheets x2",
+                  "amount": "69.24"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "SYNTHETIC\nWickes\nHatfield\nReceipt No: WK-0410-2231 · Date: 11/10/2026\n------------------------------------------------------------\nPlasterboard 2.4m x 6                  £59.94\nMulti-finish plaster 25kg              £11.50\nJointing tape 90m                       £6.25\nDrywall screws (1000)                  £18.00\nCorner bead x5                         £22.50\nDust sheets x2                         £69.24\n------------------------------------------------------------\nSubtotal                              £156.19\nVAT @ 20%                              £31.24\n------------------------------------------------------------\nTOTAL                                 £187.43\nVisa ending 9911                      £187.43\nVAT No: GB 000 0000 02\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Wickes",
+        "confidence": 0.99,
+        "quote": "Wickes"
+      },
+      "total": {
+        "amount": "187.43",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL                                 £187.43"
+      },
+      "subtotal": {
+        "amount": "156.19",
+        "confidence": 0.99,
+        "quote": "Subtotal                              £156.19"
+      },
+      "tax": {
+        "amount": "31.24",
+        "confidence": 0.99,
+        "quote": "VAT @ 20%                              £31.24"
+      },
+      "date": {
+        "value": "2026-10-11",
+        "confidence": 0.99,
+        "quote": "Receipt No: WK-0410-2231 · Date: 11/10/2026"
+      },
+      "vat_number": {
+        "value": "GB 000 0000 02",
+        "confidence": 0.99,
+        "quote": "VAT No: GB 000 0000 02"
+      },
+      "receipt_number": {
+        "value": "WK-0410-2231",
+        "confidence": 0.99,
+        "quote": "Receipt No: WK-0410-2231 · Date: 11/10/2026"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911                      £187.43"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911                      £187.43"
+      },
+      "category": {
+        "value": "TOOLS_EQUIPMENT",
+        "confidence": 0.95
+      },
+      "line_items": [
+        {
+          "description": "Plasterboard 2.4m x 6",
+          "amount": "59.94"
+        },
+        {
+          "description": "Multi-finish plaster 25kg",
+          "amount": "11.50"
+        },
+        {
+          "description": "Jointing tape 90m",
+          "amount": "6.25"
+        },
+        {
+          "description": "Drywall screws (1000)",
+          "amount": "18.00"
+        },
+        {
+          "description": "Corner bead x5",
+          "amount": "22.50"
+        },
+        {
+          "description": "Dust sheets x2",
+          "amount": "69.24"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

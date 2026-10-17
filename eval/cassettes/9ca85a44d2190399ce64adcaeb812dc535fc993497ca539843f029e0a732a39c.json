@@ -1,0 +1,176 @@
+{
+  "key": "9ca85a44d2190399ce64adcaeb812dc535fc993497ca539843f029e0a732a39c",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:35.556Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1640,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1216,
+      "output_tokens_details": {
+        "reasoning_tokens": 921
+      },
+      "total_tokens": 2856
+    },
+    "output": [
+      {
+        "id": "rs_0ba1c607c0bc375d016ad322ae04e887d29022ee7bcf167349",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKzHRMFEZT7KQYqJV10UjkTB1JftJpI2bzRRCQz2zak9_I062X6op8Tn-X-IjlEDvwMHTp36xUsiq5GzpXns--bFpOw8537s16cEtCBFf45L-rkS2e4vWZ75mhs4_gvaMHVGfEtOPWdi3WQ9FDWFWS4e0GGp1rZrtTthAQMRdK4ASQWQIZ226D7irw1vSr7DXpWMzrynpIRJMwCk7ueS7F_DkXAGwry7JDszzJnYVONHd3hBdOAQ88tgY4rIQe5-thYLZXfY06gNWjnlz7PHZf8GDoapx1-WocFeudfKhCe4TO7tjey1vPL0KAWqp5A3BKzkr2rEXw1qs2UPDC3Gd6GLHOEoiRhZ4VVE28xGAZ2ja6gX1pNIoI3O0pmiduCAIxn6ZAVqoDHzZajExy17b6jFrCp-RGGSY8mDfk7zBs84ZrT2ZUQhqvLsHZQ0uFnBHArhLI4A3YNFOnNW4eUjLD3YgpoxxAPi3h_CBHq4ozU5mWkvgKeTm0c80JBvey71albv0Njg2-4CEehuMoy_tDT_K5GcVpJi-DvyVjiRFMVOJiscPHukLo9F5cLyuoInrmB7zqlcVLEZpZuDa4y3xoJyOBnl-h9-CDXPqvcgLRw6dKCjdedG8SeYoI_rVXUZJvNIOh-hYkZ5sWbWh3_MFbcUQeZWJFp-hh0NwrMVCrrX9oVyduHE-kfGh-3ebQP6oBOQr-jDmlUDm5W7VzS53q91P1lsy9_Qj7SJiV1jwW5GlFSdW2PsFP41kfAXGCvCNNOR2_fGvuyuSeX__9tgEQS5oSY_Sm8OoQZY2fkN1TcY3VD9s4wDSjHJIaJiIxcFu_VCGYyE1GOGMeIJRMxBLECOc_VBq4UGRf86_DYQjiRgRukUKs0sQNe1HLdBqzvnv5pdZVf9dzaiXar0F-8RrYNi-QrZ5R2kg5uKxIv7EY00TL5kbRx1A9zQspSWdJTN-SrWnXLRzql66NmEaekZ78TZxgQgNOjoYRpAcQ6Gztr5A678WESpo47wXK6B17xiLpCJAJsQZMlRYCW7DfGWw6Ul663ObkoWUVwxzMNwzouPcGkqivTk7IUG0QCR14BZfsMfov9LLbl9iJX-X4HgAB-iMKBGQCwIL0zyKjWlSNwFiwHF9ues7uWRk28n73YXe_9Irx_F1gfnPQV7I8Vl83cK0hIUJlUz2SXeMJ9jjDI09Yn2RryD8hGJDcRtXpCQoGcyqAVHmAzvg3fxskGxTsrPaIQrqySILrWI5OIgA2KWT5MtUZts_AQC93bRFAjYkd2o3q-COd_j6-IsNaBc8IGnoLO4rvm7J3m0KrMT0_x4xXQ2sCzEqMjI6T-1MVzH_vdxIzHwkJhMG-rW1LZ3Jshrpb5ST8Ay_w3Bl_QnJCWL2ygEdvcIZs4zPCXAY9woKh69YOWKVKWgcU2zxP1OPxHUqnoD0GjRiCQT6OFyoRnFIQPR5wA68nhJQiwD6Z3M9f0o9QbndMZ4hMwkEaLPZRTEFnSJRtV_UaF1BlZrb_tRla7PIfeCr9S5cbQ9ZzlbQjJgzItKj_CgLAILcqjbgbYbO76wsJmjRtRs_6tPqcnMp1B-gdhRHeier_tH2NGJcdAyGZbHZJn4AF7Rb8bgcVe_xrdtU0nzUBfh2MX_x1OauIKJoDcvEEOcJfgkzghDPs4fic14C-R6g_lOVYQM0BZHNKHbHbAVjU8-JJDT-ydgwvStUrFA0Q-gBHdGhcHNBQJ0_XIAiltBbmIl8Epsd53V1iaMFUHvF3m8ve9So6RPhI06c2dSMFqUZAMpJ6mQEX0bLH9RiTl8L5esew18HopeVoo2LaeNVI9lVgnqUJs8z4RLpiGk9O8ndDSDdKuTAGDiTI4s7Fm4jd1E6DwwsQ0_xEbFO0PQTMwCMb0qc087IiBYPx80bpOEptv3EEzvFyHD6yZjrw9ciVe6Zw2DFnhW6Mb9aVT6KrCp4ykULgwOrOe8T4yUq7EQri61kfJZ_HJU-i07YZMrFU633ARMAakvYKC-8S99jimxNhQVQbVkq8jdq36UL1-WS5JEKyM8bjhdjZ6ZN2cddxnjOKeWVWKPBZH9zxyX3V0UhIlMTVd685v8xFxFPpgPM74GH4Vj2y233IVc3L0bKvDkNMBTwvbBXPxPSHxrcx2nYWyLNONfZQ-_6QJsmS52id8NE5DkeJLJcrGx7tRf7kCLNC9nVKvEx0i5dFmaO5kqAjDakhzR7izRF3hgZiIi2qshOifYV1UXPVbbeLE-crlOSEKe611C32W7YYDRkRUGs9XQRRmz9oET73FnHvGI3pYAeasJgB4rOeYhhCfGtC41ElOiAK2e_4JQofpecpWKxfs5TZ6IGjXWuLc6mm7s6Kdn3aO1TV3QISLasNvJiXdMA2VThSmRuguV9_FTssvpXn64MasEUAvc-eZRkq_1FphO1LQvi-x1_UgBoSgEnYJcf8a5rjKKnd29vsohyraZFCQN-dHIp2BssGeTbTioc0f6c9G7tqy8S4eKiyspGdbtNn7Aj3rtN7vflsHM6rETwZajWWzoPCRA9s3FfSmraTcK_BRw-qFH9_rFy3eqpxxBEjSqS0loqnK-0zTT-xDCHhWUFFGwEtbWdZDWoZIhIU3tqUJT2jHXTRhNIMnsvyz-SKAFYRe0auY5Lz6hQW8ypcX1vHP0a6pX77b0OaAHAVlVa3DnnfUEF4lLhag5V_9lRUUgBxYp22PWcew4CTZs9Ml3_88cGgw-1G8QPxA9SlQSkZYMgauGJA_FpuDm3Z-EbcsJwEQ-sLzRRoq747SIPWIiMn7-yQKmWwpQHIujNySG8-ODQ_Vw12lZSxkJQs1q0IiHFa4vWjpvJ7AL9N4Ghsuw4tYu3-Vc3KtwTCefsrsSKdkBmwq9hP9d90ARVthYSiYVN-WnQFrm3vn3dytL8ckjU_EgrA-7aJrZV7zlWO6Cxff3fbSWAq2zap9mtyEME7OYc_E6vum0ZDWCbC4gSFtv8uGWbvAaiZqRHDZt6WgS-p9cdkSjp6VavtJImWEe1ow-IiPBJzsI3T-1GU8SeFtpuOKLT_onL70ZYzOQeqXjWP82Di_bsgYALsEFMWGGkkCjmQx3mUOzlvUgIPp9MOJEquv-DanPjnM5s5SOrP8KTp3XDtliKoy9u2GYs0XzRR_LuUYtmkCcMaDDXc1a0ChBLKPKN58Qht8dCUixJwp8mPrpmEbH85OCVolifeb23Bz_rAaeGLaXo835sukiqk6LcTIjRPUe7nmYoIzoBY7KVUD70EzY6LG7ZQvkg3kTUVWOASx_dOy3hsfJJ51gVtIm_Ik2N9I1aX5RzkFLkupELe13Gs3LHPrstTRUTVs23Uqc56ONpNW8_g3EMYAElv9j2gYBJ9TGZN0miXtnG0INITsRYMFvIXkRZf-Ql_yLhoMGgPbCiaNs-_4InmhuQRWyJmlYBIiSrM8OClleE2iFGKGna4X6gnFLE4UiiWjAMmdKjSh4rTaRnJP9vBRNZvbnEr-aih5eTipqyZAINGpc4KUa8okF_R-0101_TO7ki4_U-CtxK5I3s4-qNpcIXg6YZlyAsSjz-py0tYF4LCl6ZMEdeuzPvYQgzghjqnTx1_Sy4-8zV8oWGfoI8beWfFCwQImNbrrZQaULX9VIux22u_o2mZ5rdJgYo98YmfnusR2iFpLPLtJOahA9gxdF3-nzlBsPolVzgQfghsKhMQrqpoSJpIC2Fz7glJUH4sj1nAzbR50sNVRPFV2ffrx_EqkxM8i48dxI05yS1WPIr5dL9187jobmN47evwuoHeJW-oxghXc8fYCXdGO9WW2IuauT97x5Rs4_dw4k2_t9uQToaoQbGeK7ZCGW5W4XJefaED7RczBk3mlhGDYI3ipWKycr4p18edUHl_7v6i9-rrifTWa4__C94v5WiddCbbmUFfTnFQoKNklZrFb7nrPtAqGqsdjVcUhU7YWrSde0ycuAu22_8VfegiNnHJ9mTTUJIF_-VDs7T2YtD3xZ7SinxYTtLOygLpbKqBFWc0_Hfz4vLzn5Q7K1AN9kAgEcbwJ_Pj1Wys4jL7LbfiOQZ3jFNhL865aaTCsuZ1ahy79ms8zm97TW9z82tUGcv5Vwl1G7SNH4fWVVt2a3GLfG28buPJ48_jTbsnhXIE16j4nQprIpMzdSynoN0QXioMWrpiWdPgb-EAWtlG1FA7OrrtxZc6FfISRuFsxueBUOxvGDGaL9oino9gtzHtMpKxV18cUf1EEJUQ-btH27PpetJe8dQDrvvZbnr2X1KgFX4VcPyYOt20gHdzZpJRk82Yn_9uj13CnyzlIXSXYKej3wQDFcRHIxFEvAFqlylsTa3ZBJAHGqW-juxOxzj0pQjemGRHbHk143-czPduKFoXchUo6ZJCRuPVcJaXrRv1aFgMQaFYG6CKCj2JvbHNimsb3tG8Ff8CsZVGPuhHkD25tY3Le13oFWhS7tTNm3QJZHZXjJyGmyZ8sMWkhKG8WuXZLkeorA0Z3ziy_3TTf501okHLT8QSbo03YHaUF2O6lY0eMoVivnOXFCdruzwIG1yFBMLZrVZYs1Y33BkTGt9PEe28Rujhme5ZdM46ps_SUskIJdEHKeEmLlqusG9O4RaLlONdG85CjMB9JUVSNtwGHOf6ysp616wLCXUafyFGqVdgkO5K34zQzfRBF0rlSsFW0VWxCIi4oa53rVB8__Qxr5BMWGAcOoYSI8mJgR6V-Qbms7_85BYGc8n0-PlqrR3dCYWI4q4J61FvTa8AYkiElH0UDy9nmqGK6w_Je6jJWe0ppecBCSWsUI81L2ZsvlHyqqkdvM19lzWn4pZzzSECvrxr4j2LfWTtn8Y5Ekj9fBXYhiFlhh1jbI1ynpmWsYHdjxRg8puYjDnLp46giMzxyzIUogO1vYrWOj99pKr6Xp0N97rrF5GDcODWQF9_XDv80aEpalgz_dtclG8rtgfaMU3nz275ZqKvYaZ3HNjIHv6uYj8-DL9IHC0hCDPCvfAxILbGeJvDM1b97wh1qytXrfWklGWGbfx-g865fOKsrvzLNupWtnyIOtYbX3x1txhHnIaOYaKGaer-utYhGTazjRaL65hJb9b-0hNs74dL-fO7LjTh1-lhgF1WzoY7hPBj4OzeX5kCX1d9V2ylU90Q23rvrVZeqQ7O61X5ywtxAd3I-8hvjsjF1Z9ieXdaNSS0QIGX8Tx9VwPPAyx0WZKzcE09rJw2AR6KHWe-ofI643szn_9yxZKJpiI_J7pj26cNLFndUhXX9GWM-uvWy-CH9uG-c57nY8kylEqIk-ke0liV24gXX5pBhzh4GLAOUfcNnMr7GG4BW0AUkfK-J6d3N7dORaeUl_6uyRcttEFhwsHOiDJT4nN4um2RdFQIQ_-3j7bRE4ygBlEISBCxTpQPTffdKq28gzeo-V9evMHH33nqyPRAiVnKG556oSGezEOI5vWoAGwwGeENM9O9_lpPmlO4KpTyIpbB094O9y5Mb3jArMnE7aCZscjC-Mv94y-Y6frmXIw5dfWUlcypKlq00HsqyAudAzFPGGL14EuWbavMXucq8gIZNcHl4lM2_1WcG1is9EdU1GnK2gD7H6VNgKCEmpN49qvgNEcrEbqv-0gBeyPIJlwnI5bNAJfyWuE6OmPqqE0syHfc7M_GzHjHDmCn4gXc0YvSQZbPUiPphdMmIm0k01OPAufOqCnzuNxQfC-aGSZPI1VXkKF34Wqjj6w8yLyNTl_toeEoOUBSAfs4Hh9fdsSFAavZ-4J5lti1YTSip9R8RBeXT4eJUhgyzG8deCStYKXU7vnGf-4jubaqB952ugs9xaYIrnvD50Ectg37jHWFWqxlkosf8rTdEbmvEpInt-Yhq_GIpbTJ4spYIWJG5AqPhn3-fMZgmXCEh927NSXY77b3GxKt28YPnM9-ktRF7ZioeaYnN0PLRwtylbsBiQvvmc-yx-ZDpbAVzyffQ_HEbiLHMF1VjAC0TX6VZRezWPQfnhTXRJ-oLKwJfRs_qtdQz6kHfK9cA5EBdYkRhzZUE37wUb0678hZXsJT3LTH3cDAMdXlkwr-Y9A0Hf8zpUi5FpuGRUzpoc0rLNh_pO-cL1SzBrbm-9lPLqKp7R3D0NCu2tLkTsCe7niPZKYB4GGOSzxrPRJZz9XGcDtVp3pcIAm8gHRbZXWOvP3HQGjehyvKZECWyPUH5scTkcGTKDKSLIsJtwaLO-Opfse3Ia4XFEj0dHfpbev0cbvww42hr_7DB1xaYa4BB-oGuwys-H00NJX0O0F15-Md3T8h4zpU-wbOMA5RcjkLG_j2D1ks6J92hmi0LPO93z1xzjh7J5LKAq0j8gOdjRPKmT53XM3YKqsjfUtDbblJvLL3ltRbpZZ9U4fnFnlgt5ZfgIvFP5Z_s3PjdQFCdM2N31m7Myf_oDI_OlsyAFkbT200wLbtZ-MK8-3uv_MxEai0LbaX1gMQ-r6PmyU7MGfNq4_9tF1nFRSbcdrCyGMORvmU5WLiKBscnedg9bTIs9dXuJh1wW0s46FcNpDMkmieQgkPkAJiplP6EFvmfQm-XOq2ojR5joc6v8xvckm8dB37_d2eRS0OSlzskvxXFMw6EljW5d0M5xkB9sxsdEo0SoyfNsgc34m2tW4TAxNtEG3d6ynPYgndReNs6KINzKcQ1IWFy5ihKWVtk-nd57PpFCHh2Ix-jK74j7PfBjTYQtnthxGnN_VmTguU7hgC02vcAO7ByKzr0aU2BivEU9qfctQDpU8QD8Hclu8J7ZddbXskZfjbKRcSsR7U65oM9W9leFHnX0reLZmsJXizTtFNGMRG228xtgvb4Og2v2dRJzXHQIUO0eHFGmCiiOeU44jc5hj-qHd9ZBgd8hiVvGoCum222PihkV66Je6sLfPiTQZK1r5gA42N4_LBhPFBL5Xuc24qUFJtGqsZK_kHeoI4AzDlzq4Cpd0z1GustdfNDt1EM2drtfuiyB0s6BC8IsDYshgzEdFFWy_2Z-wGaCAlQTAGrtgJPfBje9PQUPwFc7mxmua8ZEEJInWr6VlWCd3PqGdH28RbiiC-c8qCvyiyLfUZBQUH61-RYB1itWRwtCCYQPweQ-hY0AbuWlqOLl-KM8zOUXMTfedKxOAGoqQ8EBxpyIepdwyFJ8zhoGsT-zxsu4W-2z7zEJqrLwrq4UPuF-uLl4Wvu5_3nWbt363diJvIACt6VP4ac4RETK3HUzVPi-xO34W67oaDSMgzM1_T40rBN7SAshqnXLVoxW7v2aycu_JuR6DepQBiYlPg15ne7npuTNHvNhSb7yS1VhkG7Rwu0ebnHxP9wnil-3sF2Ck2j5DIFV0kId1KSaZ9PaZKkezZE7VdqXLrHOTCL493H7tH3yMncyZyhG1AagJQRisyNfI3uk4kZyyNfpynof_ZDXQERbKO2LC_B1mbOrIRaEX3lOCyr7OuB2gIMDe_M6tKqHRCu8qDYu7Au1fNpr3BNggfOrTQWKVo_VUMl4rI3TkgLBf97fTC9lVyVB6d6OXBta4ym-vhmDq2aXDB2VoVUeDHNUiHdUsnCZt_38dlszpFUFBYDj-fCIjdS2pHlPoP5uBpIu0EXlvkiRdwFq7PMwkfiPyAncI-POk40RQQjfU3jhAb38399EDeaiU8Y2K8zAP4LbZ7ERunMOSPnFN5rsdeiBqZJTjqtleqa_PDwvMJHEWLaFYVXoM5FwI6gEb9KMqA-5Mr_Tmemg1vREqJRhLLbK4-TgkKmF2_p_a9RpCF47SdfqdMfXzIz-JMer_QWodZQLiHxAMHcinKqMcUe_oZ7thMxRigDzGdUbBko5N3ux8AhzQwnRD9osmCZQJO7W7TWi-l5v6_DUEIVGKY89rp5SwjxX58icpM3IyWpBh3yRvKA6MZ35ltFpBPCwptyfc98flnjpqbd5sBnBv9I_NX2oNqINSGdygTPZrdU2yHnyuPQjUzMf5BmBvg0Gg9kToqEDWmlFWcrKdNuiPQe5pKudtalUEdMVXKS6dLPIVOoe_xCFMb01bLCMsJZ4caXX2FOkQt_j5I-qD2uYB2qFuShfjrPA5bY1MqbjAchaiBTZ7RuFnr1IwS5zntvhbXWLaXXvLgV0T9aYdHu0SXB1h58SUGzcXV-j2YBq4JQYRj3OPO3u6I3T4wqMtuWcDN7NEA6P1Ssr_LiGwGWlUEbmJXANgvTq3ovmJpOrf5G1dbjI9Z_Ydhjj6moupluynVDOZkijlJq8jxVJZi3hTpddqZG-NkkO2HUUnLWi74uwtstAjM1Y28eEsUJV0qrfvO0eSrHqrKz33oQeq4AZ5y_pyOiH6snuzbiLgF3hAeAcbw2HB1d3meNDhF_bmRI6eRVrZityZAVg9JlVQBd8E0yuFtXQLjDakIkB8iJsBGnoSacvHuuqoKyi2EoYi_nHlf_Qr_JZmAsZdXIMYjO2hkJrv-sULQMlN_JPeOifE6ETauGKKFnNBLzI71OGYpXzvn_ZjLJ3sXwl2a7DECnm_fuTp7OJtt9EDvBWeH0bX3Pwi5TZ-uZV5FO00RHJhLFJhxLL5M3z9BH810fLJvxClGCVVOIGC_YWpJ7xAuEis2E7zsP6fg8KPDt_szifNysDpFvM8gLZVdrOjAVHk445ktV3s4bgpajiJzI4ai5Qa_DqL1-rvLoUiYlqUN3bbdQ4Nt0dYqMOhDut7KZYsQyZeAJPYphpFKlgMZ32gMoEAGqbDsEtMID7wY5dWz3k4glRT1PBThqH2ra28QjfPX6d0S9AJrFPyxmrI4ezDvmHHXenuKuGAZIoeXJgN8l9E0Np1ax-ndy_9pN1HQeIWQxzaBfyTK45Dg7Cb78ZIzAxD-GpsKY3ovEezjufBsA6re-G_01A9szFM8keqzG0iteZDlHbng5Dwl0qnUf4qSNYOS4HzK3eRgxdNkqQsKR_ri4YiqydCTnoNk_Cua12VEP4N9evZUpF-oka4pzpfFe3RRi0csZrQUNgWikq78uiGzhfGJF2e2Dip6UJpiyPGziukx2-zgZp3XwzeoelrjJkBf4kmXAqCslCmZ1Rn_p_VUPSy6z-TQlR0Kx5os6pl5VK65N8Y6oaAjeYAQW43GJFMjONiEMhtX79lrVjgUyR8oBbLm1zD9K4IgIdv35Ya-yaJ809e_jJLhQg6JI3BJFHd5MMRlDC6Yh3i7rmvipnvzmn9oycXVntODYVbGIKJ-Daqc1p2hRehumRviKqj_BgavC25uN_fjqKnrZZYT-ud8thGluEG8KDG62NOADbrW9p17uLcabcSkCdusTLt3dPEADE2Ib_aM9vqoG1WaXyGZF0Fg5P6xXEMpHzrFYycqxPj_vnxjLJ3MAFTcyuV0up1U8PslWVsqDNmsifwnsGaz2qtoRvgooyVNODQffiKlwnJ6KXByAVkAlVjzR-pfpe_9u7cesg8kfiWISE_WHAeVdwDDnQZpJvqN1Bzn83IiNKEAdGMeltNjdB_67ifEqv1VQXwPO7vL8QIpqsvJYmaJE-sDSDdSZ-QIWyk87_N5ep9BOnObIIm1M2L92OMGqGy6cv0JL8vFjuytUr9pLT4Pp2zzSg2wCyDHahnkkook-9yIsc4vstqXriJvpzwYlj-tC2hyH0-7q75PEq79tuVn9nKg5wj5_9Pcvi0UzyMTm9htDLm5cNEH-13csbFb_qYSlUqIfBu_SyGyIZ-QTYGEJsTuA7UIGLTrz1hEzlIwxsBr0B0YaB-o9HZlkfQAVICFFx6xWkoLpuJ8bGsR5NUUkQwpheW9M1OtWLZBhnlHCaWAtYUo5njwJMx9fuX1eDvUEhI0GLvVj5YppU01Y1P52E_gRp9l19YmKei6cYKqbACn8tcn_6MrX4Fpbqz4Enx55jEbcVUwVNnbo8r30P7_eP4KaBcT8rxCTfvNAZSms1smAcL4dRIPRzsj4wDIzESF_tKyIhIxqWDyRQLdxUn_fdvBzFyxNznSQ5TXpPhgds6B3Ep6xj47Qo0_EvkMiSHESc9Cnc9UZV8VlT3yDswNYINDz3wF7y9VHQ_Mf1nSqLhOnee-9hmMkiBrqGUvcvMxgdHrGDeNs6Xycq20U6qrniQiNmLB-HgG_nNPkFAsK7ulzeUBS7vX3P4eT26QeiHP_d4tUhdy9L8zK5N1Trumebr-yvV_Ly6qHUem96I1Wm0hMzTY4w5aFL7PzJsqYJI2kjL2Y_ojfkmT5n-bq7nT6mcWMzIfio50ISHIKaZa7zov17MBob3l6JPmnSyKSFfenAgzQN-n4dM9OgAXAGjS6T2S-KCVbTtFKmcqdL7rkIIkUWpuyQAGmeSy6qD7Rr6jyuuaEI1Rk0wNTCGdDoEVJyIpwMgKFT6lD9w992xoGxOeludOvYiLefRW4quPYpw-KkiDKg4g-lPtPb42zs0f93PAihosV1ygIR7MfvnwkQ2w7RPe8EDkw4fhacyayq96nDOIgng19_mZpjQsjbNxqjL_S5WZgbHSLilYa4-rUv3tOy6IUUKloCwN0wnFTN02oB-pOlmZf31FQxFcrOWYiCuOPbPxMlO26Hr5ZPhCJpebSQiqLxH6HlvhO42BS3W_DtH8o6GaHiqgp97aXT4flaciZBK38uJZRCtthz0eaiAE8h47_ZO8_bj6JNhxTYInm15R-bOprXjDH2ynjWFZ9HpwYWt4h-HFdCQorPCwM-ZJfbW7wctZH1DuQ4jf08is2PnOiGcU6WumKE0Px2V4KnhgdviCDp9r7KrOVsozCa5JRkyD2xUtVhptHqm3FZFn21zo7L-8H1-GPEZDlsA0cL5ZvItx5PToY68AWLv3vM5bxDbWezi4Bhgfjvq0eSVbOrCnXws9pQMFB9_RiLAGPlc6KqY6klZ4VkuUwShuDhgQi525XWyRH1Oed4vqZH9eF2JMHD5GIdT5ucfN7_O_l3sqXBXoEpDA9p67R-01wugw2wT7oGD2c5PacWI18oqbC9vdUFE3Zw7Aqgo9tUMy2hS1Tu6xkzUrMaLR40NOZsQtUKU73AKWWKZpvTv8SnGYZSkeNDbmL8kwy-jpPa8N-jJnzNzdXxDs04FEjDFXqeTFNRY5Yn6njJVe5kYlvJBu4t8BHkC11hNnP-152kpwYv3iHpukQXpprvH1Hr_ifpP1Vehz_IbFljR9BmeSp6QPimC2xOF9fm7LSiAqsQZ7q6U5YRoW8omy4Kx-OQHyiutb5Y2LfnU1VeCZsA2tf1gT0eKqPP6asXIQsYyKtaji5idgan3p8OpYi11SNQ7rPQ5EWtuN6fapX1cvWU8ICOb9kpNVXWwLg6Bymb1OhlojtL9mUye79FXINSFPQGf5L1XyTjtD8HDSHKZnB0L3RB78a4FOomdgDONSu9kmiymhIO6yH-zKkNp4q4voVtYq6PhUT42fKM0PDIpVDqzodf2yfTU7ksobNzxpvYBoRd0Lrzv6vm_kVtChsIdyEP20jGk8NElhf4CdhbzCig1FqgF2FrIzI3S1Z3I782edZQZTnUd_hj8Ya07Jlj0PIIyful7gKMKJMxXmu-ouTkzTVnj_OFKzEF6YDZUPWDRAjXeMDYlDC_amvYayt07IMh6CiwDmGqtoLK41O-5M4328NleLDo84mNo3MmKFE5xSv7BB5lGg0Kyo_OXi_O5LNQHEgtxp9bde23hJwvd8_f9e7CgNtvFgCE7upkHHo5sHkMNyO_LF2nT69t_qVuvcv4ydVu2LGNJ_mL8cZNDwU6UyCIoUgRjOXGbxAfpNAcj_1qk5LUb5iLGXKDzjc94TciKw5d7GE1g_vQv-I17Q47deD3GQGC15y9nlVMwhCi07IYpjm20tHvRkBKBhwdR6YwSZBhjahKrsLTvmYFZDH2z8IcxpQHusZ8TLrey5bc9Rjbloo8ku_idJu5bzfrqPdG1FwO-QQ0CVnm2tXL_m45yxxHeU_ey1QzuhzLc5yzbjPhfCp8XzoxvSYQa9DB-m4C2HgmG2P-CcQnktB0i_aBl75TsxZlIyOXOWWtJSj4JyvH_Pwn0T5FWwBbkeKnTAj9kolSyfZmIIjLc8OWKxcKFYB2xk_bd7kXLphjKCtGIUQVqRoz0ZttOjWwM54An3QLtT4LDEfUIjwhJULj5cC0G3j_bgevxPszAsAsE2aby2pr0axxmJc00e1etCt-_RaNIjJR_RBJBcteXatOZHXnM045R-sno0nyOU0AKWXEa9KeyAzN0DNAqp5B8b8nyH3Q6AVpvTOo-4dvhJ4KO-2f1FdOH2UREpeRdz9devxHZoRCUn6lmD-ixO2D5000qQmRBs-PMEqerxGDoGSf9C9Mb7YHk0kgBAYUAIpb7p_PZorfEuGMqR5POO7WE4N0ejBRpN3bXMDrnbnWHJGzAlxoxBNEAtbuE14fC36yQ9qt_bF1WTg211VyZaLj6EBzBBzacRI8YqeUfMCr1g1J0yMmxEbZtDlHqKbOBM8ux7GUTZP6hfuGWqzYnGqQwrT1zpmYQ3mA3puJSNJnMwnWdHtSR6Y_ZJDLAI50TP2F2LGVg5cbErSOHjAw3yT_z_lOpJ5UmGwV5f0KmbBgsh2Gsq1DulsvgKOKonvH8_HKvFf0e_sVtg7zx0XvKWnAJD2guRI_aoZ854sytz7_EB6QBI7wsODWnM25owSrBVehsitfC1m0u9BSZM3-PL76gj3CL5ltuh--cKUYWD44AMfWYQrWKsxCZdvch2sXbySUkpUPVYuhM0UhJUaZplaIHEIDdfTEkElvpKI2j4d2tdHyS072H9g_cbFn-owgd5kypHqprv4a_EPiMaVqR9ts2Ij4gpzcc4JiucEF6B_bh9iGpPHv7mg6jMdAAjkCiMViaSP8ftiMOlYfyWq_4hyUQdMO9XP7BhAfOJH7UFtACqj4Zy4kTNiudoltB90oJ3KPKQ3iaDgWtgMYgynPUdbPFkyVTCbzqUUaaYrIAM018spoE16-ZBeaCKOTirt6OdTUhdFbTPIK3PqsbRDClCn19-H56kHjRLRUn6z9UCXtPkXid6H",
+        "summary": []
+      },
+      {
+        "id": "msg_0ba1c607c0bc375d016ad322b2567c87d29a1aeedb0e5a27dc",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Costa Coffee\\nHarlequin Centre\\nDate: 13/10/2026\\nFlat white (M) £3.45\\nShortbread £0.90\\nTOTAL £4.35\\nPaid: Cash\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Costa Coffee\",\"confidence\":0.99,\"quote\":\"Costa Coffee\"},\"total\":{\"amount\":\"4.35\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"£4.35\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-13\",\"confidence\":1,\"quote\":\"13/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"card_last4\":{\"value\":null,\"confidence\":0,\"quote\":null},\"tender\":{\"value\":\"CASH\",\"confidence\":0.98,\"quote\":\"Paid: Cash\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.98},\"line_items\":[{\"description\":\"Flat white (M)\",\"amount\":\"3.45\"},{\"description\":\"Shortbread\",\"amount\":\"0.90\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Costa Coffee\nHarlequin Centre\nDate: 13/10/2026\nFlat white (M) £3.45\nShortbread £0.90\nTOTAL £4.35\nPaid: Cash\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Costa Coffee",
+                "confidence": 0.99,
+                "quote": "Costa Coffee"
+              },
+              "total": {
+                "amount": "4.35",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "£4.35"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-13",
+                "confidence": 1,
+                "quote": "13/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "card_last4": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tender": {
+                "value": "CASH",
+                "confidence": 0.98,
+                "quote": "Paid: Cash"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.98
+              },
+              "line_items": [
+                {
+                  "description": "Flat white (M)",
+                  "amount": "3.45"
+                },
+                {
+                  "description": "Shortbread",
+                  "amount": "0.90"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Costa Coffee\nHarlequin Centre\nDate: 13/10/2026\nFlat white (M) £3.45\nShortbread £0.90\nTOTAL £4.35\nPaid: Cash\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Costa Coffee",
+        "confidence": 0.99,
+        "quote": "Costa Coffee"
+      },
+      "total": {
+        "amount": "4.35",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "£4.35"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-13",
+        "confidence": 1,
+        "quote": "13/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "card_last4": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tender": {
+        "value": "CASH",
+        "confidence": 0.98,
+        "quote": "Paid: Cash"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.98
+      },
+      "line_items": [
+        {
+          "description": "Flat white (M)",
+          "amount": "3.45"
+        },
+        {
+          "description": "Shortbread",
+          "amount": "0.90"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

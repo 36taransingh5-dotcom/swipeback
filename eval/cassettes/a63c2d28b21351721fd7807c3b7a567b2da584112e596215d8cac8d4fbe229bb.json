@@ -1,0 +1,192 @@
+{
+  "key": "a63c2d28b21351721fd7807c3b7a567b2da584112e596215d8cac8d4fbe229bb",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:44.511Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1688,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1424,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 3112
+    },
+    "output": [
+      {
+        "id": "rs_018474cc350ac9cc016ad322b717d487d2898bc67dc90d1711",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yK8VPgvpl--XMBzFntV3sogpMPKqmsLo_y99GECpzMZ7VJ9vyWYS3sd5lb9uB1zS1qzBWnTz19wRjJhAErJLEKTdPzuLIGIPP37rbmoejVpK4ciDazrvyNwFEo04bloDDPmJPgfXfBeYnOusfhXEtH7Zp0I512Q4uea2u--2mlHmjuI7tfKKrOE02YCMwRDJAppO1DduWnVsZYCDutUm91FUZ3Sr4nJLzyAYZVjtzOagneMHOeoquhyPE6LMKeh9ME_m6B3nVcDkVhZd5o6UMeD0lwFCnBa0o2bpupzRxazM26LoEgzMCq4iaOSrR96YQFZPgHucWE9Ny9NoNcFpOrKvv-362O3v5BpPrcyZXUe-pAKU5peSLCP1lzEcxioTAESJxgiRr-KM1fxpRy7dc4ENps5R0mHQHLR53TkEShnunwZL6zmE-dIs12IsPLaOmpSz85mzZDrnwuz6IYjgPP-28MvI2FmzMDpsOXOhP3Ois4cGIkFzoIoQI4xAJWhv3l7pDyoScj5UtEBEd5OJZyc32-fhTkRO2NZ2MZNoFm2sYAJATD-b2HwgoNYOvh8XwMCkDlDX9mFVYurvg6Y1_WrekpHgaNJo4L4c2TdwPlIQz-jJYb-YkKGaYJhIb0xQ8ad1PaklBGyTS-kIOlfEJOb0qlVXGQzctRFn9wKnBY9D838wSNPr0vtXpiaUVubsSHBck_5KAHkXRBpVWtz03uwJ3SzuUWJB94aMqnoULpc6bbA4FsPvSzrHPfMFsf6D-GvhpwXkW9CwyteWkNqDmgdiJNjd7yRcu1fQcw4nF0Z8tAW3Smp4an_YulyMpsaGoZ4y_CN79NS_3JK-Ixod4Xb2DA2v5-0MoqWFqGKp2Bf6uC47v_pcVDR-erh5neOcJEGHomqH021tojOQ4w-17wWFUdGKgCy6AbfDLZylUZAotrAvdCvUHWKzR0nHZtgv6SDOYqNy4vSLmGD1PqOpNs_jgEVOC9owBh50qm4a_2mr5ywrpdreirbvcVOgn4XH6xeEgUOsk8nsw74Ml9C8CsQ7gPKilLgTywt1TFCVhSziE_w9m4fOPajOeEYC4oHE6ulwsqvOxYT78YqoZCegBY0583E9mtwoNcdsQqEbuj6E5FlDHLhWq1LZnh7pK9uIQqPDTvySh7P3UjcODMFujcSsVzOkwlf8SsR282BaQmliClat7fX7A_-zgS-Gyqc2Bsj1XuoiXTPWqF1GVGQ02aUuuzyUDqX8CQ3OA_uZCg5DfWr1x7Qh1D0bva8Ads3h8_pfkkXK-KevO4MZ84iS9kXsNLuClDCYsx8Xzfisv_oOpBfqObphL8-tNl4MANo1bybyC-dGntwxlGxDr_f_I7DMUSwxZ3fVWyPCWoyBQyXvqtrpKw5Sz8pZWD0hEM0pDgto3UfYRC0ogUH0c48QLlVDhdznRRPi68aqwKFs9apttCYdduf1uKhiKX50cX6IJ9DSygoLY9TCNO2EeNxC7Vhj8Z5DxgtpTDOxre4haeX42JnFio6whI03iQ2XFDFzXNKqJRHEIKld_DaaDgW3Lk4355lQ7QXguyIM1b03l9gAyBNSIXNModImFTZAjS1F3oKbSYWpI1TE4xSnIRo8dPU24VwaMLn1cxxFQvEo-AVe30UR1O-GzANkTW0mMyPbayxyeF1zjabmwSl3xH_nWWLvy5BmdjuiUlZgBle8JKCviMDIhQPNVqXVnMtq35CjSJvGA57ZmgnV-lslKf3SwBfZyM4LP3Y8yx9LZKcaLa3AaUo-TZ8qs423y6d5x119Ag_QgREeF4V6t8Y5z49SIq8PMt5MvZLjquE5AI764yWgV4qTzroI0WxjK8uR1WSnw2WEQS32uWh6zt-Usxlmilwa9rP8HejPO4GD-elswFsIV6NzeHUQjJSBJwA4qbLeN_HHE8mdB5TMFiGk_du5ofIXI20HT2v2SfOaU1OYwrh19XaOtZ3oCnluiK3_MwHzZ0pP82vZtYD_M4ggN7sNuDkLK_FKp0gR8Gz4ykdL9FNCylKacLPFYHMlao2gE3NW27zQszqML1H_L7EHxnL4sZ8b4ithsm6ws6RsesKrw5dTpBnwJqwpKwl6m9mZVFKr0zR2TQKFfVcgjmubgYr_RrnPOFz9zvw12ilcnfvREOoOYCyP-bmpCUQiytRko_NvOsESPiB2LQY-_2HkNIt2JLiokj-WnpuLu48UQQjDUuhr6e8WWrU6ipS3nGFacTPdY37fxEBKhkTpUqMbjsdD7NLcFddkbiMNaTEoVtmkMMUZ4s5ttRIKQynzdjqY_AL1soocPQ7o7nLSg36tTZQ_cFe9s1GZwdpS2sfPo-GcR_vqwx16dmU3g-eAEYf4VcHko_pCBlzr6Bv3RJX7ursE7XATUkaxxE6NPXe96qza7hGqIpcVyObNwz0xk4kIzwLi1eeBb16AxzMT_NPy-QCsPqnwsoZzW7ZlZalYVX33DlBOBjOpfPL-dqDVXx3zLAiJu8KHbk0HKVuCbKhnq3rUS0B1gb6_a5bmEbnk8lKx3VBAMayxE8M9V5aVqCzxZeaj4JNSV3auC6spBG2SVsTA9BsqlTTZ6fw6Fu93C4xNVxJCHLft_cefZQILZRiGg7Y767lGJ5sHQ2lRbsBszISvWwn7F2__K0eLDzV5idD8diUDoGwcUzpColetkqm6SXVubA2yTAfVHtLKyUzRfrhjuUjfCbB9yVQk_0_oxJcc1vXznHgr4-jLNVqNd3kAiiXSogZPnv0iFHKkYOdQUW2pDUyGlLUCroJyLzeKafvAhQDZNWwYHek0NghNb9-r4aP826yX1TV-VHV6ef7mbDTk-NyUElGrPe1XLARwmHYTxr8LrYq1odkHtX4PTK5jxpmRbiMiZMJQquhEwRbNPPemQMvZ9Dfu8HxEkQ43M5uRzmG0LbsN1oBzKIkitsBFLryHROfzVMlPje1cx2fBdV1U82ml6ecY29LJQeQTo1HE-D2C_QDDSg3lg7J1Ux72BZ75UYTzLOZosLGk2xyx2HaBQ0C4wBGZZbMvwOFJwef118eMQTXw9m6PL6DaFSEDPDZ8PXlJRuX0QgSDXFlxIUarPaaSda-t67r5chMO5tHFzB6MN7Y6WFeGmCAfsaRHn1Hy21b-kfeCK3ZdK3mEZDNUhcdH1KG951azzuBAiPsCz-rXCNhgshVC_lO4En_CIpiIT76aTVx-L1W8ZlIEagKqYcIlhqnBEAkecnoeBER_kyzDNNfnQTgvyLFr9gERGPO-Kyz85nTYOlpI8KVMwREyC3Cr3DVjV7LA5DW3pJps1Pr5JBKVDojYIkAxnsEoLpsuqTI5QYidlfgGxW2u5JnUwkERDOuKJ_k_fH46XZY0qsaWl9yneEwZuBWQexXqaFLe1dxktcYjiQFwLFK33Z9VCAN1HZstV89OiDSwiMNoeM2dIT2s01kIdL8VmOSasfbX7OTXIwrml--vRrq7OFI97R_EU6kBSW9rk-G8z7vplSImPjIiAtumP4Mo9hbQKK1NeKJW_dFGVPncjB5vZJ4ttnNiqoX4Pkf1p8JcPX7W-EMHGvOD1NK-k8ZDy3Vhj-KZhRGRPGWlZX1n6KkQVEjyclXgFWTe8ZAj1lnYV8NBD5tv4aTd-fmsZWF9-aZ5YfrrJMeleEgWJ072MDRDicwO78YGJFZ93A1dbr5HGsA1yg6n4ck7BwI_4ZVZzg6FErlZssoXxNicBniiJHhg5ZPrwN1Cvh4ga4lHN_45bJEE-aE_xowBVu0UxNs0NseoGX3aEDaPO7aRp2VJm0WmOgr3bLZLxOsHDsmUrP19BPWgyqP5apsy-LfsXbslSqJln8j8pgUG_A7dRh9q1zE9DhpEltHPYYmWbjYH4sNEc2juPOCzos5bfzNYClZl02ZpvKU5xG-wq6XVXg4KevKtc3vb2xgLCfuqA7mYlqM3juwU5aZqlddkHHMJfWHWkFR1bt9pmKbnl6yXVVIPpgcAlr1mgQRupegqz_S4guCPspOS_qb3MTv2Y9GDjIOQ94JFwE7ekpOntsagZd8vG2kGSpigolJEGpoHqJvFor6-X58wXz-kSm_q9XosCFLp-8xvKaV6-f-LJIojnPo3W7hdRDK7ml7CryjG-Vm2YDRUIaXhZ3K8X7Ksz2eH3_6tR0v1QKz9FUiFDjy88zNC0YjZcignq7xWKETa0Ylxvw8hNtkqJR_lZ1b8dH3-mAgvVWQKXOoHaa9IQpwEfIA6BKko57DnvhbkaBsO--plqblj7IGayFbeJ_ZU4YM4ODFXQe83LDS1zJMaFukFdqrMXMUw587s1uAjOwI9BNhSPfwDNAs7gVytBmiFOsYbKXJfuFxybCUE59x_wZqxnLZI-hdE2Ak7u8wOUOLI249yTI8k2CFZ7KW-5DextdoVhMpEaShVTG2yIEZ1UT5eLi8JZqCkwpNQSZBeCep4E3-ekoyJBjgPeCyzrvsRrQAlt06NkwY83UkO-Ir41iaeRVjnNRpjn906Ha3dNFbuaY0XggXfqtCrKihxm5l2Hfxe6uyQSX8lfc2mSQK4ltJqq2NtX0S3w2yNyAKIuTLkXsA149pdetNLzFdILzq8worUqdLidyAw2nzw2YTjwZDJRiKUTOlbnetO91qwqTIaq6x5sYucgJTiVogzN53U4Xf16Dock-OaNYmVMHLjfwQB0pN1sFWkcrNQ0SZZHjRs_KLHFH-dTN3WNAixWreuV65O9V0qk46v_3fgksaT7Dlh4QDlVKlQWGtVgpChtzGzbyBtGXMx4rQ--18fkVV44eR_IFp6BbRiK3Z45-PTsEB1wcZagvEMUbjjVThy0nxd_Y44GioJkdD2KAedbm8ygr3a23WQk9TP0AcnKPg4KUpTJfL4qGO6Y886KinShu-eXgCr0Kt9wU7y_xBsYyyWdpGsYfydlyc9DkQxqK2b0sH7oJLkJKJ7cdlBSeUKA925ZUNxzLPGZIeVo_nNG--2LQgAs2Mj4Q5jdDTtiTU2IUWTidWiGRis7Qu5Vk2SrFugUjTjJRDUNZJsP-tpz2XhzoN3x2vSR271lEisAv522VrPdNcrRyM97dqPOAnHQodVZQfOx3vNUrLfoO0CgA5K7pl1-hawSgj4huS7LRG3hA3y2sNjRft0Ev6cr4sfwjaqQblYURg7XN3Wa93uNgYFP2Ml6kVFJ3xP7a39FBh-V8hhOV-Fnfe9BUCDumMt-eoylcoxPLF6QtlrAaV3TcxiBywHytia-yw2JuVhnpeusBajKyfRa5bfD1bD1wBXKZPzKRauKCb66LfUnRIRpQ5aLr7YLqXbGb10_tscJ5xhAyVByrxA7z8sHf_2MfOI3a-2WTibUNkBDNEzEXaoo2ZY1IFMq-iY8FmZYc9JS7_hjStm4Z4FGc0-IbDantDmafxZ_vxDA2_LNYMQ9Hedo4HaDiCuxzUZPEdF-TSPdV6koFrqOcnsIZnvol7PgGnU9frx5kUQ7ibEtlLl2Vzeslfhcq0P3rvEZlHyTF96nv2xLYdpzZ5bD_DFY2lUsZJS90tfRa9M0A4xVYkg0FP7x5R3U3hjj-uTv4g_snxC0rgCyZSkQQPq7CDTBDNC5g6CJFbdvm3_cohJiSI0qTZOdgdrmTEHidp6JWVKbU1rjM8kMaOn2bEVCyHFnE7jM1ptvNApwAZ-TdYg9N6yhR7N3Ade7X9Vk8lN-RQ76zYCcQHGYnC5xN9A3_18qYmk1A2ibqIQa_keiGI9Ob5EfXlph_dMD0dJwfuYLugd5RTnOTqYacD4POewOd4WZI0iSpnK298oU7Qep9f5E15_kga6Gv0OAlSr01c6lmHvxqGdldVfG0R5_FgWkiZiGtKVq2VOGLOr74_Hfw8FkGKxhxol5bRdZXlJAJ8SUAP9Do6XQkNvDn1aasCHRSRBYtQ4SfFb2NzWK9H9M1p-S812yYtjFsRQ_Ddppa-aUfLP3YsNzhboS78-aV8OebJDWLX1d2kr2KALo12Dn7VIuW7LN3U_0vI6sU0VNDBrwi9ZJxtxRnxcubxGt8A3tKbpncO4tbmdA98QoRKK4u0UeUHjofOX4Ibp6GgyZ2M9SkUUbIfeOGdBeekQ3odHJG-5D3mHAw-ZFRl6RN8uWkkE9C5OtsqcxjgL9dqEtXwRfflrxu7lDqaMCsMVJ-dZ7QkppiVQ8N8nvgKdb8kasJ9G52wl8kPHW8qbJqgHx_52F6QCWYDbTMN0SSL-p0cnXeJnwyJ1qyDgkgIz8HbZowvjgMkMNYy-Qa1x5PuPn1JsNbE31JXQKuZb3YGq8iLhmCqXpgdfDNRrnhuQf_cwPtDIa-uIMfw1kdoNf_5FsYPGXvVfKnh-iZs6oQGbFcz1qWHvzR7TYXJqap1kl-luXmzPl3a4L8sq4YMXUTvkrv9T2pQYg65R-YW2HU94EHiqi1_ellRJkCJVhS4o5YD3JOecNyqR6ouhUMU5ty3US-T5LAbMBjmH-GmxLkq4Cq55b4Y7-o6a42S_sOEjJ8eis1Na5wesFVxsyq9i4zMSIQeApRL2qqtmwJj459XYrCVrvNdyHWJIPrV8NKjXZyEzdBxrdl2p1V8DV2Bd3rDe9taI0UXXLIxsGoKbPYDxC1TQGCX0FP39n4WPTdOHJCRu61PIuDwoQS1v5VOIEWHsG0e_CtkOys88YAhYvLIZxGp7uHcAflqma4xknwGcmsf3LsU-fouc-hTBkGVWt6C7dgtCsb9m797tC4ATMZP7uHr6s6rEFVnb4MXlFnLFU4QaR1XhaTfeo-e1HQ-xA-2x_MAhUocoeTcBtA45D7pGE1mvfNkjnQF2JaB0FT0oHGbXghg15ltxCnEY0HcUYPrCRbp6aOKcA9E5pARYb1408wqtltVOuXwd8ez6PfBodo8KHmpbSj6mfFsrFl-KaHi7E7aRgEvYckUjSK9WAnRNVy5JWJQKaas4X6Quz68_gK_V5HR3UlHY7wwiNBWr93FWbmsnZ2JmXL-F42qtE6NymLEFW0rxflSAAP13I_sCGLUevxU1-Tgd3Hoxj3OoMtnBAvCEgBuLIYCdDkuUBbSrD7tt3G7XiRL7XhPlpmkXYgvH_LMMDKGiso8FIDHL9WTIzfaLirWLLCWwMzsyDhwNzYGy0Rsc3wptP8pURwZd3B9iQbTetjnyU0rbH6DZsb7zAIllE4rT65G3gUNUSsv9LyBUS1OT5EuzbZXItj5dPMqs7nO52H9S5c6ZDFgBZG5EdQN0Nt0O40H0M6sL0q6_4vlimSCVp8sXyjw-08XstBKYsyyAJdG0VU04gZh3onH4nPdCnuXeSReCrHDP3dAA0TJnK6grdUxTGBHZ0xFdwWWV6eEpGjhOPHiTsp7dh4idtO4JDk1sxW5g7Mi1wgqAqa128QZFXIPbY_GB-m5in_M96VpoyEstFGU8gM5Gc7hdIKeihmL41p9CPRjduYL9z8AScvEX0At2WqT4vtpg8PXcYXYJcRkirB3klmsw-2QNFeI6idNV-hGW7oUWzF0bpL3IsfvnoIC9s_-anQH6MitL1MPPqpxQOPLIYAXjAxkZFCjlatmeZ3yw41c1uArOy51RvilRi4PYzvOEVe_p-9_nDWDsxQo7PX-JUEWXRpd3ZYvSHu_HulYPA4PRK53X5F3He7V-_C0XfLKBgkzuqgPDxOwtYJ7imgQRqXsV7OBvvv5A0gCxUYyzL0SdwXcOJcAqo6gjENx7lkPYF2on2k9uFSlGhL4wr9L13Nh8x0R9sl_f4Ab1xTyGDcjnza3C1XRFaA7aEWVRZwTH7dXfWz5rQACEGZF13-fKXdL82wqZJaol2oiT2ttGX3Y49kJ3dMn7nwHLRAgGt8SOIAsocTwYwuLFm2S6VsCj8jT0mywyBBNcchkXNmX-SJPOrmLrlXKG_pfjWBRnxzvos1Ll9K8XotE5USJ1igS0bX6y4hAQrAX-8cFlHpdX7IsknlS7dooKhOXUmr8k1Eag_hksCAU_5m7XnPXpuu0uHViIShuRxpfuPKktllxbVdF6eQnjIct4-PialFmFzjm549ewm5sE52-FxAuctUmW7cuJTTFrjbcpZB-MJh-ztfjPuuO6JlMvWeJvHANZYhxWnrQlHdLnta-R-L6NyWcsoix6Is8Xn5A3e7qM1-kVVoek8msTGIaour6rh5oVduuxzFYUBccLosqX7V8UR3ziZnKDYyrMFUu84fJxal8R8dpUffDmwmQe3xzkWRgp02Qjp3p0rTzFOXbCdtVTIZuG_j9qXqdeOAXf5QireJbwa5ERHM3A2FJ2T1TXK4RuouyDISk4puxRNs_KKU2y1S6mNOGapkEZMfvLoIyFisDhVo4oMfqbSu3fH5fkR7myPq7X58lAQZao58sry_odKyvMlDb8T7K1N-7RDyspMKA2Te9bJQGnXwZTx8NnYaMo-PU3pfAt3qbje55QIFabW4640wwWQztq1-A5Df4mGoYEc-3fgAulIFDl7yO3bnmf9_dtCuCzJ23FcQkqMaRwwsHxWQ2UQvaWdtwYkMjipVenUxdZJwgoqowSbSF9T2CrnsbNn1GAE6Oh4O0CuuKFod4WRaFx7SXl7yxe2ERmmeKSp8-IQEVl5JZpD62meVb152Dy5OU8xU8bEaKg55uTXkUDTxE0DybEPI4RyGoGfcbB9Pg7BinseHflQob2JNUcdHtp6airIzg5srrcM5JFYkGMAMpplx2dO4dLyNQ3LXbXINUVPH-PHQh4YOA1idC4ItIK5z2_i9aLjyn1l74yZypMg-jX65KnAuVqrggHMnrpYNGYLVgcIodwdSwz55Lcbgf3OV4A7D0dg_Cf0D9OVbTXVJtCv0IP1tyo5a5Kz8QlWRKu1ovfXnsRQRHjlx1457wDeNZeqOttZ_qTfIZEfrbdIKpePwK7TIdvjSVelruYhCxogrMo9tvXInt54RM5eskHbFg5k1d2E7kPt5_ZGYuLg_mK0iXdAGtM_bYHvmrk6TOuKzO5b40HgzkFTEQGWlUQCFqh5voOlY-9WUqlGZ9z-X1qeq1LJ0doIY1BjKNuJbbmQ7KWe31maP7SJ2igRfhTT_8OyT5vwbermODaxd4R5j-CBY2ndMf4z2KO4cbLB0BGCq1IiCs31ODFImtImeu5j-DwkBOIQH24YXHCpKirn9EcgPcEHFWbY4sdsc1zwybQFvgzABiPGQh3GOL-KepiydfRYEpmPKING3aOkwTbhSJ9D4k12oVo8vvXbz0pfCsXCexcJv5KgiaJ4x7YEHrWbllJ2v3VhLqZRfYH6Cl_97BZE1GGxC5MYNNFIB9avkO3wvdKRANAK2hGXt--cUISOKXJYsdZPE7MOJYfrV_vmnrh5-dLH2Z-EOWLBcuYtToLGaCLtV88QeGKrubymOc-VCshfT1YkYM6ICL00_fV1KJ79bU4cD_a8a9LgxnTFlTn8UsY3o10Sswv87R3zv5rmFf62ja5B3SOStbExODlkPSV6yluzrSqgflpgPmv8ERsLsqPxwVb5rwh2q_JnvLU3iGN2ipQ3611ahQVDTSQRL8iSUkWnRx27N_FK5cl_wYtrm88gj1PWoq612Kew9tuno63oechHYkgVGqhW4Tep90dOMv23w8F7pHFkxp0ivW5OZC1daTa-d2mkZFJm1I65ziVOekXNGVURBlZDLYy_JuHAfj42J5s2D-fd_g0Zo5jrdHo9mhV5HAwoyIsYP3JIANKjyMGdAFBUCH8EarFWA04Us-hF1tzfajec6qN8JbICu67E6rVljOeBKb7Jybo7H1sv0ER07jjL9r1PxH6uyCUasjl8s8bnQPlljW0qyBpb9_3yHeNNfvGXc6r3-7cBQXP2UQGua6KTJeuMw6Q8pFXmyK4Q8m1Bv5fTrC4O8aqmQ32gNUT_A-W-ug4BO5Mzy4y4rq446sDjUJbZ6EnRjHWCMGPmlHwpXVNiu84HCbC_YLEAlQL-5vaLkznDA9gPnD7WcjiwCjeD1q6bdzhZb5ciVw9mxaX6OJwv2HkG2bzS1kHHsO383PNhJdOd0fAV6pj4jyCK4MQ4daqRVfuIydtqMPlP9EY72Le2HqmK2FpuFJ7DOPldMiRMjUYQCPZL4TcE1jgRmc1QP5gJOmyXNw2ekQKVFeAXl8ojcbHpmnyl0hn4-JScZom_6gsmDg5J5PTyA1TRY0jHFEY9eGg7HNFuKXMppxi4qrvpNvZaTwtkSZOj3rL2UjNs81eXMlv3zOdEBuP2ViA-mqCBfEO7qY0aw_DHjc9fjUKKt9zGR-zWIJ4TnDCbRCRoqNSlracVskEudsmWIcgb1lAjSTcDHW7UJudIC7F6C_2uC9N3SL6Y-124u-rGn1eGItmPyr5GnRLSZrcmOdV0T2GRf2bLGu66hogUkpzfCczIzEYGY0TOpr5PKr13spechT_2sm5PoHK0OjZ2HA1_RkuCY5cEK3Vf59PI1Bnr-dUlAOXIQVBjNJxr7gpNp_wpRSchOs7KhxuS97OG2uHhNW9z3t4vnwGHxM_Ng-KC-e1DgKh13dJD-AjkSUXKAtrrd4eOpxaZRyoeu2EsmBB1zQSv-0GFZaTsg8ruMWPu_C1UJ66N2CtTvXd2pBvYCVwURfHKpIXeL-5PmdEqkNPS5h9BSz_4_2lc9lqJzdzLKhAVHSpvYg9AofgfXAgTNW4RXv0rEyecJfP3-lUEH_3Ucnqp773bA_jfcXQJaTv20DIiWKlqFeGNY6rkKMI1ZHgKtUrelXQJm9MqOYDmBagPIoJmadrAV77XJQ-3rg7rMPp8Cq-plH4Dv9J3TY3CqQkll_yHbOPgIg3tMKHwT1N3v7mUsBLzxWxLsnod-tt_wQTi8ntsfWyNpz7AHsNFVVtrI5Q8wakfGvQfme-D3Sjhg-adbTxkw4r3Gb3CPshELpb6gQeaNmVoxR9pO1yV16_5uxj8Kg5pr-c4SVY7KRl1_ZGMXO5g_h_ZXqIVxBYL07ctge2CAXofhXPC9DwiFFDKEFU9Lvl3sOF8P_GFgcjgk9c8im1RMMopvSG4Mku6HGIuhqdUCGU4s897QZK0fVcAErzokBzLGQG1PhoLeR8lXZcJaNGe9XBwzVOdhvbyS_-NS6u12cQEM9uB9o2QNv5XLZJoXySBeLp5Ia_sTLfg-U_gPNkSFIIoKRiFQ5kpELlRBKsjyChS2hzmCOsQKZx31BELfyevXXSjPd4ivTg2MDdcAfNOV5faAX_0HiO2BonXQsROjn8ZuWsL1FeiACz7Q11_FUHlG6LNnLrJptH0rbUv0KssEHSLM2XwE-TvL8MWbfZg-y9n64_DPTbfl2jMVryJveKt5I_tHqipzRw8nMAohtVYtOxaUustEhiJkN8Svlfo4mjCHf32C2xOoiO6Dxz9ppJwo0anVRMcT723hmWnsWktz3llqAxCh0bKFR0cZlZVi5n9Ipq6fBaTVtGKbdL_LvRD5zA4nddXgtG9IiQ62hUiLOZ32IM9kW9HgOMguqKk9y6jTnvHi4wDzcPzpK7TbEcQPNbwa-Q83gOI2NoVobPloBkyoxFdHYH5QXLa1_v7x8alxWL52XK1eu93RqGnq3OmWUuNov3LVIiTq9gTs-_UM8kyWbtXLJrtgC-WegZD9yj6J_zkFp4qKELgDcraoPV33IDLhyyfDGiO4ZWDxxvjVBnHa63rv6Do26JHQ0pbfL7Vo8r4_xWTpaR7bzCLicKRpazMAto-ii6ejWJTLw4wxosARwQ7VWqxdo14TibLtVuue2gFHyKF7QGo8QKHcZ1b9pw3R7MKi4w_m7U_h4vmwNM8HaXmUXljW9gnzpesMgrsnlxij33OXT3gudFgslIIjBUuAT2D76sa3AW9d92plRWX9Q_2Ko4D8_gdwmAN8-Nhn1MPFsr3GcyicWjqz4eNU9dSbiGd_vdzRdtFJeWi6bcSPsBYya9cWhogd33P-tZ2u_Bp-myj2AYgSWMA1OeQoJy9zt2hv7GkXd4WqlauF1sw5qMthexmUdSLiLm0JaZ-dGBtA1YwTiCeCOuRutVsGGEugz7awTJFmBjHwZTy4i7pXc-WoyS2L47i4hHLTdRu8eoRt0JWZiw6QPHwmiYvFdLLKxrZFaWM43TICtO00hiRTKCeKPU3T9OvNse-t9DL2ZqeWZdoNHXCbPph6ZVHxV8BgUCyHjj8t3PmDqxCeIltxyIv-LQa5elmV53x9z0tEuVFi3Ju2n39Ov-U5RIaHIQ5htgoF5nWPAlKRWodIxMaZwKK473Uh0bpuOu4hyWWd8k9_ih0_qOmRmHpzzPY-DixVHNp6Fh1SubrQeFshlkTT5gYGnD8zpHHsflWg96GVFm4cNISSG7ZibcKUL_okMZ4VG5myaklWJph4xp0upPCWvq8xHp2vMBX01_CtPgeORTeyXfA3ZEgZI6Fuf1002Xte8cDrbS7Q18e9CXJTMxG-ACOotl_JZ5H7WuOi2DA5HlYtkGu3NRhzMpdFW76TRZx0l3Bk4JNiXVkMLGkyBdatc9umc6dfrV9wQoG9YyXsnTv9O6UsZrcQGzKUG8myUUmD82QY0aM-VZt90SzPE5RdmEASYo_fW_g0Uv5pNGJVJ-f3x1DUKx2MwjGWnZyiGEuxp_JAraVRQD07BKIU6jt0qKzMnXAegpJ2-q1mWzzSa6RO-k1-n36-n_JWQR9FnHUDe2IvbTq-TX1nL_fGroHYzvUEtthoU8bfuB5MzR3pbQx4utxQSq7hTUgIxcITmlTHwVo4ALUoK5D2UcPdlnoRJ081U0vanJa_PMs28nQ3uBvZmI_rj1lkiSkdSc6t_FVOEocWT2M-iIIm4BTeeKkEkCq8tz-S635_F6Xwce12qRyWAomfPxOnsuTKYjF5Q4h4saR65_iPNgHiG_0nmnNrF1Tzi4Jbrz46Mb8jrk_3Wv8Bnt-pploDY6EkV9IP5VKV9pxWHuSjG3aPqqE3B-Ke_CgcrZzxD9dkVQiwCTzzeEFiVKVGcYSzJmEMsD8tGPAkTGncFtFKB6R6y5GtB7yERRtXMjFQURflOL4EQd3eZJT5Q-hvR6f5t1Hcr2sL4zidYMKmeAeTUGtsjrQguTlqFJTSZkSuqB9p0zMwfIUDqXJkfAh5ME3ZSwywi4RFL6yqAtiPWc5R1N_UpYJfa2VSCTLUx3FnPxdWGgIneblmNYY6i_xT-Dt0QhoUsx_2C6PX4-solTF04PrqTRJfLA-8hPFsuZY1h1gwM3hcnZMsdZ7SEK2bpFaA9U9FINYoDx1kACbcqIkTCdOEJZZjv1-j6odP6o-pLccHbW1RB5fg6RZU8FjbWYvOi6mMuagU3Oi8ENN_8SjIg14PNQPOvBuB52mzqgM5hdNDflElx5prvHWxjJWYLMcKqUCONV9zUU1taaKgAdmT1zf4cvd3kZQgJ52YslZLWElarz7fWax4Efjry7OrVBl_ece2dtQyRbgGufXl4-jz4mmlpf_wGn33T0d0483vPnWTePjHJM31gFwRPalTQiVSpaRomPV5tMfozN6wosmjyss68KA3dmoEBXz8CF9DPT5waBbBa0KXAjlaCwToZzyweCYc8YtvR063j3zuLv60QcCMznXcZ5Yaw4KmO2jhqw38R1u4LTI4d2UFZmyVtJmljpt_Xutf4bqN39xzqOqQE7LG5rIiw491zaQLboNYcGWeVO1cfOz574fU04mfeOzcIIekIcHGV6HdShpCC0lxeH9hhjl7XamIZhpaL9WrRx4bPuBgiszaHwQpCRR29Tmf98kUWbnAkpUa-GkXByYrn51KdaPx_Ss3tq90B_2UMtknROHVeKt6lTF8XDP-lH3Sx_Le7rqoRx_d2INdhPFy64fzQ7wviRQ8iTRg1AUl3VYS2GqZKLRSbfOAfoBuPJ120iXfhdvJr1x8N6nnesW4EAMaQMifs2jCGn80FZ3w4RM99Ql9nfFul_YEFL0iN6tYVoy7nB53ESdiOwJk2WIjgaA9CEvkw0-a8zXzrDR4fCJDBZp2l_U5VHVcQefGCUk-QwnFTQvl40oN1zKp5H4kC6he-9D4KveW3E0LBGhnhN33RfJbX7pP7MvUVcs4d0C8UZKpRzvbvZ5zA6-ez0UOLjoSP_mgs9l3nTEfhfzx8QcjC0AY98fBsFpfhNr_cfVHC-KXs8qvNXVEeT-Dk2BeFIluq-2plqqEy9gWPVwX0ER-DQf9YKN-NvhYXuabRD9YKT7_CGHVxEIfmS87H3Lgy8Jc1RqIByaXKgiwOowk_zgxOsPufiRt463CD3GgrufDFbdHhlB_p2_6p8rFVuCPTM5OI8dDRltKwmub50GiBua7UBCeymHohFiGU5cZ9oP82mBa923H-Q8knLn8ekauuctYWvAUq2I7ZkSPeOiQBq5F0eugli7jjAjKvYJhLETfiuTlTEafjnf2fja4EYzrq6yf1e2gb5HuRsvA7qEows-RvpB78uQzpjYFEFzxaqtoCsqS-KNunc5hZtrKHu4VPdKAo0qFHUDyRbz6MJj01w9oVFkgjsmpiQKTpRHi9lwsbSV2gJu7mYjX4z3iQomMYY2FL6sQDiGRAuEgZtjfdCDuJTr0SHWiHRQHBmy1ok464Qz15o7zvZ2c-ImJ-KXLc315HkCqlACg5Kldqjf_OO9ialVd9wU__JaDhGSwiRLsOTa7u6V5hSY5IJnGr-RHM0doStjLFbP7wMOaLUHlisHG6OmfEXKK1nK-p1031ac0-oDUZLJd6RMHcsWUPqTno1lzUN6RsmE9RSb7qpyOYTfmlAQeqVhLTQ4h15N333Q37X9jksGjJX1irmRQZBerXAcx278HqduHyx8jU_K1vF0GktMSs",
+        "summary": []
+      },
+      {
+        "id": "msg_018474cc350ac9cc016ad322bb3f5487d292b39d9100bdd56a",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"The Crown & Anchor\\nHigh St, St Albans\\nReceipt No: T12-0087 · Date: 10/10/2026\\n13:20\\n------------------------------\\nFish and chips £16.50\\nChicken pie £15.00\\nSoft drinks x2 £10.50\\n------------------------------\\nService £4.20\\n------------------------------\\nTOTAL £46.20\\nVisa ending 9911 £46.20\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"The Crown & Anchor\",\"confidence\":0.99,\"quote\":\"The Crown & Anchor\"},\"total\":{\"amount\":\"46.20\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"£46.20\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-10\",\"confidence\":0.99,\"quote\":\"10/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"T12-0087\",\"confidence\":0.99,\"quote\":\"T12-0087\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.98,\"quote\":\"Visa ending 9911\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.98},\"line_items\":[{\"description\":\"Fish and chips\",\"amount\":\"16.50\"},{\"description\":\"Chicken pie\",\"amount\":\"15.00\"},{\"description\":\"Soft drinks x2\",\"amount\":\"10.50\"},{\"description\":\"Service\",\"amount\":\"4.20\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "The Crown & Anchor\nHigh St, St Albans\nReceipt No: T12-0087 · Date: 10/10/2026\n13:20\n------------------------------\nFish and chips £16.50\nChicken pie £15.00\nSoft drinks x2 £10.50\n------------------------------\nService £4.20\n------------------------------\nTOTAL £46.20\nVisa ending 9911 £46.20\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "The Crown & Anchor",
+                "confidence": 0.99,
+                "quote": "The Crown & Anchor"
+              },
+              "total": {
+                "amount": "46.20",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "£46.20"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-10",
+                "confidence": 0.99,
+                "quote": "10/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "T12-0087",
+                "confidence": 0.99,
+                "quote": "T12-0087"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.98,
+                "quote": "Visa ending 9911"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.98
+              },
+              "line_items": [
+                {
+                  "description": "Fish and chips",
+                  "amount": "16.50"
+                },
+                {
+                  "description": "Chicken pie",
+                  "amount": "15.00"
+                },
+                {
+                  "description": "Soft drinks x2",
+                  "amount": "10.50"
+                },
+                {
+                  "description": "Service",
+                  "amount": "4.20"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "The Crown & Anchor\nHigh St, St Albans\nReceipt No: T12-0087 · Date: 10/10/2026\n13:20\n------------------------------\nFish and chips £16.50\nChicken pie £15.00\nSoft drinks x2 £10.50\n------------------------------\nService £4.20\n------------------------------\nTOTAL £46.20\nVisa ending 9911 £46.20\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "The Crown & Anchor",
+        "confidence": 0.99,
+        "quote": "The Crown & Anchor"
+      },
+      "total": {
+        "amount": "46.20",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "£46.20"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-10",
+        "confidence": 0.99,
+        "quote": "10/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "T12-0087",
+        "confidence": 0.99,
+        "quote": "T12-0087"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.98,
+        "quote": "Visa ending 9911"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.98
+      },
+      "line_items": [
+        {
+          "description": "Fish and chips",
+          "amount": "16.50"
+        },
+        {
+          "description": "Chicken pie",
+          "amount": "15.00"
+        },
+        {
+          "description": "Soft drinks x2",
+          "amount": "10.50"
+        },
+        {
+          "description": "Service",
+          "amount": "4.20"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

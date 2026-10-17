@@ -1,0 +1,184 @@
+{
+  "key": "bb0415fc30e68b63a424cdfd327e13372a2a844af95be3be3e435568dba3e497",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:39.545Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1749,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 883,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 2632
+    },
+    "output": [
+      {
+        "id": "rs_0c688173f0a2051c016ad322b442f087d29f41f434071c0bd1",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yK3kIfNak1yBYa4fMB5qgMVE04wkcfyVo-4dXlDV-S_jBg0bGTfr49Oxmlaaa96IUMGSGfMzNcxQfT4fY3WkQpbzEnNTAyxJ4gCdC_1lVMda9dHeebpLV3ZabAVmmpZ308ZbPo6PP4MrZg9fI92o2II0amJyIQKiS6v6KPYc0m7npYIJxWAVywwAswqO7I5p2oMzCGsllr5k5mptt8OsZ1UMMkh7gW68RHoKcfoQcRQVeAsuueAXrY6BYiKsvDg2JIvJTCyCEt9RmKJP-Oh6LuxH8O6bBy32Jtwx4_17UT_2n7KyCbp3oJcbc3GPub0sCFU0-sBp-V4gHtkx7JyeMg-Uht_NPg130eQLCaOQcqNfYhfV1erjRFL131D6igThvWyanuHTKREkRYjVMW-wCn1L6uERBcD8X55qOwTz-coMfx4-FGf62GpZbGwTBO-PKbe8ar3o7-UkMSpGnCy1hepP3k9UZ0elYuQ6TYxhA2UdZRCL86krnhAFYJNHnK9VdkEXe89qfUzO3JRas8fDs2Vs3kd-y5qmUiHLgEGMov-2SuDruEQhdsEA-DQvCWcPDiCc6BdQJPiBt9K8xiNoo1KUY9CO15DNDmnLMa1FqMO3o-HAtAKUHIM-VWy084Ick25UfUnPaEET8O2C6CNEibHilbXOeV39Mnsv9x__AVoyPVj3PvKnYsUCj-y66hO1OXmYitZATa3GYXQsj3uW8j_STz1QCd2j7Bd8FHKqBL9dkvoHs9sqk4fC6pmqES_E5PuXBYptpchi0qEsWGbXk4qClf4Q7_JO9inLvhHeBYT6Ks_GhSbgUhPgLLj9N16PRYfovSHsSR7fS02B3tNM1bWkRbhnb3Olp6VijXJJzbC_1-1yOJVsgGcmO_mFnJLSMocGC07e2P3tewi35oqQigWujphkKdVt_AUk9Bqhs-QdJtdQD_GrRMheoqaTfxfVm-5mKm7gVnQGVxyzKoL55lH-7rQZoyCq5XJtXJMsSeSXF251Ph6Mwyiq3df1RPVfik0LA3ut5_QOtQ3NVt8umiZcnJBfjhGTHyEO1b4fqgiUiOMAdvPJH91hDVkE07OGZVmhum3VI_cfAQQzQLcTt1T8zpAU1pv8jhC2ZynXRd2TsYEurg5Yl2H74GOgAyRv8fjt4oIZmWVfrHxZYx3MrXYX0JD2uEuoFbM7gv8El07WKRQ2HyueklIbn57FTta1dK0DKsV3zXmI--Gz7F_-HXnRKeV-2QDJ1KnuO-34kpfAMBpWkBVCyjsJYWe_bf3nLLLiE6PIRVDljXCYdVjvgD3v4nc13kR9NfQOJARkUkL9uKcGso4nUxA3CcJRYD9YTG1ZpYb6ZSBNUBGARVM30np3vy4c8UzToZ3puGVaLEh49e2xeLMRvPrnB5Wg1FtoMtMu_VLpvrUp5nvdH3seU0MG2HTaaCyNS7XghvW1T9Fqqur4j2XStVOv93Ece4eAFo5ZnkaIm4oh5imCaCTi_oXcMmMe5xByO_LK2WkxGn8KS5cchFR3cA5M844NyLalb6ZaUFWWpMkBmgbcQ7MNa9olL8gV7MILxKAwkpfAiKzp3QwxPg8fYE9wsEfRuZHpCsSpU2c_nevMAFubfDOLWAopePp1glQksfbcJFSDF724lIwNKCngaOCANwGYO_WALCEL1AWh61DGMRdPgjX9Jz1w4r1Xz4ivS06SYaW9TbSsamzym_Hxn2sXcKjvAyVqKVa9T5WylolW_FWuIYwH2htJlzr7M3hu7BrIrZUKwGGQBLSlV3K7r7HoTIF_WFOQb-lR8ED4P__lVu1xqnuCh31dpONPxqRcCtz4dQ0uGZ0oLOzzYeDdV9SKR9l-yrp2yW_uPtXoT_qEfbTeKYA57e6azpa-Zj6-eARNH7A9__UZ8oagxOV_TMv-3lwSksKdjUSKwri_-MpcpJ_lt9lIug_dQcYBD-8B0Mzx3DvjPFXh-c5x8x9b7_zEZl1psWYEe8Y_-KqXpNspJ25nopOHs2LpN-Dol_Kvh2EU4lAlHoouB2pRw6B7ugDIn3_KfHl4Qjzkwm19OkSSI8b2FND9BaELFyWG8oXtxjBCvOw399nr6Iwu4vszlDKZTJ0wW7iIjqml4aNOk0cPNghiqnpOXZpr6--sReiAt67SKTpAm48Uqo-AE06Yz-TebnPw20RWd8xVN-szVm9Uglbbk-9xGK8w6bqm6rTU572ZrPJfdmFIYcTIEpg9EYn4fPUVUfk6wDjcDZyk2VBAdvT-C_Bv3blcI-XwUrXWRqWZ1-81NVRIzlAHqZbW6Mf518DSs7Ng8EUl9iPYu6PySGdbFkHGDeVQT38ygxyiQV2K7cz8wePTpBU2vUZ7cRBhBsjW90pOXKt68f5g1RJv_XL3IzsH4DXdxQlKxxhh4rK68vsEopFBMhnJnCacReItF6Jt5LOXXLiWpmi40WRFmtrRgF5rsC_063WtMxZ_iQGoj--W8t_KOQays4fRGrmng4NXM2wZ0LQ41gUQ8CC5fxi1gEJZDY7LjWkwMqna-t_RdR2rZamaudQolGpyeW46R6-TN54fNaPUuOR8yvKVmQ87UAM18BNjoRbVmqXR8T_8smlnFx1yLT0gHHtpXbXc79MByh-w-twVeRA4YxWAIg-MRjGbtKJAnMt0xJ-OzvEnKYgOVrOm3kahkuKWFoz17MLhatxN57SOJsTeT1DkfQyebYKmcyE9w4E5j7_WTfMT5LOssgrY2k9reFDmzP6pFiwP1GjjP33Er4-mvyxI_o30CNH_camn-O3wQw2entGitD5RfqiWirPjxmpIPENl3rPCdkFCXikBJGtHPSCMaKDgZT_HVbaHAdCRm7RekoWwxg4iJqhLLELuxCndo9Hc9O0ZRObICX45LW6fXq51JkTT1_CDBJDAHFzDYHPf2efyn2PprjrNNO6CHApKlnfcut3jR65XXbZa91btYugDw-Kuk8M1Zq3YQmVyhpvtzpz1mTkNO2kLH-MSkibyKJ0Eq9oWca7DM8pe0iG4G6vownnegLPJ68Fz_UY2hmajVA5NaKNVBoY5I5I9poqEmfLNg98vNUoQNlDcVF9byGBdBmnQYoqiYE5vS-ObSFs5ydebOVb1kqBjnIn3tlcHYGQuaIrL9fwSArPE1W7VeXgTUojn58n9Ky1ZylBMUwrlEqJSKPOicUTo_Q9KydAGjn4Zvaapj9zdx3b1HFnQrZbxItvGPpDAyl-KiNgdSaN3tF4uPVb3Yt1rEhE7Vm2kSldSZWNm9Of4GKfMJex6YrnTcqWzPDUNonOqgkvgv1XpfE2PIetE9MAQRLACzCD3TR2E7J_Ec5iGLVpMqeP__H6KVl2TeCs9wT14CLU4kpseu99TBpJc-o39M-3Xo5iNXWLXtGruf5DmozrOUhQtchubJ81LmPcCTkjG-RidKl5rlwK5sn5HPZM5KuQqHvV9ywwK6hMJ1JvecdG2jx7TMdfVr6iYMeP7MlfagPHoDi18M6ozeyDZhTLRYvWlX-uxdf3nc9nmsXIiJTEUhHlUnQtpFCCasMf7zetkNOvG5gzzzZIOeOZSsy_l2Cj5uZayuhKyebm-0UdtC4omOJqOtf6FEtZnGMCGJ6BJd6c_hEkYLTYH5X2ynX5T6UmfRWvyG67kj5NYHN_RLZCvIojMOFJquoT_DJkkRVc36W_tI0ZoFc3xzJMNHc2-dDjBmEk7kXlnIN79Lq2OnagSyBGhYm6LsAPrrWa7G1-ShWKSS2Zx_WNik5KP3z9vdGIwuILkGJTRR9zUamgJ1k-05cj9nWmtFL2KyUqIyHa5aASrt8eKz3i-2Cdtcd8FQVOPHTih46fLNNA-FpV25CXHxsA25ukVVOMWD5H8_-TJqmGDIknBps_d3IQIpBIWpJ7IjQE0hORlUqMvDsq9gMgwhao_PyWvo6oSjw0kxwCP1ko0dekA4cykU85lZ0tUrJ1pODVREF6xiSNckVCW_M2J69iDC5x18D-5D_aWK2KRH42KyA7L71hFcuYZAkkf3T0r09UgB-psLkInysXbYCvvbsqdNQt7S3U5P11_Xh1V5L1P52sAaDskaiICEpQtCEySHDavaXFD0ONMINiaPL6nnswDyIf2okl0JG8BckLJmCypG6ORff2itolneckpdfO8ttVn6ktImGViMas6YJLfZCbM-iudINX7XFm79YAY_h5AN3R4IB3n6GlX5XjiEuEkKFUKNPadPNipd5reNNl6u0Vhe3CT_QOetGYZSOG_Wawa2KUqAr3ZxfIpfQlL7GxnDF3ZvexT47Q5enbjFIJ-c72fmZ61Nx1dU_KfAQ2Uo72EEOu6YUs4uLvX7Ohuq8VRGINnJQIA-EyeIAeUHEb4xrbU3FmLLtZ5q3rPiZFcw6MBflcvNI4z0-yP8pVy478nccn2L9tgPhs_vZTd_9avLY_JuVHbnSEigTvKZWgFPHtXQIzoQ5NG9l82oWnut_W-x7kTK_e_jrSunuBNPL8EW1kb5TVMs0yShZByqKwwIeTzf5WWtoTrvO9j8fYNA27HoEGzTD8G8i1YegzZJS2LoWssZFNf1KJ_wlr6pf5iP5wA4gNEUFVt2Gnn1K99r1ZR46tf45Dw5cF_Htq66bIDOF9MAOHaX7XKPt3_fGUI1amtiL4nuRWDeNr2Mub8XAyWbCf2hV0GNjHUvF5kqKY8m_SXTpjh0jNRO_fa8-3G9TIlYJGis8OGiUhEB73gR76_juvb1jtY_0AME84b-DslfjPxJfTGFIFk3RimdGG3rwZHHg2IOeuOMQXbCvrkSHtjsKcxpuKWr9I1gcgVfzszr3hbFABWjsT60H9biTjrx-ZFiH63y9p5rPcd8m6NqhoRo9atS4q-SLSJzcYt7548vcVoqRlkq1-olmCa6bLOLg3-wXdOiNhBdOBEfweXw1QOr9K7p3Q2UJSgRQ7ZBq_zJxClfwHfNo3vFBVZ82zk8dicAzbGrjn9alS3klfSDPL_nRlCWMD4HSNu4jmbdYFnhwTtnlQ5-qnymJNxLc9LChGQ1yh-7_X0WbpeSRiFdCdC8JbB_i6PU9zV3vH_XoTTRpAw928czeh4CM9XjUiUVxFnYbwhRCTMDZah5lAyyJw9iWfjQcksR18zUvMM6D63Q5X2YDQKxMlzPls8FesaBLd9NSjFBcFHjILRATen9HNgp-Kc4yfEkMBk0xZ6a7MfT-65MxjFy-K-0hbyE50uGcESZRqK7KUYtx7X7jwvt8wXTJdvQU4odGgp9xPlLy8xhPQdESeo-d0zMSPhm5sZAl4PUH7BOo53gCKiISxkoeu_1BP20usnN4UhhVJ_jg0LEZbOi58BceBEkaSPnN1yxHq4zS4_t3PU0QzisYgan9Dql2FrWwFVy_VIse-SNuxwPGrNCBPmqTuwpps_LPcj3p07C8CYBBY2H4qZVxXSxzvuR--kJO3eODIcBETuHjFMsGfXoAG3-D8f8dlWpllGBZA-QrxlH7bc3R0TTPlXQFtV9gW9h116jbHJNRNs_srfSkbZdolFCVDrmOQBY9QF7rDEVRYegO0UtQxhXZJDrokAGuhiZWMdCkUAQqdcBcWa-ubtEBwAo_N3KSmR0GZdbxPybpJ6AhPgdMT2iJEVKZCxo6GKy1MEPm0Tcu0wJI5o0jeU4_RMtwBEV7Lbtm_EmGcwNsTBDExIwlEhgmJ3feJWoqLgUodxm-ia1IoJFOUw2mfJgPmCpj7lE5hy5NYdlkD55kAHbszQ_5xxWQOrBGr72ykbPXMcDB3E-qBaICkiNGrrBDyxj3DDLTpCjHbh8Rz5H9YHE2HYkAd9asigE42IvX0kRRHmhOGenDqsFfyBlSXssco0xwlZiq2k61rGw_AoiXUKoapcbgyvUwV6EZHrrCQstXtxBS5Jy0DXe_Rzt1LV-BPaWeEBSe25755KycCNshKhzy9nFSK2s0ouOMIq9ePul-IpWweO0s7ZauZ_oCpzAlu9HFz4R_igEe1BJyyofO0c6RQ6VT-AdPXKQzdyXfSZEeda_WQAQdBQabEaZGYybdSkq7fmP2MsZpim9z2IVFz7LLHFIwMX99DrBbPCMKTBYKTuUHFHsMwekb4iR6EB2gzVU5VMUO2wKqpuZJw9lIF0El-GiqwBe0sPTk1zqKZZlRMMd1vw_4dN4LpEX_WDsbLyHzWOeFjvoqLN-Bl84ju6fNuQuyIaisEuknAN_zdmeGusfQueLgMxV1r1jqF6EaOIcZz7y4FZ8KWSEmIzixaa3LfBSkKprDQ27opGPYH2SXQzaE7UyIwpZowYhZ9KxRYJOlomDfzB9R0EiW5Vt8a2CdYp0f6y4uaqbgzmtKSssv0kZjgH-suaphd2hIr63FDtJf1KAvNmtfN28WQxgIeu_7Kl9SElQQ13B0n-Ezk3Cy-GiSOdC75FXCvgUv3k29fZBuD0Os6d2OOSsJM8H73BlMjjdCkMy_1dMz6nSy8FgNrQBVGZ1uGzPLkYl0KFZXLWorQBISEWCiK84U25gU4MmwIkKDGhCW8asRouVlTDgdPv8dswk8OWQJmNn5g6CUztKOCkvHe2vN63cYfRwLXTY-Nl3bkurXMQYwc7f9f2IXylHGsO4wj0CstqFp-bui3mTsZXX-PWp9Et5qX6n1J3g4LUKZQc9AlIPibXz10w-hqKK7hYfHN1bETsLDlJXs2zz_Pdihv6DwxeD1lrd-vNIEjzMWt2FJsrw0zh3eJFstr2DFh25x0__fgHtI_BGafaUu3bS8woG7PcI4miuTRhDHJL84ZMBjnuX_U5zLttsE9rMcQsFppZB00InPDLxnuSGdN4tT9U59Ywn4pOkAzcAywE2e2c7GIJs3Tedo0KdxGEJOcU687YTUZHHz2ufmoAurSWGs2UEKSMMAlmOAFnn2YGloEjDNShZP3MWo6vtNp3VrI9p5QxeRyOe_-96i3ewNGJ0N_-bE9h33m5DyMFIhILcehXi5M5uMeQfi_9dO4VdnZRL5OYReFhWqyMqHjmNdMlK_2XCuwUjAB76bvX5vMYB7jIqnum2P-8J5Hd0Oh0aBIuOhf1snJxNvjgChR5QoyfF2NGMgj4KfcmMukcXMQe4nJhE7S40w9bvz-2MSHpY4FTsuvjTqAcZdEBDzuTsNN3LRCTa0PSWfcU7BoAouy5G5eF6533t_XQGnDVGDnaKA6iodjc3nuFEf9y0-bmJf0BptsEj_2TveDBy2K-T6upGsN6iFVgejvEfj4mfjZoGPgnO7smO0Aw7Jx09K95FvbqXA8xYO38GVvGRtzrl5psktfDBwGEmRdODY4GmrSC9_ffJ0h6CnqN7jGZv05xiN_jTpSXoMrC5ldSqvj0KIuELO1F7W9-Xs1o0EkLmPXj2WqHSqFQA5cEX4n9NDXanZuDGTdAE1J2Hg_Fp1K70SSWSMD_YXgx77II7qmDX-oLwFP5QmxPIWXUGipPGYXjN6eLuiey59RqKbWzI-QPOnrNLg6J1MnISUQ39xMITp95EPr1wQH4Cp7QzesMsarc5worzRoHxERaWynzVpAd3dtsXGXOGOnClVYdyu06dXnPr2Ck0Bj-VGR4jK0c7iaIzi0Kipxj83oRYZtgc4YCzsAhc9hkcwRfJdJL9Pe5z5qMBwbaodIoxYDP8S4W9WKf_3FkXwLR7rXYnxwPLnH-TiQUG9J9PZdbwv7MAXv1k5xlS3VLm_frmmA5LhRV7sIVYtsdFZbtVjLDvlb-cbzdbq2ngLlCCeKc14t72y74B_GIGI_GC_H_llh5sxoCl-izzxPWA8mvc26fzd5ooQutZI7lTgU5Ht8158=",
+        "summary": []
+      },
+      {
+        "id": "msg_0c688173f0a2051c016ad322b641e887d28feacfbcf3d687bb",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Café Lumière\\n14 Rue de Rivoli, Paris\\nReceipt No: CL-2291 · Date: 09/10/2026\\n------------------------------------------------\\nCroque monsieur                          €9.50\\nSalade verte                             €6.40\\nCafé crème                               €2.50\\n------------------------------------------------\\n------------------------------------------------\\nTOTAL                                  €18.40\\nVisa ending 9911                       €18.40\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Café Lumière\",\"confidence\":0.99,\"quote\":\"Café Lumière\"},\"total\":{\"amount\":\"18.40\",\"currency\":\"EUR\",\"confidence\":0.99,\"quote\":\"€18.40\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-09\",\"confidence\":0.99,\"quote\":\"09/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"CL-2291\",\"confidence\":0.99,\"quote\":\"CL-2291\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.95,\"quote\":\"Visa ending 9911\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.98},\"line_items\":[{\"description\":\"Croque monsieur\",\"amount\":\"9.50\"},{\"description\":\"Salade verte\",\"amount\":\"6.40\"},{\"description\":\"Café crème\",\"amount\":\"2.50\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Café Lumière\n14 Rue de Rivoli, Paris\nReceipt No: CL-2291 · Date: 09/10/2026\n------------------------------------------------\nCroque monsieur                          €9.50\nSalade verte                             €6.40\nCafé crème                               €2.50\n------------------------------------------------\n------------------------------------------------\nTOTAL                                  €18.40\nVisa ending 9911                       €18.40\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Café Lumière",
+                "confidence": 0.99,
+                "quote": "Café Lumière"
+              },
+              "total": {
+                "amount": "18.40",
+                "currency": "EUR",
+                "confidence": 0.99,
+                "quote": "€18.40"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-09",
+                "confidence": 0.99,
+                "quote": "09/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "CL-2291",
+                "confidence": 0.99,
+                "quote": "CL-2291"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.95,
+                "quote": "Visa ending 9911"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.98
+              },
+              "line_items": [
+                {
+                  "description": "Croque monsieur",
+                  "amount": "9.50"
+                },
+                {
+                  "description": "Salade verte",
+                  "amount": "6.40"
+                },
+                {
+                  "description": "Café crème",
+                  "amount": "2.50"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Café Lumière\n14 Rue de Rivoli, Paris\nReceipt No: CL-2291 · Date: 09/10/2026\n------------------------------------------------\nCroque monsieur                          €9.50\nSalade verte                             €6.40\nCafé crème                               €2.50\n------------------------------------------------\n------------------------------------------------\nTOTAL                                  €18.40\nVisa ending 9911                       €18.40\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Café Lumière",
+        "confidence": 0.99,
+        "quote": "Café Lumière"
+      },
+      "total": {
+        "amount": "18.40",
+        "currency": "EUR",
+        "confidence": 0.99,
+        "quote": "€18.40"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-09",
+        "confidence": 0.99,
+        "quote": "09/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "CL-2291",
+        "confidence": 0.99,
+        "quote": "CL-2291"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.95,
+        "quote": "Visa ending 9911"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.98
+      },
+      "line_items": [
+        {
+          "description": "Croque monsieur",
+          "amount": "9.50"
+        },
+        {
+          "description": "Salade verte",
+          "amount": "6.40"
+        },
+        {
+          "description": "Café crème",
+          "amount": "2.50"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

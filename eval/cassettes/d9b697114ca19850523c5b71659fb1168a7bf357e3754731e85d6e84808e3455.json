@@ -1,0 +1,192 @@
+{
+  "key": "d9b697114ca19850523c5b71659fb1168a7bf357e3754731e85d6e84808e3455",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:25:08.217Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1664,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1412,
+      "output_tokens_details": {
+        "reasoning_tokens": 1034
+      },
+      "total_tokens": 3076
+    },
+    "output": [
+      {
+        "id": "rs_0d4c42e07522688d016ad322cf3b2887d2a11413f50e9cedb3",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yLUNOHCAQfjGdZ4gUKMqM10TfKjuM5fu0enRUszTMurpNxrW45Nn_0ZwB1hPx2Xwq0xnUWym5OPNfms2Q8fYnlNMJk_nJklm8M02_LkLNRnTVrKKQFQ6KmqDjMB3-DlKxyPz-ea0vKkpAw0wkz9V-pLtWMj_ZMyFIuSQx0dLYBnAFoAX89UAkAj72CvO30Nzhb1JuHJL3EqVpjx6X5NDtMoL9kOjxgrXuKq-28yi-JMc6lJgRwx0FHSGYBWabqpe4e4HqWKtWCrUN1Lkr_v9fBnkSOM1hIe2Ft8a8xoyd6bpvBsoJtC7O13nzwhsMcoOmkDUQS5TucLh8li0ZEhIadn3ohHQJROLSo-SBgIci6sXXIIZDjraon3_U_Fi5SnRSPPJXt6lJFN-1er1ee72WTyE-w3lt4RxlbuaOzf8hUQkUnW8pI-92IjQu4fF8e-4bIQ4wGdmQBHE2Xhou7w8Te5Yp4Plir_-SQGKo0C0Y0fBV343K953kwxEB4b-2usieJdfcF2HSw4QJjZcHepTOS-Vd2c4_ZqTMPJUn3AuPAMpCd-ER_hbBIFxgfmd-3TNkdTMq6vts4_5Em9vi4dJ6ai76-3-ecdhdk9lj2qDBmoxQrWpXPZAbYufpnqmc1zQdYwoRNlxdRhRUcoYLBVOKZW3aw0FJaUHjf0z-QbafL0bLZklOy_ho3NR8-T9Q0ZA7-wkMWHDnRn9MyG0cfWUhpMVUa-YE_GLDiRekqvHTptpgZiVJ5mRct_MKI8VqxcgOcxAecmfTPKl9VUDpOvlq2keA633w0B9tN_pBI2pqILMTGF0MNYLxVVUDCSEQvfXzHn6aWRQpD8y1e1wL12Sl4zOdc7Y6IH5zI3Ky-zWlCcdL0C4d-ajzqKuv7Wq9PZ1ki8jfKREG5xVHdGp9AXgLTiI3x0Zfdx1rR53U8JzDzQVHIlqWk9cHScYYpZkgFqsychv7INdO_RJvNbHlwxsVBMa45E3moH-1ThEcRiXOTwX02T6xG-qo1j8jyTs0Ulx_jKp-aACTDVOXAgtegOR44TSVt3mo8ft25o0kDpmt-eW1teFQhrrSde96xjm5C8ZmOM9TDvBx00SHrDi0fGiTGgDtLe9S9J0AZLfQm_LCZzMAjAGpoXywod2d-_bk811TSenaeD7Nb1689U7HuRkCWOt0Na0SSOrpzAoLhlGSKOraVH6pDTlVfsd97Bol2B9vbaUmM3qxCzQYViNbgp9ygovROg-X57HhpKp1Y4s-uyhSe7Thz01PqUj4bSoDPKUntxvExTaptxlvYyXDRI_QbRCXzmyljbRTEL_ajMT9AaHE9ltutOs_NXrFUnqn9ibSJul-OxqLRVw05XkATiPfkmg-69XUndvsI5XhUh-ofTLpBIhIUX45Zl8rSH7pes-brBheR6xMYvYwAEyBfekgEwDB7O3RqeHgzRbjcemaFNYVofFdus1R1eYpgHaZEerV4Zww0jC3fWtTc6iUYrg1scmAP_yq-1dfRSAQFhUhHqXMYbpZb7SPOKRSpGhJ2JvyGZtasTvbFdRY4wHBLSPj5sS2kJgfjGYAtQ35X68RvJjum2U6PisQ969c_chNwmBfDBMK5bsqhj3yfbwq-2Lj8QgIbbQD5t-uIHZlNQjWwiTHbg7KE5A2p_fc1lFFMgnxOS5lGhMCdh-QrcOY-fnLkl5j2qbxUjmjLLyRFl_yCZsYMctZTAPfftyWuid0XzVbJup8tOxTrQVnsryJO-jOxeX3La6A1n2m1Ka_LtbMaP5HGYUufePpA5qKifx_5Gil6-CTxH4wGE9orptCHveTYnJwHsBXlxv3ZrfzymmLnk1T2GDSc_yrzwtknKU8dhGQePBdPpHC5FIHzeTaw8QkEpIYrwVtzKk920PE4Axp0excmnfQDkQPa5ksVmk20TWRy7XrK5Q-pbTBvKzpFFwDbcHzNrf4b4DID9r5rSEEs0jXMYSPyquwaHiGT9c-xndXyy9jRmRqcVov4-_02qEO-ICA1T0Aj5-rAXMyNB6L2v5pRuL69ZijDolRCQ1Av0JqGmwSH9pOJSVh9IjYMPuoYxQQKdr9PVLbIFWU_DZqLj9oypyvAJTcKodS2_yA_nEVGXH0E1TD0A6JLvP326wO8IfrwmfGG7r16OQ_INzq8UrEoDuKwlx7YjEd3BZKvCZ0PsElS_xPrcwrKmpvS8dODX2Bq1DMedUo2YqXkmja3PXMUriFKMajSQR0gIk8cdF0YhX2yOeuke6KjAwauuGJEtotucsZ6yp51KJv7L9PdqsHlyQCTXjxKIIhJRNevs2EeBcYWnUfbW8SVC_2o1MKCzDbRi3ir_iiakWJDb1Jo3xvOndAIb_MHe2Rnr9Ol5vA1mMjGPY3s7VMz1r_IuFO1VwlArSV3O0TyHspmEDPt0iR79fVWYfLPz1kNcyMVbbGTJoEUYEGgDnpej23MCli_HrAXck4CVva5dA6Ie3V3iqOnJux7vJUBKEskLz6of12zrA9ek8w7rmtRetqcbKtN-a__Sq68G20bT5dcIpnTyb0aKx79y7yxmMbEt7lrsmcR0V2ea3jsRqHHfnVZCUyf3y5YPX1Xgc3tBQeOTBGLrAM230Z4Jj8ts6n0q1aVOFKCyRIkp1EnJz7dcxlyv1XwxAfv4tccoSU69aPsoRhKFFsr1rNkE7LHZJwsz9x4Kyz3A0hfj9OhjXgYjOxuvKo9ziLRmxP4iwGS7Qhb0XrSMZTxmbXoVSMHTJlUFHMsY7OteuMwDeuruAA9S0updYXT6FuHCPY-48MAkyU5mC9AsFzdFTXDaYgeJyOiYWryC9MBdf7a8fY_k_khN9YAM5OO7qop_v19CM__AFF7ZwSDR3wmAcp8jCiQEHkFKzqXDYQdYTgKyoWAv6KeEUoVc5aJKsQ_49Ww8GORAdw-09sa4V2zhOjvS6uupsGj3Zr0EsP_fo3gpYvAQRHEtsm_VF17EqULu9GncH6vSz2GB8K7BHj-56HhCH-3Q73tMJgFKxA0QH-Ax9r1Rqqwvimqt-49eihBZt_xZyMkpG1dt__kXuozAWvPKt0aXGjMvoe5rWiiaqAzVSTCxMud0v_joH9q4cpXbtvKo2OGaHOzvm0AUfbyLw793nD6SQt3h-egdpRUqA0J1enGAqP06Xk6g9pS1mDzPn4YnKNgO4DSRsyUODumo1-y7xg-7mRNYyz1RDitAm1UvzH5VUvAVSVe_jLnIUN5KTWw4t07lxEREauGP6fzuvnuoSrgsa6HbyU-Dks-1X1co7h30PYVOU77wnS4Uehtnd7retQG26NAnjbPdFsFUA-vPXXAiQbIDiEAhu_Og5nv8S_sh3K5zloI4g-lKLzqzy9OR-2GUw3JOX1AmtfrxpQ42WvpSfVaagT0B3ukaoBM3wGaB9ku4RSC1reg_XqE5EWvZUhoOMo9_geSrCpetf26vUhO1qFSr4Rr7aIe-neYSaiED9WW6jTtPvOSWNNUq5czfje5VzpKRwZoOSlHcO43dxDaopCp3QiDmJTF1xTvFQ7OAdJpZmoWzP3rCIJmO_FVvqshr7SpfZ2HOKi6gAmXkBJwa8ctAXxcuIivb2DiM46eel1OCeQZxMwK-XoMWkRocfnUBNhiaaisNSLAkaZ-xARZ3rRfVLKPZg6jqVynErgDOCZehq6C8qa66Tw_zgAaV3wV-bxofwVhzbWi6glzhgfaJUcC52zxAUehpbB92IZZsyfhLxeH-vGSzAWtD6m68vtdHT6vpks_g7c4ONXMJ9QYEjUVCZ2eNI-shz5Fo4BndzYh_5OFYoz5viGbU8vWP0eOlXQDRJSYTkj9dmuLfwwBMogMEvwdGg_arpUrtb5Vg5sSbs4twcLmpmOvLhge_QxIqRdSQVPI3NWr-7QRnIJy29svt44LCvb4aXpvOMaUrdgUJqH8cYnFokcC40Taug8T39-qk3kDiCIKPKosmNeiBeGVI3z6U8_s0jYOChMq7FfOy6ZZWRikaYoWb4QyoIJNc9juHPEHu6C0_JTaYByKi0NWefHdDz5m1GaIlzjAottF7my7UfXlbHU7BuI96_zgRqQ3dofRQPF7pDxv07vWiEAQ621l5LyyyMS9BTVy-TdJKnQa2S5xPJRTRmDek7FYKlgJK478qRo-NKwXSKUKtEFHIULomQ2RLd7HQkfpgEbBC6SshwemnOuqxV4MCXZd2uzLufwGC1Z2ig0Za1TlROxTxVMLwuzcEFfz-epguqvaFTJn9uk7gcObGapQX_hzsJuHKN-e8uUzS0ad9xx1ifhA1i3ox1qq3dVxmQiRXE1HJ5Af5RA8R-vJOoxxjAPJeNvoHgESr6yJeXuMIh1YFi_8pqez4ypkkliM3PT__0c4bcFWRg_6r-qicAB87o_aCU3b-6FB1SkLzOCBD6-I71LxD3DJ_wgoKvIiUH2ne8RKdMxCUlIy1jWkfNfui5CqOD8NEBntnDw-O-OdcNGUtr9nk9LUj-Yd_ibp9Xq2mm8178aWuDEx1QdYBP9jXQwWgqQ5ggCEuJxu2N8ktK7gCLNchY6M0H93qaz95xVT9gH_WrN-TNoyL4fAmma-9eOvLGpEJbCDPcp0eNtaLYyQJDUsV1WrhhU-CzJBXZo4qZGWixoH_ljlnR_Mb77uTEwLiQXlm1Ir2HwYtMxbZoca08nERlOEnIebBl6WPS8rne7u5FGmqs-PnmuufrUQnrRy6yesog_7yZgSAZ0_3Iirj-aB9D4KSrs4WmREOPZyzTpj7RIbNwAYXkDKwwCXmMcP3mklfg67GWtEoL9DH8hd8nMbeImYYyuwSYa_qxD3u54f90DVo565tYdEZG7teraep7Z5z7rE1qVtwRQ25iUxWyLpFHpmlgTv9_zdNF8pD-afdFEzE22U-4pcnXE2WhLCgjzc9Ld-sI0Y1ELi8BL50itT0pH-Ck6s-X1aYRbx-U3L__NBAM4I-g6NXPXzMjWsQ4rJy1zSeWHKit87ONLcDvcGJf_9KE0HQDoHEQMmfMQnBqu9YWU9Wfy3PPaSyOfQq5S_XSv6MhRapUDoKYTuc1ztQgrsXzwHhERBW8c4uyM6EQCz-voplcNj_BDGYWgfZNy5llu2eZkykzYORv8BBvQioOhm2LgDjA9fVO6B6dzj8DVsyY5UFYzzKfmDYU93ldKx7Iew81sIk3mHyW8sj6FBMuaF2yX3sbHhUSQKpna7cuecxzaEOTGiWwlYIqb5wOx83aY5oN6Smn9WzO7WUFfZFIu-ehiArGBuIPRBGI5Tt6J01pb5yIY0S0_5Zj6gngNXb7z0WjoEs0jCeKwIZoAyWOMAX5kLzuxhNeQLHNIaaY_v_0qxOrteIcjqUbIwXUk_tY--L-qcgLByK6eyTYIe5u4kx0sOdU29bHisNdpzsRREdFNa2GBRr4qIMh_a6yUUmvcWnG6cZAN9VuAloNyClATEWpdHS2MQvnKVD_hjeeCGFYqtX1R854nKnGpfwYkcCqCdcQorqw790MxErAf2VBt3kQnO3LDQU0gtBSxtfBE-5uFCzyAxLj9_MV5wKWN7kHXqM_Nt4ZZVjPyKJJIsW7N4N_9cK8zqLFBqYJCuPuZ79Zz7gErkJdEKAvIRPwa_lvjSsJjmvHJSaNIhIi_OIGyJTx9FwPUvxA_SIK4PC1duiCm-ck_VgWM3qnSPLRqF1icB9ZbpTJrzC-23T_zfgApgrifKRl4sPhvRRV3VWqayZGCSqhD6H64mwhLVkl3qCSC5Xl_5P5RS3eSFaC_-UMSXRcLBnMj87Y38l-jgKmGjtKaKcFHB2j_uuDoWMwnyZiHDfyLB5j4Y6f7rc89V7VVpamWKIoj097jD6NdY_AlhdbloQW61QDQkirKX6XL_dgL62GLMdYj6CqR1EGjc3VzM6fVErto1DeIdXXYgXiU7INV6R7fhwjsu5dNnl7xIVGxk7SI7F8euyTTfUirqKp_OWXflosZ9ZZIusif8IY-0XBnTobiENemwKLrtIu11sX1rDY_VF3xLKAmSEaN4zz5IrNiQOtJ5UBxYRZgaYT1qa01jh4Ej6WMkUZWop5d0Y17K2tdik4fDsaHFjfau9j93JyWj4pDS5yKFmWeaiu_qWvC32B897WEEXxDpl7fo4yQeQAZFUOIQZUW93q0fcfcK3vpi6Op3ViZklSoRgaM5jlwKLGdBWvVicN7B1XYu5kbBiOCu9ubzCES5cgyc74LigAMF0tVbCEi1C0OMqwaHLA6P2pxq9AU5z0fdT_tg4_CqmzYTsxeaFeeSAUprFsLVSqmF11yw3s_tfSmQ4Xnh4iuZ0td3oK3FF9A92LymJWGue_XaqAjxjYlBfZfQxtGUex5vzmssNCtlzUeaXVRItY8w5-1MqWtwtx_OWMzgY-cnUFu8KWi9EVrmVCDpmuKm-0p8FJeMNstbWnwItJxSUHwU_fM1nmfgljXgK56Ki2GEAl4hP-i4QavqTtfbX9XLgH0OkF5dYxwQ8YYRyeuppWS-fBWGTOL-bmyLj30ypK09VvOGkW1NF4SENyd9K_IrtBmdIXi7JNh3g09jqRaNnvlHrKJB9ZWpspCjcXiE5RUH5vbptT_mV49I8t-BLwiIaGjJ_B5EeXavJBYeOOGgRo2Usg9tDzhPxcs2etFyIbxt9K6Ov7OE5nMLTPuJqrm7yGyEipQxFxnXxDVNguuvS-CH5XkJTIrQ4rhjQ2WVE4A4_ZTLEfImlHIB4oNq0sYYo-rRA8ZuEVD19NIvkloYFlqi_cQy-3w1rlJmgSsvlK94c_j_zCKtzi3NSNDkFmryazs0kBvwRTfUjIXq4CjSGl7cX0PfJKesxFZYOpQp4ZeAatCOH5N2Vv92Fc_5yjp9BeZdC4Ajd9UOZygwmvS5HLXu2LOsKxxscnXmtRB2-tI1b6cC1KdXeDGUBQjRAr2F0atHO6Xjr-1UTxq04I8zHW7GBIDrWJYfHgJOIERpexMW45lrDn15CM-4_bXeiU654mVr-9qKP9P8ZHO29orjgGESExT6tKW4LY1lbwLuxIsl1bKeRqiHK5k1YuwRrcrjSXShStepjAdixsw4_4Gj0vFBSvYeqw6dtdbjMITSCZqK5p6_bjerUx7bR4ubBFCh9DkPPDhGNxfxnaCTZSZrsQmytC3bT-4y29XgAIifs7La8KyzgwX_3yny5lJTKy9ML7k3E8vJnly4MyAwvr9QNDZ5MDYgOH87F1SBuyp74yFxS_cNZgmqozQrLJs5S1NhFFw4FSKvRk_lq8YcISt4SkAHs4Y31ToFn5RfcGIQovYH6Y-T6s7Svyetr8kNEgQzJ_lXVLrhkhs6yuXm_BddWoH6lTuBsl2Dtkqq6-tmcmFTwXxjn4Zrht1aIv73B9AuLivZKvyqONFYarx5aF31kfvlyJIdPPcl5CLPNS-vyTh7RNyDnM2DrJug4AoZBKcWs7iKYtgnDGHBItjdqUi6VylQqrKvjTcEnImlBhgjoaVwtK9sUFIJNKegD6rw59w63JiiXM2VNGR-MnvaN41oEgT1bKJlAdSyODK00DysWSaIZQ5J51UavyQvDgMaU93e0V63REjdyYTUUwcIsAHpHIuekiRcbvr1EyFZSkgu5AGgdB8-vpfFcDb0a_pImbGH6mRUjWI1qOYLX5A8ILcxgCnR6zTF-Pg0UCwmjTGLjzsoWp-BjpRZwzmftDt9JpWvPL4qhWtgOnG1BbWutfSXRXwW_gDjBqCTT76RGsQWyZv3GccrW6-qkaxQYNAe8GiLwQBB2MmoHL6s2AxNZFhwlwFKk5OOXea2yCUef5-pLweGdCy0C9k8V2yYPxQ2626ods6mSKHO0Y5cw64u9SChFfYv9AJYcptZKfdgRCXLhkakfrG0swbrIjOtUOhBCBR-0q2UqMrQxVGPOfsqWBfAYvl5pqykpjn1_D2OT7QaeEu2_DrqdtPRA5L_h_I94M_4NMSh7dUpVm0NKA4myLO-EPiHzIZmUr1JxCTUj5ZxfA9I7jtp1HERHJGvlX9HIfaNU_7SRvLXZXFSR5q6sCjw3ibjE9oS7NTCHeI0K1Ms_verHl2V5cNqfhPeMwKX38qbSjVQC91TPONaEieDGVn_40sZGyBafjAfVMvjNHiZMFNi2nwk-uyhIYPDckGhcxzYNTg-SL-fU2ApRKa3IF2d8ivGcLsLnc6Ssj9tc6OY2Up8w-XF6Ap1t42Vnztc-RZcwgy4g-nxQNP3zWmIZ0r-iCtK1eNrbFxSaj110T__3W3qpuup6lm3CyvmbMyEL1S4qwwZLeOzYZRQcwS6dZIAfhFwblsrlEehxRi-gwXBRk-3tN8NCWg2RMl-rotYLxdUXcG2qvNWL1q3Uq22k6GIkq9W-zFMNES6jBPOKmhjpGiN5bYfjvSuLEgGj1g8plAxYHFEutWuCx0QKxmIr1ap613qoANQcoigNer6m-SUHnvu5cMfPdx45tvrwWWC_d5usFRbnrrDC-cTH6BlG48uiqzXd-S6I4cPmhPB42HEludbPwVrRMXr2N-fwl4OIf8gHQ-2zT4wQVDlpk-dD9vUh7ojehlDFtbtgApCoICouMotn1GwJJOyFsibV8l3L7OHoX6aGdvpCFchFxdNcPXX-hZcFnMYRBPYbmZ7DsZjM3-QahL4cSLk3cKf1FYqTZxngFykvcZiMzw6dFDAUEbzR3OEqfa1qtblpKQTcNEXpN4Xa7BvpLJBN17-7D7L4n-PC627_AeVSsDIK99A4jzke28UKWfbJLVwY4cCUO1mBIwl8ReweYAYoCRX6ER5g15w0f5d6OxBZL2_tbddCj1aYw9YCPtUVEOU0EpfVtGkuwBkpPRxgMy86FtkorbTRSnymfEB5pxYTx9TvLfb4XLZnA-Zaewe9urVdh7jtp10b33-yzEV8FigPp0QX8e7EbYwXnvzbrN_OR0576B6ASGGwlo7L9cjvhfp4oc7-9J5w8PcW372_zgAEW3Rc3UPzqHQP9k8mrQrepN-Oem5uTYeqNVOjCoH092uThYy43vPJzZIVRh02Fh5JwxHP2IgYQ89ZloB9a3CEmidI4Q60Fb65ZRubpyvcolPVnqNZ5Bk3BZaCIdOeVFaq1FnQ7BVoFq8ojyBDN0kLZeALeqtsAKaiIUgl7p6WIfTXXM7nX-4PLSA7Tsq448h8ZzU3nQruPv--kOrb9Tgt37HgIy_ovAJzjCZ75pO-SrJO7rZq6ovLlbVUcNzjVwODRqLfNZEAdMHXiLSCBWlRmK1Af_wbXwtz3Kzo8Uy3KJdekQb9sPVvs36EvxOSt6b1DOjyaAn3_g9dyPK6jyIERstyhug_hmaeXszRk3yd2paQlIRAtu9349KZziezG2FoWIqiD-zBK-JPtz55adzM4J-OEqDy-6_NIxMoQ1Rm0XMH6OVtQ3oERqkuhXsEbgxoyezTmzfMHTqb07V7tnWOrpd9B-mzgVHdjg8bQ6labi1qUpCImVXX3ikj34RDW5lCS6cG3oi0r45sSvQksVc-uoyK9UDK2tHE6bqA9_RrxOQgsBdRLkk6oXLyWp61U4_Dt9rtaFYMQOIOjYNn7O_2jI8jB3QkBqjO8U6LH5KJiNEjKdztU6qg5jdTBy-Z2VH6J65KWr0adHRU5189AT7fVxXsG3B_hywUO97gCM3QbfwJt4vDH7DnDfFpHezv30IwqfMYT5z6NIc6APdCaHQksutL_zb5k7CgaonyXKMkitpGdh_pZfEQ2K-65Q_BnS2c4OxJD2rLimlxtyhRY0WlMSxcR-araA4smY3bkKLSPu0Mz_8nKoswbSbI8MBHyigTMZlIAqmeHkQXe-RHYjuPD6D4GnJU6X8AQDIiozCowdenmH-AFkNofYraIEudw13q32Smu-Y1pv6nGK8pBanfP8OJVrEzLXJcDiAJOHy_AicA01RfLME6CkP6TkZGNFcLUsYwWVWijJMDWHXo9wm3n5vsHju0ZF7e5TGH7P6mYgNFKIMOHKWYtPyyb4HqJtsHDG2QxRoeFCk8IFdVzITGITdhu-BEKMYM2mNbrgZVCKQL24vUc9xad_TDFAqZeCTwoTPyeEIPXjoE2jx0R0jtweVRqTqCfj-tasqFz9C3_wgxBsrYLg5KNaOs8ucFvZvHXbT0d2p2q24gHPqQ5SoAvKwAXHa7k7K9fLrKUSswfYmvz401gH7pn2i7sITXwPzQiGeENTe1W3R88Bf-LkjbhFYOUNXcL5939t0KBAJzPOyhWD4Iiqkj7uSgsuZQLgtgvqeOgXPNVlEoGyVwNdS1Ch3JYmWF_X8hfkIy_KhwAsVCFTOgRmyjk3b1VT-bjYbm-UuwgkrgdVoOA4MaAjLcpgxWU_bbqDtdxQQIxqrmimVKTsST-OsWxtZsqI0EK38Kx-q0qPjUDaN8WjjKJiZOy-_deQtPgSRgEz15CP5E_HYErKGART4RuY4SMG6YigtXrvZiAGyIb3SPg2d5ZFAsmab710ZmnSaPV7GWvClvSKbReeN6-e69P6zrQ_Q9RB5zIiOPB9RmvjLXY5M6d2JSCWqYxWt3dOoUevG4YL1YCpT0XW9lwW_xo6FadOa2L3ZQGgwLBAmfljwMcyklxUGW5iciXFHmFes_Qd7SxGdwEqMMqw5llkFNWJ00oLnaHh5AxW2YMBHcFzxMoxQZLtjY5E2aTriIw59ylrlbTtjvZX43SJSuXGGbqvybqQqURfHWP6geOIk5G6DV0OnQBdTcfmlha-_ZlPTdJ75bf7nmQij7-wVdeiYkJ1QQWbe2kqQuiP5GsPwGCWYXkp1vRx9OWEHFFqZ_8wsdUrfCtB2AZwxtU56u2sVlOxOQBGCOuGDjJ2DMX27-EsgQtq86BvcT_q8rVzM69KR6Dp2ZW3TQkftGnMQuTIjok6c0pGb0eadJPes3ZpQPtf4as90gUAfdX8H_qE_svDTwBf7Un7UmWdcySOIjJ-X0u3NqckpN2PVRZYbKVoYQJ5KgykvUY4jYs0_n0WgucczmXl5-IW22MdloxK3HDdWkZLY6CHP8KBLWpdX26rEKdIlWnWRQkVGmp1oG4ouylqMObNpuWDZIWPab1sCiJ5zmGqfCwbqWQ9umuBw4dZgJtgF5Teo1eSQfwA7HmKtsAiymRHwXmKwGihksYUk3A31PiiREl-CHDAOTlzrfkskr8ImidyQW7LGs09Z_wxnBCggOOSWTk9zpqJOWcqW8kbpLoqoZT1QE8YY8OXCTycKtnOKr392W8AI9RXxlO9W9TcZ14Bt29U_eBP4o6c6Q6XwQA5z0DoshiKTbErmFi4ZVzrtsrpvTK7Ogb0YUrtEON5TduJyEgDtrWBvYBd86VmkzV4KyGDupOShRWRoI4IZN8i5EpSifvkK2vb_igpThKW6S5mJu_q3emK-8PvlnpXIkGzNk7-f9UzmdWsl0Nw5tPbdTWYazWVDqPffguywJ1QY2_dP6tHUEmMozq3pIkEfeEUBZwJ-uccdq5y2FzE_n5wgewPTOA8CidHI6YHAycD6aU4jfRbgcRgZt6L1It1WuwrLceeq4N3j0M12tqZo82akuddtoOLtsF-f4E1EsUGm2Ktfw6iW8zGC5i6Vt0YHze3DW-DdZxokmQdhiepBNeOcpOEe37n-lhIDH9DyeacYLxAqgzBOYN6w3IevrQZQ2Dxmqzjsh0gG4S0EtQCBDF93FgVlaOCGR3S3scRO3R23E84UFFJDOCGTHFYQ8Du0DzmEGObSGR0HfXX0C9dAtd8wI4VrJVpTJYjUfs9ryb5xx5whrp7Zojcx1nGbm5VvwVfTVwKwVM2A56acxovHn7dfNs99oT4czTfrd1pNbh43LvKXB4RskK9Skrn8kxzlJXXHDz_yUz3k1s8Kvzvnv6aheGpfH-ljiPY5Qf8Ze2hY7xn8s3DAN8-kS9BhjUkTq57X4zoR_CG91MCWLdkLzvO38GBrpZHMumrAXzBm_Iiav-aYfHpQAP_MOXLDqtHNzryGTesg4JKo-6mJiMb4yKpTjMvxohahx4zWXfpyBcO6rAsLC0jB9ZReXE9HaWgljQpPp4yYExAZuBCR6V1Fwyu8a1rMGupV8TjGlBRy6eBAm93lmMqltwTxHQHm1Ku9l2IIEHLExUg9b4yxdgOxeLjOz7Xu70MLOoNsH8Po728VUf9RMyLwl0DP-qSjZZUr0N5NZZNYRo3ktamtaULoSfRR812KMGpfgUB1NG-kdP5g1oUUnWrSLbzSxSHV1utheqEExX1VQDhQIcsxVFHDLzpuRpegCuw13oweeGmv716Er5NukY77bmxnFY7eiII46euDdPLrXGRQt4hVzn4G-jA39fiiP2fIF1EuMXGI4Lv65lqvfKgTd8cl01UABbigjEv0ddtngetdG1P8fudzDVI7XYn29UnCvqcoRiq7gTTT6hGfkIxIzl6G8laXCMxrm8xgMrg7m5-wYn9SLIRYifTLWZ2Oa0lsHmlZ796p7A9HfdzVXpAevhJiZYs5loCkPzAYUGJb6hBNYXKqarq0pyjS1Esez5WSiJv0uC_P84SLuskiYnUOtbd1qSPyEAn5RHm5ZfWvP8W7fqOw9eGgShW1ejVAhrEcaxSsxIZRXWX1nw4d21TTpB0lENvkHVtkph_N8SnSmEzwhS-Uimi-ak81OzDWTSBOnAb2h9Px8DZ7YSnE7WMHwavtuowpcLzBiSA_ugEBDHKd3bBbmZ_LNYB-bbNqUElsw8BnS6GgKOk0HHFn2uMaEAnKRr0ql4wDv_XfDv2FUbgpqxNnSMS4tL4vJGWJvM3tDaqnE9u88GFJsi1bVJZsD-Wrp2IgWIncluQqRAEZAWH7379aZGynIM4YmznvtaC3LWyrBClx1mMyVTdz9ngna92H-4fqBfXxPgtYIEmKoAUfUwS3-NcGWOfZGVI1TWUrymZ7JW2MasCKA3nh7RVsH-NMJ6EJix2rjTZ6Hi3pAFNKC1R7BcsF42jzewS_G3tSpO5v5Xg-TErQAmoFpiHSuyUnA_Lic_aRY--3mp6KcyH45ja2gHPhKikhnRd7XiixqwzqZncpaG6R9JoQBzQpsQOfVGUUkkFoct5nualet8aOp5rAhcODp6R-1B8FxKa7BCpabvn5Vi1gaMpuqFFMqjrMMk3RG9F8IsG2oEgXC72f0wyReGBXZMxOJwczO_xkHe-YE8ddIh7ld6AZhUMUk94AvkK533RKj-N8-tdUJnjq_Ygejj6SHr3L_x20Ud3lNlinXTEDLwF4quj_4bfs9BbV2YDML_gC9pSfawDRI-ftCjmEQQVaXcPdiAgPIL2Hjv0YEnX70wbHgCpequdXtr2fZoo8U6VUKnJzEqCKhUfkOWlMxbQzBqKgxY_5IN3Op4jPjeXCwXTH0gCULxvGl8QsJChnWygwn4POa6SZ8DP0ThnV0baJ0Z5kRDRwROQV9A-5RU4i8uwNICShgU1oBX3USYSrNbLJY0--v4kVu27qvwmSFckdUYEUcPgnpw8r5dvK2F8AAvVzwu7qU4po16CxtkpNMOCcq1eqFZx8SEYZ_Onv538cTuFXjsY9CGyvsVWyakFN7dODdN3ylRc0vnZw28AkeUWFYBTvGM3w-AiIJDCQ6L-6LxpLfXrceJYc3eVshzB3FLhgvmeHGlV2ljKG0wGBJE6LzSWdzLvj7_MV-lu5tbc5aG5AIP87cXH3LcYNa0Kic3n4wfG9jeGW26s4_7qzlSo5oqVj-3_lEIGM5xfwGLaguOVn-bEfaiXPcw7BGDhDcinyVmxySHdXPtx95purGT_B9a43FQ7ZvnNGnEc7LvaKJkiIDdtmZpXjm0UJ98zRmhPbJWPp9190ZKkkwrqdBzyF2JEGWwGDoMnbVzZkLtIAf2idovEQErqS2okVml1VHzYGtElLmmSTZUar8Fr1PRMtmG3np9dsgTsMaBTh-gcOnuzNn3GzBxkdig1p5rNZF3gD63clFMTuTNoGNBbhfg1mB888SOM8M8nrk6z8bqKETFlR2iagQb8c0HtxWMIlNG7Aprazfqk-DGskuu6uspoq5f6XExLrCNiYpqDpXDVS2STlQJRUa6S0txLX5CzFIsFVCqae9pbUw_qXoRiHKMrK-4yAxX4_jLbqZc5xm_qFjhQRq3PzFymdZpi9MGvvV9LtWhXIn-ES1x3EZzwvRcdEah5PMOOM12GxjrL3tOh7RlSB-pnkY8r628U_bcsJ5SChXHD5S8_7WI9pekG_GwZgXBVctg72Y9nSxG9zQJl2c6UQRnNvwyGP1U8Ab8M_vVm0BTJ1BSq0Sl2k7YyLFJ_h52-EQhVBkludpp7K9k8TBU64p8YMwcFnd6jGet8bCp06LKYH4UFzJHHue-a6N1mwwd0L63J33EyqIsU8qWGWUDqOoi6QaUE6SYR_tpKZXuKAJU7Xmj0vX94z_G33ElRlAbvK23BDQ8qnrGKAnbinvakcOWCgr",
+        "summary": []
+      },
+      {
+        "id": "msg_0d4c42e07522688d016ad322d3043887d28e3a3125e5ae85a9",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Sainsbury's Local\\nQueens Rd, Watford\\nReceipt No: SL-2210-04 · Date: 05/10/2026\\nMeal deal £3.85\\nBottled water £1.05\\nBanana £0.25\\nCrisps £1.25\\nTOTAL £6.40\\nVisa ending 9911 £6.40\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Sainsbury's Local\",\"confidence\":0.99,\"quote\":\"Sainsbury's Local\"},\"total\":{\"amount\":\"6.40\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"£6.40\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-05\",\"confidence\":0.99,\"quote\":\"05/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"SL-2210-04\",\"confidence\":0.99,\"quote\":\"SL-2210-04\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.92,\"quote\":\"Visa ending 9911\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.98},\"line_items\":[{\"description\":\"Meal deal\",\"amount\":\"3.85\"},{\"description\":\"Bottled water\",\"amount\":\"1.05\"},{\"description\":\"Banana\",\"amount\":\"0.25\"},{\"description\":\"Crisps\",\"amount\":\"1.25\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Sainsbury's Local\nQueens Rd, Watford\nReceipt No: SL-2210-04 · Date: 05/10/2026\nMeal deal £3.85\nBottled water £1.05\nBanana £0.25\nCrisps £1.25\nTOTAL £6.40\nVisa ending 9911 £6.40\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Sainsbury's Local",
+                "confidence": 0.99,
+                "quote": "Sainsbury's Local"
+              },
+              "total": {
+                "amount": "6.40",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "£6.40"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-05",
+                "confidence": 0.99,
+                "quote": "05/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "SL-2210-04",
+                "confidence": 0.99,
+                "quote": "SL-2210-04"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.92,
+                "quote": "Visa ending 9911"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.98
+              },
+              "line_items": [
+                {
+                  "description": "Meal deal",
+                  "amount": "3.85"
+                },
+                {
+                  "description": "Bottled water",
+                  "amount": "1.05"
+                },
+                {
+                  "description": "Banana",
+                  "amount": "0.25"
+                },
+                {
+                  "description": "Crisps",
+                  "amount": "1.25"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Sainsbury's Local\nQueens Rd, Watford\nReceipt No: SL-2210-04 · Date: 05/10/2026\nMeal deal £3.85\nBottled water £1.05\nBanana £0.25\nCrisps £1.25\nTOTAL £6.40\nVisa ending 9911 £6.40\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Sainsbury's Local",
+        "confidence": 0.99,
+        "quote": "Sainsbury's Local"
+      },
+      "total": {
+        "amount": "6.40",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "£6.40"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-05",
+        "confidence": 0.99,
+        "quote": "05/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "SL-2210-04",
+        "confidence": 0.99,
+        "quote": "SL-2210-04"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.92,
+        "quote": "Visa ending 9911"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.98
+      },
+      "line_items": [
+        {
+          "description": "Meal deal",
+          "amount": "3.85"
+        },
+        {
+          "description": "Bottled water",
+          "amount": "1.05"
+        },
+        {
+          "description": "Banana",
+          "amount": "0.25"
+        },
+        {
+          "description": "Crisps",
+          "amount": "1.25"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "key": "5070e07b7ed203235f6c4ed476a79334b42f783d6395cd002e0165fc12e72e5e",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:38.071Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1928,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 963,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 2891
+    },
+    "output": [
+      {
+        "id": "rs_0f49fa0374e1dba7016ad322b292f087d2a2b96a1e84363fe8",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yK1MezkrdkxggS0VeYjBxLCkfSlKDYr-L94zSGZELG-FVWoi42Go-jbg1EZelMIe7gnIAIHGZprCX8mSzYhndE84ZRrVB23zEmI5gb1i6cAeGrRK7Dp11uptbyhLuXne_bA-PcXrNmocuh9FkMyL7ieJ66faRXSDRoWZwBrnQn-9eBGKUNNmAR6CDjTJNfQDVEE-ND8wYeDfBfj3UD6yrTKUOiaJdImG_foLYGd0o78O-l7Y0SMVgspvh5ZBzos_GwVch-nJUmXwOCOw7cgb7AD0bXb639VeytWy5-FhklBxdeZrMQ56FA9mJ6Uyu9sSnVAkHHumb4MChGr-sKUlkCiCJ8QHhHRwGaweopQSrO6MucRn727S2PyoZpZwncNZXk0G3HT02kJ0kn6kAFUFMaM-TEi6RrnD7mAL6LFRoh6mFMNXD5iHLcUDl7LAoSyIuzFG6xWa43T643uAgOkIMJUGZMV1LpJVCdq2RDpPhS0BUYt5rlyY-tf2zD84LPZ09UPQCwnaILu9nJTs6Y1T-8-2dAiHF7V5CI1yecASypQtXi6-wjztlAB3rOBGBTE2wzxVSWscRSoL-HWkeKjY_9h4u2ZgTls7dnY8zDPkiRq2LEiDT_Gl1ZQIoy2Gyot0qWMqz-1Lh-QZ3EyKP-V3RF6bLZJ6kCCpko-wWmXRFtfrbUyML88V2mbN--PQ-uil5PxYt3CyjyWNWwMhC58S1F0TaoOZhszCN975kPGvfTZD4_X6skOVCUXfXzcil3k_0eNGiSjnh2_uA6TkVmr8vfkESxP6BtI11tIWmoW6UoxqvggxIeQXR-5fNHhK1dsMsrJX732106d7hs6CogVuixwV5TUgM5UajEk9JXELyRc99InAP0sjbMLsT3FO0sK4-PeqlvWZIpEQmmX5BgolZUDFU5edOsekMhFnl1QPpmvYmJiY9RiyUUAyjLyPHNJx5n1qoT2h1_LvX5X4uPAuQ2EaPiZHnoqREmFZthdHqfWcZ7Stjwsb54tnkpqLe1fo4q4zyePbrXJFqqaLc9B29tFDVQV3Od-0qhVI8tZr2UIn49MJhGwttdIyWib4ztce8m65m1ShneGXSAS4PVO2vrdmA-DKtmqozmwPw3NxnO4lmK9nkhMOGkI0iH-Z3f1OxeVMbfDYNh-CRuPc4W_iezy7vlZ8lwMEwFyUHJg6d5xzI-qIHIGSeDckzXoh_6Img5RCmn66xcRNVLeN5y7BDWEIpYRShOqYsfiRuRdHU2HLcgkTxe3S_rDsaDlCAxtko2IkTAm9QTyZf5vAF22OitU_b5Uy_Z-tYa1N56X-GKRbXTsPtDNEYCqSU7CTWx3oGE7Eni_F7j0f3i5pajBFW0Mo7oVtzGj9eo5O8G2vrGyQ9y4GUH2NwA_3WnVfulyMBTjCcPUc9pdU0Ch5S9j0-lgb3nYqIPZdVH94_h0GvM_yH3Yps1kEykHvtDsF9ignw3nASsDoAvVU-9hf0Nkl47KjI-x9uJhUu-YtbyQZjMq6iUOpt22Ak6G5xm8RinWGffR3eMViJ9-d-_XgfT5TCtlIlXrrhS0sJZ9Mhx_mb_cjreFjlOEoDdWkD-UU33z0StZpRN0SMKRpJaaJ2vqIUgU2z9mKzrmvh_IVPYJQ-rjskrBeT1S16Lco5aR630lDa0DZJuCJsVBUxbhUU6Jzmks0HO5eV6vnmNee2sxkI284gpP2fw7gaxkIWBj0t_-3ij7pli6SJjF3qdUx8-4-3BOEwk-rJLQRdJAi1SRTH-2kLn4iODkeAkpPljeCrRtbFmNU63XzMzAwLVBFQ5im73otytBSNZ94AGHeLD5yBRLMQ3nLWnCiLtreGz4JUsnVCByc-Cah3K1aAU5YzvYYpt8aQkwsCJY6DSW47qKGjbr9pMrNrC4zHoaYAWRi9GXXb-AtciCrJ8KBUtnTITmudNEADzhkYvAP1wQfJX9K7HPeyoJ31OZgRnczsrkfzCqjWnjQGFuwOKsIhWj_aZ3stbP1LoEnHZKyyN2M1Kx4niR7tl8z2IPKX7NZwoxmzk7C7F0-S264yPc3zxJylkJ0O1d-C60ROvVelZuKd63yekuOfI_uRMtS8Lm5hga3Heq0PCQQh-kdpwNk89m4ajmjLN-JZQm4TS-m7ehYK04VQkQk2r4fYTq5RSvdQM5eJkIfwG-SgdDCsOK8rWms0sLMJJzI9niTmsBVneZ0ZNo8ERSnleK_91sKQd42sAEfPzjZiUlFXZ0sl5vLODd7y0Tj2Dg37KtbdDcXYAdlve92N81MOSCId7FtJ4N-H8S_3TAiNf2yR5GSxKU3e7B3VAeI52eULlWan7UbIgCkAEWS05OBZsmvH6zOOkJzwkwoA5qq9T-DS8nWMO6sRs07r8pqfS3WlimqncDwHblpIARPTYEmDNE426nAl_VPSEYW5LiMi0vP956TbGWjNn2agfpZj5jsUuQDaLhlI2sraDClR6RFAK4lAjMQEczyMFJV6Y0ibz2pmkzUvacg7sY6arw-wggOcNdnQWz9g9mGqQ4gRqJAYw2D_HmnYAsGcRGkrX7XIxTSp04WpW7GGdP1mxz0N0XIvlXil_S6TKdo5LUSpob7QfUzMOQX28RUMvcgW9fyOkW6Rl1Od06GaKU6KPEUKnhqDjUMCEobEkUFEk1rqpudG8Z4RZ_6KanFrwRJBJNDi62xIX5R5VtzEYXDxeaxferCexPVDI7khEMCTSgCtBkwsbt48gwf0r_LY1W-cQNz0dMjHp2iUFP2jMqx9FrmuLVbdOIDqZBGSnwlOSa2hVBbr1-T72H_3Qq1r54pUVgUZ7L-F41UKSSimu2rGZGBIgimO3YatTYfpjfbmi6PoogvBHGBPSc-LbygePlD_8npWd05EhlJQGZPIpiDDr-oVF0rtUsnyHpRozsvJculrz5CFhwRDqcWMtIn_E4upMpLp8iNJDMgshPdUTTj9FWaixPGTEdrn9vDaXU8QVK6rOfeydSWIvHY0A4xMbbkDRaFoll15ZSLsNnqzlQtnbwtM-FTekTmGT0mJamfOvIdgKyx3KskCvT7dc4qgAXSR3R-WV0950nzAVwoxU_AZhJTJ_z90HF4kNGa27597N1fJ71_OOnxugUiCHmfQSZVnafm9RgEjWkVz83wZPbEB64AB8SArgcbfcNz27FFzih1nDEYlU-EyYwyx39mUdwIjv3PZK1Uh54Cwu5FW6x_po3O_cclLc7GDhAnTQoKbkfZgBhgCe6BV6O38D8Cq0EOYwEe8uEdoj66SMC_eiLDQJBxRoVoxrrtR1YNuu5yia9KD7AbeUL9nhlSEf3mOK_RMnmds1LK2UzGmEcH9AknscQ3BenwYvivKiS97ssjMGkR0vQKE0rLCI3W5wowYrMEJ4JBkn_2yqoTK8LtXe59YS-RPbcI8duhk6nVoqgJf6vkPAXAOXyPY2bGvkyjGxPuQ50R6G9w9sGcZHxYeUvNW1tJ3RWUp0_rCH3sJq6IO7dEAkgDOxNiQ4bS_1-dHe_AEiqAFByGWTTtlezpaYntcgHVzPsbc793QBIJhvHGtTR8JUpEHmXN-wsvBkbBDgxEgcIbPzGJUYiTWjisaSVKo-x3d2zK6Di2Q2jIxFwflHjDENhgkCHs_rHtCuzFvE00Eu8c4HDNxbBs5menbIGqwtCr236WVLwBbcRt1GAgrdzhdnNsNdGeazjfciGu97p0DOTiXJkjTstSMg7wN7sb4WKmFSrS_EGo1hDjs8E9FTWw4qaaPMm-L6G6gZJbOEnSKj3jmIV9Jd-9X7L9yT8zduSW3LGW_uZ_kgRq9tghbdBKLDBfylWf-CQZPZvkDxmgYlx-BIrvhs8upc1H4t1-e8CMsf9imuq8LsiFrwcoW6LLySQLKhF4qk-g42qsCIgO5uu5luBsF03cfH6YONESjhrzNXOtFMBltI7bpiW_P2TtkMY0KvQlcRZjTmZfh3yJWCes72I0MhFq8XhrtHflVT7qtX0XSNzFbwjiNAuJefkL1zkIv5jdoxoTOONWanzVFXW4gU8prpKUUokM32SkyY7sizhpS1Hse_bACbr0qNBbSpREWAxw4YO5BBjg3oHGtgHOcsU5KL_M5Xo2h_KuTx9wwkgz2t-eapnvsUsbAbDn3imdp25RttW-2JWJryJBYMO8kw-t0mqS9jTL0Ggc9AO1oS5K4JUEbcDVvdgzraWxSdHRkqMfi6GMemPK6BhDIorQW2Z-xVMp8onYpBz2hj2ezqK1DPTM4Y4M_mM-sYfK1Q3CARthfzkX0yr23SUHhl13aerRr5hW-cyiSc0VQfMrwImItjdaRI1x8sPISclrbO2CED8U5VfICDC8WwAY381DhLy0jBjXPlfSb0HHT-ceKk62oxR8r-a5UReGVeu6j_luv22eWzvY76s1VlN-47ijVjvks8xCHzb7u3uwqubtE3ASTGM0wvudTRT_mQA1stNJuQeNMc6jNNNxQKqQ_lZ-4SKDCfL_1BrZiBOawFCCFTX_OxgjY3YnreRVJ-7Vek04FVikSnjLWaoAw6pgQNQEojqfhsYOEv1b5d99w19lkYaWw0x0WA_l-0Zds4qHIHMZPlUc_7QIUlK2PWSxZnkUFCcWRLWWvqlcVfJz1uyweJecDLy1b9JnJfOiiwUmkJpmSrFhYE3tw2YoObNV0CDOkossYlemeFfJRAzxHHONmYSV_FaO9j_IQwnYddM_HftDQI6snkwxFhfOtxRA6l0NRqicpLUHImPW2JRwbDyhU-oCprER8mYK0tNsPi7gtY6Iddefidrt4OhJd9mLpun5_-YN0CcBICWls3jjg57vSoE3BDtRwu20I7aZXPSZt_U4Cs20uSOs9zCO5Zy_z_p_AYJR3EpSGyhWReEVgn_QQ2X5t7Od6bIFy7DCpKrdZ-inXZ3hSg7vsEhY-SkZPqt37Bl8iWyeir2C8WL4urNRVVB-uE_eS0UBMf0DQJBRvf-gvDo2GPo5Ni5IqWSN89yz0WAuGvjXgByF-WKMatRQblM8jcUodNOjqcQSt6aWLFuuu6PtBibLxRxfeUfJE9vjd85R8Zu_gGTWy1pecbwnpJRrUAfwvUDS2hSpKM46ld6t0dDT_473wm5G29rpmjvWMslV1AKPWGJ_l0vb-bYE2vaWSP2R3LGdivNoe5FKxteGMhdzM1XLHCglehsDoV0yoTOFdgM3v1wJm9m035A-DvcTTznEKT7uH4WhKh29hhMNuJZ4pcUj0DfX-NNDfTtk3XyJKkq1heQl_mdjcKVEA3DHZxkzqVWW6Z7cjlc7XWZ08QB0hLA0aOehk_f8s6u1fIWsnb2-v3tCw0jXlllE9SGZa5rb678u2DT1sR9mxxB7SjJzJ3QCQqazzsgCSk1m0l34LTUY3coMYv1GkV4Ipq-gpjE-zr69ZEXxTeoWJTFlUzRVkFYdQ-2jqxdDlnW11-4LKdnH5_5_Oh8z3nwrCt37vDZIqn_WKQfzkfU3-jJpHMaK0k_9412VsGBfCHbMLo-vniy0xflUMG_0btb4jdj4syNR_TyUNC5SA5S1G3FDX0GaVY62q9Y7GE0_kcgK1uBwk5Y9rGSOAq_W1KCJ7N_Fuvnm9-thNWBdnDLOpeOYga7eF07C12LZsNThew1H9QIS1SVsp_zVUz9J3ogU7WxeS8TShX6JWfaNwTAhnSkCoWxLg9VSyOEjZPBi49rl5RWyPjqu6c1nKVIrvT9rV124XSOpVvXX5B7eqc1bRZSLRP6AVgrk8wrXcsqeZ1nxxin-Bt7teir8nUUfkmQNU20G7lQPUNhcINgSOBIKf_Dkc7pgZzCqoWWYGMFAaC_Y9WuZks66dCvWMMJa0an4JDjQ6ljwo2228Nt8f1faBSZd33hR5HhLnisQbDSriYQrjVIUcm5sUyCFB32Jigqnz2SaJG8Cawa-vJ4WyYIDwIZnFiYUiRWprhjmfklfWS-1CWoKOU3W2gsi-FiJBLHJgxSUNbC4RMdA-jnIPqdpzWncufdAmsOTyw7BANdZXvj5trBucDGU2ALQUANQUBPLCkj0u-7ZJwagX0FtsESP5DQamvTXi8iCvzd7zxbPAOzB5nflmkJLWlQ3PfVBf_fbHXFrhsQ7aQTzAUkWxGY4f7wdWhDHJU7jxST6O16wvtVgVDdD7t8hxN5us-MeE2RpF3kY60P1HHVSF4oyRST-OTyXu6BzCRbzdgsBEI5Gn4ycxpIC8Duu0e36DY2NOSyhH_2--Qs2WWCRPCcF8uVYwhLx7DN3ydvf53c7eTzaEG9jr7aMxel9mPbuLb3NXrnfXauh1SWxKuWwdkbdiXXJRxhMj8oFgK83aZN4yEQJjWE0XU0tZXvK4TaUICgczdizz1f3s0pQw1PNIvWFUz-GHQKpvM6SAy9Zb4yEIi66ivLawPs_wHpUP8Tx8Ji4MzbIz6axG3XBNlf02VW0ldsk6aBMWylCMlt5X_u5N6VvZKOUB9Rgg3fI1yKRW9MiI0Gj45FnoQjiJ2moZKkSm28MYH3nc14hbKEYymzI989uyditiZ3O8ECL-MIqPVBt-We-I2VrfSIbSgKNECBmO3bbf6ali6moKnG20H_6ncHiISMnkVceI83zt_S-6s1ZX7lX-moRVqkc0b0JxYXEjy47dkWJFNG8GF09Y7QRPpgJnxjaN4oq5-FsQPfx_LyTf7wsrNjLioxU4RMRdo2ZkchqDuLDay8q4iVu9ioMstOXaErzmKTEL9wv9Fmq0BkXgUfj4XaUMLOTmW1IpJ1dVwx--fctSMFXv8avO0BVoq_vwvHRQKp6v8XmaYfGcPguWPePxVJeKggI-cIe0GeGTaF2VEEgFr3WOUOanDh1doZFW2GDA6CT1UhD9mn7Vele97T6Ft1bYjt-Ul1HqTaT0t3NBEoR1hid7Vl-NtSrgQPygcmSEpAUp5y46PYk_wRUlbPFqugjVQeh5-wRnZXUQvxE_M7nmK8iXSD4mIkU-bx4N5JU_aZtf4ksui-f2HeDJj9YUcE5c9v-QV5k0MUCHhGUhCVf4Z59TFuBBs948x1N_2F-dgfyrAGmVGN61Qzv36biLpK6aeQK0pLPzqmP91j3LNo_7SUlBDInG7sjixdn3sUASySLbt454V4ksOtL2wGQtMZBULLJ81GBVp1W8wwDMvMQkeaq-H8PRhxIt5HRT-l3vxbfl-J6AJcJzcbztrzMj1EnF67q56QGbHHwYOyjkOfdvbjGlUu-KgnoOTRrWBkNvo9NnG8v9_u7jrMXiYq-Z2D2G01DqfgdZrWhVexn2PM7g1CP1RN587_O8rpBghc2rjEyQDc6B62NYGMt_9q9QwQGYOmPv-KAo7nq_TNQsYBMOYWK3HYla2ulOguFirM7-Iosd0o4lZC3jWDWBPKtdJqith-cepykp8AXO7uJahliLsWIwBKE0SxYFuPzZFkMzX3wHQK7lyDJubpP8J1F67IHPHzZBNVOOrfi4w8Hn1vl6k=",
+        "summary": []
+      },
+      {
+        "id": "msg_0f49fa0374e1dba7016ad322b49c9487d2ab1c1493b6930690",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Travelodge Leeds Central\\n2 Blayds Yard, Leeds LS1 4AD\\nVAT Reg No: GB 000 0000 03\\nTAX INVOICE\\nInvoice No: TL-INV-77812\\nInvoice date: 12 October 2026\\nDescription\\nAmount\\nDouble room, 1 night (11 Oct)\\n£89.00\\nBreakfast\\n£9.50\\nNet\\n£82.08\\nVAT 20%\\n£16.42\\nTotal paid\\n£98.50\\nPaid by Visa card ending 9911\\nSYNTHETIC DEMO DOCUMENT — not a real invoice\",\"merchant\":{\"value\":\"Travelodge Leeds Central\",\"confidence\":0.99,\"quote\":\"Travelodge Leeds Central\"},\"total\":{\"amount\":\"98.50\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"£98.50\"},\"subtotal\":{\"amount\":\"82.08\",\"confidence\":0.98,\"quote\":\"£82.08\"},\"tax\":{\"amount\":\"16.42\",\"confidence\":0.98,\"quote\":\"£16.42\"},\"date\":{\"value\":\"2026-10-12\",\"confidence\":0.99,\"quote\":\"12 October 2026\"},\"vat_number\":{\"value\":\"GB 000 0000 03\",\"confidence\":0.95,\"quote\":\"VAT Reg No: GB 000 0000 03\"},\"receipt_number\":{\"value\":\"TL-INV-77812\",\"confidence\":0.99,\"quote\":\"Invoice No: TL-INV-77812\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Paid by Visa card ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.97,\"quote\":\"Paid by Visa card ending 9911\"},\"category\":{\"value\":\"ACCOMMODATION\",\"confidence\":0.98},\"line_items\":[{\"description\":\"Double room, 1 night (11 Oct)\",\"amount\":\"89.00\"},{\"description\":\"Breakfast\",\"amount\":\"9.50\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Travelodge Leeds Central\n2 Blayds Yard, Leeds LS1 4AD\nVAT Reg No: GB 000 0000 03\nTAX INVOICE\nInvoice No: TL-INV-77812\nInvoice date: 12 October 2026\nDescription\nAmount\nDouble room, 1 night (11 Oct)\n£89.00\nBreakfast\n£9.50\nNet\n£82.08\nVAT 20%\n£16.42\nTotal paid\n£98.50\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+              "merchant": {
+                "value": "Travelodge Leeds Central",
+                "confidence": 0.99,
+                "quote": "Travelodge Leeds Central"
+              },
+              "total": {
+                "amount": "98.50",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "£98.50"
+              },
+              "subtotal": {
+                "amount": "82.08",
+                "confidence": 0.98,
+                "quote": "£82.08"
+              },
+              "tax": {
+                "amount": "16.42",
+                "confidence": 0.98,
+                "quote": "£16.42"
+              },
+              "date": {
+                "value": "2026-10-12",
+                "confidence": 0.99,
+                "quote": "12 October 2026"
+              },
+              "vat_number": {
+                "value": "GB 000 0000 03",
+                "confidence": 0.95,
+                "quote": "VAT Reg No: GB 000 0000 03"
+              },
+              "receipt_number": {
+                "value": "TL-INV-77812",
+                "confidence": 0.99,
+                "quote": "Invoice No: TL-INV-77812"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.97,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "category": {
+                "value": "ACCOMMODATION",
+                "confidence": 0.98
+              },
+              "line_items": [
+                {
+                  "description": "Double room, 1 night (11 Oct)",
+                  "amount": "89.00"
+                },
+                {
+                  "description": "Breakfast",
+                  "amount": "9.50"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Travelodge Leeds Central\n2 Blayds Yard, Leeds LS1 4AD\nVAT Reg No: GB 000 0000 03\nTAX INVOICE\nInvoice No: TL-INV-77812\nInvoice date: 12 October 2026\nDescription\nAmount\nDouble room, 1 night (11 Oct)\n£89.00\nBreakfast\n£9.50\nNet\n£82.08\nVAT 20%\n£16.42\nTotal paid\n£98.50\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+      "merchant": {
+        "value": "Travelodge Leeds Central",
+        "confidence": 0.99,
+        "quote": "Travelodge Leeds Central"
+      },
+      "total": {
+        "amount": "98.50",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "£98.50"
+      },
+      "subtotal": {
+        "amount": "82.08",
+        "confidence": 0.98,
+        "quote": "£82.08"
+      },
+      "tax": {
+        "amount": "16.42",
+        "confidence": 0.98,
+        "quote": "£16.42"
+      },
+      "date": {
+        "value": "2026-10-12",
+        "confidence": 0.99,
+        "quote": "12 October 2026"
+      },
+      "vat_number": {
+        "value": "GB 000 0000 03",
+        "confidence": 0.95,
+        "quote": "VAT Reg No: GB 000 0000 03"
+      },
+      "receipt_number": {
+        "value": "TL-INV-77812",
+        "confidence": 0.99,
+        "quote": "Invoice No: TL-INV-77812"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.97,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "category": {
+        "value": "ACCOMMODATION",
+        "confidence": 0.98
+      },
+      "line_items": [
+        {
+          "description": "Double room, 1 night (11 Oct)",
+          "amount": "89.00"
+        },
+        {
+          "description": "Breakfast",
+          "amount": "9.50"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

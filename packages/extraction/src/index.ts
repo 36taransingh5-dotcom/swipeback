@@ -7,3 +7,5 @@ export * from './checks.ts';
 export * from './pdf.ts';
 export * from './llm.ts';
 export * from './cassette.ts';
+export * from './model-contract.ts';
+export * from './openai.ts';

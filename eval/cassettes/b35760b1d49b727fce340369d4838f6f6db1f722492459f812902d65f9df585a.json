@@ -1,0 +1,168 @@
+{
+  "key": "b35760b1d49b727fce340369d4838f6f6db1f722492459f812902d65f9df585a",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:13.033Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1616,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 566,
+      "output_tokens_details": {
+        "reasoning_tokens": 207
+      },
+      "total_tokens": 2182
+    },
+    "output": [
+      {
+        "id": "rs_0d0dff8b47a79f01016ad3229851e087d2a9a39f2b409f0bed",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKcoJFKzXMIZpa6JeTI5dbPwbGFKwgTElDr90YEeKGY0p-AC0zoUKEMv2rP8lPyJN4oJ0sppb8_D7QdgHIGXskRUMufq7oPLYfz8Usf57N_IB7E4fbKkUlVU3RSvgvTiNEZ27wLW2bqcICuPoHmY042EWJk0GJLHLAEBIRNSL5iRRu7-NvBzjd1x2H5o9stwZ-mTH0k_y3cY7PzPpmboh2NXKr8S1zNIYLD7XgpCnxaZ1xqjH8yUHBqQDQ84pom_fwOfdk0nxEXVqfftZw5nSq2Ao-AwTfHLYiGqZqOKJpkTxOfU0urKkhd_TyHqVhKBm2gZVHq1ccFA5ex-MqHNWLnamKNz2NBphXq4lXUXajYTRx-q69p58SVEIzUXfrXtLkZsbpVSDo1NzQ4ccnAgjhURJ6VKSSe-T6j6qFtlptdNvh7ipBaFFYKTO1zDNMvMGOBTlGb-5hY-YxhaNo2fjFfkJ_n3Pu6KrrdWdl9qmlwlLRxRUd0y3KAxFxqWDP744Z8e4hybYdZ6FRypCfrA2K5N7RWnR80EB3uZEP6Wwv9LxnixpLbjTw_lGwDCmxCdMUj3GmVC0Pu5NBHsisZlJTdJkN4DsYfLT1N4OpO5E5VzyfHTu44pv2wJ3ESxODQahzXexZWdpi5HJO-hLRYqtcFReodQ09wkv2d1o8gBrL4AG-6RuHlo05U-maKRSkzSpAi6nOFQBPkMTbtFWtPjYq_aEYkGonHwksLOxNdIlJOMsCI-P4Xq5CP0OJ-kJHMZrk3NP67OfssoWcJmZYKA0rO8KN0zBuYOfoLH_DlM4hm6Vx2KyR7U53xuSPgNH5TpgxBoSlNXIsfxICrBj0KuTt7ubrTwXUqPh9Vtvz7WqIivBB_jjQmJdBGOOa5fhPbMR9ppkeLcklvXx_ENjS86gzn1eMx20HXcsUu0wrIbFzbkclLRC6tEwtgbmx7YTM2vOqsfnOGGQSQVWY5D_WvZCxSS87WLEL3MmwdetX6SMmWtLQBi8Do96hNSVbtle1kyxHQYU8xQc7qOEn3tuF1xIKvFivc4yWyJdD9wRCQXaZrFUA6icsbsOFQ79GhpLGbphdenThp_NgW5OiePSqp8gLd7iAdsRBHI8R0L9Pw_Puzb3WCoo9-7-JJrZcT8QF7weyFsnpZLcuySjFKpNVy2K3dfXwzrF8UD3Jw7LWL_qXHfhhYgb1tgziouHB69-qzgy3I5HEySabBdz4A5gbA8xsN9Xh5erJ1EjkG65CsYQTKNjU6jSz4mxNWS1ReJGi-XhDMz5DkpV8sdjGtLpfFHfAWiI2YRDmW7-RrmjCIFc2k_QMjzpwCuVDPU1PUjLhy6q2HLV-XCjg8cePbNYVkguHFBfcdwawIUmWNorduDAI1zLqT2dJfJYSQ2mnGJQ-cC5KY4PW0KFyPiyRplIXzmQkIwT3gC-RzcDvJ_6QDSPne06z2f6xN98s8REkepaxuMAJ-kVgxEIP0C023krbpNPyYtfAgomnY3KBzmaqo-iLiZdLU_9HJDSEZKK9X5xc1HbswCsebV_9Et3IX78p8D2EiCpwoEB8Vn9m4JG3acoqvHzSahS6AM4XOAOf56QEknoDPkXRGBymWVp9VNya98DKQI1UiKkM96P4mdYa5mDbGQ203zNhVYoRLf96hs5LAXMaAQIrHq_qB2n8lbKi9QaTjhJ5PoOjmbobPTO_1ZVcMrC3N-rpN-jQfHez6X2kMUJRlNhg-O_c259N0aCoZ8QXfqjp9wYaKicyLKL26QmbymzYL3-jBrEXfK5cE5yTF3hAD_YxsC-Y1wtfsnfEYTrZ9_7hytkmFohMA4-Mlqfr21z0G_gIOKeRcDFcMDLFSrubTk2DkkR_iH8HMxwY2H9a30OqxxdJxzGDLsWwHTsNSUP1h7qjkehJgEToIS_kvtNaabuzXHF7BIPm-KpZD6EW2y7F0zU0vRtojsH8HB0BekVOUxGfYQXONHxGhY9F1DXjqOXXOlbItwr5nc2ZlhIdMeu0wbiy5voXJ-OX1Xd_xh-7LZp1igh_U4OwcuBY4otMONdjeRBaHDo5UZ6I-7JTrclmmEvcPZrBBBtxwVeMJ93Y5zUR_DrfVYqNrdEvMQR1EbkeyvSM9p8mCMjyfAeuv6C0ZQI92pm0x1W7X-qCcL6erNZxFs_emDZwnSStIEYeITD7thXFjaYsDga87SbYDbGpft0UO2OWO24cZslPl6BrB0ISDZBqNLg2WfJAig5uR4CBkvc2HdX5Q8Qvq7-Tt9LzBOL-MgyPu_Gvj9cdJ64Znx8KzEdrtd86razGD6xnTrGq48kUVTe5O2tl_RnT7Rg615BKc78bD5ycrSLBA_KO4h8jwb2zv5QaJ7Cv2z2wqlMJ03oaATpmOOxCNujRWjK1ijCYCdo4ses_ze9Ir33odoaR0jFs2IBc8fvdh68tLIcRzy23JLQO0SxIx8rbuGLts9SWF87Gu5jZp-DR53PIdkPhOoiJjT663UMwvkjVsVlTZep9adkhxjJO-qNh525luotEoAo1q_R19kU1YyELfKCs_EKfqfYTuqDWMKnwHqZs6WqXOABP8NjhzbhUo8SrO-SBB5EEE9qH0_cyv_VpvNazrjy8Z8S2--NgNrXfUbkMV_cQPrkdgFk7kKSqrZDRRcwiSyRIRc4WdQ2N0qgG1wAHGhLQdWwJtB_kuag61E6xZ0StRwFZe-WJFE886Le3egxzLymqr4PIc3b0s6iBYxQ9vDfuqnKW6kAPTkm79I0Z7fX9dzwHIzJqk8i2RpgTOvRPiNotxQrMkKR2eL2HSZi2bTT2zEXpXgSPLmwpPfCLstIRJAMYrx08OklRIyDHm-dQaeqYJiBljmv1zNa-kBLpBBr_MHVe92_-Q3iIMrU8A1ffgz7GiGsHuR9iHE_f513PMjYL-Uks-FlxahaGDJSXPg9weSQzV4UD4DxLd3lNPJAT1RRjsMjlTZsvnQYL6crCvG8xjOJQWlbeectRuROxnRYQ4eRRArmwFzK_XbBwgBvDmgiRhCxSY0n-qKEDgSr21iVbTnyJmB4xTHx7hsoC5TpXDiQxL94K_zQ5AX3evn6FeKneHUxStQAOTpdDxsBrtzDSXAvxLS6RyCFCdq7i0Nw5-Kj8slvL2qgJSdyhMWRcqT2BCnYEUh0ITmzuPd4kV71EZjf-_lI8m6v3SPYS-naj5Q8b6fcM16E1_0exyhMflhJkUFEos3jDFRzeyWCeUDWDls4_UHyR4-4USh5nzPVbj4ApLNFSBFa48vBr6XL0kR3klNoWowQrbQV98YXVMNrxfmEjd7BdJyx3PFQ9PSNUsKUJq7j5KlqqrJBPnRm1kcK4fo_QcT-PAR6-RVOdhIIAxxPF97JGUMYddkYfKBH3Aw5ZjOV9DKUYuwz9ooK4EeoB5agkxFGh84V4vl1KeAs2Ce56ixAKgfb9IG0U6msAGsfQSEfUKSVXuUPkdjlUPjTEK0o-2anAhuZIjTJC8gnx1SbcrMFudicIzGrQcW-6xF7Vz8eSfcx99QZCyqbkMjLiUcGxsokXDr9dwAXUOvuZ53P0kSflekYBAQmaoNZVzq6cEYJGQ2brnphUxorVLLHrZULVpT62l5nnAaF3J06UilvXf40Y8hflmbPxXQi0unbL8N9A6hBtyMhdvmnXTKsFeBg8we018AX8Rd-NOu5OAqFVepn_bqswywr4HGnIzMi9E9QOH3sGYrJ09Zv1pEfInzhdoamr1z271HF6QO_xnMgfl1L18NiQhB9i3XbtqarumxtccGK070wbGK6myW4I0gsj2GM_eg2A-y06u04H4RBTYK-qG_BrwBYYVBmPQlpob3_fsvIl6uS7qrmYgMROzonrSxVCFWXvBHfmAaolk-67NWNbRyENoVw5x4vlKhsEsAVP9i3Qt",
+        "summary": []
+      },
+      {
+        "id": "msg_0d0dff8b47a79f01016ad3229a791c87d28e135eb0b9e5e6ba",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Shell Watford\\nSt Albans Rd, Watford\\nReceipt No: SH-4410-77 · Date: 14/10/2026\\n------------------------------------------\\nV-Power unleaded 41.25L                 £72.18\\n------------------------------------------\\n------------------------------------------\\nTOTAL                                   £72.18\\nMastercard ending 4242                 £72.18\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Shell Watford\",\"confidence\":0.99,\"quote\":\"Shell Watford\"},\"total\":{\"amount\":\"72.18\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL                                   £72.18\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-14\",\"confidence\":0.99,\"quote\":\"Date: 14/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"SH-4410-77\",\"confidence\":0.99,\"quote\":\"Receipt No: SH-4410-77\"},\"card_last4\":{\"value\":\"4242\",\"confidence\":0.99,\"quote\":\"Mastercard ending 4242\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Mastercard ending 4242\"},\"category\":{\"value\":\"FUEL\",\"confidence\":0.99},\"line_items\":[{\"description\":\"V-Power unleaded 41.25L\",\"amount\":\"72.18\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Shell Watford\nSt Albans Rd, Watford\nReceipt No: SH-4410-77 · Date: 14/10/2026\n------------------------------------------\nV-Power unleaded 41.25L                 £72.18\n------------------------------------------\n------------------------------------------\nTOTAL                                   £72.18\nMastercard ending 4242                 £72.18\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Shell Watford",
+                "confidence": 0.99,
+                "quote": "Shell Watford"
+              },
+              "total": {
+                "amount": "72.18",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL                                   £72.18"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-14",
+                "confidence": 0.99,
+                "quote": "Date: 14/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "SH-4410-77",
+                "confidence": 0.99,
+                "quote": "Receipt No: SH-4410-77"
+              },
+              "card_last4": {
+                "value": "4242",
+                "confidence": 0.99,
+                "quote": "Mastercard ending 4242"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Mastercard ending 4242"
+              },
+              "category": {
+                "value": "FUEL",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "V-Power unleaded 41.25L",
+                  "amount": "72.18"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Shell Watford\nSt Albans Rd, Watford\nReceipt No: SH-4410-77 · Date: 14/10/2026\n------------------------------------------\nV-Power unleaded 41.25L                 £72.18\n------------------------------------------\n------------------------------------------\nTOTAL                                   £72.18\nMastercard ending 4242                 £72.18\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Shell Watford",
+        "confidence": 0.99,
+        "quote": "Shell Watford"
+      },
+      "total": {
+        "amount": "72.18",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL                                   £72.18"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-14",
+        "confidence": 0.99,
+        "quote": "Date: 14/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "SH-4410-77",
+        "confidence": 0.99,
+        "quote": "Receipt No: SH-4410-77"
+      },
+      "card_last4": {
+        "value": "4242",
+        "confidence": 0.99,
+        "quote": "Mastercard ending 4242"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Mastercard ending 4242"
+      },
+      "category": {
+        "value": "FUEL",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "V-Power unleaded 41.25L",
+          "amount": "72.18"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "key": "5a0611a245249c9fbca23e430be2d8d022c3c0fb6db2333af0eb738e99e33a9a",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:39.641Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1688,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 894,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 2582
+    },
+    "output": [
+      {
+        "id": "rs_09b663f41e2e2f62016ad322b48e1887d2ac05bbbcd2597909",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yK3bpVVjiqwwmztNJQ2bd_wIkZ_yGsUdrndHRyr_9RlpOhMf1bhd3B8xMM3MygOwxkPYfwqsCaucmWWDRax1Ui6TosX20Cxj1901z8e2iGIKxOi7YvKiA6fObeR5geXbsb0suIXpS3KVfnt3wEtyrH7Wv1JJnU6UX3xkZh_O5IlXI8MJZ-LEhC4m-2Mpf-PlUeWPUmJ290rpxXZDMyCTTb3gopGxZ5ZdCYETDJnA13yXb3bPrmS_EGGH8k6mcKndBnau206lpnt_nt2FwpE9oUbSsObI_-nLuuu_QVomLA0HSpywrc5oZiCnDbLTs6hThH-3BMFv5urfq0CRpFIgZvfjUo1gtUVeinp2tRGNMpbTB-rcFU6Gcn-lvhhjhc9BgCPhuPZGVj6t5jZngaKpmDvG73nugje2OvmBjUWTaWXjTJOwd11cMbJZvtR9dSI9uT2AWQiMwHnbUwxUB2cqWb0F8SXb6y_3DQFhRfb11P1ZVT2NSj5ELaj8S1VyMtVylGRh8VW78sOzW-M67Ja2tfH9wzqQtynZsx_tCNJrgJkkvKrcWHKqfeDIS-fG9MB1iUnLjGSjDyIsAQ17XqZwC_B2Rfo95_uFniRFF1vn_cvi4eayftKaYrrnClmIfT0-RL__IrtcRHTRLXTXb5iWaEYKNW5N_3Hy2iIMMUvcQ68FPcjDPlAXXLjeDoc6s6OqKMEie3V_KxOmWbfjcY-vvO-iFLvYJK_DNBeHlvwDrJisr3lIeI4QkB_NujfjuDwjUJgIUYozCyZgmShoyRASixO8RjwEy9yMtYDQYJaU8Ss2C2Pk2afgsw0McCd4H95GsdKUHwm10g4zMRkq4Qc4djEWFLyBXmp1usMmNy2NSOHIabECEPAWJtRVR_tt1vlFJG1zyFJ5HHlvvTedjHCE0VjId7ekGzdrKtaoKpsTpazo5rlh_jjhH1Bokmz3iI6zGXzklnY9UfDBxKEgpbu1KIKMpfUdOJ-XByaxrhCxazfOSOrZZEkHkAGyWHzjbE34SNbnT3kMIuO81N9BNLYZnSqi9dZ5wYKR5ZKXWGORZaaXitk3aLcYcuG9ColpbhDwdfqZ-3pfv61TszJTABpF6kyZ3-GCOTiYfLo_bBu09bOluMe3ydejfeA5hKLSxsNd5E7j6DxeFmeHhmIcCehLZy83vpg-9cfgxnaTIh3zjh6eItyV-hcOpIgzN4TkJkdb1Ip2ygKcr2yJuXD1iA-A-GfugZ-998dUNIQaW-_RCp5KedWT605H0vZnjOYgUfpfNdDbE-nWbiAzhnjvMvvHCiEfd9nY-SjfcYaUvJq0YnBCUo_BxsO-cMdpf2R7A8nzFJ_og1DxrSlTfM1aXD93boPaWVzGlYZt3iXqjRtvGwB-8_XA1NLAdB4lwsV6BxpNuGxb__mUlxMv6BfXjwU4ihLlnbM-ar7Vm_-jtJTt-3JhR2mGgTOV91C6vf9ayxtCAsjC3W6YVqWKQu4gxYuf_RqeUD2X1TDSEVPNlCQ-gn4uQmw-BA5uJc8unRcIrzC1VnwVH_w4hF0oDAs-6dQNtP-pZLNIs8yI7JOAUwVGhL4ab5xmhSR4k-hN89nxs8VOhBjz_ECfqGo89ZlAewWElfNaSj1fI7kV5zLT2FNjVZa7IBJZcqzYMHcIyjbHjGbpLCY8lGNL78gsonM1iqcDmm4y3BBRaqOWT5hs0N44GFQxa97Lr7I1rNRdL8JXpGW8-bXszCDoDaIMdZofBcwRw6UH7Wwal4kvvN5nUsBN-rFdcOGomzMzgYTipz0Af0joO9uNEZaq51wBvBaMn3eTz4T4KI99PsNJF1hveevuyKM3-szkWysCwd2ftnH7vDTz0Z87mUrY6A7z60mNWLxX3MZ7Ch0rSa87JdF9xvWAQ_uCJIXBK2ucdCh21zK3Tn6zful5VAeHUIgD0yDy9qDxt__L14kkuBkwQAzcs7n_uiXSFv98SPKeiHBsuqzxIiUVpm3uVCp6eWbHFYRA7_AykHhBabfBvyCa1YASf_p-GnjdoHHM6093_A6YpDsiUcgtJM-5BrbISMt6oFwa-tuZ__wL3_vaI4Vb4MHKHpmZ0fklG0yFxDxYtvG9Pbk8AhkAZ16hjzUrzBPGFz3qg-w2UWKkuR_jiJGhxBBaWjPecbYSUK6TotdSDt4zGGbP1HQjyNSS2uda1xRItnHJB1OWyAQsQV5_KPK6pokMkgRE_cdPhBXa0kazNeWu_izoqs9dvKoeKIr_o6ot8VOCA1bkry4ViEZUdLev2-1vZfpyVV2sNL3VcSEwFLIGYTsI3rcd6LyJkOfOP_FzP52VgoC8dG8DC2D7JYIfIrI732DojxVFnMBXEsAVshv4cIjoStboWbo3WkwBfMcxuVCoyr_lhmseM6Vhh_8Iqr7RhwhHy9Gwe2TgA5cTT0mc38NjgJcqbnosAToCaQousGYYKzMN0mdmAyY4_PQh2rkXf07mBQXwFdMjvNopYbyybFFesd9zZGMJMiro6PwWcVNR7Ic20uvU2vghDZ1eHvtkNTegfZOsdVY7TywCPXG-Fn_tDyG2rXTWJES1RXtf0r3zFU4zuy57T0UoNnRoBEm-YQq0SZS1uYb8KOmCLf2N0jyja7tsyrPe6HapSLs5YS_tkEgcvgceEB6H9b2mDsb13l3qeQnuggV7Q1aif1BwRoZ-B1k73er4rlmBVIeJ6-TgqX7YMnpd6nds6K4ngNH7ew_Fz5-8FHcljAjSEteFsbT3CjcvzY5ryBPj3oavbLgP01kPE-0ZfXdGXxyYoTlDAJ4970l46t-OkSq75dPC7-_7vFbU9xRS9m6UhENj1e-tJMAg3aSSqvySuVnDym37pIs3Tss-xUN3qGnYNi6CNyZ-9VBt3oTlshSBuZHomJ_JQ_v38llT8IchYklICuqn2wI2yVq92WkndnKJqUuRJM9AHG10-36dJ6lPhHZmVemODIRExi73pnSnGiJE4bOD7pesiPLGoXoawm8DLTjjNWZamDvx1xGPw3-64CK7a5e2UjJWWoV8w7atOdZYyg8p348HQsR1mTIOOF0AabLYtORi4v2MLhs1GrQqJshCnp9_wUlKQEw3XmTwdE5p9JpyilRVPz8HftOFX7IWpSqkHnCueJa2KSblt6tnyyIrlo1gNyXft0hm2b6txZ9t0DZ4WIU9A5n1UL432mewHzNN57gi9mfOLMn4AiKHYJGdF6YHop5-j4d64MVanJUsQpTp92aENgtZLyDaMJ1QbmwYSzdV-PKS1kUH9EXk1UNZqKVltw-j8F-qQRQgbbyScC49fgxtrHJse5ZjZJNWE9KS0zjrbW8kVIR3DEFzOHI-BPk-DupnZGUstHgz1jZSANtp8o30ljuVIUEwytpQxo9Jp7mh8OUD-VRBjHSxT2shSc1rv6o45o0Iak6tcj4oSvvVUhDn7LaxGxUaxny92hF7WCUZx8nGBfletxXQZ_Tsh6yiS6BdKKnNR2fQjOiS1Iz84bMPrIXzYf4IzAfhun-_b90_00VhOTKGGsAlr88sRHdeM0_jD6lBu6KLrSCNobJxSyUNrDylFNWCPWJJAC-q632JQIglJBNE8k6hway2Gc9THzZ7DV9aNNa3bdIc1bgJqfLsu-N3V7xBdzbVknBLPIn_Rp7QwXEgWCJjSV1Loh3BDAOzLvGiQ_bExZ2qA_86GP2VV0ullcT-p-a9YS5pyyf8KJAkJ-3nhainNJdILVyMQYD-tKQZXwSSWCr0up9kut2iaQ4xiUn-oD4gc3RWC0O5dhftam5yRm0WW1zH-Jsn7xkqcPxv8ra9PFU7mGds7m7q4_WgK8ymYutFd3c5HwFtjVYef_u6b5DQvY_530cRheAbDGdtmiODomdWzgJ6r2GYsnlBy_M2FSjzPKk5ENqH-11rP1YZ_vz6Fx9e3Bk4kO-g-JJRUFz1FYqvRu_hdr6_swzUiCIUE7EEAomtXVefzLyDkptzXyr8aQTIxTTtid0h679Erwo9H_Xyy-xFHl0g-5Aj3Z6lH4NLg7g5_evKG-1FiI07jw5qf5eurd849iZEozVC36sDGcJDlN83zvXexW3iyLhF88-OYcLR48BIqFHu-pY39TNkKqd8ig1GJrIoXJqLhNag_PoaEk45gSaiAnT5oA800rOaAG9MXv6IxSfeUYznDm5HjW8HlY_JFpTXa3Ii238CNoG9v9hHjmiHBARQCJSY--XYBscGZ4qgz_DZPjXbPVCy9vMlzWT7ChnO_nXJbb6ZfnlqNVagDBhvDlYS3m6fPSveNJ-zUVJa60LHFXYxvWVP7K5gTBkg3uBdjUtmiaXxUv80UmqwKIwEPhWGRPFSACz9r5Tu37nCcmUvRM0xujFgaG6oihJ2-g9x_vZNp-gKV0OH-JM1twdRpEWLQwqFjT3rkqXwNBZSqPyrBNZggsvVt-z6mC0ZmBsQ_OKyQD60EK-9umJs7QRIS0xwE45B6phbsrhDZAE0CQQar0GQ_dXQDNwliXKGeSkS11mGuaQUiqHyS-BsGvDq9ka50jXxyRMGArccNsv8QoXsh5X3K4t3FgegQ2tYj0wEufGmZQWpiUagLQ1u-Ha42XG99Z6LGTdIT76wZjMhsiIuvEfGHqmRweHih-N0Ag2RRmN_hBplsQUMSbWNSiBgqGFNnGe05ThSAuaEeg-oiqu6t-UiBCnjTqG080ThF9B-n0kT_T1PAtdm0jXzxlnECsYUhTAewEiG2qTyKSB6vSbc-9s7DXZemRpCQPV5q6YeOgVjyToJ3kImMjSJqXkDEnw0kci2AoBSC5fGb4teBTxkiFp4vNrq5DJgspbP9FdtUGWZQt0eGprGXW9E9ZO0ncnrRHtpNAU1-NisZYZk1yWOvcM6meTPb2SKVXqwvC7KRGjsfomzbf6Mrr7qjcJqzf6mwJlLSDh39C5iOa9f4vCmhVK71H9qpWUcMSDo-7ycQSukQnNRojea8_j84SK2VqkD1oyWWlWSmGKIT2pdizvYnHNdhn0nTkqXFbb08mwH0keqKlI8WFx3SRf89PHZbwl4lnH9Fyrqq63DJkDDnqPnIlpQVSEvo-oqY-OEx4mLZCLjX3CbNRkwnUymeU-6Q3_NoDMvFC9Z0wScXGnOslBppuMrjgRbPetOwZYiiGoo43u2QjI1wVRsR1Iz7AqOSUfxcKA3PWy8Yc0INufveAcMGIi2kGujg6pfYppJorhMIuc_GhqqF8kw59sh_rp4RylHv-tVs8fK7wX4JL-Op9UJGOX2lZhmgUq3kWzjyL9q2sKxI_J-MyOulXFHU7nncSRqjSs0Ymgn_ilMOXbWteSejyvPBNQd_w19aGNGOypwI6vfG3hKvHGCIgrj37oaE6wR0H3-G4IJMEa25_-CYRniV9NbE5SLGehHvNYvAr8PMbBVvzodVtZSMQdq3tycc6f5tC57lCRhpnlBnO-_4o-OoT17DaScirwYBqaezA5bc27VNWAVqycCdBYUbbRInEPOJGJKXpfJAWPqIu2YiHFXEZv0FVMD4JNFhrrO0-63YWfa721dseUOlDrfpyh-Y3nSgG9oiOaTE6Wt7p2eVsSTIDqfjSbYd56TONUPhhZ0968OWK-LsqUxmU0zoQCm0gkwaRwK0n8lZScGiqsVDRALluISSX03lL-7qFsm8hsYkhK-k60YMZPRfDF84R-whfihTtmmw7GszYyzF27DRFn5GwD8xjTpq5Dmn3t9b35YEAzWmd4jxFUlgxFNtuQy7zEZamoWm2AkGwMq-_1iLStEh05zbamw2j7BApPkhKlEFciBtuUSFGPQ3_r2VROEFaN-3iFWse-dBUmKb-T9Bah1TF_2m97H6iPJGjF2vgew2zp3dyJPsA8QtTFhAnLtkDltYli2T2vesl-owHsnjfiK-3-D0JW8d1vKiybM7XDb8E9BLGUUspTtVhS2vwZFb_e6QynsZiBGgDoodw_LYByonbFDuD85vAoiTWaNsh2KTHExUIsXm5z7zXIHx3p2xdSV5YCNhdwvxNPFNusfRHDY59lD2uoD4HG2C01qjtydj3vSvEHjsHwdyxPFYKrp4Sum-uJCVAWAtRrQGduWMTAVxNJJDhxZhFQ97mLUxF-53GYexWN_JtwXC22ToU4jkUTpxd5hQijJU1wjevJCCLZXv6xpjX3PEfCI0xT_RljS_1GKB5dFNnz_uejnCj1j8aOZhQskS7Q43T4Qw25SSQ-CFwFu6n9F4Bu-1_smvpGqPEZcKt2lZHkBnXAdHw0vORa8RjN7F4GszvGvTR-oGVPra607VJ5fwm38dpYLjgBLyjEOqwFIZ6war-89eKf_di0ALieJrwa9YiAGZgMoRCQCArWoVn1lFzlILUusIm7IfZjLRbnoT1x8UZBg-X9hnERiI-DWhu1aNyqEDZ9F39Kjb_VaLQcxJ9isjvr6suJ68I7PkiTKk9aned8VNUG-ptt0El2E3MNwpbaQx4v-Qa96Hdx0-CwvMm6DIzIEeSCFUMkhD2bgS3KauwFx4O0bBZYW77sJzY6LMkH7-Uyui16SO3gJ1Au86oq0BjIFOKVLFUCIgY6wNcw5Arl7oKTEYB1ZwFTiX11CR5WK2sypQRcgMlT01B0tn6FejPLJ4-IUPzqOwOzlC8jBhtP7lJO7mqtJH51R9hSlglZ76C0TPH_J_xluaPtBz6UfRdje9IEvKC6RVQVqw2bgYLZvLV3pv0jemSzdt3XXRnLJsUGbNlOj4FkOoNJ-pu4vmkzWQrISCTfc9VMlipUvkxN-4EjKwz_E5NV1Yfp5H3x5qgOs-Gzgiz0zNau01qVsTG3IikacQ-O6JXyKTggZRRUYogjb-NP2DhWFtL1fr-BRnC0Q0qGLbBTxJRTCHtsN8mvcBSa_KuNu_8Z5GwKxKDJTHQg29Vouu_yqqiLNbLlRwmygpT9J4XO5WDAkVj0hj1gvE_6OvhJWulAE5kEPUU71D9IJ55_ZJklIGxEn2MkxkyWWfGzFvqQuaEjGSVPbTGJW-8pDlDrnnngAQZeHJGVuZMaH9vGrzGBFgOH2YlnYd3PB-jc1WWZQoxZ6xT6sKK8pClx44xrcb-1dIkqh-GinYqxX1QdqdSxDRH3qAAajFvR2oio5r8GXo4fJZMkR_qKd1sa3Gz2CP0CsTZL-PSyz4U6LkfQlyag9j6S3lyFXyKUfr6x1VTK_8W94039-_UWKPG4pYbcReZsogjjmJ1-wqf_ZfPr7ElEh24gZX8uBLQwA-1hTsppWaNm1YCxA98LEQD9xSdJqNFPdeEkbp5lFrE9ZreSFbAX6-h96D7fpRd-yqzvJdrdSEFe3VUQN3Jf1cK1NuDJpNkBUOOJhHjyC3xAiPD4Jt29dG611nfx7ePz1d38YFHOEMBY0uMl48cFlSM1FQJjtBBfmImLRB-YUUuxwbPLkL4KWyPnab0Hu7nTdTG0grvPBRz9B9SCy2bcAh83j_1HMsbsL52NqY93JhcpTd8EC1AY7Sqy0TOHKbZecAmRSB9ECKB9QzjaiWCN1VuRC7uoAIDmRSt-dHWKVxvnQrYTQbb3SkmEO4orgqg-iJbdnqVegpRH8jy4lOXt98MPQDvTYlsyPNgeVxlk9cW-PswmpefbWmieHxvLzR6cLzyLqrr5ZF9WH5R2env3UKCQqX9ZdQ==",
+        "summary": []
+      },
+      {
+        "id": "msg_09b663f41e2e2f62016ad322b67ffc87d29f84d84f23166856",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Toolstation\\nBridgwater\\nReceipt No: TS-55301 . Date: 15/10/2026\\nCordless drill bits set £19.98\\nWall plugs (100) £4.99\\nMasking tape x3 £19.00\\nDiscount -£2.00\\nTOTAL £41.97\\nMastercard ending 4242 £41.97\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Toolstation\",\"confidence\":0.99,\"quote\":\"Toolstation\"},\"total\":{\"amount\":\"41.97\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"£41.97\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-15\",\"confidence\":0.99,\"quote\":\"15/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"TS-55301\",\"confidence\":0.99,\"quote\":\"TS-55301\"},\"card_last4\":{\"value\":\"4242\",\"confidence\":0.99,\"quote\":\"4242\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.95,\"quote\":\"Mastercard ending 4242\"},\"category\":{\"value\":\"TOOLS_EQUIPMENT\",\"confidence\":0.97},\"line_items\":[{\"description\":\"Cordless drill bits set\",\"amount\":\"19.98\"},{\"description\":\"Wall plugs (100)\",\"amount\":\"4.99\"},{\"description\":\"Masking tape x3\",\"amount\":\"19.00\"},{\"description\":\"Discount\",\"amount\":\"-2.00\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Toolstation\nBridgwater\nReceipt No: TS-55301 . Date: 15/10/2026\nCordless drill bits set £19.98\nWall plugs (100) £4.99\nMasking tape x3 £19.00\nDiscount -£2.00\nTOTAL £41.97\nMastercard ending 4242 £41.97\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Toolstation",
+                "confidence": 0.99,
+                "quote": "Toolstation"
+              },
+              "total": {
+                "amount": "41.97",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "£41.97"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-15",
+                "confidence": 0.99,
+                "quote": "15/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "TS-55301",
+                "confidence": 0.99,
+                "quote": "TS-55301"
+              },
+              "card_last4": {
+                "value": "4242",
+                "confidence": 0.99,
+                "quote": "4242"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.95,
+                "quote": "Mastercard ending 4242"
+              },
+              "category": {
+                "value": "TOOLS_EQUIPMENT",
+                "confidence": 0.97
+              },
+              "line_items": [
+                {
+                  "description": "Cordless drill bits set",
+                  "amount": "19.98"
+                },
+                {
+                  "description": "Wall plugs (100)",
+                  "amount": "4.99"
+                },
+                {
+                  "description": "Masking tape x3",
+                  "amount": "19.00"
+                },
+                {
+                  "description": "Discount",
+                  "amount": "-2.00"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Toolstation\nBridgwater\nReceipt No: TS-55301 . Date: 15/10/2026\nCordless drill bits set £19.98\nWall plugs (100) £4.99\nMasking tape x3 £19.00\nDiscount -£2.00\nTOTAL £41.97\nMastercard ending 4242 £41.97\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Toolstation",
+        "confidence": 0.99,
+        "quote": "Toolstation"
+      },
+      "total": {
+        "amount": "41.97",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "£41.97"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-15",
+        "confidence": 0.99,
+        "quote": "15/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "TS-55301",
+        "confidence": 0.99,
+        "quote": "TS-55301"
+      },
+      "card_last4": {
+        "value": "4242",
+        "confidence": 0.99,
+        "quote": "4242"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.95,
+        "quote": "Mastercard ending 4242"
+      },
+      "category": {
+        "value": "TOOLS_EQUIPMENT",
+        "confidence": 0.97
+      },
+      "line_items": [
+        {
+          "description": "Cordless drill bits set",
+          "amount": "19.98"
+        },
+        {
+          "description": "Wall plugs (100)",
+          "amount": "4.99"
+        },
+        {
+          "description": "Masking tape x3",
+          "amount": "19.00"
+        },
+        {
+          "description": "Discount",
+          "amount": "-2.00"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "key": "daa46648945d9f075084ad54387e11393715980699e0036662e3f3604b436aae",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:23:45.027Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1606,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 795,
+      "output_tokens_details": {
+        "reasoning_tokens": 464
+      },
+      "total_tokens": 2401
+    },
+    "output": [
+      {
+        "id": "rs_0ad51813e632e759016ad322790bc887d28acb7673fd5ce061",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKAKRqqhnc8473FroLG_rD1V13OxVWWS-VjDMN72Rwk1kY7SopAFohpkGH6gIN7I8at-KXOwV3-twUSCSibMtoHW0r0KuzuizFCsRPYgttvOVcogiDGVUPVEMVNdSxIVuJnwsZOLGp25EOXZP86ht6_uZksTCTRudCheTUX0t8-fY10NGrD5mf1JMVsj9RSCfV3P_LKWdQhAaPkqbCFVRVcASvzLdFlNwrrTCBz6HNGB9Mpe2mZ0nSuYsl08kG11bJOi1Tw42iDX9_Cf59YHHG2xwMVMpW7UnW_tYLvhRvV2MMhOT53e702LZ7lBioCUzZYHW3z7mSuKjOxkFL7rIAbk2Bpwy95La1dTs1f0KWKZk9Xv88o3bWMEaJgQBnzM79XcLMqlU-ps2Zb6J0IbPcDihi6JJDIh-UFFNc0XaXIEPoJscHHjpi7CjhDFNFXKzYsMaDsdK7uI6UA2BjWYubaHxej11URlB84Rl2fLGgybnxZujjAQrBptGIEl3QItrmAD3PoaUfeCNGJr11Q737oUcNyM0D7i380SCt5spaCJhLul109ZaUDCIKNLd8XPH4EanQStXFonW-Rm7OOQoDzihRhNhqqeT-9-3uYVLDQ8ZTewuL3w7nrmzyuciA41CRPVGe6UBPDOL9jtvh7hN1h5RUBhGq2aZUp6ITs4W6-TAdJmDL5Wk_k0uJRQbGWhcAqVeJONqaV2GPuP2grJlKpJlxl2OpqGC0N0nTD1INAvKiwRj1eo0moLafrbYJClVmHrA6Dsz9E8ATT2g6zo77gsJmF8RknvPdRq921Dvp634YxSLvCP5Gsf-psD5ldTcv8hDkCCMUEi-zpp2EFCOYWEsb3cm7fZXAoVJ8thaP6OnZtdhEffl93KYJHQePqXeooXzawCLeLJSkNcAopRzw0QMFNbPV1Ybj3IEWi8hvKV_NfmW7DKuHE7Q4nBcHhTkLG-oYRgBBbYMyy5S8W8o3aWcqlbo8gnL1md2wdDxlY3oSH5lI9E69ulFI7tV-1x6xT030FC6g5veqqqnDR2eoU0gy05SnVnn7QFN5AHi_yZ1_J8A2Ovdt8w--6viKwJ-PH8Lhl-eUA3PVWM3gM2bN37x5BXewSiuFGz_TLaXqOke6gHCHKHcT3PqPVyoQopkh6I5MPU8_-yzk2Au9nKC2bfZBqQKAO4Dl_KOuj3FAig8oW5l8FVUVt3TUBPQ00w8SytdknznSi4TliBQR4EuS8bpt7IKbi7FxyHDSR4XKzj1QtrdHWrx-oVT2b8VKyZorNcCCn74Dj_igovSE55Vc6rlFyGZztdF9YljbXO0nw-QyQMFG9Qc96YmqJ67AAw_stcvGQgPnvctnsxkggjKLBcV7IJS9E80a-WTBRECI8b_OPX7jCSg4Undh2nYBv4sPyqAZy72Pa-eVMLp6fLLEFblbBl9jGEBBlm_TRPDBkzqMwYTZ1cFrt1RElm6aorne0yaSOV8Rvzk_abAqFrsZluH4CN4Avh9EyHMCPKqfjGDDOwlW5UFZkhkKpVUh4ijO_4-RjDxdxyQPmlVwHJDkpc2hXjZvdDqKGly9LdXJKeokwf-6aXwgvuTL5cWfKQX946uO9KRi7TJ12HxCiPXrTFP2npgad5sUYUFE6ItL2Vd747pXrMXGotx0DePg0ezl1iOB0JtZ7WZiOShag-far0i000_NCChZx-rKGCtlEKKvb2-B_17TMzwzFglxU7GQPDtbNgggfBjwyeStPuiBiHKywqXG3bHtTQ8kuIqLLeLk8IwnrP_m5k76beSpROU842bVYg41JuAt82RPFvro29lIhB9nCR6TJ5ekqD9GiEzdT6GCWO2-64bDEasG0i3YhMX4svFR6GfRrgXp9CR8ykSwN_nIA6hg_n2WFPRKYitWfhRLMY00KHrVZB8O3MAw_gswV4bT0stZaKfxQt2SOFxkC3KF9Jg3VcoL7jDmmTjtNgwnMedU-8PcG5l8yBMa1PVCHv50UQMNQMyMWKvlwMtKn-abtobz6o4TmAsoaN3nJpCb7oQp5oLhqB3Y6MDkDGtMDdvV626IlgL4EJBYcryknBONzn_uhG_T6meJn9sjcDON-KXE2ncFadjM_nnhAVx5Q_xWJYTPIfXbgdWXbdJxPdmAbEW7-wcVuoS3NG7BM-gzp2rRTPzwySfZHvNqCARX8U0X8kC_dlTxWVdh48bGARObwd30aDJ3ACnVgWN4eUEdArqAsdTEcJ88-gA_-7GOp89iA9x5XwQL90xz6gGm7UKR9l4ZpYzUL1ouOld1Zp6wOpO4ZbgJWyCKlUDPRzALRKR8asgunHuVbxt1djpBLRFhqvffkK_PtXOcrfvY5YwMngKP9ccPv_yWiaaSopAklY9MCebU_v4UE61AwfR53gaFKXOxPlHbJ1_8ac_eueCfZJp2j7UJVU8_fZLlpGwJHkMm0lsxGDbEMh_rm_NDAb8yuoflSc08PNq97d2V3ifV-GLOSW2E9i0PUblTAxI46FrRVoDj5UUoEs1A5rGMi0o4T9AD1OmHCh0RZgQN3NpvRGed8GcP1pj6wVi9juF04koYbMRC-udxRjB5dEBCZ4vzI45MY2MU1pkw9P2kmx1-Jcy6tsiNCzrgigrarLod8wNtdx_IciEO0pBFxXZVrGsNIAonTgZ0oFLhWhJHWs5NahXQBsB6Jyd9vOvzgDzd9mNGmvHirgFOYkgGhcwIdKt4lQi0GqZlozXd9zkzKJ8tjCqdUSaS29Imak2xDCboysr-_FEIVMGm5_suz5A3VUsLz8Yi89SqvUbNDjqyhcMwBD8SHmxfIRtOoddRUpOIPxQInaoHNO56f_5lC4nXRlMWPa4HLS6REEraD6XKLr4bplXcCNZ9nfbJfxBPeXVLLnu_kehMw0AckH4m7TNoRg4J7GehNHP6GZ1Xl31H1qFf2ZocbQqk3b0_cM1sErmfRnuolVj4qrvg1tmu9A68uiovmRBhNzNMOlvN9oijh5YG0GFQsjjorAyP75NYovjKnTYKWwIiwS5y7JjnbGdBedE7kNRHgQJJKroKenQ_1imOaTFOG5Yksb4qv1zbOx49T7O1ygwvQjTQiz3quQErrY9ISHIMM8N5l6MiMLwH4D5h1NwXlNBbCqJ1gnwHZLNRIpNhkZhCBswMXlz4ubvgnG4uQIm8JsNIwMECmZyroJOzQuIZEHwfvn4jgdXpSkT1ZjP9DaYMmD4tl_5E9QqGAx1TytKZo8dxAIxBcVxstWyGCniaI9xbu9XddxwWjdcOFO-GlAlzM0uLGNPPuJQQtaB5S3AN0D3Cr0iMfZ5edbwxlbGP8GPEIiWr4tYipSKq1G7WI3lBFy8Dhjp2vAp5gxueYJlr2og0CASHei91jDuZGpcoTALUIMlSnUQbgYyJcAsdK_O4TKnQa_1qQbAaYEW3Yyb9VRgW1DQweorMZv9lfCuIg1kC3mFgLan5ZhwyonacqIUxvmkZB7Z35YRw97HRCELrCG8d1C7QV6qLXSCUDrRjAPeC69x9GjDEeff5onqs2_UaBcpEAiOieTA2fzbO8NJYjlLwNZn9l5NruBQoaB6rrInJF8gp4Kom6hx0ph5QpCAIsAXmzzPFKS5NTDLUrIzjaX-QN8NKU7FAxciarxnNBo0D7K7Uq9bJsBcS4vFJM25Q36106dxLA5GjTmlk48k6n_ZEA58GC5tkDtQz5RH4YDHdeTvgjwUyWKlS7uNIB6ko2MQUnGC1ppV-kVmVM2FkoeMeGhWKwbFQTU7l-JwG3_JTpYn00U7aN5KKj65R-ycx48hAnsbvX9RbCtqnJTixyZTc-p0kP5iRpcDuD-Z-w3OXkV1f5IgtK7OgBujsUUFUgop_xBSEwkDLhMFZPCuZ5RiQ9A3EBpSPLHslke3L1NiZOfKiLDllJWt3rnM73A6Yp5OJoA613z_swohMo-NSEy9x5vv6xwah-w35eWoO_rdEw9YmD9dMkFpVmvY9AKyFerb550CWoa-lgH3b8v4Z86BYkJcOn5SH79QyJ472dlb_DimvIx3zbsd32HusSMRBTej7RjGBw78GOjs_FjdmxXJy0wG6R0nSzF0Fw_VROGpfZ5qgKLi1fikHhYHe-sfOGJ8JLJNNLsvswQYRHxqg2RlRKOSuPSZwVkytuFt-Bizh5DihmSRmVx23kDkoiQ_x8Uynn431UE3_5FDAcAf7vLb1iUqHG37BYJ1W_XB0BsjLD5dA-QRVXSQqVebM3-Mqvl4WSULTZQ5rUvr8wwghZ4e6owJJu1s07g3FZc7mkBN25e-HKuuWsQ-y4Ycta3eS3IzXP1krdzzoeGDwdff9xFTZ6g9dFfAmimKIvtAEh6ocEDNlHn46RH6mzJKbLdjPMWmpkmoBRPlJrXkfvH8UeLIFzw1GvcUA0pxIMeIZndsz1rbZGUxsFxt7C7c66foSffkUyifTEj1PESPwoiQscVJUix1tfADdAJWZ5-aYaFxYBSIBJ5X6qzQyGlubncCs9Uhi_T_IStOXVBWUE88Bxfdpow9r2hh0HIqzAA4_XL8i6uiMUWqfnqz6fH77U0f2i7qQ1xJPY2Qzw1q60D8bFxYLIg0bY9FKlKObixscYUXU8TKVxIdFehMUrT2-icQ8f-oBdsKt_p6wh4TU7N4DNqTIhFHazXgpUu5X-FC2GXrXBvvGnGD6KHHIUJ0tZVmDWhynVwSsLbGTfJgOfygjHn3rw8hbRTvRrMXhpXTxcF3d-0m1pzAj7N2PHsEkg5SgIPGVn6TIZWNa9mSUZXg4qTJI-0TVBcSMfLyXW_VxYvC3FnpezTnUmjGW21Ou4HFsH8k0_Ech0Popbr54-whFfx4wji3yeBu6oHyumPOPlg598CRkQSviD3Eg2HRONYxKEHxFfs8SKvBeW4pgQzQnUItRYEnM3yCOjV52i8aW5F81jxW6eyZX58yWaJ1OSibihxE9xpVO7PoasYf-R3o_Q51VQmJ16jL9UdYObEI4PXrE9od9hCmW6EGjYamGXYy9Muji0rEujBdu1Hob2zHjE-dECH_O_EumcJaaI7OuFzW02njQIqRy-5brUQsVDbtrSQy_4fDKO_OK_U2JdSnTIhw8LM7d23jwJsZEoDoLkhw0q6PeznrRjXDbRWgkoIHsbm0PfQ5nbS0jCFJMjn15_qsWUah72k_tcvD1YUyTUQ_SF1JKdWouna-5Qrg3QVktRsfFiMBTjcyfORWgy0LLgDH8XhvOr-LSu6WxWq5FHpVqLvSvSjgy4pSI5gHWauk1upjhGuTiJ_4__3D-PXFe3-fWv3-Atw2pDQTlR93m1gGTHBlmqBY2XvodZvMuS7d9596GkljWmlA_4IuB7s-7rbVswzBo7vUL3wkkuSevM-Ub7kmQ9DfGuDCXzXo1K-UX_G4HGYEEwBF_GvldKB1nploICnXG0bDmsDSWuCwrs6FWmS8AvFryO--lEVRDYG6hLyOetnulFduIdu5RVYTirdaMxUX1RB50pgliivQ7WD2l_W-nIEnK7jhy5AbedigZDo35Bu6VWPqk7osk6-hX-xQqvjA8Phw6ti8OfU73dQ2FvFShtXkgi-2GoSBn3f1-LmkPlydIOL_hDwCAHYxSmdeExYKjwj0ebEsGH3tq3Ux6pbeeExnM8PuDsVEoP_KtEUJAQ-yHrcoLBR0j62Q0aePPLrwwWFhtpsvH6DwBbow-VJakimKZkIVcZn9sDy7ThivqzBRgUtxITmZsjN8yI6PbKsS1E7palyWz3XMM4uX-cQu6gyak1tCu5Lrj95b5EInXnznSjHQX2KmTv4NiaCJ8VCYghQVqVF8sjdSkqKyDQQAXclg7Arhlf0D2e_BFpAH4ymnFi24WSQvw_kXB7EWEhz7zJMyzoZKhghZv-zlaEWm7gLvTkLG01GGS51S5Npe8r6Y4j_1xdsKtRwQ0NBuShatBUC4jsnUGmRT3IPb7dXMr1XpnFboY2WRm5tXrCNxm0h_txCBb5g8YqgDd4egNV4lUbT6EsbQzebAs4vh6JwHPfXNJjViYV70lUurEU5AvYL0ijyll8V5Ici_Rr8g3-Jrj5VbdBkFctAzpkpN0c9mluhGlh9TUYiW2NYWTlxi2SfHboeNbWl1eMHtor761GCOB3VnQSace21d2qX4RhePVRwfZx7tVTARHZz3wxg3PSqIxj7Bw-g-W3J_QUvGfUYJbK0qaspFpFq6-nfexOORaqQsQ9-MvfMcqld9GXT5St7sTjKwEfrDIMkXk5ObJY-bsCGffYsJCEM5C0s8qRUxKOv3lc9e29WOEUllOYOcsg_GAyOX21_ffhuh7poBZ_FZqQzoTsMsYJRpLdFN3pSXSmIljVUXbGsByrGjYBlJOd0Wzn97PzzFafj02Nmmc8s0qOkj66dkjOaIw9Dd4sQz17CWHDf5pgMGyivRs1Lyu6EVu0WfOJYKhOFdYqrt7g_I5TV8rxhErmVjmq_GkCOCmVeFnBGTPurKdMkdZ7W6Ip8CsYwcsML2yggK75ff8z6ccBZcut3DMJpOLXI3pKFwI27cxWVK7hw6cQ1mqcPnr7ksev1ZrK-5Mpl0b5oqn5-7_yHM-88dcDp3A54GiMoyNuKLBY-AUUpRl_JkgYq22Lp87uFFAW549J1avY1jjrU728CrV393PwdHR9WSDqylztVvpZRBfNBh0nmUzNvO-D1JgEMnks2vaTTiYgihCoED0kieZqDDL60ECb2lay7ujzZoqLgTG4f1Umnx2cYUL53oAL3B2enmJWe4bKGDm__e0hpY-8HM5YrlANVXmg19BLgXe3sAMy9SdUb3JLRFae5B3NKCic1vLUxO8JjRf5szwH09sj7-U43aNfnHX8b4G8LUuBku_0ZkGxtFG51TWfXQvH-WGaPhh_dJBSC17Ssl52MUEvfiTLQHaOlizrw4_GXG34Dgq0aMjY_dsXTbdIpU8rzkJ9_4_ynWpk36tWj1-D_W-TGPGWyXsZ-XB-RVpd1aPX",
+        "summary": []
+      },
+      {
+        "id": "msg_0ad51813e632e759016ad3227e913887d2a2d65a38829a9d26",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"ESSO WATFORD WAY\\nWatford Way, London NW4\\nCUSTOMER COPY\\nSALE\\nMASTERCARD CONTACTLESS\\n************4242\\nDATE 17-10-26        08:14\\nREF 004219\\nAUTH CODE 042422\\nAMOUNT              GBP 61.27\\nVERIFIED BY DEVICE\\nPLEASE RETAIN THIS RECEIPT\\nSYNTHETIC DEMO SLIP\",\"merchant\":{\"value\":\"ESSO WATFORD WAY\",\"confidence\":0.99,\"quote\":\"ESSO WATFORD WAY\"},\"total\":{\"amount\":\"61.27\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"AMOUNT              GBP 61.27\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-17\",\"confidence\":0.99,\"quote\":\"DATE 17-10-26\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"004219\",\"confidence\":0.98,\"quote\":\"REF 004219\"},\"card_last4\":{\"value\":\"4242\",\"confidence\":0.99,\"quote\":\"************4242\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"MASTERCARD CONTACTLESS\"},\"category\":{\"value\":\"FUEL\",\"confidence\":0.75},\"line_items\":[],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "ESSO WATFORD WAY\nWatford Way, London NW4\nCUSTOMER COPY\nSALE\nMASTERCARD CONTACTLESS\n************4242\nDATE 17-10-26        08:14\nREF 004219\nAUTH CODE 042422\nAMOUNT              GBP 61.27\nVERIFIED BY DEVICE\nPLEASE RETAIN THIS RECEIPT\nSYNTHETIC DEMO SLIP",
+              "merchant": {
+                "value": "ESSO WATFORD WAY",
+                "confidence": 0.99,
+                "quote": "ESSO WATFORD WAY"
+              },
+              "total": {
+                "amount": "61.27",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "AMOUNT              GBP 61.27"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-17",
+                "confidence": 0.99,
+                "quote": "DATE 17-10-26"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "004219",
+                "confidence": 0.98,
+                "quote": "REF 004219"
+              },
+              "card_last4": {
+                "value": "4242",
+                "confidence": 0.99,
+                "quote": "************4242"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "MASTERCARD CONTACTLESS"
+              },
+              "category": {
+                "value": "FUEL",
+                "confidence": 0.75
+              },
+              "line_items": [],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "ESSO WATFORD WAY\nWatford Way, London NW4\nCUSTOMER COPY\nSALE\nMASTERCARD CONTACTLESS\n************4242\nDATE 17-10-26        08:14\nREF 004219\nAUTH CODE 042422\nAMOUNT              GBP 61.27\nVERIFIED BY DEVICE\nPLEASE RETAIN THIS RECEIPT\nSYNTHETIC DEMO SLIP",
+      "merchant": {
+        "value": "ESSO WATFORD WAY",
+        "confidence": 0.99,
+        "quote": "ESSO WATFORD WAY"
+      },
+      "total": {
+        "amount": "61.27",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "AMOUNT              GBP 61.27"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-17",
+        "confidence": 0.99,
+        "quote": "DATE 17-10-26"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "004219",
+        "confidence": 0.98,
+        "quote": "REF 004219"
+      },
+      "card_last4": {
+        "value": "4242",
+        "confidence": 0.99,
+        "quote": "************4242"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "MASTERCARD CONTACTLESS"
+      },
+      "category": {
+        "value": "FUEL",
+        "confidence": 0.75
+      },
+      "line_items": [],
+      "instructions_detected": false
+    }
+  }
+}

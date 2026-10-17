@@ -1,0 +1,168 @@
+{
+  "key": "b7a855c5b6de92bef897c3d8a26607487f41ef1d5b3d6fc4c20e41b566e50f63",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:01.632Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1616,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 527,
+      "output_tokens_details": {
+        "reasoning_tokens": 188
+      },
+      "total_tokens": 2143
+    },
+    "output": [
+      {
+        "id": "rs_03478fedf2592bb0016ad3228cec8887d285df1441f6675eab",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKR9khhQRk5QfqQNsStEPOxnPMgqfA0iJSvO4Jre7XuPfu6cVImvPvQA2T22sF8i-pSNcgkD7eIyJCkdklTNKmoxnLUy6eNONqO1GyNOZkd-mkHjrfZC3zYSz8YTx0mruS0FcNs9Rw0p0Tm7lld3rPzvMyeDUXPgzlCB6kG6hFOto3OCzuhXBrHCuB0KlecTaRPISJJoN7WHaF1eAtQFUgR0tMayNJSPw9gJPViEcTrix2hOGh__a40gJjmlx-_Nzhu5_rBsgr5FmvP_CEdGVRTPRQbnQwSv8M58TgolVUzudo-4RJQ8Cx86SI0E6WcQbv3FiTdGDJwdMSFQGUBbYwW8VjHayTjcjObYHDVHBIIhF3MdfhJNF4orod0C8buugBqhfe50TW_CcPy03yY3BtkORSWesWt2-lNytEPqTZH395QxZSeqVWkTrr0RpfLBQXlH6ubAK3Rw1KZL4001YdPhyhlUqspQZcEgpX9UshSdwlHTv3B98U7xFRjGAoIjLvDAMhgzGf8HfxwYQ1w8guys8yRyu_G5XprDWMSJEloDpMGa79nJCors3TZevSMPf-AjG3fPsCnyKet5yx6WC46eXobrPmAUyEE3GQDGuaNxZlc36YsGvbBEc9HMZdNtOZ8PEoCC_RI1tMQYdmcBtaaXxnBmvVQ3e8VMAKQoTcW4mw_pqEJ0uGiitHMwcfzKQ4Q-b-TuTqVWhg-Jqk1B61_OFwmCaBnuwiTxnpJRITi43xlflehoBgjotoCinDPn5MfEfGunljdcc9pdRhXYw3QjAx3KnkffjHH8Eol9_mX7i2J6e009xP750VNppDSBgJCS4_X0wW4g2ohenIx02FBhj9z1En_t4JT9omqi-3_Z2IPuTdATA74EKsGj5vl0688nKPZRS8afgP0KtbeWzIXt34A1RtE6LkeIndAbhkzQcuNo2IA2hDIHiq9KjJABp-XLSXbClt09_SRgyyW79zjL0UF-pwc1VHFRui7P1vPgwOCiJpMt1uDDiHVV-iAqCC-ofZ_x6MXkEgi8t3jMhVCWderpWTvKZkzpOnHhmMxGbHLqqNUfBDdh16_lo62rZyMhAdGtbZuEKdKOHlcDKz03tpHxZdbY5tDu4NU1fxkKH_UdH5MIA0sVC6sTRlezfXm1CXZrvcOAzscQWJd92EUwJ7kL3S2HIknzyPNi85_L6Y-IuGIXsRY1Fow5zOZwUAZjoXR4jWGzL2n6hIOmIwaFZ-z59Rh5XhrGp0Rne8lbc8caAwenU9Ks0JjiTX8NkzoPEO3wl-dKQ-gz-Et7n27lIWmEV5oTWbgvK5BnjAVGhgHrSrXus55-eSO7pnxQYqlYwjd2GVTiBQ1huh9BnktY2zl-pS2w8Ay968MUPVdZQWYZEL862TQNUqDSxn6bHTvBBzLeS_A3y8ghY_ZcQ5zEit5URV0dNhJG_2NwosobsQV1kb-ZtxQQpzVP8TYWnOk_yMNgB2-RNNUxTQRawlrVHoG0i9kDwrIIIsk4CIMiCGUJdEH6x6JqWIUsVIU8pcUb51e1LzdDlb1NaOgnEmy5OkNZIXbNscPmY7ie8dGvIjVC9vHtGIT81PMsV8gPSKGl45ndMMQp-OJkEfLzjMQK6K_SNVruagWGJ0vZbCyO4sIuNrLy8Ol3M4S7M9E3GnC3bdsxjZmSjFRq2iPhDshkWAKg_lQt0zETOBahOifvKUPRsGwCULW2BTMemwXwVL_Wx1OJwShRapXeUsQ8f3PR-sSCc-LjdZzahlNI0FGMSmfwK1pdKabx2ibx5j_7s1h4Ln9jAIZh3Afr3lTmwxA14HR8mdPn1fOdCzifAE7vUOmOFSKqb_5lIny6L3tnaqQxUfxU33CTJQgDiGv6v57emb1viVvdodtQtPWpbhOBmo8-ydf9cDevNX9KPjnH8s73N6ZMhkxxQR7GSxgnQHcjBuS7vVjBpoHJWN7R1XZL7qwRJ5RfOFHmzOk-KIzxtfdMZ000m96ZImc-2ZECJ5sEogAteoowRdXv-6x9rqnbXZS6GSqrBxFgWUETsrWYVQX3TArs8jUhOTmZVc4kXXsY11uqhV5fPzacKbHDobdn4fB55naZbISzJX-FmuWAAJhShSDVLj4VwrPsfyl5XgZPa8Airk847rqKDE3HnhLA-v1dt42b3NANITkY8MQAY9XfjedYh2dctpPf5Hkq3mfFrhQ702NnDxhOGRoGyZx_w3xcSxivVQBSdcV6jCNan9W2Rj9lRSWHTSHjzDzQE9YTuXSbqmp2dC58QpDiNKu0EaR2XVU3MHkpTw3o9ABab9TEmlONDmb-F52lS4tOv2OD5TNCzjG6yVwI7Q4hLAvo4ALOetTvEPktIuJEKbUUvLzTh4qh93uE9D-MeCso2EbbWuXVNKHwg5MuGmG5o1Ic5h5epeiVm_obaSFSKr2d7DZT657ppV2iFL4biRFHN-8gpIUCSkMsznhiFUpjqkGgNKmTzEstINTqUR4cjux7a0-on2LJ1R5MqimjEXWiQyS1JaMGvNfRehii7KVRBeEqilMzsuniYXng-GG4_WgkGVVz8AOv_uTUoko7sPACbgnvz7xaKdBKcIQxJNg2k82N0AcsuQhLMM6oTwD9C6GgZ6mnUlaVYLysU2XK5p-OMxuv2BpAk_KM3YWwfzeHzwvkPAO7p0XfS2Ufbo8_0LZNCjtqqWiW3mK47oJm732-VS7k4FuyfFMCQXuovS0hxoNDhcLdsTebsXVKxwlcqUuqAOoyvNZL3BDouwYEsHB9c4Hd8Y6rd7FwNgko9LGi-RnrytaSz43OTVGFcM8hk9lGVBSEO6lTpX31e2xbVOrcs55RO14GcPR2WIb4GAS_juWxAJnSpJcaOTY9HihD_lcmTfBY26Y2PScb7_lFU_J8NMKSmTIadkQZUSYb4lxEy4o5wTZv8VSr3UVH7x-NTzvkDx-KCtE8nh3ldvYjvv_o6QWk3w7cO7l51pZTeu3pYP7TxKnMneCzgDkMLeJVR6weCC0sVgnhlbpsr0AfQg5H995AWsbgC5UqOhUK0qficRs5vBKfkifd5HgIQI_EyfwqGYnOwiBs4NfldYsts8SW4xzYI99L7FLrZMGTpbekM9y6OwfCJHY65FqYQlDUZpmdTlMPzNGseTyN5g8AMDg4M4D9YVvzDDNHFD9r3MAQHLDv_iVICGM50pkPIXezRfiu-brgF8SM6Dx8L-akvhoz3jU8hosw2x1weZhgDnE2mIiQiAbvTokJ3mS3p9VQUmbjUtBVC-TK5u2t6HTsgVwx2cA7OppFascqMqI_R2kJOBk910QIUIXxLNM5zIWd684LKKth55G43XNOY5vtLbScTiJjyybaTIcsJVuHPTsU4BB1CBDl55jCsREB9Sbu-s6QwhC_Q89naah5oDeKWtcV_Dhm5vw7ZyxNv81ijZ_7tXWfA3c5Z7Jr_yrXJQ9qwwcRvJi0TrgykKxFW-oHjHeuYmwJArt4OCb7mD-v1BITLvXDomkG0QQ_9mjQwlnFcyFXxKFxSxiCPXKHSEReBnIWKybviU0zLupWmfcCS3xkcZldaf2UAaVoQzazg0i_9iQ3Mw3eOScaa09cwSpsfJH4PMc-wdQnxvt11rV9GIv699Ob5Z4HHc7PUgZ5NfPjQs_-WqJDu2gjQV6_O8MoGzVgsHpyQ==",
+        "summary": []
+      },
+      {
+        "id": "msg_03478fedf2592bb0016ad3228f255487d2a86d6fef3e831fea",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Subway\\nStation Rd, Hemel Hempstead\\nReceipt No: SW-30018 · Date: 15/10/2026\\n---------------------------------------------\\n6\\\" Italian BMT meal                         £7.49\\n---------------------------------------------\\n---------------------------------------------\\nTOTAL                                      £7.49\\nVisa ending 9911                          £7.49\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Subway\",\"confidence\":0.99,\"quote\":\"Subway\"},\"total\":{\"amount\":\"7.49\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL                                      £7.49\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-15\",\"confidence\":0.99,\"quote\":\"Date: 15/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"SW-30018\",\"confidence\":0.99,\"quote\":\"Receipt No: SW-30018\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.99},\"line_items\":[{\"description\":\"6\\\" Italian BMT meal\",\"amount\":\"7.49\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Subway\nStation Rd, Hemel Hempstead\nReceipt No: SW-30018 · Date: 15/10/2026\n---------------------------------------------\n6\" Italian BMT meal                         £7.49\n---------------------------------------------\n---------------------------------------------\nTOTAL                                      £7.49\nVisa ending 9911                          £7.49\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Subway",
+                "confidence": 0.99,
+                "quote": "Subway"
+              },
+              "total": {
+                "amount": "7.49",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL                                      £7.49"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-15",
+                "confidence": 0.99,
+                "quote": "Date: 15/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "SW-30018",
+                "confidence": 0.99,
+                "quote": "Receipt No: SW-30018"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "6\" Italian BMT meal",
+                  "amount": "7.49"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Subway\nStation Rd, Hemel Hempstead\nReceipt No: SW-30018 · Date: 15/10/2026\n---------------------------------------------\n6\" Italian BMT meal                         £7.49\n---------------------------------------------\n---------------------------------------------\nTOTAL                                      £7.49\nVisa ending 9911                          £7.49\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Subway",
+        "confidence": 0.99,
+        "quote": "Subway"
+      },
+      "total": {
+        "amount": "7.49",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL                                      £7.49"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-15",
+        "confidence": 0.99,
+        "quote": "Date: 15/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "SW-30018",
+        "confidence": 0.99,
+        "quote": "Receipt No: SW-30018"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "6\" Italian BMT meal",
+          "amount": "7.49"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

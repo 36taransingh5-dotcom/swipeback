@@ -1,0 +1,161 @@
+{
+  "key": "4d21749db8ec001dbe805d169ff5e9cb1588fb408d4f7dd00915c76733acf248",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:07.424Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1820,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 364,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2184
+    },
+    "output": [
+      {
+        "id": "msg_0103a6993b5fd586016ad32294dfe887d29ae68fc054ebd212",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Avanti West Coast\\nTicket invoice — online booking\\nTAX INVOICE\\nInvoice No: AVN7K2QX\\nInvoice date: 11 October 2026\\nDescription\\nAmount\\nStandard return London Euston - Manchester Piccadilly\\n£86.40\\nTotal paid\\n£86.40\\nPaid by Visa card ending 9911\\nSYNTHETIC DEMO DOCUMENT — not a real invoice\",\"merchant\":{\"value\":\"Avanti West Coast\",\"confidence\":0.99,\"quote\":\"Avanti West Coast\"},\"total\":{\"amount\":\"86.40\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"Total paid\\n£86.40\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-11\",\"confidence\":0.99,\"quote\":\"Invoice date: 11 October 2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"AVN7K2QX\",\"confidence\":0.99,\"quote\":\"Invoice No: AVN7K2QX\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Paid by Visa card ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Paid by Visa card ending 9911\"},\"category\":{\"value\":\"TRAVEL\",\"confidence\":0.99},\"line_items\":[{\"description\":\"Standard return London Euston - Manchester Piccadilly\",\"amount\":\"86.40\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Avanti West Coast\nTicket invoice — online booking\nTAX INVOICE\nInvoice No: AVN7K2QX\nInvoice date: 11 October 2026\nDescription\nAmount\nStandard return London Euston - Manchester Piccadilly\n£86.40\nTotal paid\n£86.40\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+              "merchant": {
+                "value": "Avanti West Coast",
+                "confidence": 0.99,
+                "quote": "Avanti West Coast"
+              },
+              "total": {
+                "amount": "86.40",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "Total paid\n£86.40"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-11",
+                "confidence": 0.99,
+                "quote": "Invoice date: 11 October 2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "AVN7K2QX",
+                "confidence": 0.99,
+                "quote": "Invoice No: AVN7K2QX"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "category": {
+                "value": "TRAVEL",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "Standard return London Euston - Manchester Piccadilly",
+                  "amount": "86.40"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Avanti West Coast\nTicket invoice — online booking\nTAX INVOICE\nInvoice No: AVN7K2QX\nInvoice date: 11 October 2026\nDescription\nAmount\nStandard return London Euston - Manchester Piccadilly\n£86.40\nTotal paid\n£86.40\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+      "merchant": {
+        "value": "Avanti West Coast",
+        "confidence": 0.99,
+        "quote": "Avanti West Coast"
+      },
+      "total": {
+        "amount": "86.40",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "Total paid\n£86.40"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-11",
+        "confidence": 0.99,
+        "quote": "Invoice date: 11 October 2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "AVN7K2QX",
+        "confidence": 0.99,
+        "quote": "Invoice No: AVN7K2QX"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "category": {
+        "value": "TRAVEL",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "Standard return London Euston - Manchester Piccadilly",
+          "amount": "86.40"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "key": "22d03e2d4187783fa7f25158de570aa1d1945f12c16c4349ceb500f52fcf792c",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:11.338Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1640,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 595,
+      "output_tokens_details": {
+        "reasoning_tokens": 250
+      },
+      "total_tokens": 2235
+    },
+    "output": [
+      {
+        "id": "rs_0eb0422ed8f674cb016ad32296283087d2a1ed82426cf4c720",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKbabYXEKBK1YLQ73bbwPHsWXoLw5GpuPHv-gPOybeaYEi69UL1fgOWo8VNJktyrkjz1m8bzgVgGIkIUev0-f_1-sjhRatIV2qhkG8V7W0lxttlRKQWc9BY-ynhScB9W0zNbbYr-EjtfBmog_nUPmoeChCzKQ45BqcLxwr9dmf--OSD3iYj3w3NJfP_yF1gX3VoQ0RodNtWUvy57jnhqu3NrLwDeOqwGL5WgdSt9RSwxfeurGobMS4cP8o_lWtn7lpPMuv5WWE-rnmasyP6bHzcv4XCAKFIsNeNEL0VOpP9KwNoJx0dpO7oASq6kaqpm_wieOOTPOgtL_N0k7Jne8CdWfpoziWeEUccUq96VIvxmsdYhlRgDc-fNFrsTZ04ZrpKOa3Q4Afe7GhV3Nf73MDiKysOCbb-C8G6nji3Z-15TOTV2cWmRUdQ5X9fKuTvM-FnvtzqPUgx9KHu8X5m9YtXumN46rL6DxTxZzW1YKjUmuzzWIvinNVJVOKEy0RJT2Bo1e6n2eLMdANc1OeViXEb5I22dNoJwG3L7FqjNVgEdPPaJggLQ5KS7vITjULe69FyYqDX5xqfkymjFRhV1PZrlWDxwSIloB7KEX_2KUFmCmI9jBAKTr3S1sFO5aeFSc7iyvgrEpFeeFKWBjCMUoBvlZUAyMX_DjEgegIbEoKhjdBYyCVdoxrOH-GXze700a7qJJ8C-VC4mH3amymZROoNqH9oqW9YL0Ubtl09-Ebx63lIXlMQYM1iLP-mPEUl3x9sir8aWWV05-HN8MZNz95SO0TXQ8DUn7ZL7PmzFq1rPgvXGoTuU7_WHD7OzOH-_3OPtx-lTzU287ntibPZZzFLJZ50PQNrxZ5LDxkC9ssBHgdjQu0HhR6n2YQgnVF9vIzCoCtkictT3EhhpiVGZI4ynLx6iLHEOLjvc2TxdyFv0QzK33W471JrzClphSD352ViK8CVWshHB1Ylpnw3F1MUCinineAiAEdENImgsbvamExxMN00GxqtXtLoEv2gLhDXBVzxCvtcDxV2EFLrFLjy7LvH1TywLFYcGCasL8kGp8GDwknliD-LrWpMa92HMCtf1CvVih2H39r5MG5abezYmEvcnVXhyIG_qt1ZdPgD1lco3bHtTYgCk9mm1_46_9EBYBKl5LHq-ZQAGuFTZkmbRNU4A6AgPPmJih_ZRqGgm3Zug9uZHem4Ks6fqr84Fz9G4hdXS9UvbRI74oQNpz_UttmcBtpCV0moOf_FVmI6te5lH9oimrS0xJwqOjxtkqpShhA2DMjPe5RyX0x-b0n3TI6E-2eL6pMfxAs9Enq67Dd7owLAIZl_j4-pRYjbZcQEOd5lwfuwaqyxgJ5eNGw4Ps5BNU1Px2uTmzyTYq5NQNpsQ-DJ_K9pLVrPCokExnya1cP-tH2KNIyhYqVkYTrZIkZ0nBBemy18KuNscv1Tvkh8n2d7Bq0FBSv0JtM0QH2qu2lIakS_3j4OR8ccGGTCWJPywANVCYLAIWnbxEWxMdaKZlOYjyR-wuz9dj1Zag1wB7E2kXBhUz95RDcw3e8d0fIPJkK79M6sQgRRlRaJDkS-7Gl6O8Ks5eXRuKPPfFXmSn6jz_nvY5hpE_SEePknbA4uaUG9XOHvnU4cU8cIGwrDQgsZbcStlAe2pguqbiU4GdxDH88hGjLWwzILTQCjW6jasTKKQ4_oeT2bP3bhljjfkp4F4IERmjVsPkX0Lzr5hPMWOyS7heyIn0iSvY2bF5SHeM6zMZETAbppe3UDtuZIz9edD31FwjwxDgyWRz1xMbIdFcE-YHWOGM4jnLt3Hop72PtGi0Qxaol6-120R7rvZDMRcDQOrmcdIUToazACR2b0hKSGmhj8xWwpbROPjxJGI9pILuDu0KHOfBqyYKCJSH-zzVEPe7v6e6VmcDQ2SY9MtpKe8BzsRbIGDuxVBE8TdvzOeXR9RjcGpb0q8XVKxpabRYekUez5jXNG-p4MTJZMBXmeux7iqGhm0Q75IkWgI8Dk1ysoIEtgVbmS-8ApAeTUkNb-otE-SifUwinBStfGBDv4RYw9VHzHoE3JAolZEMqGR6aG-CBWJNwFl95jTLjuWoareK9gcSfDmG0drkP0InJyzXgRnncIMo-ZhjzVWIS4Aj4fHMlOI9HFWwmlg0_DSR26bsJ1HiphTb-Qm5XHW2CbIhmaIDFPxaLZcrz3wvAdWhc4OTbuzyzWNiBV2y5FfS021eJcQ_8uDpb1Oln96OtVYItkgu-YXOqat2OjcMXEBf-SgdlbNnyQGhtGlvtGVTxTGahK_cbKFSBDALJB6Qv6gqzsjVLGpO5LpBS73RE7Er23ip0TXoYhUaA3W-nVGG5Bb5kEruL8esTg4BfVsDIHbJCr9c7ItVr9e6FWQigHNereBDr1aARsPCQhHJtu-cESi4AmclxAh6M224OjZ5Vh_2ZL2slU33f3HPIAxGtckl5BehtJbC4mSEf-teRGONu3dHS7UyKtkCn7h7hUddd_ZgTqxzcS2TKq-e8YbjDdaQpmKlPQx0JV7sqpue_14JMfLMBazQLFkZmoIecOY6WlwBewcCR7TzL_iOY5vtL9NxFzV3ttgS9v3bELFEX3o74BSkpmimn7HlAjN44cwnKkmo8E4ErE8eGQUPWYDVjEel_UUeIudVJFkMsKojkSzxl6TxU8fRXCmtmhwP45FsuceaKLzdCzhSThxA35CxSrca709NBHgZ3EP5pXLDvNV_mRC9eYwMSCuzWunkNW9yOIt6TJKIOXDcd6VmbW_rwiyaMAtiW-vkI60u099E8V1jqBQEcQfBXet9R_H7outy-3HRidscWWG89A2pHNH3KGjhqpBwgfAO8IksD_cWCZUlaqEeeGzHjyx3glrjIjGVhmfwfuyVHcyfYSjZ64C_-1ox50wEJeMkv1sQSDoCfBnC1u5QkyfMKSO6G7rN5Rg-de3uRYvDNUJktM7B5cbHdBLE5ZxTnv2zaxgIPs5k7aYdrrIvipFcDxvI7CfoJkVtPGBSYC1106bsEkSeomOviPgNX5lvreMLuhsXRZ2-hd9yEy84w229irr0EBXJWzmsL1QYLYhshaHinQshtg7iAWvYal8NyAOrhNUidsNvRy9hkKLLjx5dayJoO6bX89TDLF6Tip8XQjGHXJxrtySqEDHf6sGCVdsueUAZ_z_f7X1bAZiFxinye_ORJ5OnvO4NNRDph-c4XkuOcCRzNK7Xq3JcQHu6i9B8zfDt4VYqhzqMKMVsSWFhkJSW3hfXUVSWA0S1JX-cKNekfAWQiDaadW8rupg3bTNvasm4VjX2H2UH0iDQUA0CIiG_s0aaxdcxVe7gZqXi5qXwvAEInUzeONfTz4hcYCkM8G64s7jfwpT3-q-RXcArCDxfRu-P9CLa_2SrlYtVrZreDDTfWqbKUJhEaSmilWO4aKYSssYw-ymO_U3EHe1YuNX4iKSjLIAxs663wcTWUp9qf9yFmXQ6BqVX-X5ml7dTgcoVNCeWm2-BD24i5ko5HHeRXDU92jilzI00To8X9T0NTWij3RacaGiMVfaN9JR_LYfnhwjAyCdo_eAsYBmFC0sHzaxDOfW0UCDaTNSr2FE9nR-tP80G7d0iueupW2ivrFzuBbxast4F9m1tEvTV3jH_nVsqxjun2CnHhalb0aEctfnXipdWbMOjH9NXrdEMSKR3ScY-W9-Jk-CX5h2WRc9NILHWA3S5UTIIwV1gvJonrsV0VMGcGHgawRFPdVBCDZannZp2AkDxHvz3gTpFlGBsG2BCW1nlQ5tDTN-oAMxG6Wvs-EyDBKzlVqmDJLwT3L_NVCZ1AVnIeJX-fHL0ARwhvtuUYLJfoeHCl1HHuo7-IA6ab0nZ0GpeGhOx9oZ6RFbFlH1V-CZ4TYn1_zMTA3gx_LyguY0ETXpCkDGbIAA9nV4N8mGFLUKm5EN8zndxh_RVjz5Kvq_W40dxfz43uduJLe3X4H6sUOauVXmcL8un-dL8Pz9bNTXnb3XpD6QoFlxx2Lz1Ai_tWTbwjire2IiSsyvsMzi6eP0ZvEFsMn6ZEcgYr9cph--Kawgft6MFGlKjQQboP95okIMawmyRFN1zOz5-yNTf9P7XGsuoyCaKd4iF-Ql_VP1WNdbO1UZhzjGCSzT-_PcieBYNRHMwGYCRfmjbVo4uYFwECXruUfHyTYVPALCk5XeWlv7f5uapruOxO4hyFnQCrPjs5-NPJGkuSBL7Ix09L_ESfACASVas3FnQ==",
+        "summary": []
+      },
+      {
+        "id": "msg_0eb0422ed8f674cb016ad32298a14c87d2b688555807292cf6",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Pret A Manger\\nKings Cross\\nReceipt No: P-62219 · Date: 16/10/2026\\nClassic Super Club £4.35\\nStill water £1.30\\nTOTAL £5.65\\nMastercard ending 4242 £5.65\\nThank you · SYNTHETIC DEMO RECEIPT\\nSYNTHETIC\",\"merchant\":{\"value\":\"Pret A Manger\",\"confidence\":0.99,\"quote\":\"Pret A Manger\"},\"total\":{\"amount\":\"5.65\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL £5.65\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-16\",\"confidence\":0.99,\"quote\":\"Date: 16/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"P-62219\",\"confidence\":0.99,\"quote\":\"Receipt No: P-62219\"},\"card_last4\":{\"value\":\"4242\",\"confidence\":0.99,\"quote\":\"Mastercard ending 4242\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Mastercard ending 4242\"},\"category\":{\"value\":\"MEALS\",\"confidence\":0.99},\"line_items\":[{\"description\":\"Classic Super Club\",\"amount\":\"4.35\"},{\"description\":\"Still water\",\"amount\":\"1.30\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Pret A Manger\nKings Cross\nReceipt No: P-62219 · Date: 16/10/2026\nClassic Super Club £4.35\nStill water £1.30\nTOTAL £5.65\nMastercard ending 4242 £5.65\nThank you · SYNTHETIC DEMO RECEIPT\nSYNTHETIC",
+              "merchant": {
+                "value": "Pret A Manger",
+                "confidence": 0.99,
+                "quote": "Pret A Manger"
+              },
+              "total": {
+                "amount": "5.65",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL £5.65"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-16",
+                "confidence": 0.99,
+                "quote": "Date: 16/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "P-62219",
+                "confidence": 0.99,
+                "quote": "Receipt No: P-62219"
+              },
+              "card_last4": {
+                "value": "4242",
+                "confidence": 0.99,
+                "quote": "Mastercard ending 4242"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Mastercard ending 4242"
+              },
+              "category": {
+                "value": "MEALS",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "Classic Super Club",
+                  "amount": "4.35"
+                },
+                {
+                  "description": "Still water",
+                  "amount": "1.30"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Pret A Manger\nKings Cross\nReceipt No: P-62219 · Date: 16/10/2026\nClassic Super Club £4.35\nStill water £1.30\nTOTAL £5.65\nMastercard ending 4242 £5.65\nThank you · SYNTHETIC DEMO RECEIPT\nSYNTHETIC",
+      "merchant": {
+        "value": "Pret A Manger",
+        "confidence": 0.99,
+        "quote": "Pret A Manger"
+      },
+      "total": {
+        "amount": "5.65",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL £5.65"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-16",
+        "confidence": 0.99,
+        "quote": "Date: 16/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "P-62219",
+        "confidence": 0.99,
+        "quote": "Receipt No: P-62219"
+      },
+      "card_last4": {
+        "value": "4242",
+        "confidence": 0.99,
+        "quote": "Mastercard ending 4242"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Mastercard ending 4242"
+      },
+      "category": {
+        "value": "MEALS",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "Classic Super Club",
+          "amount": "4.35"
+        },
+        {
+          "description": "Still water",
+          "amount": "1.30"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

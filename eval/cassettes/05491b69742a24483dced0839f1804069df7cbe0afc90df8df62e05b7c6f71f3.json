@@ -1,0 +1,158 @@
+{
+  "key": "05491b69742a24483dced0839f1804069df7cbe0afc90df8df62e05b7c6f71f3",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:10.861Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1606,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 846,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 2452
+    },
+    "output": [
+      {
+        "id": "rs_01ca0f4b80e5cc27016ad32292ca2c87d2a384a0625e1a3167",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKa0W6aJiWZI_3B0xmYbB709kLZ7HlIxNXZxh2DugdRZB1_D5F8bkpDJtfEYfI_OGiUkhsn6NDHhJbf3zPK05k6_UKEQsle-aN0nJlpS-mz9MfiXCfZ9cQGPlfC9fsd6TnUTeQ6cwgiA7BMfCx_bFO6_IBc-V46QBBSst6RrZxe0sd436eTY1tyP2a_Xdn2BtQCIFKmgTOjfeq0KwDIXRjUV-_iOrSgSZ7UUrPr9LggjT5EDNsaWa1EyAd5WrJVEYoVAjLrQNrSBoH2zJ5oi56be9QE5Dc_tMpkCRSwLBqBKJPRAeZage_3Z179-mepHSzGXSOW2NrgJqHm6UHwId5ywCP1ZmbL_OsIo31p20gOBv83wUzbp8X3Rq_UwW7qAbbmHtybWifVvTR5FfzW_p1N_6zAb52zlYiqBIscHD9bi9DHaTqJftzoN-xg-5fCrvnpDzTDERjs2rZ10FVGWipz6xsV5A4e3LzZXJvHY6jh1npOeuRz7TD6yCHUgQaYWfUVntu8DHGdPq9Of9qFVl18FjyhPMOQJrAExnfGJK-t22o_7Z-aDRxPXgBfCxsV16_WHIOfJYvsVADWtr_6AfR_JyefA51fHzkvlATXxoXtSBfTo8klx02WkKiOVYMwvpTByl0qSXA2rO-9D8n2L0b-8O-WrJCF8DosL0GkI9mEWlmTwAyYex0RvkG_v9RSZegm6nkYrgTnviGQu9tzGpACXqY1uFQ7du21kPhD1Sm4K7Gk9wniCfh2NE1T-o7ROzzCwH9CbHhmo5KvAltdats38NZl4WLR52QlE7gwlDFRzHNgsF5CUQH_7Kp-IFM50F1Sp2ZVO0wky_GHDnk1Sf3El2sdgX5P-Z2wsTmVPgne2RNjKoIHYGd586wB-g4Dq3jJvo4BalXC-2IdYukOecI6Xs9b-YpwtWrwe8XtFpILEjfScQMQa7Y7kKIUuVt3PN_D5L0YRpoQNRgHKAr_cQddt723cn-oG1AJ73VOYdnVFsHLnMsRbxlJrEolBuzDdsc6h1KDBGmGaG5tCrEqieCnJnusXHzQybwzdv6AfSSApP7dpMU-oN25FXaLJaekwQGCDNzercg7FBaOH4Dg8Kq7FTWFZryTEF1RTGtsKrywsowjegltPITrRZVtRpMjrFH3Q3DFzutbBhFo-56qtw0FxGHkCQtm8gpdtCO5-nBdlUqqKx7ZN98aVOmLNJvyWwgnhAy4l2agLfmgDSLVx-Y8LkaH-_ZFjiaLpOBZBrJ1LEaZzXKnaRaiI1p_19ARR9ZJ35zTKN-DWXrJ0klqN7LTGPE44Ue4DoGgSvTTkgVmEia7pYFlyb2AqdEm5fjHKcjg2p6MLwGMh8kR0qHnOXSXoDk92snMU7w_cZv_iTA9qJUoeX4gzChDim7h1lXnsLznR_Fn7Ais4wXqgtpy2r3LYNIYa1UGjla4BEeME0QSNToc91LIPGyZ4o-XwoZ_peRATc4dQPaA9TrOcol_asHvy2qAkgNOc9QybolpZSsnuiggTRdWuXfsL22VQUlbMVQ_cJUyF5YXNi_vbxTT6pVshU6Pkyc9sQKpK5I6bUZbkCVsazxLSWsgTh1hRDQphrTyr9PB3T6ayKoeGO10n1AUdZRL6lAEofl3yd7gMi0EMnoUAE_QUuY-0wLzyBYYsTTzoYMWUQ1F1Ng81AJKWeL4SZyaiLUGJzNF8leYO60gt-ErZl2604p8JEDTqClaVGUuFMUtPfE4zgLEMvdVxjpmvEIIkpTF28gveRmKZgk1NEhcsuMnOHeFdvDUS3sGLXgvzyn_c_rqGQ3-b1zW0gBOxVLmJZZxE3kV2guiT6pXMG4NxKmIvyYxK8DBMpQhSbHSNxbdd1oVivFanQ1HTzXffWXbBEWwb87BQNaA5RfNkHXzPM-5L054dKTtRq7u0nutYAoz94HPm-NoZw8NJqdQtuibcDV0J3GvaUww9lDGBmeOtJ-nKkTG2Z4kwnMIlq6RyZYbRzRCuNuk2EFMIduV-h2Dq_vbuwjw2zoDgGMdzlOyuS1okIiI9ULA9CXmDN7L8MNsCdZ25LO4fJDJEj1pRVGARLrsdDQ_fUyYdmqg7iolDfnXi4hktfASYF4dsUL8iwAuYOnNiyWKjwRb8K-9EbscqoxmeKUz-9cqNWMlPzVe_96wYtWzkoTAaGDBrJsTjpFtBp4kkcHkswTkq8uHW7tWnTPrj7EiDYhaD8S3Dtl6boILs-fmZqlNekiAYDbX6Edo0wgno4iQYcV63ErOQjyrYkh7f9gv_HkEZFXIgU-4-w1QoLEwhUiFSsfTn8JD0zrLdfxf9aQg6Tx5eBclZsdGzA1aid7AWfp_OvwYwtm8fLDs1RwZfKPpKY_ee5qiwkVTxd-SQG-_KkMJxurlL_bKhsfOcy94frhUcoJnf3HKYaqtjG_6c5-w_2vqzLm3xcivDbJmeLEdE_L-7llSKFw-HLl2X4JwQ5Y9DyAKEJYmYHbT0mS46j3--_YH3H4G23ziwIEh8xxQk-VY6kTNzcl_ikJJHbAMfqzS5BMu7Zvwdu5Ry6PngtUJOV0V6sCNgjfATJ5XLNWH6r7tl3Kc5fggoeKODZQxennA2cmXROLYZUrXoYVC3tlh9fLK26gouFK51TrA9cAbNct5nITnmd2RRCp15U0-GmAurkz0RwemsCPNKRoB0qRtCnMKtrSDy9L1HYusemC1CQ6u_cM58McMi8lpaB0YomcwHUsf9Mrg2qIHvrGgktx26mr3ZXrzJ_sG4xoBQzdEZwMXXmj3eLy0iV3pKre58ST9BK0iORMIlU4bcDyAZcz6K4kAKzB7Bjzgl2xjqtnktnRciuqrzDvM9syzPqnB2IbERiCiOdlknEQ3IIBTGfmxP_xXF65m0PiSD2He3C6YHL-iklindVXMvXL1QtTVg1PCepvf2qHZWnjpCbjvfYL5WY296mbGkPaJnkzUFNWDxfEwPyxefQtkJCILiBGqgaH5GM75MydPA6MTrGf0XZrZEYUALTQzUs-XucUplq1sDlcN8VIMtOwqf8lMV1VB8Awjs7ry_x4nW24lNmnvc9HRP5D6RptmaVP3BKXZAFXR1qIbObNSrokxKIMRnkhwMY2Vtrh19TLU8QLljK1VYdVcePQJi9W686ZLQ1nycDOtJ0lXxhit2SIFOfFY3X4heUdcNwmFRDLTISTqxKT3bZm6yuteYFpEbwRYzPrJY-SswobZ4yqoP66PIo_tVVLYNoTsm0xsfSyjnejMoYFL2RzW_mB-Ygbl086T8nMU5I3T6mDF9mwDCd-wFNJ0FCUwVsDhWDv_8EwdUwf1Xo61lCmvlrcf1lmHg0W6IfHoisprn-lYShC2q7jdM0UsipumxhiaJFiiSl9va4KW75dqjWpUunk7Qq0ZTFVoinMtndYO5XHEXmFbrJbu8z5QPnHG6VNOP-5BAO7vtBFvmaWnISzkNzPmdDzf8EC96Hoe8H7jMsXRx_qIdmybOUDH5lNsno0xiygpcBgo27B-MaSjoPVtrT2tEQzj5u1PQ-209NcNBiXSSAZQvpJonuz0yHWzecKy97BVc9Y2sTBVkbp4YLs529XehRhNyadnpXdl_OgDzMNSWizqUDKpJ5jJBqaJAH-Yeq3Ipgb7lr8THvGUJ8k7iSqpcNoQ6euI6pd8HFw28m_Sc4vE9WlZ7KNgV1UDGfi-MPZmNNv37vYcPaqmlQy97Lm3pyxpix59wkW3S9eVX8c3Hm_oB8dLuPh3X_TWONS9LOE_COY10e4V1gCo2ohcBZcvKzN7Yq1hvhHCIzuTTsMYH4tyMFEzwPAD5quq7PUXFDBf8EMgjSPmZLiWfctkZqf5CXB0VeT649ZgvpHcRh9JEao4zzLjSQ-vRHnpYbuDwvhmd2yO3LmUCn1rVrGGQrPC-95_hjKuDlSNx10Y8rYGZNiUgyw8-8sSlO5Cw4GeBgVHi4BGdVQvcaVuhXngAg_biIEUpawl-sFuazg0UKXgLWCSgR5VRW3AypWxuPiwUm-BWF9xfn1XRN6yCDEYp3uvwfnhXDLEc2H8SgxwB7gzML_rcnzavPzkZoS2cdCLbGgwp9EtRC89V5o-APACWXnpf_NIL_jxdxCh_AoMu-w3-BtvzCxle9MgeRCjmYTi1lt1-VfYNWhuDuCTGD6_xXlg3Q2BXwIQQg7W-MkW4H27e_7S6MMEtzGJkXayMF771o-eBEsCi59QaIkEOfJ4oskg4HBfTn48OBVg2gX0Sbf4rF9Pz0KxFVT5hIbb3z27a8oUYcgxku10W2fAS09ZjFFBU-yDU15TwYBVF_F5XduEbGkbeybuehIjzVyeHE7iHujhOJaO51Wmt6EdU9mBQT5bgWJkig1dM8Ip8_HGXIx56Wo5bFZcTMHu2PqqI0GfyQRa9RQR_7q-ZF2pPdQHY35xn6ggAVfyw_IbNYrZ0Ai1QtAGlxlNC_rY3qlXF0Sju8YbXRd1PJhD96Z-DjNpdNyczK_-bY_B2i9CQ3ZLofCQHddhVBjpO9xogkErtTLzrbmE1LE26ihK3cLDbzcqz8D1P9XyQqt3XRWPFl8mYyopw0wU2OpzJG3gqRZ6WEBFxwr9OdB2UokLEmCoWWI7wk2yJHrk7gTT_u8FiJVCWIpNvr0snv4KDEmQT2uHNnuuGt5U5he3Yop--en4F-CGTmG7YOusC8195CUzf0skVyynCpyZ05FJXyFbd03y4sa73pxXGMc-bFTnxj8-V2lsmaxBlfeTF5p02_5_SnFVnlyQVSWScJJWrTw4QcTzk9Hg5qLSpVGtbBbGKDWnUCF6s4mFLin0VtrNduUHEXlmKlU78eue8FacY9tu2uMrdJQhS2geAPAtGMWepJzlEAIRMgeqYAIV_XItHB7Jd6CPCWvlUSai-Jy_70VnK9efbJVZtrhz13yTnlHSg1gyy34kEIYhZATOVZ_XsSjb2-HmAa0POuRloAMljmMPkPkJsMtWn0J2-LclL1ThrNrkDiwiEUVnRnJFiWda47TtpHmorhqAccq902fSjWoKKRSsqGyir-u2Htzq7GApwsGJmi_wwQGCgB3dC7LlXIXkfpbIYxdkP64Gh7q-6Yo-bEvzTybw4PTdyD5WhTJOOOcn5fpQti-7GhUFuGZup4vLxuW_bIAEzJnigrQ05-BazViAcVJ65dx6WHrW8IOJM51-Jzfa3vc0lf8J5qqD-a92QiGuvbN4hOrOU0V0VfQ8o79hqVT5fcnHgHJuHi7-2SapaqaDPAMshu9tl5vadNPCnZIUl9Xig-iIgzS7Js8_4gYvTqpoWAVcNoNCmT-QTREWB4NIfPV1nawDuEuTOMgvWeKjMb_wlRatRqX01CDhlGT3K7K80xbyzPDx86aYyztorX5ME73u2YAQ1mcKoTI8TrKU-7zM128FydO68cFIRPViFPfRpYcQHrY-JoMl9Qi7gQ8dJ5AxravnKxnCNQNH20gT4Vzgd83acb8sv9laPDm9DaooTBLh6TTDc5CJjGWn_ikvfwTfBvK2KiLcB4opxOkr1d2MGq7KYd1WLjrUc0pjgEZJq-CXE2AcdnxiGj1BEb7uqiRcwuEKihaIxLC0uJsFBFdjZSXl8ZRggZs19VsxVlc7f098cGNKZJmskmNa3vzRAPZHSR_8_hglYbGDbdHWAzTa3swBKEfMZ59O4vx8i-R0Rmf9PIs9Cvv9576GlKbcZdlw2KIIMRjYvtquincCBcVYYSJ0InrVPIce9N4xJW5ak0b4DHhRyH8GaUAu5C8x3tewR_Kv9LcjyDHGBJ7NsfTyu6oKPurBzGE2OBtEmMz9rae5CKV-oiuhc9kMB_5Y4bxyAJ7ccpdHR4U6tLwKRp4mJTOwGSB0KjnzD9sGbpimTMVUS-zTdcO60GuM9ciRgRyWWv6vUBh-TzWOBA52V9xctNdD0JfHKU3NCXerZQwIZrrqlq_9VkrnyaOjNeB56dFBf27ZO0mpaKcGseFRT1Czs9eZLyn8BJX7SL5ucfmOX_Irsp4KYF5y57dCzCwsYSuXyVJcdG4pT5JVFNnFj52Ty4ZtSQZfLgXHZaRheQC7F0TkyBSl1YwCEfVMIvnLCIoGAfpImwW0WmZZaX0gfKS7oJQst7ale1DtSEmoAwYUe-_mmm3g55e3Ta5HC3oKBjoqAH-fUbhMrPjsS17W3qoGP1o9MrMpAehfg4CCxljYpOW3ACu-77rtiZtgdMgacryWoY7redahj2GA0-ucOS5Y8bMyn-b_lIQBmkfwHZfohak_cOvXttHg254dFAn_DMOKZcBAseNs-AsVQ8bgQk0cqg1HIfwaJhj1qeOFJVf3A61icC21ZVZMOAQEoQdyQaxRnLJssSuk3alDkX4KUM41lYtP46zUZs6tdDmyxFZVg50_v7BKkSVdzWJZkfIIhdckUhKSF0ZETopezAVJ60ZzCkD_AoIVB5puXymGuGxMDBJaMoQJveo5LJa9gW1OoGxdyHt4u--KAbOFYz0lOBdLgPgnl3r22-psNq4Dbb3Hkos3r-9QsxSVF26dpuYPELFTu0kK63Ip1PC2HGq341PGR7uwxyRYKVT9AxMJ49fM7PJTpWGwMTU3zoAkE9oYU1pkOj72tayvTv6MEfdy_tiVCE-DuVT1Bui2c6NKx77aX6rO7wrKZQUu-v3mHpkmcX_LaQEpu2_Ivo8asvGWjPDFYYyeG_KzAs6V9_7SXjVH5IwAbb2HLB2rmzz5l3gvEBcvei8KSL1zEuGDlTxKir0mvtAqGpqoQDLSdPQrJrRq2d1sxnuvdiIn_dA-8LiFhnsXGleP-Oy9wTLc4AWn4XdLizpz3ZZNLlR01_bFedFj6PWngJdtIHJ1Gltk4nMDXa5wRNdUAEDCa8WRsIMkwoJ89qyQHrgpJjKxNT3eNt6wvRsnRpqqQw3UA-loHiPIrwC0X0jnWn0EFiTUa1_uYbWkqqtItsIZuta0CwAAeRya8TegBkwOC8zNmZ7sT-OSBvAba9sTH2AEWz41xEYyLZcyjkqxwPVfFvIcNZ0zEzp5z3ek_0dx3sD951gdAImGqo84za6wpdSxT48AF4Xew5rvGi6AFJT4N_7BgWslz9HKMYlOfu893wmhi-jIcuBiPcOYqV37___nJZA7iAEt-LPhqXs4bwLJCpXR9jGl45eP7Uwru2pozjEX-BXBT_sY4o3NgZRnmY2ybwWjwagNYTxK-ltaUihR_Lz2MZ0lMkbP8FgDOIW8NxNUY4Jb43aw1pbvxpg_enIfQKWGFWtquST1qDZ7E9WKKTeXNgxVSqQIFX5PmEmYir9lcImfXXxe4WcOMTpvKM3UdPcTdlnDiBwM9xdfdU9pfbMhe53vj1BA_UMv0FrK3lGOGM8_hJoe4TyTx3iUSvYXle4eoQghEUddW9J-sg==",
+        "summary": []
+      },
+      {
+        "id": "msg_01ca0f4b80e5cc27016ad322989eb087d2b669006bda63e14d",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"HUDSON NEWS JFK T4\\nJFK Airport, Terminal 4, NY\\nCUSTOMER COPY\\nSALE\\nVISA CONTACTLESS\\n************9911\\nDATE 10/16/2026        06:31\\nREF 55120\\nAUTH CODE 099112\\nAMOUNT                 USD 9.75\\nVERIFIED BY DEVICE\\nPLEASE RETAIN THIS RECEIPT\\nSYNTHETIC DEMO SLIP\",\"merchant\":{\"value\":\"HUDSON NEWS JFK T4\",\"confidence\":0.99,\"quote\":\"HUDSON NEWS JFK T4\"},\"total\":{\"amount\":\"9.75\",\"currency\":\"USD\",\"confidence\":0.99,\"quote\":\"AMOUNT                 USD 9.75\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-16\",\"confidence\":0.99,\"quote\":\"DATE 10/16/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"55120\",\"confidence\":0.85,\"quote\":\"REF 55120\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"************9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"VISA CONTACTLESS\"},\"category\":{\"value\":\"OTHER\",\"confidence\":0.8},\"line_items\":[],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "HUDSON NEWS JFK T4\nJFK Airport, Terminal 4, NY\nCUSTOMER COPY\nSALE\nVISA CONTACTLESS\n************9911\nDATE 10/16/2026        06:31\nREF 55120\nAUTH CODE 099112\nAMOUNT                 USD 9.75\nVERIFIED BY DEVICE\nPLEASE RETAIN THIS RECEIPT\nSYNTHETIC DEMO SLIP",
+              "merchant": {
+                "value": "HUDSON NEWS JFK T4",
+                "confidence": 0.99,
+                "quote": "HUDSON NEWS JFK T4"
+              },
+              "total": {
+                "amount": "9.75",
+                "currency": "USD",
+                "confidence": 0.99,
+                "quote": "AMOUNT                 USD 9.75"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-16",
+                "confidence": 0.99,
+                "quote": "DATE 10/16/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "55120",
+                "confidence": 0.85,
+                "quote": "REF 55120"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "************9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "VISA CONTACTLESS"
+              },
+              "category": {
+                "value": "OTHER",
+                "confidence": 0.8
+              },
+              "line_items": [],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "HUDSON NEWS JFK T4\nJFK Airport, Terminal 4, NY\nCUSTOMER COPY\nSALE\nVISA CONTACTLESS\n************9911\nDATE 10/16/2026        06:31\nREF 55120\nAUTH CODE 099112\nAMOUNT                 USD 9.75\nVERIFIED BY DEVICE\nPLEASE RETAIN THIS RECEIPT\nSYNTHETIC DEMO SLIP",
+      "merchant": {
+        "value": "HUDSON NEWS JFK T4",
+        "confidence": 0.99,
+        "quote": "HUDSON NEWS JFK T4"
+      },
+      "total": {
+        "amount": "9.75",
+        "currency": "USD",
+        "confidence": 0.99,
+        "quote": "AMOUNT                 USD 9.75"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-16",
+        "confidence": 0.99,
+        "quote": "DATE 10/16/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "55120",
+        "confidence": 0.85,
+        "quote": "REF 55120"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "************9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "VISA CONTACTLESS"
+      },
+      "category": {
+        "value": "OTHER",
+        "confidence": 0.8
+      },
+      "line_items": [],
+      "instructions_detected": false
+    }
+  }
+}

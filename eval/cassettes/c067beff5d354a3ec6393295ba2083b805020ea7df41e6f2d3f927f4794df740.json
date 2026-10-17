@@ -1,0 +1,208 @@
+{
+  "key": "c067beff5d354a3ec6393295ba2083b805020ea7df41e6f2d3f927f4794df740",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:51.578Z",
+  "response": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1942,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1687,
+      "output_tokens_details": {
+        "reasoning_tokens": 1163
+      },
+      "total_tokens": 3629
+    },
+    "output": [
+      {
+        "id": "rs_0988184ec6539109016ad322bd8d6887d2bb5def0816600ed8",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yLDoYG4j82NewLHqzDqLCmKmsmXZSYRG2B0-a_dWCYAQYK1imwmk4hGL9Xa2Yc_6b9GCR2aDAT8Q9d4qlXaodhZOAHk1Mq7Qcd4yf0DUjI_oQ8dvav4huQvqpOn2AprMioytwISl-5bBCToMhkgkBgUs__hqDHrc-TK_CLg-d56EQkS8swMYDHvgQZ8rLsSV6wKtII_mAl6pNTeWI0XdQdFhBaWk9GDSK6sjmTePzPrrkUnXD0_2Jsc9ECt_OASPyVWrmis4jdTijfT5oaAGtEQbw2k439Qq2I2GhopvcPQ7PpxYccg8Lbqgog1uJjNKKaGZUYIh_4vFKMoWnm2pB57kEItPR8Bc_bWYhFICkJAtJaIo2PHVvPwB9uhk1g5T2nLv6wY5EitsJW-TXJ6qXoyJf2DkRpm-M4hGR9JYAlLtR9Dmr7B0D6j86dNMlouyIy4k2eRK7-Fr2WnU8f16eAtONlux5F-TAygtBNqA4-bNsRQqnsY66NgnXxFnfBZ0ghV8f3GOHxmgiriGPfkpMyhuMiuS6Xbct4U2-cGCpyqqqToTvqIli-pa7c7GT_CBD-8JlNRsjZBJ14nb4xVp76SZZ5IhuUVVbSVKk-V2V4jlB9XjZSUvdUmtsNMfeibq07stSFVaLM8htLefxIrwguaaPnJW1YLi37rCq9KkBrQ0vzDFTQbJ3S118k3baBibxDbuMBwyzSJ4wEaJLUYqgqLoAyGQ1d8s9CKtd04xNw-uGIhyQ1TG2VrZperTBwX3Z3kIf9_joroZJS3F795fokQq8UJ_rZsQhNj7WIZChGRMZlLCgvWOibGnbcebzOB3saIpJloHBSjevUJVWixtYTjH1HkhwQA7uMaZkR1vWsEu2hXiwOprovADGG8E_sY2Xu8MFFMyJy1eRjfCJD7b8UAqiRGAGLIn0PEE82dWBxXt1tF6NPd61OZyRlbTzFm4-rBaRA1OUlV_RifoyvyzNxiUwzcqyagCXTy3_x2tGsjdRVkF3GNOhnGadwc0TyBVVIN-yRsWrOmMUu05PoxlWCiiCtL_StwaPsHCYG27YVUE2XzzJLzo8_DKrfhKnRHvIfmlpmBJs4Z053W6OCiJVxCa5rRUbGtPOP0_LdLpX5WnljbGXi94GQIG_f9ieOVVJJ668JmNhcGJQ-N_GDksHmI54oGYIIuZvQBcsO93j-VLtFqo4_-2DTkjxjs9kGsmXXQScISU5QaJNkhaOHCBGfN4v5Ip3lViOsLLg4I6ZSF0G3cz9Xl2nw-GhupW5GTs03tW2AOGUrTPXS2trof4whHYL2azc0WX1TAhXeqI88ZScV0HiMuEPhiM6Y_BxVLoFa9_dlkWb7S7PtypfO5EpZy9N8c8jII04XlH1OS4Z4Z2DUljK7I-3E1EgJer8U-9oS_LERToDGFB912osB4uQRDQ_PaoAEJGaz62tok5Hye4iyqbLi_857ED1xJsyERV4Anp-tmgAGPKNaEbwD2eqI7JMdU1QIbV-QUO7w7W18SGRPIki8rNha5Z7_iyDQBtpUURzaua0QxR_WQLOUhSp-EAOfFCJqaCXHuIoBYLTlLZTQMpx4JdcZ2vE2UMwvD5pEZuKUVj7RTjxgs2gngpgh9OCU3xmvncGp2Vb2UeOiCezx2RlBGQ8iTmQ3YSGeYJ91AxzR-mcJ-Q9s57W6-oPlc75FV8XXtUiEPyTJg80lUBft246gvpSw36WPVprdT-6uFZ5cfxiA9ggjoxJdYjOfCXQl4InfTapEE1_k12IuSo7ZlGTr7ztLeMPmYRbTdT_THWWcHEUvkdcPSFEgkuo_L1z99oeIXyxTdjTKjczoFiKYPudcj32_ltySMj9YJXna3j3yOvGapwb8Cr0ITy97waROLv5eqR8hLDoKCyz72q6Cwyg7nqrbpfIfaW--PpOSqijewqJ5tgdQMVWGenrvjhO5thNa5FyNhUA6RbUzj9y54qznzdf9eJVFMJItAp5HJza9PDFlZp9N1ELhQnPAEfNNw6FFZNfgTJH755E8Sfe_aiLjgVFIZJcanox1LqoRJrVD_R2ZZwZp6Dk60pdYooehLjh9tUr8JZlAwrhLr2uJh196GgjqYynd6-pi4kiTR4sPiaSdDtfDeAZDUfa_p3iRvqCPoLnqiboU1866or3juRtnPPVlQ8kZSxEgZcJqokQfkxEk7OiM3r-UhkJPHL_RLlk-XTBnppd3xhh9Zja5r8BCeKUCelfPef6MbpeNqHlUIdby2HWrPz3cdCK3TIgjUofTC21xqLXn8PKgKpnIwyPwaXjYY5f9FonERAleETMTnMBXJVcCPHV5QxMortwCUwQDbrkIIWrpp_EZ67iKUAglWp2gFMLh1Sn-9zbgnurD5rhak4qAFiCHBJZXedHCkwcCbQ-ZSEsD6XrYEvQTT1jQTWiOW3WbekkEmP42-q21aUGyh7NvWMvMtHAf9jb81ndbWVqk8pPLDkxsLCB405LOUS5jreO5S9sBbiaEwmnfYHrc1Y7R76Qt-njDE5AD9K1Ew-pdgGxz4u5Hc6GI1fOuzvNyjOI1GN5y9KAhR1bNJQPX3WHpkKNu_iTfEEn4-lUPFxCxakgVUn-e-feoTTpCeK2TeQ0HmEeiLLmhN6SWKXlllMHv79VeysjO6p1FXEcGGLLIexZphrfDYX-MtnWQ-TGoj-DWF4VC4fSx0oIJQJwH_-6ZVBqbqvcI6mjTURVKV9sm8HbhreXPH9IyjIoFLvTR9OfDmdUzVytyqr2SELn1Oq9PJKDbN7hNzuYnsy6GFKJZbmZGaClBAlF16yqrMUEg4KleV7uxecUZoVW6bA0FPAoO8Q89QychACRVhC4UiT9Wzkala0CtjnFJhNyWceEb6tQx7-TcsX0r5YmDhqw5GtP8dbOBqA4-RaOXcVUbGEcgs8xhd7ZsjaVoVVvAzZZaKg-zjjA9oucne35EHG02cm0gz44ziI3WW9e45Mza8OuHyjRm7qAa5Bt66B8RQLzfXLaybFstx5dpLyPDs86jvBZx7c8l8jLSJ9bBFZRhgi7HKVRr8MqFoI8oc8YF4bb7-72HGdHREvuXQkzEMstP7sAHCZ6JTxkqerwqKjtAO9bcE1eU4-G7BiUXa8aCHZnNJC-OuYwOw8Tb4B_1M3sgBJvevEk9HYeP9z1pHli622R_5IohBABWEAncN9YDjIGMBUNzs3oQT24RK5Z16QCvPFcaJbdolQi2W8nGVOZQjc7zGIMuGJbzWfLG9_hbcuSIioQb6gQa_4RADGBPbT-6Z6-kJbCsUcWnyuycZjOXqH4uwkwRi3e-XMwHja8SmfDxRbYV4NMXcV0UK6xO8FYMBprb4Kd5nTPi5RaEAa9VSx5B8cVCF4Dh_gyBCnrjaaJ-PnIy1zkAqJFws_rsdyCZJIf-uHxbTr7xVOdeL420HJO--t08TRi_oytAhLIJSN5P5s1HekX6Izp3TzPl_Rp6dY513vBq2SlyNyd2SbKBYlsLRpi-YJmqNSmFIlFUZzWxmwW93KH26sc3QrJEcGd8i-p3akKeE5rIzURJKmFtT1z1OI5wgXzZvY7p7le_rZRzaHwE062P3gRShYxiF8wEAJy4q50mKslzpBy8QjcrcxTEJIQzTlUoeriAg2ZX_TWugB3Bv9VwsqH40E7wVBuPTUxfCW0ouXY5CfmLKKowjdTvRd19UL6b58qrslvd4GLliKH0U5YYJhIH9Apj7eonmyhXxUqTXZq5GFZVenzgkFzfzchUSHryItgQ-zY-eFPXLDX8b0E6gGg34aBXcAjIt8-7zgnYtX6qayRkjalhH5rzz0ki_9Ay7GddgLhBDZufxPTeAx05fCThcrMb_7lyaA4nnC-SyzzR6Rkvf9841fFm9nkoyuV9KIqBKhcN6DKHKMIwvgCcuCYwT1OdboNXv84hveAeE6XnXbVgEcre5cZiDIBcXpnSgfPSLdKU4jFtNwIaXGdiGNtAuS0OHJdwdcdUwWHngsMplJ3-c_OglzHc6Yuhs0B_-DGa5wazxJ-Pi-xucGOG9lsZxDmLy23at3io9en6RdO9ftS88AgtjSC9Agtx6OplFrEsIM8sItDiP3VHGRvCj6dp-QRaTGf94onB-Yjge01xKulBJiENzLxBY5HulzHirXBiF8c9gr0TfbNLDL6UnHG1lkFB_lMCckEUXq23KlesMOQjaXXPn55FJ6op9yxOrVbtY19bYemG9-G8lanb25V9jefZJzkjyuEk8zCwaiT62uZQOZSLMSyLIGCBrQHq-6dPcHPp4nCQDulnUVGk3zEYq179k734PEgWnJRsh8fcL0VTfvD1KemJKLYO29NPL5pAbo2fFk2tFPbMD__Z262hqWk-o6DdkLdnSzkgjDTH51HyZigUGRkqIir6I4z59yskhcbVosfl-jSzExV_o9rVC3fnaHfMONC8BuqqdMtAgszevI7Aa-Bdguiu0n98fn6PaN51RcvsxCxj4PuM1R2vzHL-9m5J6YBTKZaMPvlCTwNBosYQZGRPUCaHzJwNR1JMmdQLyy2dh8JFt3JJxdJF7MGiJ1qFGMKgtbJ_Qn_k4SZOYGfTKW2A4SV-7_VOyUvrdtQkNhWRqYUoRaLWON3JxtV1gYc5bs9kmJLKCTw9F3XmE7e6UeTt8k_m4MirnRoVJ4gtRRaFzQwen9RcwPJykc8vSisM9aRYElangjsOkq1MXOqdo_mgW7V7fKy5XTGWih9_4xUK9aLxco-x-9knE_GJ-rrt_0OE8fHqXEoawew-nZJbD-YECIEztRFS742CW8uVnzfIo-35u0Qn6C8eM9ZF8sbRi3bxSg2E9kqTYSmwHf_d1zKwxA7aNN55QxoGpmbnNCw0b8SMMXYTqPNhIwbr5xsjAYjeICpQEE-9BNCaJN9oM4KT9iOFOu7wgSDIi-X3jmORJ9kvwy4Vh_hmBKTVobrvNuEcTbocWYT8OgkfLF4rsnVrspJGVDsvmpmqMehYjwmBvCVOqx0DDozwwXrS_5CNPyJN0qMqwZF1xvHmCgcfljcxsl_lJ_cmltDSR1PMSO8TvQ9_buZNdRFNp1pRrYF6MTNmxxJM7BJ2_N_ME3LytZE4_Th0NnySNADlxgp2_GmMH_ZRIdiG_bWP30nuAB8Gd6RTXwjisyJ2FXgOomqle6jnkr-a9kT-qKgs9PifkuBRxlVE0EPIdyAQdFVFgjJ3EGTAf9I53j4YRCLjrSprEuPsVoAk_8ELTB3__0SZbGRMmKE04vHWizj_eWYbMWAdZEzFDLdEbCIws99WbfT8BBg-4bJvFkQ0fYQe_xBD989fW9j-wIklKOyEj5ySRkKBJQsGnZUjDyxMaXaubtSt9mGJtuIcn0qk-M4WXZRfYkpUl55AVAK5vYtScwWQBsxlYugNmyysUuMMyOtkO223OC34uNn-x78aceGC0UvZ9Zy7ZtG0aId74plRTg5rjoFiu1af-ktUfeKTQuE58DX8nO546ad4MsdiPqJ4YStbk8ijjyuWn4gUGORpQDk6kjX8FWz9-pqM4-vTt91Wp6904kK1-Ad9C21bzxmd445DNZgXcfNbjIub8Ade-oqXSM9LYnrNHzta-NRAxvvGV1MGjkh21FMW9gnU_X-eMWpgSX-1iZggQp3aow_OcPoUATWNgc8q8h4dTq3vPk72IwwFrPo1ovP91-cReJoock3N6dSnTPfPkrU7s9pWpCB6nyRuAIJfUcEEsRRa4xEt554mEec2dsanQtNUXVT-u4BJOhTS_rM3w3yu8LA52GI1luOs1JJb_cCO3x2qsJsoOD4JsWxUIjGvOMDuTwlIQA4xG2jlWoavGyGs4jWVsuwhn07do9IfpQ-00-1_g1H8wUhPWxBiiimiz0bm8p6ojEuD1hg7vZD5UJgqcYmRWsFzgtDinwqvOlFQPP3JaGfAGgXLXOVXi-RFw72X5neNGOJ0zPr-gdWjce0fH68MGoOOMGmS7ZA1wgYR6y8am7BHlTN0bwtxQ-B2q55_ar8TPf1dEjj74IHsrMVUOu97caEzFKTyzf5UYpnmwnLzbjmT_pekvnQExiw7kGLdrZIYJVXuosmKzE_ADzgxp8i_3oRnEunfqHsGDpZwzDU6gSoV4ITP5KJQYpKhOHohqbqV3QJTrnjZCMWBwEAtzqhyca2s3SOydINiXQryepB1Xf3xjfmdnnHBRGPjTlMYohKe0IUwFA0gVPtUHcWRGrG08AVm2Dag-7FVyRrbxv-BCqz-y2ib-KxzfARHvktIcbqYzAzwbpOJhTMOTOnpKHvJucNAZjBKINCibzxijDgvkaNwXrjqfJKPcOsMWPNuR3a5H21BAdxDXfzhnPrnWMJ09S-MwkhX9OaDVvEsO8n1e3jioSwbs_aLpIhKEbjC9IckpZWd1SaoogY0GqHo86roidbOYHaPSvwfT7tK1MM14ox0vKZtsrH0k_2mN2tPQve2bLZXbBC1MjbOXM-SCKsC1KldP89__jyCbA-95CDdqLnzDE9CjQV4rQJ09kd9pWWwZ7TwGIjN1PwnJnxhBlfF4pZy9HgxK1923NbOf61KFTtxQE9dIFhQRV2yBGqLgnmviO0-wnBWku1kx4kNAIKXQagy6ZUHgUiFBaiipKL01UPV15vPJJpc9oIDbNqQSolXdLgTL_SdiDMEjrVfXcIf0PsudJRrHo5NYIKDXhl68cfwdNhJF2tdPsVH2FwIBmtRVprP_Rlk4q8pYwnjd0vu-fIut6Wam6Op64Yvu7zCnC5-X2SVEn5NsbrQfLz00eYQ4LV6VC8bG9q-YdC6Ab1CaQDO0hjew4PJYmk-bROmRTZodhcUI8agM2I5BsZT0zruvVmxZ7kqTgOEudF9KZdzFkncZkLvK9KMHdCs9fhnnpgrnx2RpqdRHfQ9M1Els-jXdbW1GXHvuCb8vhAPrHBakZG262ylPLhMhehRidWaN3LskW2mv9b4glR2Tidcc8UsUaOFOlSDtEaLpAeH0TEV_gL9hoC333KtiyArbiqcI8BKxnse_6fo5AQ--HBGTe5FSERiQ9T_zF_2xwPxLkoivFZY7sXsynzTRt2XP3v6Y-mBFD4SZWQ7roVpp9xpa4YhXlnkZC_hhca2t1Z8e9KZ5yZo8JsdwKQ1xrZUDHSeMiewULH2d7m-zrS4X7uvVN8UtUnnslcdj6Z2ptfCtp8VzileEIx_BCm1XmYrhOCx-DjlTGFj4NfpNvbTHXbXwIzZ69S-tNWthpbwFIRG7kKTtd857iv1ugHmVxnMQHzLPISsNjODgFkZabpaEhGf4nE7SCHgOKtqwrrLsRC-yvsvSFAfbivlr7oehy15YoqwkaHLnjxRagUa7ztKIRNu9Yx_aSkZrDXGNzWMHgXHBU101_b1iofA-ptB-hz-G8b1VAq-2KFHqMWk-V2CAao2QB8ZP3cCwmvqqLOIOITD1ZV6ytoyCdVNb7lGQLagJhs9EO2CgplERzNi15EBF8R6AAcrmOTZ7XoR5_i8wRP_pPI10Um3lcZPEgBlwOLJe9fkP9dTpkLJTqWsH_xKkoWKkgEDNdhD-E41MC-PRZIm6RzOCTRBqJwaJ7OCKeUb2kcz4FvgmfQm-PrqRpwCOwdISL74azZfs6G4bveoQQ_i8fpQBvYW8Oji58QLUn6tMKPyceuP17G1yNOGOTmf2VOB41gzxCiqdaqafTuO8wizoBfgN5sx-b6D0puZi8_UvFWTLnkJbjcxYrKGM-o8JtX9V3uYtlc-QCGjM10ft5J1SlwGUFc3mU0F-cnANvmpefMcUUDmIefNqWBb20r3Lf0N46Hj1KR9OoVYyE1j8KdF_wlp29jm52ceFRL3otgYAo3va0LBxCRZ4ndnedT50x43x-F-zwy3LMWxnWKo-CPw9OUG2VWmcTLxWYq5GiyCnfsPVffsoLnhYy22Z4rPDFBwsMTjUj9iXj9LGiI6VuGh5FWMPdmw138P4Qx4Qi67QpJiDSPO7zRAaOym2VsVv9BS5i78KBtfY9TnxYDoJ1XsPUfs0oT1hK4iyV6h8kv-rDbDT5wHFf4kHMLlNYl1_KxPaCnxg230n3NSrvJ9g5UTL9F8DB7qKfZWhIr8jlbK29toGjpN9v99aKXQDHRrCL8dTrBTWg33J2RbBhuvBDhF8We1OEpBvjhbXo0iR8NwXfC0q-9inO7GcuS88y0KLDIhcFhDvajEReC9MD8v9BgENIw5TKhuwJbmEuc3EC_jebjdeP7g5jVReSohCuvAIzkC4cKhAX7bdDWyRiEDUNG3QviZeYx11H_p4Cc08EV6s8PETX1qC8oXjRxU2pkUq1abLz9tbM8OVCNXvO1r8A0mrj6WaLeWVgGpcniw_ppNSnvm_brS62xzTw7GuaVkG8ERMSCRQI__BG_V7IspdlLiVJPqCNxfp26c5ohVBgWEEtRHr8CK7IR5yIXESZc8iXVGMMlnwvauOFdSkWON-Bf6voRkp09tENi2u5PgIi6WxG6WG1qWDsNQ2ldoAhFOFy3ZO2P91N0XJHG_gTzwAIKMfM5AqOzhbLm4-PJJNmrhtVY2oia6ZPT5zUMcKk1fvJ7xnmArJi_fcb6wBpT_zk3LwhU_4OkpF59KBnBiHfkai7fLQ0dMqAGBnhGj_PDv95XxwEvR4m-TXMMm4sQ_MOPsnR-YJW_H3MFqp68v9nRVNn3ezzfP4P8GFS66Qu25ln5LD6xAUXB1E9KCJ1WaESBUuyn3DCzTRPhI4sl6SFD6ylfwScPYi108riUDRksqexx-F1iGb7giL32O2KtfLxsfSfiVfRStGwMnstEkAOcr9opSKrRJbLWmFzAVc3h2nOBV4VwM21GavLIgm_b8Ii4c04_ouHDfx3SIQiDJZNPo4oPDjDP7_ob_BfqZbE4o13DrXln3BZ2fko3J95igEem-yQMxog_vHbl8dV6GV8s-9ch0cU1VJZr-CIgPY4uF2T6mb0EEp4Lt433D_OVcQ0pfr0RzoI01Km4QAPJjMXjffBateIiWWq91uJBwpQ3BEoQKD6GPSWb4bgmwBmxUO74iWv7hWzf71tv2EzwrbWaLGmQxcXyjvypqijAohd18hcDHZ7iue7SV2apmokqm4__qQttDE2XVx00BIrY50lSvhgAASHLL6tUhZxkZwpg6iap1ikrvVpI8_dXyLe8ppdRwpuKX8lzWV2lIYiodjhPrjejYRYvrtZmhlmIX_rxWsw_KEux18NaRFkBJdMhrMflZtNhuXxL7a7TeuJe7nmkeEyuXTy9MTquQ1FWKU0OwztgHfwDX6vBh9k9iCJLM18FGj8KS0wwU6jj3Ir0gAzw2u3wlmohmpDA5FtTuNEGd6HAN-uiG0-PlWrJwUAEe2b4e0otnXT5_YD1iLJryCWCZfFpVJuQWyasz-y5h5L5pvrfrGTnvdycGv88YkUbwD2dpTJOQbvEVsHY18IotHpqdMJ11F_9UDV2YVrEHGauKdhZBz9R1L1YrTFadn2dvvf-AyL9TB-s1xe5okVrTiYrII1SXsJQdU_IDFkXCQBi4eNNGqkhUYICADysknJFxWea3kXGv3U-pEdLA3XNIrumgMuhlW246wxrDiuJ-ldEq_4b1Zq5xXlTWgU-QBkAd2X914Q2g-0mrLk-dRY2MTjBj9UtTUV8DZZdb23_e1j2zLsLZCMlx3piPVWHsn3pdeeXfeK9bGLGkUn5yjXdMPIBwA0dATmKinCGsO-NOO-BgOgjGzs8ToXPDbw-o1NYVruS3mvEE4FuLnCkIYeNJkmctOFYadaJgv_qCx3i04iNV01aIlbwEk8_-ZhWkJkmKEKLzqUNuMGyQAeQZ3J9biuVYDvFlHtQVRhtgFYvq07g0QOPeeAWk_1FjJI7fJ7HLk0mKDgTX-LlQD3E1RqsE1EQotjfYWPOnHx2FwOR5zxn6NGC43IDQ3dpmYpo7XUCZ8OUujIx2F9QueHZZp-bSGRMIS0HCDkeNK5qqpzj_J7NXJQ6Ak-jDovHAbau09DiMFwasWLzZSNdEOSRxXvLUgUik1QSiVCcCA-36Pr7B_ioj3pGOuwyJ3Qc8JD--P8GTpCaFNIve5ziGoKE7qlrdId8nYLXXca0VmbRbJtJidj33aESQUTC9-ie-L4qgV1kTWlCOtqjUJcES7UBB-uOFGI6J9J3yctPUu8SRQ0hj9PAH1fMw0JS2rKNBBmrzlHIqPEK8hW9ZyOi7LUmPf112GqHzw2RwcTdsBAPk4kB6bk8e0pY0Ro-AVMGwuiWCerP6cNAu_1hyzereXhYwTVIdnk3LcQvlGIodFMkbjT2dlVs1oRyy1L7L1GeV6dZRoA3V_0F3cqWwZF1izap3rBRFqq_wnGD-j2hW3RMsfGjzqmHglaXUltlJd3ncEYciTjA1eEE1T14s-XigzbehV_gHQS3p16wT5rtN0SLhdxp-fR8u3-u_zuAmmgXUy7do-m0bwPxO2x8d5hJcwPdCjxbRTuaSwvPHwdiPQLLl0uKAo07s4BeVE6aU5clHbkYw7ffHbqMyL_96uGldswTzCZ_M7MuKLU9uf0m6SWtHYwTdcVJLh0XjFc5HrBpvyPBElGm5A253OExA9skg-DO3IoNAFxwFhP0LxSXnL2cdMRKnkyt-9qNQe8C4l6tZe1OXZOURk_E4o8JhF_cllcMwWlxqx26csa1UC4decm-XGV72ylosP26lcDFSFuzWljn0m5oLjibFhBV44nZNPjtEEBJR6fDecrLWhcVW2Xh06maVyNSB8mVdNuqGjxD84VLuldQARh1BcmaRBQIp8tvXqemyBtLF96HzuHyynCk4MH9Ce5VnXznn2CUwFmK2NNx0uAjrw_M9hbVBrF6Nt_dISAAD2u7DLFdABGLsEDw4zwfKw-HI6KkxgHBPKUqR_R1m3ZNHXdOjG3awVXTmeWg9ikqIu2WrVmZxQTEUgTD_lZ3YO_myswPl8OzjtRRohCGl2VR3W16gujPT837G8oxzG0a08qOhiWv9MXd_vTwXKgepc0r2U95I-6WdLvFo8Wx8m_euU2Th-Swh-4MX5fdbxblWKpWThuE726mR1hX1Niigr5VcydTkeau_f-mFE7G3anndK9u0-JzNL4p8ZoYGdBNq7dqacVZV9zRJAhcFuc_Jq3lKAkaqd1yj0GL-wqyGe2K2uTiP5D6UkXXmAZbJojS7tZ72_zfmwlhjiU4i8UvlvarBmLUq4JKW14fVdK8BhTCbDu1FcQMtyx1gZzRejsn8fEVx4mTm0NcUO-xkaZDHXKXNhU489_lAqffJ0IxhlHpgF0tpXYg8ig9M7Uk4cZ-RWLmt5Zk6fY0Uw-ydtcg-R_dsPWnAFAv5Z-YcsEptYu9yIr1dnqqWDu4d29tprMyTMnY0PKIUDmWCGDBOH-RFmFFqvs4X9dyX5imW9GIWigC9rM92QDGtFYKngP9pGYOhCgpDgLDDd8Rr8-yTWnM2_7ke7a48o9AB2hUoO-z87FQZsZU3hSXIPGyG_ydO1eDrQEqF1mw0h2mMwlPIJYkOhiBbwpRuvaR7Umm0pP4D-OeCjaoysduOWoQmRw5BAThjt91w_8bUKiXuaJYmJn3s7o5uQRHhpHL4KCf0KlpbjZKSg8NqeeCSf8JC0RBgYdSrzquhenBUNWH7JATTLWJmbxrd995_1DA9gpOdkc5N_0TDbRiqniXZwvbOZphT6nK4CY-j6BdtPn9klFFgOd-ZX1ZuwMq3_Dznpixq6mb9h7f8XJ6BFgXB8e1YWGKuG1HQPK8VUdya7IP3lqK5VBAcgpWKrn_aUHDrUGdq0s8872sP49lLDe6dKzi6B40OKlF-nCtqBnAk1NNEzr5zJ4hSkCicd-fxGA7bW3q0Y-cPAlCYePsY_j2YTqiH9zCXv3yFOVSP7pnB81yOFdHXxSeC8Zci33CYnDmUFz81q1yviAeGpUbe7-HHhempA3qxoFctVJQBt0P15ZnPfcSFSLuG-F1t3hWhUyBNYfl8aX40EUVTDyzIzv_qBrDx95VNJ3ESy0a_hHMxuPQ93vYNfWAVnnUvfxGdOjqI4koJ-XEa8Hk3_p3hRwMgyS2VKLnvVuEEHBBb9ROLFinQo3GhqnDhkztmyzVpKCYhH54z04HHFSoU6OMjfzN1k6tSecSC2hP8QNQ994ldFG6sx4naJYfKV3t82SOiYkYFMH2Bz-TgB27xVA6J6BIfC12vIlYGM1-Fn8uOlK6JP65sv5P5jeBXAK4cFc4GLtsvl6ubzxYOWFO46RoMurryhpQHUdwCyJF5O5Z0h8_E3pSFw0wP3iXID2RJc3GCTYd8zLCRWIb1q4xSXDHqvU1j2FE1lmm8VW9MjJgPwRZ503E0V9rXPB6JLOe63kftlMOAmg6XTj4S7ix3t12NEdNYyJxq-1TiShFJtHeADWqrT_W88w7h0xQhuQ1VUl3QAOgYbF2QDpYbFvx8hZtAy7N1KlWcLuFytJr1AqpkMoA3UM5F2j35vSUKBrWEHlo2Pm9mcXy8sBGBLKqiOio2DshYwi6nQP1J1Ys-Qyxvh9LsLXcJ_-0NB_AYdhvZTJhT91OVFCgGVY8gVfTd6ek5GKziqW_U3VWVXfC4JKJm8eFyoxCFB9m0JTT0nmzyMH369vlzLPSRQqkaWIxIx3irSvbpCXxXbiWYwSn8Xej5qxChg1HGLPKVqjkudsaM_FG2r1dsKMk7t_2ayuayMOI6AclGJoN6vtwn7HHnnX8zoND2kYZ9RzMbjT17xLchVo2EQM-Nga5W6KR45194k8PgcCw_9KjzweJv9NA42Ny_ewvaVb82AgtgVHYWLQrWzSn6HPvCFGSJq62d8fEZpyv_YNfrKXqLpX6A20NwDEEYhnlLlsCzm6BNwUO8zMgFpTc6NnuRM4HOE-smuGrXotLM0XvxTdf_2ps-94VVt4Tah-qWfSYSvjbLWe5g2VdLjaM0APTyUU6yTKckSbbFx4ekiIf0Ju67gJMl88nuZW2T7iRwonsIE4im68keXbfSDzjyg4GWCt3qK_TqpkKvM3UsUgFgVdJGoWs8hIxuKfKac-5yhO3SPJ3seckdBnYua0URNlSPvWIoam_z-Gz7obd7EZzq_dAAHtnSqYIkf5PcuhHCG3wZyju0YwQ3wgVWNWs3KLlQDyavqCw05-WPmQxwQdn7-gtXT-PTLJRoHtNrQ8a_jV1dijmF-7wkSkcSWo70qzMIjH5mK2vi9qcdvW3r2JFqEQmFB1jbeSX3gHu_LewLk72BzTM8kU6m_g8bR2I7iV_tZ3Rll-o1g3ubxUbBZ0cwm4qAHhRSOWAugvyqj91IsVZIQCI_fmrkWHrvuZmgoPdjLypgyfUu8WnQ01CqeUiIJJxuxtQJu_xJ4DGuQbZbXn5Prl6lPk7_CitslkT7o6c52AQuPxB4L1MvAuIl0H-Sx9X9ciVJkdPtC4zZ_7ct40fvaoNDrQObdVWr75Bv5EOsyvnR0_ziQPrYTVg4-P0sxCfKTNnwJNkI1KbiihZCaJun18EWCWN94on3S9_2Ymiquj-h2MZTp8FFmfCTofRVGe3hwEMxgLh1gr6kDKDSewtBvsDk5zTnv9LuCpME_RPe-j1uOx48DirnGgQblj2nlxCYyGkJJm9hm0W3F632KE-1VYi1xrkrEqba00Du9CpX0nnEdFr4jgGYxNJxq5X63v-US2LzrzxjdMw280V6lyw6PH7hfqhDnrmE71YV4fDLe9Og0zQq4GdXuVKtQdgLpJ8DorG-YylNJ9FDsKPHxSGKmrcHxfuRmKWU7buZX_cwc5PCpoO_DU4Klvi0dwZ3Hv3vRN4xY-J_fsR8Vqej1uLYSui_wj9V98pu3gKH50lT80GTG1BNn4LVkwgaVfZTbtgrHJoaWs5KwfTU2ijQKUuikz_IJcFpPtigHzgvo1hDD3KZMrNKibxCL-6FlWyvcGcjLYoU6K5ndX1ezhQdvOmabrPrCFrjzVJh8hHP7rcYSMU6Pe0JXcC_EmK-0cN0LHYjRaAN_qm3Jgyro6DoIsEZqsXH8TD13m73pAf2_OOH_b3rgacHaLFePwAulb1i0p5GijU9wOia2ZS7UIoEVFslQ6s6hQJLf6thW575GyVeTBCYnYhkcpBEvsjsDSLt53jCvqUwCmfV95qmrxs2KNP6b5o0nE-cKxBCzR8w7TV7KBi5yM1s3RuJQBavjoGQjCT_DZz9Kr1PWCBYceTzyBbTOM9JydP0uox45z0MqiMr7v-DW11eCKYv40TxnJHPE_87p7PHYq0KV19PtCLWHAX52iDei9MtxP3pUXm25cayasGoVeuuKU82XNDzCu0p2plwrnN6D-mlBd_2JtVaaiB4dxdLcA69XXyNdtGIxKGx6FbHtV35bPsTQbOi2Ls3Rlg-o74s31Mj60VVwXBsFVFvkFHeyQFE67WGp7ThTd-V8LV4nsl36V87ADZ0VkflPHdt9GBZSuwehHNA7lqzKwRmN2T9GAasdDJ49eCMngMcqhSgjyb_voGJsl7JHjo5U0v85qVqJfzN23R9TPmNi0Zgm7cCP1plLKnhDccDTlsOv14mnuKtvrBZsGcuGIH5ut-Kuy0Hk_UQ0dE1yUSv3IfXlvEHL72jyA8O2bz-ptKQm-zQj-FrXLjY09O6KrIvMNeLAdpFDXrMKFllSX7oK_SUggn3jJ-fyJA0cfEekClu4gq5qIP_pTCO2nvRV4ZE89K5__08i34xvcu1huhwBqpdH32b_MFJYl2t_DSBtOyXaA6o05YOhutqFu44auRycf5kTWRSAqISOJ8s36_pYM1veP74sATczHJ27aNcIQiRKEnL1v1E6FzQpUJi2t6fXa_G1TWxwUxi4AqInzDuXnZpU_cLlR4SP4l3pqZoHrQvf9FUiR0Upd0sAVhLOXek8jQ_eMUcElCyHtOa3RyNI6s7Emx5SAF38a2SCjCSG1MbQJsd-RGxPkl9LSt_142__iOn3Dd3rRPnDPK1PtGbZlgys7wZcW_mifIrXK643VXGNBSZnTHUoPu0vuFhmlenfrl8cqG1NLfsvr2ikiwWYF-2T7fA-dun_avAVrHpIMwmJi6SOn8IAhDoSQpUNUDpRoYg_t4SYHdG0sH0bjRTtl5W56ZKWyz2zrYD6RCozfb8tvfcVZaaACxzY2oJnZoHcUIfEtAX2wXQxVivJQFFSWU3AY9rKOEnhkVHmF2lMtP8yVru1SScEZf89qItABaivJO4aR0lIYSCLrjvblmXWHOo4PY9becggkC-ukvyto_bBUlTS9zGaNetWhlYWuJgRTlKK8SvX5GKfK1kqkDuFrWolDrM6P0pAiSNVMLibLqUIZRd6VRxDt1rkr02uLWTGAn1rzHXxr2qM0jRB9dclv0JKe-2ezDBllS7us0zPeZ9DZcDrmgZyH9J1buft02Saa4h08p0ZX6h_PXjgBasLlpb0doFUWAuAz1-aI15wLcOn6NMDtgOVOmzEtNrnSHblkdyDWfjYKtPpj8sep4l6xAg5YuuYXjIb2ZRyQ0MQnrx4fxIujJnq6gaYDKV8aNhlvkOfweprJtdD2tNfuB2ef2BXH28w8-FWY3HAM7vM5eIrQBvz6IGY2ieV2-GVfAD5QFojAvhHSR6Evdf2SJYPLnR1yT2vQ1qiwYgdTWzfaz0qcQe9QwBs36gCuUKHGMezSrdIrqhhyLPrgfFpg2WJDj38of-C1RsK3IzTOk6cVdt0SyGwlMRyU6LHJCH6lWbjWfIwoUXSG9pIse7aYmBYvAIqjooKmo5yiyWAzMTICrylmESCKy8t4ofYaKqGqu0INNAg0CE-aprSJx5LduKJtTBTmMdfo9ZMzoNjWtjx8Jssua8AEZspgDM0QCAoOJN8x2nPBB6j9CunO84cyINifgaGnDBG5SPSGv7c0dJQRtdBjOc6MXv0oYSMtRXTv5LGf8pqDClSPY1nCLdkuBevju920EzQg1qzHeEfW0eolT6pDBRUd_9lwTd1mms5voyguuvA2fUngjPQKxpounKDCEW-5kn_m2Tq-_Pi1KMVffdMqhjRCZW6gWbjaaKskKCycxf-2iFs6sLtBaHIru8i82qp-Qm-QhJ_sAd5RupdV_3RYpA2x9yKPBQp3xeB2lKIgUD_7Ly2JYcel7s-fROWsqXoUFtZGAZgMApg9x1T_M3LrwWe6IXQTAgfOwq-vaQP0FgJ-tT96PRH7oNX4jope0z3vUOvMfIy3YlDmNolIuDM2xWA2O6Bc3Y29zsBXEifoXVxyUoguA4PWyExJdb4BPOj3VIsZaIwjNFGIHed2WfIUAPDGjZPgesQiqdc7H9_e8GbIDb_o-8fq-fx_38JsaMUgnpLTVTqZ7QeNkp7g-x9CDG4TOkWIlPz_qau5MtBX1rh-HtmHZ2FYkdkEY5uXyrucHntcFTep5dtW4JkptDJ1Cf9s2tOmuAOULO46Uh7Pi_zO8Jr4XrAvFy0ZVkJj5Iiz5uGr2Af89uYWhd07bXhT7VibuTUwhMbdnoeiHBNOZb1LlAKYvHQmYuuUBAqBKnNmgoXAkIVkGDLx0NwITPMOZvj17a7LJUisB-7dx0FmWNxzXO0dVotuvhAhOeAe3iyZlIv1jQaTfzvcwwzv_Qt5eH77gcGVYgUJK7OXEuRv7PG7DG1bGNSDIKqn5EvUUexbewTG_KGJ6OVjPEM5W4vGLuSUdCoE-OH-L8p6kL4",
+        "summary": []
+      },
+      {
+        "id": "msg_0988184ec6539109016ad322c1df4487d2a9ddc46fed96c65b",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Wickes\\nHatfield\\nReceipt No: WK-0410-2231 · Date: 11/10/2026\\n------------------------------------------------------------\\nPlasterboard 2.4m x 6 £59.94\\nMulti-finish plaster 25kg £11.50\\nJointing tape 90m £6.25\\nDrywall screws (1000) £18.00\\nCorner bead x5 £22.50\\nDust sheets x2 £69.24\\n------------------------------------------------------------\\nSubtotal £156.19\\nVAT @ 20% £31.24\\n------------------------------------------------------------\\nTOTAL £187.43\\nVisa ending 9911 £187.43\\nVAT No: GB 000 0000 02\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"Wickes\",\"confidence\":1,\"quote\":\"Wickes\"},\"total\":{\"amount\":\"187.43\",\"currency\":\"GBP\",\"confidence\":1,\"quote\":\"£187.43\"},\"subtotal\":{\"amount\":\"156.19\",\"confidence\":1,\"quote\":\"£156.19\"},\"tax\":{\"amount\":\"31.24\",\"confidence\":1,\"quote\":\"£31.24\"},\"date\":{\"value\":\"2026-10-11\",\"confidence\":1,\"quote\":\"11/10/2026\"},\"vat_number\":{\"value\":\"GB 000 0000 02\",\"confidence\":1,\"quote\":\"VAT No: GB 000 0000 02\"},\"receipt_number\":{\"value\":\"WK-0410-2231\",\"confidence\":1,\"quote\":\"Receipt No: WK-0410-2231\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":1,\"quote\":\"Visa ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.98,\"quote\":\"Visa ending 9911\"},\"category\":{\"value\":\"TOOLS_EQUIPMENT\",\"confidence\":0.97},\"line_items\":[{\"description\":\"Plasterboard 2.4m x 6\",\"amount\":\"59.94\"},{\"description\":\"Multi-finish plaster 25kg\",\"amount\":\"11.50\"},{\"description\":\"Jointing tape 90m\",\"amount\":\"6.25\"},{\"description\":\"Drywall screws (1000)\",\"amount\":\"18.00\"},{\"description\":\"Corner bead x5\",\"amount\":\"22.50\"},{\"description\":\"Dust sheets x2\",\"amount\":\"69.24\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Wickes\nHatfield\nReceipt No: WK-0410-2231 · Date: 11/10/2026\n------------------------------------------------------------\nPlasterboard 2.4m x 6 £59.94\nMulti-finish plaster 25kg £11.50\nJointing tape 90m £6.25\nDrywall screws (1000) £18.00\nCorner bead x5 £22.50\nDust sheets x2 £69.24\n------------------------------------------------------------\nSubtotal £156.19\nVAT @ 20% £31.24\n------------------------------------------------------------\nTOTAL £187.43\nVisa ending 9911 £187.43\nVAT No: GB 000 0000 02\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "Wickes",
+                "confidence": 1,
+                "quote": "Wickes"
+              },
+              "total": {
+                "amount": "187.43",
+                "currency": "GBP",
+                "confidence": 1,
+                "quote": "£187.43"
+              },
+              "subtotal": {
+                "amount": "156.19",
+                "confidence": 1,
+                "quote": "£156.19"
+              },
+              "tax": {
+                "amount": "31.24",
+                "confidence": 1,
+                "quote": "£31.24"
+              },
+              "date": {
+                "value": "2026-10-11",
+                "confidence": 1,
+                "quote": "11/10/2026"
+              },
+              "vat_number": {
+                "value": "GB 000 0000 02",
+                "confidence": 1,
+                "quote": "VAT No: GB 000 0000 02"
+              },
+              "receipt_number": {
+                "value": "WK-0410-2231",
+                "confidence": 1,
+                "quote": "Receipt No: WK-0410-2231"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 1,
+                "quote": "Visa ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.98,
+                "quote": "Visa ending 9911"
+              },
+              "category": {
+                "value": "TOOLS_EQUIPMENT",
+                "confidence": 0.97
+              },
+              "line_items": [
+                {
+                  "description": "Plasterboard 2.4m x 6",
+                  "amount": "59.94"
+                },
+                {
+                  "description": "Multi-finish plaster 25kg",
+                  "amount": "11.50"
+                },
+                {
+                  "description": "Jointing tape 90m",
+                  "amount": "6.25"
+                },
+                {
+                  "description": "Drywall screws (1000)",
+                  "amount": "18.00"
+                },
+                {
+                  "description": "Corner bead x5",
+                  "amount": "22.50"
+                },
+                {
+                  "description": "Dust sheets x2",
+                  "amount": "69.24"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Wickes\nHatfield\nReceipt No: WK-0410-2231 · Date: 11/10/2026\n------------------------------------------------------------\nPlasterboard 2.4m x 6 £59.94\nMulti-finish plaster 25kg £11.50\nJointing tape 90m £6.25\nDrywall screws (1000) £18.00\nCorner bead x5 £22.50\nDust sheets x2 £69.24\n------------------------------------------------------------\nSubtotal £156.19\nVAT @ 20% £31.24\n------------------------------------------------------------\nTOTAL £187.43\nVisa ending 9911 £187.43\nVAT No: GB 000 0000 02\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "Wickes",
+        "confidence": 1,
+        "quote": "Wickes"
+      },
+      "total": {
+        "amount": "187.43",
+        "currency": "GBP",
+        "confidence": 1,
+        "quote": "£187.43"
+      },
+      "subtotal": {
+        "amount": "156.19",
+        "confidence": 1,
+        "quote": "£156.19"
+      },
+      "tax": {
+        "amount": "31.24",
+        "confidence": 1,
+        "quote": "£31.24"
+      },
+      "date": {
+        "value": "2026-10-11",
+        "confidence": 1,
+        "quote": "11/10/2026"
+      },
+      "vat_number": {
+        "value": "GB 000 0000 02",
+        "confidence": 1,
+        "quote": "VAT No: GB 000 0000 02"
+      },
+      "receipt_number": {
+        "value": "WK-0410-2231",
+        "confidence": 1,
+        "quote": "Receipt No: WK-0410-2231"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 1,
+        "quote": "Visa ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.98,
+        "quote": "Visa ending 9911"
+      },
+      "category": {
+        "value": "TOOLS_EQUIPMENT",
+        "confidence": 0.97
+      },
+      "line_items": [
+        {
+          "description": "Plasterboard 2.4m x 6",
+          "amount": "59.94"
+        },
+        {
+          "description": "Multi-finish plaster 25kg",
+          "amount": "11.50"
+        },
+        {
+          "description": "Jointing tape 90m",
+          "amount": "6.25"
+        },
+        {
+          "description": "Drywall screws (1000)",
+          "amount": "18.00"
+        },
+        {
+          "description": "Corner bead x5",
+          "amount": "22.50"
+        },
+        {
+          "description": "Dust sheets x2",
+          "amount": "69.24"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

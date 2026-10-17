@@ -1,0 +1,168 @@
+{
+  "key": "26e3b14df66392a18dcffb6c04ff09f9e42a5f128c708bb2767dca5ff5a12cd6",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:04.113Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 1640,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 868,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 2508
+    },
+    "output": [
+      {
+        "id": "rs_016de43ea60cec06016ad3228baa4c87d29a281a07f1a5459f",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKToFSHsD9uP_JJjUaxX-sPNQpU4EQXQq35_eUgcuKv6Gt7EhUDxn8LbjgLhvmnE2B_zcRGpTv1uJnIAH6d2MrEWtoIctMUoJ2WQtRWUjETlsyOkUZAlRCwEz_y8WBVOt_4__O2zwl2BI8i4JzbjT-2TVN1wEDD81vxEm5SEt7T9huOs3rKKDOIPr63VzDkSgzPek9ca58SfHTtFgipq9PkD8iORnibp1xdWb6Pud0TuEX45YMmBYEO49q388lmkxLEEunmrhoj9CUWDWWeHF-vRjEOJEkCcW4YqigUGRbo4CW9OTOFPhxNvdgx_Za7tOQzW7J0O50FJVEHxkPutHCCnkG-akKYrRHJ3XlE2PBgsnskHYEpbC09uIIy03U1j1Q_TYpYHWKWaa68MA56WeMsUHCHEeQk1WV78kyvv9YFvHRvJHWeUrXw1Zh6MLxVAa8zebVISu3NzcIcd46ZrO2T2pmVHINPqhABWECeE0J8Bfekp5TB9TpdzgOqvKmCB6r77o8kWwylL6YSyECjZWW24WgrICF-Ow9gYCZd6VLqja8FZk3mVCrpPYz8cY4rmRzxNEvWqNUrvM5gcnR37HACP2bcoxY9Q526JgquX9ZIZTEWnn0BCXbshzKG-CW7T-irnYrbsdee2ZUKhwOCRXK8Y4KG-ydGs-uNj3HUUgVI41XNYj6eMc_F07w-k85PdmnLDjkm-m7Cdgkg8-WoNEeDeIWIFTs_Z8-YMf7lRbqqGEUfe341PXAIoc3D8wt6MKo2r6Hp-HWT_8FIdTnV7ITFihiN3ptg8FHHxHpHU9yFFqJi2gu2yTxzQyPYnk5I3LXhQRkmc55oI9uNfFvDY10wG2Xz9q-8io6O7LwX0fYxkOb5PMulMynnP5DtuE91DU6vynud7-ufbUmzhCJpvDEceFUTiGKuKPxhJhY6LJYasrtkC1nzktbLreDgAzkHnA1ki7Krb6FZ86jus6NoIeXAGWFH4AlBWvYqnQSO3rPradr4V6_sw7O3N-tIJv8nDAPWEq8ezmGlV0MnVBeSYWyzQraE6XA4ZG5N52J4f4I3hY-Jm1KHrMlOEN1VVRe5Pj9-UoJe9XY5U194Ermckjg510d56J1V4Ipg9TT-6Mf_0YG8H3_oKFsA-96VyRcgSP_iPvWn6D6d_IwXNEl8cuM-5tDvgQvOOCvXjmNa2IqkGTgPdFmDiSS2udsx-uV28-pkOIPZG5yBMlPcxLElqQH1JVogt1Q2Lz_MwK6wtKCkGGHcZf8Uwhf07Gg6FXU-kYDdMofQcIAxI25x6TdV44rFDDVMIo0bdmTcPlaXSBzdzSPjj1JtIrPHZiaBgsbeR5-DZCUEQi-oFxSQkxanWTCfWpy_XH6SCp4Z1GEHA53g3C2W4zeoW8AsVRBsXs4c4Mvk-M66sul24JVIKjqnQnW4QU0wo0uyBTTcvfeI4dU6_bO5tnuvfq_R6IpudRZbGTUnzh-mho4-Zz0D2rvU5__p_VLDJcnnSHHT4mtsQKso5EoK0WE7Czz11BEDy3usnHvMD_DhNqMqjt4_757bYN-NqrjbG4CT_jZAnqyivoBoP2ObBCceq_wEB8mnZypgwBaS4tmg95h_EOL4XZCOAPNDCtZQBiuPNOJ1FjmY0e0357clVqpPzOH4M-rCRUlSYfrH3jxhtjpumLcIxe6dknok3io05mHNtXztM6e-tgC82RYn0Tzu2TP0ayNq-z3VAIfFmhoZQ7pmLhSLK2-auKohu6eO4_n_G_A7tJ_UefGx63K9bYGlYQ67nfgDend3wrxBFjzF41B7V7gFq6HGgktsJB-Zn1i8Om1H6hIrsgnTZn-NjwabvcsKzO6lYTy78MwB84Cs9w90KQNwgyXAb4bs-ZC_7TRmJZqjFIGN520n9zBAWwjDgAMPmFiUhKEcVXj_KNwGQvMmae1CRGR1OhKdAYfhKABAPmNBqyoL50SjAHi0wYRElmvSntlEvMlYG-9Nv7IobWSwJ4GHShpoAFaUlIGFLxTh0MWIEmN1gw6o_Jyz2Eq3R6KbFxp57SiGjO-iqKspH-wPItIXAYOSRApFaiL2MLKefLCOhVN6ryLv9QQgDJKAz2X1X3ile7xd3D_htx8Gmmc7dHEQaQ7MjRFajJASCl7T5LVAzy6-aDeak72WOBwqDcYGcsf8IKb1Lk_JJvSTrxeEsjZQ4XVSeAdQdJRGbh9cIQPZxOQK05akkwOHhN7ssbWHhLeJdpzxVwrmKnnvXQl5tTTF26K4EXnM1O3xqYGhM-KED9u2U5Pk0RQYYQ2UDhA-VA4YcIe33K6FdqN6ZmQlee8VraSyBIL4G2LnsPGxRGjgqwGkAKUAU2iuSs5kvbha3EpTirr4qe0asNLivQmWm2dyzSCofaVot1lLoAVok75jr0fKTTxL3QZ_LRMB8XZIGbsoWfXL0TlxhKlBC_TAtcIZP_dOE3AcKdPhKLRNY342ecH5Y09ng53qoM0AK_OREz7YUqENU96jb18S2iGGJ3_XXHtlxdqfhFPG6brxrGu2b6zn8VwLDfdCY2PMSgjB483mO1H_ntGnApmB-e0RsZQXordwKqMnJPyiZpwYuFjkkRP6ibwNop0ab2c7qzsZC2Hw_gcArfS0L5MpQ7_WDsjKy6HUFiNtWxeyA7_A0WxiDGq8m1_kF0U3ltoJWjhjvLPYZNKyPFRBrFF5rs96MOtKzBrM9XPXM8fNfcV2hhB8Ys6I0xKvWRubFCJq5Jo8e98gKBZ8T-THLvXWjtkmDAL9oZJB_nmCcLAIrKI0oQ77K-i_0ifqifuM-WMZRUdxeEmPEOAEvUhT9PxP2dNjt7nbRV8E2Sc-rjrbK-BC4gb6K2sb_q9yhoKVADsUn1KK-OE8ibL4ck-uyAFW3z4rfJGnqHRJBMwBVjjK92lQkahsFTs3mRA-ZIGKVHT42g5_Ljv-m3pmhBwrFE8DcvQpWq_d0rW0yhzR1CgtoWk1laOCIhtHbDf2BKTIMVFEb9s1ygYXfwq2mLRnsqGUd195TNI9TdUUBCBfkBq1_uffg_LEBcdnT9lM5utmAE7FpBw-d0XkVsh_5NSqCW2s2Kv1boqJPyNE0fP3W7zIjJffjHKynfouYo5Q-bjRdS4E3QnsiGeNny8I4gyDS9n08NThZyS8nxyiUe4F1Stnr5hy8kZ6-OdPsp7q23mNRTZtNf19gkc0Ghx0etMp7WTNDurxbPbAqXTE-EdFvnXbong-fyi40GalhtT-GLHM5TTDmVp_Ar5ZT1tocGJvNSrUOH5pL2YcKVwO4BuJPIt_CyZTkeAuqUDwEZKF32SmXkWcRQ41Z2vhqxzGA9v0Gvsx3983Myf28QuMVDNeA3R9ffbuotW3JZwICKi1nJEVTyp6ZB_FxVf73jKvo_1ZVfuinrn4tqoLQi5f0zs2GIWLwKGi5-wEDWUDVXcrfizwUdFOrUhUcKYIIJGU6w90hN2yZIMRoc3nyKBwBkjj4q7b7Xhc3-Yp5i6tpV_6XC5hlBKYacWoj_sDMvtMp7PRuSUiikTc0fafeovSac3zBXEoEphoKu14XPTR22iDSUUD69PPbZNx18EVJPCyZ21dCLPsNYZSlzZd6tdPr7oW2Q9jfzpbmU1o5JhlwWEdn-H0I7zXg3Xq06dQrop0B9gczm3Spd7KaocQaTk9ITnLOF7GU514jrULtzwP6fJRl6YS_R5AXa06XPloIsj5lll-ytXHctssuKeX3nN_VqFvgSI_9GYi4iTgjFWGmzlKwwPs0aCzhY9aSQHaXP1ZFAIwogSXiQjSKSwz6u4swJv5t9bKcaCbEHuYsyU1U659ufN-oZv3tzuFCQHX5aNCo9t5YEXB7MatHmdzxOG-yv0lye07VEcaDp1qa0Vb7MFTwm3VTnyAOpVAhzPCOCeJA0J6Hv_gN9s4YRBd7L4o9nHq7bcIl2ybtMiknREU4pYvXhzpKRGHHfp6rOW7IG7TerjLqI8Pg4XZhfaSpt0U3jGLtFLERPCoQmkj8zUkZcLRNZSmxr-AkKu570xhRXVgidpqhs4jfJEyjZXEHo865VGFl8d8F9bkZacprIKBWbzvZCdoOfuN9UahZNfwFCCK_NxAeNAtmWsT1KFX_CKNfXwj-hXKEA4AKcgpC8EgG3oXMvFDB5EI9MMQxAv9YVSNgVay5r8VCfD_fgA1odNT0TerKOHdxZUPKeltZKE9MWRjynDcxgUChlHUdfDs_uLFcKPDRndDIcKtS7q1G_dtABRn1m3BQcK10thIkGI71k6wbJl3i1K0cM_stgeHVFijbVp90d4zwF1DH3gJ6R-PvhofklqEvwNPBcW7Wf9JG_TCqYPZesnUaG6kg_FMw3eMo4BTAmrQKOKqLu_g924IahDTBx0jah5FwrO9Mh4Ta-o-mE3sdp2UGya_lydZDPEQ5NH11HwCVZeratjDBwqQY4DhfkVDXtBDtqDtsdyVm6DU5uiCy3RqdVyUh_BfVK6HmFsR-VUheZrV1g3JqLY7HrBguR2BBjoF8d8U8SoCgfL4VKCVy08t3CMzf5IipCAgZzmupcf0d6u-xaU0EeWkD-vQ9BcyZq3uNoHhnOTNqrkQ_10esGhk5Je0MNe5wDnCUARZIFiOUlKgeXVbS_b-TIMpJjSGk_jmq33uhGjETT7eiURFF0VuCHfszCnHmj0YWy390PdXJkajSJgXA2PXJeNYU4gJKSVLYDUNAQO78qTqBWA6WBnswYmcadTD-bN_HbrskL3-N9IN45njOrhfEWW5qFORT9ARQay_9joyEQYCwuvdH5DrAzLrsaqoO3FidaCyqWMylvC5n_I1b9iI-cU4XGggTb_zPpcr1k3bFvzfYrqPCWv6d0W84H5bDH5mrrib__KYeLN7Gs42eyYcXq7BdGAUGY9rTe2u3Fqa36VaZOj3ufB0QpJZTXB4auH7-2aHLfJ7tO8zvHB9iwqK009uOsb53SvRMFZiioFtAukcWw0IagBRY8Depz_e7Fz8yHnM_1RLPMfSnK6jLGVWGRlB16ofyKm0cMeqJuWYXT18PW8PT_hGUHgzdzcp_G4VHQiecB3RBSNUoi_WlMaegNzhnEwIaVzR5b4Pbtd0gJHMXo2g1odpPsmXtbIgZLSmJ8ZXdozguwIP6RIf4GZ7zxEnMpcIixucGT6QoMnQJFAu9ABxINRLIXhkgazARpk4drBfAn1vmU6FrTVd8aLLLcwal3BPm3DXoZ09dufX-cilgciuiwaQ6k_ur-Luki1yhg-IkkriJ4rK79jJQphjRb89fSbWyhTXmCG1npmKXGEX4yo40DiqFyA5TCu3lK1h4fLMUb541nlpBuy_AKRAlMhD4eitbYW2plKWCd5lgByulJdBF6f0ol1HqY_XGy_kVqlaLQOd7xNTaO80ydai3Gqo9djRHiyiVgeaOrRQcRQmXilqBcqgS9TXnsAS6f3iJgbmPdy90cuRdolCO1zWEP_MvEJYYDOzji9FX3leUiPUO6TN5SZjUcPk35-2R66pyW89503NEG1JAsOe-3lO9_AUSFTVfAsCzZzesuhvIfXF_AyjQz_gV3eu7hG7q1YZcEuLprq55ta1X9cxD79VJ-YiU5ln26gr3X5H7_jRAkFy4HKiTvLFot9rrpIvqCDOTBEkjOq8gTG7-71nRRHr859SY0bdKtdgx_woooJY-1qwEwn7VcS3R-L4pE-BoiuyqthX7zX7Vy6LxkZZzQO-xWMr_PLcqQccikB50iFtLImGY1XDKh6Hgn35KTZyakAYG5QYn2qbfYRVVdKiu1XMzLLV8hWe_dMMShxONeYPovLLk14a_N3J_TET4a-mf0WSHXgk7y0DFgkYjCDJkdoHa7mHB0aTsVhqQOyjy8gmiOEv2-KjdGtjQNIeeJsxpv6zTdXhNoK5x7hd-yPMCNOyCyVVShebiO1NPfcVYENAaVr9vPLDsfAINW5o4MNsG_tgx8hJZfXjVdSM6TowAb5vXLvF4_B8Ih60hBDah54E1wixHh0iSjuzAJyfIROqYQyiEcoDfDj0SiL8VBJGkphPuD4x2PtlsiGorGED7OlUUmNAzNvAWNzWAWvBoxP8I8UIjaJgRob23UNDIpUWXac7mBu1UG0VAx5qvHrFOjyNyws348iujNxbYSZKzLWhUTK_JfIKEOkWoeh_-SlYML5h4MrOWqApubVFtYoJY3wCTMflLqG2u1xv9K5Fm0nLWkPbhOAGwSPz0CH-spcclc0y9OkBbx5PuKOdCHvlKX9pMesFan9WbtDblmcEr-oJTekfChZKnjqapHPA_p6BAm0aq-ftKexOvrwQ8zVnQ8BK9SdamZBaVfLHw7SmolmLlfHRv4KkZrgIm0gFJ37hTuKPVssjFM4mScB7XtFU1IaCbdWx10ExWh5WjXCBW-hF6owXTjbxb2Ejt49Vt-d5GmGwre7otwXOc_5WcVu-1prEJxoxqgaZL5IUTJGMq1TyDo4ye9uzlR0w4tLlPRwXc0w7SDEV-u2dsSSro-OQk7BLnbFM99XBk4N3DeaFq2S62y9_FS4Q_CEwU9SkExAFCsTi-YD1aDC0CfjZnzdGHmoPs2ffu6Nd4XWSwynGFGISWGJQuY9ZhGW3OgxAXxP0U2irhvNaiMiFhL1M-LXVQKcpuGVVLh5UVttdTP_7UlEXNhHF5It1Easny3DcvNHD5jMPO002Z8XYaBqeVA_D-qj7HWwQA8_V-_7QlkRw_Bmaa-c_jxjzRlrTphebzyNWdJwx8Iq1S3dWqB2W9ckSrUEIxvxABQ0WcxXSjF-vVT17Bw1DFCGsNbwjJZ8fnuw1QO87hmsLU23eanuC1UOlcikDs9P7xLo4LMAuY-RszAI6nSxwzmiCHXF4D0e57SS_Rt89CgjDN91wNRz4cxC0_txvc9QnfKxwuc-_YNpMLCfC5jol5pIasJjm6jVb3kdPu8oEqftLMBJ8gVH2iXl9_Znlo4Nn6HM2he-fglWCr_SYp4ynSQICEIYiEQUsffVWfrFnJCRMKwW3UY8CjrK3I3-9T5AEGYT3D8R7A8rQ3x2Z3DVsB0vKE75uSqXSDhM4DJpK1_zqMlCyAUKJZqMB-TajR9bSHwm7S0unm7inxCCBMRxOGpXDW2_nIr5K6wdbZPHgyEq2DklmWua-6KGj3Jt9hh6HGQBYXibb9MJcVIQzePRcAJialU2yGMWavrMKs6AqsEjKfVE3Tj-DpCRytob42FzRnOkGT3tb9NqE-RSGvZpku_nJGuGqXyGyURaWoGde2MsDNJtB3tVvXZdyswYIA_7bBpJJo-qOjV0ewQ5ZQZrjUllJWMNE9k0KM9Rjg1BIQai1imwGlTgFbITPcRnNGon7zIZEsSvt_EX2UT-Tn4w53fFWMtVMIsgUTVCcrgxfUh7UlNS_3eENFQJOmSSDWqlXZ-fcJH5E_oi2b96zzrjKhDSsRibc3YGJg3M-gQq3YziSx-9CE71vgtMGPuGsiFJDwkS0QM-fA766TD0RX6TRiWBx0zE9HCuwldpJj5yt5mNHDsWoL7IWsT7IfkG_yr12k-SpLNpClcelR9Ixp3HwxcC7",
+        "summary": []
+      },
+      {
+        "id": "msg_016de43ea60cec06016ad322915d7c87d2aabc06b4cae3dd1f",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"NCP Car Park Birmingham\\nBrindleyplace\\nReceipt No: NCP-883012    Date: 14/10/2026\\n17:55\\n--------------------------------\\nParking 08:10-17:52                 £14.00\\n--------------------------------\\nTOTAL                              £14.00\\nVisa ending 9911                   £14.00\\nThank you · SYNTHETIC DEMO RECEIPT\",\"merchant\":{\"value\":\"NCP Car Park Birmingham\",\"confidence\":0.99,\"quote\":\"NCP Car Park Birmingham\"},\"total\":{\"amount\":\"14.00\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"TOTAL                              £14.00\"},\"subtotal\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"tax\":{\"amount\":null,\"confidence\":0,\"quote\":null},\"date\":{\"value\":\"2026-10-14\",\"confidence\":0.99,\"quote\":\"Date: 14/10/2026\"},\"vat_number\":{\"value\":null,\"confidence\":0,\"quote\":null},\"receipt_number\":{\"value\":\"NCP-883012\",\"confidence\":0.99,\"quote\":\"Receipt No: NCP-883012\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Visa ending 9911\"},\"category\":{\"value\":\"TRAVEL\",\"confidence\":0.99},\"line_items\":[{\"description\":\"Parking 08:10-17:52\",\"amount\":\"14.00\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "NCP Car Park Birmingham\nBrindleyplace\nReceipt No: NCP-883012    Date: 14/10/2026\n17:55\n--------------------------------\nParking 08:10-17:52                 £14.00\n--------------------------------\nTOTAL                              £14.00\nVisa ending 9911                   £14.00\nThank you · SYNTHETIC DEMO RECEIPT",
+              "merchant": {
+                "value": "NCP Car Park Birmingham",
+                "confidence": 0.99,
+                "quote": "NCP Car Park Birmingham"
+              },
+              "total": {
+                "amount": "14.00",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "TOTAL                              £14.00"
+              },
+              "subtotal": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "tax": {
+                "amount": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "date": {
+                "value": "2026-10-14",
+                "confidence": 0.99,
+                "quote": "Date: 14/10/2026"
+              },
+              "vat_number": {
+                "value": null,
+                "confidence": 0,
+                "quote": null
+              },
+              "receipt_number": {
+                "value": "NCP-883012",
+                "confidence": 0.99,
+                "quote": "Receipt No: NCP-883012"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Visa ending 9911"
+              },
+              "category": {
+                "value": "TRAVEL",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "Parking 08:10-17:52",
+                  "amount": "14.00"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "NCP Car Park Birmingham\nBrindleyplace\nReceipt No: NCP-883012    Date: 14/10/2026\n17:55\n--------------------------------\nParking 08:10-17:52                 £14.00\n--------------------------------\nTOTAL                              £14.00\nVisa ending 9911                   £14.00\nThank you · SYNTHETIC DEMO RECEIPT",
+      "merchant": {
+        "value": "NCP Car Park Birmingham",
+        "confidence": 0.99,
+        "quote": "NCP Car Park Birmingham"
+      },
+      "total": {
+        "amount": "14.00",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "TOTAL                              £14.00"
+      },
+      "subtotal": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "tax": {
+        "amount": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "date": {
+        "value": "2026-10-14",
+        "confidence": 0.99,
+        "quote": "Date: 14/10/2026"
+      },
+      "vat_number": {
+        "value": null,
+        "confidence": 0,
+        "quote": null
+      },
+      "receipt_number": {
+        "value": "NCP-883012",
+        "confidence": 0.99,
+        "quote": "Receipt No: NCP-883012"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Visa ending 9911"
+      },
+      "category": {
+        "value": "TRAVEL",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "Parking 08:10-17:52",
+          "amount": "14.00"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}

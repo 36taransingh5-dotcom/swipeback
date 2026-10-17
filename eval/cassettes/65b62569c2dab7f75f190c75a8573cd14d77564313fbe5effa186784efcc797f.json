@@ -1,0 +1,168 @@
+{
+  "key": "65b62569c2dab7f75f190c75a8573cd14d77564313fbe5effa186784efcc797f",
+  "provider": "openai",
+  "recordedAt": "2026-10-17T07:24:02.550Z",
+  "response": {
+    "model": "gpt-5.5-2026-04-23",
+    "status": "completed",
+    "incomplete_details": null,
+    "usage": {
+      "input_tokens": 2123,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 954,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 3077
+    },
+    "output": [
+      {
+        "id": "rs_02d63f50c1de794b016ad3228abb5087d29324cfd12d9b1153",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq0yKSezaKIwWC6RulIyVfu3baLoU4qtXKjZvh1P0TaF-43_5vZT8zkGz4yl_RNgSpkPJVCjh9s9yxRCm3FtoL4GiPqzL7VULmfHB-wdepp1ibko1ws4gA6wuHlpfU89sJGwteRu5tdVkWkMvJngpUJr7_Zw3-EM8IqgrU_tdT6IZtSnhRbzJEQgm4jEr19f1sJEljEY8H7pdTEWj5TnOHUjLXmU7ZscOGPn3Z34CdWk7CPXFwyt9Q_S71E7F2wcGXfRWvKxJ3LnOA0iUQU4QnaMxmk7oXc1pVXJgRfG4a_d0LnQ1m1QbHwrElq-KFYb7k689KisRZpbkt1UpzYZtl9URw8ASeje0E_K1JorMU70DQDPcKZQQKgL0M49EjXrTZf8mOVKpKCLKT9_A0teEHUlmFZeOP5yT9_MP2ZdkFDwHO42G9s5G46C1EGLNgcQuYgvIwq0-E1z3blpRLX7RXWJH8pVA6ecLwoKrGSjOgjln3NPI2r9DZ2B1FXGjdDq8zQNoD042WXSR0bgXY87waVCCiiH0BIVmdLfJE-cveGebvrHqxQopA_0V8hYOytCN2yzg7HVJqky8oobRRWi3zzKoAQkIftqBBOpsLeI-luQWj1NJWhfYwqPeFhYd2iTln18mK6GGrkz0wlwt-ykf1DD6FUmKBMtXf65w8zm1UD2YY8rxNAFL_nX5lSDG95ES7SH_3fAeq_OV65t6WaC6TwF7OCKoVV3UHQApmE5IfX7EbUWbehxbQxRjq5_tRNLmMYkM2UOq1V2scg_GwdCWS6A-rQ9Cwzt80aNefEwW1dgUzui3PGq5n2riVjqbV7HcVcdiP9kpQEmPCf6_0Sa7PsF0v1uBF9F0YhPSiD_BrQ84TBa5S0SkufCBVdhmiFAaBvPd_GkOqUkPCoP59FWJLjD76YOgCp__H9zkU-zwE2cP6O_wX5dgw8tGVRHxaNciIirEvcwwu7dmU6vX4PJMDdiHbCQSlFlO6SnY-O9tU1SDNiH7u4xvU23cjrzj4puBVajsa0Aq59b7Vf3Y6HunAibYp9lGJFxLff-vk-48Gqjt7IXN1hmiR2jXZ1ei9I16WUMPwPfqDjxyljgk-tTos5UqgqcdGU6aSrvpUGG2zmb5wPqvKOTA-h-EpOk-kofoc2TXevDyvkxn_GfhtUCxxJ20leM6GZii_tR7kEa-0SdTGUqbRJD3V8BigKv4_A8ZuqicZoS7Sv7rz9wLymnuIxJkE3PUidRpTlb6NEb6-yOFum_sVJPHNrYgoR37U2tfEdEBLOsxLslk0mvXXr2v6GnO63bRUclfmJLyIf6f-r65fsVShMLIwuE8sYK04HG7hhPqU7zyOpOwr5Ko00rmepUITsm0sbaNuTW-nS6Zx3qLNbFXD0wwbeC8lI9hnPXFg1UCaR-BxeqGssGe9n4O1EMjr9JxHos94Dk-8mbqZOJGn1___Q3au4J-tQ7bnK0sak7aTmBNhjEJDgEoWlnA_BheXiqNECRNC8e9o-zfxjkhr2x191gojE_nOiCf2lMIl2Fdomxb5YVvpsJOp6OrkwGJEZzgLdt4bbH0hqgi6K5IMjuZkmvE09cUEmdV6OdCfyVm2Pwp6fh86xU3DtMk5-tSgNNUy4QC2cmqO69Bpp7YNeCikANdpUOnj1NdaydyHE2dtq-XJ-p_YnQ7fbeslCB_mfjlLKGHirmVkgy-ULIopojje7Uamgt5PWuMRhF1sgvhV3qhKeyqHhM33vjciZ-0V5GBuo4UG2cTB4_T_nJqlw-sdMLG6_ShSPDQ59t21suRZO9sV7Eei6e3w0rP-sxS2RkGLeXZ9Ex6nhaTr_GlfM4Ri_WlGD_YA7qjucD2ZarDXLGUePliDPNBK-YhOZP3ERpm7VwZrqoXPgkKDzd6w-YDkdg9RAJQXvrLeXqW56UDHV5PeZFtazeWbFxwNsoD_ZsxNM2f9gfKZ0q8bkOgF7frQbIJ1zC1Z-rV0OLqj2FsX818jd9agyuuk6TeEnCCAjqCpW5DuW4Js31XjjMRSirPCbSIXDh1Pmha8PUuQe5rQ4rs6aBHQV0x1pIkk-hXZl1UZKkcTv4vYhqOlSChNP-x_y9wIWNAMAGcX7azhQBS1HwSG75MPHxGIJGZDQNz9yDBWRg4GarveEdq9Sw93aztqd1Lyy1_x15U1kAvJ0KwOTn3V__titTVTuzo8lW6CCM9ORs8zPqcL2edfzpWecdY7dJX28Am8KCidJw3e2NDKoeFV4kgzZyjWVxTm0_CoLNyGAT3ZX2z9OFyNwxqShw2Rmy5gzdTaK9IqjCJFFa_wwyG6PO2-Rlxxd_r1scjoULrIks7pQfMAa_LHsj8L7WUuJogTB4nk6lrxp6mnwkLWNMhHoV806w4GR8BgObi8OO3022f3oiEHg9bpPuxSZxtX58IHCsHw4SwEFhkj_tdFsUFRv1JJGPkuxORvFy1gYCm8aGZ8CQ4seTspTPHbiMkAlIxNOVLy5WSoZjWG6taJHHH5g9D22PG4Ls8CSoAwctOsSuYJuF3W3Mtigxg6RrHRJXfO1Ehzkz52SbigjmX-dVT0kkWOAoOxE8byvc5694WhdII4xDLKn-2sZBKegguFZP2CgobJ02IH4MTfoObHsfI5a4fsSaid6Bzx47yOi1_6y7hfJuSrUA_WHDkeEvr2PZm1ZGnEN8TSDZ9ih9SKa7LU5F8ExDpOYVb8-Dl10Wm6lF7U46WsUYN5XAmOBiXfHTWyIm68IW14HRNHxWsEOTjdOoX6Vs5ACuUz5ZH3iJZQT2wcxcfbBh595R2YuI_QOGXcj-tm2nKRCxE0AQ1hi-9lN2CUovu5NHmLYHuCsCxd6A5_ftTSykhqXXowR7ZJDAf7kCP2ApcVY9mlSsJWlE1WzV7f3J3NknvA97BdmyE6v7pMyykXlWq2Pscyh-LBIAamcomI5oBw7mMiKe2RHO8MbN5uGuCyPdqVYWX8y5dmc59kVpsnpHAu28PHyYmbIjxV4IXM4c7ofTWRV6Z4xdXTdLZ6zZZeDG_mzXC_Ebjr0fvs4AJ46zIRvfP9tzKwr8h06qMTz6c13JEFOMiYe35oYj5xe3cnTLVry1EfNJ0xj-VP-eCVTbm5Fnx5d8rulfOaZ_c6qbr-q80ims8a5GRodTkLeCLi5OPo5SP3n2QQL_UAmC4GH-I8VKSPVi63JbTZmMWpxYx3ZttN-zel4P9vTkhoiZ8LATmIKJIMKoR5WBQgVSYjThCBfVpqKIYEc9P3ILG6MbrtKj0x37KYa57SqmZp6SfPRysVoV82oAJatOHyk6kFCrGO4B27RTjsPIdSR_V-eyfNpDW8QU1N_RMVchM9CIFoBSahgfKLZXm4HUi6nkHWvDGjE3HXbJIqbQR9o0AaY9Ji7k6Do4lZSPp74CnAs1fBZ0-GAlcXlG6OYfwe6SgQhWY0CESLNXkdVQs2GK7uKLOgtS1AiEZGYe3gEQSwxqCHgKOeY3Z1H4lmJymS8t_pbw904BuLxP4031iULaFU5v9gzUZ0tZsDMHWSND4aV_3lboiHTgTR939u0d2DElcf4hxb6j6bF1sE2dlPa9akdn5bIsrlz3IEta1RE64rVYGbbkz0WNoRrTRZ7HknyuQU5Jd-0rnDp5U5oxukYy4yl_jb0fIkMzDJ8ibyZoR_sQotZhmzaOgGNLCrG_9qxzSyVTp6Zowp5P2VPv2eQysC3XK5lshipQGLsRN4QYShf6TCahsKVlKwxtDbBT9f9ow0x1W5NxahV5m8T6BB0jXtINxCRgchAxlug1j99kP9oQhIi_7y80XnH17SJ0D2VGax1cEWNNq_VnsWTyA1YAwaZw2mjxzk3Czy7j_8CyI2fYsa_qWZxLApWw9zu4vnvjSXxboWegPn2TohtB8ukPuubtzb_K1fwOlj4Nz1VrfPLB6qT9Q7L4JDhZnc6PD0Wl9TYD3wkiqQW9e5KUAtbUSoUWvaCdAePU6ky5K1yybDkYizs8H90cpL0_KYqwtDCYfFvZJDeYU7hbLJtu-XiNU0QANgiZM24kQvFYKTPuPKq6bkjiF8ncsfbmjy8CUixGmiv46sgPVr6mEjF8UWZkNzkAej_gm_1NARB44aSo-LTtMZ0a36zQeO5jMClohfcrS6skefaFeDcJefPpYerq_GDiKSa5jVMWIvZRhfKREukUO_6mbzfDjCqmYpZDSXu3w3_QXpbUHNq8gGp_Ue_1K7cuagfvkLb0jFhGA5j4gaAfK3shRaEb78DYaVZSGtPUR4N7Ea3q31RGhkZWCjArU8yKQq0vFds2e6ynX4KqFDwnwskpucZsD1uDc5DoH8gB12hY7fVVMJz156lzYz2kllm7Gadh5jgEE1jF2nye-fcsKwFbfvwz_PSKlYWZb67_RzL8Bj833BF0yosJkT0KrF53CWSrOfF6dRsnOj60nOrA63dmGYutoh0DBEB-Lrb70yWUdVKaOy5XAUqCD2cqwtSPV2GafjpM4ud6W9gp2deu5yTI8yUoACarFzJdx_c8pMuuqRSxyPpKynqskyaHpw-6tj6qNPQ0JaBxOgzohDSsvQYotg0_a8Ss3h72mtGBh1L5NGd6cDdL6qusiLrpTj-3YKFDFHJLXRwjW4tPa3FU9I9zTKofrvPhQ_E07whQxwQXJ6ijfMwwV0bJNgGmXwszzKAw4gn6uQ6KFq2lTYGKZ4Bdwhq1FWrVhHdcsR5j8CVZWearTVuT8QehYm2hRfPY8dZcznOAb16GyeHaaLO2sD6hFij_hGAerwn-9_gIj3sNmO9QhprCHHwjp_9FqNurNQLek5C3PYoadS5WBAMHJvUnCFdFPh5eRPu_1WeRw8hAzjZE2GhdWPvW6qp-KoEPfBmeqjA2Tos1DMm6kLXWBoNXHnVS3RPnoCxAwvdMT_TcUfls-EVpbqC0NIFDhbsG4603nTpphf_BMlMgmJoO5brRnf3MXs7zDAGjYIB7AxVCyllGJ2AcuGOrAeh4E5Vq6lqBw-5sB5b1ml-6tW4X9pZtpNycQCkyHu1HQFN6Qfd5MiZksoZCdlwQJ4z1sc7NNapMiEh3AQamBRDHDCZcWN2NvXeDO3MxdQ1I_-sugNpfWa8cYOHeKAokZ1s36H8eIE8_Lg_Nvclk3BWjZYaI1W9M5I4Vs9JwTrQRxSKyIjfEsbKuqgWLmCIDoNY-Ard1F-WWDPzg92DLs3j9zJPZJgaGRuG9GCd3742OxyMIOl9Br0nRurpdXxB3D_YN3_K69-Dq3xKvZMV4lt000GAk-kmvUFguxGTnoy3k5EeKGMzvJ0Fl8oSnLDCXqLk2HqEnEx_ib2i1-tC7d-NffDKNsQwMY5gaeO7lgM5mu3EwX21CI82VT-G2S-grCn6QOKUe8VQJQePTIg_zKHyMaAwefkTLBBH5KlEkf3s2XBcy60nh9plhzVcuWjS2TBEaTjSTa2t2uF-vKQiycez36lEc1CZajpE2SlUQQf7Q3_-ggfcHoUhBJCQP0KinCCESh9CE4s0diSyHAzyxS7CdHCbD5HLhGE4p8SsngyRXvDVMJ5zNMYrzbDPDptfRJAL-_XD_UL_0MahduRDzxElo9GiumZFhsxYiydCiyEYV866rh1eDvBaP_Qo9lyb-y7JOs0a6GnkmCiWQIc25fJPLnZX7kLXK16f1-wxgDVg9BKmJaehNp-3RoVbc2Zc1G2FI2tit1i6bJC3yyWIgO7gVad9-myBLBtEZgM4DUm3-p8HIq3e0AxCWP6wZQ1dgiiIWRbNfxIZMc6MkGdlus5k-mhrmLYaygvsmNHC5LSvpyTb90-gd9rsxcig8qy7fstcZzJgUwBR47-TaFU7fXsCUqUN_cKo453MciKsZbFy2eaBhVj_OKVqsugdzQMccC16Sbe6O7Z5owqFjnkqDVy9uSBtLKoXVNxI4gj_e4fIe4Zuq-WPmuPz8LIRBimrMaSNE3u0n8CN2U_MDLY4lukEpPF-SycHAB-7VsYEG0O_YcWkH2MBBLtKqUJ1K_fzK17H0mymZv3m0wN0LRX59-CTJGYZgsG7AxVIgfxnDUf5uz2JWFiY2HqNF5oiEyVwd1ZGwIeuViMf4O7NV7liqmOlpE27283IN8gt4_LkgSYQLrn3oNpV7xAvgD_eTdat_30afS3qUgiPmO0oTYgSjq_PG1IZxavjRuNNTCT0JBj9_FVnxN-jTIXdkqxkw0Qe5cpdYXVKcrFKCdjiRyo-VchCyT3_psOkkkgM7QjTdghIeg2UZh-fJ5RnlkuAEfH7uUxA0xOzRD3-k1Ix61xnbtXSq3qNurm64t2pLCeRBTXF9TMmeqgazxrEKe9SGsXbU8f5dWhS91vkAC8xqBhskI_ciG5KbWRsbG6l1zXLKRPGOSfr0RmWT_mlrkfO34_R2Uzf19jT9BYgT0WV_d_bjMWs83FabFoZqR1ZJOcvmh6qmNmWRFn_t4Ugf7qVW_eXNHINI3og74noVyekZp7f5lZhp7XUxo71JCC44ZtumUEKAu1JdREfxmWr4QYM6rstFh0cY21m4viyVhKJ1cweufJkpXIniAglrapHZF1nyTLA5F0EYDb6vhtvfs7TqJAxLIMwVtKHjFOCeHByJQVCDhWFor8TnbT3U49mMOJoWjOt_R1NEp3vZ-NAiVhaFOcxOnx9yzhoQAjxeebnM6dvY1IRV2Lmyxnnq0eKO4-amDxD8ZlHTZECo1AUqyqVY3lSrv_g1wnF3fiUBWsMxqqW7u5xvFxoa5YBS8buGdkdDNHPH43uyn96Dr8m-438rqMuBlfs9Tl9SP-4O3MTunyvL7Ilhi3XkiD5j7stKdI5TtkS1OPvYpnnU__jR6BGZ5Ah_rdgRXMIVWCGiSizpqtGhFBTCxBRx51CksIPhWhJ4R1tdiuRBJYiv2ho9Idok4OPJ1MfcCflR5ANP7hiLLfCShFlRA71Vd6-I7htNkOD1y2STa7Pr3WAv-JDFcYDUf8quW1i8O5sN1OPjas-CVOa4QX1nw_bgISxOkO-51YJSGD8sXFaG2VTUmCPrYYMQDizoC3rfvNrXd1dYPyo2lqGpUpp6GxsgubvSkDIJbVjZQQPK7myTH88902f6Jb5Xh-TsxPnbktfQjWse2tmUDFnPul5bsm9Ds8_JIGZduoTkpADkcY8qalEcVwxbZhi372rNmSSveh8afZ-zFfxWwITWhXXj8fXAd56TnZ3HPEIQRiN9JlZf7Dk23MLCwzeUwekenPwFOZUjfPDXmLpjXF5ySkCALD4K0CkAzwp02NeumwbVhx-VCKwCOurtQMGSeqtu4b5A1gvoNZtefEulVeBW1lMAMUUmt_94W0XsyaTgVDpUVHQfaAYSiECA_C9Hr2vQDSOlSeovPy4tYtJCrFA2FvBAOXkCpYhdDFINfD7W52hFkqbCHXk7wUFKPEUJvDpYYDrd5Trlf5IqbEuvvh_GvNZXthumML15h8rCyktwNq1HIcVxdohHqhE0TJvLIQZfyBeMAoDKC3I6Gf3-wKYrbdOYEpVdfXlyq728DAd7JRsKJbLEkEBLUYmd2Js7w=",
+        "summary": []
+      },
+      {
+        "id": "msg_02d63f50c1de794b016ad3228fcf9487d2ac736e08168a527e",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"is_receipt_or_invoice\":true,\"transcription\":\"Cloudnote Software Ltd\\n1 Silicon Way, Reading RG1 1AA\\nVAT Reg No: GB 000 0000 04\\nTAX INVOICE\\nInvoice No: CN-2026-10442\\nInvoice date: 1 October 2026\\nDescription\\nAmount\\nCloudnote Pro annual subscription (1 user)\\n£99.90\\nNet\\n£99.90\\nVAT 20%\\n£19.98\\nTotal paid\\n£119.88\\nPaid by Visa card ending 9911\\nSYNTHETIC DEMO DOCUMENT — not a real invoice\",\"merchant\":{\"value\":\"Cloudnote Software Ltd\",\"confidence\":0.99,\"quote\":\"Cloudnote Software Ltd\"},\"total\":{\"amount\":\"119.88\",\"currency\":\"GBP\",\"confidence\":0.99,\"quote\":\"Total paid £119.88\"},\"subtotal\":{\"amount\":\"99.90\",\"confidence\":0.99,\"quote\":\"Net £99.90\"},\"tax\":{\"amount\":\"19.98\",\"confidence\":0.99,\"quote\":\"VAT 20% £19.98\"},\"date\":{\"value\":\"2026-10-01\",\"confidence\":0.99,\"quote\":\"Invoice date: 1 October 2026\"},\"vat_number\":{\"value\":\"GB 000 0000 04\",\"confidence\":0.99,\"quote\":\"VAT Reg No: GB 000 0000 04\"},\"receipt_number\":{\"value\":\"CN-2026-10442\",\"confidence\":0.99,\"quote\":\"Invoice No: CN-2026-10442\"},\"card_last4\":{\"value\":\"9911\",\"confidence\":0.99,\"quote\":\"Paid by Visa card ending 9911\"},\"tender\":{\"value\":\"CARD\",\"confidence\":0.99,\"quote\":\"Paid by Visa card ending 9911\"},\"category\":{\"value\":\"SOFTWARE\",\"confidence\":0.99},\"line_items\":[{\"description\":\"Cloudnote Pro annual subscription (1 user)\",\"amount\":\"99.90\"}],\"instructions_detected\":false}",
+            "parsed": {
+              "is_receipt_or_invoice": true,
+              "transcription": "Cloudnote Software Ltd\n1 Silicon Way, Reading RG1 1AA\nVAT Reg No: GB 000 0000 04\nTAX INVOICE\nInvoice No: CN-2026-10442\nInvoice date: 1 October 2026\nDescription\nAmount\nCloudnote Pro annual subscription (1 user)\n£99.90\nNet\n£99.90\nVAT 20%\n£19.98\nTotal paid\n£119.88\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+              "merchant": {
+                "value": "Cloudnote Software Ltd",
+                "confidence": 0.99,
+                "quote": "Cloudnote Software Ltd"
+              },
+              "total": {
+                "amount": "119.88",
+                "currency": "GBP",
+                "confidence": 0.99,
+                "quote": "Total paid £119.88"
+              },
+              "subtotal": {
+                "amount": "99.90",
+                "confidence": 0.99,
+                "quote": "Net £99.90"
+              },
+              "tax": {
+                "amount": "19.98",
+                "confidence": 0.99,
+                "quote": "VAT 20% £19.98"
+              },
+              "date": {
+                "value": "2026-10-01",
+                "confidence": 0.99,
+                "quote": "Invoice date: 1 October 2026"
+              },
+              "vat_number": {
+                "value": "GB 000 0000 04",
+                "confidence": 0.99,
+                "quote": "VAT Reg No: GB 000 0000 04"
+              },
+              "receipt_number": {
+                "value": "CN-2026-10442",
+                "confidence": 0.99,
+                "quote": "Invoice No: CN-2026-10442"
+              },
+              "card_last4": {
+                "value": "9911",
+                "confidence": 0.99,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "tender": {
+                "value": "CARD",
+                "confidence": 0.99,
+                "quote": "Paid by Visa card ending 9911"
+              },
+              "category": {
+                "value": "SOFTWARE",
+                "confidence": 0.99
+              },
+              "line_items": [
+                {
+                  "description": "Cloudnote Pro annual subscription (1 user)",
+                  "amount": "99.90"
+                }
+              ],
+              "instructions_detected": false
+            }
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "output_parsed": {
+      "is_receipt_or_invoice": true,
+      "transcription": "Cloudnote Software Ltd\n1 Silicon Way, Reading RG1 1AA\nVAT Reg No: GB 000 0000 04\nTAX INVOICE\nInvoice No: CN-2026-10442\nInvoice date: 1 October 2026\nDescription\nAmount\nCloudnote Pro annual subscription (1 user)\n£99.90\nNet\n£99.90\nVAT 20%\n£19.98\nTotal paid\n£119.88\nPaid by Visa card ending 9911\nSYNTHETIC DEMO DOCUMENT — not a real invoice",
+      "merchant": {
+        "value": "Cloudnote Software Ltd",
+        "confidence": 0.99,
+        "quote": "Cloudnote Software Ltd"
+      },
+      "total": {
+        "amount": "119.88",
+        "currency": "GBP",
+        "confidence": 0.99,
+        "quote": "Total paid £119.88"
+      },
+      "subtotal": {
+        "amount": "99.90",
+        "confidence": 0.99,
+        "quote": "Net £99.90"
+      },
+      "tax": {
+        "amount": "19.98",
+        "confidence": 0.99,
+        "quote": "VAT 20% £19.98"
+      },
+      "date": {
+        "value": "2026-10-01",
+        "confidence": 0.99,
+        "quote": "Invoice date: 1 October 2026"
+      },
+      "vat_number": {
+        "value": "GB 000 0000 04",
+        "confidence": 0.99,
+        "quote": "VAT Reg No: GB 000 0000 04"
+      },
+      "receipt_number": {
+        "value": "CN-2026-10442",
+        "confidence": 0.99,
+        "quote": "Invoice No: CN-2026-10442"
+      },
+      "card_last4": {
+        "value": "9911",
+        "confidence": 0.99,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "tender": {
+        "value": "CARD",
+        "confidence": 0.99,
+        "quote": "Paid by Visa card ending 9911"
+      },
+      "category": {
+        "value": "SOFTWARE",
+        "confidence": 0.99
+      },
+      "line_items": [
+        {
+          "description": "Cloudnote Pro annual subscription (1 user)",
+          "amount": "99.90"
+        }
+      ],
+      "instructions_detected": false
+    }
+  }
+}
