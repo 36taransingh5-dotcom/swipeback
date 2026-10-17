@@ -1,0 +1,59 @@
+{
+  "name": "embedded-postgres",
+  "version": "18.4.0-beta.17",
+  "description": "A package to run an embedded Postgresql database right from NodeJS",
+  "exports": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leinelissen/embedded-postgres"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "tsc -w",
+    "build": "tsc",
+    "lint": "eslint ./src --ext ts",
+    "docs": "typedoc --plugin typedoc-plugin-markdown ./src/types.ts --theme markdown --excludePrivate",
+    "test": "vitest"
+  },
+  "keywords": [
+    "postgres",
+    "postgresql",
+    "database",
+    "embedded"
+  ],
+  "author": "Lei Nelissen",
+  "license": "MIT",
+  "devDependencies": {
+    "@embedded-postgres/symlink-reader": "^18.4.0-beta.17",
+    "@types/async-exit-hook": "^2.0.0",
+    "@types/pg": "^8.6.5",
+    "eslint": "^8.56.0",
+    "typescript": "^4.7.3",
+    "vitest": "^1.1.0"
+  },
+  "optionalDependencies": {
+    "@embedded-postgres/darwin-arm64": "^18.4.0-beta.17",
+    "@embedded-postgres/darwin-x64": "^18.4.0-beta.17",
+    "@embedded-postgres/linux-arm": "^18.4.0-beta.17",
+    "@embedded-postgres/linux-arm64": "^18.4.0-beta.17",
+    "@embedded-postgres/linux-ia32": "^18.4.0-beta.17",
+    "@embedded-postgres/linux-ppc64": "^18.4.0-beta.17",
+    "@embedded-postgres/linux-x64": "^18.4.0-beta.17",
+    "@embedded-postgres/windows-x64": "^18.4.0-beta.17"
+  },
+  "dependencies": {
+    "async-exit-hook": "^2.0.1",
+    "pg": "^8.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/dist/**/*",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "gitHead": "8c8c16d1b81bec8ae3315d59a050654086a85e23"
+}

@@ -11,3 +11,4 @@ export * from './payment-type.ts';
 export * from './policy-engine.ts';
 export * from './eligibility.ts';
 export * from './intents.ts';
+export * from './location.ts';

@@ -18,11 +18,12 @@ import { ENGINE_VERSION, type Category, type DecisionField, type IntegrityFlag, 
  *   2. REJECT findings     -> REJECT_FOR_CORRECTION  (not claimable as submitted)
  *   3. INFO findings       -> REQUEST_INFO           (exactly one question, highest priority first)
  *   4. LIMIT findings      -> HUMAN_REVIEW           (over caps / thresholds / foreign currency)
- *   5. otherwise           -> CLEAR
+ *   5. ADVISORY findings   -> HUMAN_REVIEW           (risk signals: never reject, never ask, never change amounts)
+ *   6. otherwise           -> CLEAR
  */
 
 export type PolicyOutcome = 'CLEAR' | 'REQUEST_INFO' | 'HUMAN_REVIEW' | 'REJECT_FOR_CORRECTION';
-export type FindingClass = 'INTEGRITY' | 'REJECT' | 'INFO' | 'LIMIT';
+export type FindingClass = 'INTEGRITY' | 'REJECT' | 'INFO' | 'LIMIT' | 'ADVISORY';
 
 export type ReasonCode =
   // integrity
@@ -57,6 +58,8 @@ export type ReasonCode =
   | 'ABOVE_REVIEW_THRESHOLD'
   | 'MEMBER_DAILY_CAP_EXCEEDED'
   | 'MEMBER_WEEKLY_CAP_EXCEEDED'
+  // advisory
+  | 'LOCATION_UNUSUAL'
   // clear
   | 'WITHIN_POLICY';
 
@@ -98,6 +101,8 @@ export interface PolicyEvaluationInput {
   questionsAsked: readonly QuestionKind[];
   /** Prior spend in policy currency, excluding this expense: same member same day / ISO week; same category this month. */
   spendBefore: { memberDay: number; memberWeek: number; categoryMonth: number };
+  /** Set only when the card payment's stated location is outside the member's usual areas. */
+  locationRisk?: { detail: string };
 }
 
 export interface PolicyDecision {
@@ -248,6 +253,9 @@ export function evaluatePolicy(policy: PolicyDocument, input: PolicyEvaluationIn
     }
   }
 
+  // ---- 5. Advisory --------------------------------------------------------------------------
+  if (input.locationRisk) add('LOCATION_UNUSUAL', 'ADVISORY', safety('SB-SAFETY-LOCATION'), input.locationRisk.detail);
+
   // ---- Outcome ------------------------------------------------------------------------------
   const of = (cls: FindingClass) => findings.filter((f) => f.class === cls);
   let outcome: PolicyOutcome;
@@ -256,9 +264,10 @@ export function evaluatePolicy(policy: PolicyDocument, input: PolicyEvaluationIn
 
   const integrity = of('INTEGRITY');
   const infos = of('INFO').sort((a, b) => INFO_PRIORITY.indexOf(a.code) - INFO_PRIORITY.indexOf(b.code));
+  const advisory = of('ADVISORY');
   if (integrity.length) {
     outcome = 'HUMAN_REVIEW';
-    decisive = integrity;
+    decisive = [...integrity, ...advisory];
   } else if (of('REJECT').length) {
     outcome = 'REJECT_FOR_CORRECTION';
     decisive = of('REJECT');
@@ -275,7 +284,7 @@ export function evaluatePolicy(policy: PolicyDocument, input: PolicyEvaluationIn
       };
       findings.push(unresolved);
       outcome = 'HUMAN_REVIEW';
-      decisive = [unresolved, ...infos, ...of('LIMIT')];
+      decisive = [unresolved, ...infos, ...of('LIMIT'), ...advisory];
     } else {
       outcome = 'REQUEST_INFO';
       decisive = [first];
@@ -284,9 +293,9 @@ export function evaluatePolicy(policy: PolicyDocument, input: PolicyEvaluationIn
         question.options = input.match.candidates.map((c) => c.transactionId);
       }
     }
-  } else if (of('LIMIT').length) {
+  } else if (of('LIMIT').length || advisory.length) {
     outcome = 'HUMAN_REVIEW';
-    decisive = of('LIMIT');
+    decisive = [...of('LIMIT'), ...advisory];
   } else {
     outcome = 'CLEAR';
     decisive = [];

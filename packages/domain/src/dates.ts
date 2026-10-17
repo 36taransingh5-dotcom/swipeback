@@ -40,6 +40,24 @@ export function startOfMonth(d: IsoDate): IsoDate {
   return `${d.slice(0, 8)}01`;
 }
 
+/** The instant (ISO, UTC) of a wall-clock date and 'HH:MM' time in an IANA timezone. */
+export function instantFromZoned(date: IsoDate, time: string, timeZone: string): string {
+  if (!isIsoDate(date) || !/^([01]\d|2[0-3]):[0-5]\d$/.test(time)) throw new RangeError(`Not a local date/time: ${date} ${time}`);
+  const wall = Date.parse(`${date}T${time}:00Z`);
+  // Offset of the zone at a given instant, from its formatted wall-clock parts.
+  const offsetAt = (t: number) => {
+    const p = Object.fromEntries(
+      new Intl.DateTimeFormat('en-GB', { timeZone, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+        .formatToParts(t)
+        .map((x) => [x.type, x.value]),
+    );
+    return Date.parse(`${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}:00Z`) - t;
+  };
+  let t = wall - offsetAt(wall);
+  t = wall - offsetAt(t); // second pass settles DST boundaries
+  return new Date(t).toISOString();
+}
+
 /** The calendar date of an instant in a given IANA timezone. */
 export function dateInZone(instantIso: string, timeZone: string): IsoDate {
   const t = Date.parse(instantIso);

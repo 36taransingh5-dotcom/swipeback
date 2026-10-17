@@ -1,0 +1,42 @@
+{
+  "name": "@embedded-postgres/darwin-arm64",
+  "version": "18.4.0-beta.17",
+  "description": "A package containing the Postgres binaries for a particular architecture and operating system. See the embedded-postgres package.",
+  "exports": "./dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsc -w",
+    "build": "tsc",
+    "lint": "eslint ./src --ext ts",
+    "download": "node scripts/download.js",
+    "postinstall": "node scripts/hydrate-symlinks.js"
+  },
+  "author": "Lei Nelissen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leinelissen/embedded-postgres"
+  },
+  "license": "MIT",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "devDependencies": {
+    "@embedded-postgres/downloader": "^18.4.0-beta.17",
+    "@embedded-postgres/symlink-reader": "^18.4.0-beta.17"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/dist/**/*",
+    "/native/**/*",
+    "/scripts/hydrate-symlinks.js"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "gitHead": "8c8c16d1b81bec8ae3315d59a050654086a85e23"
+}
