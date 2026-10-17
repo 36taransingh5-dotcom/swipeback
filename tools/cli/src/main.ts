@@ -22,6 +22,7 @@ import { extractionCommands } from './extraction-commands.ts';
 import { gmailCommands } from './gmail-commands.ts';
 import { pipelineCommands } from './pipeline-commands.ts';
 import { seedDemoOrg, seedOptionsFromEnv } from './seed.ts';
+import { whatsappCommands } from './whatsapp-commands.ts';
 
 type Command = (args: string[]) => Promise<void>;
 
@@ -101,6 +102,7 @@ const commands: Record<string, { describe: string; run: Command }> = {
   ...extractionCommands,
   ...evalCommands,
   ...gmailCommands,
+  ...whatsappCommands,
 };
 
 async function withPool(fn: (pool: ReturnType<typeof createPool>) => Promise<void>): Promise<void> {
