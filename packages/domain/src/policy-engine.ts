@@ -3,7 +3,7 @@ import { addDays, daysBetween, type IsoDate } from './dates.ts';
 import type { DuplicateResult } from './duplicates.ts';
 import type { MatchResult } from './matching.ts';
 import { merchantTokens } from './merchant.ts';
-import type { Money } from './money.ts';
+import { formatMoney, money, type Money } from './money.ts';
 import type { PaymentResolution } from './payment-type.ts';
 import { policyContentHash, type PolicyDocument, type SafetyClause } from './policy-schema.ts';
 import type { ExpenseState } from './state-machines.ts';
@@ -134,6 +134,8 @@ export function evaluatePolicy(policy: PolicyDocument, input: PolicyEvaluationIn
   const applied = new Set<string>();
   const add = (code: ReasonCode, cls: FindingClass, clauseId: string, detail: string) =>
     findings.push({ code, class: cls, clauseId, detail });
+  const m = (minor: number) => formatMoney(money(minor, policy.currency));
+  const cat = (c: Category | null) => (c ? c.toLowerCase().replace(/_/g, ' ') : 'unknown');
   const { expense: e } = input;
 
   // ---- 1. Integrity -----------------------------------------------------------------------
@@ -177,7 +179,7 @@ export function evaluatePolicy(policy: PolicyDocument, input: PolicyEvaluationIn
   const categoryRule = e.category ? policy.categories[e.category] : null;
   if (categoryRule) applied.add(categoryRule.clause);
   if (categoryRule && !categoryRule.allowed) {
-    add('CATEGORY_NOT_ALLOWED', 'REJECT', categoryRule.clause, `${e.category} expenses are not claimable`);
+    add('CATEGORY_NOT_ALLOWED', 'REJECT', categoryRule.clause, `${cat(e.category)} expenses are not claimable`);
   }
   if (e.merchant) {
     const tokens = merchantTokens(e.merchant).join(' ');
@@ -213,7 +215,7 @@ export function evaluatePolicy(policy: PolicyDocument, input: PolicyEvaluationIn
     if (!e.hasReceipt) add('RECEIPT_MISSING', 'INFO', policy.receipts.clause, 'No receipt attached');
   }
   if (categoryRule?.requiresBusinessPurpose && !e.businessPurpose?.trim()) {
-    add('BUSINESS_PURPOSE_MISSING', 'INFO', categoryRule.clause, `${e.category} expenses need a business purpose`);
+    add('BUSINESS_PURPOSE_MISSING', 'INFO', categoryRule.clause, `${cat(e.category)} expenses need a business purpose`);
   }
   if (e.amount && currency === policy.currency && e.amount.amountMinor > policy.vatInvoice.requiredAboveMinor) {
     applied.add(policy.vatInvoice.clause);
@@ -228,21 +230,21 @@ export function evaluatePolicy(policy: PolicyDocument, input: PolicyEvaluationIn
   if (e.amount && currency === policy.currency) {
     const amt = e.amount.amountMinor;
     if (categoryRule?.perExpenseCapMinor !== undefined && amt > categoryRule.perExpenseCapMinor) {
-      add('CATEGORY_CAP_EXCEEDED', 'LIMIT', categoryRule.clause, `Above the ${e.category} cap of ${categoryRule.perExpenseCapMinor}`);
+      add('CATEGORY_CAP_EXCEEDED', 'LIMIT', categoryRule.clause, `Above the ${cat(e.category)} cap of ${m(categoryRule.perExpenseCapMinor)}`);
     }
     if (categoryRule?.monthlyCapMinor !== undefined && input.spendBefore.categoryMonth + amt > categoryRule.monthlyCapMinor) {
-      add('CATEGORY_MONTHLY_CAP_EXCEEDED', 'LIMIT', categoryRule.clause, `Monthly ${e.category} cap of ${categoryRule.monthlyCapMinor} exceeded`);
+      add('CATEGORY_MONTHLY_CAP_EXCEEDED', 'LIMIT', categoryRule.clause, `Monthly ${cat(e.category)} cap of ${m(categoryRule.monthlyCapMinor)} exceeded`);
     }
     applied.add(policy.reviewAboveMinor.clause);
     if (amt > policy.reviewAboveMinor.amountMinor) {
-      add('ABOVE_REVIEW_THRESHOLD', 'LIMIT', policy.reviewAboveMinor.clause, `Above the finance review threshold of ${policy.reviewAboveMinor.amountMinor}`);
+      add('ABOVE_REVIEW_THRESHOLD', 'LIMIT', policy.reviewAboveMinor.clause, `Above the finance review threshold of ${m(policy.reviewAboveMinor.amountMinor)}`);
     }
     applied.add(policy.memberLimits.clause);
     if (input.spendBefore.memberDay + amt > policy.memberLimits.dailyCapMinor) {
-      add('MEMBER_DAILY_CAP_EXCEEDED', 'LIMIT', policy.memberLimits.clause, `Daily limit of ${policy.memberLimits.dailyCapMinor} exceeded`);
+      add('MEMBER_DAILY_CAP_EXCEEDED', 'LIMIT', policy.memberLimits.clause, `Daily limit of ${m(policy.memberLimits.dailyCapMinor)} exceeded`);
     }
     if (input.spendBefore.memberWeek + amt > policy.memberLimits.weeklyCapMinor) {
-      add('MEMBER_WEEKLY_CAP_EXCEEDED', 'LIMIT', policy.memberLimits.clause, `Weekly limit of ${policy.memberLimits.weeklyCapMinor} exceeded`);
+      add('MEMBER_WEEKLY_CAP_EXCEEDED', 'LIMIT', policy.memberLimits.clause, `Weekly limit of ${m(policy.memberLimits.weeklyCapMinor)} exceeded`);
     }
   }
 

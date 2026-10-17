@@ -1,7 +1,7 @@
 import { PermanentJobError, type Job, type JobHandlers } from '@swipeback/db';
 import { rematchMember } from './card-feed.ts';
 import type { EngineDeps } from './deps.ts';
-import { evaluateExpense, extractReceipt } from './expense.ts';
+import { evaluateExpense, extractReceipt, questionTimeout } from './expense.ts';
 import { processInbound } from './inbound.ts';
 import { authoriseReimbursement, executePayout, exportExpense, failPayoutPermanently } from './money-movement.ts';
 import { deliverOutbound } from './outbox.ts';
@@ -44,6 +44,11 @@ export function engineHandlers(deps: EngineDeps): JobHandlers {
         }
         throw err;
       }
+    },
+    'question-timeout': async (job) => {
+      const stage = field(job, 'stage');
+      if (stage !== 'REMIND' && stage !== 'EXPIRE') throw new PermanentJobError(`bad stage ${stage}`);
+      await questionTimeout(deps, field(job, 'token'), stage);
     },
     'rematch-member': async (job) => {
       await rematchMember(deps, { organisationId: field(job, 'organisationId'), memberId: field(job, 'memberId'), transactionId: field(job, 'transactionId') });

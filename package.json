@@ -18,7 +18,8 @@
     "db:reset": "tsx tools/cli/src/main.ts db:reset",
     "seed": "tsx tools/cli/src/main.ts seed",
     "worker": "tsx apps/worker/src/main.ts",
-    "smoke:extract": "tsx tools/cli/src/main.ts smoke:extract"
+    "smoke:extract": "tsx tools/cli/src/main.ts smoke:extract",
+    "web": "tsx apps/web/src/server.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -29,6 +30,7 @@
     "@swipeback/engine": "workspace:*",
     "@swipeback/extraction": "workspace:*",
     "@swipeback/payouts": "workspace:*",
+    "@swipeback/web": "workspace:*",
     "@types/node": "24.19.2",
     "@types/pg": "8.23.1",
     "eslint": "10.13.0",

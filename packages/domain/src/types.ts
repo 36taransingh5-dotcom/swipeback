@@ -30,7 +30,8 @@ export const INTEGRITY_FLAGS = [
 ] as const;
 export type IntegrityFlag = (typeof INTEGRITY_FLAGS)[number];
 
-export const QUESTION_KINDS = ['PAYMENT_SOURCE', 'MATCH_CONFIRMATION', 'RECEIPT', 'BUSINESS_PURPOSE', 'VAT_INVOICE'] as const;
+/** REVIEWER_QUESTION is asked by a finance reviewer (free text); the others are chosen by the policy engine. */
+export const QUESTION_KINDS = ['PAYMENT_SOURCE', 'MATCH_CONFIRMATION', 'RECEIPT', 'BUSINESS_PURPOSE', 'VAT_INVOICE', 'REVIEWER_QUESTION'] as const;
 export type QuestionKind = (typeof QUESTION_KINDS)[number];
 
 export const ENGINE_VERSION = 'swipeback-engine/1.0.0';

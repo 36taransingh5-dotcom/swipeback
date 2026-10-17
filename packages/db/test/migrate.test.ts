@@ -1,6 +1,7 @@
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { EXPENSE_MACHINE, REIMBURSEMENT_MACHINE, STATE_MACHINES } from '@swipeback/domain';
-import { migrate, resetSchema } from '@swipeback/db';
+import { readdir } from 'node:fs/promises';
+import { migrate, MIGRATIONS_DIR, resetSchema } from '@swipeback/db';
 import { createTestDatabase, type TestDatabase } from '../../../test/support/db.ts';
 
 let db: TestDatabase;
@@ -28,7 +29,7 @@ describe('migrations', () => {
     await resetSchema(db.pool);
     expect(await snapshot()).toEqual([]);
     const r = await migrate(db.pool);
-    expect(r.applied).toEqual(['0001_core.sql', '0002_pipeline.sql']);
+    expect(r.applied).toEqual((await readdir(MIGRATIONS_DIR)).filter((f) => f.endsWith('.sql')).sort());
     expect(await snapshot()).toEqual(before);
   });
 

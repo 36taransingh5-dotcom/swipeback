@@ -10,9 +10,10 @@ import {
 import { appendAudit, enqueue, PermanentJobError, withTransaction, type PoolClient } from '@swipeback/db';
 import { resolveIntent, type QuestionKind } from '@swipeback/domain';
 import { statedPurpose } from '@swipeback/extraction';
-import type { EngineDeps } from './deps.ts';
+import { moveExpense, type EngineDeps } from './deps.ts';
+import { lockExpense, notifyReviewers, summary } from './expense.ts';
 import { queueMessage } from './outbox.ts';
-import { duplicateReceivedMessage, enrolmentMessage, helpMessage, statusMessage, describe as describeExpense } from './templates.ts';
+import { duplicateReceivedMessage, enrolmentMessage, helpMessage, reviewerNotice, statusMessage, describe as describeExpense } from './templates.ts';
 
 /**
  * Channel-neutral intake. Every adapter's events arrive here as InboundMessage v1; nothing below
@@ -203,9 +204,19 @@ export async function processInbound(deps: EngineDeps, inboundId: string): Promi
         entityId: question.expenseId, correlationId: ev.correlationId,
         after: { kind: question.kind, understood: a !== null, answer: a && 'value' in a ? a.value : a?.kind ?? null },
       });
-      await enqueue(c, newReceiptId ? 'extract-receipt' : 'evaluate-expense', { expenseId: question.expenseId }, {
-        organisationId: org, dedupeKey: `answer:${question.expenseId}:${inboundId}`,
-      });
+      if (question.kind === 'REVIEWER_QUESTION') {
+        // A reviewer asked: the answer goes back to finance, not to the policy engine.
+        await c.query('UPDATE open_questions SET answer_text = $2 WHERE id = $1', [question.id, a && 'value' in a ? a.value : null]);
+        const exp = await lockExpense(c, question.expenseId);
+        if (exp.state === 'NEEDS_INFO') {
+          await moveExpense(c, exp.id, 'NEEDS_INFO', 'REVIEW_REQUIRED');
+          await notifyReviewers(c, deps, exp, reviewerNotice(summary(exp), member.display_name, ['the employee answered your question'], []), `reviewer-answer:${inboundId}`);
+        }
+      } else {
+        await enqueue(c, newReceiptId ? 'extract-receipt' : 'evaluate-expense', { expenseId: question.expenseId }, {
+          organisationId: org, dedupeKey: `answer:${question.expenseId}:${inboundId}`,
+        });
+      }
       return finish('PROCESSED', `answered ${question.kind}`, { memberId, intent: resolution.intent });
     }
 

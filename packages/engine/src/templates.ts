@@ -122,10 +122,39 @@ export function questionMessage(
     RECEIPT: 'Please reply with the receipt attached.',
     BUSINESS_PURPOSE: 'What was the business purpose? Reply with one line, e.g. "Lunch with the Acme site team during the boiler install".',
     VAT_INVOICE: "Please reply with the full VAT invoice attached (it must show the supplier's VAT number).",
+    REVIEWER_QUESTION: 'Finance has a question about this expense (see below). Please reply to this email.',
   };
   return {
     subject: subjectFor(e, 'One question'),
     text: `${describe(e)}\n\n${ask[kind]}\n\nWhy we ask: ${clause}\n\nThis is the only question we'll ask about this expense.\n\n${FOOTER}`,
+  };
+}
+
+export function questionReminderMessage(e: ExpenseSummary): Rendered {
+  return {
+    subject: `[${e.ref}] Reminder: one question`,
+    text: `${describe(e)}\n\nA reminder that we're waiting for your answer to our earlier question about this expense. If we don't hear back, it goes to finance to resolve.\n\n${FOOTER}`,
+  };
+}
+
+export function reviewerQuestionMessage(e: ExpenseSummary, reviewerName: string, question: string): Rendered {
+  return {
+    subject: `[${e.ref}] Question from finance`,
+    text: `${describe(e)}\n\n${reviewerName} in finance asks:\n\n"${question}"\n\nPlease reply to this email. Your answer goes straight back to them.\n\n${FOOTER}`,
+  };
+}
+
+export function reviewOutcomeMessage(e: ExpenseSummary, outcome: 'APPROVED' | 'DECLINED', reason: string): Rendered {
+  return {
+    subject: `[${e.ref}] ${outcome === 'APPROVED' ? 'Approved by finance' : 'Declined by finance'}`,
+    text: `${describe(e)}\n\nFinance ${outcome === 'APPROVED' ? 'approved' : 'declined'} this expense.\nReason: ${reason}${outcome === 'DECLINED' ? '\n\nIf you disagree, reply to this email and finance will look at it again.' : ''}\n\n${FOOTER}`,
+  };
+}
+
+export function loginLinkMessage(link: string): Rendered {
+  return {
+    subject: 'Your Swipeback sign-in link',
+    text: `Sign in to review expenses:\n\n${link}\n\nThe link works once and expires in 15 minutes. If you didn't ask for it, ignore this email.\n\n${FOOTER}`,
   };
 }
 

@@ -22,12 +22,14 @@ import {
 } from '@swipeback/domain';
 import { finaliseExtraction, TransientExtractionError, type ExtractionResult } from '@swipeback/extraction';
 import { lockKey, moveExpense, type EngineDeps } from './deps.ts';
+import { EMAIL_CHALLENGE_TTL_MINUTES, mintChallenge } from './challenges.ts';
 import { newCorrelationToken } from './inbound.ts';
 import { primaryEmailConnection, queueMessage } from './outbox.ts';
 import {
   clauseText,
   clearedCardMessage,
   questionMessage,
+  questionReminderMessage,
   reasonText,
   rejectedMessage,
   reviewerNotice,
@@ -394,6 +396,7 @@ async function sideEffects(
     );
     const outboundId = await toEmployee('question', questionMessage(s, d.question.kind, clauseText(policy, d.question.clauseId), options), `question:${e.id}:${d.question.kind}`, token);
     if (outboundId) await c.query('UPDATE open_questions SET outbound_message_id = $2 WHERE correlation_token = $1', [token, outboundId]);
+    await scheduleQuestionTimeout(c, deps, e.organisation_id, token, 'REMIND');
     return;
   }
 
@@ -409,7 +412,20 @@ async function sideEffects(
   }
 }
 
-export async function notifyReviewers(c: PoolClient, deps: EngineDeps, e: Pick<ExpenseRow, 'id' | 'organisation_id' | 'member_id'>, rendered: { subject: string; text: string }, key: string, role = 'reviewer'): Promise<void> {
+/**
+ * Email finance an approval request. Each recipient gets their own one-time challenge link: it
+ * opens the authenticated review page and is useless to anyone else (session + role still required).
+ * With a reimbursementId the link authorises that payment; otherwise it reviews the expense.
+ */
+export async function notifyReviewers(
+  c: PoolClient,
+  deps: EngineDeps,
+  e: Pick<ExpenseRow, 'id' | 'organisation_id' | 'member_id'>,
+  rendered: { subject: string; text: string },
+  key: string,
+  role: 'reviewer' | 'payment_approver' = 'reviewer',
+  reimbursementId: string | null = null,
+): Promise<void> {
   const conn = await primaryEmailConnection(c, e.organisation_id);
   if (!conn) {
     await appendAudit(c, { organisationId: e.organisation_id, actorType: 'system', action: 'notification.no_channel', entityType: 'expense', entityId: e.id });
@@ -420,12 +436,61 @@ export async function notifyReviewers(c: PoolClient, deps: EngineDeps, e: Pick<E
     [e.organisation_id, e.member_id, role],
   );
   for (const r of reviewers.rows) {
+    const already = await c.query('SELECT 1 FROM outbound_messages WHERE idempotency_key = $1', [`${key}:${r.id}`]);
+    if (already.rowCount) continue;
+    const { challengeId, nonce } = await mintChallenge(c, {
+      organisationId: e.organisation_id, expenseId: e.id, reimbursementId, memberId: r.id,
+      purpose: reimbursementId ? 'PAYMENT_AUTHORISATION' : 'EXPENSE_REVIEW', ttlMinutes: EMAIL_CHALLENGE_TTL_MINUTES,
+    });
     await queueMessage(c, {
       organisationId: e.organisation_id, connectionId: conn.id, channel: 'email', expenseId: e.id, recipientMemberId: r.id,
       recipientAddress: r.email, template: `reviewer-${role}`, idempotencyKey: `${key}:${r.id}`, rendered,
-      kind: 'approval_request', reviewUrl: `${deps.config.appUrl}/review/${e.id}`,
+      kind: 'approval_request', reviewUrl: `${deps.config.appUrl}/a/${challengeId}?n=${nonce}`,
     });
   }
+}
+
+export async function scheduleQuestionTimeout(c: PoolClient, deps: EngineDeps, organisationId: string, token: string, stage: 'REMIND' | 'EXPIRE'): Promise<void> {
+  const minutes = stage === 'REMIND' ? (deps.config.questionReminderMinutes ?? 24 * 60) : (deps.config.questionExpiryMinutes ?? 24 * 60);
+  await enqueue(c, 'question-timeout', { token, stage }, { organisationId, delayMs: minutes * 60_000, dedupeKey: `question-timeout:${token}:${stage}` });
+}
+
+/**
+ * One reminder, then expiry. An expired question is "asked and unresolved": the next evaluation
+ * escalates to finance (never a second identical question, never silence).
+ */
+export async function questionTimeout(deps: EngineDeps, token: string, stage: 'REMIND' | 'EXPIRE'): Promise<string> {
+  return withTransaction(deps.pool, async (c) => {
+    const q = await c.query<{ id: string; expense_id: string; organisation_id: string; kind: QuestionKind; status: string; reminders_sent: number }>(
+      'SELECT id, expense_id, organisation_id, kind, status, reminders_sent FROM open_questions WHERE correlation_token = $1 FOR UPDATE',
+      [token],
+    );
+    const row = q.rows[0];
+    if (!row || row.status !== 'OPEN') return 'no longer open';
+    const e = await lockExpense(c, row.expense_id);
+    if (stage === 'REMIND') {
+      await c.query('UPDATE open_questions SET reminders_sent = reminders_sent + 1 WHERE id = $1', [row.id]);
+      const origin = await originOf(c, e);
+      if (origin) {
+        await queueMessage(c, {
+          organisationId: e.organisation_id, connectionId: origin.connectionId, channel: origin.channel, expenseId: e.id,
+          recipientMemberId: e.member_id, recipientAddress: origin.address, template: 'question-reminder',
+          idempotencyKey: `question-reminder:${row.id}`, rendered: questionReminderMessage(summary(e)), thread: origin.thread, replyToken: token,
+        });
+      }
+      await scheduleQuestionTimeout(c, deps, row.organisation_id, token, 'EXPIRE');
+      return 'reminded';
+    }
+    await c.query(`UPDATE open_questions SET status = 'EXPIRED' WHERE id = $1`, [row.id]);
+    await appendAudit(c, { organisationId: e.organisation_id, actorType: 'system', action: 'question.expired', entityType: 'expense', entityId: e.id, after: { kind: row.kind } });
+    if (row.kind === 'REVIEWER_QUESTION' && e.state === 'NEEDS_INFO') {
+      await moveExpense(c, e.id, e.state, 'REVIEW_REQUIRED');
+      await notifyReviewers(c, deps, e, reviewerNotice(summary(e), 'employee', ['your question was not answered in time'], []), `question-expired:${row.id}`);
+    } else {
+      await enqueue(c, 'evaluate-expense', { expenseId: e.id }, { organisationId: e.organisation_id, dedupeKey: `evaluate:${e.id}:expired:${row.id}` });
+    }
+    return 'expired';
+  });
 }
 
 /** Where to reply to the employee: the channel and thread the expense arrived on. */

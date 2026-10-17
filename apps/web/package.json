@@ -1,0 +1,20 @@
+{
+  "name": "@swipeback/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal authenticated reviewer app + PRD §7.4 API. Not a dashboard: finance only sees exceptions.",
+  "exports": {
+    ".": "./src/app.ts"
+  },
+  "scripts": {
+    "start": "tsx src/server.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.1.5",
+    "@swipeback/db": "workspace:*",
+    "@swipeback/domain": "workspace:*",
+    "@swipeback/engine": "workspace:*",
+    "hono": "4.13.13"
+  }
+}

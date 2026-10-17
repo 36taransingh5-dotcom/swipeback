@@ -29,6 +29,9 @@ export interface EngineConfig {
   appUrl: string;
   /** HMAC secret for the card-feed simulator webhook. */
   cardFeedSecret: string;
+  /** Minutes before an unanswered question gets its one reminder, and then before it expires (defaults 24h each). */
+  questionReminderMinutes?: number;
+  questionExpiryMinutes?: number;
 }
 
 export interface EngineDeps {

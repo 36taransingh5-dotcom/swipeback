@@ -40,7 +40,8 @@ export type ParsedAnswer =
   | { kind: 'BUSINESS_PURPOSE'; value: string }
   | { kind: 'MATCH_CONFIRMATION'; value: string | 'NONE' }
   | { kind: 'RECEIPT' }
-  | { kind: 'VAT_INVOICE' };
+  | { kind: 'VAT_INVOICE' }
+  | { kind: 'REVIEWER_QUESTION'; value: string };
 
 export interface IntentResolution {
   intent: Intent;
@@ -69,6 +70,11 @@ export function resolveIntent(input: IntentInput): IntentResolution {
         // Picking which card transaction it was confirms the payment source.
         const value = parseOptionChoice(text, q.options ?? []);
         return { intent: 'CONFIRM_PAYMENT_SOURCE', answer: value ? { kind: 'MATCH_CONFIRMATION', value } : null };
+      }
+      case 'REVIEWER_QUESTION': {
+        // Free-text answer for the reviewer, kept verbatim; it never decides anything by itself.
+        const value = text.replace(/\s+/g, ' ').trim().slice(0, 2000);
+        return { intent: 'PROVIDE_BUSINESS_PURPOSE', answer: value || input.hasReceiptAttachment ? { kind: 'REVIEWER_QUESTION', value } : null };
       }
       case 'RECEIPT':
       case 'VAT_INVOICE':

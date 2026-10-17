@@ -25,35 +25,7 @@ export async function authoriseReimbursement(deps: EngineDeps, expenseId: string
     const live = await c.query<{ id: string; state: string }>(`SELECT id, state FROM reimbursements WHERE expense_id = $1 AND state <> 'CANCELED'`, [e.id]);
     if (live.rows[0] && live.rows[0].state !== 'DRAFT') return `already ${live.rows[0].state}`;
 
-    const policy = await loadPolicy(c, e.organisation_id, e.policy_version_id);
-    const member = await c.query<{ status: string; payout_enrolment_status: 'NOT_ENROLLED' | 'PENDING' | 'VERIFIED' | 'SUSPENDED'; display_name: string }>(
-      'SELECT status, payout_enrolment_status, display_name FROM members WHERE id = $1',
-      [e.member_id],
-    );
-    const dest = await c.query<{ id: string; member_id: string; verified_at: Date | null }>(
-      `SELECT id, member_id, verified_at FROM payout_destinations WHERE member_id = $1 AND status = 'ACTIVE'`,
-      [e.member_id],
-    );
-    const today = dateInZone(deps.clock.now().toISOString(), policy.timezone);
-    const before = await priorReimbursements(c, e, today, policy.timezone);
-    const amount = e.amount_minor !== null && e.currency ? money(e.amount_minor, e.currency) : null;
-    const eligibility = evaluateReimbursementEligibility(policy.doc, {
-      expense: {
-        state: e.state,
-        paymentType: e.payment_type,
-        matchedTransactionId: e.matched_transaction_id,
-        amount,
-        memberId: e.member_id,
-        flags: e.flags,
-        uncertainFields: e.uncertain_fields,
-      },
-      member: { active: member.rows[0]?.status === 'ACTIVE', payoutEnrolment: member.rows[0]?.payout_enrolment_status ?? 'NOT_ENROLLED' },
-      destination: dest.rows[0] ? { memberId: dest.rows[0].member_id, active: true, verified: dest.rows[0].verified_at !== null } : null,
-      senderVerified: e.sender_auth === 'dkim_aligned' || e.sender_auth === 'platform_signed',
-      duplicates: await findDuplicates(c, e, amount),
-      hasLiveReimbursement: false,
-      reimbursedBefore: before,
-    });
+    const { policy, member, dest, amount, eligibility } = await computeEligibility(c, deps, e);
 
     const s = summary(e);
     if (!eligibility.payable) {
@@ -64,7 +36,7 @@ export async function authoriseReimbursement(deps: EngineDeps, expenseId: string
         after: { blockers: eligibility.blockers, limits: eligibility.limitsSnapshot },
       });
       const reasons = eligibility.blockers.map((b) => b.toLowerCase().replace(/_/g, ' '));
-      await notifyReviewers(c, deps, e, reviewerNotice(s, member.rows[0]?.display_name ?? 'employee', [`the payout is blocked (${reasons.join(', ')})`], []), `payout-blocked:${e.id}`);
+      await notifyReviewers(c, deps, e, reviewerNotice(s, member?.display_name ?? 'employee', [`the payout is blocked (${reasons.join(', ')})`], []), `payout-blocked:${e.id}`);
       await toEmployee(c, e, 'under-review', underReviewMessage(s, ['the reimbursement needs finance to check your payout details']), `payout-blocked:${e.id}`);
       return `blocked: ${eligibility.blockers.join(', ')}`;
     }
@@ -75,7 +47,7 @@ export async function authoriseReimbursement(deps: EngineDeps, expenseId: string
         await c.query<{ id: string }>(
           `INSERT INTO reimbursements (organisation_id, expense_id, member_id, payout_destination_id, amount_minor, currency, state, idempotency_key)
            VALUES ($1,$2,$3,$4,$5,$6,'DRAFT',$7) RETURNING id`,
-          [e.organisation_id, e.id, e.member_id, dest.rows[0]!.id, amount!.amountMinor, amount!.currency, `swipeback:reimbursement:${e.id}:1`],
+          [e.organisation_id, e.id, e.member_id, dest!.id, amount!.amountMinor, amount!.currency, `swipeback:reimbursement:${e.id}:1`],
         )
       ).rows[0]!.id;
     await moveReimbursement(c, reimbursementId, 'DRAFT', 'ELIGIBILITY_CHECK');
@@ -87,8 +59,8 @@ export async function authoriseReimbursement(deps: EngineDeps, expenseId: string
       });
       await notifyReviewers(
         c, deps, e,
-        reviewerNotice(s, member.rows[0]?.display_name ?? 'employee', [`the reimbursement needs a payment approver (${eligibility.humanRequired.join(', ').toLowerCase().replace(/_/g, ' ')})`], []),
-        `payment-authorisation:${reimbursementId}`, 'payment_approver',
+        reviewerNotice(s, member?.display_name ?? 'employee', [`the reimbursement needs a payment approver (${eligibility.humanRequired.join(', ').toLowerCase().replace(/_/g, ' ')})`], []),
+        `payment-authorisation:${reimbursementId}`, 'payment_approver', reimbursementId,
       );
       await toEmployee(c, e, 'awaiting-payment', awaitingPaymentAuthorisationMessage(s), `awaiting-payment:${reimbursementId}`);
       return `awaiting human authorisation: ${eligibility.humanRequired.join(', ')}`;
@@ -109,6 +81,44 @@ export async function authoriseReimbursement(deps: EngineDeps, expenseId: string
   });
 }
 
+/** Every deterministic payout check, recomputed from current data under the caller's locks. */
+export async function computeEligibility(c: PoolClient, deps: EngineDeps, e: ExpenseRow) {
+  const policy = await loadPolicy(c, e.organisation_id, e.policy_version_id);
+  const member = (
+    await c.query<{ status: string; payout_enrolment_status: 'NOT_ENROLLED' | 'PENDING' | 'VERIFIED' | 'SUSPENDED'; display_name: string }>(
+      'SELECT status, payout_enrolment_status, display_name FROM members WHERE id = $1',
+      [e.member_id],
+    )
+  ).rows[0];
+  const dest = (
+    await c.query<{ id: string; member_id: string; verified_at: Date | null }>(
+      `SELECT id, member_id, verified_at FROM payout_destinations WHERE member_id = $1 AND status = 'ACTIVE'`,
+      [e.member_id],
+    )
+  ).rows[0];
+  const today = dateInZone(deps.clock.now().toISOString(), policy.timezone);
+  const before = await priorReimbursements(c, e, today, policy.timezone);
+  const amount = e.amount_minor !== null && e.currency ? money(e.amount_minor, e.currency) : null;
+  const eligibility = evaluateReimbursementEligibility(policy.doc, {
+    expense: {
+      state: e.state,
+      paymentType: e.payment_type,
+      matchedTransactionId: e.matched_transaction_id,
+      amount,
+      memberId: e.member_id,
+      flags: e.flags,
+      uncertainFields: e.uncertain_fields,
+    },
+    member: { active: member?.status === 'ACTIVE', payoutEnrolment: member?.payout_enrolment_status ?? 'NOT_ENROLLED' },
+    destination: dest ? { memberId: dest.member_id, active: true, verified: dest.verified_at !== null } : null,
+    senderVerified: e.sender_auth === 'dkim_aligned' || e.sender_auth === 'platform_signed',
+    duplicates: await findDuplicates(c, e, amount),
+    hasLiveReimbursement: false,
+    reimbursedBefore: before,
+  });
+  return { policy, member, dest, amount, eligibility };
+}
+
 async function priorReimbursements(c: PoolClient, e: ExpenseRow, today: string, tz: string) {
   const r = await c.query<{ day: number; week: number; month: number }>(
     `SELECT coalesce(sum(amount_minor) FILTER (WHERE member_id = $2 AND (created_at AT TIME ZONE $6)::date = $3), 0)::bigint AS day,
@@ -122,7 +132,7 @@ async function priorReimbursements(c: PoolClient, e: ExpenseRow, today: string, 
   return { memberDay: row.day, memberWeek: row.week, organisationMonth: row.month };
 }
 
-async function toEmployee(c: PoolClient, e: ExpenseRow, template: string, rendered: { subject: string; text: string }, key: string) {
+export async function toEmployee(c: PoolClient, e: ExpenseRow, template: string, rendered: { subject: string; text: string }, key: string) {
   const origin = await originOf(c, e);
   if (!origin) return;
   await queueMessage(c, {
