@@ -30,8 +30,12 @@ import {
   type GmailRuntime,
   type ReviewAction,
   type SessionMember,
+  memberSpend,
+  parseSpendFilters,
+  parseTeamFilters,
+  teamOverview,
 } from '@swipeback/engine';
-import { casePage, checkEmailPage, connectPage, errorPage, loginPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
+import { casePage, checkEmailPage, connectPage, errorPage, loginPage, memberPage, queuePage, STATIC_CSS, STATIC_JS, teamPage, type CasePageOptions } from './views.ts';
 
 /**
  * The minimal authenticated reviewer surface plus the PRD §7.4 API. It holds no business logic:
@@ -109,6 +113,25 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
     return c.html(queuePage(actor, await reviewQueue(deps, actor), await mailboxStatus(deps, actor.organisationId)));
+  });
+
+  // ---- team spend dashboard (monitoring only) ------------------------------------------------
+  const today = () => deps.clock.now().toLocaleDateString('en-CA', { timeZone: 'Europe/London' });
+  app.get('/team', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    const f = parseTeamFilters(c.req.query());
+    return withErrors(c, actor, async () => c.html(teamPage(actor, await teamOverview(deps, actor, f), f, today())));
+  });
+  app.get('/team/:memberId', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    const f = parseSpendFilters(c.req.query());
+    return withErrors(c, actor, async () => {
+      const spend = await memberSpend(deps, actor, c.req.param('memberId'), f);
+      const org = await deps.pool.query<{ base_currency: string }>('SELECT base_currency FROM organisations WHERE id = $1', [actor.organisationId]);
+      return c.html(memberPage(actor, spend, f, today(), org.rows[0]?.base_currency ?? 'GBP'));
+    });
   });
 
   // ---- connected finance mailbox --------------------------------------------------------------
@@ -308,6 +331,28 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
     if (actor instanceof Response) return actor;
     try {
       return c.json(await loadCase(deps, actor, c.req.param('id')));
+    } catch (err) {
+      if (err instanceof ReviewError) return c.json({ error: err.message }, err.status);
+      throw err;
+    }
+  });
+
+  app.get('/api/team', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    try {
+      return c.json(await teamOverview(deps, actor, parseTeamFilters(c.req.query())));
+    } catch (err) {
+      if (err instanceof ReviewError) return c.json({ error: err.message }, err.status);
+      throw err;
+    }
+  });
+
+  app.get('/api/team/:memberId/expenses', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    try {
+      return c.json(await memberSpend(deps, actor, c.req.param('memberId'), parseSpendFilters(c.req.query())));
     } catch (err) {
       if (err instanceof ReviewError) return c.json({ error: err.message }, err.status);
       throw err;

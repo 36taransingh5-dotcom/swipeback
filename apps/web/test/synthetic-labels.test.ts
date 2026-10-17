@@ -14,6 +14,10 @@ const PAGES: Record<string, () => unknown> = {
   errorPage: () => views.errorPage(404, 'Nothing here.', null),
   connectPage: () => views.connectPage(actor, mailbox, { configured: false, notice: null, error: null }),
   queuePage: () => views.queuePage(actor, { items: [], handledAutomatically: 0, waitingOnEmployees: 0 }, mailbox),
+  teamPage: () => views.teamPage(actor, { members: [], byCategory: [], totals: [], baseCurrency: 'GBP' }, { from: null, to: null, category: null, sort: 'spend', dir: 'desc' }, '2026-10-17'),
+  memberPage: () =>
+    views.memberPage(actor, { member: { memberId: 'm2', name: 'Sam Taylor (synthetic)', email: 'sam@example.com', roles: ['employee'], status: 'ACTIVE', cards: [] }, rows: [], byCategory: [], totals: [] },
+      { from: null, to: null, category: null, state: null, sort: 'date', dir: 'desc' }, '2026-10-17', 'GBP'),
   // casePage needs a full case view; the browser test asserts its banner.
   casePage: () => null,
 };

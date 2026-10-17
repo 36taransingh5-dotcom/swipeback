@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { html, raw } from 'hono/html';
 import type { HtmlEscapedString } from 'hono/utils/html';
 import { CATEGORIES } from '@swipeback/domain';
-import type { CaseView, QueueItem, SessionMember } from '@swipeback/engine';
+import { SPEND_STATES, UNCATEGORISED, type CaseView, type CategoryTotal, type MemberSpend, type MoneyTotal, type QueueItem, type SessionMember, type SpendFilters, type TeamFilters, type TeamOverview } from '@swipeback/engine';
 
 type H = HtmlEscapedString | Promise<HtmlEscapedString>;
 
@@ -25,6 +25,7 @@ export function layout(title: string, body: H, actor: SessionMember | null = nul
 <body>
 <div class="demo-banner">SYNTHETIC DEMO — all people, receipts and cards are fictitious; payouts are simulated, no money moves.</div>
 <header class="top"><a class="brand" href="/review">swipe<b>back</b></a>
+${actor ? html`<nav class="nav"><a href="/review">Exceptions</a><a href="/team">Team spend</a></nav>` : ''}
 ${actor ? html`<div class="who"><span>${actor.displayName}</span><form method="post" action="/logout"><button class="link">Sign out</button></form></div>` : ''}
 </header>
 <main>${body}</main>
@@ -103,6 +104,121 @@ export function queuePage(actor: SessionMember, q: { items: QueueItem[]; handled
   <h1>Exceptions for you <span class="count" data-testid="queue-count">${q.items.length}</span></h1>
   <p class="muted">Handled automatically, no finance action: <strong>${q.handledAutomatically}</strong> · Waiting on an employee's answer: <strong>${q.waitingOnEmployees}</strong></p>
   ${q.items.length ? html`<div class="list">${rows}</div>` : html`<div class="card empty">Nothing needs you right now.</div>`}
+  </section>`, actor);
+}
+
+// ---- team spend dashboard -------------------------------------------------------------------
+
+const totalsText = (totals: MoneyTotal[]) => (totals.length ? totals.map((t) => money(t.amountMinor, t.currency)).join(' · ') : money(0, 'GBP'));
+const categoryName = (c: string | null) => (c ? words(c) : 'uncategorised');
+const qs = (params: Record<string, string | null | undefined>) => {
+  const u = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) if (v) u.set(k, v);
+  const s = u.toString();
+  return s ? `?${s}` : '';
+};
+
+/** Date presets relative to the organisation's today (YYYY-MM-DD). */
+function presets(today: string): { label: string; from: string | null; to: string | null }[] {
+  const d = new Date(`${today}T00:00:00Z`);
+  const iso = (x: Date) => x.toISOString().slice(0, 10);
+  const back = (days: number) => iso(new Date(d.getTime() - days * 86_400_000));
+  return [
+    { label: 'Last 30 days', from: back(29), to: today },
+    { label: 'This month', from: `${today.slice(0, 7)}-01`, to: today },
+    { label: 'This year', from: `${today.slice(0, 4)}-01-01`, to: today },
+    { label: 'All time', from: null, to: null },
+  ];
+}
+
+function filterBar(action: string, f: { from: string | null; to: string | null; category: string | null; state?: string | null; sort: string; dir: string }, today: string, withState: boolean): H {
+  return html`<form class="card filters" method="get" action="${action}" data-testid="filters">
+  <label>From<input type="date" name="from" value="${f.from ?? ''}"></label>
+  <label>To<input type="date" name="to" value="${f.to ?? ''}"></label>
+  <label>Category<select name="category"><option value="">All categories</option>${CATEGORIES.map((c) => html`<option value="${c}" ${f.category === c ? 'selected' : ''}>${words(c)}</option>`)}<option value="${UNCATEGORISED}" ${f.category === UNCATEGORISED ? 'selected' : ''}>uncategorised</option></select></label>
+  ${withState ? html`<label>Status<select name="state"><option value="">Any status</option>${SPEND_STATES.map((s) => html`<option value="${s}" ${f.state === s ? 'selected' : ''}>${words(s)}</option>`)}</select></label>` : ''}
+  <input type="hidden" name="sort" value="${f.sort}"><input type="hidden" name="dir" value="${f.dir}">
+  <div class="filter-actions"><button class="primary" type="submit">Apply</button><a href="${action}">Clear</a></div>
+  <div class="presets">${presets(today).map((p) => html`<a href="${action}${qs({ from: p.from, to: p.to, category: f.category, state: withState ? f.state : null, sort: f.sort, dir: f.dir })}" class="${p.from === f.from && p.to === f.to ? 'on' : ''}">${p.label}</a>`)}</div>
+  </form>`;
+}
+
+/** Column header that sorts by `key`; clicking the active column flips the direction. */
+function sortHeader(label: string, key: string, base: string, f: Record<string, string | null>, defaultDir: 'asc' | 'desc', cls = ''): H {
+  const active = f.sort === key;
+  const dir = active ? (f.dir === 'asc' ? 'desc' : 'asc') : defaultDir;
+  return html`<th class="${cls}" aria-sort="${active ? (f.dir === 'asc' ? 'ascending' : 'descending') : 'none'}"><a href="${base}${qs({ ...f, sort: key, dir })}" data-sort="${key}">${label}${active ? (f.dir === 'asc' ? ' ▲' : ' ▼') : ''}</a></th>`;
+}
+
+function categoryBars(cats: CategoryTotal[], base: string, f: Record<string, string | null>, currency: string): H {
+  if (!cats.length) return html`<p class="muted">No spending in this period.</p>`;
+  const amount = (c: CategoryTotal) => c.totals.find((t) => t.currency === currency)?.amountMinor ?? 0;
+  const max = Math.max(1, ...cats.map(amount));
+  return html`<ul class="bars" data-testid="category-breakdown">${cats.map(
+    (c) => html`<li data-category="${c.category ?? UNCATEGORISED}"><a href="${base}${qs({ ...f, category: c.category ?? UNCATEGORISED })}">${categoryName(c.category)}</a>
+      <span class="bar"><span class="w${Math.max(1, Math.round((amount(c) / max) * 20)) * 5}"></span></span>
+      <span class="num">${totalsText(c.totals)}</span><span class="muted small">${c.count}</span></li>`,
+  )}</ul>`;
+}
+
+export function teamPage(actor: SessionMember, t: TeamOverview, f: TeamFilters, today: string): H {
+  const keep = { from: f.from, to: f.to, category: f.category, sort: f.sort, dir: f.dir };
+  const active = t.members.filter((m) => m.expenseCount > 0);
+  return layout('Team spend', html`<section data-testid="team">
+  <h1>Team spend</h1>
+  <p class="muted">Every expense, by person and category — for monitoring. Open someone to see their transactions.</p>
+  ${filterBar('/team', f, today, false)}
+  <div class="tiles">
+    <div class="tile"><div class="muted small">Total spend</div><strong data-testid="team-total">${totalsText(t.totals)}</strong></div>
+    <div class="tile"><div class="muted small">Expenses</div><strong>${active.reduce((n, m) => n + m.expenseCount, 0)}</strong></div>
+    <div class="tile"><div class="muted small">People spending</div><strong>${active.length}</strong> <span class="muted small">of ${t.members.length}</span></div>
+    <div class="tile"><div class="muted small">Awaiting review</div><strong>${t.members.reduce((n, m) => n + m.needsReview, 0)}</strong></div>
+  </div>
+  <div class="card"><h2>By category</h2>${categoryBars(t.byCategory, '/team', keep, t.baseCurrency)}</div>
+  <div class="card table-wrap"><h2>People</h2>
+  <table class="data" data-testid="team-table"><thead><tr>
+    ${sortHeader('Name', 'name', '/team', keep, 'asc')}<th>Cards</th>${sortHeader('Expenses', 'count', '/team', keep, 'desc', 'num')}${sortHeader('Spend', 'spend', '/team', keep, 'desc', 'num')}
+    <th>Top category</th>${sortHeader('Last expense', 'last', '/team', keep, 'desc')}<th>Open</th></tr></thead>
+  <tbody>${t.members.map(
+    (m) => html`<tr data-testid="team-row" data-member="${m.memberId}">
+      <td><a href="/team/${m.memberId}${qs({ from: f.from, to: f.to, category: f.category })}"><strong>${m.name}</strong></a><div class="muted small">${m.email}${m.status !== 'ACTIVE' ? html` · <span class="pill bad">${words(m.status)}</span>` : ''}</div></td>
+      <td class="small">${m.cards.length ? m.cards.map((c) => `••${c}`).join(' ') : html`<span class="muted">—</span>`}</td>
+      <td class="num">${m.expenseCount}</td>
+      <td class="num" data-testid="member-spend">${m.expenseCount ? totalsText(m.totals) : html`<span class="muted">—</span>`}</td>
+      <td>${m.topCategory ? words(m.topCategory) : html`<span class="muted">—</span>`}</td>
+      <td>${m.lastDate ?? html`<span class="muted">—</span>`}</td>
+      <td>${m.needsReview ? html`<span class="pill warn">${m.needsReview} to review</span> ` : ''}${m.waiting ? html`<span class="pill info">${m.waiting} waiting</span>` : ''}</td>
+    </tr>`,
+  )}</tbody></table></div>
+  </section>`, actor);
+}
+
+export function memberPage(actor: SessionMember, s: MemberSpend, f: SpendFilters, today: string, baseCurrency: string): H {
+  const base = `/team/${s.member.memberId}`;
+  const keep = { from: f.from, to: f.to, category: f.category, state: f.state, sort: f.sort, dir: f.dir };
+  return layout(s.member.name, html`<section data-testid="member" data-member="${s.member.memberId}">
+  <p><a href="/team${qs({ from: f.from, to: f.to, category: f.category })}">← Team spend</a></p>
+  <div class="case-head">
+    <div><h1>${s.member.name}</h1>
+      <p class="muted">${s.member.email} · ${s.member.roles.map(words).join(', ')}${s.member.cards.length ? ` · cards ${s.member.cards.map((c) => `••${c}`).join(' ')}` : ''}</p></div>
+    <div class="amount" data-testid="member-total">${totalsText(s.totals)}<div class="muted small">${s.rows.length} expense${s.rows.length === 1 ? '' : 's'}</div></div>
+  </div>
+  ${filterBar(base, f, today, true)}
+  <div class="card"><h2>By category</h2>${categoryBars(s.byCategory, base, keep, baseCurrency)}</div>
+  <div class="card table-wrap"><h2>Transactions</h2>
+  ${s.rows.length ? html`<table class="data" data-testid="transactions"><thead><tr>
+    ${sortHeader('Date', 'date', base, keep, 'desc')}<th>Ref</th>${sortHeader('Merchant', 'merchant', base, keep, 'asc')}${sortHeader('Category', 'category', base, keep, 'asc')}
+    ${sortHeader('Amount', 'amount', base, keep, 'desc', 'num')}<th>Paid with</th>${sortHeader('Status', 'status', base, keep, 'asc')}</tr></thead>
+  <tbody>${s.rows.map(
+    (r) => html`<tr data-testid="transaction" data-ref="${r.ref}" data-category="${r.category ?? ''}">
+      <td class="nowrap">${r.date}</td><td class="nowrap"><a href="/review/${r.expenseId}">${r.ref}</a></td>
+      <td>${r.merchant ?? html`<span class="muted">unreadable</span>`}</td><td>${categoryName(r.category)}</td>
+      <td class="num">${money(r.amountMinor, r.currency)}</td>
+      <td class="small">${r.paymentType === 'CORPORATE' ? `Company card${r.cardLast4 ? ` ••${r.cardLast4}` : ''}` : r.paymentType === 'PERSONAL' ? 'Personal' : html`<span class="muted">unknown</span>`}</td>
+      <td>${pill(r.state)}${r.reimbursementState ? html` <span class="muted small">reimb. ${words(r.reimbursementState)}</span>` : ''}</td>
+    </tr>`,
+  )}</tbody></table>${s.rows.length >= 500 ? html`<p class="muted small">Showing the first 500; narrow the dates to see more.</p>` : ''}` : html`<p class="muted">No expenses match these filters.</p>`}
+  </div>
   </section>`, actor);
 }
 
@@ -248,6 +364,18 @@ button { font:inherit; cursor:pointer; } .primary { background:var(--accent); co
 .choices input { width:auto; } fieldset { border:1px dashed var(--line); border-radius:8px; padding:10px 12px; display:grid; gap:8px; } legend { font-size:13px; color:var(--muted); }
 .row4 { display:grid; grid-template-columns:2fr 1fr 1fr 1.4fr; gap:8px; }
 .timeline, .audit { list-style:none; padding:0; margin:0; display:grid; gap:8px; } .timeline pre { white-space:pre-wrap; font:13px/1.45 inherit; margin:4px 0 0; background:#faf9f5; padding:8px; border-radius:6px; }
+.nav { display:flex; gap:18px; margin-right:auto; margin-left:32px; } .nav a { color:var(--ink); text-decoration:none; font-weight:500; } .nav a:hover { color:var(--accent); }
+.filters { display:flex; flex-wrap:wrap; gap:10px 14px; align-items:flex-end; } .filters label { min-width:150px; flex:1; } .filter-actions { display:flex; gap:12px; align-items:center; }
+.presets { flex-basis:100%; display:flex; flex-wrap:wrap; gap:6px; font-size:13px; } .presets a { color:var(--info); text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:2px 10px; } .presets a.on { background:var(--ink); color:#fff; border-color:var(--ink); }
+.tiles { display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; } .tile { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 16px; } .tile strong { font-size:20px; }
+.bars { list-style:none; margin:0; padding:0; display:grid; gap:6px; } .bars li { display:grid; grid-template-columns:170px 1fr auto 32px; gap:10px; align-items:center; font-size:14px; }
+.bars a { color:inherit; } .bar { background:#f0eee8; border-radius:4px; height:10px; overflow:hidden; } .bar span { display:block; height:100%; background:var(--accent); } .bars .small { text-align:right; }
+.table-wrap { overflow-x:auto; } table.data { width:100%; min-width:640px; border-collapse:collapse; font-size:14px; } .data th { text-align:left; font-weight:600; color:var(--muted); font-size:12.5px; padding:6px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+.data th a { color:inherit; text-decoration:none; } .data th a:hover { color:var(--accent); } .data td { padding:8px; border-bottom:1px solid #f0eee8; vertical-align:top; } .data .num { text-align:right; white-space:nowrap; } .data .nowrap { white-space:nowrap; }
+.data tbody tr:hover { background:#faf9f5; }
+@media (max-width:820px) { .tiles { grid-template-columns:1fr 1fr; } .top { flex-wrap:wrap; gap:8px; padding:12px 16px; } .nav { order:3; flex-basis:100%; margin:0; } main { padding:16px 16px 32px; }
+  .bars li { grid-template-columns:1fr auto 24px; } .bars .bar { grid-column:1 / -1; grid-row:2; } }
+${Array.from({ length: 20 }, (_, i) => `.bar .w${(i + 1) * 5} { width:${(i + 1) * 5}%; }`).join(' ')}
 .timeline li.out pre { background:#eef5f1; } code { font-size:12.5px; background:#f0eee8; padding:1px 5px; border-radius:4px; }
 `);
 

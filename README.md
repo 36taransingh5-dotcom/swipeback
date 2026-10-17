@@ -47,6 +47,8 @@ corepack pnpm sb expenses                  # matched and cleared, no reimburseme
 corepack pnpm web                          # reviewer app on http://localhost:3000
 ```
 
+Signed-in finance users also get a **Team spend** dashboard at `/team`: every employee with their total spend, expense count, top category and open exceptions, plus a spend-by-category breakdown. Open a person to see their transactions, sort by date, amount, merchant, category or status, and filter by date range (or a preset like "This month"), category and status. It is read-only monitoring; the same data is at `GET /api/team` and `GET /api/team/:memberId/expenses`.
+
 If `playwright-core` has no browser yet, run `corepack pnpm exec playwright-core install --with-deps chromium chromium-headless-shell` first. The full storyboard, live and offline, is in [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
 
 ## Live set-up (credentials)
