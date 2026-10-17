@@ -14,3 +14,4 @@ export * from './case-view.ts';
 export * from './secrets.ts';
 export * from './gmail.ts';
 export * from './receipt-chase.ts';
+export * from './whatsapp.ts';

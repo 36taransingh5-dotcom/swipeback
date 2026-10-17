@@ -50,9 +50,23 @@ export function toE164(digits: string): string {
   return `+${digits.replace(/^\+/, '')}`;
 }
 
-/** One thread per chat, shared by inbound messages and our replies so answers correlate. */
+/**
+ * Threading, decided by the engine tests. The engine treats anything that lands in the thread of an
+ * open question as the answer, and WhatsApp has no subject or reply address to tell a new receipt
+ * from an answer. So:
+ *  - our replies are filed under one per-chat thread, and a text-only message arrives on that thread,
+ *    so a plain-text answer (no quote-reply needed) finds the open question;
+ *  - a message carrying media arrives on its own per-message thread, so a new receipt becomes a new
+ *    expense instead of being swallowed as the answer.
+ * Limits: with several open questions a plain-text answer goes to the newest one, and a photo cannot
+ * answer a "please send the receipt" question (it is processed as a new submission).
+ */
 export function chatThreadId(connectionId: string, digits: string): string {
   return `wa:${connectionId}:${digits.replace(/^\+/, '')}`;
+}
+
+export function messageThreadId(connectionId: string, digits: string, wamid: string): string {
+  return `${chatThreadId(connectionId, digits)}:${wamid}`;
 }
 
 export class WhatsAppCloudAdapter implements ChannelAdapter<WaIncoming> {
@@ -143,7 +157,7 @@ export class WhatsAppCloudAdapter implements ChannelAdapter<WaIncoming> {
       providerTimestamp: new Date(Number(message.timestamp) * 1000).toISOString(),
       sender: { channelAddress: toE164(message.from), displayName: sanitiseShort(payload.contactName, 200), authentication: 'platform_signed' },
       conversation: {
-        threadId: chatThreadId(connection.connectionId, message.from),
+        threadId: media ? messageThreadId(connection.connectionId, message.from, message.id) : chatThreadId(connection.connectionId, message.from),
         messageId: message.id,
         inReplyTo: message.context?.id ?? null,
         references: [],
@@ -165,7 +179,10 @@ export class WhatsAppCloudAdapter implements ChannelAdapter<WaIncoming> {
     const body = message.text.length > WHATSAPP_BODY_LIMIT ? message.text.slice(0, WHATSAPP_BODY_LIMIT - TRUNCATION_NOTE.length) + TRUNCATION_NOTE : message.text;
     const replyToMessageId = message.inReplyTo?.startsWith('wamid.') ? message.inReplyTo : null;
     const sent = await this.graph.sendText({ to: digits, body, replyToMessageId });
-    return { providerMessageId: sent.messageId, threadId: message.threadId ?? chatThreadId(message.connectionId, digits) };
+    // Replies are filed under the chat thread so a plain-text answer correlates (see chatThreadId).
+    const chat = chatThreadId(message.connectionId, digits);
+    const threadId = message.threadId === null || message.threadId.startsWith(`${chat}:`) ? chat : message.threadId;
+    return { providerMessageId: sent.messageId, threadId };
   }
 
   /** WhatsApp is not an approval surface: this is a plain message pointing at the authenticated review app. */

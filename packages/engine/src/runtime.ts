@@ -17,6 +17,7 @@ import { MockPayProvider } from '@swipeback/payouts';
 import { channelRegistry, systemClock, type EngineDeps } from './deps.ts';
 import { GmailTokens, type GmailRuntime } from './gmail.ts';
 import { TokenCipher } from './secrets.ts';
+import { whatsappAdapterFromEnv } from './whatsapp.ts';
 
 /** Load .env.local / .env if present (never required; never printed). */
 export function loadLocalEnv(): void {
@@ -111,6 +112,7 @@ export function createRuntime(env: NodeJS.ProcessEnv = process.env): Runtime {
   const sink = new DirectorySink(outboxDir);
   const g = gmailRuntimeFromEnv(env);
   const gmail = g ? { ...g, tokens: new GmailTokens(pool, g) } : null;
+  const whatsapp = whatsappAdapterFromEnv(env, evidence);
   const deps: EngineDeps = {
     pool,
     clock: systemClock,
@@ -120,6 +122,7 @@ export function createRuntime(env: NodeJS.ProcessEnv = process.env): Runtime {
       new FixtureEmailAdapter(evidence, sink),
       new SyntheticChatAdapter(evidence, sink, secret(env, 'SB_SYNTHETIC_CHAT_SECRET', 'dev-only-synthetic-chat-secret')),
       ...(gmail ? [new GmailAdapter(evidence, async (id) => gmail.tokens.api(id))] : []),
+      ...(whatsapp ? [whatsapp] : []),
     ]),
     evidence,
     config: {

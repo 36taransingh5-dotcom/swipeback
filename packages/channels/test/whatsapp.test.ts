@@ -8,6 +8,7 @@ import {
   WhatsAppGraphError,
   WHATSAPP_SIGNATURE_HEADER,
   chatThreadId,
+  messageThreadId,
   sha256Hex,
   signWhatsAppBody,
   type ConnectionContext,
@@ -253,6 +254,16 @@ describe('whatsapp normalisation', () => {
     expect(e.sender.channelAddress).toBe(`+${SENDER}`);
   });
 
+  it('puts media on its own per-message thread so a new receipt can never be mistaken for an answer', async () => {
+    const { adapter, conn, graph } = make();
+    graph.media.set('img-1', { bytes: PNG, mimeType: 'image/png', sha256: null });
+    const media = await adapter.normaliseInbound(await adapter.verifyInbound(conn, signed(webhook([message({ id: 'wamid.M1', type: 'image', mediaId: 'img-1' })]))));
+    const text = await adapter.normaliseInbound(await adapter.verifyInbound(conn, signed(webhook([message({ id: 'wamid.T1' })]))));
+    expect(media.conversation.threadId).toBe(messageThreadId(conn.connectionId, SENDER, 'wamid.M1'));
+    expect(media.conversation.threadId).not.toBe(text.conversation.threadId);
+    expect(text.conversation.threadId).toBe(chatThreadId(conn.connectionId, SENDER));
+  });
+
   it('sets per-chat threading, the quote-reply id and a stable dedupe key', async () => {
     const { adapter, conn } = make();
     const raw = signed(webhook([message({ id: 'wamid.X', contextId: 'wamid.BOT' })]));
@@ -286,6 +297,12 @@ describe('whatsapp sending', () => {
     const r = await adapter.sendMessage(envelope());
     expect(graph.sent[0]).toMatchObject({ to: SENDER, body: 'SB-1001 cleared (SYNTHETIC DEMO)', replyToMessageId: null });
     expect(r).toEqual({ providerMessageId: 'wamid.OUT1', threadId: chatThreadId('c1', SENDER) });
+  });
+
+  it('files replies to a media message under the chat thread, so a plain-text answer correlates', async () => {
+    const { adapter } = make();
+    const r = await adapter.sendMessage(envelope({ threadId: messageThreadId('c1', SENDER, 'wamid.M1') }));
+    expect(r.threadId).toBe(chatThreadId('c1', SENDER));
   });
 
   it('quote-replies only when inReplyTo is a wamid, and keeps the envelope thread id', async () => {
