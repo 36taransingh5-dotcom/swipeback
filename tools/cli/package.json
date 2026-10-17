@@ -5,7 +5,8 @@
   "type": "module",
   "description": "Developer console: database, seed, replay, simulators, evaluation.",
   "exports": {
-    "./seed": "./src/seed.ts"
+    "./seed": "./src/seed.ts",
+    "./demo-policy": "./src/demo-policy.ts"
   },
   "dependencies": {
     "@swipeback/db": "workspace:*",

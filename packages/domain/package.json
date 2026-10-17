@@ -6,5 +6,8 @@
   "description": "Pure expense domain: money, state machines, policy, matching, eligibility. No IO.",
   "exports": {
     ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "zod": "4.6.7"
   }
 }

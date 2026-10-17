@@ -1,4 +1,6 @@
 import { appendAudit, withTransaction, type Pool } from '@swipeback/db';
+import { policyContentHash } from '@swipeback/domain';
+import { DEMO_POLICY, DEMO_POLICY_TEXT } from './demo-policy.ts';
 
 /**
  * Synthetic demo organisation. Every name, address, card and payout destination here is fictitious
@@ -21,6 +23,7 @@ export interface SeededOrg {
   };
   cards: { employee: string; unenrolledEmployee: string };
   payoutDestinations: { employee: string };
+  policyVersionId: string;
   created: boolean;
 }
 
@@ -106,6 +109,14 @@ export async function seedDemoOrg(pool: Pool, opts: SeedOptions = {}): Promise<S
       [organisationId, employee, controller],
     );
 
+    const policy = await c.query<{ id: string }>(
+      `INSERT INTO policy_versions (organisation_id, version, rules, source_text, content_hash, created_by)
+       VALUES ($1, 1, $2, $3, $4, $5) RETURNING id`,
+      [organisationId, JSON.stringify(DEMO_POLICY), DEMO_POLICY_TEXT, policyContentHash(DEMO_POLICY), controller],
+    );
+    const policyVersionId = policy.rows[0]!.id;
+    await c.query('UPDATE organisations SET active_policy_version_id = $2 WHERE id = $1', [organisationId, policyVersionId]);
+
     await appendAudit(c, {
       organisationId,
       actorType: 'system',
@@ -115,12 +126,22 @@ export async function seedDemoOrg(pool: Pool, opts: SeedOptions = {}): Promise<S
       entityId: organisationId,
       after: { name: DEMO_ORG_NAME, financeMailbox, synthetic: true },
     });
+    await appendAudit(c, {
+      organisationId,
+      actorType: 'member',
+      actorId: controller,
+      action: 'policy.activated',
+      entityType: 'policy_version',
+      entityId: policyVersionId,
+      after: { version: 1, contentHash: policyContentHash(DEMO_POLICY) },
+    });
 
     return {
       organisationId,
       members: { controller, employee, unenrolledEmployee, opsManager },
       cards: { employee: employeeCard, unenrolledEmployee: unenrolledCard },
       payoutDestinations: { employee: dest.rows[0]!.id },
+      policyVersionId,
       created: true,
     };
   });
@@ -141,8 +162,13 @@ async function loadSeeded(pool: Pool, organisationId: string): Promise<Omit<Seed
     `SELECT id FROM payout_destinations WHERE member_id = $1 AND status = 'ACTIVE'`,
     [employee],
   );
+  const org = await pool.query<{ active_policy_version_id: string }>(
+    'SELECT active_policy_version_id FROM organisations WHERE id = $1',
+    [organisationId],
+  );
   return {
     organisationId,
+    policyVersionId: org.rows[0]!.active_policy_version_id,
     members: {
       controller: byName('Priya Shah'),
       employee,

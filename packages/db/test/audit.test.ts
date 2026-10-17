@@ -22,6 +22,7 @@ async function sqlstate(p: Promise<unknown>): Promise<string | undefined> {
 
 describe('audit log', () => {
   it('assigns a gapless sequence and a valid hash chain, even under concurrent appends', async () => {
+    const seeded = (await verifyAuditChain(db.pool, org.organisationId)).checked;
     await Promise.all(
       Array.from({ length: 50 }, (_, i) =>
         appendAudit(db.pool, {
@@ -36,9 +37,9 @@ describe('audit log', () => {
     );
     const report = await verifyAuditChain(db.pool, org.organisationId);
     expect(report.ok).toBe(true);
-    expect(report.checked).toBe(51); // 50 + the seed event
+    expect(report.checked).toBe(seeded + 50);
     const seqs = (await db.pool.query<{ seq: number }>('SELECT seq FROM audit_events WHERE organisation_id = $1 ORDER BY seq', [org.organisationId])).rows.map((r) => r.seq);
-    expect(seqs).toEqual(Array.from({ length: 51 }, (_, i) => i + 1));
+    expect(seqs).toEqual(Array.from({ length: seeded + 50 }, (_, i) => i + 1));
   });
 
   it('Postgres rejects UPDATE, DELETE and TRUNCATE on audit_events', async () => {
