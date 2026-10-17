@@ -1,8 +1,8 @@
 import { randomUUID } from 'node:crypto';
-import { readFile } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
-import { buildEml } from '@swipeback/channels/testing';
+import { buildEml, buildReplyEml } from '@swipeback/channels/testing';
 import { JobRunner, jobStats } from '@swipeback/db';
 import { createRuntime, engineHandlers, loadLocalEnv, receiveCardEvent, receiveInbound, signCardEvent, type Runtime } from '@swipeback/engine';
 import { DEMO_ORG_NAME } from './seed.ts';
@@ -82,6 +82,33 @@ export const pipelineCommands: Record<string, Command> = {
           (values.attach ?? []).map(async (f) => ({ filename: path.basename(f), mime: mimeFor(f), content: await readFile(f) })),
         );
         const raw = buildEml({ from: values.from, to: org.designated_address, subject: values.subject ?? 'Receipt', text: values.text ?? '', attachments });
+        const conn = await ensureConnection(rt, org.id, 'email', 'fixture', org.designated_address);
+        console.log('ingested (fixture transport):', await receiveInbound(rt.deps, conn, { body: raw, headers: {} }));
+        if (!values['no-run']) await drain(rt);
+      }),
+  },
+  reply: {
+    describe: 'Reply in thread to the latest email Swipeback sent to <addr> (fixture transport): sb reply --from <addr> [--text ..] [--attach file]',
+    run: async (args) =>
+      withRuntime(async (rt, org) => {
+        const { values } = parseArgs({ args, options: { from: { type: 'string' }, text: { type: 'string' }, attach: { type: 'string', multiple: true }, 'no-run': { type: 'boolean' } } });
+        if (!values.from) throw new Error('--from is required');
+        const from = values.from.toLowerCase();
+        const files = (await readdir(rt.outboxDir).catch(() => [] as string[])).filter((f) => f.endsWith('.eml')).sort().reverse();
+        let original: string | null = null;
+        for (const f of files) {
+          const raw = await readFile(path.join(rt.outboxDir, f), 'utf8');
+          if (new RegExp(`^To: .*${from.replace(/[.+]/g, '\\$&')}`, 'mi').test(raw)) {
+            original = raw;
+            break;
+          }
+        }
+        if (!original) throw new Error(`no email from Swipeback to ${from} in ${rt.outboxDir}`);
+        console.log(`replying to: ${/^Subject: (.+)$/m.exec(original)?.[1] ?? '(no subject)'}`);
+        const attachments = await Promise.all(
+          (values.attach ?? []).map(async (f) => ({ filename: path.basename(f), mime: mimeFor(f), content: await readFile(f) })),
+        );
+        const raw = buildReplyEml({ raw: original, to: from }, { from, text: values.text ?? '', attachments });
         const conn = await ensureConnection(rt, org.id, 'email', 'fixture', org.designated_address);
         console.log('ingested (fixture transport):', await receiveInbound(rt.deps, conn, { body: raw, headers: {} }));
         if (!values['no-run']) await drain(rt);
