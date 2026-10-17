@@ -31,6 +31,7 @@ import {
   type ReviewAction,
   type SessionMember,
 } from '@swipeback/engine';
+import { registerWhatsAppRoutes } from './whatsapp-routes.ts';
 import { casePage, checkEmailPage, connectPage, errorPage, loginPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
 
 /**
@@ -262,6 +263,8 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
       return c.json({ error: 'unknown or inactive connection' }, 404);
     }
   });
+
+  registerWhatsAppRoutes(app, deps);
 
   app.post('/api/expenses/:id/evaluate', async (c) => {
     const actor = requireActor(c);
