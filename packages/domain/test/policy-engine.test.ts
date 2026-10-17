@@ -161,6 +161,20 @@ describe('decideExpense — waiting for the card feed', () => {
     expect(d.nextState).toBe('NEEDS_INFO');
   });
 
+  it('asks now (does not wait) when the question cannot be answered by the card feed', () => {
+    const match = {
+      status: 'AMBIGUOUS' as const,
+      candidates: [
+        { transactionId: 't1', strength: 'STRONG' as const, merchantSimilarity: 1, dayOffset: 0, amountBasis: 'SETTLED' as const },
+        { transactionId: 't2', strength: 'STRONG' as const, merchantSimilarity: 1, dayOffset: 0, amountBasis: 'SETTLED' as const },
+      ],
+    };
+    const d = decideExpense(DEMO_POLICY, cleanInput({ payment: unknownPayment(10), match }));
+    expect(d.kind === 'POLICY' && d.decision.question?.kind).toBe('MATCH_CONFIRMATION');
+    const purpose = decideExpense(DEMO_POLICY, cleanInput({ payment: unknownPayment(10), expense: { category: 'MEALS', amount: money(900, 'GBP') } }));
+    expect(purpose.kind === 'POLICY' && purpose.decision.question?.kind).toBe('BUSINESS_PURPOSE');
+  });
+
   it('never waits when evidence already requires review', () => {
     const d = decideExpense(DEMO_POLICY, cleanInput({ payment: unknownPayment(10), duplicates: { exact: ['e1'], possible: [] } }));
     expect(d.kind).toBe('POLICY');

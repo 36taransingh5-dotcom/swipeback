@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@swipeback/db": "workspace:*",
-    "@swipeback/domain": "workspace:*"
+    "@swipeback/domain": "workspace:*",
+    "@swipeback/channels": "workspace:*",
+    "@swipeback/engine": "workspace:*"
   }
 }

@@ -6,7 +6,6 @@
  *   corepack pnpm sb <command> [--flags]
  */
 import path from 'node:path';
-import { parseArgs } from 'node:util';
 import {
   createPool,
   databaseUrl,
@@ -17,6 +16,7 @@ import {
   resetSchema,
   verifyAuditChain,
 } from '@swipeback/db';
+import { pipelineCommands } from './pipeline-commands.ts';
 import { seedDemoOrg, seedOptionsFromEnv } from './seed.ts';
 
 type Command = (args: string[]) => Promise<void>;
@@ -93,6 +93,7 @@ const commands: Record<string, { describe: string; run: Command }> = {
       await withPool(async (pool) => console.log(await jobStats(pool)));
     },
   },
+  ...pipelineCommands,
 };
 
 async function withPool(fn: (pool: ReturnType<typeof createPool>) => Promise<void>): Promise<void> {
@@ -105,12 +106,11 @@ async function withPool(fn: (pool: ReturnType<typeof createPool>) => Promise<voi
 }
 
 async function main(): Promise<void> {
-  const { positionals } = parseArgs({ allowPositionals: true, strict: false });
-  const [name, ...rest] = positionals;
+  const [name, ...rest] = process.argv.slice(2);
   const cmd = name ? commands[name] : undefined;
   if (!cmd) {
     console.log('Usage: corepack pnpm sb <command>\n');
-    for (const [n, c] of Object.entries(commands)) console.log(`  ${n.padEnd(14)} ${c.describe}`);
+    for (const [n, c] of Object.entries(commands)) console.log(`  ${n.padEnd(16)} ${c.describe}`);
     process.exitCode = name ? 1 : 0;
     return;
   }

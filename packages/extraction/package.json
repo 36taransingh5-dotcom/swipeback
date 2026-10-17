@@ -1,0 +1,14 @@
+{
+  "name": "@swipeback/extraction",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Receipt extraction: shared result schema, rule-only baseline, evidence checks. Models only propose facts.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@swipeback/domain": "workspace:*",
+    "zod": "4.6.7"
+  }
+}

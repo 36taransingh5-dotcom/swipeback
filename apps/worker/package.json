@@ -1,0 +1,14 @@
+{
+  "name": "@swipeback/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Long-running worker: durable jobs (extraction, policy, payouts, outbox) and mailbox polling.",
+  "scripts": {
+    "start": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "@swipeback/db": "workspace:*",
+    "@swipeback/engine": "workspace:*"
+  }
+}

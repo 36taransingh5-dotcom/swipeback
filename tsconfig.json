@@ -17,5 +17,5 @@
     "skipLibCheck": true,
     "noEmit": true
   },
-  "include": ["packages/*/src/**/*.ts", "packages/*/test/**/*.ts", "tools/*/src/**/*.ts", "vitest.config.ts", "test/**/*.ts"]
+  "include": ["packages/*/src/**/*.ts", "apps/worker/src/**/*.ts", "packages/*/test/**/*.ts", "tools/*/src/**/*.ts", "vitest.config.ts", "test/**/*.ts"]
 }

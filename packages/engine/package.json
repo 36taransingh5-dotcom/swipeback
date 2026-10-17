@@ -1,0 +1,18 @@
+{
+  "name": "@swipeback/engine",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The shared expense engine: role-checked commands and idempotent job handlers. Channel-neutral.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@swipeback/channels": "workspace:*",
+    "@swipeback/db": "workspace:*",
+    "@swipeback/domain": "workspace:*",
+    "@swipeback/extraction": "workspace:*",
+    "@swipeback/payouts": "workspace:*",
+    "zod": "4.6.7"
+  }
+}

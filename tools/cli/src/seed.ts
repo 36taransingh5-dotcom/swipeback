@@ -99,6 +99,19 @@ export async function seedDemoOrg(pool: Pool, opts: SeedOptions = {}): Promise<S
           [organisationId, memberId, last4, label],
         )
       ).rows[0]!.id;
+    // Synthetic chat channel identities (proves a second channel through the same engine).
+    for (const [memberId, handle] of [
+      [employee, 'chat:sam.taylor'],
+      [unenrolledEmployee, 'chat:alex.morgan'],
+      [controller, 'chat:priya.shah'],
+    ] as const) {
+      await c.query(
+        `INSERT INTO channel_identities (organisation_id, member_id, channel, channel_address, verification_method)
+         VALUES ($1, $2, 'synthetic', $3, 'seed_enrolment')`,
+        [organisationId, memberId, handle],
+      );
+    }
+
     const employeeCard = await card(employee, '4242', 'Company card — Sam Taylor (SYNTHETIC)');
     const unenrolledCard = await card(unenrolledEmployee, '1881', 'Company card — Alex Morgan (SYNTHETIC)');
 

@@ -1,0 +1,18 @@
+{
+  "name": "@swipeback/channels",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Channel adapter contract (InboundMessage v1) and transport adapters. No expense logic.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./testing": "./src/testing/index.ts"
+  },
+  "dependencies": {
+    "mailparser": "3.9.40",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/mailparser": "3.9.0"
+  }
+}

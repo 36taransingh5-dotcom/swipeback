@@ -318,12 +318,13 @@ export type ExpenseDecision =
 
 /**
  * Combine payment resolution with policy. While the card feed may still deliver a transaction we
- * wait — unless the evidence already demands review or rejection, which never waits.
+ * wait — but only if nothing else is needed. Review and rejection never wait, and a question the
+ * card feed cannot answer (purpose, which of several transactions, a VAT invoice) is asked now.
  */
 export function decideExpense(policy: PolicyDocument, input: PolicyEvaluationInput): ExpenseDecision {
   const decision = evaluatePolicy(policy, input);
   const waiting = input.payment.action === 'WAIT';
-  const waitable = decision.outcome === 'CLEAR' || decision.outcome === 'REQUEST_INFO';
+  const waitable = decision.outcome === 'CLEAR';
   if (waiting && waitable) {
     return { kind: 'AWAIT_CARD_FEED', waitMinutes: input.payment.waitMinutes ?? 0, nextState: 'NEEDS_MATCH' };
   }

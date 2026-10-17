@@ -1,0 +1,13 @@
+{
+  "name": "@swipeback/payouts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Payout provider port and the simulated MockPay provider. No real funds move.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@swipeback/db": "workspace:*"
+  }
+}

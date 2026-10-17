@@ -87,9 +87,12 @@ export async function syncStateMachines(client: PoolClient): Promise<void> {
   }
 }
 
-/** Drop and recreate the public schema. Callers must guard against non-local databases. */
+/** Schemas owned by Swipeback migrations (public + the simulated provider's ledger). */
+const OWNED_SCHEMAS = ['mockpay', 'public'] as const;
+
+/** Drop and recreate every schema the migrations own. Callers must guard against non-local databases. */
 export async function resetSchema(pool: Pool): Promise<void> {
-  await pool.query('DROP SCHEMA IF EXISTS public CASCADE');
+  for (const schema of OWNED_SCHEMAS) await pool.query(`DROP SCHEMA IF EXISTS ${schema} CASCADE`);
   await pool.query('CREATE SCHEMA public');
 }
 

@@ -21,14 +21,14 @@ describe('migrations', () => {
       (
         await db.pool.query<{ t: string }>(
           `SELECT table_name || '.' || column_name || ':' || data_type AS t
-             FROM information_schema.columns WHERE table_schema = 'public' ORDER BY 1`,
+             FROM information_schema.columns WHERE table_schema IN ('public', 'mockpay') ORDER BY 1`,
         )
       ).rows.map((r) => r.t);
     const before = await snapshot();
     await resetSchema(db.pool);
     expect(await snapshot()).toEqual([]);
     const r = await migrate(db.pool);
-    expect(r.applied).toEqual(['0001_core.sql']);
+    expect(r.applied).toEqual(['0001_core.sql', '0002_pipeline.sql']);
     expect(await snapshot()).toEqual(before);
   });
 
