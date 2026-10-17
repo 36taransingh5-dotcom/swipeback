@@ -15,6 +15,7 @@ import {
 } from '@swipeback/extraction';
 import { MockPayProvider } from '@swipeback/payouts';
 import { channelRegistry, systemClock, type EngineDeps } from './deps.ts';
+import { slackAdapterFromEnv } from './slack.ts';
 import { GmailTokens, type GmailRuntime } from './gmail.ts';
 import { TokenCipher } from './secrets.ts';
 
@@ -109,6 +110,7 @@ export function createRuntime(env: NodeJS.ProcessEnv = process.env): Runtime {
   const evidence = new LocalEvidenceStore(path.join(dataDir, 'evidence'));
   const outboxDir = path.join(dataDir, 'outbox');
   const sink = new DirectorySink(outboxDir);
+  const slack = slackAdapterFromEnv(env, evidence);
   const g = gmailRuntimeFromEnv(env);
   const gmail = g ? { ...g, tokens: new GmailTokens(pool, g) } : null;
   const deps: EngineDeps = {
@@ -118,6 +120,7 @@ export function createRuntime(env: NodeJS.ProcessEnv = process.env): Runtime {
     payouts: new MockPayProvider(pool),
     channels: channelRegistry([
       new FixtureEmailAdapter(evidence, sink),
+      ...(slack ? [slack] : []),
       new SyntheticChatAdapter(evidence, sink, secret(env, 'SB_SYNTHETIC_CHAT_SECRET', 'dev-only-synthetic-chat-secret')),
       ...(gmail ? [new GmailAdapter(evidence, async (id) => gmail.tokens.api(id))] : []),
     ]),
