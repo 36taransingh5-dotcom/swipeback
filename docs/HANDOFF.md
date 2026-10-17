@@ -40,10 +40,10 @@ Everything here is derived from the repo and the conversation. The source of tru
 | M3 Gmail connector | BUILT and tested offline; **real Gmail connected and polling**; **live receipt round trip NOT yet completed** (see §3) |
 | Card-swipe-triggered receipt collection (user's latest requirement) | BUILT and tested offline (12 new tests); **live test NOT yet run** |
 | M6 Full-pipeline evaluation (tune/held-out, baseline, PRD metrics) | DONE (cloud agent, `c13215e`+): 29 frozen held-out + 25 tune cases through the real engine. Blind: gpt-5.5 27/29, **1 false auto-clear and 1 false simulated payout** (ph20, fixed). Post-fix (not blind): 28/29, 0 false auto-clears, 0 false payouts. Manual time baseline NOT measured (needs a person). See `docs/EVALUATION.md` |
-| M7 Demo hardening, README, threat model, runbook, fallback video | NOT STARTED |
+| M7 Demo hardening, README, threat model, runbook, fallback video | MOSTLY DONE (cloud agent): `demo:reset` 1.7 s and keeps the Gmail connection; `sb reply`; AC-11 label tests; README (threat model, provenance, limitations, pricing); `docs/RUNBOOK.md` rehearsed offline twice (text receipts with the rule-only extractor; held-out photos with recorded gpt-5.5). **Still open:** live rehearsal with Gmail, the fallback video (needs a person and the live stack), the manual time baseline, CSV import/export polish |
 | M8 Slack stretch | NOT STARTED (decide only if everything else is green) |
 
-`corepack pnpm test` is green: **357 tests in 25 files** (after M6). M3 + card-led work is committed together in the commit that accompanies this file (message says live tests are pending).
+`corepack pnpm verify` is green on a clean clone: **383 tests in 28 files** (after M6/M7). M3 + card-led work is committed together in the commit that accompanies this file (message says live tests are pending).
 
 ---
 

@@ -36,7 +36,7 @@ Needs Node ≥ 24. Postgres is embedded (no Docker).
 
 ```bash
 corepack pnpm install
-corepack pnpm verify                       # typecheck + lint + 360+ tests (real Postgres, real Chromium)
+corepack pnpm verify                       # typecheck + lint + 380+ tests (real Postgres, real Chromium)
 corepack pnpm db:start                     # separate terminal; embedded Postgres on :54329
 corepack pnpm demo:reset                   # fresh synthetic org in ~2 s
 corepack pnpm sb connect:fixture           # offline email transport
