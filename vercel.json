@@ -1,4 +1,5 @@
 {
+  "installCommand": "corepack pnpm install --frozen-lockfile",
   "buildCommand": "corepack pnpm build:vercel",
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
   "outputDirectory": "public",
