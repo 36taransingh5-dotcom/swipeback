@@ -9,6 +9,7 @@ const actor = { memberId: 'm1', organisationId: 'o1', displayName: 'Priya Shah (
 const mailbox = { designatedAddress: 'finance@example.com', connections: [] };
 
 const PAGES: Record<string, () => unknown> = {
+  landingPage: () => views.landingPage(),
   loginPage: () => views.loginPage(),
   checkEmailPage: () => views.checkEmailPage(),
   errorPage: () => views.errorPage(404, 'Nothing here.', null),

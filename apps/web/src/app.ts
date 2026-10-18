@@ -31,7 +31,7 @@ import {
   type ReviewAction,
   type SessionMember,
 } from '@swipeback/engine';
-import { casePage, checkEmailPage, connectPage, errorPage, loginPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
+import { casePage, checkEmailPage, connectPage, errorPage, landingPage, loginPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
 
 /**
  * The minimal authenticated reviewer surface plus the PRD §7.4 API. It holds no business logic:
@@ -83,7 +83,7 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
   app.get('/healthz', (c) => c.json({ ok: true }));
   app.get('/static/app.css', (c) => c.body(String(STATIC_CSS), 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/static/app.js', (c) => c.body(String(STATIC_JS), 200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
-  app.get('/', (c) => c.redirect('/review', 303));
+  app.get('/', (c) => c.html(landingPage()));
 
   // ---- sign in ----------------------------------------------------------------------------
   app.get('/login', (c) => c.html(loginPage({ next: safeNextPath(c.req.query('next')) })));
