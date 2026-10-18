@@ -1,3 +1,9 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
+  "buildCommand": "corepack pnpm build:vercel",
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
+  "outputDirectory": "public",
+  "framework": null,
+  "functions": {
+    "api/index.ts": { "includeFiles": "{api/index.bundle.mjs,landing/**}" }
+  }
 }

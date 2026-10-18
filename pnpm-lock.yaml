@@ -44,12 +44,18 @@ importers:
       '@types/pg':
         specifier: 8.23.1
         version: 8.23.1
+      esbuild:
+        specifier: 0.28.2
+        version: 0.28.2
       eslint:
         specifier: 10.13.0
         version: 10.13.0
       fast-check:
         specifier: 4.10.2
         version: 4.10.2
+      mailparser:
+        specifier: 3.9.40
+        version: 3.9.40
       pg:
         specifier: 8.23.1
         version: 8.23.1

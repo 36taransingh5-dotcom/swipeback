@@ -1,9 +1,10 @@
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
+import path from "node:path";
 
 // The standalone page and the app share one source, so product copy cannot drift.
 const asset = (name: string) =>
-  readFileSync(new URL(`../../../landing/${name}`, import.meta.url), "utf8");
+  readFileSync(path.join(process.cwd(), "landing", name), "utf8");
 export const LANDING_CSS = asset("landing.css");
 export const LANDING_JS = asset("landing.js");
 const version = createHash("sha256")
