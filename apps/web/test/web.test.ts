@@ -52,6 +52,10 @@ describe('reviewer web app', () => {
     const js = await fetch(`${base}/static/landing.js`);
     expect(js.status).toBe(200);
     expect(js.headers.get('content-type')).toContain('javascript');
+
+    const accessCss = await fetch(`${base}/static/access.css`);
+    expect(accessCss.status).toBe(200);
+    expect(await accessCss.text()).toContain('--lime: #e0fa83');
   });
 
   it('unauthenticated pages redirect to sign-in; APIs return 401; security headers are set', async () => {
@@ -62,6 +66,9 @@ describe('reviewer web app', () => {
     expect(headers['content-security-policy']).toContain("frame-ancestors 'none'");
     expect(headers['referrer-policy']).toBe('no-referrer');
     expect(headers['x-frame-options']).toBe('DENY');
+    await page.goto(`${base}/login/connect`);
+    expect(page.url()).toBe(`${base}/login?next=%2Flogin%2Fconnect`);
+    expect(await page.textContent('h1')).toContain('Welcome');
     const api = await fetch(`${base}/api/expenses/00000000-0000-0000-0000-000000000000/review`, { method: 'POST', body: '{}' });
     expect(api.status).toBe(401);
     await page.context().close();
@@ -94,6 +101,12 @@ describe('reviewer web app', () => {
     // Regression: the Connect form redirects to Google, so only /connect may allow that form target.
     const connectCsp = (await context.request.get(`${base}/connect`)).headers()['content-security-policy'];
     expect(connectCsp).toContain("form-action 'self' https://accounts.google.com");
+    const connections = await context.request.get(`${base}/login/connect`);
+    expect(connections.status()).toBe(200);
+    const connectionHtml = await connections.text();
+    expect(connectionHtml).toContain('Connect Slack');
+    expect(connectionHtml).toContain('Connect iMessage');
+    expect(connectionHtml).toContain('/static/access.css?v=');
     expect((await context.request.get(`${base}/review`)).headers()['content-security-policy']).toContain("form-action 'self';");
     expect(await page.getAttribute('[data-testid=case]', 'data-state')).toBe('REVIEW_REQUIRED');
 

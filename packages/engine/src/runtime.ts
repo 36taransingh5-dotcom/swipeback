@@ -18,6 +18,7 @@ import { channelRegistry, systemClock, type EngineDeps } from './deps.ts';
 import { slackAdapterFromEnv } from './slack.ts';
 import { GmailTokens, type GmailRuntime } from './gmail.ts';
 import { TokenCipher } from './secrets.ts';
+import { TrueLayerSandboxTokens, trueLayerSandboxRuntimeFromEnv, type TrueLayerSandboxRuntime } from './truelayer-sandbox.ts';
 
 /** Load .env.local / .env if present (never required; never printed). */
 export function loadLocalEnv(): void {
@@ -94,6 +95,7 @@ export interface Runtime {
   outboxDir: string;
   /** Present when Google OAuth and the token key are configured. */
   gmail: (GmailRuntime & { tokens: GmailTokens }) | null;
+  truelayer: (TrueLayerSandboxRuntime & { tokens: TrueLayerSandboxTokens }) | null;
 }
 
 export function gmailRuntimeFromEnv(env: NodeJS.ProcessEnv): GmailRuntime | null {
@@ -113,6 +115,8 @@ export function createRuntime(env: NodeJS.ProcessEnv = process.env): Runtime {
   const slack = slackAdapterFromEnv(env, evidence);
   const g = gmailRuntimeFromEnv(env);
   const gmail = g ? { ...g, tokens: new GmailTokens(pool, g) } : null;
+  const tl = trueLayerSandboxRuntimeFromEnv(env);
+  const truelayer = tl ? { ...tl, tokens: new TrueLayerSandboxTokens(pool, tl) } : null;
   const deps: EngineDeps = {
     pool,
     clock: systemClock,
@@ -133,5 +137,5 @@ export function createRuntime(env: NodeJS.ProcessEnv = process.env): Runtime {
       ...(env.SB_QUESTION_EXPIRY_MINUTES ? { questionExpiryMinutes: Number(env.SB_QUESTION_EXPIRY_MINUTES) } : {}),
     },
   };
-  return { pool, deps, outboxDir, gmail };
+  return { pool, deps, outboxDir, gmail, truelayer };
 }

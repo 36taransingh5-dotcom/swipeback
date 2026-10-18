@@ -110,7 +110,7 @@ INTEGRITY (evidence/identity/duplicate/conflict) → HUMAN_REVIEW; then REJECT �
 - `chaseReceipt` (after grace, if still no receipt): one email from the finance mailbox to the enrolled cardholder with merchant, amount, date, card last4; subject `Receipt needed: GBP 58.40 at SHELL WATFORD 123 on 2026-10-17 [SB-1001]`; Reply-To plus-address token; creates the open `RECEIPT` question; reminder then expiry via `question-timeout` (reminder `SB_QUESTION_REMINDER_MINUTES`, expiry `SB_QUESTION_EXPIRY_MINUTES`; defaults 24 h each). Expiry or an answer without a receipt → escalates to finance (never re-asks). No connected mailbox → fails closed to finance.
 - The reply is correlated by token or thread to the card-led expense, extracted with the configured model, and **the receipt must agree with the card payment** (amount, date window, card); disagreement raises `RECEIPT_TRANSACTION_MISMATCH` → review. A separately emailed receipt for a transaction whose card-led expense is still waiting is **merged** (`MERGED`), not duplicated.
 - Card-led replies thread onto our own first email (`outbound_messages.rfc_message_id`).
-- Card feeds are adapters (`CardFeedAdapter`): the simulator (`CardSimulatorFeed`, HMAC + 5-min window) is the only one; a real issuer webhook would add an adapter and call `ingestCardTransaction`.
+- Card feeds use the same signed intake: `card-sim` and the local-only TrueLayer Data API sandbox adapter both call `receiveCardEvent`. TrueLayer polls `/data/v1/cards/{account_id}/transactions`, stores OAuth tokens with the Gmail token cipher, and labels imported transactions as sandbox. Neither its auth nor data client is enabled on Vercel. A production issuer feed would need its own reviewed adapter.
 
 ---
 

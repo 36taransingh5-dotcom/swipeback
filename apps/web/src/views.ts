@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { LANDING_HTML } from './landing.ts';
+import { ACCESS_VERSION, LANDING_HTML } from './landing.ts';
 import { html, raw } from 'hono/html';
 import type { HtmlEscapedString } from 'hono/utils/html';
 import { CATEGORIES } from '@swipeback/domain';
@@ -33,22 +33,46 @@ ${actor ? html`<div class="who"><span>${actor.displayName}</span><form method="p
 </body></html>`;
 }
 
+function accessLayout(title: string, body: H, actor: SessionMember | null = null): H {
+  return html`<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123bcc"><title>${title} · Swipeback</title>
+<link rel="stylesheet" href="/static/access.css?v=${ACCESS_VERSION}"></head>
+<body class="access-page"><a class="access-skip" href="#main">Skip to content</a>
+<header class="access-header"><a class="access-brand" href="/" aria-label="Swipeback home"><span aria-hidden="true">↩</span> swipeback</a>
+<nav aria-label="Account navigation"><a href="/">Home <span aria-hidden="true">↗</span></a><a href="/login/connect">Connections <span aria-hidden="true">↗</span></a>
+${actor ? html`<form method="post" action="/logout"><button type="submit">Sign out <span aria-hidden="true">↗</span></button></form>` : html`<a class="access-nav-cta" href="/login">Sign in <span aria-hidden="true">↗</span></a>`}</nav></header>
+<main id="main">${body}</main>
+<footer class="access-footer"><span>↩ SWIPEBACK</span><span>LESS ADMIN. MORE LIVING.</span></footer>
+<div class="demo-banner">SYNTHETIC DEMO — all people, receipts and cards are fictitious; payouts are simulated, no money moves.</div>
+</body></html>`;
+}
+
 export function loginPage(opts: { next?: string; error?: string } = {}): H {
-  return layout('Sign in', html`<section class="narrow card">
-  <h1>Sign in to review</h1>
-  <p class="muted">We'll email you a one-time sign-in link. Only finance reviewers and payment approvers can sign in.</p>
-  ${opts.error ? html`<p class="alert bad">${opts.error}</p>` : ''}
-  <form method="post" action="/login" class="stack">
-    <label>Work email<input type="email" name="email" required autocomplete="email" autofocus></label>
-    <input type="hidden" name="next" value="${opts.next ?? ''}">
-    <button class="primary" type="submit">Email me a sign-in link</button>
-  </form></section>`);
+  return accessLayout('Sign in', html`<section class="access-hero access-hero--login">
+  <div class="access-hero-meta"><span>YOUR SPACE / SWIPEBACK</span><span>EXPENSES, OFF YOUR PLATE.</span></div>
+  <div class="access-login-grid"><div class="access-intro"><p class="access-eyebrow"><i aria-hidden="true"></i> GOOD TO SEE YOU</p>
+    <h1>Welcome<br><em>back.</em></h1><p class="access-subline">A little less admin starts here.</p></div>
+  <div class="access-login-card"><span class="access-card-index">01 / SIGN IN</span><h2>Come on in.</h2>
+    ${opts.error ? html`<p class="access-alert" role="alert">${opts.error}</p>` : ''}
+    <form method="post" action="/login" class="access-form">
+      <label for="access-email">Work email</label><input id="access-email" type="email" name="email" required autocomplete="email" placeholder="you@company.com" autofocus>
+      <input type="hidden" name="next" value="${opts.next ?? ''}">
+      <button class="access-button" type="submit">Send sign-in link <span aria-hidden="true">↗</span></button>
+    </form><p class="access-card-note">We’ll email you a one-time link.</p></div></div>
+  <div class="access-hero-bottom"><span>ONE LESS THING.</span><span>↩ &nbsp; STAY IN YOUR FLOW</span></div>
+  </section>`);
 }
 
 export function checkEmailPage(): H {
-  return layout('Check your email', html`<section class="narrow card" data-testid="check-email">
-  <h1>Check your email</h1>
-  <p>If that address belongs to a finance reviewer, a sign-in link is on its way. It works once and expires in 15 minutes.</p>
+  return accessLayout('Check your email', html`<section class="access-hero access-hero--login" data-testid="check-email">
+  <div class="access-hero-meta"><span>YOUR SPACE / SWIPEBACK</span><span>EXPENSES, OFF YOUR PLATE.</span></div>
+  <div class="access-login-grid"><div class="access-intro"><p class="access-eyebrow"><i aria-hidden="true"></i> ALMOST THERE</p>
+    <h1>Check your<br><em>inbox.</em></h1><p class="access-subline">Your sign-in link is on its way.</p></div>
+  <div class="access-login-card"><span class="access-card-index">02 / CHECK EMAIL</span><h2>See you in a sec.</h2>
+    <p class="access-card-note">If your address has access, you’ll receive a link that works once for 15 minutes.</p>
+    <a class="access-button" href="/login">Try another email <span aria-hidden="true">↗</span></a></div></div>
+  <div class="access-hero-bottom"><span>ONE LESS THING.</span><span>↩ &nbsp; STAY IN YOUR FLOW</span></div>
   </section>`);
 }
 
@@ -65,36 +89,67 @@ export interface MailboxStatus {
 
 function mailboxBanner(m: MailboxStatus): H | '' {
   const gmail = m.connections.find((c) => c.provider === 'gmail');
-  if (gmail?.status === 'RECONNECT_REQUIRED') return html`<p class="alert bad" data-testid="mailbox-banner">The finance mailbox ${gmail.address} needs reconnecting — new receipts are not being read. <a href="/connect">Reconnect</a></p>`;
-  if (!gmail || gmail.status !== 'ACTIVE') return html`<p class="alert info" data-testid="mailbox-banner">No live mailbox connected${m.connections.some((c) => c.status === 'ACTIVE') ? ' (offline replay transport in use)' : ''}. <a href="/connect">Connect the finance mailbox</a></p>`;
+  if (gmail?.status === 'RECONNECT_REQUIRED') return html`<p class="alert bad" data-testid="mailbox-banner">The finance mailbox ${gmail.address} needs reconnecting — new receipts are not being read. <a href="/login/connect">Reconnect</a></p>`;
+  if (!gmail || gmail.status !== 'ACTIVE') return html`<p class="alert info" data-testid="mailbox-banner">No live mailbox connected${m.connections.some((c) => c.status === 'ACTIVE') ? ' (offline replay transport in use)' : ''}. <a href="/login/connect">Connect the finance mailbox</a></p>`;
   return '';
 }
 
-export function connectPage(actor: SessionMember, m: MailboxStatus, o: { configured: boolean; notice: string | null; error: string | null }): H {
+export function connectPage(actor: SessionMember, m: MailboxStatus, o: {
+  configured: boolean; notice: string | null; error: string | null;
+  cardFeed?: { configured: boolean; connection: {
+    id: string; status: string; last_sync_at: Date | null; last_error: string | null;
+    cards: { last4: string; enrolledTo: string | null }[];
+  } | null; members: { id: string; name: string }[] };
+}): H {
   const gmail = m.connections.find((c) => c.provider === 'gmail');
   const admin = actor.roles.includes('admin');
-  return layout('Finance mailbox', html`<section class="card" data-testid="connect" data-status="${gmail?.status ?? 'NONE'}">
-  <h1>Finance mailbox</h1>
-  ${o.notice ? html`<p class="alert ok">${o.notice}</p>` : ''}${o.error ? html`<p class="alert bad" data-testid="connect-error">${o.error}</p>` : ''}
-  <p>Designated address: <strong>${m.designatedAddress ?? 'not set'}</strong></p>
-  ${gmail ? html`<p>Status: <span class="pill ${gmail.status === 'ACTIVE' ? 'ok' : 'warn'}" data-testid="mailbox-status">${words(gmail.status)}</span> · last checked ${gmail.last_sync_at ? when(gmail.last_sync_at) : 'never'}${gmail.last_error ? html` · <span class="muted">${gmail.last_error}</span>` : ''}</p>
-    <p class="muted small">Granted: ${gmail.scopes.join(', ') || '—'}</p>` : html`<p class="muted">Not connected.</p>`}
-  <h2>What connecting allows</h2>
-  <ul>
-    <li><strong>Read</strong> messages delivered to <em>this mailbox only</em>, to find receipts sent by enrolled employees. Mail from unknown or unauthenticated senders is quarantined, not processed.</li>
-    <li><strong>Send</strong> replies from this mailbox: one targeted question when something is missing, and the outcome, in the same thread.</li>
-    <li>Swipeback cannot delete, label or forward mail, and never reads any other mailbox. Disconnecting revokes access immediately.</li>
-  </ul>
-  ${!o.configured ? html`<p class="alert info">Google OAuth is not configured on this server (GOOGLE_OAUTH_CLIENT_ID / SECRET / REDIRECT_URI, SB_TOKEN_ENCRYPTION_KEY).</p>` : admin ? html`
-    <form method="post" action="/connect/gmail"><button class="primary" type="submit">${gmail?.status === 'ACTIVE' ? 'Reconnect' : 'Connect'} ${m.designatedAddress ?? 'mailbox'} with Google</button></form>
-    ${gmail && gmail.status !== 'DISCONNECTED' ? html`<form method="post" action="/connect/gmail/disconnect" style="margin-top:10px"><button class="link" type="submit">Disconnect and revoke access</button></form>` : ''}` : html`<p class="muted">Only an admin can connect or disconnect the mailbox.</p>`}
-  </section>`, actor);
+  return accessLayout('Connections', html`<section class="access-connect" data-testid="connect" data-status="${gmail?.status ?? 'NONE'}">
+  <div class="access-connect-hero"><div class="access-hero-meta"><span>YOUR SPACE / SWIPEBACK</span><span>ONE LESS THING.</span></div>
+    <div class="access-connect-heading"><p class="access-eyebrow"><i aria-hidden="true"></i> CONNECTIONS</p>
+      <h1>Make it <em>yours.</em></h1><p>Choose where Swipeback meets you.</p></div></div>
+  <div class="access-connect-content">
+    ${o.notice ? html`<p class="access-notice" role="status">${o.notice}</p>` : ''}
+    ${o.error ? html`<p class="access-alert" role="alert" data-testid="connect-error">${o.error}</p>` : ''}
+    <div class="access-section-title"><span>01 / YOUR CHANNELS</span><span>CONNECT WHAT YOU USE</span></div>
+    <div class="access-channel-grid">
+      <article class="access-channel" data-channel="gmail"><div class="access-channel-top"><span class="access-channel-icon">✉</span><span class="access-status ${gmail?.status === 'ACTIVE' ? 'is-active' : ''}" data-testid="mailbox-status">${gmail?.status === 'ACTIVE' ? 'Connected' : 'Available'}</span></div>
+        <div><h2>Gmail</h2><p>${gmail?.status === 'ACTIVE' ? gmail.address : m.designatedAddress ?? 'Your finance inbox'}</p></div>
+        ${o.configured && admin ? html`<form method="post" action="/connect/gmail"><button class="access-button" type="submit">${gmail?.status === 'ACTIVE' ? 'Reconnect Gmail' : 'Connect Gmail'} <span aria-hidden="true">↗</span></button></form>`
+          : html`<button class="access-button" type="button" disabled>${admin ? 'Unavailable here' : 'Admin only'} <span aria-hidden="true">↗</span></button>`}
+        ${gmail && gmail.status !== 'DISCONNECTED' && admin ? html`<form method="post" action="/connect/gmail/disconnect" class="access-minor-action"><button type="submit">Disconnect Gmail</button></form>` : ''}
+        ${gmail?.last_error ? html`<p class="access-inline-error">${gmail.last_error}</p>` : ''}
+      </article>
+      <article class="access-channel" data-channel="card" data-testid="sandbox-card-feed"><div class="access-channel-top"><span class="access-channel-icon">▣</span><span class="access-status ${o.cardFeed?.connection?.status === 'ACTIVE' ? 'is-active' : ''}">${o.cardFeed?.connection?.status === 'ACTIVE' ? 'Connected' : 'Sandbox'}</span></div>
+        <div><h2>Card feed</h2><p>TrueLayer sandbox</p></div>
+        ${o.cardFeed?.configured && admin ? html`<form method="post" action="/connect/truelayer"><button class="access-button" type="submit">${o.cardFeed.connection?.status === 'ACTIVE' ? 'Reconnect card feed' : 'Connect card feed'} <span aria-hidden="true">↗</span></button></form>`
+          : html`<button class="access-button" type="button" disabled>${admin ? 'Local sandbox only' : 'Admin only'} <span aria-hidden="true">↗</span></button>`}
+        ${o.cardFeed?.connection?.status === 'ACTIVE' && admin ? html`<form method="post" action="/connect/truelayer/sync" class="access-minor-action"><button type="submit">Sync now</button></form>` : ''}
+        ${o.cardFeed?.connection?.last_error ? html`<p class="access-inline-error">${o.cardFeed.connection.last_error}</p>` : ''}
+      </article>
+      <article class="access-channel" data-channel="slack"><div class="access-channel-top"><span class="access-channel-icon">#</span><span class="access-status">Coming soon</span></div>
+        <div><h2>Slack</h2><p>Team updates, right where you work.</p></div>
+        <button class="access-button" type="button" disabled>Connect Slack <span aria-hidden="true">↗</span></button>
+      </article>
+      <article class="access-channel" data-channel="imessage"><div class="access-channel-top"><span class="access-channel-icon">●</span><span class="access-status">Coming soon</span></div>
+        <div><h2>iMessage</h2><p>A quick message. Expense handled.</p></div>
+        <button class="access-button" type="button" disabled>Connect iMessage <span aria-hidden="true">↗</span></button>
+      </article>
+    </div>
+    ${o.cardFeed?.connection?.cards.length ? html`<section class="access-cards"><div class="access-section-title"><span>02 / SANDBOX CARDS</span><span>TRUE LAYER</span></div>
+      <div class="access-card-list">${o.cardFeed.connection.cards.map((card) => html`<div><strong>Card ••${card.last4}</strong><span>${card.enrolledTo ? `Assigned to ${card.enrolledTo}` : 'Unassigned'}</span></div>`)}</div>
+      ${admin && o.cardFeed.connection.status === 'ACTIVE' && o.cardFeed.connection.cards.some((card) => !card.enrolledTo) ? html`
+        <form method="post" action="/connect/truelayer/card" class="access-assign">
+          <label>Card<select name="last4" required>${o.cardFeed.connection.cards.filter((card) => !card.enrolledTo).map((card) => html`<option value="${card.last4}">Card ••${card.last4}</option>`)}</select></label>
+          <label>Employee<select name="memberId" required>${o.cardFeed.members.map((member) => html`<option value="${member.id}">${member.name}</option>`)}</select></label>
+          <button class="access-button" type="submit">Assign card <span aria-hidden="true">↗</span></button>
+        </form>` : ''}</section>` : ''}
+  </div></section>`, actor);
 }
 
 export function queuePage(actor: SessionMember, q: { items: QueueItem[]; handledAutomatically: number; waitingOnEmployees: number }, mailbox?: MailboxStatus): H {
   const rows = q.items.map(
     (i) => html`<a class="row" href="/review/${i.expenseId}" data-testid="queue-item" data-ref="${i.ref}">
-      <div><strong>${i.ref}</strong> <span class="muted">${i.employee}</span>${i.ownExpense ? html` <span class="pill info">your own — another reviewer decides</span>` : ''}</div>
+      <div><strong>${i.ref}</strong> <span class="muted">${i.employee}</span>${i.sandbox ? html` <span class="pill info">Sandbox</span>` : ''}${i.ownExpense ? html` <span class="pill info">your own — another reviewer decides</span>` : ''}</div>
       <div>${i.merchant ?? 'Unreadable receipt'} · ${money(i.amountMinor, i.currency)}${i.date ? html` · <span class="muted">${i.date}</span>` : ''}</div>
       <div class="muted small">${i.kind === 'PAYMENT_AUTHORISATION' ? 'Payment needs authorisation: ' : 'Needs a decision: '}${i.reasons.join('; ') || '—'}</div>
     </a>`,
@@ -146,7 +201,7 @@ export function casePage(v: CaseView, o: CasePageOptions): H {
               ? html`<p class="alert bad">This attachment failed safety screening and is not displayed.</p>`
               : html`<p><a href="/evidence/${v.evidence.fileId}" target="_blank" rel="noopener">Open receipt (${v.evidence.mime})</a></p>`
         : html`<p class="muted">No receipt.</p>`}
-      ${e.matchedTransaction ? html`<p class="muted small">Matched card transaction: ${e.matchedTransaction.descriptor} · ${money(e.matchedTransaction.amountMinor, e.matchedTransaction.currency)} · ${e.matchedTransaction.date} · card ••${e.matchedTransaction.last4}</p>` : ''}
+      ${e.matchedTransaction ? html`<p class="muted small">Matched card transaction: ${e.matchedTransaction.descriptor} · ${money(e.matchedTransaction.amountMinor, e.matchedTransaction.currency)} · ${e.matchedTransaction.date} · card ••${e.matchedTransaction.last4} ${e.matchedTransaction.sandbox ? html`<span class="pill info">Sandbox</span>` : ''}</p>` : ''}
     </div>
     <div class="card">
       <h2>What Swipeback read ${v.extraction ? html`<span class="muted small">${v.extraction.model ?? v.extraction.extractor}</span>` : ''}</h2>
