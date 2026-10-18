@@ -40,7 +40,7 @@ function accessLayout(title: string, body: H, actor: SessionMember | null = null
 <link rel="stylesheet" href="/static/access.css?v=${ACCESS_VERSION}"></head>
 <body class="access-page"><a class="access-skip" href="#main">Skip to content</a>
 <header class="access-header"><a class="access-brand" href="/" aria-label="Swipeback home"><span aria-hidden="true">↩</span> swipeback</a>
-<nav aria-label="Account navigation"><a href="/">Home <span aria-hidden="true">↗</span></a><a href="/login/connect">Connections <span aria-hidden="true">↗</span></a>
+<nav aria-label="Account navigation"><a href="/">Home <span aria-hidden="true">↗</span></a><a href="/start">Get started <span aria-hidden="true">↗</span></a>
 ${actor ? html`<form method="post" action="/logout"><button type="submit">Sign out <span aria-hidden="true">↗</span></button></form>` : html`<a class="access-nav-cta" href="/login">Sign in <span aria-hidden="true">↗</span></a>`}</nav></header>
 <main id="main">${body}</main>
 <footer class="access-footer"><span>↩ SWIPEBACK</span><span>LESS ADMIN. MORE LIVING.</span></footer>
@@ -76,6 +76,36 @@ export function checkEmailPage(): H {
   </section>`);
 }
 
+export function onboardingPage(opts: { sent?: boolean; error?: string } = {}): H {
+  return accessLayout('Get started', html`<section class="access-connect access-onboarding" data-testid="onboarding">
+    <div class="access-connect-hero"><div class="access-hero-meta"><span>YOUR SPACE / SWIPEBACK</span><span>ONE LESS THING.</span></div>
+      <div class="access-connect-heading"><p class="access-eyebrow"><i aria-hidden="true"></i> GET STARTED</p>
+        <h1>Try it <em>out.</em></h1><p>Your email. Your channels. You’re off.</p></div></div>
+    <div class="access-connect-content access-onboarding-content">
+      <div class="access-onboarding-card"><div><span class="access-card-index">01 / YOUR EMAIL</span>
+        <h2>${opts.sent ? 'Check your inbox.' : 'Come on in.'}</h2>
+        <p>${opts.sent ? 'Your sign-in link is on its way.' : 'One email to get started.'}</p></div>
+        <div class="access-onboarding-action">
+          ${opts.error ? html`<p class="access-alert" role="alert">${opts.error}</p>` : ''}
+          ${opts.sent ? html`<a class="access-button" href="/start">Use another email <span aria-hidden="true">↗</span></a>` : html`
+            <form method="post" action="/start" class="access-form"><label for="start-email">Work email</label>
+              <input id="start-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" autofocus>
+              <button class="access-button" type="submit">Continue with email <span aria-hidden="true">↗</span></button></form>`}
+        </div></div>
+      <div class="access-section-title"><span>02 / YOUR CHANNELS</span><span>READY WHEN YOU ARE</span></div>
+      <div class="access-channel-grid">
+        <article class="access-channel"><div class="access-channel-top"><span class="access-channel-icon">✉</span><span class="access-status">After email</span></div>
+          <div><h2>Gmail</h2><p>Your finance inbox.</p></div><button class="access-button" type="button" disabled>Connect Gmail <span aria-hidden="true">↗</span></button></article>
+        <article class="access-channel"><div class="access-channel-top"><span class="access-channel-icon">▣</span><span class="access-status">Sandbox</span></div>
+          <div><h2>Card feed</h2><p>TrueLayer sandbox, locally.</p></div><button class="access-button" type="button" disabled>Connect card feed <span aria-hidden="true">↗</span></button></article>
+        <article class="access-channel" data-channel="slack"><div class="access-channel-top"><span class="access-channel-icon">#</span><span class="access-status">Coming soon</span></div>
+          <div><h2>Slack</h2><p>Team updates where you work.</p></div><button class="access-button" type="button" disabled>Connect Slack <span aria-hidden="true">↗</span></button></article>
+        <article class="access-channel" data-channel="imessage"><div class="access-channel-top"><span class="access-channel-icon">●</span><span class="access-status">Coming soon</span></div>
+          <div><h2>iMessage</h2><p>Expense updates in a message.</p></div><button class="access-button" type="button" disabled>Connect iMessage <span aria-hidden="true">↗</span></button></article>
+      </div>
+    </div></section>`);
+}
+
 export function errorPage(status: number, message: string, actor: SessionMember | null): H {
   return layout('Not available', html`<section class="narrow card" data-testid="error" data-status="${status}">
   <h1>${status === 404 ? 'Not found' : status === 403 ? 'Not allowed' : status === 410 ? 'Link no longer valid' : 'Something needs attention'}</h1>
@@ -103,14 +133,14 @@ export function connectPage(actor: SessionMember, m: MailboxStatus, o: {
 }): H {
   const gmail = m.connections.find((c) => c.provider === 'gmail');
   const admin = actor.roles.includes('admin');
-  return accessLayout('Connections', html`<section class="access-connect" data-testid="connect" data-status="${gmail?.status ?? 'NONE'}">
+  return accessLayout('Get started', html`<section class="access-connect" data-testid="connect" data-status="${gmail?.status ?? 'NONE'}">
   <div class="access-connect-hero"><div class="access-hero-meta"><span>YOUR SPACE / SWIPEBACK</span><span>ONE LESS THING.</span></div>
-    <div class="access-connect-heading"><p class="access-eyebrow"><i aria-hidden="true"></i> CONNECTIONS</p>
+    <div class="access-connect-heading"><p class="access-eyebrow"><i aria-hidden="true"></i> GET STARTED</p>
       <h1>Make it <em>yours.</em></h1><p>Choose where Swipeback meets you.</p></div></div>
   <div class="access-connect-content">
     ${o.notice ? html`<p class="access-notice" role="status">${o.notice}</p>` : ''}
     ${o.error ? html`<p class="access-alert" role="alert" data-testid="connect-error">${o.error}</p>` : ''}
-    <div class="access-section-title"><span>01 / YOUR CHANNELS</span><span>CONNECT WHAT YOU USE</span></div>
+    <div class="access-section-title"><span>02 / YOUR CHANNELS</span><span>CONNECT WHAT YOU USE</span></div>
     <div class="access-channel-grid">
       <article class="access-channel" data-channel="gmail"><div class="access-channel-top"><span class="access-channel-icon">✉</span><span class="access-status ${gmail?.status === 'ACTIVE' ? 'is-active' : ''}" data-testid="mailbox-status">${gmail?.status === 'ACTIVE' ? 'Connected' : 'Available'}</span></div>
         <div><h2>Gmail</h2><p>${gmail?.status === 'ACTIVE' ? gmail.address : m.designatedAddress ?? 'Your finance inbox'}</p></div>
@@ -135,7 +165,7 @@ export function connectPage(actor: SessionMember, m: MailboxStatus, o: {
         <button class="access-button" type="button" disabled>Connect iMessage <span aria-hidden="true">↗</span></button>
       </article>
     </div>
-    ${o.cardFeed?.connection?.cards.length ? html`<section class="access-cards"><div class="access-section-title"><span>02 / SANDBOX CARDS</span><span>TRUE LAYER</span></div>
+    ${o.cardFeed?.connection?.cards.length ? html`<section class="access-cards"><div class="access-section-title"><span>03 / SANDBOX CARDS</span><span>TRUE LAYER</span></div>
       <div class="access-card-list">${o.cardFeed.connection.cards.map((card) => html`<div><strong>Card ••${card.last4}</strong><span>${card.enrolledTo ? `Assigned to ${card.enrolledTo}` : 'Unassigned'}</span></div>`)}</div>
       ${admin && o.cardFeed.connection.status === 'ACTIVE' && o.cardFeed.connection.cards.some((card) => !card.enrolledTo) ? html`
         <form method="post" action="/connect/truelayer/card" class="access-assign">

@@ -14,6 +14,7 @@ const PAGES: Record<string, () => unknown> = {
   checkEmailPage: () => views.checkEmailPage(),
   errorPage: () => views.errorPage(404, 'Nothing here.', null),
   connectPage: () => views.connectPage(actor, mailbox, { configured: false, notice: null, error: null }),
+  onboardingPage: () => views.onboardingPage(),
   queuePage: () => views.queuePage(actor, { items: [], handledAutomatically: 0, waitingOnEmployees: 0 }, mailbox),
   // casePage needs a full case view; the browser test asserts its banner.
   casePage: () => null,

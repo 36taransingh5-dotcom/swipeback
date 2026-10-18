@@ -10,6 +10,7 @@ import {
   enrolTrueLayerSandboxCard,
   CARD_SIGNATURE_HEADER,
   consumeLoginToken,
+  consumeSignupToken,
   endSession,
   loadCase,
   loadEvidence,
@@ -20,6 +21,7 @@ import {
   receiveCardEvent,
   receiveInbound,
   requestLoginLink,
+  requestSignupLink,
   reviewExpense,
   ReviewError,
   reviewQueue,
@@ -45,7 +47,7 @@ import {
   type ReviewAction,
   type SessionMember,
 } from '@swipeback/engine';
-import { casePage, checkEmailPage, connectPage, errorPage, landingPage, loginPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
+import { casePage, checkEmailPage, connectPage, errorPage, landingPage, loginPage, onboardingPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
 
 /**
  * The minimal authenticated reviewer surface plus the PRD §7.4 API. It holds no business logic:
@@ -63,6 +65,8 @@ export interface WebOptions {
   gmail?: (GmailRuntime & { tokens: GmailTokens }) | null;
   /** Local TrueLayer Data API sandbox only; never enabled by the hosted runtime. */
   truelayer?: (TrueLayerSandboxRuntime & { tokens: TrueLayerSandboxTokens }) | null;
+  /** Explicitly selected connected Gmail mailbox that sends new-workspace verification links. */
+  signupSenderConnectionId?: string | null;
 }
 
 const isReviewer = (a: SessionMember) => a.roles.some((r) => r === 'reviewer' || r === 'admin');
@@ -144,6 +148,22 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
     return c.redirect('/login', 303);
   });
 
+  // ---- email-first onboarding --------------------------------------------------------------
+  app.post('/start', async (c) => {
+    const body = await c.req.parseBody();
+    const result = await requestSignupLink(deps, String(body.email ?? ''), opts.signupSenderConnectionId ?? null);
+    if (result === 'invalid') return c.html(onboardingPage({ error: 'Enter a valid email address.' }), 400);
+    if (result === 'unavailable') return c.html(onboardingPage({ error: 'Email is unavailable right now. Please try again shortly.' }), 503);
+    return c.html(onboardingPage({ sent: true }));
+  });
+  app.get('/start/callback', async (c) => {
+    const result = await consumeSignupToken(deps, c.req.query('t') ?? '');
+    if (!result) return c.html(onboardingPage({ error: 'That link has expired or was already used. Request a new one.' }), 401);
+    setCookie(c, SESSION_COOKIE, result.sessionToken, { httpOnly: true, secure: opts.secureCookies,
+      sameSite: 'Lax', path: '/', maxAge: SESSION_TTL_HOURS * 3600 });
+    return c.redirect('/start', 303);
+  });
+
   // ---- review -----------------------------------------------------------------------------
   app.get('/review', async (c) => {
     const actor = requireActor(c);
@@ -152,7 +172,7 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
   });
 
   // ---- connected finance mailbox --------------------------------------------------------------
-  const connectPath = '/login/connect';
+  const connectPath = '/start';
   const renderConnect = async (c: Context<Env>) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
@@ -170,7 +190,8 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
     }));
   };
   app.get('/connect', renderConnect);
-  app.get(connectPath, renderConnect);
+  app.get('/start', async (c) => c.get('actor') ? renderConnect(c) : c.html(onboardingPage()));
+  app.get('/login/connect', (c) => c.redirect(connectPath, 303));
   app.post('/connect/gmail', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;

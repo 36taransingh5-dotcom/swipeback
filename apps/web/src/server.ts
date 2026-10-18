@@ -10,7 +10,8 @@ import { createApp } from './app.ts';
 loadLocalEnv();
 const { deps, gmail, truelayer } = createRuntime();
 const port = Number(process.env.PORT ?? 3000);
-const app = createApp(deps, { secureCookies: (process.env.SB_APP_URL ?? '').startsWith('https://'), gmail, truelayer });
+const app = createApp(deps, { secureCookies: (process.env.SB_APP_URL ?? '').startsWith('https://'), gmail, truelayer,
+  signupSenderConnectionId: process.env.SB_SIGNUP_CONNECTION_ID ?? null });
 serve({ fetch: app.fetch, port, hostname: process.env.HOST ?? '127.0.0.1' }, (info) => {
   console.log(`[web] listening on http://${info.address}:${info.port} (app url ${deps.config.appUrl})`);
 });

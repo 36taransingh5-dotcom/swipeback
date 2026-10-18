@@ -43,6 +43,7 @@ describe('reviewer web app', () => {
     expect(page.status).toBe(200);
     expect(html).toContain('/static/landing.css?v=');
     expect(html).toContain('/static/landing.js?v=');
+    expect(html).toContain('href="/start"');
 
     const css = await fetch(`${base}/static/landing.css`);
     expect(css.status).toBe(200);
@@ -67,8 +68,8 @@ describe('reviewer web app', () => {
     expect(headers['referrer-policy']).toBe('no-referrer');
     expect(headers['x-frame-options']).toBe('DENY');
     await page.goto(`${base}/login/connect`);
-    expect(page.url()).toBe(`${base}/login?next=%2Flogin%2Fconnect`);
-    expect(await page.textContent('h1')).toContain('Welcome');
+    expect(page.url()).toBe(`${base}/start`);
+    expect(await page.textContent('h1')).toContain('Try it');
     const api = await fetch(`${base}/api/expenses/00000000-0000-0000-0000-000000000000/review`, { method: 'POST', body: '{}' });
     expect(api.status).toBe(401);
     await page.context().close();
