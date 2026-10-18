@@ -57,16 +57,16 @@ Copy `.env.example` to `.env.local` (gitignored) and fill it in:
 - `SB_OPENAI_API_KEY`.
 - A token-encryption key (`openssl rand -base64 32`).
 
-Then `corepack pnpm worker` and `corepack pnpm web`, sign in as the reviewer, and connect the mailbox at `/connect`. Details: [`docs/HANDOFF.md`](docs/HANDOFF.md) §5. Secrets are read explicitly; ambient `OPENAI_*` and `ANTHROPIC_*` shell variables are ignored on purpose.
+Then `corepack pnpm worker` and `corepack pnpm web`, sign in as the reviewer, and connect the mailbox at `/login/connect`. Details: [`docs/HANDOFF.md`](docs/HANDOFF.md) §5. Secrets are read explicitly; ambient `OPENAI_*` and `ANTHROPIC_*` shell variables are ignored on purpose.
 
 ## TrueLayer sandbox card feed
 
 The adapter runs **only locally** with `SB_APP_URL=http://localhost:3000`; it uses only `auth.truelayer-sandbox.com` and `api.truelayer-sandbox.com`. It is disabled on Vercel and in production. Add the sandbox client secret as `TRUELAYER_CLIENT_SECRET` in `.env.local`, keep `SB_TOKEN_ENCRYPTION_KEY` set, and allowlist the exact redirect `http://localhost:3000/callback` for client `sandbox-swipeback-a13286` in TrueLayer Console. No production TrueLayer credentials are used.
 
 1. Start the local database (`corepack pnpm db:start`) in one terminal. In another, run `corepack pnpm db:migrate` and `corepack pnpm seed` if the demo organisation is not already there.
-2. Start `corepack pnpm worker` and `corepack pnpm web`. Sign in as the seeded admin/reviewer and open `http://localhost:3000/connect`.
-3. Click **Connect sandbox card feed**, choose TrueLayer's Mock Bank, and finish consent. TrueLayer returns to `/callback`; Swipeback exchanges the code, encrypts the tokens, and checks settled card transactions immediately. It then checks again every eight hours while the worker runs, or on **Sync now**. The slower background interval respects common [unattended Data API limits](https://docs.truelayer.com/docs/data-api-errors).
-4. If the mock card's last four digits do not match a card already assigned to an employee, use **Assign sandbox card** on `/connect`, then **Sync now**. Unknown cards are never silently assigned. Purchases arrive through the same signed card-event intake as `card-sim`; refunds and credits are skipped. The reviewer UI labels these transactions **Sandbox**.
+2. Start `corepack pnpm worker` and `corepack pnpm web`. Sign in as the seeded admin/reviewer and open `http://localhost:3000/login/connect`.
+3. Click **Connect card feed**, choose TrueLayer's Mock Bank, and sign in with a [mock user](https://docs.truelayer.com/docs/mock-users), such as `john` / `doe`. TrueLayer returns to `/callback`; Swipeback exchanges the code, encrypts the tokens, and checks settled card transactions immediately. It then checks again every eight hours while the worker runs, or on **Sync now**. The slower background interval respects common [unattended Data API limits](https://docs.truelayer.com/docs/data-api-errors).
+4. If the mock card's last four digits do not match a card already assigned to an employee, use **Assign card** on `/login/connect`, then **Sync now**. Unknown cards are never silently assigned. Purchases arrive through the same signed card-event intake as `card-sim`; refunds and credits are skipped. The reviewer UI labels these transactions **Sandbox**.
 
 The `cards transactions offline_access` scopes are requested, with PKCE and a one-use state. The initial sync checks 89 days of settled card transactions; duplicate polls are safe. The TrueLayer card endpoint covers credit/charge cards, while debit-card current accounts are under a separate accounts endpoint and are outside this sandbox adapter. See [TrueLayer's card data guide](https://docs.truelayer.com/docs/account-and-card-data) and [sandbox auth guide](https://docs.truelayer.com/docs/quickstart-retrieve-bank-data).
 
