@@ -24,7 +24,7 @@ export function layout(title: string, body: H, actor: SessionMember | null = nul
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title} · Swipeback</title><link rel="stylesheet" href="/static/app.css?v=${ASSET_VERSION}"><script src="/static/app.js?v=${ASSET_VERSION}" defer></script></head>
 <body>
-<div class="demo-banner">SYNTHETIC DEMO — all people, receipts and cards are fictitious; payouts are simulated, no money moves.</div>
+<div class="demo-banner">PREVIEW — payouts are simulated; no money moves.</div>
 <header class="top"><a class="brand" href="/review">swipe<b>back</b></a>
 ${actor ? html`<div class="who"><span>${actor.displayName}</span><form method="post" action="/logout"><button class="link">Sign out</button></form></div>` : ''}
 </header>
@@ -44,7 +44,7 @@ function accessLayout(title: string, body: H, actor: SessionMember | null = null
 ${actor ? html`<form method="post" action="/logout"><button type="submit">Sign out <span aria-hidden="true">↗</span></button></form>` : html`<a class="access-nav-cta" href="/login">Sign in <span aria-hidden="true">↗</span></a>`}</nav></header>
 <main id="main">${body}</main>
 <footer class="access-footer"><span>↩ SWIPEBACK</span><span>LESS ADMIN. MORE LIVING.</span></footer>
-<div class="demo-banner">SYNTHETIC DEMO — all people, receipts and cards are fictitious; payouts are simulated, no money moves.</div>
+<div class="demo-banner">PREVIEW — payouts are simulated; no money moves.</div>
 </body></html>`;
 }
 
