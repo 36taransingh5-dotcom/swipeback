@@ -1,0 +1,20 @@
+{
+  "guid": "6f4d9a2e-0000-4000-8000-fakefixture01",
+  "text": "Receipt for the Watford trip",
+  "dateCreated": 1760702400000,
+  "isFromMe": false,
+  "service": "iMessage",
+  "handle": { "address": "+44 7700 900123", "id": 42, "country": "gb" },
+  "chats": [
+    {
+      "guid": "iMessage;-;+447700900123",
+      "style": 43,
+      "participants": [{ "address": "+44 7700 900123", "id": 42 }],
+      "displayName": ""
+    }
+  ],
+  "attachments": [],
+  "hasAttachments": false,
+  "dateRead": null,
+  "dateDelivered": null
+}

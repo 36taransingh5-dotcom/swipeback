@@ -1,0 +1,24 @@
+{
+  "guid": "6f4d9a2e-0000-4000-8000-fakefixture03",
+  "text": "Invoice",
+  "dateCreated": 1760702520000,
+  "isFromMe": false,
+  "service": "iMessage",
+  "handle": { "address": "employee@example.com", "id": 77 },
+  "chats": [
+    {
+      "guid": "iMessage;-;employee@example.com",
+      "style": 43,
+      "participants": [{ "address": "employee@example.com", "id": 77 }]
+    }
+  ],
+  "attachments": [
+    {
+      "guid": "att-fake-0002",
+      "mimeType": "application/pdf",
+      "transferName": "invoice.pdf",
+      "totalBytes": 48210
+    }
+  ],
+  "hasAttachments": true
+}

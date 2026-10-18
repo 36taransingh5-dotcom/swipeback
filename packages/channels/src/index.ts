@@ -4,6 +4,8 @@ export * from './evidence-store.ts';
 export * from './sink.ts';
 export * from './slack/adapter.ts';
 export * from './slack/web-api.ts';
+export * from './imessage/adapter.ts';
+export * from './imessage/bluebubbles-client.ts';
 export * from './email/mime.ts';
 export * from './email/normalise.ts';
 export * from './email/fixture-adapter.ts';

@@ -1,0 +1,26 @@
+{
+  "guid": "6f4d9a2e-0000-4000-8000-fakefixture02",
+  "text": "",
+  "dateCreated": 1760702460000,
+  "isFromMe": false,
+  "service": "iMessage",
+  "handle": { "address": "+44 7700 900123", "id": 42, "country": "gb" },
+  "chats": [
+    {
+      "guid": "iMessage;-;+447700900123",
+      "style": 43,
+      "participants": [{ "address": "+44 7700 900123", "id": 42 }],
+      "displayName": ""
+    }
+  ],
+  "attachments": [
+    {
+      "guid": "att-fake-0001",
+      "mimeType": "image/heic",
+      "transferName": "IMG_0001.HEIC",
+      "totalBytes": 1823345,
+      "isSticker": false
+    }
+  ],
+  "hasAttachments": true
+}

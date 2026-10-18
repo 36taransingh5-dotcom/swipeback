@@ -16,6 +16,7 @@ import {
 import { MockPayProvider } from '@swipeback/payouts';
 import { channelRegistry, systemClock, type EngineDeps } from './deps.ts';
 import { slackAdapterFromEnv } from './slack.ts';
+import { bluebubblesAdapterFromEnv } from './imessage.ts';
 import { GmailTokens, type GmailRuntime } from './gmail.ts';
 import { TokenCipher } from './secrets.ts';
 import { TrueLayerSandboxTokens, trueLayerSandboxRuntimeFromEnv, type TrueLayerSandboxRuntime } from './truelayer-sandbox.ts';
@@ -113,6 +114,7 @@ export function createRuntime(env: NodeJS.ProcessEnv = process.env): Runtime {
   const outboxDir = path.join(dataDir, 'outbox');
   const sink = new DirectorySink(outboxDir);
   const slack = slackAdapterFromEnv(env, evidence);
+  const bluebubbles = bluebubblesAdapterFromEnv(env, evidence);
   const g = gmailRuntimeFromEnv(env);
   const gmail = g ? { ...g, tokens: new GmailTokens(pool, g) } : null;
   const tl = trueLayerSandboxRuntimeFromEnv(env);
@@ -125,6 +127,7 @@ export function createRuntime(env: NodeJS.ProcessEnv = process.env): Runtime {
     channels: channelRegistry([
       new FixtureEmailAdapter(evidence, sink),
       ...(slack ? [slack] : []),
+      ...(bluebubbles ? [bluebubbles] : []),
       new SyntheticChatAdapter(evidence, sink, secret(env, 'SB_SYNTHETIC_CHAT_SECRET', 'dev-only-synthetic-chat-secret')),
       ...(gmail ? [new GmailAdapter(evidence, async (id) => gmail.tokens.api(id))] : []),
     ]),
