@@ -64,6 +64,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .access-connect-heading h1 { font-size: clamp(58px, 7vw, 104px); }
 .access-connect-heading > p:last-child { margin: 14px 0 0; font: 13px var(--mono); color: #f2f7ff; }
 .access-connect-content { width: min(1244px, 100%); margin: 0 auto; padding: 60px 32px 100px; }
+.access-onboarding-content { padding-top: 0; }
+.access-onboarding-card { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; margin: -38px 0 58px; padding: 34px 42px; border: 1px solid #cbd0c5; border-radius: 15px; background: var(--paper); box-shadow: 0 12px 30px #18386020; }
+.access-onboarding-card h2 { margin: 15px 0 6px; font: 400 clamp(34px, 4vw, 53px)/1 var(--serif); letter-spacing: -.05em; }
+.access-onboarding-card p { margin: 0; color: #5b655e; font-size: 13px; }
+.access-onboarding-action .access-alert { margin-bottom: 12px; }
+.access-onboarding-action .access-button { max-width: 100%; }
 .access-connect-content > .access-notice, .access-connect-content > .access-alert { margin: 0 0 20px; }
 .access-section-title { padding: 0 0 13px; border-bottom: 1px solid #aab2a7; color: #455046; }
 .access-channel-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
@@ -106,6 +112,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .access-connect-hero { min-height: 320px; padding-top: 112px; }
   .access-connect-heading { margin-top: 40px; }
   .access-connect-content { padding: 35px 18px 70px; }
+  .access-onboarding-content { padding-top: 0; }
+  .access-onboarding-card { grid-template-columns: 1fr; gap: 26px; margin: -20px 0 40px; padding: 28px 22px; }
   .access-channel-grid { grid-template-columns: 1fr; }
   .access-channel { min-height: 250px; }
   .access-assign { grid-template-columns: 1fr; }

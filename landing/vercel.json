@@ -1,0 +1,9 @@
+{
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/start", "destination": "https://swipeback-app.vercel.app/start", "permanent": false },
+    { "source": "/login", "destination": "https://swipeback-app.vercel.app/login", "permanent": false }
+  ]
+}
