@@ -9,3 +9,5 @@ node_modules/
 coverage/
 eval/reports/*.local.*
 .DS_Store
+.vercel/
+.env.local

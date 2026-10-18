@@ -25,6 +25,7 @@
     "verify:card-receipt": "tsx tools/cli/src/main.ts verify:card-receipt"
   },
   "devDependencies": {
+    "@hono/node-server": "2.1.5",
     "@eslint/js": "10.0.1",
     "@swipeback/channels": "workspace:*",
     "@swipeback/cli": "workspace:*",
