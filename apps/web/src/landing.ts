@@ -7,6 +7,8 @@ const asset = (name: string) =>
   readFileSync(path.join(process.cwd(), "landing", name), "utf8");
 export const LANDING_CSS = asset("landing.css");
 export const LANDING_JS = asset("landing.js");
+export const ACCESS_CSS = asset("access.css");
+export const ACCESS_VERSION = createHash("sha256").update(ACCESS_CSS).digest("hex").slice(0, 10);
 const version = createHash("sha256")
   .update(LANDING_CSS)
   .update(LANDING_JS)

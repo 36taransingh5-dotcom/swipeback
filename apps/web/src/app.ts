@@ -3,7 +3,7 @@ import path from 'node:path';
 import { Hono, type Context } from 'hono';
 import { deleteCookie, getCookie, setCookie } from 'hono/cookie';
 import { enqueue, JobRunner } from '@swipeback/db';
-import { LANDING_CSS, LANDING_JS } from './landing.ts';
+import { ACCESS_CSS, LANDING_CSS, LANDING_JS } from './landing.ts';
 import {
   activeGmailConnections,
   dueTrueLayerSandboxConnections,
@@ -122,6 +122,7 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
   app.get('/static/app.js', (c) => c.body(String(STATIC_JS), 200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/static/landing.css', (c) => c.body(LANDING_CSS, 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/static/landing.js', (c) => c.body(LANDING_JS, 200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
+  app.get('/static/access.css', (c) => c.body(ACCESS_CSS, 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/', (c) => c.html(landingPage()));
 
   // ---- sign in ----------------------------------------------------------------------------
@@ -151,7 +152,8 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
   });
 
   // ---- connected finance mailbox --------------------------------------------------------------
-  app.get('/connect', async (c) => {
+  const connectPath = '/login/connect';
+  const renderConnect = async (c: Context<Env>) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
     // The Connect form posts here and is redirected to Google's consent screen; CSP form-action
@@ -166,77 +168,79 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
       cardFeed: { configured: !!opts.truelayer, connection: await trueLayerSandboxStatus(deps.pool, actor.organisationId),
         members: await trueLayerSandboxMembers(deps.pool, actor.organisationId) },
     }));
-  });
+  };
+  app.get('/connect', renderConnect);
+  app.get(connectPath, renderConnect);
   app.post('/connect/gmail', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
-    if (!opts.gmail) return c.redirect('/connect', 303);
+    if (!opts.gmail) return c.redirect(connectPath, 303);
     return withErrors(c, actor, async () => c.redirect(await startGmailConnect(deps, opts.gmail!, actor), 303));
   });
   app.post('/connect/gmail/disconnect', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
-    if (!opts.gmail) return c.redirect('/connect', 303);
+    if (!opts.gmail) return c.redirect(connectPath, 303);
     return withErrors(c, actor, async () => {
       await disconnectGmail(deps, opts.gmail!, actor);
-      return c.redirect('/connect', 303);
+      return c.redirect(connectPath, 303);
     });
   });
   app.get('/api/oauth/google/callback', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
-    if (!opts.gmail) return c.redirect('/connect', 303);
+    if (!opts.gmail) return c.redirect(connectPath, 303);
     const denied = c.req.query('error');
-    if (denied) return c.redirect(`/connect?error=${encodeURIComponent(`Google consent was not given (${denied}). Nothing was connected.`)}`, 303);
+    if (denied) return c.redirect(`${connectPath}?error=${encodeURIComponent(`Google consent was not given (${denied}). Nothing was connected.`)}`, 303);
     const r = await finishGmailConnect(deps, opts.gmail, actor, { code: c.req.query('code') ?? '', state: c.req.query('state') ?? '' });
-    return c.redirect(r.ok ? '/connect?connected=1' : `/connect?error=${encodeURIComponent(r.reason)}`, 303);
+    return c.redirect(r.ok ? `${connectPath}?connected=1` : `${connectPath}?error=${encodeURIComponent(r.reason)}`, 303);
   });
 
   // ---- local TrueLayer sandbox card feed --------------------------------------------------
   app.post('/connect/truelayer', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
-    if (!opts.truelayer) return c.redirect('/connect', 303);
+    if (!opts.truelayer) return c.redirect(connectPath, 303);
     return withErrors(c, actor, async () => c.redirect(await startTrueLayerSandboxConnect(deps, opts.truelayer!, actor), 303));
   });
   app.get('/callback', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
-    if (!opts.truelayer) return c.redirect('/connect', 303);
-    if (c.req.query('error')) return c.redirect('/connect?error=Sandbox%20consent%20was%20not%20given', 303);
+    if (!opts.truelayer) return c.redirect(connectPath, 303);
+    if (c.req.query('error')) return c.redirect(`${connectPath}?error=Sandbox%20consent%20was%20not%20given`, 303);
     const r = await finishTrueLayerSandboxConnect(deps, opts.truelayer, actor,
       { code: c.req.query('code') ?? '', state: c.req.query('state') ?? '' });
-    if (!r.ok) return c.redirect(`/connect?error=${encodeURIComponent(r.reason)}`, 303);
+    if (!r.ok) return c.redirect(`${connectPath}?error=${encodeURIComponent(r.reason)}`, 303);
     try {
       const sync = await pollTrueLayerSandboxConnection(deps, opts.truelayer, opts.truelayer.tokens, r.connectionId);
       const notice = sync.unknownCards ? `Sandbox connected, but ${sync.unknownCards} transaction(s) have a card number not enrolled in Swipeback.` : null;
-      return c.redirect(notice ? `/connect?card-connected=1&error=${encodeURIComponent(notice)}` : '/connect?card-connected=1', 303);
+      return c.redirect(notice ? `${connectPath}?card-connected=1&error=${encodeURIComponent(notice)}` : `${connectPath}?card-connected=1`, 303);
     } catch {
-      return c.redirect('/connect?card-connected=1&error=Sandbox%20connected%2C%20but%20the%20first%20card%20sync%20failed.%20Try%20Sync%20now.', 303);
+      return c.redirect(`${connectPath}?card-connected=1&error=Sandbox%20connected%2C%20but%20the%20first%20card%20sync%20failed.%20Try%20Sync%20now.`, 303);
     }
   });
   app.post('/connect/truelayer/sync', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
     if (!actor.roles.includes('admin')) return c.html(errorPage(403, 'Only an admin can sync the sandbox card feed', actor), 403);
-    if (!opts.truelayer) return c.redirect('/connect', 303);
+    if (!opts.truelayer) return c.redirect(connectPath, 303);
     const conn = await trueLayerSandboxStatus(deps.pool, actor.organisationId);
-    if (!conn || conn.status !== 'ACTIVE') return c.redirect('/connect?error=Sandbox%20card%20feed%20is%20not%20connected', 303);
+    if (!conn || conn.status !== 'ACTIVE') return c.redirect(`${connectPath}?error=Sandbox%20card%20feed%20is%20not%20connected`, 303);
     try {
       const sync = await pollTrueLayerSandboxConnection(deps, opts.truelayer, opts.truelayer.tokens, conn.id);
-      return c.redirect(`/connect?card-synced=1${sync.unknownCards ? `&error=${encodeURIComponent(`${sync.unknownCards} transaction(s) have a card number not enrolled in Swipeback.`)}` : ''}`, 303);
+      return c.redirect(`${connectPath}?card-synced=1${sync.unknownCards ? `&error=${encodeURIComponent(`${sync.unknownCards} transaction(s) have a card number not enrolled in Swipeback.`)}` : ''}`, 303);
     } catch {
-      return c.redirect('/connect?error=Sandbox%20card%20sync%20failed.%20Check%20the%20connection%20status.', 303);
+      return c.redirect(`${connectPath}?error=Sandbox%20card%20sync%20failed.%20Check%20the%20connection%20status.`, 303);
     }
   });
   app.post('/connect/truelayer/card', async (c) => {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
-    if (!opts.truelayer) return c.redirect('/connect', 303);
+    if (!opts.truelayer) return c.redirect(connectPath, 303);
     const body = await c.req.parseBody();
     return withErrors(c, actor, async () => {
       await enrolTrueLayerSandboxCard(deps, actor, { last4: String(body.last4 ?? ''), memberId: String(body.memberId ?? '') });
-      return c.redirect('/connect?card-synced=1', 303);
+      return c.redirect(`${connectPath}?card-synced=1`, 303);
     });
   });
 
