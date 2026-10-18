@@ -15,4 +15,5 @@ export * from './slack.ts';
 export * from './slack-commands.ts';
 export * from './secrets.ts';
 export * from './gmail.ts';
+export * from './truelayer-sandbox.ts';
 export * from './receipt-chase.ts';

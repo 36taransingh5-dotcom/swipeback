@@ -19,21 +19,26 @@ export interface QueueItem {
   reasons: string[];
   since: Date;
   ownExpense: boolean;
+  sandbox: boolean;
 }
 
 export async function reviewQueue(deps: Pick<EngineDeps, 'pool'>, actor: SessionMember): Promise<{ items: QueueItem[]; handledAutomatically: number; waitingOnEmployees: number }> {
   const r = await deps.pool.query<{
     kind: QueueItem['kind']; expense_id: string; reimbursement_id: string | null; ref: string; employee: string; member_id: string;
-    merchant: string | null; amount_minor: number | null; currency: string | null; expense_date: string | null; reason_codes: string[] | null; human_required: string[] | null; since: Date;
+    merchant: string | null; amount_minor: number | null; currency: string | null; expense_date: string | null; reason_codes: string[] | null; human_required: string[] | null; since: Date; sandbox: boolean;
   }>(
     `SELECT 'EXPENSE_REVIEW' AS kind, e.id AS expense_id, NULL::uuid AS reimbursement_id, e.ref, m.display_name AS employee, e.member_id,
-            e.merchant, e.amount_minor, e.currency, e.expense_date, d.reason_codes, NULL::text[] AS human_required, e.updated_at AS since
+            e.merchant, e.amount_minor, e.currency, e.expense_date, d.reason_codes, NULL::text[] AS human_required, e.updated_at AS since,
+            (t.provider = 'truelayer-sandbox') AS sandbox
        FROM expenses e JOIN members m ON m.id = e.member_id LEFT JOIN policy_decisions d ON d.id = e.last_decision_id
+       LEFT JOIN transactions t ON t.id = e.matched_transaction_id
       WHERE e.organisation_id = $1 AND e.state = 'REVIEW_REQUIRED'
      UNION ALL
      SELECT 'PAYMENT_AUTHORISATION', e.id, r.id, e.ref, m.display_name, e.member_id, e.merchant, r.amount_minor, r.currency, e.expense_date,
-            NULL, (SELECT array_agg(x) FROM jsonb_array_elements_text(a.after->'humanRequired') x), r.updated_at
+            NULL, (SELECT array_agg(x) FROM jsonb_array_elements_text(a.after->'humanRequired') x), r.updated_at,
+            (t.provider = 'truelayer-sandbox')
        FROM reimbursements r JOIN expenses e ON e.id = r.expense_id JOIN members m ON m.id = e.member_id
+       LEFT JOIN transactions t ON t.id = e.matched_transaction_id
        LEFT JOIN LATERAL (SELECT after FROM audit_events WHERE entity_type = 'reimbursement' AND entity_id = r.id::text
                            AND action = 'reimbursement.awaiting_authorisation' ORDER BY seq DESC LIMIT 1) a ON true
       WHERE r.organisation_id = $1 AND r.state = 'ELIGIBILITY_CHECK'
@@ -51,7 +56,7 @@ export async function reviewQueue(deps: Pick<EngineDeps, 'pool'>, actor: Session
       .filter((x) => (x.kind === 'PAYMENT_AUTHORISATION' ? actor.roles.includes('payment_approver') : actor.roles.some((ro) => ro === 'reviewer' || ro === 'admin')))
       .map((x) => ({
         kind: x.kind, expenseId: x.expense_id, reimbursementId: x.reimbursement_id, ref: x.ref, employee: x.employee, merchant: x.merchant,
-        amountMinor: x.amount_minor, currency: x.currency, date: x.expense_date, since: x.since, ownExpense: x.member_id === actor.memberId,
+        amountMinor: x.amount_minor, currency: x.currency, date: x.expense_date, since: x.since, ownExpense: x.member_id === actor.memberId, sandbox: !!x.sandbox,
         reasons: x.kind === 'PAYMENT_AUTHORISATION'
           ? (x.human_required ?? []).map((h) => h.toLowerCase().replace(/_/g, ' '))
           : (x.reason_codes ?? []).map(reasonText),
@@ -65,7 +70,7 @@ export interface CaseView {
   expense: {
     id: string; ref: string; state: string; version: number; employee: string; employeeEmail: string; memberId: string; merchant: string | null;
     amountMinor: number | null; currency: string | null; date: string | null; category: string | null; paymentType: string; businessPurpose: string | null;
-    flags: string[]; uncertainFields: string[]; matchedTransaction: { descriptor: string; amountMinor: number; currency: string; date: string; last4: string } | null;
+    flags: string[]; uncertainFields: string[]; matchedTransaction: { descriptor: string; amountMinor: number; currency: string; date: string; last4: string; sandbox: boolean } | null;
     policyVersion: number | null; createdAt: Date;
   };
   decision: { outcome: string; reasons: { code: string; text: string; clauseId: string; clauseText: string; detail: string }[]; decidedAt: Date } | null;
@@ -84,7 +89,7 @@ export async function loadCase(deps: Pick<EngineDeps, 'pool'>, actor: SessionMem
   const e = (
     await q.query(
       `SELECT e.*, m.display_name, m.email, pv.version AS policy_version, pv.rules,
-              t.merchant_descriptor, t.amount_minor AS t_amount, t.currency AS t_currency, t.transacted_at, cd.last4 AS t_last4
+              t.merchant_descriptor, t.amount_minor AS t_amount, t.currency AS t_currency, t.transacted_at, cd.last4 AS t_last4, t.provider AS t_provider
          FROM expenses e JOIN members m ON m.id = e.member_id LEFT JOIN policy_versions pv ON pv.id = e.policy_version_id
          LEFT JOIN transactions t ON t.id = e.matched_transaction_id LEFT JOIN cards cd ON cd.id = t.card_id
         WHERE e.id = $1 AND e.organisation_id = $2`,
@@ -149,7 +154,7 @@ export async function loadCase(deps: Pick<EngineDeps, 'pool'>, actor: SessionMem
       id: e.id, ref: e.ref, state: e.state, version: e.version, employee: e.display_name, employeeEmail: e.email, memberId: e.member_id, merchant: e.merchant,
       amountMinor: e.amount_minor, currency: e.currency, date: e.expense_date, category: e.category, paymentType: e.payment_type,
       businessPurpose: e.business_purpose, flags: e.flags, uncertainFields: e.uncertain_fields, policyVersion: e.policy_version, createdAt: e.created_at,
-      matchedTransaction: e.merchant_descriptor ? { descriptor: e.merchant_descriptor, amountMinor: e.t_amount, currency: e.t_currency, date: (e.transacted_at as Date).toISOString().slice(0, 10), last4: e.t_last4 } : null,
+      matchedTransaction: e.merchant_descriptor ? { descriptor: e.merchant_descriptor, amountMinor: e.t_amount, currency: e.t_currency, date: (e.transacted_at as Date).toISOString().slice(0, 10), last4: e.t_last4, sandbox: e.t_provider === 'truelayer-sandbox' } : null,
     },
     decision: d ? {
       outcome: d.outcome,

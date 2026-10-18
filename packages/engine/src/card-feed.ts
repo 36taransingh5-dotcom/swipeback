@@ -6,8 +6,7 @@ import { lockKey, moveExpense, type EngineDeps } from './deps.ts';
 import { loadPolicy } from './expense.ts';
 
 /**
- * Company-card transaction intake. Every card source — the hackathon's signed simulator today, an
- * issuer or open-banking webhook later — is an adapter that verifies its own request and produces
+ * Company-card transaction intake. Every card source is an adapter that verifies its own request and produces
  * a provider-neutral CardTransactionV1. Everything after that (idempotent storage, receipt
  * matching, the card-led expense, the receipt chase) is shared and provider-agnostic.
  */
@@ -34,12 +33,12 @@ export interface CardFeedAdapter {
   verify(rawBody: string, headers: Readonly<Record<string, string | undefined>>, now: Date): { ok: true; transaction: CardTransactionV1 } | { ok: false; reason: CardFeedRejection };
 }
 
-// ---- the hackathon card simulator (HMAC-signed webhook) -------------------------------------
+// ---- signed card event door ---------------------------------------------------------------
 
 export const CARD_SIGNATURE_HEADER = 'x-card-feed-signature';
 
 export const cardEventSchema = z.object({
-  provider: z.literal('card-sim'),
+  provider: z.enum(['card-sim', 'truelayer-sandbox']),
   transactionId: z.string().min(1).max(100),
   cardLast4: z.string().regex(/^\d{4}$/),
   amountMinor: z.number().int().positive(),
@@ -89,10 +88,13 @@ export type CardEventOutcome =
   | { status: 'ACCEPTED'; transactionId: string; duplicate: boolean; memberId: string | null }
   | { status: 'REJECTED'; reason: CardFeedRejection | 'UNKNOWN_CARD' };
 
-/** Simulator webhook entry point (PRD §7.4 POST /api/card-events). */
+/** Signed webhook entry point (PRD §7.4 POST /api/card-events). */
 export async function receiveCardEvent(deps: EngineDeps, organisationId: string, rawBody: string, signature: string | undefined): Promise<CardEventOutcome> {
   const v = new CardSimulatorFeed(deps.config.cardFeedSecret).verify(rawBody, { [CARD_SIGNATURE_HEADER]: signature }, deps.clock.now());
   if (!v.ok) return { status: 'REJECTED', reason: v.reason };
+  if (v.transaction.provider === 'truelayer-sandbox' && deps.config.appUrl !== 'http://localhost:3000') {
+    return { status: 'REJECTED', reason: 'MALFORMED' }; // sandbox events cannot enter a hosted app
+  }
   return ingestCardTransaction(deps, organisationId, v.transaction);
 }
 

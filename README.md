@@ -10,7 +10,7 @@ It works with any card feed or bank (card-agnostic), with no app to install and 
 
 | Real | Simulated or synthetic |
 |---|---|
-| Gmail mailbox (OAuth, read + send scopes only), threaded replies | Card feed: a signed simulator (`sb card-sim`) behind the same adapter interface a real issuer webhook would use |
+| Gmail mailbox (OAuth, read + send scopes only), threaded replies | Card feeds: signed `sb card-sim` and a TrueLayer Data API sandbox adapter. The latter reads mock-bank cards, not production bank data |
 | Receipt extraction with gpt-5.5 (structured output, evidence quotes, recorded for offline replay) | Payouts: MockPay, idempotent, with failure injection |
 | Deterministic, versioned policy engine; matching; duplicate detection | People, cards, receipts and the demo company "Northwind Field Services Ltd (SYNTHETIC DEMO)" |
 | Postgres invariants (triggers) that make card-spend reimbursement and double payout impossible | The receipt images are renders with simulated photo damage, not camera photos |
@@ -19,7 +19,7 @@ It works with any card feed or bank (card-agnostic), with no app to install and 
 ## How it works
 
 ```
-Gmail / fixture .eml / synthetic chat / card simulator      (adapters: transport only)
+Gmail / fixture .eml / synthetic chat / card simulator / TrueLayer sandbox
   -> InboundMessage v1 / CardTransaction v1                 (provider-neutral)
   -> Postgres job queue (SKIP LOCKED, retries, dead-letter)
   -> identity -> intent -> extraction -> evidence checks -> card matching -> duplicates
@@ -58,6 +58,17 @@ Copy `.env.example` to `.env.local` (gitignored) and fill it in:
 - A token-encryption key (`openssl rand -base64 32`).
 
 Then `corepack pnpm worker` and `corepack pnpm web`, sign in as the reviewer, and connect the mailbox at `/connect`. Details: [`docs/HANDOFF.md`](docs/HANDOFF.md) §5. Secrets are read explicitly; ambient `OPENAI_*` and `ANTHROPIC_*` shell variables are ignored on purpose.
+
+## TrueLayer sandbox card feed
+
+The adapter runs **only locally** with `SB_APP_URL=http://localhost:3000`; it uses only `auth.truelayer-sandbox.com` and `api.truelayer-sandbox.com`. It is disabled on Vercel and in production. Add the sandbox client secret as `TRUELAYER_CLIENT_SECRET` in `.env.local`, keep `SB_TOKEN_ENCRYPTION_KEY` set, and allowlist the exact redirect `http://localhost:3000/callback` for client `sandbox-swipeback-a13286` in TrueLayer Console. No production TrueLayer credentials are used.
+
+1. Start the local database (`corepack pnpm db:start`) in one terminal. In another, run `corepack pnpm db:migrate` and `corepack pnpm seed` if the demo organisation is not already there.
+2. Start `corepack pnpm worker` and `corepack pnpm web`. Sign in as the seeded admin/reviewer and open `http://localhost:3000/connect`.
+3. Click **Connect sandbox card feed**, choose TrueLayer's Mock Bank, and finish consent. TrueLayer returns to `/callback`; Swipeback exchanges the code, encrypts the tokens, and checks settled card transactions immediately. It then checks again every eight hours while the worker runs, or on **Sync now**. The slower background interval respects common [unattended Data API limits](https://docs.truelayer.com/docs/data-api-errors).
+4. If the mock card's last four digits do not match a card already assigned to an employee, use **Assign sandbox card** on `/connect`, then **Sync now**. Unknown cards are never silently assigned. Purchases arrive through the same signed card-event intake as `card-sim`; refunds and credits are skipped. The reviewer UI labels these transactions **Sandbox**.
+
+The `cards transactions offline_access` scopes are requested, with PKCE and a one-use state. The initial sync checks 89 days of settled card transactions; duplicate polls are safe. The TrueLayer card endpoint covers credit/charge cards, while debit-card current accounts are under a separate accounts endpoint and are outside this sandbox adapter. See [TrueLayer's card data guide](https://docs.truelayer.com/docs/account-and-card-data) and [sandbox auth guide](https://docs.truelayer.com/docs/quickstart-retrieve-bank-data).
 
 ## Evaluation
 

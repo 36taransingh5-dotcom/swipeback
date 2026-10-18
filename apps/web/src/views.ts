@@ -70,7 +70,13 @@ function mailboxBanner(m: MailboxStatus): H | '' {
   return '';
 }
 
-export function connectPage(actor: SessionMember, m: MailboxStatus, o: { configured: boolean; notice: string | null; error: string | null }): H {
+export function connectPage(actor: SessionMember, m: MailboxStatus, o: {
+  configured: boolean; notice: string | null; error: string | null;
+  cardFeed?: { configured: boolean; connection: {
+    id: string; status: string; last_sync_at: Date | null; last_error: string | null;
+    cards: { last4: string; enrolledTo: string | null }[];
+  } | null; members: { id: string; name: string }[] };
+}): H {
   const gmail = m.connections.find((c) => c.provider === 'gmail');
   const admin = actor.roles.includes('admin');
   return layout('Finance mailbox', html`<section class="card" data-testid="connect" data-status="${gmail?.status ?? 'NONE'}">
@@ -88,13 +94,30 @@ export function connectPage(actor: SessionMember, m: MailboxStatus, o: { configu
   ${!o.configured ? html`<p class="alert info">Google OAuth is not configured on this server (GOOGLE_OAUTH_CLIENT_ID / SECRET / REDIRECT_URI, SB_TOKEN_ENCRYPTION_KEY).</p>` : admin ? html`
     <form method="post" action="/connect/gmail"><button class="primary" type="submit">${gmail?.status === 'ACTIVE' ? 'Reconnect' : 'Connect'} ${m.designatedAddress ?? 'mailbox'} with Google</button></form>
     ${gmail && gmail.status !== 'DISCONNECTED' ? html`<form method="post" action="/connect/gmail/disconnect" style="margin-top:10px"><button class="link" type="submit">Disconnect and revoke access</button></form>` : ''}` : html`<p class="muted">Only an admin can connect or disconnect the mailbox.</p>`}
-  </section>`, actor);
+  </section>
+  ${o.cardFeed ? html`<section class="card" data-testid="sandbox-card-feed">
+    <h2>Card feed · TrueLayer sandbox <span class="pill info">Sandbox</span></h2>
+    <p>Connect a mock bank card to bring settled card purchases into the same receipt and policy flow.</p>
+    ${o.cardFeed.connection ? html`<p>Status: <span class="pill ${o.cardFeed.connection.status === 'ACTIVE' ? 'ok' : 'warn'}">${words(o.cardFeed.connection.status)}</span> · last checked ${o.cardFeed.connection.last_sync_at ? when(o.cardFeed.connection.last_sync_at) : 'never'}${o.cardFeed.connection.last_error ? html` · ${o.cardFeed.connection.last_error}` : ''}</p>` : html`<p class="muted">Not connected.</p>`}
+    ${!o.cardFeed.configured ? html`<p class="muted small">Set TRUELAYER_CLIENT_SECRET and SB_TOKEN_ENCRYPTION_KEY locally to enable this sandbox feed.</p>`
+      : admin ? html`<form method="post" action="/connect/truelayer"><button class="primary" type="submit">${o.cardFeed.connection?.status === 'ACTIVE' ? 'Reconnect' : 'Connect'} sandbox card feed</button></form>
+        ${o.cardFeed.connection?.status === 'ACTIVE' ? html`<form method="post" action="/connect/truelayer/sync" style="margin-top:10px"><button type="submit">Sync now</button></form>` : ''}`
+        : html`<p class="muted">Only an admin can connect or sync the card feed.</p>`}
+    ${o.cardFeed.connection?.cards.length ? html`<h3>Mock-bank cards</h3>
+      <ul>${o.cardFeed.connection.cards.map((card) => html`<li>Card ••${card.last4} · ${card.enrolledTo ? `assigned to ${card.enrolledTo}` : 'not assigned to an employee'}</li>`)}</ul>
+      ${admin && o.cardFeed.connection.status === 'ACTIVE' && o.cardFeed.connection.cards.some((card) => !card.enrolledTo) ? html`
+        <form method="post" action="/connect/truelayer/card" class="stack">
+          <label>Mock-bank card<select name="last4" required>${o.cardFeed.connection.cards.filter((card) => !card.enrolledTo).map((card) => html`<option value="${card.last4}">Card ••${card.last4}</option>`)}</select></label>
+          <label>Employee<select name="memberId" required>${o.cardFeed.members.map((member) => html`<option value="${member.id}">${member.name}</option>`)}</select></label>
+          <button type="submit">Assign sandbox card</button>
+        </form>` : ''}` : ''}
+  </section>` : ''}`, actor);
 }
 
 export function queuePage(actor: SessionMember, q: { items: QueueItem[]; handledAutomatically: number; waitingOnEmployees: number }, mailbox?: MailboxStatus): H {
   const rows = q.items.map(
     (i) => html`<a class="row" href="/review/${i.expenseId}" data-testid="queue-item" data-ref="${i.ref}">
-      <div><strong>${i.ref}</strong> <span class="muted">${i.employee}</span>${i.ownExpense ? html` <span class="pill info">your own — another reviewer decides</span>` : ''}</div>
+      <div><strong>${i.ref}</strong> <span class="muted">${i.employee}</span>${i.sandbox ? html` <span class="pill info">Sandbox</span>` : ''}${i.ownExpense ? html` <span class="pill info">your own — another reviewer decides</span>` : ''}</div>
       <div>${i.merchant ?? 'Unreadable receipt'} · ${money(i.amountMinor, i.currency)}${i.date ? html` · <span class="muted">${i.date}</span>` : ''}</div>
       <div class="muted small">${i.kind === 'PAYMENT_AUTHORISATION' ? 'Payment needs authorisation: ' : 'Needs a decision: '}${i.reasons.join('; ') || '—'}</div>
     </a>`,
@@ -146,7 +169,7 @@ export function casePage(v: CaseView, o: CasePageOptions): H {
               ? html`<p class="alert bad">This attachment failed safety screening and is not displayed.</p>`
               : html`<p><a href="/evidence/${v.evidence.fileId}" target="_blank" rel="noopener">Open receipt (${v.evidence.mime})</a></p>`
         : html`<p class="muted">No receipt.</p>`}
-      ${e.matchedTransaction ? html`<p class="muted small">Matched card transaction: ${e.matchedTransaction.descriptor} · ${money(e.matchedTransaction.amountMinor, e.matchedTransaction.currency)} · ${e.matchedTransaction.date} · card ••${e.matchedTransaction.last4}</p>` : ''}
+      ${e.matchedTransaction ? html`<p class="muted small">Matched card transaction: ${e.matchedTransaction.descriptor} · ${money(e.matchedTransaction.amountMinor, e.matchedTransaction.currency)} · ${e.matchedTransaction.date} · card ••${e.matchedTransaction.last4} ${e.matchedTransaction.sandbox ? html`<span class="pill info">Sandbox</span>` : ''}</p>` : ''}
     </div>
     <div class="card">
       <h2>What Swipeback read ${v.extraction ? html`<span class="muted small">${v.extraction.model ?? v.extraction.extractor}</span>` : ''}</h2>

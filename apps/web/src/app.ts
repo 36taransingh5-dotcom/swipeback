@@ -6,6 +6,8 @@ import { enqueue, JobRunner } from '@swipeback/db';
 import { LANDING_CSS, LANDING_JS } from './landing.ts';
 import {
   activeGmailConnections,
+  dueTrueLayerSandboxConnections,
+  enrolTrueLayerSandboxCard,
   CARD_SIGNATURE_HEADER,
   consumeLoginToken,
   endSession,
@@ -28,11 +30,18 @@ import {
   disconnectGmail,
   engineHandlers,
   finishGmailConnect,
+  finishTrueLayerSandboxConnect,
   mailboxStatus,
   startGmailConnect,
+  startTrueLayerSandboxConnect,
+  pollTrueLayerSandboxConnection,
+  trueLayerSandboxStatus,
+  trueLayerSandboxMembers,
   type EngineDeps,
   type GmailRuntime,
   type GmailTokens,
+  type TrueLayerSandboxRuntime,
+  type TrueLayerSandboxTokens,
   type ReviewAction,
   type SessionMember,
 } from '@swipeback/engine';
@@ -52,6 +61,8 @@ export interface WebOptions {
   reportsDir?: string;
   /** Google OAuth + token cipher; when absent the connect page explains what to configure. */
   gmail?: (GmailRuntime & { tokens: GmailTokens }) | null;
+  /** Local TrueLayer Data API sandbox only; never enabled by the hosted runtime. */
+  truelayer?: (TrueLayerSandboxRuntime & { tokens: TrueLayerSandboxTokens }) | null;
 }
 
 const isReviewer = (a: SessionMember) => a.roles.some((r) => r === 'reviewer' || r === 'admin');
@@ -99,7 +110,13 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
       for (const id of ids) results.push(await pollGmailConnection(deps, opts.gmail.tokens, id));
       gmail = { connections: ids.length, results };
     }
-    return c.json({ ok: true, processed, gmail });
+    // The hosted app never has this adapter; local development can also use this tick door.
+    let truelayer: unknown = null;
+    if (opts.truelayer) {
+      const ids = await dueTrueLayerSandboxConnections(deps.pool).catch(() => [] as string[]);
+      truelayer = await Promise.all(ids.map((id) => pollTrueLayerSandboxConnection(deps, opts.truelayer!, opts.truelayer!.tokens, id)));
+    }
+    return c.json({ ok: true, processed, gmail, truelayer });
   });
   app.get('/static/app.css', (c) => c.body(String(STATIC_CSS), 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/static/app.js', (c) => c.body(String(STATIC_JS), 200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
@@ -139,8 +156,16 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
     if (actor instanceof Response) return actor;
     // The Connect form posts here and is redirected to Google's consent screen; CSP form-action
     // applies to that redirect, so this page alone may target accounts.google.com.
-    c.header('Content-Security-Policy', `${BASE_CSP.replace("form-action 'self'", "form-action 'self' https://accounts.google.com")}`);
-    return c.html(connectPage(actor, await mailboxStatus(deps, actor.organisationId), { configured: !!opts.gmail, notice: c.req.query('connected') ? 'Mailbox connected. New receipts sent to it are processed automatically.' : null, error: c.req.query('error') ?? null }));
+    c.header('Content-Security-Policy', `${BASE_CSP.replace("form-action 'self'", "form-action 'self' https://accounts.google.com https://auth.truelayer-sandbox.com")}`);
+    return c.html(connectPage(actor, await mailboxStatus(deps, actor.organisationId), {
+      configured: !!opts.gmail,
+      notice: c.req.query('connected') ? 'Mailbox connected. New receipts sent to it are processed automatically.'
+        : c.req.query('card-connected') ? 'Sandbox card feed connected.'
+          : c.req.query('card-synced') ? 'Sandbox card transactions checked.' : null,
+      error: c.req.query('error') ?? null,
+      cardFeed: { configured: !!opts.truelayer, connection: await trueLayerSandboxStatus(deps.pool, actor.organisationId),
+        members: await trueLayerSandboxMembers(deps.pool, actor.organisationId) },
+    }));
   });
   app.post('/connect/gmail', async (c) => {
     const actor = requireActor(c);
@@ -165,6 +190,54 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
     if (denied) return c.redirect(`/connect?error=${encodeURIComponent(`Google consent was not given (${denied}). Nothing was connected.`)}`, 303);
     const r = await finishGmailConnect(deps, opts.gmail, actor, { code: c.req.query('code') ?? '', state: c.req.query('state') ?? '' });
     return c.redirect(r.ok ? '/connect?connected=1' : `/connect?error=${encodeURIComponent(r.reason)}`, 303);
+  });
+
+  // ---- local TrueLayer sandbox card feed --------------------------------------------------
+  app.post('/connect/truelayer', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    if (!opts.truelayer) return c.redirect('/connect', 303);
+    return withErrors(c, actor, async () => c.redirect(await startTrueLayerSandboxConnect(deps, opts.truelayer!, actor), 303));
+  });
+  app.get('/callback', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    if (!opts.truelayer) return c.redirect('/connect', 303);
+    if (c.req.query('error')) return c.redirect('/connect?error=Sandbox%20consent%20was%20not%20given', 303);
+    const r = await finishTrueLayerSandboxConnect(deps, opts.truelayer, actor,
+      { code: c.req.query('code') ?? '', state: c.req.query('state') ?? '' });
+    if (!r.ok) return c.redirect(`/connect?error=${encodeURIComponent(r.reason)}`, 303);
+    try {
+      const sync = await pollTrueLayerSandboxConnection(deps, opts.truelayer, opts.truelayer.tokens, r.connectionId);
+      const notice = sync.unknownCards ? `Sandbox connected, but ${sync.unknownCards} transaction(s) have a card number not enrolled in Swipeback.` : null;
+      return c.redirect(notice ? `/connect?card-connected=1&error=${encodeURIComponent(notice)}` : '/connect?card-connected=1', 303);
+    } catch {
+      return c.redirect('/connect?card-connected=1&error=Sandbox%20connected%2C%20but%20the%20first%20card%20sync%20failed.%20Try%20Sync%20now.', 303);
+    }
+  });
+  app.post('/connect/truelayer/sync', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    if (!actor.roles.includes('admin')) return c.html(errorPage(403, 'Only an admin can sync the sandbox card feed', actor), 403);
+    if (!opts.truelayer) return c.redirect('/connect', 303);
+    const conn = await trueLayerSandboxStatus(deps.pool, actor.organisationId);
+    if (!conn || conn.status !== 'ACTIVE') return c.redirect('/connect?error=Sandbox%20card%20feed%20is%20not%20connected', 303);
+    try {
+      const sync = await pollTrueLayerSandboxConnection(deps, opts.truelayer, opts.truelayer.tokens, conn.id);
+      return c.redirect(`/connect?card-synced=1${sync.unknownCards ? `&error=${encodeURIComponent(`${sync.unknownCards} transaction(s) have a card number not enrolled in Swipeback.`)}` : ''}`, 303);
+    } catch {
+      return c.redirect('/connect?error=Sandbox%20card%20sync%20failed.%20Check%20the%20connection%20status.', 303);
+    }
+  });
+  app.post('/connect/truelayer/card', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    if (!opts.truelayer) return c.redirect('/connect', 303);
+    const body = await c.req.parseBody();
+    return withErrors(c, actor, async () => {
+      await enrolTrueLayerSandboxCard(deps, actor, { last4: String(body.last4 ?? ''), memberId: String(body.memberId ?? '') });
+      return c.redirect('/connect?card-synced=1', 303);
+    });
   });
 
   async function renderCase(c: Context<Env>, actor: SessionMember, expenseId: string, extra: Partial<CasePageOptions> = {}, status: 200 | 400 | 403 | 404 | 409 | 410 = 200) {
