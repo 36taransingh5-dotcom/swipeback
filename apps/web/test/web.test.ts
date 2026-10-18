@@ -37,6 +37,23 @@ const hotel = () =>
 const linkIn = (text: string, re: RegExp) => re.exec(text)?.[0] ?? null;
 
 describe('reviewer web app', () => {
+  it('serves the landing page stylesheet and script', async () => {
+    const page = await fetch(`${base}/`);
+    const html = await page.text();
+    expect(page.status).toBe(200);
+    expect(html).toContain('/static/landing.css?v=');
+    expect(html).toContain('/static/landing.js?v=');
+
+    const css = await fetch(`${base}/static/landing.css`);
+    expect(css.status).toBe(200);
+    expect(css.headers.get('content-type')).toContain('text/css');
+    expect(await css.text()).toContain('--blue: #123bcc');
+
+    const js = await fetch(`${base}/static/landing.js`);
+    expect(js.status).toBe(200);
+    expect(js.headers.get('content-type')).toContain('javascript');
+  });
+
   it('unauthenticated pages redirect to sign-in; APIs return 401; security headers are set', async () => {
     const page = await (await browser.newContext()).newPage();
     const res = await page.goto(`${base}/review`);
