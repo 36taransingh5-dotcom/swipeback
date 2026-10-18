@@ -1,93 +1,403 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Swipeback reads spend, checks it against policy and budget, clears fair expenses, and sends exceptions to finance.">
-  <title>swipeback — expenses that handle themselves</title>
-  <style>
-    :root { --ink:#15171a; --paper:#f5f4ef; --card:#fff; --line:#e4e1d8; --muted:#6b6a64; --accent:#1f6f54; --ok:#1f6f54; --info:#355c8a; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    .demo-banner { background:#2b2b28; color:#f3e9c6; font-size:12px; text-align:center; padding:5px 12px; letter-spacing:.2px; }
-    .pill { display:inline-block; font-size:11.5px; font-weight:600; padding:2px 8px; border-radius:999px; vertical-align:middle; text-transform:lowercase; }
-    .pill.ok { background:#e2f1ea; color:var(--ok); }
-    .pill.info { background:#e4ecf6; color:var(--info); }
-    .l-nav { display:flex; justify-content:space-between; align-items:center; padding:12px 28px; background:#fff; border-bottom:1px solid var(--ink); position:sticky; top:0; z-index:10; }
-    .l-logo { font-size:20px; text-decoration:none; color:var(--ink); letter-spacing:-.3px; }
-    .l-logo b { color:var(--accent); }
-    .l-cells { display:flex; border:1px solid var(--ink); }
-    .l-cell { display:flex; gap:8px; align-items:center; padding:10px 18px; font:12px/1 ui-monospace, Menlo, monospace; text-transform:lowercase; color:var(--ink); text-decoration:none; border-left:1px solid var(--ink); background:#fff; }
-    .l-cell:first-child { border-left:0; }
-    .l-cell:hover { background:#f0eee8; }
-    .l-cta-cell, .l-cta-cell:hover { background:#e02424; color:#fff; }
-    .l-hero { padding:92px 28px 108px; text-align:center; color:#fff; background:radial-gradient(900px 500px at 75% 12%, rgba(127,216,208,.55), transparent 60%), linear-gradient(158deg, #0b2f8a 0%, #1256b8 38%, #0e9aa8 72%, #63c9bf 100%); }
-    .l-badge { display:inline-block; font:12px/1 ui-monospace, Menlo, monospace; background:rgba(255,255,255,.94); color:var(--ink); border-radius:999px; padding:9px 16px; margin:0 0 30px; }
-    .l-hero h1 { font-family:Georgia, "Times New Roman", serif; font-style:italic; font-weight:700; font-size:clamp(44px, 8.5vw, 104px); line-height:.98; letter-spacing:-.01em; margin:0 0 26px; background:linear-gradient(180deg, #ffffff 0%, #dbe4e8 34%, #9db2bb 52%, #f2f7f8 64%, #7d97a1 100%); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 3px 5px rgba(6,30,60,.45)); }
-    .l-sub { max-width:620px; margin:0 auto 34px; font:14px/1.7 ui-monospace, Menlo, monospace; color:#eaf4f4; }
-    .l-actions { margin:0; }
-    .l-btn { display:inline-flex; gap:10px; align-items:center; background:#15171a; color:#fff; text-decoration:none; border-radius:999px; padding:14px 26px; font-weight:600; }
-    .l-btn:hover { background:#000; }
-    .l-main { max-width:1080px; margin:0 auto; padding:8px 28px 20px; }
-    .l-section { padding:44px 0 8px; scroll-margin-top:72px; }
-    .l-h2 { font:13px/1 ui-monospace, Menlo, monospace; text-transform:uppercase; letter-spacing:.14em; color:var(--muted); margin:0 0 18px; }
-    .l-cards { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
-    .l-cards4 { grid-template-columns:repeat(4, 1fr); }
-    .l-card { background:var(--card); border:1px solid var(--ink); border-radius:4px; padding:18px 20px; }
-    .l-card h3 { margin:0 0 8px; font-size:16px; }
-    .l-card p { margin:0; font-size:13.5px; color:var(--muted); }
-    .l-card .l-num { font:12px/1 ui-monospace, Menlo, monospace; color:var(--accent); margin:0 0 10px; }
-    .l-foot { text-align:center; color:var(--muted); font-size:12px; padding:34px 20px; border-top:1px solid var(--line); margin-top:44px; }
-    @media (max-width:900px) { .l-cards, .l-cards4 { grid-template-columns:1fr; } .l-cells { display:none; } }
-  </style>
-</head>
-<body>
-  <div class="demo-banner">SYNTHETIC DEMO — all people, receipts and cards are fictitious; payouts are simulated, no money moves.</div>
-  <nav class="l-nav" aria-label="Primary navigation">
-    <a class="l-logo" href="#top">swipe<b>back</b></a>
-    <div class="l-cells">
-      <a class="l-cell" href="#how">how it works</a>
-      <a class="l-cell" href="#surfaces">surfaces</a>
-      <a class="l-cell" href="#trust">trust</a>
-      <a class="l-cell" href="https://github.com/36taransingh5-dotcom/swipeback">github <span aria-hidden="true">↗</span></a>
-      <a class="l-cell l-cta-cell" href="https://github.com/36taransingh5-dotcom/swipeback">get started <span aria-hidden="true">↗</span></a>
-    </div>
-  </nav>
-  <header class="l-hero" id="top">
-    <p class="l-badge">built at <b>sotonship 2026</b> · synthetic demo</p>
-    <h1>expenses that<br>handle themselves</h1>
-    <p class="l-sub">pay on the company card, or send a receipt photo in slack. swipeback reads every spend, checks it against policy and budget, clears the fair ones and flags the dodgy ones to a human.</p>
-    <p class="l-actions"><a class="l-btn" href="https://github.com/36taransingh5-dotcom/swipeback">Get Started <span aria-hidden="true">→</span></a></p>
-  </header>
-  <main class="l-main">
-    <section id="how" class="l-section">
-      <h2 class="l-h2">how it works</h2>
-      <div class="l-cards">
-        <div class="l-card"><p class="l-num">01</p><h3>pay or snap</h3><p>swipe the company card, or photograph the receipt and send it in slack. no app to install, no forms to fill.</p></div>
-        <div class="l-card"><p class="l-num">02</p><h3>ai checks it</h3><p>merchant, amount, date and category come off the receipt, get matched to the card spend, and are checked against the company's policy and budget.</p></div>
-        <div class="l-card"><p class="l-num">03</p><h3>cleared or flagged</h3><p>fair spend clears itself and the reimbursement is queued. anything dodgy lands with a finance reviewer, reasons on screen. finance only deals with exceptions.</p></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#063bbb" />
+    <meta
+      name="description"
+      content="Receipts in. Busywork out. Swipeback handles expense checks over email, so finance only deals with exceptions."
+    />
+    <meta
+      property="og:title"
+      content="Swipeback — get back to everything else."
+    />
+    <meta
+      property="og:description"
+      content="The expense agent that lives in your inbox. Receipts, policy checks, and follow-ups. Handled."
+    />
+    <meta property="og:type" content="website" />
+    <title>Swipeback — get back to everything else.</title>
+    <link rel="stylesheet" href="./landing.css" />
+    <script src="./landing.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <a class="wordmark" href="#top" aria-label="Swipeback home"
+        ><span class="brand-icon" aria-hidden="true">↩</span> swipeback</a
+      >
+      <nav aria-label="Primary navigation">
+        <a href="#offering">The good part <span aria-hidden="true">↗</span></a>
+        <a href="#finance">For finance <span aria-hidden="true">↗</span></a>
+        <a class="nav-cta" href="#demo"
+          >Take a look <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-meta">
+          <span>LESS ADMIN. MORE LIVING.</span
+          ><span>YOUR EXPENSES, OFF YOUR PLATE.</span>
+        </div>
+        <p class="eyebrow hero-eyebrow">
+          <span class="status-dot" aria-hidden="true"></span> MEET YOUR EXPENSE
+          AGENT
+        </p>
+        <h1 id="hero-title">Get back to<br /><em>everything else.</em></h1>
+        <p class="hero-description">
+          You do the work. We do the expenses.<br />Receipts, policy checks, and
+          follow-ups. Handled.
+        </p>
+        <a class="button button-dark" href="#demo"
+          >See it in action <span aria-hidden="true">↗</span></a
+        >
+        <div
+          class="hero-stage"
+          aria-label="Illustrative example: a receipt becomes a cleared expense in your email"
+        >
+          <div class="stage-orbit" aria-hidden="true"></div>
+          <article class="receipt-object">
+            <div class="receipt-top">
+              THE DAILY GRIND<br /><small>COFFEE & GOOD COMPANY</small>
+            </div>
+            <div class="receipt-rule"></div>
+            <p class="receipt-date">LONDON · 09:41 AM</p>
+            <dl>
+              <div>
+                <dt>2 × Flat white</dt>
+                <dd>£8.00</dd>
+              </div>
+              <div>
+                <dt>1 × Croissant</dt>
+                <dd>£3.50</dd>
+              </div>
+              <div class="receipt-total">
+                <dt>TOTAL</dt>
+                <dd>£11.50</dd>
+              </div>
+            </dl>
+            <p class="receipt-paid">PAID · COMPANY CARD ••4242</p>
+            <div class="barcode" aria-hidden="true"></div>
+            <p class="receipt-bottom">Thanks. Now go do your thing.</p>
+          </article>
+          <div class="mail-object">
+            <div class="window-bar">
+              <div class="window-dots" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </div>
+              <span>ONE LESS THING.</span><span aria-hidden="true">↗</span>
+            </div>
+            <div class="mail-content">
+              <div class="mail-sender">
+                <span class="mail-avatar" aria-hidden="true">↩</span>
+                <div>
+                  <strong>Swipeback</strong><span>to you · just now</span>
+                </div>
+                <span class="mail-label">INBOX</span>
+              </div>
+              <h2>You're all clear.</h2>
+              <p>
+                Your £11.50 at The Daily Grind is matched to your company card
+                and within policy.
+              </p>
+              <div class="cleared">
+                <span aria-hidden="true">✓</span>
+                <div>
+                  <strong>Expense cleared</strong
+                  ><span>Nothing else needed from you.</span>
+                </div>
+              </div>
+              <div class="mail-reply">↩ &nbsp; Reply in the same thread</div>
+            </div>
+          </div>
+          <div class="done-sticker" aria-hidden="true">
+            less<br /><em>expense</em><br />energy.<span>✳</span>
+          </div>
+          <p class="stage-caption">
+            A LITTLE LESS “CAN YOU SEND THAT RECEIPT?”
+          </p>
+        </div>
+        <div class="hero-bottom">
+          <span>EMAIL IN. EXPENSE SORTED.</span
+          ><a href="#offering">Keep going <span aria-hidden="true">↓</span></a
+          ><span>ILLUSTRATIVE PRODUCT PREVIEW</span>
+        </div>
+      </section>
+      <section
+        class="manifesto section-padding"
+        id="offering"
+        aria-labelledby="offering-title"
+      >
+        <div class="section-kicker">
+          <span>01 / THE GOOD PART</span><span>BUILT AROUND YOUR DAY</span>
+        </div>
+        <h2 id="offering-title">Big plans.<br /><em>Small admin.</em></h2>
+        <div class="manifesto-copy">
+          <p>
+            We're Swipeback. We take the expense admin off your hands, right
+            from your inbox.
+          </p>
+          <p>
+            Send the receipt. Get on with your day.<br />We handle
+            <span class="highlight blue">the matching,</span><br /><span
+              class="highlight red"
+              >the policy checks,</span
+            >
+            and<br /><span class="highlight yellow">the chasing up.</span>
+          </p>
+          <p class="small-copy">
+            Your team keeps moving.<br />Finance gets only what needs a
+            decision.
+          </p>
+        </div>
+        <div class="benefit-line">
+          <span>↩ &nbsp; Stay in your inbox</span
+          ><span>↗ &nbsp; Keep your company cards</span
+          ><span>✓ &nbsp; Skip the expense forms</span>
+        </div>
+      </section>
+      <section
+        class="demo-section section-padding"
+        id="demo"
+        aria-labelledby="demo-title"
+      >
+        <div class="section-kicker">
+          <span>02 / FROM RECEIPT TO RELIEF</span
+          ><span>TAKE IT FOR A SPIN</span>
+        </div>
+        <div class="demo-heading">
+          <h2 id="demo-title">Meet your new<br /><em>“already done.”</em></h2>
+          <p>
+            A coffee. A client lunch. A night away.<br />See where Swipeback
+            takes it from here.
+          </p>
+        </div>
+        <div
+          class="demo-controls"
+          role="group"
+          aria-label="Choose an example expense"
+        >
+          <button type="button" data-scenario="coffee" aria-pressed="true">
+            01 &nbsp; Team coffee <span aria-hidden="true">↗</span>
+          </button>
+          <button type="button" data-scenario="lunch" aria-pressed="false">
+            02 &nbsp; Client lunch <span aria-hidden="true">↗</span>
+          </button>
+          <button type="button" data-scenario="hotel" aria-pressed="false">
+            03 &nbsp; Overnight stay <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div
+          class="demo-workspace"
+          id="demo-result"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          <div class="demo-input">
+            <div class="panel-label">
+              YOU SEND <span aria-hidden="true">↗</span>
+            </div>
+            <div class="mini-email">
+              <span class="mini-avatar" aria-hidden="true">Y</span>
+              <div><strong>You</strong><span>To: your finance inbox</span></div>
+            </div>
+            <h3 id="example-subject">Coffee with the team</h3>
+            <p id="example-message">
+              Here's the receipt for our team coffee this morning. Paid on the
+              company card.
+            </p>
+            <div class="attachment">
+              <span class="attachment-icon" aria-hidden="true">▤</span>
+              <div>
+                <strong id="example-merchant">The Daily Grind</strong
+                ><span id="example-detail"
+                  >Receipt attached · company card</span
+                >
+              </div>
+              <strong id="example-amount">£11.50</strong>
+            </div>
+            <div class="sent-label">✓ &nbsp; Sent. That's your part done.</div>
+          </div>
+          <div class="demo-output" data-tone="clear">
+            <div class="panel-label">
+              SWIPEBACK TAKES IT FROM HERE <span aria-hidden="true">↩</span>
+            </div>
+            <span class="result-symbol" id="result-symbol" aria-hidden="true"
+              >✓</span
+            >
+            <p class="result-label" id="result-label">ALL CLEAR</p>
+            <h3 id="result-title">Coffee's on the company.</h3>
+            <p id="result-description">
+              Receipt matched. Within the meal allowance. Cleared without a trip
+              to finance.
+            </p>
+            <ul id="result-checks">
+              <li>Receipt read and matched</li>
+              <li>Company policy checked</li>
+              <li>Confirmation sent in the same thread</li>
+            </ul>
+          </div>
+        </div>
+        <p class="demo-note">
+          Interactive illustration with sample expenses and policy limits. No
+          email is sent and no money moves.
+        </p>
+        <noscript
+          ><p class="demo-note">
+            Enable JavaScript to explore the lunch and overnight-stay examples.
+          </p></noscript
+        >
+      </section>
+      <section
+        class="finance-section section-padding"
+        id="finance"
+        aria-labelledby="finance-title"
+      >
+        <div class="section-kicker">
+          <span>03 / FOR THE FINANCE TEAM</span
+          ><span>LESS NOISE. MORE CONTROL.</span>
+        </div>
+        <div class="finance-heading">
+          <h2 id="finance-title">
+            The exceptions.<br /><em>Not the entire pile.</em>
+          </h2>
+          <p>
+            Routine expenses take care of themselves. When something needs your
+            judgement, you get the full story.
+          </p>
+        </div>
+        <div class="finance-layout">
+          <div class="review-object">
+            <div class="panel-label">NEEDS YOUR ATTENTION <span>01</span></div>
+            <div class="review-tag">OUTSIDE POLICY</div>
+            <h3>A stay that needs<br />a second look.</h3>
+            <div class="review-amount">£210<span> / night</span></div>
+            <dl>
+              <div>
+                <dt>Accommodation limit</dt>
+                <dd>£180 / night</dd>
+              </div>
+              <div>
+                <dt>Over the limit</dt>
+                <dd>£30</dd>
+              </div>
+              <div>
+                <dt>Receipt & conversation</dt>
+                <dd>All in one place ↗</dd>
+              </div>
+            </dl>
+            <p class="review-note">
+              Illustrative exception · You make the call.
+            </p>
+          </div>
+          <div class="finance-points">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Your policy. Your call.</h3>
+                <p>
+                  Spend is checked against your company's rules. Anything
+                  outside them comes to a person.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>The context comes with it.</h3>
+                <p>
+                  The receipt, the reason, and the conversation. Together, so
+                  you can make a decision.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Nothing lost in the thread.</h3>
+                <p>
+                  Follow the story of every expense, from the first receipt to
+                  the final decision.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="faq-section section-padding" aria-labelledby="faq-title">
+        <div class="faq-intro">
+          <p class="eyebrow">A FEW GOOD QUESTIONS</p>
+          <h2 id="faq-title">Glad<br /><em>you asked.</em></h2>
+        </div>
+        <div class="faqs">
+          <details>
+            <summary>
+              Do employees need another app?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              No. Employees send a receipt to the finance inbox, or reply when
+              asked for one. Questions and confirmations stay in the email
+              thread.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Do we have to switch company cards?<span aria-hidden="true"
+                >+</span
+              >
+            </summary>
+            <p>
+              Swipeback is designed to work alongside your existing cards.
+              Card-feed availability depends on your provider; the current
+              preview uses sample card transactions.
+            </p>
+          </details>
+          <details>
+            <summary>
+              What if a receipt is missing something?<span aria-hidden="true"
+                >+</span
+              >
+            </summary>
+            <p>
+              Swipeback asks a focused question in the same email thread. If it
+              still needs a judgement call, finance gets the context to decide.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Can I try it here?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Yes. <a href="#demo">Explore the three expense examples</a> above
+              to see a routine approval, a follow-up, and a finance review. This
+              is a product preview with sample data; payments are simulated.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="closing">
+        <p class="eyebrow">LESS BACK-AND-FORTH. MORE SWIPEBACK.</p>
+        <h2>Life's too short<br />for <em>expense reports.</em></h2>
+        <a class="button button-light" href="#demo"
+          >Meet your expense agent <span aria-hidden="true">↗</span></a
+        >
+        <p>Go do your thing. We'll do ours.</p>
+        <span class="closing-spark" aria-hidden="true">✳</span>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a class="wordmark" href="#top"
+          ><span class="brand-icon" aria-hidden="true">↩</span> swipeback</a
+        >
+        <p>Finance only deals with exceptions.</p>
+        <a href="#top">Back to top ↑</a
+        ><!--REVIEWER_LINK-->
       </div>
-    </section>
-    <section id="surfaces" class="l-section">
-      <h2 class="l-h2">where you use it</h2>
-      <div class="l-cards l-cards4">
-        <div class="l-card"><h3>slack <span class="pill ok">live</span></h3><p>dm a receipt photo to the bot, get the outcome in a thread under your message.</p></div>
-        <div class="l-card"><h3>email + card feed <span class="pill ok">live</span></h3><p>the card notification email starts the check; receipts and replies stay in one thread.</p></div>
-        <div class="l-card"><h3>reviewer dashboard <span class="pill ok">live</span></h3><p>the exception queue and case page for finance. it exists only for what ai won't clear.</p></div>
-        <div class="l-card"><h3>imessage <span class="pill info">coming soon</span></h3><p>text a receipt photo like you would to a friend. on the roadmap.</p></div>
-      </div>
-    </section>
-    <section id="trust" class="l-section">
-      <h2 class="l-h2">why finance trusts it</h2>
-      <div class="l-cards l-cards4">
-        <div class="l-card"><h3>audit trail</h3><p>every decision, email and payout is hash-chained. tamper-evident by construction.</p></div>
-        <div class="l-card"><h3>one-time approvals</h3><p>approval links work once, for one person, on one version of an expense. they never sign anyone in.</p></div>
-        <div class="l-card"><h3>humans decide the edge cases</h3><p>ai clears the routine. people decide the dodgy, with the evidence and the reasons in front of them.</p></div>
-        <div class="l-card"><h3>demo moves no money</h3><p>payouts are simulated end to end. the plumbing is real, the money is not.</p></div>
-      </div>
-    </section>
-  </main>
-  <footer class="l-foot">swipeback — finance only deals with exceptions. built at sotonship 2026.</footer>
-</body>
+      <!-- prettier-ignore -->
+      <div class="demo-banner">SYNTHETIC DEMO — all people, receipts and cards are fictitious; payouts are simulated, no money moves.</div>
+    </footer>
+  </body>
 </html>

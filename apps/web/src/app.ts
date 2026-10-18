@@ -1,5 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
+import { LANDING_CSS, LANDING_JS } from './landing.ts';
 import { Hono, type Context } from 'hono';
 import { deleteCookie, getCookie, setCookie } from 'hono/cookie';
 import { enqueue } from '@swipeback/db';
@@ -83,6 +84,8 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
   app.get('/healthz', (c) => c.json({ ok: true }));
   app.get('/static/app.css', (c) => c.body(String(STATIC_CSS), 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/static/app.js', (c) => c.body(String(STATIC_JS), 200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
+  app.get('/static/landing.css', (c) => c.body(LANDING_CSS, 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
+  app.get('/static/landing.js', (c) => c.body(LANDING_JS, 200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/', (c) => c.html(landingPage()));
 
   // ---- sign in ----------------------------------------------------------------------------

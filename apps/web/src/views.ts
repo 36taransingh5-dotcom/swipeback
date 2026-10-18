@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { LANDING_HTML } from './landing.ts';
 import { html, raw } from 'hono/html';
 import type { HtmlEscapedString } from 'hono/utils/html';
 import { CATEGORIES } from '@swipeback/domain';
@@ -218,57 +219,7 @@ function paymentForm(v: CaseView, ch: { challengeId: string; nonce: string }): H
 
 
 export function landingPage(): H {
-  return html`<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>swipeback — expenses that handle themselves</title><link rel="stylesheet" href="/static/app.css?v=${ASSET_VERSION}"></head>
-<body class="landing">
-<div class="demo-banner">SYNTHETIC DEMO — all people, receipts and cards are fictitious; payouts are simulated, no money moves.</div>
-<nav class="l-nav">
-  <a class="l-logo" href="/">swipe<b>back</b></a>
-  <div class="l-cells">
-    <a class="l-cell" href="#how">how it works</a>
-    <a class="l-cell" href="#surfaces">surfaces</a>
-    <a class="l-cell" href="#trust">trust</a>
-    <a class="l-cell" href="https://github.com/36taransingh5-dotcom/swipeback">github <span class="arr">↗</span></a>
-    <a class="l-cell l-cta-cell" href="/login">sign in <span class="arr">↗</span></a>
-  </div>
-</nav>
-<header class="l-hero">
-  <p class="l-badge">built at <b>sotonship 2026</b> · synthetic demo</p>
-  <h1>expenses that<br>handle themselves</h1>
-  <p class="l-sub">pay on the company card, or send a receipt photo in slack. swipeback reads every spend, checks it against policy and budget, clears the fair ones and flags the dodgy ones to a human.</p>
-  <p class="l-actions"><a class="l-btn" href="/login">sign in to the demo <span class="arr">→</span></a></p>
-</header>
-<main class="l-main">
-<section id="how" class="l-section">
-  <h2 class="l-h2">how it works</h2>
-  <div class="l-cards">
-    <div class="l-card"><p class="l-num">01</p><h3>pay or snap</h3><p>swipe the company card, or photograph the receipt and send it in slack. no app to install, no forms to fill.</p></div>
-    <div class="l-card"><p class="l-num">02</p><h3>ai checks it</h3><p>merchant, amount, date and category come off the receipt, get matched to the card spend, and are checked against the company's policy and budget.</p></div>
-    <div class="l-card"><p class="l-num">03</p><h3>cleared or flagged</h3><p>fair spend clears itself and the reimbursement is queued. anything dodgy lands with a finance reviewer, reasons on screen. finance only deals with exceptions.</p></div>
-  </div>
-</section>
-<section id="surfaces" class="l-section">
-  <h2 class="l-h2">where you use it</h2>
-  <div class="l-cards l-cards4">
-    <div class="l-card"><h3>slack <span class="pill ok">live</span></h3><p>dm a receipt photo to the bot, get the outcome in a thread under your message.</p></div>
-    <div class="l-card"><h3>email + card feed <span class="pill ok">live</span></h3><p>the card notification email starts the check; receipts and replies stay in one thread.</p></div>
-    <div class="l-card"><h3>reviewer dashboard <span class="pill ok">live</span></h3><p>the exception queue and case page for finance. it exists only for what ai won't clear.</p></div>
-    <div class="l-card"><h3>imessage <span class="pill info">coming soon</span></h3><p>text a receipt photo like you would to a friend. on the roadmap.</p></div>
-  </div>
-</section>
-<section id="trust" class="l-section">
-  <h2 class="l-h2">why finance trusts it</h2>
-  <div class="l-cards l-cards4">
-    <div class="l-card"><h3>audit trail</h3><p>every decision, email and payout is hash-chained. tamper-evident by construction.</p></div>
-    <div class="l-card"><h3>one-time approvals</h3><p>approval links work once, for one person, on one version of an expense. they never sign anyone in.</p></div>
-    <div class="l-card"><h3>humans decide the edge cases</h3><p>ai clears the routine. people decide the dodgy, with the evidence and the reasons in front of them.</p></div>
-    <div class="l-card"><h3>demo moves no money</h3><p>payouts are simulated end to end. the plumbing is real, the money is not.</p></div>
-  </div>
-</section>
-</main>
-<footer class="l-foot">swipeback — finance only deals with exceptions. built at sotonship 2026.</footer>
-</body></html>`;
+  return raw(LANDING_HTML);
 }
 
 export const STATIC_CSS = raw(`
@@ -305,33 +256,6 @@ button { font:inherit; cursor:pointer; } .primary { background:var(--accent); co
 .timeline, .audit { list-style:none; padding:0; margin:0; display:grid; gap:8px; } .timeline pre { white-space:pre-wrap; font:13px/1.45 inherit; margin:4px 0 0; background:#faf9f5; padding:8px; border-radius:6px; }
 .timeline li.out pre { background:#eef5f1; } code { font-size:12.5px; background:#f0eee8; padding:1px 5px; border-radius:4px; }
 
-/* ---- landing page ---- */
-body.landing { background:var(--paper); }
-.l-nav { display:flex; justify-content:space-between; align-items:center; padding:12px 28px; background:#fff; border-bottom:1px solid var(--ink); position:sticky; top:0; z-index:10; }
-.l-logo { font-size:20px; text-decoration:none; color:var(--ink); letter-spacing:-.3px; } .l-logo b { color:var(--accent); }
-.l-cells { display:flex; border:1px solid var(--ink); }
-.l-cell { display:flex; gap:8px; align-items:center; padding:10px 18px; font:12px/1 ui-monospace, Menlo, monospace; text-transform:lowercase; color:var(--ink); text-decoration:none; border-left:1px solid var(--ink); background:#fff; }
-.l-cell:first-child { border-left:0; }
-.l-cell:hover { background:#f0eee8; }
-.l-cta-cell, .l-cta-cell:hover { background:#e02424; color:#fff; }
-.l-hero { padding:92px 28px 108px; text-align:center; color:#fff; background:radial-gradient(900px 500px at 75% 12%, rgba(127,216,208,.55), transparent 60%), linear-gradient(158deg, #0b2f8a 0%, #1256b8 38%, #0e9aa8 72%, #63c9bf 100%); }
-.l-badge { display:inline-block; font:12px/1 ui-monospace, Menlo, monospace; background:rgba(255,255,255,.94); color:var(--ink); border-radius:999px; padding:9px 16px; margin:0 0 30px; }
-.l-hero h1 { font-family:Georgia, 'Times New Roman', serif; font-style:italic; font-weight:700; font-size:clamp(44px, 8.5vw, 104px); line-height:.98; letter-spacing:-.01em; margin:0 0 26px; background:linear-gradient(180deg, #ffffff 0%, #dbe4e8 34%, #9db2bb 52%, #f2f7f8 64%, #7d97a1 100%); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 3px 5px rgba(6,30,60,.45)); }
-.l-sub { max-width:620px; margin:0 auto 34px; font:14px/1.7 ui-monospace, Menlo, monospace; color:#eaf4f4; }
-.l-actions { margin:0; }
-.l-btn { display:inline-flex; gap:10px; align-items:center; background:#15171a; color:#fff; text-decoration:none; border-radius:999px; padding:14px 26px; font-weight:600; }
-.l-btn:hover { background:#000; }
-.l-main { max-width:1080px; margin:0 auto; padding:8px 28px 20px; }
-.l-section { padding:44px 0 8px; }
-.l-h2 { font:13px/1 ui-monospace, Menlo, monospace; text-transform:uppercase; letter-spacing:.14em; color:var(--muted); margin:0 0 18px; }
-.l-cards { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; }
-.l-cards4 { grid-template-columns:repeat(4, 1fr); }
-.l-card { background:var(--card); border:1px solid var(--ink); border-radius:4px; padding:18px 20px; }
-.l-card h3 { margin:0 0 8px; font-size:16px; }
-.l-card p { margin:0; font-size:13.5px; color:var(--muted); }
-.l-card .l-num { font:12px/1 ui-monospace, Menlo, monospace; color:var(--accent); margin:0 0 10px; }
-.l-foot { text-align:center; color:var(--muted); font-size:12px; padding:34px 20px; border-top:1px solid var(--line); margin-top:44px; }
-@media (max-width:900px) { .l-cards, .l-cards4 { grid-template-columns:1fr; } .l-cells { display:none; } }
 `);
 
 export const STATIC_JS = raw(`
