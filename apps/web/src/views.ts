@@ -3,7 +3,7 @@ import { ACCESS_VERSION, LANDING_HTML } from './landing.ts';
 import { html, raw } from 'hono/html';
 import type { HtmlEscapedString } from 'hono/utils/html';
 import { CATEGORIES } from '@swipeback/domain';
-import type { CaseView, QueueItem, SessionMember } from '@swipeback/engine';
+import type { CaseView, QueueItem, SessionMember, TeamDashboard } from '@swipeback/engine';
 
 type H = HtmlEscapedString | Promise<HtmlEscapedString>;
 
@@ -25,7 +25,7 @@ export function layout(title: string, body: H, actor: SessionMember | null = nul
 <title>${title} · Swipeback</title><link rel="stylesheet" href="/static/app.css?v=${ASSET_VERSION}"><script src="/static/app.js?v=${ASSET_VERSION}" defer></script></head>
 <body>
 <div class="demo-banner">PREVIEW — payouts are simulated; no money moves.</div>
-<header class="top"><a class="brand" href="/review">swipe<b>back</b></a>
+<header class="top"><a class="brand" href="/dashboard">swipe<b>back</b></a>
 ${actor ? html`<div class="who"><span>${actor.displayName}</span><form method="post" action="/logout"><button class="link">Sign out</button></form></div>` : ''}
 </header>
 <main>${body}</main>
@@ -41,7 +41,8 @@ function accessLayout(title: string, body: H, actor: SessionMember | null = null
 <body class="access-page"><a class="access-skip" href="#main">Skip to content</a>
 <header class="access-header"><a class="access-brand" href="/" aria-label="Swipeback home"><span aria-hidden="true">↩</span> swipeback</a>
 <nav aria-label="Account navigation"><a href="/">Home <span aria-hidden="true">↗</span></a><a href="/start">Get started <span aria-hidden="true">↗</span></a>
-${actor ? html`<form method="post" action="/logout"><button type="submit">Sign out <span aria-hidden="true">↗</span></button></form>` : html`<a class="access-nav-cta" href="/login">Sign in <span aria-hidden="true">↗</span></a>`}</nav></header>
+${actor?.roles.some((role) => role === 'admin' || role === 'reviewer') ? html`<a href="/dashboard">Dashboard <span aria-hidden="true">↗</span></a>` : ''}
+${actor ? html`<form method="post" action="/logout"><button type="submit">Sign out <span aria-hidden="true">↗</span></button></form>` : html`<a class="access-nav-cta" href="/login?next=%2Fdashboard">Sign in <span aria-hidden="true">↗</span></a>`}</nav></header>
 <main id="main">${body}</main>
 <footer class="access-footer"><span>↩ SWIPEBACK</span><span>LESS ADMIN. MORE LIVING.</span></footer>
 <div class="demo-banner">PREVIEW — payouts are simulated; no money moves.</div>
@@ -94,14 +95,14 @@ export function onboardingPage(opts: { sent?: boolean; error?: string } = {}): H
         </div></div>
       <div class="access-section-title"><span>02 / YOUR CHANNELS</span><span>READY WHEN YOU ARE</span></div>
       <div class="access-channel-grid">
-        <article class="access-channel"><div class="access-channel-top"><span class="access-channel-icon">✉</span><span class="access-status">After email</span></div>
+        <article class="access-channel"><div class="access-channel-top"><span class="access-channel-icon"><img src="/static/providers/gmail" alt=""></span><span class="access-status">After email</span></div>
           <div><h2>Gmail</h2><p>Your finance inbox.</p></div><button class="access-button" type="button" disabled>Connect Gmail <span aria-hidden="true">↗</span></button></article>
         <article class="access-channel"><div class="access-channel-top"><span class="access-channel-icon">▣</span><span class="access-status">Sandbox</span></div>
           <div><h2>Card feed</h2><p>TrueLayer sandbox, locally.</p></div><button class="access-button" type="button" disabled>Connect card feed <span aria-hidden="true">↗</span></button></article>
-        <article class="access-channel" data-channel="slack"><div class="access-channel-top"><span class="access-channel-icon">#</span><span class="access-status">Coming soon</span></div>
+        <article class="access-channel" data-channel="slack"><div class="access-channel-top"><span class="access-channel-icon"><img src="/static/providers/slack" alt=""></span><span class="access-status">Coming soon</span></div>
           <div><h2>Slack</h2><p>Team updates where you work.</p></div><button class="access-button" type="button" disabled>Connect Slack <span aria-hidden="true">↗</span></button></article>
-        <article class="access-channel" data-channel="imessage"><div class="access-channel-top"><span class="access-channel-icon">●</span><span class="access-status">Coming soon</span></div>
-          <div><h2>iMessage</h2><p>Expense updates in a message.</p></div><button class="access-button" type="button" disabled>Connect iMessage <span aria-hidden="true">↗</span></button></article>
+        <article class="access-channel" data-channel="imessage"><div class="access-channel-top"><span class="access-channel-icon"><img src="/static/providers/imessage" alt=""></span><span class="access-status">Coming soon</span></div>
+          <div><h2>iMessage</h2><p>Via BlueBubbles.</p></div><button class="access-button" type="button" disabled>Connect iMessage <span aria-hidden="true">↗</span></button></article>
       </div>
     </div></section>`);
 }
@@ -142,7 +143,7 @@ export function connectPage(actor: SessionMember, m: MailboxStatus, o: {
     ${o.error ? html`<p class="access-alert" role="alert" data-testid="connect-error">${o.error}</p>` : ''}
     <div class="access-section-title"><span>02 / YOUR CHANNELS</span><span>CONNECT WHAT YOU USE</span></div>
     <div class="access-channel-grid">
-      <article class="access-channel" data-channel="gmail"><div class="access-channel-top"><span class="access-channel-icon">✉</span><span class="access-status ${gmail?.status === 'ACTIVE' ? 'is-active' : ''}" data-testid="mailbox-status">${gmail?.status === 'ACTIVE' ? 'Connected' : 'Available'}</span></div>
+      <article class="access-channel" data-channel="gmail"><div class="access-channel-top"><span class="access-channel-icon"><img src="/static/providers/gmail" alt=""></span><span class="access-status ${gmail?.status === 'ACTIVE' ? 'is-active' : ''}" data-testid="mailbox-status">${gmail?.status === 'ACTIVE' ? 'Connected' : 'Available'}</span></div>
         <div><h2>Gmail</h2><p>${gmail?.status === 'ACTIVE' ? gmail.address : m.designatedAddress ?? 'Your finance inbox'}</p></div>
         ${o.configured && admin ? html`<form method="post" action="/connect/gmail"><button class="access-button" type="submit">${gmail?.status === 'ACTIVE' ? 'Reconnect Gmail' : 'Connect Gmail'} <span aria-hidden="true">↗</span></button></form>`
           : html`<button class="access-button" type="button" disabled>${admin ? 'Unavailable here' : 'Admin only'} <span aria-hidden="true">↗</span></button>`}
@@ -156,12 +157,12 @@ export function connectPage(actor: SessionMember, m: MailboxStatus, o: {
         ${o.cardFeed?.connection?.status === 'ACTIVE' && admin ? html`<form method="post" action="/connect/truelayer/sync" class="access-minor-action"><button type="submit">Sync now</button></form>` : ''}
         ${o.cardFeed?.connection?.last_error ? html`<p class="access-inline-error">${o.cardFeed.connection.last_error}</p>` : ''}
       </article>
-      <article class="access-channel" data-channel="slack"><div class="access-channel-top"><span class="access-channel-icon">#</span><span class="access-status">Coming soon</span></div>
+      <article class="access-channel" data-channel="slack"><div class="access-channel-top"><span class="access-channel-icon"><img src="/static/providers/slack" alt=""></span><span class="access-status">Coming soon</span></div>
         <div><h2>Slack</h2><p>Team updates, right where you work.</p></div>
         <button class="access-button" type="button" disabled>Connect Slack <span aria-hidden="true">↗</span></button>
       </article>
-      <article class="access-channel" data-channel="imessage"><div class="access-channel-top"><span class="access-channel-icon">●</span><span class="access-status">Coming soon</span></div>
-        <div><h2>iMessage</h2><p>A quick message. Expense handled.</p></div>
+      <article class="access-channel" data-channel="imessage"><div class="access-channel-top"><span class="access-channel-icon"><img src="/static/providers/imessage" alt=""></span><span class="access-status">Coming soon</span></div>
+        <div><h2>iMessage</h2><p>Via BlueBubbles.</p></div>
         <button class="access-button" type="button" disabled>Connect iMessage <span aria-hidden="true">↗</span></button>
       </article>
     </div>
@@ -174,6 +175,43 @@ export function connectPage(actor: SessionMember, m: MailboxStatus, o: {
           <button class="access-button" type="submit">Assign card <span aria-hidden="true">↗</span></button>
         </form>` : ''}</section>` : ''}
   </div></section>`, actor);
+}
+
+export function dashboardPage(actor: SessionMember, data: TeamDashboard): H {
+  const total = data.members.reduce((n, member) => n + member.total, 0);
+  const needsDecision = data.members.reduce((n, member) => n + member.needsDecision, 0);
+  const waiting = data.members.reduce((n, member) => n + member.waiting, 0);
+  const cleared = data.members.reduce((n, member) => n + member.cleared, 0);
+  return accessLayout('Team dashboard', html`<section class="access-dashboard" data-testid="team-dashboard">
+    <div class="access-connect-hero access-dashboard-hero"><div class="access-hero-meta"><span>YOUR SPACE / SWIPEBACK</span><span>TEAM OVERVIEW</span></div>
+      <div class="access-connect-heading"><p class="access-eyebrow"><i aria-hidden="true"></i> TEAM DASHBOARD</p>
+        <h1>Your team.<br><em>In view.</em></h1><p>${actor.displayName}, here’s what needs attention.</p></div></div>
+    <div class="access-connect-content access-dashboard-content">
+      <div class="access-dashboard-stats" aria-label="Expense summary">
+        <div><span>01 / TEAM MEMBERS</span><strong>${data.members.length}</strong></div>
+        <div><span>02 / EXPENSES</span><strong>${total}</strong></div>
+        <div><span>03 / NEEDS A DECISION</span><strong>${needsDecision}</strong></div>
+        <div><span>04 / WAITING ON TEAM</span><strong>${waiting}</strong></div>
+      </div>
+      <div class="access-dashboard-toolbar"><div><span class="access-card-index">YOUR WORKSPACE</span><h2>Team activity</h2></div>
+        <a class="access-dashboard-link" href="/review">Open review queue <span aria-hidden="true">↗</span></a></div>
+      <div class="access-section-title"><span>01 / YOUR PEOPLE</span><span>${cleared} CLEARED</span></div>
+      <div class="access-dashboard-table-wrap"><table class="access-dashboard-table"><thead><tr><th scope="col">Employee</th><th scope="col">Expenses</th><th scope="col">Needs decision</th><th scope="col">Waiting</th><th scope="col">Cleared</th><th scope="col">Last activity</th></tr></thead><tbody>
+        ${data.members.map((member) => html`<tr><td><strong>${member.name}${member.id === actor.memberId ? ' (you)' : ''}</strong><small>${member.email}</small></td>
+          <td>${member.total}</td><td><span class="access-dashboard-number ${member.needsDecision ? 'is-urgent' : ''}">${member.needsDecision}</span></td>
+          <td>${member.waiting}</td><td>${member.cleared}</td><td>${member.lastActivity ? when(member.lastActivity) : '—'}</td></tr>`)}
+        ${data.members.length ? '' : html`<tr><td colspan="6" class="access-dashboard-empty">No team members yet.</td></tr>`}
+      </tbody></table></div>
+      <div class="access-section-title access-dashboard-recent-title"><span>02 / RECENT EXPENSES</span><span>LAST 12 UPDATES</span></div>
+      <div class="access-dashboard-recent">
+        ${data.recent.map((expense) => html`<a href="/review/${expense.id}" class="access-dashboard-expense">
+          <div><strong>${expense.merchant ?? 'Merchant pending'}</strong><small>${expense.employee} · ${expense.ref}</small></div>
+          <span class="access-dashboard-expense-amount">${money(expense.amountMinor, expense.currency)}</span>
+          <span class="access-dashboard-state">${words(expense.state)}${expense.sandbox ? html` <b>Sandbox</b>` : ''}</span>
+          <time>${when(expense.updatedAt)}</time><span aria-hidden="true">↗</span></a>`)}
+        ${data.recent.length ? '' : html`<div class="access-dashboard-empty">No expenses yet. New activity will appear here.</div>`}
+      </div>
+    </div></section>`, actor);
 }
 
 export function queuePage(actor: SessionMember, q: { items: QueueItem[]; handledAutomatically: number; waitingOnEmployees: number }, mailbox?: MailboxStatus): H {
