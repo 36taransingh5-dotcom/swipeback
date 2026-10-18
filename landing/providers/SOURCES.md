@@ -1,0 +1,3 @@
+- gmail.svg: https://www.gstatic.com/images/branding/productlogos/gmail_2026/v2/web/192px.svg
+- slack.png: https://a.slack-edge.com/80588/marketing/img/meta/slack_hash_256.png
+- messages.jpg: https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6b/cb/54/6bcb5406-4f41-73e9-dd06-37f4f608ed66/messagesCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg

@@ -22,6 +22,53 @@ export interface QueueItem {
   sandbox: boolean;
 }
 
+export interface TeamDashboard {
+  members: {
+    id: string; name: string; email: string; roles: string[]; total: number;
+    needsDecision: number; waiting: number; cleared: number; lastActivity: Date | null;
+  }[];
+  recent: {
+    id: string; ref: string; employee: string; merchant: string | null; amountMinor: number | null;
+    currency: string | null; state: string; updatedAt: Date; sandbox: boolean;
+  }[];
+}
+
+/** Organisation-scoped team overview for admins and reviewers. */
+export async function teamDashboard(deps: Pick<EngineDeps, 'pool'>, actor: SessionMember): Promise<TeamDashboard> {
+  if (!actor.roles.some((role) => role === 'admin' || role === 'reviewer')) {
+    throw new ReviewError(403, 'A reviewer or admin role is required');
+  }
+  const members = await deps.pool.query<{
+    id: string; name: string; email: string; roles: string[]; total: number;
+    needs_decision: number; waiting: number; cleared: number; last_activity: Date | null;
+  }>(`SELECT m.id, m.display_name AS name, m.email, m.roles,
+            count(e.id)::int AS total,
+            count(e.id) FILTER (WHERE e.state = 'REVIEW_REQUIRED')::int AS needs_decision,
+            count(e.id) FILTER (WHERE e.state IN ('NEEDS_INFO', 'NEEDS_MATCH'))::int AS waiting,
+            count(e.id) FILTER (WHERE e.state IN ('AUTO_CLEARED', 'APPROVED', 'EXPORTED'))::int AS cleared,
+            max(e.updated_at) AS last_activity
+       FROM members m
+       LEFT JOIN expenses e ON e.member_id = m.id AND e.organisation_id = m.organisation_id
+      WHERE m.organisation_id = $1 AND m.status = 'ACTIVE'
+      GROUP BY m.id
+      ORDER BY needs_decision DESC, waiting DESC, m.display_name ASC`, [actor.organisationId]);
+  const recent = await deps.pool.query<{
+    id: string; ref: string; employee: string; merchant: string | null; amount_minor: number | null;
+    currency: string | null; state: string; updated_at: Date; sandbox: boolean;
+  }>(`SELECT e.id, e.ref, m.display_name AS employee, e.merchant, e.amount_minor, e.currency,
+            e.state, e.updated_at, (t.provider = 'truelayer-sandbox') AS sandbox
+       FROM expenses e JOIN members m ON m.id = e.member_id AND m.organisation_id = e.organisation_id
+       LEFT JOIN transactions t ON t.id = e.matched_transaction_id
+      WHERE e.organisation_id = $1
+      ORDER BY e.updated_at DESC, e.id DESC LIMIT 12`, [actor.organisationId]);
+  return {
+    members: members.rows.map((m) => ({ id: m.id, name: m.name, email: m.email, roles: m.roles,
+      total: m.total, needsDecision: m.needs_decision, waiting: m.waiting, cleared: m.cleared, lastActivity: m.last_activity })),
+    recent: recent.rows.map((e) => ({ id: e.id, ref: e.ref, employee: e.employee, merchant: e.merchant,
+      amountMinor: e.amount_minor, currency: e.currency, state: e.state, updatedAt: e.updated_at, sandbox: !!e.sandbox })),
+  };
+}
+
 export async function reviewQueue(deps: Pick<EngineDeps, 'pool'>, actor: SessionMember): Promise<{ items: QueueItem[]; handledAutomatically: number; waitingOnEmployees: number }> {
   const r = await deps.pool.query<{
     kind: QueueItem['kind']; expense_id: string; reimbursement_id: string | null; ref: string; employee: string; member_id: string;

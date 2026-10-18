@@ -3,7 +3,7 @@ import path from 'node:path';
 import { Hono, type Context } from 'hono';
 import { deleteCookie, getCookie, setCookie } from 'hono/cookie';
 import { enqueue, JobRunner } from '@swipeback/db';
-import { ACCESS_CSS, LANDING_CSS, LANDING_JS } from './landing.ts';
+import { ACCESS_CSS, LANDING_CSS, LANDING_JS, PROVIDER_LOGOS } from './landing.ts';
 import {
   activeGmailConnections,
   dueTrueLayerSandboxConnections,
@@ -25,6 +25,7 @@ import {
   reviewExpense,
   ReviewError,
   reviewQueue,
+  teamDashboard,
   safeNextPath,
   SESSION_TTL_HOURS,
   authorisePayment,
@@ -47,7 +48,7 @@ import {
   type ReviewAction,
   type SessionMember,
 } from '@swipeback/engine';
-import { casePage, checkEmailPage, connectPage, errorPage, landingPage, loginPage, onboardingPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
+import { casePage, checkEmailPage, connectPage, dashboardPage, errorPage, landingPage, loginPage, onboardingPage, queuePage, STATIC_CSS, STATIC_JS, type CasePageOptions } from './views.ts';
 
 /**
  * The minimal authenticated reviewer surface plus the PRD §7.4 API. It holds no business logic:
@@ -127,6 +128,12 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
   app.get('/static/landing.css', (c) => c.body(LANDING_CSS, 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/static/landing.js', (c) => c.body(LANDING_JS, 200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/static/access.css', (c) => c.body(ACCESS_CSS, 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
+  app.get('/static/providers/:name', (c) => {
+    const name = c.req.param('name');
+    const logo = Object.hasOwn(PROVIDER_LOGOS, name) ? PROVIDER_LOGOS[name as keyof typeof PROVIDER_LOGOS] : undefined;
+    if (!logo) return c.notFound();
+    return new Response(new Uint8Array(logo.bytes), { headers: { 'Content-Type': logo.type, 'Cache-Control': 'public, max-age=86400' } });
+  });
   app.get('/', (c) => c.html(landingPage()));
 
   // ---- sign in ----------------------------------------------------------------------------
@@ -169,6 +176,12 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
     const actor = requireActor(c);
     if (actor instanceof Response) return actor;
     return c.html(queuePage(actor, await reviewQueue(deps, actor), await mailboxStatus(deps, actor.organisationId)));
+  });
+  app.get('/dashboard', async (c) => {
+    const actor = requireActor(c);
+    if (actor instanceof Response) return actor;
+    if (!isReviewer(actor)) return c.html(errorPage(403, 'A reviewer or admin role is required', actor), 403);
+    return c.html(dashboardPage(actor, await teamDashboard(deps, actor)));
   });
 
   // ---- connected finance mailbox --------------------------------------------------------------
