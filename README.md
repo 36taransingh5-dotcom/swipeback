@@ -65,6 +65,8 @@ The landing page's **Try it out** button opens `/start`. Visitors enter an email
 
 Set `SB_SIGNUP_CONNECTION_ID` to the ID of a connected Swipeback Gmail mailbox in `channel_connections`. It sends the verification links; signup fails visibly if that mailbox is unavailable. The ID is explicit so a customer's connected mailbox is never used as the signup sender. Gmail connection by new users still depends on the Google OAuth app's test-user and consent settings.
 
+On Vercel, the Supabase session-pooler `DATABASE_URL` uses `sslmode=verify-full&sslrootcert=/var/task/certs/supabase-prod-ca-2021.crt`. The public Supabase CA in `certs/` is bundled with the serverless function so database TLS is verified.
+
 ## TrueLayer sandbox card feed
 
 The adapter runs **only locally** with `SB_APP_URL=http://localhost:3000`; it uses only `auth.truelayer-sandbox.com` and `api.truelayer-sandbox.com`. It is disabled on Vercel and in production. Add the sandbox client secret as `TRUELAYER_CLIENT_SECRET` in `.env.local`, keep `SB_TOKEN_ENCRYPTION_KEY` set, and allowlist the exact redirect `http://localhost:3000/callback` for client `sandbox-swipeback-a13286` in TrueLayer Console. No production TrueLayer credentials are used.
