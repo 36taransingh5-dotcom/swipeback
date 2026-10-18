@@ -12,6 +12,7 @@
     "lint": "eslint --max-warnings 0 .",
     "test": "vitest run",
     "verify": "corepack pnpm typecheck && corepack pnpm lint && corepack pnpm test",
+    "build:vercel": "corepack pnpm exec esbuild api/handler.ts --bundle --platform=node --format=esm --external:pg --external:mailparser --outfile=api/index.bundle.mjs",
     "sb": "tsx tools/cli/src/main.ts",
     "db:start": "tsx tools/cli/src/main.ts db:start",
     "db:migrate": "tsx tools/cli/src/main.ts db:migrate",
@@ -25,6 +26,7 @@
     "verify:card-receipt": "tsx tools/cli/src/main.ts verify:card-receipt"
   },
   "devDependencies": {
+    "@hono/node-server": "2.1.5",
     "@eslint/js": "10.0.1",
     "@swipeback/channels": "workspace:*",
     "@swipeback/cli": "workspace:*",
@@ -36,8 +38,10 @@
     "@swipeback/web": "workspace:*",
     "@types/node": "24.19.2",
     "@types/pg": "8.23.1",
+    "esbuild": "0.28.2",
     "eslint": "10.13.0",
     "fast-check": "4.10.2",
+    "mailparser": "3.9.40",
     "pg": "8.23.1",
     "playwright-core": "1.64.0",
     "tsx": "4.23.15",

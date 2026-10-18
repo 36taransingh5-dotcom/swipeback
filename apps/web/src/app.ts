@@ -1,10 +1,10 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { LANDING_CSS, LANDING_JS } from './landing.ts';
 import { Hono, type Context } from 'hono';
 import { deleteCookie, getCookie, setCookie } from 'hono/cookie';
-import { enqueue } from '@swipeback/db';
+import { enqueue, JobRunner } from '@swipeback/db';
 import {
+  activeGmailConnections,
   CARD_SIGNATURE_HEADER,
   consumeLoginToken,
   endSession,
@@ -13,6 +13,7 @@ import {
   loadSession,
   pageChallenge,
   peekChallenge,
+  pollGmailConnection,
   receiveCardEvent,
   receiveInbound,
   requestLoginLink,
@@ -24,11 +25,13 @@ import {
   authorisePayment,
   type Corrections,
   disconnectGmail,
+  engineHandlers,
   finishGmailConnect,
   mailboxStatus,
   startGmailConnect,
   type EngineDeps,
   type GmailRuntime,
+  type GmailTokens,
   type ReviewAction,
   type SessionMember,
 } from '@swipeback/engine';
@@ -47,7 +50,7 @@ export interface WebOptions {
   secureCookies: boolean;
   reportsDir?: string;
   /** Google OAuth + token cipher; when absent the connect page explains what to configure. */
-  gmail?: GmailRuntime | null;
+  gmail?: (GmailRuntime & { tokens: GmailTokens }) | null;
 }
 
 const isReviewer = (a: SessionMember) => a.roles.some((r) => r === 'reviewer' || r === 'admin');
@@ -82,10 +85,23 @@ export function createApp(deps: EngineDeps, opts: WebOptions) {
   };
 
   app.get('/healthz', (c) => c.json({ ok: true }));
+  app.post('/api/worker/tick', async (c) => {
+    // Serverless stand-in for the always-on worker: pg_cron / cron-job.org calls this every minute.
+    const cronSecret = process.env.SB_CRON_SECRET;
+    if (!cronSecret || c.req.header('authorization') !== `Bearer ${cronSecret}`) return c.json({ error: 'unauthorised' }, 401);
+    const runner = new JobRunner(deps.pool, engineHandlers(deps), { workerId: `tick-${Date.now()}` });
+    const processed = await runner.runOnce();
+    let gmail: unknown = null;
+    if (opts.gmail) {
+      const ids = await activeGmailConnections(deps.pool).catch(() => [] as string[]);
+      const results: unknown[] = [];
+      for (const id of ids) results.push(await pollGmailConnection(deps, opts.gmail.tokens, id));
+      gmail = { connections: ids.length, results };
+    }
+    return c.json({ ok: true, processed, gmail });
+  });
   app.get('/static/app.css', (c) => c.body(String(STATIC_CSS), 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/static/app.js', (c) => c.body(String(STATIC_JS), 200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
-  app.get('/static/landing.css', (c) => c.body(LANDING_CSS, 200, { 'Content-Type': 'text/css; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
-  app.get('/static/landing.js', (c) => c.body(LANDING_JS, 200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=300' }));
   app.get('/', (c) => c.html(landingPage()));
 
   // ---- sign in ----------------------------------------------------------------------------
